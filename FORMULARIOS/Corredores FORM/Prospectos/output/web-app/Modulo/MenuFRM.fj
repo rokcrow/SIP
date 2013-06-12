@@ -1,0 +1,24 @@
+package Modulo;
+
+FORM MenuFRM
+{
+    BEFORE FORM
+    {
+    session.displayToMessageBox("Costeles");
+    }
+
+    DATA VIEW view1 extends Modulo.MenuDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

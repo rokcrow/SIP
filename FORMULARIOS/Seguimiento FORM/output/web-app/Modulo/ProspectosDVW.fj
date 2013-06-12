@@ -1,0 +1,296 @@
+package Modulo;
+
+
+
+DATA VIEW ProspectosDVW
+{
+
+ 
+
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+    
+  
+
+    BOX box11
+    {
+    
+    }
+    FIELD vpp_estadopro
+    {
+    
+    }
+
+    FIELD vpp_fechaestado
+    {
+    
+    }
+
+    FIELD vpp_numero
+    {
+    
+    }
+
+    FIELD vpp_fecha_visita
+    {
+      
+    }
+
+    FIELD vpp_fecha
+    {
+    
+    }
+
+    FIELD vpp_estado_civil
+    {
+    
+    }
+
+    FIELD vpp_actitiempo
+    {
+    
+    }
+
+    FIELD vpp_telofi
+    {
+    
+    }
+
+    FIELD vpp_nombre2
+    {
+    
+    }
+
+    FIELD vpp_correo
+    {
+    
+    }
+
+    FIELD vpp_cuanta_correo2
+    {
+    
+    }
+
+    FIELD vpp_actividad
+    {
+    
+    }
+
+    FIELD vpp_nombre
+    {
+    
+    }
+
+    FIELD vpp_genero
+    {
+    
+    }
+
+    FIELD vpp_actilugar
+    {
+    
+    }
+
+    FIELD vpp_ciudad
+    {
+    
+    }
+
+    FIELD vpp_telres
+    {
+    
+    }
+
+    FIELD vpp_direccion
+    {
+    
+    }
+
+    FIELD vpp_proyecto
+    {
+    
+    }
+
+    FIELD vpp_nacionalidad
+    {
+    
+    }
+
+    FIELD vpp_edad
+    {
+    
+    }
+
+    FIELD vpp_fecha_nacio
+    {
+    
+    }
+
+    FIELD vpy_nombre
+    {
+    
+    }
+
+    FIELD vpp_ingreso
+    {
+    
+    }
+
+    FIELD vpp_mediodes
+    {
+    
+    }
+
+    FIELD vpp_pagomes
+    {
+    
+    }
+
+    FIELD vpp_distribu_rec
+    {
+    
+    }
+
+    FIELD vpp_pasatiempo
+    {
+    
+    }
+
+    FIELD vpp_otro_proyecto
+    {
+    
+    }
+
+    FIELD vpp_tcompra
+    {
+    
+    }
+
+    FIELD vpp_distribu_saf
+    {
+    
+    }
+
+    FIELD vmp_descripcion
+    {
+    
+    }
+
+    FIELD vpp_distribu_est
+    {
+    
+    }
+
+    FIELD vpp_viviactual
+    {
+    
+    }
+
+    FIELD vpp_distribu_ban
+    {
+    
+    }
+
+    FIELD vpp_distribu_emp
+    {
+    
+    }
+
+    FIELD vpp_distribu_ter
+    {
+    
+    }
+
+    FIELD vpp_mediopub
+    {
+    
+    }
+
+    FIELD vpp_referido_nombre
+    {
+    
+    }
+
+    FIELD vpp_referido_telefono
+    {
+    
+    }
+
+    FIELD vpp_referido_celular
+    {
+    
+    }
+
+    FIELD vpp_referido_correo
+    {
+    
+    }
+
+    FIELD vpp_referido_sn
+    {
+    
+    }
+
+    FIELD vpp_vendedor
+    {
+    
+    }
+
+    FIELD vpp_corredor
+    {
+    
+    }
+
+    FIELD vve_nombre
+    {
+    
+    }
+
+    FIELD vpp_califica
+    {
+    
+    }
+
+    FIELD vco_nombre
+    {
+    
+    }
+
+    FIELD xpc_nombre
+    {
+    
+    }
+
+    FIELD vpp_motivo
+    {
+    
+    }
+
+    FIELD vpp_estado
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

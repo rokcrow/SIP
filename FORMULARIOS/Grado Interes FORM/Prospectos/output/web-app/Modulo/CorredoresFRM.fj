@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM CorredoresFRM
+{
+    DATA VIEW view1 extends Modulo.CorredoresDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

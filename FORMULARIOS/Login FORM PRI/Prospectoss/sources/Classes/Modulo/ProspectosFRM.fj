@@ -1,0 +1,27 @@
+package Modulo;
+
+FORM ProspectosFRM
+{
+    DATA VIEW view1 extends Modulo.ProspectosDVW
+    {
+    
+    
+
+        BEFORE FIND
+        {
+         
+              //actualuser = Modulo.LoginDVW#validuser;
+        }
+
+
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

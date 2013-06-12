@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jboss-web PUBLIC '-//JBoss//DTD Web Application 2.3V2//EN' 'http://www.jboss.org/j2ee/dtd/jboss-web_3_2.dtd'>
+<jboss-web>
+<context-root>/MENUTEST</context-root>
+<resource-ref>
+<res-ref-name>jdbc/NXJDS</res-ref-name>
+<jndi-name>java:/NXJDS</jndi-name>
+</resource-ref>
+<ejb-local-ref>
+<ejb-ref-name>SecurityLocalRef</ejb-ref-name>
+<local-jndi-name>unify/nxj/standAlone/MENUTEST/SecurityEJB</local-jndi-name>
+</ejb-local-ref>
+<ejb-local-ref>
+<ejb-ref-name>nxjFieldMgr</ejb-ref-name>
+<local-jndi-name>unify/nxj/standAlone/MENUTEST/nxjFieldManager</local-jndi-name>
+</ejb-local-ref>
+<ejb-local-ref>
+<ejb-ref-name>nxjC3PORef</ejb-ref-name>
+<local-jndi-name>unify/nxj/standAlone/MENUTEST/nxjC3PO</local-jndi-name>
+</ejb-local-ref>
+</jboss-web>

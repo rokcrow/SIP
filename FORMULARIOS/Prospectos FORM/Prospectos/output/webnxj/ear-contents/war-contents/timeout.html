@@ -1,0 +1,77 @@
+<html>
+<!--
+/*----------------------------------------------------------------------*
+ *	CLASS:	 	Unify NXJ Application Timeout error page.
+ *
+ *	ORIGINATOR:	aig
+ *	CREATION DATE:	Thu Apr 29 11:09:53 PDT 1999
+ *
+ *----------------------------------------------------------------------*/
+
+/**
+ * This page displays an Unify NXJ Application Timeout Error.
+ *
+ * @author	aig
+ * @author	$Author: dlf $	$Exp: $
+ * @version	$Revision: 39356 $ $Date: 2006-10-19 15:34:42 -0700 (Thu, 19 Oct 2006) $
+ */
+-->
+
+  <head>
+    <title>Unify NXJ Application Timeout</title>
+
+    <script language="javascript">
+
+	function doRestart()
+	{
+	var winParent = window.parent;
+	if (winParent.name == "_nxjfirstcommand")
+	    {
+	    winParent = winParent.parent;
+	    }
+	var href = winParent.location.href;
+	var searchStr = winParent.location.search;
+	if (searchStr.indexOf('?entrypoint=') == 0)
+		{
+		href = searchStr.substring('?entrypoint='.length);
+		}
+	var quest = href.indexOf('?');
+	if (quest != -1)
+	    {
+	    href = href.substring(0,quest);
+	    }
+    var dotNxj = href.lastIndexOf(".nxj");
+    if (dotNxj == href.length -4)
+	    {
+	href = href.substring(0, href.length-4);
+	    }
+	winParent.location.href = href;
+	return false;
+	}
+
+    </script>
+
+  </head>
+
+  
+<body bgcolor="#94AABD" >
+    <table>
+	<tr> <td align="center">
+	    <h1 align="center"><b>
+		<font face="Arial, Helvetica, sans-serif">
+		    Your browser session has timed out.
+		</font></b>
+	    </h1>
+	</td> </tr>
+	<tr> <td align="center">
+	    <a href="" onclick="return doRestart()" target="_top">
+		<h3 align="center"><b>
+		    <font face="Arial, Helvetica, sans-serif" >
+			Restart
+		    </font></b>
+		</h3>
+	    </a>
+	</td> </tr>
+    </table>
+</body>
+</html>

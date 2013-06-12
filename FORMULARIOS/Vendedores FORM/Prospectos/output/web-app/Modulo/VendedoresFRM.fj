@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM VendedoresFRM
+{
+    DATA VIEW view1 extends Modulo.VendedoresDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

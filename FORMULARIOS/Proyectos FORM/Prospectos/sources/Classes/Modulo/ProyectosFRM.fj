@@ -1,0 +1,18 @@
+package Modulo;
+
+FORM ProyectosFRM
+{
+    DATA VIEW view1 extends Modulo.ProyectosDVW
+    {
+    
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

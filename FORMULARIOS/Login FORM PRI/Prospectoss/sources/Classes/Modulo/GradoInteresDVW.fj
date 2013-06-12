@@ -1,0 +1,69 @@
+package Modulo;
+
+
+
+DATA VIEW GradoInteresDVW
+{
+
+    INIT DATA VIEW
+        {
+          /*  if (Modulo.MenuFRM#cajagrandeMenu.NombreForma1 == "Mantenimiento")
+            {
+                xpc_clase.clearFindExp = 'P';
+            }*/
+        }
+
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD xpc_codigo
+    {
+    }
+    
+    FIELD xpc_clase
+    {
+    }
+    
+    FIELD xpc_nombre
+    {
+    }
+    
+    FIELD xpc_califica
+    {
+    }
+    
+    FIELD xpc_dias_pac
+    {
+    }
+    
+    FIELD xpc_dias_pvt
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

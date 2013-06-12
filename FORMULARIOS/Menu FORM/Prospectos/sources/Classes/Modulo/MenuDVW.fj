@@ -1,0 +1,143 @@
+package Modulo;
+
+
+
+DATA VIEW MenuDVW
+{/*
+      public void menu() throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
+    {//Inicia Funcion de Menu
+                NXJMenu myMenu = new NXJMenu("myMenu");
+                NXJMenu VentasMenu = new NXJMenu("Ventas");
+                NXJMenu ProsMenu = new NXJMenu("Prospectos");
+                NXJMenu ParaMenu = new NXJMenu("Parametros");        
+                NXJMenu ObrasMenu = new NXJMenu("Obras");
+                NXJMenu FinanMenu = new NXJMenu("Financiero");
+                NXJMenu SalirMenu = new NXJMenu("Salir");
+        
+                servicios.ServAdmin SrvTieneAcceso = new servicios.ServAdmin();
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"mantenimie"))
+                {
+                    NXJMenuItem add1Menu = new NXJMenuItem("Mantenimiento");
+                    add1Menu.title = "Mantenimiento";
+                    add1Menu.command = "cmdSig";
+                    add1Menu.commandParameter = ("Prospectos.mantenimie");
+                    ProsMenu.add(add1Menu);
+                }
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"seguimie"))
+                {
+                    NXJMenuItem add2Menu = new NXJMenuItem("Seguimiento");
+                    add2Menu.title = "Seguimiento";
+                    add2Menu.command = "cmdSig";
+                    add2Menu.commandParameter = ("Prospectos.seguimie");
+                    ProsMenu.add(add2Menu);
+                }
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"proyectos"))
+                {
+                    NXJMenuItem add3Menu = new NXJMenuItem("Proyectos");
+                    add3Menu.title = "Proyectos";
+                    add3Menu.command = "cmdSig";
+                    add3Menu.commandParameter = ("parametros.proyectos");
+                    ParaMenu.add(add3Menu);
+                }        
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"corredores"))
+                {
+                    NXJMenuItem add4Menu = new NXJMenuItem("Corredores");
+                    add4Menu.title = "Corredores";
+                    add4Menu.command = "cmdSig";
+                    add4Menu.commandParameter = ("parametros.corredores");
+                    ParaMenu.add(add4Menu);
+                }
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"gradointe"))
+                {
+                    NXJMenuItem add5Menu = new NXJMenuItem("Calificacion");
+                    add5Menu.title = "Calificacion";
+                    add5Menu.command = "cmdSig";
+                    add5Menu.commandParameter = ("parametros.gradointe");
+                    ParaMenu.add(add5Menu);
+                }          
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"mediosp"))
+                {
+                    NXJMenuItem add6Menu = new NXJMenuItem("Medios Publicitarios");
+                    add6Menu.title = "Medios Publicitarios";
+                    add6Menu.command = "cmdSig";
+                    add6Menu.commandParameter = ("parametros.mediosp");
+                    ParaMenu.add(add6Menu);
+                }                   
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"vendedor"))
+                {
+                    NXJMenuItem add7Menu = new NXJMenuItem("Vendedores");
+                    add7Menu.title = "Vendedores";
+                    add7Menu.command = "cmdSig";
+                    add7Menu.commandParameter = ("parametros.vendedor");
+                    ParaMenu.add(add7Menu);
+                }
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"rptprospec"))
+                {
+                    NXJMenuItem add8Menu = new NXJMenuItem("RptProspectos");
+                    add8Menu.title = "Reporte Prospectos";
+                    add8Menu.command = "cmdSig";
+                    add8Menu.commandParameter = ("parametros.rptprospec");
+                    ParaMenu.add(add8Menu);
+                }
+                if (SrvTieneAcceso.tieneacceso(parametros.login#box1.xpr_grupo,parametros.login#box1.xpr_usuario,"empresas"))
+                {
+                    NXJMenuItem add9Menu = new NXJMenuItem("Empresas");
+                    add9Menu.title = "Empresas";
+                    add9Menu.command = "cmdSig";
+                    add9Menu.commandParameter = ("parametros.empresas");
+                    ParaMenu.add(add9Menu);
+                }
+                                                                                                                                                                                                
+                VentasMenu.add(ProsMenu);
+                VentasMenu.add(ParaMenu);
+                    
+                myMenu.add(VentasMenu);
+                myMenu.add(ObrasMenu);
+                myMenu.add(FinanMenu);
+                
+                NXJMenuItem add99Menu = new NXJMenuItem("Salir");
+                add99Menu.title = "Salir";
+                add99Menu.command = "exit";
+                SalirMenu.add(add99Menu);
+                
+                myMenu.add(SalirMenu);
+                menuPri.menuItems = myMenu;     
+    }*/
+
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD EMPRESA
+    {
+    }
+    
+    FIELD NombreForma1
+    {
+    }
+    
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

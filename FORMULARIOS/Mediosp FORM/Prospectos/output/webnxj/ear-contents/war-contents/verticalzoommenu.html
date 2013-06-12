@@ -1,0 +1,229 @@
+<html>
+<!--
+/*----------------------------------------------------------------------*
+ *	CLASS:	 	Vertical Menu for ACCELL/Web
+ *
+ *	ORIGINATOR:	meh
+ *	CREATION DATE:	Mon Nov 12 15:15:34 PST 2001
+ *
+ *----------------------------------------------------------------------*/
+
+/**
+ * This HTML page displays the ACCELL/Web Veritical Menu.
+ *
+ * @author	meh
+ * @author	$Author: meh $	$State$
+ * @version	$Revision: 30370 $ $Date: 2004-08-11 08:00:59 -0700 (Wed, 11 Aug 2004) $
+ */
+-->
+
+  <head>
+    <title>Vertical Menu wih application-specific commands</title>
+    <script language="JavaScript">
+    function doOnLoad()
+    {
+
+	window.normalColor      = "black";
+	window.disabledColor    = "gray";
+	window.activeColor      = "#ffffff";
+	window.altActiveColor   = "rgb(255,255,255)";
+	window.activeBackground = "#94AABD";
+
+    	window.normalImages   = new Array();
+    	window.normalImagesOn   = new Array();
+    	window.normalImagesOff   = new Array();
+    	window.disabledImages = new Array();
+
+	window.normalImages["CANCEL_ZOOM"]     
+				= "images/cancelzoomOff.gif";
+	window.normalImages["ADD_UPDATE"]      
+				= "images/addupdateOff.gif";
+	window.normalImages["CLEAR_TO_ADD"]    
+				= "images/cleartoaddOff.gif";
+	window.normalImages["CLEAR_TO_FIND"]   
+				= "images/cleartofindOff.gif";
+	window.normalImages["DELETE_RECORD"]   
+				= "images/deleterecordOff.gif";
+	window.normalImages["EXIT"]            
+				= "images/exitOff.gif";
+	window.normalImages["FIND"]            
+				= "images/findOff.gif";
+	window.normalImages["FIRST_RECORD"]    
+				= "images/firstrecordOff.gif";
+	window.normalImages["PREVIOUS_RECORD"] 
+				= "images/previousrecordOff.gif";
+	window.normalImages["PREVIOUS_SET"]    
+				= "images/previoussetOff.gif";
+	window.normalImages["NEXT_RECORD"]     
+				= "images/nextrecordOff.gif";
+	window.normalImages["NEXT_SET"]        
+				= "images/nextsetOff.gif";
+	window.normalImages["LAST_RECORD"]     
+				= "images/lastrecordOff.gif";
+	window.normalImages["PREVIOUS_FORM"]   
+				= "images/previousformOff.gif";
+	window.normalImages["NEXT_FORM"]       
+				= "images/nextformOff.gif";
+	window.normalImages["ZOOM"]            
+				= "images/zoomOff.gif";
+	window.normalImages["HELP"]            
+				= "images/helpOff.gif";
+
+	for (var command in window.normalImages)
+	    {
+	    window.normalImagesOff[command] = window.normalImages[command];
+	    }
+
+
+	window.normalImagesOn["CANCEL_ZOOM"]     
+				= "images/cancelzoomOn.gif";
+	window.normalImagesOn["ADD_UPDATE"]      
+				= "images/addupdateOn.gif";
+	window.normalImagesOn["CLEAR_TO_ADD"]    
+				= "images/cleartoaddOn.gif";
+	window.normalImagesOn["CLEAR_TO_FIND"]   
+				= "images/cleartofindOn.gif";
+	window.normalImagesOn["DELETE_RECORD"]   
+				= "images/deleterecordOn.gif";
+	window.normalImagesOn["EXIT"]            
+				= "images/exitOn.gif";
+	window.normalImagesOn["FIND"]            
+				= "images/findOn.gif";
+	window.normalImagesOn["FIRST_RECORD"]    
+				= "images/firstrecordOn.gif";
+	window.normalImagesOn["PREVIOUS_RECORD"] 
+				= "images/previousrecordOn.gif";
+	window.normalImagesOn["PREVIOUS_SET"]    
+				= "images/previoussetOn.gif";
+	window.normalImagesOn["NEXT_RECORD"]     
+				= "images/nextrecordOn.gif";
+	window.normalImagesOn["NEXT_SET"]        
+				= "images/nextsetOn.gif";
+	window.normalImagesOn["LAST_RECORD"]     
+				= "images/lastrecordOn.gif";
+	window.normalImagesOn["PREVIOUS_FORM"]   
+				= "images/previousformOn.gif";
+	window.normalImagesOn["NEXT_FORM"]       
+				= "images/nextformOn.gif";
+	window.normalImagesOn["ZOOM"]            
+				= "images/zoomOn.gif";
+	window.normalImagesOn["HELP"]            
+				= "images/helpOn.gif";
+
+
+	window.disabledImages["CANCEL_ZOOM"]     
+				= "images/cancelzoomstippled.gif";
+	window.disabledImages["ADD_UPDATE"]      
+				= "images/addupdatestippled.gif";
+	window.disabledImages["CLEAR_TO_ADD"]    
+				= "images/cleartoaddstippled.gif";
+	window.disabledImages["CLEAR_TO_FIND"]   
+				= "images/cleartofindstippled.gif";
+	window.disabledImages["DELETE_RECORD"]   
+				= "images/deleterecordstippled.gif";
+	window.disabledImages["EXIT"]            
+				= "images/exitstippled.gif";
+	window.disabledImages["FIND"]            
+				= "images/findstippled.gif";
+	window.disabledImages["FIRST_RECORD"]    
+				= "images/firstrecordstippled.gif";
+	window.disabledImages["PREVIOUS_RECORD"] 
+				= "images/previousrecordstippled.gif";
+	window.disabledImages["PREVIOUS_SET"]    
+				= "images/previoussetstippled.gif";
+	window.disabledImages["NEXT_RECORD"]     
+				= "images/nextrecordstippled.gif";
+	window.disabledImages["NEXT_SET"]        
+				= "images/nextsetstippled.gif";
+	window.disabledImages["LAST_RECORD"]     
+				= "images/lastrecordstippled.gif";
+	window.disabledImages["PREVIOUS_FORM"]   
+				= "images/previousformstippled.gif";
+	window.disabledImages["NEXT_FORM"]       
+				= "images/nextformstippled.gif";
+	window.disabledImages["ZOOM"]            
+				= "images/zoomstippled.gif";
+	window.disabledImages["HELP"]            
+				= "images/helpstippled.gif";
+
+	// If the ClientManager has already been initialized then
+	// set the link states.  This handles the case where the
+	// mainFrame is loaded first or where the two frames are
+	// loaded in parallel.
+
+	if (window.parent.clientManager != null)
+	    {
+	    window.parent.clientManager.setControlStates(true);
+	    }
+
+    }
+
+
+
+    </script>
+</head>
+
+  
+<body onLoad=doOnLoad() topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0">
+
+    <!-- In order to use imane buttons, we need a form.  However,
+         we never want the form to be submitted.  We just want to
+	 handle the mouse clicks.  We prevent the form from being
+	 submitted bt having an onSubmit handler that returns false.
+
+    -->
+
+  <form name="form" onSubmit="return false">
+  <table height="100%" border="0" cellspacing="0" cellpadding="0" rowpadding=0 rowspacing=0 bgcolor="white">
+    <tr>
+    <td valign=top>
+  <table border="0" cellspacing="0" cellpadding="0" rowpadding=0 rowspacing=0 bgcolor="white">
+    <tr> 
+      <td >
+	<a  href="#"
+	NAME="PREVIOUS_FORM" ><img name="PREVIOUS_FORM" 
+		title="Return to previous form"
+		src="images/previousformstippled.gif"
+	        style="border-style: none"></a></td></tr>
+      <tr>
+      <td >
+	<a  href="#"
+	NAME="NEXT_FORM" ><img name="NEXT_FORM" 
+	     title="Display the next form"
+	     src="images/nextformstippled.gif"
+	     style="border-style: none"></a></td></tr>
+      <tr>
+      <td >
+	<a  href="#"
+	NAME="CLEAR_TO_FIND" ><img name="CLEAR_TO_FIND" 
+            title="Clear to find"
+	    src="images/cleartofindstippled.gif"
+	    style="border-style: none"></a></td></tr>
+      <tr>
+      <td >
+	<a  href="#"
+	NAME="FIND" ><img name="FIND" 
+	     title="Find database entries"
+	     src="images/findstippled.gif"
+	     style="border-style: none"></a></td></tr>
+      <tr>
+      <td >
+	<a  href="#"
+	NAME="ZOOM" ><img name="ZOOM" 
+	       title="Display zoom form"
+	       src="images/zoomstippled.gif"
+	       style="border-style: none" ></a></td></tr>
+      <tr>
+      <td >
+	<a  href="#"
+	NAME="CANCEL_ZOOM" ><img name="CANCEL_ZOOM" 
+            title="Cancel the zoom form"
+	    src="images/cancelzoomstippled.gif"
+	    style="border-style: none" ></a></td>
+    </tr>
+      <td>&nbsp; </td>
+    </tr>
+  </table></td></tr></table>
+  </form>
+  </body>
+</html>

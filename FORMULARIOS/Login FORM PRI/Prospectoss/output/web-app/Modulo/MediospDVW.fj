@@ -1,0 +1,58 @@
+package Modulo;
+
+
+
+DATA VIEW MediospDVW
+{
+    INIT DATA VIEW
+    {
+             /* mediosp.zoomReturnExpressions = vmp_codigo, vmp_descripcion;
+              MediospDVW.*/
+    }
+
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    BOX Box
+     {
+     }
+    
+    FIELD vmp_categoria
+    {
+    }
+    
+    FIELD vmp_codigo
+    {
+    }
+    
+    FIELD vmp_descripcion
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

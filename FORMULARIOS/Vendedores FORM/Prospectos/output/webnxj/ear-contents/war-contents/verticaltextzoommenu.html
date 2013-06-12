@@ -1,0 +1,296 @@
+<html>
+<!--
+/*----------------------------------------------------------------------*
+ *	CLASS:	 	Vertical Text Menu for ACCELL/Web
+ *
+ *	ORIGINATOR:	meh
+ *	CREATION DATE:	Mon Nov 12 15:13:18 PST 2001
+ *
+ *----------------------------------------------------------------------*/
+
+/**
+ * This HTML page displays the ACCELL/Web Vertical Text Menu.
+ *
+ * @author	meh
+ * @author	$Author: meh $	$State$
+ * @version	$Revision: 30370 $ $Date: 2004-08-11 08:00:59 -0700 (Wed, 11 Aug 2004) $
+ */
+-->
+
+  <head>
+    <title>Vertical Text Menu wih application-specific commands</title>
+	<style type="text/css">
+<!--
+a { font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 10pt; }
+a:link { color: black; text-decoration: none; size: 10pt; }
+-->
+</style>
+    <script language="JavaScript">
+
+    // Suffix for normal image
+
+    var		NORMAL_SUFFIX		= "Off.gif";
+
+    // Suffix for the rollover image
+
+    var		ROLLOVER_SUFFIX		= "On.gif";
+
+
+
+    function doMouseOver(
+    	link
+	)
+    {
+
+	var	name = link.name;
+	var	image = document.images[name];
+
+	if (image == null)
+	    {
+	    if (link.style.color == window.normalColor)
+		{
+		link.style.color           = window.activeColor;
+		link.style.backgroundColor = window.activeBackground;
+		}
+	    }
+	else
+	    {
+	    // If the current image ends with the "normal" suffix then
+	    // change the current image to the rollver image.
+
+	    var	suffix = image.src.indexOf(NORMAL_SUFFIX);
+
+	    if (suffix != -1)
+		{
+		image.src = image.src.substring(0, suffix) + ROLLOVER_SUFFIX;
+		}
+
+	    // If normalImages contains the name of the normal image then
+	    // reset it to the rollover image.
+
+	    if (window.normalImages != null)
+		{
+		var	command = image.name;
+		var	normalImage = window.normalImages[command];
+
+		suffix = normalImage.indexOf(NORMAL_SUFFIX);
+
+		if (suffix != -1)
+		    {
+		    window.normalImages[command]
+			= normalImage.substring(0, suffix) + ROLLOVER_SUFFIX;
+		    }
+		}
+	    }
+    }
+
+    function doMouseOut(
+    	link
+	)
+    {
+
+	var	name = link.name;
+	var	image = document.images[name];
+
+	if (image == null)
+	    {
+	    if (link.style.color == window.activeColor
+	        || link.style.color == window.altActiveColor)
+		{
+		link.style.color           = window.normalColor;
+		link.style.backgroundColor = "transparent";
+		}
+	    }
+	else 
+	    {
+	    // If the current image ends with the "rollover" suffix then
+	    // change the current image to the wnormal image.
+
+	    var	suffix = image.src.indexOf(ROLLOVER_SUFFIX);
+
+	    if (suffix != -1)
+		{
+		image.src = image.src.substring(0, suffix) + NORMAL_SUFFIX;
+		}
+
+	    // If normalImages contains the name of the rollover image then
+	    // reset it to the normal image.
+
+	    if (window.normalImages != null)
+		{
+		var	command = image.name;
+					  
+		var	normalImage = window.normalImages[command];
+
+		if (normalImage == null) alert("no image for \"" + command + "\"");
+		suffix = normalImage.indexOf(ROLLOVER_SUFFIX);
+
+		if (suffix != -1)
+		    {
+		    window.normalImages[command]
+			= normalImage.substring(0, suffix) + NORMAL_SUFFIX;
+		    }
+		}
+	    }
+
+    }
+
+    function doOnLoad()
+    {
+
+	window.normalColor      = "black";
+	window.disabledColor    = "gray";
+	window.activeColor      = "#ffffff";
+	window.altActiveColor   = "rgb(255,255,255)";
+	window.activeBackground = "#C79800";
+    	window.normalImages     = new Array();
+    	window.disabledImages   = new Array();
+
+	window.normalImages["CANCEL_ZOOM"]     
+				= "images/cancelzoomOff.gif";
+	window.normalImages["ADD_UPDATE"]      
+				= "images/addupdateOff.gif";
+	window.normalImages["CLEAR_TO_ADD"]    
+				= "images/cleartoaddOff.gif";
+	window.normalImages["CLEAR_TO_FIND"]   
+				= "images/cleartofindOff.gif";
+	window.normalImages["DELETE_RECORD"]   
+				= "images/deleterecordOff.gif";
+	window.normalImages["EXIT"]            
+				= "images/exitOff.gif";
+	window.normalImages["FIND"]            
+				= "images/findOff.gif";
+	window.normalImages["FIRST_RECORD"]    
+				= "images/firstrecordOff.gif";
+	window.normalImages["PREVIOUS_RECORD"] 
+				= "images/previousrecordOff.gif";
+	window.normalImages["PREVIOUS_SET"]    
+				= "images/previoussetOff.gif";
+	window.normalImages["NEXT_RECORD"]     
+				= "images/nextrecordOff.gif";
+	window.normalImages["NEXT_SET"]        
+				= "images/nextsetOff.gif";
+	window.normalImages["LAST_RECORD"]     
+				= "images/lastrecordOff.gif";
+	window.normalImages["PREVIOUS_FORM"]   
+				= "images/previousformOff.gif";
+	window.normalImages["NEXT_FORM"]       
+				= "images/nextformOff.gif";
+	window.normalImages["ZOOM"]            
+				= "images/zoomOff.gif";
+	window.normalImages["HELP"]            
+				= "images/helpOff.gif";
+
+
+	window.disabledImages["CANCEL_ZOOM"]     
+				= "images/cancelzoomstippled.gif";
+	window.disabledImages["ADD_UPDATE"]      
+				= "images/addupdatestippled.gif";
+	window.disabledImages["CLEAR_TO_ADD"]    
+				= "images/cleartoaddstippled.gif";
+	window.disabledImages["CLEAR_TO_FIND"]   
+				= "images/cleartofindstippled.gif";
+	window.disabledImages["DELETE_RECORD"]   
+				= "images/deleterecordstippled.gif";
+	window.disabledImages["EXIT"]            
+				= "images/exitstippled.gif";
+	window.disabledImages["FIND"]            
+				= "images/findstippled.gif";
+	window.disabledImages["FIRST_RECORD"]    
+				= "images/firstrecordstippled.gif";
+	window.disabledImages["PREVIOUS_RECORD"] 
+				= "images/previousrecordstippled.gif";
+	window.disabledImages["PREVIOUS_SET"]    
+				= "images/previoussetstippled.gif";
+	window.disabledImages["NEXT_RECORD"]     
+				= "images/nextrecordstippled.gif";
+	window.disabledImages["NEXT_SET"]        
+				= "images/nextsetstippled.gif";
+	window.disabledImages["LAST_RECORD"]     
+				= "images/lastrecordstippled.gif";
+	window.disabledImages["PREVIOUS_FORM"]   
+				= "images/previousformstippled.gif";
+	window.disabledImages["NEXT_FORM"]       
+				= "images/nextformstippled.gif";
+	window.disabledImages["ZOOM"]            
+				= "images/zoomstippled.gif";
+	window.disabledImages["HELP"]            
+				= "images/helpstippled.gif";
+
+	// If the ClientManager has already been initialized then
+	// set the link states.  This handles the case where the
+	// mainFrame is loaded first or where the two frames are
+	// loaded in parallel.
+
+	if (window.parent.clientManager != null)
+	    {
+	    window.parent.clientManager.setControlStates(true);
+	    }
+
+    }
+
+
+
+    </script>
+</head>
+
+  
+<body onLoad=doOnLoad() topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0">
+
+    <!-- In order to use imane buttons, we need a form.  However,
+         we never want the form to be submitted.  We just want to
+	 handle the mouse clicks.  We prevent the form from being
+	 submitted bt having an onSubmit handler that returns false.
+
+    -->
+
+  <form name="form" onSubmit="return false">
+  <table width="50" border="0" cellspacing="2" cellpadding="2">
+    <tr> 
+      <td align=left> <a  href="#"
+	NAME="PREVIOUS_FORM" 
+	TITLE="Display the previous form" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" 
+	style="color: gray; text-decoration: none; size: 10pt">Back</a>
+      </td>
+    </tr>
+      <tr>
+      <td align=left> <a  href="#"  NAME="NEXT_FORM" 
+	TITLE="Display the next form" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Next</a></td>
+    </tr>
+      <tr>
+      <td align=left> <a  href="#" 
+	NAME="CLEAR_TO_FIND" 
+	TITLE="Clear to find" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Clear</a></td>
+    </tr>
+      <tr>
+      <td align=left> <a  href="#" 
+	NAME="FIND" 
+	TITLE="Find database entries" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Search</a></td>
+    </tr>
+      <tr>
+      <td align=left> <a  href="#" 
+	NAME="ZOOM" 
+	TITLE="Display zoom form" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Zoom</a></td>
+    </tr>
+      <tr>
+      <td align=left> <a  href="#" 
+	NAME="CANCEL_ZOOM" 
+	TITLE="Cancel the zoom form" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Cancel</a></td>
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+  </table>
+  </form>
+  </body>
+</html>

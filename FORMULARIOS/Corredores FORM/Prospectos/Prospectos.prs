@@ -1,0 +1,916 @@
+<project
+     version="11"
+      state="4"
+      flags="0"
+      timestamp="0"
+      ctimestamp="0"
+      scversion=""
+      component-chooser-selection=""
+      component-chooser-expanded=""
+ >
+
+    <security
+         state="4"
+          flags="0"
+          timestamp="0"
+          ctimestamp="0"
+          scversion=""
+ >
+    </security>
+
+    <file
+         path="Look_and_Feels/default.laf"
+          type="skin"
+          state="4"
+          flags="0"
+          timestamp="1369320769547"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Look_and_Feels/silver.laf"
+          type="skin"
+          state="4"
+          flags="0"
+          timestamp="1369320769548"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Look_and_Feels/flat.laf"
+          type="skin"
+          state="4"
+          flags="0"
+          timestamp="1369320769549"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/default.css"
+          type="css"
+          state="4"
+          flags="0"
+          timestamp="1369320769551"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/silver.css"
+          type="css"
+          state="4"
+          flags="0"
+          timestamp="1369320769554"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/flat.css"
+          type="css"
+          state="4"
+          flags="0"
+          timestamp="1369320769556"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/lotus.css"
+          type="css"
+          state="4"
+          flags="0"
+          timestamp="1369320769559"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/elevatorfillactive.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769576"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/elevatorfillinactive.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769590"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/gridtop.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769593"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/menugradient.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769595"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/datepicker.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769596"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/tabactive.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769597"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/tabinactive.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769598"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/TreeOpen.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769599"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/TreeClosed.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769600"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/default/doclink.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769601"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/elevatorfillactive.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769603"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/elevatorfillinactive.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769604"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/gridtop.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769605"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/menugradient.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769606"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/datepicker.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769607"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/tabactive.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769608"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/tabinactive.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769609"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/TreeOpen.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769610"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/TreeClosed.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769610"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/system/silver/doclink.gif"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320769610"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Connections/DataServerCon.cn"
+          type="connection"
+          state="4"
+          flags="0"
+          timestamp="1369320769618"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Static_Content/application.properties"
+          type="property"
+          state="4"
+          flags="0"
+          timestamp="1369320769677"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo"
+          type="folder"
+          state="4"
+          flags="0"
+          timestamp="1369320833711"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path="Classes/Folder1"
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/ItemsForm/Boton.fx"
+          type="button"
+          state="4"
+          flags="0"
+          timestamp="1369320867977"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/ItemsForm/Logo.fx"
+          type="img"
+          state="4"
+          flags="0"
+          timestamp="1369320868011"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/ItemsForm/TituloLBL.fx"
+          type="label"
+          state="4"
+          flags="0"
+          timestamp="1369320868064"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;NXJ LABEL &lt;/b&gt;TituloLBL&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Static_Content/ProviLogo.png"
+          type="resource"
+          state="4"
+          flags="0"
+          timestamp="1369320886559"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="true"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/ItemsForm/LineaRoja.fx"
+          type="line"
+          state="4"
+          flags="0"
+          timestamp="1369327202990"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;NXJ LINE &lt;/b&gt;LineaRoja&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/CorredoresFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1369575410512"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;CorredoresFRM&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/CorredoresDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1369575423301"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;CorredoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/ItemsForm/Standar.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1369583442072"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/Servicios/ServAdmin.fx"
+          type="service"
+          state="4"
+          flags="2"
+          timestamp="1369594198847"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <connection
+         name="DataServerCon"
+          path=""
+          db-jar="$UNIFY_HOME\lib\jdbcDrivers\SimbaJDBC.jar"
+          db-type="DataServer"
+          driver="simba.jdbc.SimbaDriver"
+          url="jdbc:simba:192.168.1.7:1583/DataServer_DSN"
+          datasource=""
+         >
+    </connection>
+
+    <color
+         rgb="Black"
+         >
+    </color>
+
+    <color
+         rgb="#ffff7f"
+         >
+    </color>
+
+    <color
+         rgb="transparent"
+         >
+    </color>
+
+    <color
+         rgb="#cccccc"
+         >
+    </color>
+
+    <color
+         rgb="#e6ebef"
+         >
+    </color>
+
+    <color
+         rgb="#e3D599"
+         >
+    </color>
+
+    <color
+         rgb="#d1bB59"
+         >
+    </color>
+
+    <color
+         rgb="#f1eacc"
+         >
+    </color>
+
+    <color
+         rgb="#d4d0c8"
+         >
+    </color>
+
+    <color
+         rgb="#7d7d7d"
+         >
+    </color>
+
+    <color
+         rgb="#666600"
+         >
+    </color>
+
+    <color
+         rgb="#bb99dc"
+         >
+    </color>
+
+    <color
+         rgb="#551A8B"
+         >
+    </color>
+
+    <color
+         rgb="#ff0000"
+         >
+    </color>
+
+    <color
+         rgb="#aa99bb"
+         >
+    </color>
+
+    <color
+         rgb="Gray"
+         >
+    </color>
+
+    <palette-item
+         type="-1"
+          base-class=""
+         >
+    </palette-item>
+
+    <palette-item
+         type="19"
+          base-class="Classes/Foundation/Label"
+         >
+    </palette-item>
+
+    <palette-item
+         type="20"
+          base-class="Classes/Foundation/Text box"
+         >
+    </palette-item>
+
+    <palette-item
+         type="53"
+          base-class="Classes/Foundation/Rich Text field"
+         >
+    </palette-item>
+
+    <palette-item
+         type="21"
+          base-class="Classes/Foundation/Link"
+         >
+    </palette-item>
+
+    <palette-item
+         type="22"
+          base-class="Classes/Foundation/Text field"
+         >
+    </palette-item>
+
+    <palette-item
+         type="23"
+          base-class="Classes/Foundation/Text area"
+         >
+    </palette-item>
+
+    <palette-item
+         type="24"
+          base-class="Classes/Foundation/Dynamic text"
+         >
+    </palette-item>
+
+    <palette-item
+         type="25"
+          base-class="Classes/Foundation/Checkbox"
+         >
+    </palette-item>
+
+    <palette-item
+         type="26"
+          base-class="Classes/Foundation/List"
+         >
+    </palette-item>
+
+    <palette-item
+         type="27"
+          base-class="Classes/Foundation/Combo"
+         >
+    </palette-item>
+
+    <palette-item
+         type="28"
+          base-class="Classes/Foundation/Button"
+         >
+    </palette-item>
+
+    <palette-item
+         type="29"
+          base-class="Classes/Foundation/Radio Group"
+         >
+    </palette-item>
+
+    <palette-item
+         type="30"
+          base-class="Classes/Foundation/Image button"
+         >
+    </palette-item>
+
+    <palette-item
+         type="31"
+          base-class="Classes/Foundation/Line"
+         >
+    </palette-item>
+
+    <palette-item
+         type="32"
+          base-class="Classes/Foundation/Image"
+         >
+    </palette-item>
+
+    <palette-item
+         type="33"
+          base-class="Classes/Foundation/Table"
+         >
+    </palette-item>
+
+    <palette-item
+         type="34"
+          base-class="Classes/Foundation/Repeat"
+         >
+    </palette-item>
+
+    <palette-item
+         type="35"
+          base-class="Classes/Foundation/Box"
+         >
+    </palette-item>
+
+    <palette-item
+         type="36"
+          base-class="Classes/Foundation/Data view"
+         >
+    </palette-item>
+
+    <palette-item
+         type="37"
+          base-class="Classes/Foundation/Tab"
+         >
+    </palette-item>
+
+    <palette-item
+         type="38"
+          base-class="Classes/Foundation/Tab set"
+         >
+    </palette-item>
+
+    <palette-item
+         type="39"
+          base-class="Classes/Foundation/Iframe"
+         >
+    </palette-item>
+
+    <palette-item
+         type="40"
+          base-class="Classes/Foundation/Javascript"
+         >
+    </palette-item>
+
+    <palette-item
+         type="41"
+          base-class="Classes/Foundation/Navigation bar"
+         >
+    </palette-item>
+
+    <palette-item
+         type="42"
+          base-class="Classes/Foundation/File chooser"
+         >
+    </palette-item>
+
+    <palette-item
+         type="44"
+          base-class="Classes/Foundation/Menubar"
+         >
+    </palette-item>
+
+    <palette-item
+         type="45"
+          base-class="Classes/Foundation/Tree"
+         >
+    </palette-item>
+
+    <palette-item
+         type="49"
+          base-class="Classes/Foundation/Date picker"
+         >
+    </palette-item>
+
+    <palette-item
+         type="52"
+          base-class="Classes/Foundation/Dialog field"
+         >
+    </palette-item>
+    </project>

@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM EmpresasFRM
+{
+    DATA VIEW view1 extends Modulo.EmpresasDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

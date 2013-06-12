@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM SeguimientoFRM
+{
+    DATA VIEW view1 extends Modulo.SeguimientoDVW
+    {
+        
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

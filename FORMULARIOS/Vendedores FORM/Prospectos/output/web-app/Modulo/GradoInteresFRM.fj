@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM GradoInteresFRM
+{
+    DATA VIEW view1 extends Modulo.GradoInteresDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

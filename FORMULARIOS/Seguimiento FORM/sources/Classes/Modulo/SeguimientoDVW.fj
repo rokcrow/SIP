@@ -1,0 +1,176 @@
+package Modulo;
+
+
+
+DATA VIEW SeguimientoDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD vpp_nombre
+    {
+    
+    }
+
+    FIELD vpp_fecha
+    {
+    
+    }
+
+    FIELD vpp_correo
+    {
+    
+    }
+
+    FIELD vpy_nombre
+    {
+    
+    }
+
+    FIELD vpp_telres
+    {
+    
+    }
+
+    FIELD vpp_numero
+    {
+    
+    }
+
+    FIELD vpp_direccion
+    {
+    
+    }
+
+    FIELD vpp_cuanta_correo2
+    {
+    
+    }
+
+    FIELD vpp_telofi
+    {
+    
+    }
+
+    FIELD vpp_estadopro
+    {
+    
+    }
+
+    FIELD vpp_nacionalidad
+    {
+    
+    }
+
+    FIELD vpp_fechaestado
+    {
+    
+    }
+
+    FIELD vpp_proyecto
+    {
+    
+    }
+
+    FIELD vpp_ciudad
+    {
+    
+    }
+
+    DATA VIEW PUBLIC_vps_prosigue
+    {
+    
+        FIELD vps_consecu
+        {
+        
+        }
+
+        FIELD vps_fecha
+        {
+        
+        }
+
+        FIELD vps_hora
+        {
+        
+        }
+
+        FIELD vps_usuario
+        {
+        
+        }
+
+        FIELD vps_mediocon
+        {
+        
+        }
+
+        FIELD vps_califica
+        {
+        
+        }
+
+        FIELD xpc_nombre
+        {
+        
+        }
+
+        FIELD vps_estado
+        {
+        
+        }
+
+        FIELD vps_f_pcontacto
+        {
+        
+        }
+
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD vps_comentario1
+        {
+        
+        }
+
+    }
+
+    FIELD vpp_vendedor
+    {
+    
+    }
+
+    FIELD vve_nombre
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

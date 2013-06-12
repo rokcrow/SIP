@@ -1,0 +1,49 @@
+package Modulo;
+
+
+
+DATA VIEW ProyectosDVW
+{ 
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD vpy_codigo
+    {}
+    
+    FIELD vpy_empresa
+    {}
+    
+    FIELD vpy_nombre
+    {}
+    
+    FIELD vpy_estado
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

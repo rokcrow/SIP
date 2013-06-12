@@ -1,0 +1,32 @@
+<html>
+<!--
+/*----------------------------------------------------------------------*
+ *	CLASS:	 	Unify NXJ Application Close HTML Page
+ *
+ *	ORIGINATOR:	harada
+ *	CREATION DATE:	Thu Jun 10 15:17:47 PDT 2004
+ *
+ *----------------------------------------------------------------------*/
+
+/**
+ * This HTML page closing the current window.
+ *
+ * @author	harada
+ * @author	$Author: harada $	$State$
+ * @version	$Revision: 35573 $	$Date: 2005-09-22 19:14:48 -0700 (Thu, 22 Sep 2005) $
+ */
+-->
+
+  <head>
+      <script language="JavaScript">
+	function win_close() {
+	    window.opener = top;
+	    window.close();
+	}
+      </script>
+  </head>
+
+  
+  <body onLoad="win_close()">
+  </body>
+</html>

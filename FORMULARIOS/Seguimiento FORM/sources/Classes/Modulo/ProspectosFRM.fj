@@ -1,0 +1,25 @@
+package Modulo;
+
+FORM ProspectosFRM
+{
+    DATA VIEW view1 extends Modulo.ProspectosDVW
+    {
+    
+    
+    
+        BEFORE FIND
+        {
+            session.displayToMessageBox("Koala");
+        }
+
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
