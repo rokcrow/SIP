@@ -1,6 +1,5 @@
 <form 
     binary_variables = ""
-    field_order = ""
     form_height = "1038"
     form_width = "1059"
     object_type = "data_view"
@@ -9,16 +8,18 @@
     reuse="true">
 
     <div 
+        add_allowed = "false"
         aud_on_entry = "false"
         auto_find = "false"
         background_color = "#cccccc"
         binary_variables = ""
-        binding_type = "connection"
         bloom_filter = "00000000000400040000000000000000"
         cascade_deletes = "false"
         cascade_updates = "false"
+        clear_after_au = "false"
         commands = ""
         connection = "Connection1"
+        delete_allowed = "false"
         display_name = ".top"
         foundation_type = "Classes/Foundation/Data view"
         key = ".top."
@@ -36,6 +37,7 @@
         binding_type = "connection"
         cascade_deletes = "false"
         cascade_updates = "false"
+        clear_after_au = "false"
         commands = ""
         connection = "Connection1"
         detail_keys = "vps_proyecto;vps_prospecto"
@@ -726,7 +728,7 @@
         target_field = "vpp_fecha"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
         updateable = "true"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "Date"
@@ -749,7 +751,7 @@
         target_field = "vpp_fechaestado"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
         updateable = "true"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "String"

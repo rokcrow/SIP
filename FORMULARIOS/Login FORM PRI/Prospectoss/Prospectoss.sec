@@ -709,6 +709,37 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/SeguimientoFRM.fx"
+        type="0"
+    >
+        <permission
+            name="Form"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/ProspectosFRM/view1"
         type="36"
     >
@@ -746,47 +777,16 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/SeguimientoFRM.fx"
-        type="0"
-    >
-        <permission
-            name="Form"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Update"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Find"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Add"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Delete"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
         path="Classes/Modulo/SeguimientoFRM/view1/PUBLIC_vps_prosigue"
         type="36"
     >
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -807,12 +807,12 @@
         type="36"
     >
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -866,17 +866,6 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/elevatorfillactive.png"
-        type="6"
-    >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
         path="Classes/Modulo/SeguimientoDVW.fx"
         type="36"
     >
@@ -886,12 +875,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -902,6 +891,17 @@
         />
         <permission
             name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/silver/elevatorfillactive.png"
+        type="6"
+    >
+        <permission
+            name="Access"
             value=""
             timestamp="0"
         />
@@ -1189,12 +1189,12 @@
         type="36"
     >
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />

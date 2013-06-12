@@ -10,6 +10,7 @@
         binary_variables=""
         bloom_filter="00000000000440040000000000000000"
         class="form"
+        click_on_field="true"
         commands=""
         connection="Connection1"
         displayheight="1033"
@@ -19,6 +20,7 @@
         form_width="1215"
         foundation_type="Classes/Foundation/Form"
         name="NXJForm"
+        stop_without_fields="true"
         uid_prefix="modulo_seguimientofrm_1369348169188"
         view="form"
         style="background-color: #999999">
@@ -29,8 +31,10 @@
             style="position: absolute; top: 30px; left: 190px; width:1005px; height:987px">
 
             <div
+                auto_find="false"
                 base_class="Classes/Modulo/SeguimientoDVW.fx"
                 binary_variables=""
+                clear_after_au="false"
                 commands=""
                 displayheight="987"
                 displayleft="190"

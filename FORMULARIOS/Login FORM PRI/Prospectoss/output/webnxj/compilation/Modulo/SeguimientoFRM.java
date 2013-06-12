@@ -114,6 +114,8 @@ public class SeguimientoFRM
 	public view1(com.unify.nxj.mgr.NXJContainer container)
 	{
 	    super("view1", container);
+	    setAutoFind(false);
+	    setClearAfterAdd(false);
 	} // <init>
     } // view1
 
@@ -136,6 +138,7 @@ public class SeguimientoFRM
 	us$setConnectionName("Connection1");
 	setStartInAddMode(true);
 	us$setBackgroundColor("#999999");
+	us$setStopWithoutFields(true);
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "SeguimientoFRM";
 } // SeguimientoFRM

@@ -21,12 +21,15 @@
       <script language="JavaScript">
 	function win_close() {
 	    window.opener = top;
-	    window.close();
+	    //window.close();
+		
+	 setTimeout(function(){ self.close();},3000);
 	}
       </script>
   </head>
 
   
   <body onLoad="win_close()">
+<h3> Ha salido del Sistema.</h3>
   </body>
 </html>

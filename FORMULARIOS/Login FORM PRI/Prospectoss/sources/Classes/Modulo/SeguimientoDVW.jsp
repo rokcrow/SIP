@@ -10,7 +10,6 @@
         class="form"
         displayheight="949"
         displaywidth="1055"
-        field_order=""
         form_height="1038"
         form_width="1059"
         name="NXJForm"
@@ -23,17 +22,19 @@
             style="position: absolute; top: 25px; left: 25px; width:1005px; height:987px">
 
             <div
+                add_allowed="false"
                 aud_on_entry="false"
                 auto_find="false"
                 binary_variables=""
-                binding_type="connection"
                 bloom_filter="00000000000400040000000000000000"
                 border-width="1"
                 cascade_deletes="false"
                 cascade_updates="false"
                 class="data_view"
+                clear_after_au="false"
                 commands=""
                 connection="Connection1"
+                delete_allowed="false"
                 displayheight="987"
                 displayleft="25"
                 displaytop="25"
@@ -67,6 +68,7 @@
                         cascade_deletes="false"
                         cascade_updates="false"
                         class="data_view"
+                        clear_after_au="false"
                         commands=""
                         connection="Connection1"
                         detail_keys="vps_proyecto;vps_prospecto"
@@ -1425,7 +1427,7 @@
                         target_field="vpp_fecha"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
                         updateable="true"
-                        view="date"
+                        view="text"
                         style="font-size: 12px;
                             color: Black">
 
@@ -1461,7 +1463,7 @@
                         target_field="vpp_fechaestado"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
                         updateable="true"
-                        view="date"
+                        view="text"
                         style="font-size: 12px;
                             color: Black">
 
@@ -1582,7 +1584,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 153px; left: 445px; width:45px; height:22px">
+                    style="position: absolute; top: 153px; left: 445px; width:25px; height:22px">
 
                     <input
                         accell_type="String"
@@ -1594,7 +1596,7 @@
                         displayheight="22"
                         displayleft="445"
                         displaytop="153"
-                        displaywidth="45"
+                        displaywidth="25"
                         explicit_search_mode="default"
                         field_length="2"
                         field_type="text"
@@ -1606,7 +1608,7 @@
                         name=".top:vpp_proyecto."
                         original_name="textfield1"
                         retrieve_value="true"
-                        size="7"
+                        size="4"
                         target_field="vpp_proyecto"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315424064"
@@ -1689,7 +1691,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 862px; left: 112px; width:45px; height:22px">
+                    style="position: absolute; top: 862px; left: 112px; width:25px; height:22px">
 
                     <input
                         accell_type="String"
@@ -1700,7 +1702,7 @@
                         displayheight="22"
                         displayleft="112"
                         displaytop="862"
-                        displaywidth="45"
+                        displaywidth="25"
                         explicit_search_mode="default"
                         field_length="3"
                         field_type="text"
@@ -1712,7 +1714,7 @@
                         name=".top:vpp_vendedor."
                         original_name="textfield1"
                         retrieve_value="true"
-                        size="7"
+                        size="4"
                         target_field="vpp_vendedor"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316180037"
@@ -1725,22 +1727,22 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 153px; left: 493px; width:234px; height:22px">
+                    style="position: absolute; top: 153px; left: 477px; width:250px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
-                        displayleft="493"
+                        displayleft="477"
                         displaytop="153"
-                        displaywidth="234"
+                        displaywidth="250"
                         field_type="text"
                         field_weight="499"
                         findable="false"
                         key=".top:vpy_nombre."
                         name=".top:vpy_nombre."
                         original_name="textfield1"
-                        size="39"
+                        size="41"
                         stop_for_input="false"
                         target_field=""
                         type="text"

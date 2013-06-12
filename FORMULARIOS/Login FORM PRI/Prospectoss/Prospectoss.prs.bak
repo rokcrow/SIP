@@ -838,7 +838,7 @@
           type="data_view"
           state="4"
           flags="0"
-          timestamp="1370963500891"
+          timestamp="1371048961650"
           ctimestamp="0"
           scversion=""
           private="false"
@@ -861,7 +861,7 @@
     </connection>
 
     <color
-         rgb="transparent"
+         rgb="#ffcc00"
          >
     </color>
 
