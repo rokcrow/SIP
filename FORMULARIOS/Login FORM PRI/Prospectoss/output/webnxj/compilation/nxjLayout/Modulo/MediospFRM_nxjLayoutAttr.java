@@ -19,14 +19,14 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1135");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","712");
 	widget.addAttribute("fieldheight","722");
 	widget.addAttribute("fieldwidth","1140");
-	widget.addStyle("background-color","#999999");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -40,9 +40,9 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayheight","566");
 	widget.addAttribute("displaytop","33");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
 }
@@ -108,9 +108,9 @@ private void setAttrFor_div_vmp_categoria__50(Widget widget)
 
 private void setAttrFor_vmp_categoria__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.");
 	widget.addAttribute("name","view1:vmp_categoria.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -120,9 +120,9 @@ private void setAttrFor_div_vmp_codigo__50(Widget widget)
 
 private void setAttrFor_vmp_codigo__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.");
 	widget.addAttribute("name","view1:vmp_codigo.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -132,9 +132,9 @@ private void setAttrFor_div_vmp_descripcion__50(Widget widget)
 
 private void setAttrFor_vmp_descripcion__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.");
 	widget.addAttribute("name","view1:vmp_descripcion.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -523,9 +523,9 @@ private void setAttrFor_div_textfield1__50(Widget widget)
 
 private void setAttrFor_textfield1__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)box111:(Modulo.MediospDVW)textfield1.");
 	widget.addAttribute("name","view1:box111:textfield1.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -535,9 +535,9 @@ private void setAttrFor_div_textfield11__50(Widget widget)
 
 private void setAttrFor_textfield11__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)box111:(Modulo.MediospDVW)textfield11.");
 	widget.addAttribute("name","view1:box111:textfield11.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 

@@ -234,7 +234,7 @@ public class Standar
 	super(dataViewName, container);
 	us$setBackgroundColor("#cccccc");
 	date1.setStyleClass("date_picker");
-	date1.us$setView("date");
+	date1.us$setView("text");
 	label11.setStyleClass("label");
 	label11.setForegroundColor("Black");
 	label11.setFontFamily("Verdana");

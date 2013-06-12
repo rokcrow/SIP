@@ -3,7 +3,7 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/Modulos/Prospectos/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
 
     <form
         binary_variables=""
@@ -11,7 +11,7 @@
         displayheight="871"
         displaywidth="1055"
         form_height="871"
-        form_width="1055"
+        form_width="1056"
         name="NXJForm"
         object_type="data_view"
         view="form">
@@ -73,13 +73,15 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: -6px; left: 391px; width:222px; height:62px">
+                            style="position: absolute; top: 2px; left: 416px; width:164px; height:46px">
 
                             <div
                                 base_class="Classes/ItemsForm/Logo.fx"
                                 binary_variables=""
-                                displayleft="391"
-                                displaytop="-6"
+                                displayheight="46"
+                                displayleft="416"
+                                displaytop="2"
+                                displaywidth="164"
                                 foundation_type="Classes/Foundation/Image"
                                 id=".top:box11:image1."
                                 key=".top:box11:image1."

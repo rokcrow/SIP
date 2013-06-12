@@ -253,6 +253,12 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/RepProspectosDVW/box111"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/MediospFRM/view1"
         type="36"
     >
@@ -438,6 +444,37 @@
         />
         <permission
             name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/RepProspectosFRM.fx"
+        type="0"
+    >
+        <permission
+            name="Form"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -655,6 +692,37 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/RepProspectosFRM/view1"
+        type="36"
+    >
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+        <type-command
+            name="reportecmd"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/ProspectosDVW/box11"
         type="35"
     >
@@ -781,12 +849,12 @@
         type="36"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -1001,6 +1069,12 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/RepProspectosDVW/box11"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/VendedoresDVW.fx"
         type="36"
     >
@@ -1140,6 +1214,12 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/RepProspectosFRM/view1/box111"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Static_Content/ProviLogo.png"
         type="6"
     >
@@ -1189,12 +1269,12 @@
         type="36"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -1259,6 +1339,42 @@
     >
         <permission
             name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/RepProspectosDVW.fx"
+        type="36"
+    >
+        <permission
+            name="Form"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+        <type-command
+            name="reportecmd"
             value=""
             timestamp="0"
         />
@@ -1336,6 +1452,12 @@
     <object
         project=""
         path="Classes/Modulo/CorredoresDVW/box111"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/RepProspectosFRM/view1/box11"
         type="35"
     >
     </object>
@@ -1476,6 +1598,11 @@
     />
     <filter
         project=""
+        path="Classes/Modulo/RepProspectosDVW.fx"
+        value="00000000000400042000000000000000"
+    />
+    <filter
+        project=""
         path="Classes/Modulo/GradoInteresDVW.fx"
         value="00000000000400040000000000000000"
     />
@@ -1498,6 +1625,11 @@
         project=""
         path="Classes/Modulo/CorredoresDVW.fx"
         value="00000000000400040000000000000000"
+    />
+    <filter
+        project=""
+        path="Classes/Modulo/RepProspectosFRM.fx"
+        value="40000000000400042000000000000000"
     />
     <base-class
         project=""
@@ -1528,6 +1660,11 @@
         project=""
         path="classes/modulo/menufrm/view1/box11"
         value="classes/modulo/menudvw.fx:box11"
+    />
+    <base-class
+        project=""
+        path="classes/modulo/repprospectosfrm/view1"
+        value="classes/modulo/repprospectosdvw.fx"
     />
     <base-class
         project=""
@@ -1616,6 +1753,11 @@
     />
     <base-class
         project=""
+        path="classes/modulo/repprospectosfrm/view1/box11"
+        value="classes/modulo/repprospectosdvw.fx:box11"
+    />
+    <base-class
+        project=""
         path="classes/modulo/mediospfrm/view1"
         value="classes/modulo/mediospdvw.fx"
     />
@@ -1653,6 +1795,11 @@
         project=""
         path="classes/modulo/loginfrm/view1/box111"
         value="classes/modulo/logindvw.fx:box111"
+    />
+    <base-class
+        project=""
+        path="classes/modulo/repprospectosfrm/view1/box111"
+        value="classes/modulo/repprospectosdvw.fx:box111"
     />
 </database>
 <!--====================================================================*

@@ -41,6 +41,7 @@
                 displaywidth="1005"
                 fieldheight="987"
                 fieldwidth="1005"
+                find_count="20"
                 foundation_type="Classes/Foundation/Data view"
                 id=".top."
                 key=".top."

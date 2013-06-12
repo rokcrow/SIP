@@ -559,7 +559,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;Standar&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -862,6 +862,39 @@
           checked-in-path=""
           base-class=""
           tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;SeguimientoFRM&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/RepProspectosDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371068849356"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;RepProspectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/RepProspectosFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1371068984904"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;RepProspectosFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>

@@ -1,11 +1,13 @@
 <form 
-    aud_on_entry = "true"
+    aud_on_entry = "false"
     background_color = "#999999"
     binary_variables = ""
     bloom_filter = "00000000000440040000000000000000"
     click_on_field = "true"
     commands = ""
     connection = "Connection1"
+    delete_allowed = "false"
+    find_allowed = "true"
     footer = "none"
     form_height = "1033"
     form_width = "1215"
@@ -17,6 +19,8 @@
     reuse="true">
 
     <div 
+        add_allowed = "false"
+        aud_on_entry = "false"
         auto_find = "false"
         base_class = "Classes/Modulo/SeguimientoDVW.fx"
         binary_variables = ""

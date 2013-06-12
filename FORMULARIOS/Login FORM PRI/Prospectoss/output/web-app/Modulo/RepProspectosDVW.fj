@@ -1,0 +1,98 @@
+package Modulo;
+
+
+
+DATA VIEW RepProspectosDVW
+{
+    COMMAND reportecmd
+    {
+        NullableString vFecha1 = fecha1.toString();
+        NullableString vFecha2 = fecha2.toString();
+        NullableString strReporte;
+        vFecha1 = vFecha1.substring(3,5) + "/" + vFecha1.substring(0,2) + "/" + vFecha1.substring(6,10);
+        vFecha2 = vFecha2.substring(3,5) + "/" + vFecha2.substring(0,2) + "/" + vFecha2.substring(6,10);
+       // strReporte = "http://localhost:8080/birt/frameset?__report=reporttest.rptdesign&PROYECTO=" + box1.proyecto + "&VENDEDOR=" + box1.vendedor + "&FECHAINI=" + vFecha1 + "&FECHAFIN=" + vFecha2;
+        
+        strReporte = "http://localhost:8080/birt/preview?__report=reporttest.rptdesign&format=pdf&PROYECTO=" + proyecto + "&VENDEDOR=" + vendedor + "&FECHAINI=" + vFecha1 + "&FECHAFIN=" + vFecha2;
+        
+        session.openURL(strReporte);
+    }
+
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD fecha2
+    {
+    }
+    
+    FIELD vendedor
+    {
+    }
+    
+    FIELD TodosLosVend
+    {
+        AFTER FIELD
+        {
+            if(TodosLosVend == "T")
+            {
+                vendedor.visible = false;
+                vendedor = "*";
+            }
+            else
+            {
+                vendedor.visible = true;
+            }
+        }
+    }
+    
+    FIELD fecha1
+    {
+    }
+    
+    FIELD proyecto
+    {
+    }
+    
+    FIELD TodosLoProy
+    {
+        AFTER FIELD
+        {
+            if(TodosLoProy == "T")
+            {
+                proyecto.visible = false;
+                proyecto = "*";
+            }
+            else
+            {
+                proyecto.visible = true;
+            }
+        }
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

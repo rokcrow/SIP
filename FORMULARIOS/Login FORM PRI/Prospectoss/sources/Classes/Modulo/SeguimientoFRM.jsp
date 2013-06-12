@@ -6,15 +6,17 @@
 <body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
-        aud_on_entry="true"
+        aud_on_entry="false"
         binary_variables=""
         bloom_filter="00000000000440040000000000000000"
         class="form"
         click_on_field="true"
         commands=""
         connection="Connection1"
+        delete_allowed="false"
         displayheight="1033"
         displaywidth="1215"
+        find_allowed="true"
         footer="none"
         form_height="1033"
         form_width="1215"
@@ -31,6 +33,8 @@
             style="position: absolute; top: 30px; left: 190px; width:1005px; height:987px">
 
             <div
+                add_allowed="false"
+                aud_on_entry="false"
                 auto_find="false"
                 base_class="Classes/Modulo/SeguimientoDVW.fx"
                 binary_variables=""

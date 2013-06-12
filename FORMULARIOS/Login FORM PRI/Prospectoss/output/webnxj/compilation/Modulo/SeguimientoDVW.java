@@ -1274,6 +1274,7 @@ public class SeguimientoDVW
 	setAutoFind(false);
 	setStartInAddMode(false);
 	setClearAfterAdd(false);
+	setFindCount(20);
 	Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue.us$setMasterDataView(Modulo.SeguimientoDVW.this);
 	Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue.us$setMasterRelationshipCriteria(Modulo.SeguimientoDVW.this.us$getPUBLIC_vps_prosigue_1_FindExpressions());
 	Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue.us$setMasterRelationshipAddExpr(Modulo.SeguimientoDVW.this.us$getPUBLIC_vps_prosigue_1_AddExpressions());
@@ -1349,7 +1350,7 @@ public class SeguimientoDVW
 	vpp_direccion.setFontSize("12");
 	vpp_fecha.setStyleClass("textfield");
 	vpp_fecha.us$setMultiValued(true);
-	vpp_fecha.us$setView("text");
+	vpp_fecha.us$setView("date");
 	vpp_fecha.us$setCandidateTargetColumnName("vpp_fecha");
 	vpp_fecha.setValueRetrievedDuringFetch(true);
 	vpp_fecha.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
@@ -1359,7 +1360,7 @@ public class SeguimientoDVW
 	vpp_fecha.setFontSize("12");
 	vpp_fechaestado.setStyleClass("textfield");
 	vpp_fechaestado.us$setMultiValued(true);
-	vpp_fechaestado.us$setView("text");
+	vpp_fechaestado.us$setView("date");
 	vpp_fechaestado.us$setCandidateTargetColumnName("vpp_fechaestado");
 	vpp_fechaestado.setValueRetrievedDuringFetch(true);
 	vpp_fechaestado.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);

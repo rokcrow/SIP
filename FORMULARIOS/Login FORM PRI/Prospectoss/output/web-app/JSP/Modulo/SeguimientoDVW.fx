@@ -21,6 +21,7 @@
         connection = "Connection1"
         delete_allowed = "false"
         display_name = ".top"
+        find_count = "20"
         foundation_type = "Classes/Foundation/Data view"
         key = ".top."
         kind = "data_region"
@@ -87,6 +88,8 @@
         findable = "false"
         key = ".top:PUBLIC_vps_prosigue:textfield1."
         original_name = "textfield1"
+        script = "{
+}"
         style_class = "textfield"
         target_field = ""
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369318596397"
@@ -105,6 +108,34 @@
         key = ".top:PUBLIC_vps_prosigue:vps_califica."
         multi_valued = "true"
         retrieve_value = "true"
+        script = "{
+            ON DATA ACCEPT
+        {
+            EXEC SQL
+            SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
+            FROM   xpc_proscalif
+            WHERE  xpc_codigo = :vps_califica
+            into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+            if (session.status == StatusCode.SS_NOREC) {
+                        session.displayToMessageBox(&quot;No existe la calificacion seleccionado en el maestro&quot;);
+                        rejectOperation();
+                        }
+            else
+            {
+            if (xpc_califica == &quot;I&quot;) vps_estado = &quot;S&quot;;
+            else if (xpc_califica == &quot;M&quot;) vps_estado = &quot;M&quot;;
+                else if (xpc_califica == &quot;P&quot;) vps_estado = &quot;N&quot;; &#09;                                               
+            }               
+        }
+        WHEN VALUE CHANGES
+        {
+            EXEC SQL
+            SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
+            FROM   xpc_proscalif
+            WHERE  xpc_codigo = :vps_califica
+            into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+        }
+}"
         style_class = "textfield"
         target_field = "vps_califica"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317475652"
@@ -127,6 +158,8 @@
         multi_valued = "true"
         original_name = "textfield1"
         retrieve_value = "true"
+        script = "{
+}"
         style_class = "textfield"
         target_field = "vps_comentario1"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369318525208"
@@ -146,6 +179,8 @@
         key = ".top:PUBLIC_vps_prosigue:vps_consecu."
         multi_valued = "true"
         retrieve_value = "true"
+        script = "{
+}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = "vps_consecu"
@@ -168,6 +203,8 @@
         options = "Si esta interesado=S;Medianamente Interesado=M;No esta interesado=N"
         original_name = "vps_estado"
         retrieve_value = "true"
+        script = "{
+}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = "vps_estado"
@@ -188,6 +225,8 @@
         key = ".top:PUBLIC_vps_prosigue:vps_f_pcontacto."
         multi_valued = "true"
         retrieve_value = "true"
+        script = "{
+}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = "vps_f_pcontacto"
@@ -208,6 +247,8 @@
         key = ".top:PUBLIC_vps_prosigue:vps_fecha."
         multi_valued = "true"
         retrieve_value = "true"
+        script = "{
+}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = "vps_fecha"
@@ -228,6 +269,8 @@
         key = ".top:PUBLIC_vps_prosigue:vps_hora."
         multi_valued = "true"
         retrieve_value = "true"
+        script = "{
+}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = "vps_hora"
@@ -250,6 +293,8 @@
         options = "Email=C;Telefono=T;Fax=F;Personal=P"
         original_name = "vps_mediocon"
         retrieve_value = "true"
+        script = "{
+}"
         style_class = "textfield"
         target_field = "vps_mediocon"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317808977"
@@ -269,6 +314,8 @@
         key = ".top:PUBLIC_vps_prosigue:vps_usuario."
         multi_valued = "true"
         retrieve_value = "true"
+        script = "{
+}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = "vps_usuario"
@@ -285,6 +332,8 @@
         key = ".top:PUBLIC_vps_prosigue:xpc_nombre."
         multi_valued = "true"
         original_name = "textfield1"
+        script = "{
+}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
@@ -728,7 +777,7 @@
         target_field = "vpp_fecha"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -751,7 +800,7 @@
         target_field = "vpp_fechaestado"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "String"

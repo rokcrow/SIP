@@ -19,14 +19,14 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1074");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","495");
 	widget.addAttribute("fieldheight","495");
 	widget.addAttribute("fieldwidth","1074");
-	widget.addStyle("background-color","#999999");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -40,9 +40,9 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayheight","466");
 	widget.addAttribute("displaytop","30");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
 }
@@ -123,9 +123,9 @@ private void setAttrFor_div_NombVend__50(Widget widget)
 
 private void setAttrFor_NombVend__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)NombVend.");
 	widget.addAttribute("name","view1:NombVend.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -135,9 +135,9 @@ private void setAttrFor_div_vvh_vendedora__50(Widget widget)
 
 private void setAttrFor_vvh_vendedora__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)vvh_vendedora.");
 	widget.addAttribute("name","view1:vvh_vendedora.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -202,9 +202,9 @@ private void setAttrFor_div_textfield1__50(Widget widget)
 
 private void setAttrFor_textfield1__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)box111:(Modulo.VendedoresDVW)textfield1.");
 	widget.addAttribute("name","view1:box111:textfield1.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -214,9 +214,9 @@ private void setAttrFor_div_textfield11__50(Widget widget)
 
 private void setAttrFor_textfield11__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)box111:(Modulo.VendedoresDVW)textfield11.");
 	widget.addAttribute("name","view1:box111:textfield11.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 

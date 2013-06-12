@@ -164,152 +164,6 @@ DATA VIEW SeguimientoDVW
     
     }
 
-    DATA VIEW PUBLIC_vps_prosigue
-    {
-
-        
-        multi_valued NullableStringVariable  vps_proyecto;
-        multi_valued NullableNumericVariable vps_prospecto;
-            
-        ON CLEAR TO ADD
-        {
-          vps_fecha   = session.currentDate;
-	  vps_hora    = session.currentTime;
-	  vps_usuario = Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario; 
-	  
-          EXEC SQL	  
-	  SELECT vps_consecu
-	  FROM   vps_prosigue
-	  WHERE  vps_proyecto  = :vpp_proyecto
-	  AND    vps_prospecto = :vpp_numero
-	  order by vps_consecu desc
-          into    consecutivo;
-	  
-	  if (session.status != StatusCode.SS_NORM)
-	    {
-	     if (session.status == StatusCode.SS_NOREC) 
-                vps_consecu = 1;
-	       else
-	        {
-	         session.displayToMessageBox("El consecutivo esta ocupado por otro usuario");
-                 session.queueCommand("CLEAR_TO_FIND");
-	        }        	     
-            }
-	   else vps_consecu = consecutivo + 1;
-        }
-
-        BEFORE ADD
-        {
-	     if (xpc_califica == "I") vps_estado = "S";
-	       else if (xpc_califica == "M") vps_estado = "M";
-	         else if (xpc_califica == "P") vps_estado = "N";
-                 
-            NullableDate f_pcontacto;
-            /*
-            EXEC SQL
-            SELECT vps_f_pcontacto
-            FROM   vps_prosigue
-            WHERE  vps_proyecto = :vps_proyecto
-            AND    vps_prospecto = :vps_prospecto
-            AND    vps_consecu = :vps_consecu -1
-            into   f_pcontacto;
-            
-            if ( session.status != StatusCode.SS_NORM )
-            */
-            f_pcontacto = session.currentDate;
-            
-            if (vpy_tipo == "A") 
-                vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
-            else
-                vps_f_pcontacto = f_pcontacto + xpc_dias_pvt;                
-        }
-    
-    
-        FIELD vps_consecu
-        {
-        
-        }
-
-        FIELD vps_fecha
-        {
-        
-        }
-
-        FIELD vps_hora
-        {
-        
-        }
-
-        FIELD vps_usuario
-        {
-        
-        }
-
-        FIELD vps_mediocon
-        {
-        
-        }
-
-        FIELD vps_califica
-        {
-                    ON DATA ACCEPT
-                {
-                    EXEC SQL
-                    SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
-                    FROM   xpc_proscalif
-                    WHERE  xpc_codigo = :vps_califica
-                    into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
-                    
-                    if (session.status == StatusCode.SS_NOREC) {
-                                session.displayToMessageBox("No existe la calificacion seleccionado en el maestro");
-                                rejectOperation();
-                                }
-                    else
-                    {
-                    if (xpc_califica == "I") vps_estado = "S";
-                    else if (xpc_califica == "M") vps_estado = "M";
-                        else if (xpc_califica == "P") vps_estado = "N"; 	                                               
-                    }               
-                                                
-                }
-                
-                WHEN VALUE CHANGES
-                {
-                    EXEC SQL
-                    SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
-                    FROM   xpc_proscalif
-                    WHERE  xpc_codigo = :vps_califica
-                    into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
-                }
-        }
-
-        FIELD xpc_nombre
-        {
-        
-        }
-
-        FIELD vps_estado
-        {
-        
-        }
-
-        FIELD vps_f_pcontacto
-        {
-        
-        }
-
-        FIELD textfield1
-        {
-        
-        }
-
-        FIELD vps_comentario1
-        {
-        
-        }
-
-    }
-
     FIELD vpp_vendedor
     {
              ON DATA ACCEPT
@@ -363,6 +217,117 @@ DATA VIEW SeguimientoDVW
     {
     
     }
+    DATA VIEW PUBLIC_vps_prosigue
+    {
+        multi_valued NullableStringVariable  vps_proyecto;
+        multi_valued NullableNumericVariable vps_prospecto;
+        ON CLEAR TO ADD
+        {
+          vps_fecha   = session.currentDate;
+          vps_hora    = session.currentTime;
+          vps_usuario = Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario; 
+          EXEC SQL	  
+          SELECT vps_consecu
+          FROM   vps_prosigue
+          WHERE  vps_proyecto  = :vpp_proyecto
+          AND    vps_prospecto = :vpp_numero
+          order by vps_consecu desc
+          into    consecutivo;
+          if (session.status != StatusCode.SS_NORM)
+            {
+             if (session.status == StatusCode.SS_NOREC) 
+                vps_consecu = 1;
+               else
+                {
+                 session.displayToMessageBox("El consecutivo esta ocupado por otro usuario");
+                 session.queueCommand("CLEAR_TO_FIND");
+                }        	     
+            }
+           else vps_consecu = consecutivo + 1;
+        }
+        BEFORE ADD
+        {
+             if (xpc_califica == "I") vps_estado = "S";
+               else if (xpc_califica == "M") vps_estado = "M";
+                 else if (xpc_califica == "P") vps_estado = "N";
+            NullableDate f_pcontacto;
+            /*
+            EXEC SQL
+            SELECT vps_f_pcontacto
+            FROM   vps_prosigue
+            WHERE  vps_proyecto = :vps_proyecto
+            AND    vps_prospecto = :vps_prospecto
+            AND    vps_consecu = :vps_consecu -1
+            into   f_pcontacto;
+            if ( session.status != StatusCode.SS_NORM )
+            */
+            f_pcontacto = session.currentDate;
+            if (vpy_tipo == "A") 
+                vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
+            else
+                vps_f_pcontacto = f_pcontacto + xpc_dias_pvt;                
+        }
+        FIELD vps_consecu
+        {
+        }
+        FIELD vps_fecha
+        {
+        }
+        FIELD vps_hora
+        {
+        }
+        FIELD vps_usuario
+        {
+        }
+        FIELD vps_mediocon
+        {
+        }
+        FIELD vps_califica
+        {
+                    ON DATA ACCEPT
+                {
+                    EXEC SQL
+                    SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
+                    FROM   xpc_proscalif
+                    WHERE  xpc_codigo = :vps_califica
+                    into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+                    if (session.status == StatusCode.SS_NOREC) {
+                                session.displayToMessageBox("No existe la calificacion seleccionado en el maestro");
+                                rejectOperation();
+                                }
+                    else
+                    {
+                    if (xpc_califica == "I") vps_estado = "S";
+                    else if (xpc_califica == "M") vps_estado = "M";
+                        else if (xpc_califica == "P") vps_estado = "N"; 	                                               
+                    }               
+                }
+                WHEN VALUE CHANGES
+                {
+                    EXEC SQL
+                    SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
+                    FROM   xpc_proscalif
+                    WHERE  xpc_codigo = :vps_califica
+                    into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+                }
+        }
+        FIELD xpc_nombre
+        {
+        }
+        FIELD vps_estado
+        {
+        }
+        FIELD vps_f_pcontacto
+        {
+        }
+        FIELD textfield1
+        {
+        }
+        FIELD vps_comentario1
+        {
+        }
+    }
+    
 }
 /*----------------------------------------------------------------------*
 * BEGIN MODIFICATION HISTORY
