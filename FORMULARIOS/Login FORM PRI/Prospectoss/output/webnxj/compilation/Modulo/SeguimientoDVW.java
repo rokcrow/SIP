@@ -849,7 +849,7 @@ public class SeguimientoDVW
 	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 	    vps_fecha.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
 	    vps_hora.assign(us$registerPool.allocateRegister().load(getSession().getCurrentTime()));
-	    vps_usuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM22)us$findForm(Modulo.LoginFRM22.class)).cajagrandeLogin.xpr_usuario));
+	    vps_usuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);

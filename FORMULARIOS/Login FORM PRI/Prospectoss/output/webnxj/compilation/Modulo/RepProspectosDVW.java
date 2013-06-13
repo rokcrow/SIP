@@ -107,6 +107,79 @@ public class RepProspectosDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
     private RepProspectosDVW RepProspectosDVW = this;
+    public class TodosLoProy
+	extends com.unify.nxj.mgr.datatypes.NXJStringField
+    {
+
+	public void afterField()
+	    throws Exception
+	{
+	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	    if (us$registerPool.allocateRegister().load(TodosLoProy).eqOp("T").getBooleanValueNullOk())
+		{
+		proyecto.setVisible(false);
+		proyecto.assign(us$registerPool.allocateRegister().load("*"));
+		}
+	    else
+		{
+		proyecto.setVisible(true);
+		}
+	} // afterField
+
+	public TodosLoProy()
+	{
+	    super(Modulo.RepProspectosDVW.this, "TodosLoProy", false, true, 100);
+	    setStyleClass("checkbox");
+	    us$setView("checkbox");
+	    setAutoAccept(true);
+	    setFindable(false);
+	    us$executesCodeAfterInput = true;
+	} // <init>
+    } // TodosLoProy
+
+    public TodosLoProy TodosLoProy = new TodosLoProy();
+    public class TodosLosVend
+	extends com.unify.nxj.mgr.datatypes.NXJStringField
+    {
+
+	public void afterField()
+	    throws Exception
+	{
+	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	    if (us$registerPool.allocateRegister().load(TodosLosVend).eqOp("T").getBooleanValueNullOk())
+		{
+		vendedor.setVisible(false);
+		vendedor.assign(us$registerPool.allocateRegister().load("*"));
+		}
+	    else
+		{
+		vendedor.setVisible(true);
+		}
+	} // afterField
+
+	public TodosLosVend()
+	{
+	    super(Modulo.RepProspectosDVW.this, "TodosLosVend", false, true, 100);
+	    setStyleClass("checkbox");
+	    us$setView("checkbox");
+	    setAutoAccept(true);
+	    setFindable(false);
+	    us$executesCodeAfterInput = true;
+	} // <init>
+    } // TodosLosVend
+
+    public TodosLosVend TodosLosVend = new TodosLosVend();
+    public class ejecutarbtn
+	extends ItemsForm.Boton
+    {
+
+	public ejecutarbtn()
+	{
+	    super(Modulo.RepProspectosDVW.this, "ejecutarbtn", false);
+	} // <init>
+    } // ejecutarbtn
+
+    public ejecutarbtn ejecutarbtn = new ejecutarbtn();
     public NullableDateField fecha1 = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "fecha1", false, true, 100);
     public NullableDateField fecha2 = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "fecha2", false, true, 100);
     public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
@@ -197,6 +270,17 @@ public class RepProspectosDVW
     } // proyecto
 
     public proyecto proyecto = new proyecto();
+    public class regresarbtn
+	extends ItemsForm.Boton
+    {
+
+	public regresarbtn()
+	{
+	    super(Modulo.RepProspectosDVW.this, "regresarbtn", false);
+	} // <init>
+    } // regresarbtn
+
+    public regresarbtn regresarbtn = new regresarbtn();
     public class vendedor
 	extends com.unify.nxj.mgr.datatypes.NXJStringField
     {
@@ -278,90 +362,6 @@ public class RepProspectosDVW
     } // vendedor
 
     public vendedor vendedor = new vendedor();
-    public class TodosLoProy
-	extends com.unify.nxj.mgr.datatypes.NXJStringField
-    {
-
-	public void afterField()
-	    throws Exception
-	{
-	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	    if (us$registerPool.allocateRegister().load(TodosLoProy).eqOp("T").getBooleanValueNullOk())
-		{
-		proyecto.setVisible(false);
-		proyecto.assign(us$registerPool.allocateRegister().load("*"));
-		}
-	    else
-		{
-		proyecto.setVisible(true);
-		}
-	} // afterField
-
-	public TodosLoProy()
-	{
-	    super(Modulo.RepProspectosDVW.this, "TodosLoProy", false, true, 100);
-	    setStyleClass("checkbox");
-	    us$setView("checkbox");
-	    setAutoAccept(true);
-	    setFindable(false);
-	    us$executesCodeAfterInput = true;
-	} // <init>
-    } // TodosLoProy
-
-    public TodosLoProy TodosLoProy = new TodosLoProy();
-    public class TodosLosVend
-	extends com.unify.nxj.mgr.datatypes.NXJStringField
-    {
-
-	public void afterField()
-	    throws Exception
-	{
-	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	    if (us$registerPool.allocateRegister().load(TodosLosVend).eqOp("T").getBooleanValueNullOk())
-		{
-		vendedor.setVisible(false);
-		vendedor.assign(us$registerPool.allocateRegister().load("*"));
-		}
-	    else
-		{
-		vendedor.setVisible(true);
-		}
-	} // afterField
-
-	public TodosLosVend()
-	{
-	    super(Modulo.RepProspectosDVW.this, "TodosLosVend", false, true, 100);
-	    setStyleClass("checkbox");
-	    us$setView("checkbox");
-	    setAutoAccept(true);
-	    setFindable(false);
-	    us$executesCodeAfterInput = true;
-	} // <init>
-    } // TodosLosVend
-
-    public TodosLosVend TodosLosVend = new TodosLosVend();
-    public class ejecutarbtn
-	extends ItemsForm.Boton
-    {
-
-	public ejecutarbtn()
-	{
-	    super(Modulo.RepProspectosDVW.this, "ejecutarbtn", false);
-	} // <init>
-    } // ejecutarbtn
-
-    public ejecutarbtn ejecutarbtn = new ejecutarbtn();
-    public class regresarbtn
-	extends ItemsForm.Boton
-    {
-
-	public regresarbtn()
-	{
-	    super(Modulo.RepProspectosDVW.this, "regresarbtn", false);
-	} // <init>
-    } // regresarbtn
-
-    public regresarbtn regresarbtn = new regresarbtn();
     public class box11
 	extends com.unify.nxj.mgr.NXJBox
     {
@@ -456,10 +456,10 @@ public class RepProspectosDVW
 	setStartInAddMode(false);
 	us$setBackgroundColor("#cccccc");
 	fecha1.setStyleClass("textfield");
-	fecha1.us$setView("text");
+	fecha1.us$setView("date");
 	fecha1.setFindable(false);
 	fecha2.setStyleClass("textfield");
-	fecha2.us$setView("text");
+	fecha2.us$setView("date");
 	fecha2.setFindable(false);
 	label1.setStyleClass("label");
 	label1.setFontSize("12");

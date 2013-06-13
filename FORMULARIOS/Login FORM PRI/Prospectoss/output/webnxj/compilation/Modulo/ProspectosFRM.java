@@ -111,10 +111,12 @@ public class ProspectosFRM
 	extends Modulo.ProspectosDVW
     {
 
-	public void beforeFind()
+	public void initDataView()
 	    throws Exception
 	{
-	} // beforeFind
+	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	    cajaarribaRegistroP.actualempresa.assign(us$registerPool.allocateRegister().load("CORRIERE DELLO SPORT"));
+	} // initDataView
 
 	public view1(com.unify.nxj.mgr.NXJContainer container)
 	{

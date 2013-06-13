@@ -2,17 +2,16 @@ package Modulo;
 
 FORM ProspectosFRM
 {
+   
     DATA VIEW view1 extends Modulo.ProspectosDVW
     {
     
     
-
-        BEFORE FIND
+        INIT DATA VIEW
         {
-         
-              //actualuser = Modulo.LoginDVW#validuser;
+                     //session.displayToMessageBox("LA GAZZETA DELLO SPORT");
+                     cajaarribaRegistroP.actualempresa  = "CORRIERE DELLO SPORT";
         }
-
 
     }
 

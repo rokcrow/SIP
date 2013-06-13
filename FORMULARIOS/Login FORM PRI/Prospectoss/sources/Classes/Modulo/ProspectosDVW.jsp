@@ -13,7 +13,7 @@
         displaywidth="1055"
         field_order=""
         form_height="1505"
-        form_width="1055"
+        form_width="1077"
         name="NXJForm"
         object_type="data_view"
         view="form">
@@ -27,12 +27,12 @@
                 aud_on_entry="false"
                 auto_find="false"
                 binary_variables=""
-                bloom_filter="00000000000400040040000000000000"
+                bloom_filter="00000000000400042040000000000000"
                 border-width="1"
                 cascade_deletes="false"
                 cascade_updates="false"
                 class="data_view"
-                commands=""
+                commands="empresausuario"
                 connection="Connection1"
                 displayheight="1455"
                 displayleft="25"
@@ -1383,6 +1383,34 @@
                 <div
                     binary_variables=""
                     view="div"
+                    style="position: absolute; top: 70px; left: 810px; width:151px; height:48px">
+
+                    <div
+                        base_class="Classes/ItemsForm/Boton.fx"
+                        binary_variables=""
+                        command="empresausuario"
+                        displayleft="810"
+                        displaytop="70"
+                        displaywidth="151"
+                        field_type="button"
+                        foundation_type="Classes/Foundation/Button"
+                        id=".top:button1."
+                        instancewidth="151"
+                        key=".top:button1."
+                        kind="instance"
+                        original_name="button1"
+                        uid="itemsform_dataview1_1368038367945_b67d362da0c242c6824b452e05f6336692bfd36d_1371155648152"
+                        uid_to_name=""
+                        value="EMPRESA y USUARIO"
+                        view="button">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
                     style="position: absolute; top: 1400px; left: 4px; width:996px; height:50px">
 
                     <fieldset
@@ -1395,8 +1423,8 @@
                         displaytop="1400"
                         displaywidth="996"
                         field_weight="5299"
-                        id=".top:box11."
-                        key=".top:box11."
+                        id="cajaabajoRegistroP."
+                        key="cajaabajoRegistroP."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369343805083"
@@ -1419,8 +1447,8 @@
                                 displaytop="2"
                                 displaywidth="164"
                                 foundation_type="Classes/Foundation/Image"
-                                id=".top:box11:image1."
-                                key=".top:box11:image1."
+                                id="cajaabajoRegistroP:image1."
+                                key="cajaabajoRegistroP:image1."
                                 kind="instance"
                                 original_name="image1"
                                 uid="itemsform_dataview1_1368038367945_c486553ba63e77316f04c86372ffc3ae6f0d73b1_1368040829176"
@@ -1450,8 +1478,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id=".top:box111."
-                        key=".top:box111."
+                        id="cajaarribaRegistroP."
+                        key="cajaarribaRegistroP."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -1460,6 +1488,34 @@
                             border-style:None;
                             border-color:transparent;
                             background-color: #e30000">
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="16"
+                                displaytop="14"
+                                displaywidth="197"
+                                field_type="text"
+                                field_weight="99"
+                                findable="false"
+                                immediate="true"
+                                key="cajaarribaRegistroP:actualempresa."
+                                multi_valued="true"
+                                name="cajaarribaRegistroP:actualempresa."
+                                original_name="textfield1"
+                                size="32"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+                                view="text">
+                        </div>
 
                         <div
                             binary_variables=""
@@ -1477,8 +1533,8 @@
                                 field_weight="199"
                                 findable="false"
                                 immediate="true"
-                                key=".top:box111:actualuser."
-                                name=".top:box111:actualuser."
+                                key="cajaarribaRegistroP:actualusuario."
+                                name="cajaarribaRegistroP:actualusuario."
                                 original_name="textfield1"
                                 size="18"
                                 stop_for_input="false"
@@ -1502,8 +1558,8 @@
                                 displaytop="14"
                                 displaywidth="277"
                                 foundation_type="Classes/Foundation/Label"
-                                id=".top:box111:label1."
-                                key=".top:box111:label1."
+                                id="cajaarribaRegistroP:label1."
+                                key="cajaarribaRegistroP:label1."
                                 kind="instance"
                                 labelalign="left"
                                 labeltitle="REGISTRO DE PROSPECTOS"
@@ -1530,8 +1586,8 @@
                                 displayleft="778"
                                 displaytop="65"
                                 displaywidth="55"
-                                id=".top:box111:label211."
-                                key=".top:box111:label211."
+                                id="cajaarribaRegistroP:label211."
+                                key="cajaarribaRegistroP:label211."
                                 labelalign="left"
                                 labeltitle="top: 1024"
                                 original_name="label2"
@@ -1541,33 +1597,6 @@
                                 <nobr>top: 1024</nobr>
                             </label>
 
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="16"
-                                displaytop="14"
-                                displaywidth="197"
-                                field_type="text"
-                                field_weight="99"
-                                findable="false"
-                                immediate="true"
-                                key=".top:box111:textfield1."
-                                name=".top:box111:textfield1."
-                                original_name="textfield1"
-                                size="32"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
-                                view="text">
                         </div>
 
                     </fieldset>
@@ -2616,7 +2645,7 @@
                         target_field="vpp_fecha"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2650,7 +2679,7 @@
                         target_field="vpp_fecha_nacio"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 
@@ -2687,7 +2716,7 @@
                         target_field="vpp_fecha_visita"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2721,7 +2750,7 @@
                         target_field="vpp_fechaestado"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 

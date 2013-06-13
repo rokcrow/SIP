@@ -601,7 +601,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:318px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -609,7 +609,7 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="318"
+                                displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
                                 id=".top:box111:label1."
                                 key=".top:box111:label1."
@@ -1185,7 +1185,7 @@
                         uid="itemsform_dataview1_1368038367945_8f881d62e4f69ddd223110dc73ed230ca145b37b_1369346473260"
                         view="hr"
                         width="988"
-                        style="border-color:transparent;
+                        style="border-color:Red;
                             font-size: 1pt;
                             background-color: Red;
                             color: #ff0033">
@@ -1212,7 +1212,7 @@
                         uid="itemsform_dataview1_1368038367945_8f881d62e4f69ddd223110dc73ed230ca145b37b_1369346640468"
                         view="hr"
                         width="988"
-                        style="border-color:transparent;
+                        style="border-color:Red;
                             font-size: 1pt;
                             background-color: Red;
                             color: #ff0033">
@@ -1428,7 +1428,7 @@
                         target_field="vpp_fecha"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 
@@ -1464,7 +1464,7 @@
                         target_field="vpp_fechaestado"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 

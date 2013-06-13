@@ -102,13 +102,13 @@
     </control>
     <field 
         binary_variables = ""
-        display_name = "grupo"
+        display_name = "actualempresa"
         field_type = "text"
         field_weight = "99"
         findable = "false"
         foreground_color = "Black"
         immediate = "true"
-        key = "cajagrandeMenu:cajaarribaMenu:grupo."
+        key = "cajagrandeMenu:cajaarribaMenu:actualempresa."
         multi_valued = "true"
         original_name = "textfield1"
         stop_for_input = "false"
@@ -117,6 +117,25 @@
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
         view = "text"
         visible = "true">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "actualusuario"
+        field_type = "text"
+        field_weight = "199"
+        findable = "false"
+        foreground_color = "Black"
+        immediate = "false"
+        key = "cajagrandeMenu:cajaarribaMenu:actualusuario."
+        multi_valued = "true"
+        original_name = "textfield1"
+        readers_field = "false"
+        required = "false"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+        view = "text">
     </field>
     <control 
         base_class = "Classes/ItemsForm/TituloLBL.fx"
@@ -141,25 +160,6 @@
         uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
         view = "label">
     </control>
-    <field 
-        binary_variables = ""
-        display_name = "usuario"
-        field_type = "text"
-        field_weight = "199"
-        findable = "false"
-        foreground_color = "Black"
-        immediate = "false"
-        key = "cajagrandeMenu:cajaarribaMenu:usuario."
-        multi_valued = "true"
-        original_name = "textfield1"
-        readers_field = "false"
-        required = "false"
-        stop_for_input = "false"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-        view = "text">
-    </field>
     <control 
         binary_variables = ""
         display_name = "label1"

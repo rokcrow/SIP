@@ -40,7 +40,7 @@ FORM MenuFRM
                         /********* OBRAS*/
                       
                         /**  Menu: Obras: Tablas Comunes: Tablas: Actividades de Presupuesto**/
-                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem ActividadPadd = new NXJMenuItem("Actividades de Presupuesto");                          
                             ActividadPadd.title = "Actividades de Presupuesto"; 
@@ -56,7 +56,7 @@ FORM MenuFRM
                          }
                          
                           /**  Menu: Obras: Tablas Comunes: Tablas: Insumos de Presupuesto**/
-                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem InsumosPadd = new NXJMenuItem("Insumos de Presupuesto");                          
                             InsumosPadd.title = "Insumos de Presupuesto"; 
@@ -67,7 +67,7 @@ FORM MenuFRM
                          }
                          
                            /**  Menu: Obras: Tablas Comunes: Tablas: Proveedores de Insumos**/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem ProveedoresIadd = new NXJMenuItem("Proveedores de Insumos");                          
                             ProveedoresIadd.title = "Proveedores de Insumos"; 
@@ -78,7 +78,7 @@ FORM MenuFRM
                          }
                          
                           /**  Menu: Obras: Tablas Comunes: Tablas: Categorias de Proyectos**/
-                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem CategoriasPadd = new NXJMenuItem("Categorias de Proyectos");                          
                             CategoriasPadd.title = "Categorías de Proyectos"; 
@@ -89,7 +89,7 @@ FORM MenuFRM
                          }
                          
                             /**  Menu: Obras: Tablas Comunes: Tablas: Ordenes de Diseño**/
-                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem OrdenesDadd = new NXJMenuItem("Ordenes de Diseño");                          
                             OrdenesDadd.title = "Órdenes de Diseño"; 
@@ -100,7 +100,7 @@ FORM MenuFRM
                          }
                          
                              /**  Menu: Obras: Tablas Comunes: Tablas: Creacion de Unidad por Obra**/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem CreacionUOadd = new NXJMenuItem("Creacion de Unidad por Obra");                          
                             CreacionUOadd.title = "Creación de Unidad por Obra"; 
@@ -111,7 +111,7 @@ FORM MenuFRM
                          }
                          
                              /**  Menu: Obras: Tablas Comunes: Tablas: Lista de Proveedores**/
-                          if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                          if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem ListaPadd = new NXJMenuItem(" Lista de Proveedores");                          
                             ListaPadd.title = " Lista de Proveedores"; 
@@ -122,7 +122,7 @@ FORM MenuFRM
                          }
                          
                            /**  Menu: Obras: Tablas Comunes: Precios Unitarios:  Precios Unitarios por Insumo **/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem PreciosUIadd = new NXJMenuItem("Precios Unitarios por Insumo");                          
                             PreciosUIadd.title = "Precios Unitarios por Insumo"; 
@@ -134,7 +134,7 @@ FORM MenuFRM
                          }
                          
                           /**  Menu: Obras: Tablas Comunes: Precios Unitarios:  Precios Unitarios por Proveedor **/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem PreciosUPadd = new NXJMenuItem("Precios Unitarios por Proveedor");                          
                             PreciosUPadd.title = "Precios Unitarios por Proveedor"; 
@@ -144,7 +144,7 @@ FORM MenuFRM
                          }
                          
                            /**  Menu: Obras: Tablas Comunes: Precios Unitarios:  Copia de Precios Unitarios **/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem CopiaPUadd = new NXJMenuItem("Copia de Precios Unitarios");                          
                             CopiaPUadd.title = "Copia de Precios Unitarios"; 
@@ -155,7 +155,7 @@ FORM MenuFRM
                          }
                          
                           /**  Menu: Obras: Tablas Comunes: Precios Unitarios:  Cálculo de Tiempos de Despacho **/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem CalculoTDadd = new NXJMenuItem("Calculo de Tiempos de Despacho");                          
                             CalculoTDadd.title = "Cálculo de Tiempos de Despacho"; 
@@ -166,7 +166,7 @@ FORM MenuFRM
 
                                                 
                              /**  Menu: Obras: Tablas Comunes: Analisis Unitario**/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                            NXJMenuItem AnalisisUadd = new NXJMenuItem("Analisis Unitarios");                          
                             AnalisisUadd.title = "Análisis Unitarios"; 
@@ -174,7 +174,7 @@ FORM MenuFRM
                          }
                          
                              /**  Menu: Obras: Tablas Comunes: Reportes**/
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {                        
                             NXJMenuItem ReportesTCadd = new NXJMenuItem("Reportes");                          
                             ReportesTCadd.title = "Reportes"; 
@@ -182,7 +182,7 @@ FORM MenuFRM
                          }
                          
                                         /**  Menu: Obras: Presupuestos**/
-                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                                 {
                                     NXJMenuItem Presupuestoadd = new NXJMenuItem("Presupuestos");
                                     Presupuestoadd.title = "Presupuestos";
@@ -191,7 +191,7 @@ FORM MenuFRM
                                 }
                                 
                                       /**  Menu: Obras: Programacion de Obras**/
-                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                                 {
                                     NXJMenuItem ProgramacionOadd = new NXJMenuItem("Programacion de Obras");
                                     ProgramacionOadd.title = "Programación de Obras";
@@ -200,7 +200,7 @@ FORM MenuFRM
                                 }
                                 
                                   /**  Menu: Obras: Control de Inventario**/
-                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                                 {
                                     NXJMenuItem ControlIadd = new NXJMenuItem("Control de Inventario");
                                     ControlIadd.title = "Control de Inventario";
@@ -209,7 +209,7 @@ FORM MenuFRM
                                 }
                                 
                                  /**  Menu: Obras: Contratos**/
-                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                                 {
                                     NXJMenuItem Contratosadd = new NXJMenuItem("Contratos");
                                     Contratosadd.title = "Contratos";
@@ -218,7 +218,7 @@ FORM MenuFRM
                                 }
                                 
                                     /**  Menu: Obras: Administracion**/
-                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                                 {
                                     NXJMenuItem Adminstracionadd = new NXJMenuItem("Administracion");
                                     Adminstracionadd.title = "Administración";
@@ -232,7 +232,7 @@ FORM MenuFRM
                         
                          
                           /**  Menu: Ventas: Parametros**/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem Parametrosadd = new NXJMenuItem("Parametros");
                             Parametrosadd.title = "Parametros";
@@ -240,7 +240,7 @@ FORM MenuFRM
                          }
                          
                             /**  Menu: Ventas: Urbanismo **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem Urbanismoadd = new NXJMenuItem("Urbanismo");
                             Urbanismoadd.title = "Urbanismo";
@@ -248,7 +248,7 @@ FORM MenuFRM
                          }
                          
                          /**  Menu: Ventas: Comisiones **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem Comisionesadd = new NXJMenuItem("Comisiones");
                             Comisionesadd.title = "Comisiones";
@@ -256,7 +256,7 @@ FORM MenuFRM
                          }
                          
                           /**  Menu: Ventas: Prospectos: Registro de Prospectos **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem RegistroPadd = new NXJMenuItem("Registro de Prospectos");
                             RegistroPadd.title = "Registro de Prospectos";
@@ -268,7 +268,7 @@ FORM MenuFRM
                          }
                          
                           /**  Menu: Ventas: Prospectos: Seguimiento de Prospectos **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem SeguimientoPadd = new NXJMenuItem("Seguimiento de Prospectos");
                             SeguimientoPadd.title = "Seguimiento de Prospectos";
@@ -279,7 +279,7 @@ FORM MenuFRM
                          }
                          
                          /**  Menu: Ventas: Creación de Negocios **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem CreacionNadd = new NXJMenuItem("Creacion de Negocios");
                             CreacionNadd.title = "Creación de Negocios";
@@ -287,7 +287,7 @@ FORM MenuFRM
                          }
                          
                            /**  Menu: Ventas: Trámites **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem Tramitesadd = new NXJMenuItem("Tramites");
                             Tramitesadd.title = "Trámites";
@@ -295,7 +295,7 @@ FORM MenuFRM
                          }
                          
                           /**  Menu: Ventas: Administración **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem AdministracionVadd = new NXJMenuItem("Administracion");
                             AdministracionVadd.title = "Administración";
@@ -303,7 +303,7 @@ FORM MenuFRM
                          }
                          
                             /**  Menu: Ventas: Reportes **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem ReportesVadd = new NXJMenuItem("Reportes");
                             ReportesVadd.title = "Reportes";
@@ -314,7 +314,7 @@ FORM MenuFRM
                          /*********************TESORERIA*************************/
                          
                           /**  Menu: Tesorería: Módulo de Caja **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem ModuloCadd = new NXJMenuItem("Modulo de Caja");
                             ModuloCadd.title = "Módulo de Caja";
@@ -322,7 +322,7 @@ FORM MenuFRM
                          }
                          
                          /**  Menu: Tesorería: Módulo de Bancos **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem ModuloBadd = new NXJMenuItem("Modulo de Bancos");
                             ModuloBadd.title = "Módulo de Bancos";
@@ -330,7 +330,7 @@ FORM MenuFRM
                          }
                          
                          /**  Menu: Tesorería: Cuentas por Cobrar **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem CuentasCadd = new NXJMenuItem("Cuentas por Cobrar");
                             CuentasCadd.title = "Cuentas por Cobrar";
@@ -338,7 +338,7 @@ FORM MenuFRM
                          }
                          
                          /**  Menu: Tesorería: Módulo de Egresos **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem ModuloEadd = new NXJMenuItem("Modulo de Egresos");
                             ModuloEadd.title = "Módulo de Egresos";
@@ -346,7 +346,7 @@ FORM MenuFRM
                          }
                          
                            /**  Menu: Tesorería: Administración **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem AdministracionTadd = new NXJMenuItem("Administracion");
                             AdministracionTadd.title = "Administración";
@@ -358,7 +358,7 @@ FORM MenuFRM
                          /************************* CONTABILIDAD*/
                          
                           /**  Menu: Contabilidad: Plan Contable **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem PlanCadd = new NXJMenuItem("Plan Contable");
                             PlanCadd.title = "Plan Contable";
@@ -366,7 +366,7 @@ FORM MenuFRM
                          }
                          
                            /**  Menu: Contabilidad: Comprobantes  **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem Comprobantesadd = new NXJMenuItem("Comprobantes");
                             Comprobantesadd.title = "Comprobantes";
@@ -374,7 +374,7 @@ FORM MenuFRM
                          }
                          
                         /**  Menu: Contabilidad: Administración **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem AdministracionCadd = new NXJMenuItem("Administracion");
                             AdministracionCadd.title = "Administración";
@@ -383,7 +383,7 @@ FORM MenuFRM
                          
                           
                              /**  Menu: Contabilidad: Módulo de Reportes  **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem ModuloRadd = new NXJMenuItem("Modulo de Reportes");
                             ModuloRadd.title = "Módulo de Reportes";
@@ -396,7 +396,7 @@ FORM MenuFRM
                          
                           /**  Menu: Planilla: Datos del Empleado **/ 
                          
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem DatosEadd = new NXJMenuItem("Datos del Empleado");
                             DatosEadd.title = "Datos del Empleado";
@@ -405,7 +405,7 @@ FORM MenuFRM
                          
                          /**  Menu: Planilla: Novedades **/ 
                          
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem Novedadesadd = new NXJMenuItem("Novedades");
                             Novedadesadd.title = "Novedades";
@@ -414,7 +414,7 @@ FORM MenuFRM
                          
                           /**  Menu: Planilla: Liquidación de Planillas **/ 
                          
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem LiquidacionPadd = new NXJMenuItem("Liquidación de Planillas");
                             LiquidacionPadd.title = "Liquidación de Planillas";
@@ -423,7 +423,7 @@ FORM MenuFRM
                          
                             /**  Menu: Planilla: Reportes **/ 
                          
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem ReportesPadd = new NXJMenuItem("Reportes");
                             ReportesPadd.title = "Reportes";
@@ -432,7 +432,7 @@ FORM MenuFRM
                          
                              /**  Menu: Planilla: Administración **/ 
                          
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem AdministraciónPadd = new NXJMenuItem("Administracion");
                             AdministraciónPadd.title = "Administración";
@@ -441,7 +441,7 @@ FORM MenuFRM
                          
                           /**  Menu: Planilla: Tablas Comunes **/ 
                          
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM22#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
                             NXJMenuItem TablasComunesPadd = new NXJMenuItem("Tablas Comunes");
                             TablasComunesPadd.title = "Tablas Comunes";
@@ -481,10 +481,10 @@ FORM MenuFRM
             
         BOX cajaarribaMenu
         {
-            FIELD grupo
+            FIELD actualempresa
             {
             }
-            FIELD usuario
+            FIELD actualusuario
             {
             }
         }

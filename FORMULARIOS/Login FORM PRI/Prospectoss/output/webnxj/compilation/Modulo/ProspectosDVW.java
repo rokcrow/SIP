@@ -112,6 +112,7 @@ public class ProspectosDVW
     NullableDate fecha_mini = NullableFactory.createNullableDate("fecha_mini");
     NullableNumeric xpc_dias_pvt = NullableFactory.createNullableNumeric("xpc_dias_pvt");
     NullableNumeric xpc_dias_pac = NullableFactory.createNullableNumeric("xpc_dias_pac");
+    NullableString empresanombre = NullableFactory.createNullableString("empresanombre");
     NullableString vendedora = NullableFactory.createNullableString("vendedora");
     NullableString estadopro_ant = NullableFactory.createNullableString("estadopro_ant");
     NullableString xpc_califica = NullableFactory.createNullableString("xpc_califica");
@@ -309,7 +310,7 @@ public class ProspectosDVW
 			vpp_numero.us$setSqlParameterValue(us$stmt6, 2);
 			vpp_fecha_visita.us$setSqlParameterValue(us$stmt6, 3);
 			hora.us$setSqlParameterValue(us$stmt6, 4);
-			((Modulo.LoginFRM22)us$findForm(Modulo.LoginFRM22.class)).cajagrandeLogin.xpr_usuario.us$setSqlParameterValue(us$stmt6, 5);
+			((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario.us$setSqlParameterValue(us$stmt6, 5);
 			vpp_estado.us$setSqlParameterValue(us$stmt6, 6);
 			vpp_califica.us$setSqlParameterValue(us$stmt6, 7);
 			f_pcontacto.us$setSqlParameterValue(us$stmt6, 8);
@@ -398,6 +399,17 @@ public class ProspectosDVW
     public NXJLabelControl Label7 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label7", false);
     public NXJLabelControl Label8 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label8", false);
     public NXJLabelControl Label9 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label9", false);
+    public class button1
+	extends ItemsForm.Boton
+    {
+
+	public button1()
+	{
+	    super(Modulo.ProspectosDVW.this, "button1", false);
+	} // <init>
+    } // button1
+
+    public button1 button1 = new button1();
     public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
     public NXJLabelControl label112 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label112", false);
     public NXJLabelControl label1121 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1121", false);
@@ -2008,7 +2020,7 @@ public class ProspectosDVW
     public /*multi_valued*/ NullableStringField vpy_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpy_nombre", true, true, 100);
     public NullableStringField vve_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vve_nombre", false, true, 100);
     public NullableStringField xpc_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_nombre", false, true, 100);
-    public class box11
+    public class cajaabajoRegistroP
 	extends com.unify.nxj.mgr.NXJBox
     {
 	public class image1
@@ -2017,60 +2029,133 @@ public class ProspectosDVW
 
 	    public image1()
 	    {
-		super(Modulo.ProspectosDVW.box11.this, "image1", false);
+		super(Modulo.ProspectosDVW.cajaabajoRegistroP.this, "image1", false);
 	    } // <init>
 	} // image1
 
 	public image1 image1 = new image1();
 
-	public box11(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	public cajaabajoRegistroP(com.unify.nxj.mgr.NXJContainer enclosingContainer)
 	{
-	    super("box11", enclosingContainer);
+	    super("cajaabajoRegistroP", enclosingContainer);
 	    us$setBackgroundColor("#e30000");
 	} // <init>
-    } // box11
+    } // cajaabajoRegistroP
 
-    public final box11 box11 = new box11(this);
-    public class box111
+    public final cajaabajoRegistroP cajaabajoRegistroP = new cajaabajoRegistroP(this);
+    public class cajaarribaRegistroP
 	extends com.unify.nxj.mgr.NXJBox
     {
-	public NullableStringField actualuser = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "actualuser", false, true, 100);
+	public /*multi_valued*/ NullableStringField actualempresa = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "actualempresa", true, true, 100);
+	public NullableStringField actualusuario = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "actualusuario", false, true, 100);
 	public class label1
 	    extends ItemsForm.TituloLBL
 	{
 
 	    public label1()
 	    {
-		super(Modulo.ProspectosDVW.box111.this, "label1", false);
+		super(Modulo.ProspectosDVW.cajaarribaRegistroP.this, "label1", false);
 	    } // <init>
 	} // label1
 
 	public label1 label1 = new label1();
 	public NXJLabelControl label211 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label211", false);
-	public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
 
-	public box111(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	public cajaarribaRegistroP(com.unify.nxj.mgr.NXJContainer enclosingContainer)
 	{
-	    super("box111", enclosingContainer);
+	    super("cajaarribaRegistroP", enclosingContainer);
 	    us$setBackgroundColor("#e30000");
-	    box111propertySetter_0();
+	    cajaarribaRegistroPpropertySetter_0();
 	} // <init>
 
-	private void box111propertySetter_0()
+	private void cajaarribaRegistroPpropertySetter_0()
 	{
-	    actualuser.setStyleClass("textfield");
-	    actualuser.us$setView("text");
-	    actualuser.setFindable(false);
-	    actualuser.setStopForInput(false);
+	    actualempresa.setStyleClass("textfield");
+	    actualempresa.us$setMultiValued(true);
+	    actualempresa.us$setView("text");
+	    actualempresa.setFindable(false);
+	    actualempresa.setStopForInput(false);
+	    actualusuario.setStyleClass("textfield");
+	    actualusuario.us$setView("text");
+	    actualusuario.setFindable(false);
+	    actualusuario.setStopForInput(false);
 	    label211.setStyleClass("label");
-	    textfield1.setStyleClass("textfield");
-	    textfield1.us$setView("text");
-	    textfield1.setFindable(false);
-	    textfield1.setStopForInput(false);
-	} // box111propertySetter_0
-    } // box111
+	} // cajaarribaRegistroPpropertySetter_0
+    } // cajaarribaRegistroP
 
-    public final box111 box111 = new box111(this);
+    public final cajaarribaRegistroP cajaarribaRegistroP = new cajaarribaRegistroP(this);
+    public final class empresausuario
+	extends NXJCommand
+    {
+
+	public empresausuario()
+	{
+	    super("empresausuario", Modulo.ProspectosDVW.this, 3, true, 1);
+	    us$addCommand(this);
+	} // <init>
+
+	public void run()
+	    throws Exception
+	{
+	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+
+		{
+		getSession().us$setStatus(StatusCode.SS_NORM);
+		NXJDataConnection us$conn22 = getConnection();
+		java.sql.PreparedStatement us$stmt22 = null;
+		ResultSet us$rs22 = null;
+		try
+		    {
+		    us$stmt22 = us$conn22.prepareStatement("SELECT xem_nombre FROM xem_empresas WHERE xem_codigo =  ?");
+		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt22, 1);
+		    us$rs22 = us$stmt22.executeQuery();
+		    int us$rowsTouched22 = 0;
+		    try
+			{
+			java.sql.ResultSetMetaData us$rsmd22 = us$rs22.getMetaData();
+			if (us$rsmd22.getColumnCount() != 1)
+			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				{
+				Integer.toString(us$rsmd22.getColumnCount()), "1"
+				}));
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter22 = us$conn22.createDataIterator(us$rs22);
+			if (us$getter22.next())
+			    {
+			    ++us$rowsTouched22;
+			    us$getter22.assignValueToVariable(empresanombre, 1);
+			    }
+			}
+		    finally
+			{
+			if (us$rowsTouched22 == 0)
+			    getSession().us$setStatus(StatusCode.SS_NOREC);
+			if (us$rs22 != null)
+			    us$rs22.close();
+			}
+		    }
+		catch (SQLException us$ex22)
+		    {
+		    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+		    throw us$ex22;
+		    }
+		catch (NXJDataConnectionException us$ex22)
+		    {
+		    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+		    throw us$ex22;
+		    }
+		finally
+		    {
+		    if (us$stmt22 != null)
+			us$conn22.us$closeStatement(us$stmt22);
+		    }
+		}
+	    cajaarribaRegistroP.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
+	    cajaarribaRegistroP.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
+	    getSession().displayToMessageBox("c\u00E1llate");
+	} // run
+    } // empresausuario
+
+    public final empresausuario empresausuario = new empresausuario();
 
     public ProspectosDVW(String dataViewName, com.unify.nxj.mgr.NXJContainer container)
     {
@@ -2671,6 +2756,7 @@ public class ProspectosDVW
 	us$addProxyObject(Modulo.ProspectosDVW.class, "xpc_califica", false);
 	us$addProxyObject(Modulo.ProspectosDVW.class, "estadopro_ant", false);
 	us$addProxyObject(Modulo.ProspectosDVW.class, "vendedora", false);
+	us$addProxyObject(Modulo.ProspectosDVW.class, "empresanombre", false);
 	us$addProxyObject(Modulo.ProspectosDVW.class, "xpc_dias_pac", false);
 	us$addProxyObject(Modulo.ProspectosDVW.class, "xpc_dias_pvt", false);
 	us$addProxyObject(Modulo.ProspectosDVW.class, "fecha_mini", false);

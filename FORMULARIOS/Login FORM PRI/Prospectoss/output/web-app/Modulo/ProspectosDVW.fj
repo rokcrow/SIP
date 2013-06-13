@@ -6,12 +6,32 @@ DATA VIEW ProspectosDVW
 {
     NullableDate    fecha_mini, fret_obra, fing_obra;
     NullableNumeric xpc_dias_pac, xpc_dias_pvt;
-    NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora;
+    NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora,  empresanombre;;
     NullableTime    hora;
+ 
+ 
+ COMMAND empresausuario
+    {
+        /**********************Empresa                                                          usuario *********************************/    
+        EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+       
+        cajaarribaRegistroP.actualempresa  = empresanombre ;
+        cajaarribaRegistroP.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+        
+        session.displayToMessageBox("cállate");
+    }
  
 
       ON CLEAR TO ADD
-    {
+    { 
+    
+        
+        
         
         vpp_fecha   		= session.currentDate;
         vpp_fechaestado   		= session.currentDate;
@@ -25,6 +45,9 @@ DATA VIEW ProspectosDVW
     
     ON CLEAR TO FIND
     {
+          
+        
+    
         vpp_numero.stopForInput 	= true;
         vpp_estadopro.stopForInput 	= true;
         vpp_fecha.stopForInput 		= true;
@@ -133,7 +156,7 @@ DATA VIEW ProspectosDVW
                                                                     vps_comentario1) 
                                                                     VALUES     (:vpp_proyecto, :vpp_numero, 
                                                                     1, :vpp_fecha_visita,      
-                                                                    :hora, :Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario,  
+                                                                    :hora, :Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,  
                                                                     'P',   :vpp_estado,  
                                                                                         :vpp_califica, :f_pcontacto,
                                                                     'PRIMERA VISITA A SALA DE VENTAS');
@@ -159,17 +182,19 @@ DATA VIEW ProspectosDVW
     
     
    
+    /*********************************/
     
-    
-    BOX box111
+ 
+
+    BOX cajaarribaRegistroP
     {
     
-        FIELD textfield1
+        FIELD actualempresa
         {
         
         }
 
-        FIELD actualuser
+        FIELD actualusuario
         {
           
         }
@@ -178,7 +203,7 @@ DATA VIEW ProspectosDVW
     
   
 
-    BOX box11
+    BOX cajaabajoRegistroP
     {
     
     }
@@ -220,6 +245,8 @@ DATA VIEW ProspectosDVW
 
     FIELD vpp_fecha_visita
     {
+       
+       
        ON DATA ACCEPT
         {
 	 if (vpp_fecha_visita > vpp_fecha)
@@ -229,6 +256,8 @@ DATA VIEW ProspectosDVW
 	    rejectOperation();
 	   }
         }
+      
+
     }
 
     FIELD vpp_fecha

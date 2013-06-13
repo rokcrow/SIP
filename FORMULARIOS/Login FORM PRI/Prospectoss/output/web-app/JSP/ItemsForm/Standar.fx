@@ -122,7 +122,7 @@
         original_name = "date1"
         style_class = "date_picker"
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929560593"
-        view = "text">
+        view = "date">
     </field>
     <control 
         binary_variables = ""

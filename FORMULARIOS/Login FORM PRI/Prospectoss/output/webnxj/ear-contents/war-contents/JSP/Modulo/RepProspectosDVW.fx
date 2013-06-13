@@ -23,6 +23,40 @@
         uid_prefix = "itemsform_dataview1_1368038367945"
         view = "data_region">
     </div>
+    <field 
+        auto_accept = "true"
+        binary_variables = ""
+        checkbox_on_values = "T"
+        checkbox_store_format = "T/N"
+        display_name = "TodosLoProy"
+        field_type = "checkbox"
+        field_weight = "299"
+        findable = "false"
+        immediate = "true"
+        key = ".top:TodosLoProy."
+        original_name = "checkbox1"
+        style_class = "checkbox"
+        target_field = ""
+        uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369775564470"
+        view = "checkbox">
+    </field>
+    <field 
+        auto_accept = "true"
+        binary_variables = ""
+        checkbox_on_values = "T"
+        checkbox_store_format = "T/N"
+        display_name = "TodosLosVend"
+        field_type = "checkbox"
+        field_weight = "599"
+        findable = "false"
+        immediate = "true"
+        key = ".top:TodosLosVend."
+        original_name = "checkbox1"
+        style_class = "checkbox"
+        target_field = ""
+        uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369775566771"
+        view = "checkbox">
+    </field>
     <control 
         background_color = "#e30000"
         binary_variables = ""
@@ -105,6 +139,21 @@
         uid_to_name = ""
         view = "img">
     </control>
+    <control 
+        base_class = "Classes/ItemsForm/Boton.fx"
+        binary_variables = ""
+        command = "reportecmd"
+        display_base_class = "ItemsForm.Boton"
+        display_name = "ejecutarbtn"
+        field_type = "button"
+        foundation_type = "Classes/Foundation/Button"
+        key = ".top:ejecutarbtn."
+        kind = "instance"
+        original_name = "button1"
+        uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368028211102"
+        uid_to_name = ""
+        view = "button">
+    </control>
     <field 
         accell_type = "Date"
         binary_variables = ""
@@ -118,7 +167,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767427541"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -133,7 +182,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767428554"
-        view = "text">
+        view = "date">
     </field>
     <control 
         binary_variables = ""
@@ -228,6 +277,22 @@
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767424875"
         view = "select">
     </field>
+    <control 
+        base_class = "Classes/ItemsForm/Boton.fx"
+        binary_variables = ""
+        command = "Previous Form"
+        display_base_class = "ItemsForm.Boton"
+        display_name = "regresarbtn"
+        field_type = "button"
+        foundation_type = "Classes/Foundation/Button"
+        key = ".top:regresarbtn."
+        kind = "instance"
+        original_name = "button1"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_b9a5cdd3a1135a03e03084766ff4a05ae95a25fe_1371071860835"
+        uid_to_name = ""
+        view = "button">
+    </control>
     <field 
         binary_variables = ""
         display_name = "vendedor"
@@ -242,70 +307,5 @@
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767434464"
         view = "select">
     </field>
-    <field 
-        auto_accept = "true"
-        binary_variables = ""
-        checkbox_on_values = "T"
-        checkbox_store_format = "T/N"
-        display_name = "TodosLoProy"
-        field_type = "checkbox"
-        field_weight = "299"
-        findable = "false"
-        immediate = "true"
-        key = "TodosLoProy."
-        original_name = "checkbox1"
-        style_class = "checkbox"
-        target_field = ""
-        uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369775564470"
-        view = "checkbox">
-    </field>
-    <field 
-        auto_accept = "true"
-        binary_variables = ""
-        checkbox_on_values = "T"
-        checkbox_store_format = "T/N"
-        display_name = "TodosLosVend"
-        field_type = "checkbox"
-        field_weight = "599"
-        findable = "false"
-        immediate = "true"
-        key = "TodosLosVend."
-        original_name = "checkbox1"
-        style_class = "checkbox"
-        target_field = ""
-        uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369775566771"
-        view = "checkbox">
-    </field>
-    <control 
-        base_class = "Classes/ItemsForm/Boton.fx"
-        binary_variables = ""
-        command = "reportecmd"
-        display_base_class = "ItemsForm.Boton"
-        display_name = "ejecutarbtn"
-        field_type = "button"
-        foundation_type = "Classes/Foundation/Button"
-        key = "ejecutarbtn."
-        kind = "instance"
-        original_name = "button1"
-        uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368028211102"
-        uid_to_name = ""
-        view = "button">
-    </control>
-    <control 
-        base_class = "Classes/ItemsForm/Boton.fx"
-        binary_variables = ""
-        command = "Previous Form"
-        display_base_class = "ItemsForm.Boton"
-        display_name = "regresarbtn"
-        field_type = "button"
-        foundation_type = "Classes/Foundation/Button"
-        key = "regresarbtn."
-        kind = "instance"
-        original_name = "button1"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_b9a5cdd3a1135a03e03084766ff4a05ae95a25fe_1371071860835"
-        uid_to_name = ""
-        view = "button">
-    </control>
 
 </form>

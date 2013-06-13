@@ -205,9 +205,9 @@
                                 field_weight="99"
                                 findable="false"
                                 immediate="true"
-                                key="cajagrandeMenu:cajaarribaMenu:grupo."
+                                key="cajagrandeMenu:cajaarribaMenu:actualempresa."
                                 multi_valued="true"
-                                name="cajagrandeMenu:cajaarribaMenu:grupo."
+                                name="cajagrandeMenu:cajaarribaMenu:actualempresa."
                                 original_name="textfield1"
                                 size="32"
                                 stop_for_input="false"
@@ -217,6 +217,38 @@
                                 view="text"
                                 style="visibility:visible;
                                     color: Black">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="800"
+                                displaytop="14"
+                                displaywidth="110"
+                                field_type="text"
+                                field_weight="199"
+                                findable="false"
+                                immediate="false"
+                                key="cajagrandeMenu:cajaarribaMenu:actualusuario."
+                                multi_valued="true"
+                                name="cajagrandeMenu:cajaarribaMenu:actualusuario."
+                                original_name="textfield1"
+                                readers_field="false"
+                                reqcmd="false"
+                                required="false"
+                                size="18"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+                                view="text"
+                                style="color: Black">
                         </div>
 
                         <div
@@ -272,38 +304,6 @@
                                 <nobr></nobr>
                             </label>
 
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="800"
-                                displaytop="14"
-                                displaywidth="110"
-                                field_type="text"
-                                field_weight="199"
-                                findable="false"
-                                immediate="false"
-                                key="cajagrandeMenu:cajaarribaMenu:usuario."
-                                multi_valued="true"
-                                name="cajagrandeMenu:cajaarribaMenu:usuario."
-                                original_name="textfield1"
-                                readers_field="false"
-                                reqcmd="false"
-                                required="false"
-                                size="18"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-                                view="text"
-                                style="color: Black">
                         </div>
 
                     </fieldset>

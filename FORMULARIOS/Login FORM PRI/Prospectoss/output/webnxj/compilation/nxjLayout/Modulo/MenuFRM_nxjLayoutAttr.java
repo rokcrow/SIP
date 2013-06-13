@@ -21,13 +21,13 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("footer","none");
 	widget.addAttribute("menu","none");
 	widget.addAttribute("displaywidth","1196");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
-	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","465");
 	widget.addAttribute("fieldheight","469");
 	widget.addAttribute("fieldwidth","1199");
+	widget.addStyle("background-color","#999999");
 	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_cajagrandeMenu__10(Widget widget)
@@ -42,14 +42,14 @@ private void setAttrFor_cajagrandeMenu__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","1004");
-	widget.addAttribute("id","cajagrandeMenu.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","190");
-	widget.addStyle("background-color","#cccccc");
+	widget.addAttribute("id","cajagrandeMenu.");
 	widget.addAttribute("displaytop","30");
 	widget.addAttribute("displayheight","434");
 	widget.addAttribute("fieldheight","434");
 	widget.addAttribute("fieldwidth","1004");
+	widget.addStyle("background-color","#cccccc");
 	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
@@ -69,14 +69,14 @@ private void setAttrFor_EMPRESA__40(Widget widget)
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("immediate","true");
 	widget.addAttribute("displaywidth","348");
-	widget.addAttribute("name","cajagrandeMenu:EMPRESA.");
 	widget.addAttribute("displayleft","365");
-	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","169");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","348");
+	widget.addAttribute("size","1");
 	widget.setClass("listbox");
+	widget.addAttribute("name","cajagrandeMenu:EMPRESA.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -93,16 +93,16 @@ private void setAttrFor_NombreForma1__40(Widget widget)
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","false");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","348");
-	widget.addAttribute("name","cajagrandeMenu:NombreForma1.");
 	widget.addAttribute("displayleft","365");
-	widget.addAttribute("size","58");
 	widget.addAttribute("displaytop","281");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","348");
+	widget.addAttribute("size","58");
 	widget.setClass("textfield");
+	widget.addAttribute("name","cajagrandeMenu:NombreForma1.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -118,15 +118,15 @@ private void setAttrFor_cajaabajoMenu__40(Widget widget)
 {
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id","cajagrandeMenu:cajaabajoMenu.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id","cajagrandeMenu:cajaabajoMenu.");
 	widget.addAttribute("displaytop","384");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
@@ -142,9 +142,9 @@ private void setAttrFor_div_image1__50(Widget widget)
 
 private void setAttrFor_image1__60(Widget widget)
 {
+	widget.addAttribute("id","cajagrandeMenu:cajaabajoMenu:image1.");
 	widget.addAttribute("displayheight","46");
 	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id","cajagrandeMenu:cajaabajoMenu:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -162,21 +162,21 @@ private void setAttrFor_cajaarribaMenu__40(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id","cajagrandeMenu:cajaarribaMenu.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id","cajagrandeMenu:cajaarribaMenu.");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_grupo__50(Widget widget)
+private void setAttrFor_div_actualempresa__50(Widget widget)
 {
 	widget.addStyle("left","16px");
 	widget.addStyle("top","14px");
@@ -184,23 +184,23 @@ private void setAttrFor_div_grupo__50(Widget widget)
 	widget.addStyle("height","22px");
 }
 
-private void setAttrFor_grupo__60(Widget widget)
+private void setAttrFor_actualempresa__60(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
 	widget.addStyle("visibility","visible");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("name","cajagrandeMenu:cajaarribaMenu:grupo.");
 	widget.addAttribute("displayleft","16");
-	widget.addAttribute("size","32");
+	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.addStyle("color","Black");
+	widget.addAttribute("size","32");
 	widget.setClass("textfield");
+	widget.addAttribute("name","cajagrandeMenu:cajaarribaMenu:actualempresa.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -216,8 +216,8 @@ private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","MENU DEL SISTEMA");
 	widget.addAttribute("displaywidth","522");
-	widget.addAttribute("id","cajagrandeMenu:cajaarribaMenu:label1.");
 	widget.addAttribute("displayleft","241");
+	widget.addAttribute("id","cajagrandeMenu:cajaarribaMenu:label1.");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","522");
@@ -237,8 +237,8 @@ private void setAttrFor_div_label211__50(Widget widget)
 private void setAttrFor_label211__60(Widget widget)
 {
 	widget.addAttribute("displaywidth","55");
-	widget.addAttribute("id","cajagrandeMenu:cajaarribaMenu:label211.");
 	widget.addAttribute("displayleft","778");
+	widget.addAttribute("id","cajagrandeMenu:cajaarribaMenu:label211.");
 	widget.addAttribute("displaytop","65");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","14");
@@ -248,7 +248,7 @@ private void setAttrFor_label211__60(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_usuario__50(Widget widget)
+private void setAttrFor_div_actualusuario__50(Widget widget)
 {
 	widget.addStyle("left","800px");
 	widget.addStyle("top","14px");
@@ -256,22 +256,22 @@ private void setAttrFor_div_usuario__50(Widget widget)
 	widget.addStyle("height","22px");
 }
 
-private void setAttrFor_usuario__60(Widget widget)
+private void setAttrFor_actualusuario__60(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","false");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name","cajagrandeMenu:cajaarribaMenu:usuario.");
 	widget.addAttribute("displayleft","800");
-	widget.addAttribute("size","18");
+	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.addStyle("color","Black");
+	widget.addAttribute("size","18");
 	widget.setClass("textfield");
+	widget.addAttribute("name","cajagrandeMenu:cajaarribaMenu:actualusuario.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -285,15 +285,15 @@ private void setAttrFor_div_label1__30(Widget widget)
 
 private void setAttrFor_label1__40(Widget widget)
 {
+	widget.addStyle("font-size","12");
 	widget.addAttribute("labeltitle","Sociedades Disponibles");
 	widget.addAttribute("displaywidth","148");
-	widget.addAttribute("id","cajagrandeMenu:label1.");
 	widget.addAttribute("displayleft","365");
+	widget.addAttribute("id","cajagrandeMenu:label1.");
 	widget.addAttribute("displaytop","143");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","148");
-	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
 	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
@@ -309,15 +309,15 @@ private void setAttrFor_div_label11__30(Widget widget)
 
 private void setAttrFor_label11__40(Widget widget)
 {
+	widget.addStyle("font-size","12");
 	widget.addAttribute("labeltitle","Nombre del Formulario");
 	widget.addAttribute("displaywidth","142");
-	widget.addAttribute("id","cajagrandeMenu:label11.");
 	widget.addAttribute("displayleft","365");
+	widget.addAttribute("id","cajagrandeMenu:label11.");
 	widget.addAttribute("displaytop","255");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","142");
-	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
 	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
@@ -333,18 +333,18 @@ private void setAttrFor_div_menuPri__30(Widget widget)
 
 private void setAttrFor_menuPri__40(Widget widget)
 {
-	widget.addStyle("font-weight","bold");
+	widget.addStyle("font-size","16");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id","cajagrandeMenu:menuPri.");
-	widget.addAttribute("displayleft","4");
 	widget.addStyle("font-family","Raavi");
+	widget.addAttribute("displayleft","4");
+	widget.addStyle("color","Black");
+	widget.addStyle("font-weight","bold");
+	widget.addAttribute("id","cajagrandeMenu:menuPri.");
 	widget.addAttribute("displaytop","52");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldheight","23");
 	widget.addAttribute("menustylesheet","default.css");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("font-size","16");
-	widget.addStyle("color","Black");
 	widget.setClass("menu");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
@@ -406,14 +406,14 @@ private void dodiv_cajagrandeMenu__10(Widget div_cajagrandeMenu__10)
                 {
                 ((ContainerWidget)div_cajaarribaMenu__30).addComponent(cajaarribaMenu__40,"cajaarribaMenu_");
                 setAttrFor_cajaarribaMenu__40(cajaarribaMenu__40);
-                DivPanelWidget div_grupo__50 = new DivPanelWidget();
+                DivPanelWidget div_actualempresa__50 = new DivPanelWidget();
                     {
-                    ((ContainerWidget)cajaarribaMenu__40).addComponent(div_grupo__50,"div_grupo_");
-                    setAttrFor_div_grupo__50(div_grupo__50);
-                    TextWidget grupo__60 = new TextWidget();
+                    ((ContainerWidget)cajaarribaMenu__40).addComponent(div_actualempresa__50,"div_actualempresa_");
+                    setAttrFor_div_actualempresa__50(div_actualempresa__50);
+                    TextWidget actualempresa__60 = new TextWidget();
                         {
-                        ((ContainerWidget)div_grupo__50).addComponent(grupo__60,"grupo_");
-                        setAttrFor_grupo__60(grupo__60);
+                        ((ContainerWidget)div_actualempresa__50).addComponent(actualempresa__60,"actualempresa_");
+                        setAttrFor_actualempresa__60(actualempresa__60);
                         }
                     }
                 DivPanelWidget div_label1__50 = new DivPanelWidget();
@@ -436,14 +436,14 @@ private void dodiv_cajagrandeMenu__10(Widget div_cajagrandeMenu__10)
                         setAttrFor_label211__60(label211__60);
                         }
                     }
-                DivPanelWidget div_usuario__50 = new DivPanelWidget();
+                DivPanelWidget div_actualusuario__50 = new DivPanelWidget();
                     {
-                    ((ContainerWidget)cajaarribaMenu__40).addComponent(div_usuario__50,"div_usuario_");
-                    setAttrFor_div_usuario__50(div_usuario__50);
-                    TextWidget usuario__60 = new TextWidget();
+                    ((ContainerWidget)cajaarribaMenu__40).addComponent(div_actualusuario__50,"div_actualusuario_");
+                    setAttrFor_div_actualusuario__50(div_actualusuario__50);
+                    TextWidget actualusuario__60 = new TextWidget();
                         {
-                        ((ContainerWidget)div_usuario__50).addComponent(usuario__60,"usuario_");
-                        setAttrFor_usuario__60(usuario__60);
+                        ((ContainerWidget)div_actualusuario__50).addComponent(actualusuario__60,"actualusuario_");
+                        setAttrFor_actualusuario__60(actualusuario__60);
                         }
                     }
                 }

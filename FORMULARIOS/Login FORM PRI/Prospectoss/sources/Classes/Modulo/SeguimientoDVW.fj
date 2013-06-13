@@ -225,7 +225,7 @@ DATA VIEW SeguimientoDVW
         {
           vps_fecha   = session.currentDate;
           vps_hora    = session.currentTime;
-          vps_usuario = Modulo.LoginFRM22#cajagrandeLogin.xpr_usuario; 
+          vps_usuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario; 
           EXEC SQL	  
           SELECT vps_consecu
           FROM   vps_prosigue

@@ -65,7 +65,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>webTierEntryPoint</servlet-name>
-    <url-pattern>/Modulo.LoginFRM22</url-pattern>
+    <url-pattern>/Modulo.LoginFRM</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ajspHandler</servlet-name>

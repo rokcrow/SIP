@@ -527,7 +527,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;NXJ LINE &lt;/b&gt;LineaRoja&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -878,12 +878,12 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;RepProspectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
     <file
-         path="Classes/Modulo/Form1.fx"
+         path="Classes/Modulo/RepProspectosFRM.fx"
           type="form"
           state="4"
           flags="0"
@@ -894,7 +894,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;p&gt;&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;RepProspectosFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>
@@ -911,7 +911,12 @@
     </connection>
 
     <color
-         rgb="#ffcc00"
+         rgb="Red"
+         >
+    </color>
+
+    <color
+         rgb="transparent"
          >
     </color>
 

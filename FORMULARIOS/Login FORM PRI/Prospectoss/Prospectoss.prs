@@ -527,7 +527,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;NXJ LINE &lt;/b&gt;LineaRoja&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -645,7 +645,7 @@
     </file>
 
     <file
-         path="Classes/Modulo/LoginFRM22.fx"
+         path="Classes/Modulo/LoginFRM.fx"
           type="form"
           state="4"
           flags="0"
@@ -660,7 +660,7 @@
           language="jbiz"
           target-type="0"
           description=""
-          default-label="Modulo.LoginFRM22"
+          default-label="Modulo.LoginFRM"
           add_to_menu="true"
           override-entry-point-name="false"
           expose-as-portlet="false"
@@ -911,7 +911,12 @@
     </connection>
 
     <color
-         rgb="#ffcc00"
+         rgb="Red"
+         >
+    </color>
+
+    <color
+         rgb="transparent"
          >
     </color>
 
