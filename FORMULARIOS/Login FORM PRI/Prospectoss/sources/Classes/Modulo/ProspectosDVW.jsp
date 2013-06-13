@@ -1383,34 +1383,6 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 70px; left: 810px; width:151px; height:48px">
-
-                    <div
-                        base_class="Classes/ItemsForm/Boton.fx"
-                        binary_variables=""
-                        command="empresausuario"
-                        displayleft="810"
-                        displaytop="70"
-                        displaywidth="151"
-                        field_type="button"
-                        foundation_type="Classes/Foundation/Button"
-                        id=".top:button1."
-                        instancewidth="151"
-                        key=".top:button1."
-                        kind="instance"
-                        original_name="button1"
-                        uid="itemsform_dataview1_1368038367945_b67d362da0c242c6824b452e05f6336692bfd36d_1371155648152"
-                        uid_to_name=""
-                        value="EMPRESA y USUARIO"
-                        view="button">
-
-                    </div>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
                     style="position: absolute; top: 1400px; left: 4px; width:996px; height:50px">
 
                     <fieldset

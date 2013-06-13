@@ -1110,7 +1110,7 @@ public class SeguimientoDVW
 	    us$setConnectionName("Connection1");
 	    us$setTargetTableName("PUBLIC.vps_prosigue");
 	    setAutoFind(true);
-	    setStartInAddMode(false);
+	    setStartInAddMode(true);
 	    setClearAfterAdd(false);
 	    us$setBindingType("connection");
 	    label1.setStyleClass("label");
@@ -1269,10 +1269,10 @@ public class SeguimientoDVW
 	super(dataViewName, container);
 	us$setConnectionName("Connection1");
 	us$setTargetTableName("PUBLIC.vpp_prospectos");
-	setAddAllowed(false);
+	setAddAllowed(true);
 	setDeleteAllowed(false);
 	setAutoFind(false);
-	setStartInAddMode(false);
+	setStartInAddMode(true);
 	setClearAfterAdd(false);
 	setFindCount(20);
 	Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue.us$setMasterDataView(Modulo.SeguimientoDVW.this);

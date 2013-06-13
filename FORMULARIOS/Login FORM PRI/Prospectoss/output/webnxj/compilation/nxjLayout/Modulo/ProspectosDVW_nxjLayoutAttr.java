@@ -11,8 +11,6 @@ public ProspectosDVW_nxjLayoutAttr()
 {
 this.isLocalized = false;
 setAttrFor_this(this);
-DivPanelWidget div_button1__10 = new DivPanelWidget();
-dodiv_button1__10(div_button1__10);
 DivPanelWidget div_Label1__10 = new DivPanelWidget();
 dodiv_Label1__10(div_Label1__10);
 DivPanelWidget div_Label10__10 = new DivPanelWidget();
@@ -247,30 +245,6 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("displaywidth","1005");
 	widget.addAttribute("id",".top.");
 	widget.addAttribute("displaytop","25");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_button1__10(Widget widget)
-{
-	widget.addStyle("left","810px");
-	widget.addStyle("top","70px");
-	widget.addStyle("width","151px");
-	widget.addStyle("height","48px");
-}
-
-private void setAttrFor_button1__20(Widget widget)
-{
-	widget.addAttribute("command","empresausuario");
-	widget.addAttribute("field_type","button");
-	widget.addAttribute("displaywidth","151");
-	widget.addAttribute("displayleft","810");
-	widget.addAttribute("value","EMPRESA y USUARIO");
-	widget.addAttribute("displaytop","70");
-	widget.addAttribute("type","button");
-	widget.addAttribute("fieldheight","48");
-	widget.addAttribute("fieldwidth","151");
-	widget.addAttribute("instancewidth","151");
-	widget.addAttribute("name",".top:button1.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -3257,16 +3231,6 @@ private void setAttrFor_xpc_nombre__20(Widget widget)
 	widget.addAttribute("displaytop","1331");
 	widget.addStyle("overflow","hidden");
 }
-private void dodiv_button1__10(Widget div_button1__10)
-    {
-    ((ContainerWidget)this).addComponent(div_button1__10,"div_button1_");
-    setAttrFor_div_button1__10(div_button1__10);
-    nxjLayout.ItemsForm.Boton_nxjLayoutAttr button1__20 = new nxjLayout.ItemsForm.Boton_nxjLayoutAttr();
-        {
-        ((ContainerWidget)div_button1__10).addComponent(button1__20,"button1_");
-        setAttrFor_button1__20(button1__20);
-        }
-    }
 private void dodiv_Label1__10(Widget div_Label1__10)
     {
     ((ContainerWidget)this).addComponent(div_Label1__10,"div_Label1_");

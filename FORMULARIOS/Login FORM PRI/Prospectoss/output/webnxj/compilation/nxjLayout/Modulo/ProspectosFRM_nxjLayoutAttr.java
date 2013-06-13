@@ -48,18 +48,6 @@ private void setAttrFor_view1__20(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_button1__30(Widget widget)
-{
-}
-
-private void setAttrFor_button1__40(Widget widget)
-{
-	widget.addAttribute("type","button");
-	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)button1.");
-	widget.addAttribute("name","view1:button1.");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_Label1__30(Widget widget)
 {
 }
@@ -1375,16 +1363,6 @@ private void dodiv_view1__10(Widget div_view1__10)
         {
         ((ContainerWidget)div_view1__10).addComponent(view1__20,"view1_");
         setAttrFor_view1__20(view1__20);
-        Widget div_button1__30 = ((ContainerWidget)view1__20).getComponent("div_button1_");
-        if (div_button1__30 != null)
-            {
-            setAttrFor_div_button1__30(div_button1__30);
-            Widget button1__40 = ((ContainerWidget)div_button1__30).getComponent("button1_");
-            if (button1__40 != null)
-                {
-                setAttrFor_button1__40(button1__40);
-                }
-            }
         Widget div_Label1__30 = ((ContainerWidget)view1__20).getComponent("div_Label1_");
         if (div_Label1__30 != null)
             {

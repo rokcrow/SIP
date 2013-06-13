@@ -8,8 +8,8 @@
     reuse="true">
 
     <div 
-        add_allowed = "false"
-        aud_on_entry = "false"
+        add_allowed = "true"
+        aud_on_entry = "true"
         auto_find = "false"
         background_color = "#cccccc"
         binary_variables = ""
@@ -32,7 +32,7 @@
         view = "data_region">
     </div>
     <div 
-        aud_on_entry = "false"
+        aud_on_entry = "true"
         auto_find = "true"
         binary_variables = ""
         binding_type = "connection"

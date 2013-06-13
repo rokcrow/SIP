@@ -20,7 +20,7 @@ FORM MenuFRM
                                                         NXJMenu TablasMenu = new NXJMenu("Tablas -->");
                                                         NXJMenu PreciosUMenu = new NXJMenu("Precios Unitarios -->");
                                                         NXJMenu AnalisisUMenu = new NXJMenu("Analisis Unitario");
-                                                        NXJMenu ReporteTCMenu = new NXJMenu("Reporte");
+                                                        NXJMenu ReportesTCMenu = new NXJMenu("Reportes");
                                             NXJMenu PresupuestosMenu = new NXJMenu("Presupuestos");
                                             NXJMenu ProgramacionOMenu = new NXJMenu("Programacion de Obras");
                                             NXJMenu ControliMenu = new NXJMenu("Control de Inventarios");
@@ -29,6 +29,7 @@ FORM MenuFRM
                                                         
                             NXJMenu VentasMenu = new NXJMenu("Ventas");
                                             NXJMenu ProspectosMenu = new NXJMenu("Prospectos -->");
+                                            NXJMenu ReportesVentasMenu = new NXJMenu("Reportes");
                                             
                             NXJMenu TesoreriaMenu = new NXJMenu("Tesoreria");
                             NXJMenu ContabilidadMenu = new NXJMenu("Contabilidad");
@@ -302,13 +303,19 @@ FORM MenuFRM
                             VentasMenu.add(AdministracionVadd);
                          }
                          
-                            /**  Menu: Ventas: Reportes **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                            /**  Menu: Ventas: Reportes: Reportes Ventas**/ 
+                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
                          {
-                            NXJMenuItem ReportesVadd = new NXJMenuItem("Reportes");
-                            ReportesVadd.title = "Reportes";
-                            VentasMenu.add(ReportesVadd);
+                            NXJMenuItem ReportesVentasadd = new NXJMenuItem("Reportes Ventas");
+                            ReportesVentasadd.title = "Reportes Ventas";
+                            ReportesVentasadd.command = "Go To Form"; 
+                            ReportesVentasadd.commandParameter = ("Modulo.RepProspectosFRM");
+                            
+                            ReportesVentasMenu.add(ReportesVentasadd);
+                            VentasMenu.add(ReportesVentasMenu);
                          }
+                         
+                         
                          /*************************** FIN VENTAS******************************//////
                          
                          /*********************TESORERIA*************************/

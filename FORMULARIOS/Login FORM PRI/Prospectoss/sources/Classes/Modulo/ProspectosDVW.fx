@@ -523,20 +523,6 @@
         view = "label">
     </control>
     <control 
-        base_class = "Classes/ItemsForm/Boton.fx"
-        binary_variables = ""
-        command = "empresausuario"
-        display_base_class = "ItemsForm.Boton"
-        display_name = "button1"
-        field_type = "button"
-        foundation_type = "Classes/Foundation/Button"
-        key = ".top:button1."
-        original_name = "button1"
-        uid = "itemsform_dataview1_1368038367945_b67d362da0c242c6824b452e05f6336692bfd36d_1371155648152"
-        uid_to_name = ""
-        view = "button">
-    </control>
-    <control 
         binary_variables = ""
         display_name = "label11"
         font_family = "Verdana"

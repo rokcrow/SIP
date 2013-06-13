@@ -9,7 +9,7 @@
     reuse="true">
 
     <div 
-        aud_on_entry = "false"
+        aud_on_entry = "true"
         background_color = "#cccccc"
         binary_variables = ""
         bloom_filter = "00000000000400042000000000000000"
@@ -167,7 +167,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767427541"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "Date"
@@ -182,7 +182,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767428554"
-        view = "date">
+        view = "text">
     </field>
     <control 
         binary_variables = ""

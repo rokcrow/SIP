@@ -399,17 +399,6 @@ public class ProspectosDVW
     public NXJLabelControl Label7 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label7", false);
     public NXJLabelControl Label8 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label8", false);
     public NXJLabelControl Label9 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label9", false);
-    public class button1
-	extends ItemsForm.Boton
-    {
-
-	public button1()
-	{
-	    super(Modulo.ProspectosDVW.this, "button1", false);
-	} // <init>
-    } // button1
-
-    public button1 button1 = new button1();
     public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
     public NXJLabelControl label112 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label112", false);
     public NXJLabelControl label1121 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1121", false);

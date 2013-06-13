@@ -128,7 +128,7 @@ public class MenuFRM
 	    NXJMenu TablasMenu = new NXJMenu("Tablas -->");
 	    NXJMenu PreciosUMenu = new NXJMenu("Precios Unitarios -->");
 	    NXJMenu AnalisisUMenu = new NXJMenu("Analisis Unitario");
-	    NXJMenu ReporteTCMenu = new NXJMenu("Reporte");
+	    NXJMenu ReportesTCMenu = new NXJMenu("Reportes");
 	    NXJMenu PresupuestosMenu = new NXJMenu("Presupuestos");
 	    NXJMenu ProgramacionOMenu = new NXJMenu("Programacion de Obras");
 	    NXJMenu ControliMenu = new NXJMenu("Control de Inventarios");
@@ -136,6 +136,7 @@ public class MenuFRM
 	    NXJMenu AdministracionMenu = new NXJMenu("Administracion");
 	    NXJMenu VentasMenu = new NXJMenu("Ventas");
 	    NXJMenu ProspectosMenu = new NXJMenu("Prospectos -->");
+	    NXJMenu ReportesVentasMenu = new NXJMenu("Reportes");
 	    NXJMenu TesoreriaMenu = new NXJMenu("Tesoreria");
 	    NXJMenu ContabilidadMenu = new NXJMenu("Contabilidad");
 	    NXJMenu PlanillaMenu = new NXJMenu("Planilla");
@@ -317,9 +318,12 @@ public class MenuFRM
 		}
 	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
 		{
-		NXJMenuItem ReportesVadd = new NXJMenuItem("Reportes");
-		ReportesVadd.setTitle("Reportes");
-		VentasMenu.add(ReportesVadd);
+		NXJMenuItem ReportesVentasadd = new NXJMenuItem("Reportes Ventas");
+		ReportesVentasadd.setTitle("Reportes Ventas");
+		ReportesVentasadd.setCommand("Go To Form");
+		ReportesVentasadd.setCommandParameter("Modulo.RepProspectosFRM");
+		ReportesVentasMenu.add(ReportesVentasadd);
+		VentasMenu.add(ReportesVentasMenu);
 		}
 	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
 		{

@@ -22,8 +22,8 @@
             style="position: absolute; top: 25px; left: 25px; width:1005px; height:987px">
 
             <div
-                add_allowed="false"
-                aud_on_entry="false"
+                add_allowed="true"
+                aud_on_entry="true"
                 auto_find="false"
                 binary_variables=""
                 bloom_filter="00000000000400040000000000000000"
@@ -61,7 +61,7 @@
                     style="position: absolute; top: 434px; left: 56px; width:880px; height:258px">
 
                     <div
-                        aud_on_entry="false"
+                        aud_on_entry="true"
                         auto_find="true"
                         binary_variables=""
                         binding_type="connection"

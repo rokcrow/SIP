@@ -134,6 +134,7 @@ public class RepProspectosFRM
     private void us$initializeFormSpecificProperties()
     {
 	us$setBackgroundColor("#999999");
+	us$setStopWithoutFields(false);
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "RepProspectosFRM";
 } // RepProspectosFRM

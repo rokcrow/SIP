@@ -39,10 +39,11 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("id","view1.");
-	widget.addAttribute("displayheight","987");
-	widget.addAttribute("displaytop","30");
 	widget.addAttribute("displayleft","190");
+	widget.addAttribute("displayheight","987");
+	widget.addAttribute("prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317086095-aud_on_entry","true");
+	widget.addAttribute("id","view1.");
+	widget.addAttribute("displaytop","30");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -81,12 +82,18 @@ private void setAttrFor_box111__40(Widget widget)
 
 private void setAttrFor_div_label1__50(Widget widget)
 {
+	widget.addStyle("left","241px");
+	widget.addStyle("top","14px");
+	widget.addStyle("width","318px");
+	widget.addStyle("height","23px");
 }
 
 private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.SeguimientoDVW)box111:(Modulo.SeguimientoDVW)label1.");
 	widget.addAttribute("id","view1:box111:label1.");
+	widget.addAttribute("displaywidth","318");
+	widget.addAttribute("fieldwidth","318");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -127,12 +134,18 @@ private void setAttrFor_textfield11__60(Widget widget)
 
 private void setAttrFor_div_label1__30(Widget widget)
 {
+	widget.addStyle("left","110px");
+	widget.addStyle("top","127px");
+	widget.addStyle("width","49px");
+	widget.addStyle("height","16px");
 }
 
 private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.SeguimientoDVW)label1.");
 	widget.addAttribute("id","view1:label1.");
+	widget.addAttribute("displaywidth","49");
+	widget.addAttribute("fieldwidth","49");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -160,12 +173,18 @@ private void setAttrFor_label11__40(Widget widget)
 
 private void setAttrFor_div_label111__30(Widget widget)
 {
+	widget.addStyle("left","447px");
+	widget.addStyle("top","295px");
+	widget.addStyle("width","44px");
+	widget.addStyle("height","16px");
 }
 
 private void setAttrFor_label111__40(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.SeguimientoDVW)label111.");
 	widget.addAttribute("id","view1:label111.");
+	widget.addAttribute("displaywidth","44");
+	widget.addAttribute("fieldwidth","44");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -526,6 +545,10 @@ private void setAttrFor_vve_nombre__40(Widget widget)
 
 private void setAttrFor_div_PUBLIC_vps_prosigue__30(Widget widget)
 {
+	widget.addStyle("left","56px");
+	widget.addStyle("top","434px");
+	widget.addStyle("width","880px");
+	widget.addStyle("height","258px");
 }
 
 private void setAttrFor_PUBLIC_vps_prosigue__40(Widget widget)
@@ -541,6 +564,7 @@ private void setAttrFor_div_RepeatingArea1__50(Widget widget)
 
 private void setAttrFor_RepeatingArea1__60(Widget widget)
 {
+	widget.addAttribute("occurrences","9");
 	widget.addAttribute("_id","view1:(Modulo.SeguimientoDVW)PUBLIC_vps_prosigue:(Modulo.SeguimientoDVW)RepeatingArea1.");
 	widget.addAttribute("id","view1:PUBLIC_vps_prosigue:RepeatingArea1.");
 	widget.addStyle("overflow","hidden");

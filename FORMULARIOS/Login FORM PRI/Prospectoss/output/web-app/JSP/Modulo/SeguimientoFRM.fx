@@ -1,5 +1,5 @@
 <form 
-    aud_on_entry = "false"
+    aud_on_entry = "true"
     background_color = "#999999"
     binary_variables = ""
     bloom_filter = "00000000000440040000000000000000"
@@ -19,8 +19,8 @@
     reuse="true">
 
     <div 
-        add_allowed = "false"
-        aud_on_entry = "false"
+        add_allowed = "true"
+        aud_on_entry = "true"
         auto_find = "false"
         base_class = "Classes/Modulo/SeguimientoDVW.fx"
         binary_variables = ""
