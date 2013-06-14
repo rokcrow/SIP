@@ -4,7 +4,7 @@ FORM ProyectosFRM
 {
     DATA VIEW view1 extends Modulo.ProyectosDVW
     {
-    
+     
     }
 
 

@@ -41,10 +41,10 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("displayleft","190");
 	widget.addAttribute("id","view1.");
-	widget.addAttribute("displaytop","30");
 	widget.addAttribute("displayheight","1455");
+	widget.addAttribute("displaytop","30");
+	widget.addAttribute("displayleft","190");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -620,6 +620,18 @@ private void setAttrFor_cajaarribaRegistroP__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
+private void setAttrFor_div_actualempresa__50(Widget widget)
+{
+}
+
+private void setAttrFor_actualempresa__60(Widget widget)
+{
+	widget.addAttribute("type","text");
+	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)cajaarribaRegistroP:(Modulo.ProspectosDVW)actualempresa.");
+	widget.addAttribute("name","view1:cajaarribaRegistroP:actualempresa.");
+	widget.addStyle("overflow","hidden");
+}
+
 private void setAttrFor_div_actualusuario__50(Widget widget)
 {
 }
@@ -651,18 +663,6 @@ private void setAttrFor_label211__60(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)cajaarribaRegistroP:(Modulo.ProspectosDVW)label211.");
 	widget.addAttribute("id","view1:cajaarribaRegistroP:label211.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_actualempresa__50(Widget widget)
-{
-}
-
-private void setAttrFor_actualempresa__60(Widget widget)
-{
-	widget.addAttribute("type","text");
-	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)cajaarribaRegistroP:(Modulo.ProspectosDVW)actualempresa.");
-	widget.addAttribute("name","view1:cajaarribaRegistroP:actualempresa.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1881,6 +1881,16 @@ private void dodiv_view1__10(Widget div_view1__10)
             if (cajaarribaRegistroP__40 != null)
                 {
                 setAttrFor_cajaarribaRegistroP__40(cajaarribaRegistroP__40);
+                Widget div_actualempresa__50 = ((ContainerWidget)cajaarribaRegistroP__40).getComponent("div_actualempresa_");
+                if (div_actualempresa__50 != null)
+                    {
+                    setAttrFor_div_actualempresa__50(div_actualempresa__50);
+                    Widget actualempresa__60 = ((ContainerWidget)div_actualempresa__50).getComponent("actualempresa_");
+                    if (actualempresa__60 != null)
+                        {
+                        setAttrFor_actualempresa__60(actualempresa__60);
+                        }
+                    }
                 Widget div_actualusuario__50 = ((ContainerWidget)cajaarribaRegistroP__40).getComponent("div_actualusuario_");
                 if (div_actualusuario__50 != null)
                     {
@@ -1909,16 +1919,6 @@ private void dodiv_view1__10(Widget div_view1__10)
                     if (label211__60 != null)
                         {
                         setAttrFor_label211__60(label211__60);
-                        }
-                    }
-                Widget div_actualempresa__50 = ((ContainerWidget)cajaarribaRegistroP__40).getComponent("div_actualempresa_");
-                if (div_actualempresa__50 != null)
-                    {
-                    setAttrFor_div_actualempresa__50(div_actualempresa__50);
-                    Widget actualempresa__60 = ((ContainerWidget)div_actualempresa__50).getComponent("actualempresa_");
-                    if (actualempresa__60 != null)
-                        {
-                        setAttrFor_actualempresa__60(actualempresa__60);
                         }
                     }
                 }

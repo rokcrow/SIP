@@ -106,6 +106,80 @@ import com.unify.pub.NameValuePair;
 public class SeguimientoFRM
     extends com.unify.nxj.mgr.NXJForm
 {
+
+    public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$get_1_FindExpressions()
+    {
+	return new com.unify.nxj.mgr.NXJMasterRelationshipExpression[]
+	    {
+	    new com.unify.nxj.mgr.NXJMasterRelationshipExpression()
+	    {
+
+		public String getColumnName()
+		{
+		    return "vps_proyecto";
+		} // getColumnName
+
+		public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		    throws Exception
+		{
+		    return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+			{
+			new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, view1.vpp_proyecto, null)
+			};
+		} // evaluate
+	    }, new com.unify.nxj.mgr.NXJMasterRelationshipExpression()
+	    {
+
+		public String getColumnName()
+		{
+		    return "vps_prospecto";
+		} // getColumnName
+
+		public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		    throws Exception
+		{
+		    return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+			{
+			new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, view1.vpp_numero, null)
+			};
+		} // evaluate
+	    }
+	    };
+    } // us$get_1_FindExpressions
+
+    public com.unify.nxj.mgr.NXJMasterAddExpression[] us$get_1_AddExpressions()
+    {
+	return new com.unify.nxj.mgr.NXJMasterAddExpression[]
+	    {
+	    new com.unify.nxj.mgr.NXJMasterAddExpression()
+	    {
+
+		public String getColumnName()
+		{
+		    return "vps_proyecto";
+		} // getColumnName
+
+		public Nullable evaluate()
+		    throws Exception
+		{
+		    return view1.vpp_proyecto;
+		} // evaluate
+	    }, new com.unify.nxj.mgr.NXJMasterAddExpression()
+	    {
+
+		public String getColumnName()
+		{
+		    return "vps_prospecto";
+		} // getColumnName
+
+		public Nullable evaluate()
+		    throws Exception
+		{
+		    return view1.vpp_numero;
+		} // evaluate
+	    }
+	    };
+    } // us$get_1_AddExpressions
     private SeguimientoFRM SeguimientoFRM = this;
     public class view1
 	extends Modulo.SeguimientoDVW
@@ -141,7 +215,13 @@ public class SeguimientoFRM
 	setDeleteAllowed(false);
 	setFindAllowed(true);
 	setStartInAddMode(true);
-	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.setStartInAddMode(true);
+	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.setStartInAddMode(false);
+	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.setAutoFind(true);
+	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.us$setCascadeDeletes(false);
+	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.us$setCascadeUpdates(false);
+	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.us$setMasterDataView(view1);
+	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.us$setMasterRelationshipCriteria(us$get_1_FindExpressions());
+	((Modulo.SeguimientoDVW)view1).PUBLIC_vps_prosigue.us$setMasterRelationshipAddExpr(us$get_1_AddExpressions());
 	us$setBackgroundColor("#999999");
 	us$setStopWithoutFields(true);
     } // us$initializeFormSpecificProperties

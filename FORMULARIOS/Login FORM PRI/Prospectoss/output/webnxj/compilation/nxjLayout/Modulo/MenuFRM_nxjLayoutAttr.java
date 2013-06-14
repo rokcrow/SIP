@@ -204,6 +204,33 @@ private void setAttrFor_actualempresa__60(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
+private void setAttrFor_div_actualusuario__50(Widget widget)
+{
+	widget.addStyle("left","800px");
+	widget.addStyle("top","14px");
+	widget.addStyle("width","110px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_actualusuario__60(Widget widget)
+{
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("immediate","false");
+	widget.addAttribute("displaywidth","110");
+	widget.addAttribute("displayleft","800");
+	widget.addStyle("color","Black");
+	widget.addAttribute("displaytop","14");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","110");
+	widget.addAttribute("size","18");
+	widget.setClass("textfield");
+	widget.addAttribute("name","cajagrandeMenu:cajaarribaMenu:actualusuario.");
+	widget.addStyle("overflow","hidden");
+}
+
 private void setAttrFor_div_label1__50(Widget widget)
 {
 	widget.addStyle("left","241px");
@@ -245,33 +272,6 @@ private void setAttrFor_label211__60(Widget widget)
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
 	widget.setClass("label");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_actualusuario__50(Widget widget)
-{
-	widget.addStyle("left","800px");
-	widget.addStyle("top","14px");
-	widget.addStyle("width","110px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_actualusuario__60(Widget widget)
-{
-	widget.addAttribute("field_weight","199");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("immediate","false");
-	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("displayleft","800");
-	widget.addStyle("color","Black");
-	widget.addAttribute("displaytop","14");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","110");
-	widget.addAttribute("size","18");
-	widget.setClass("textfield");
-	widget.addAttribute("name","cajagrandeMenu:cajaarribaMenu:actualusuario.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -416,6 +416,16 @@ private void dodiv_cajagrandeMenu__10(Widget div_cajagrandeMenu__10)
                         setAttrFor_actualempresa__60(actualempresa__60);
                         }
                     }
+                DivPanelWidget div_actualusuario__50 = new DivPanelWidget();
+                    {
+                    ((ContainerWidget)cajaarribaMenu__40).addComponent(div_actualusuario__50,"div_actualusuario_");
+                    setAttrFor_div_actualusuario__50(div_actualusuario__50);
+                    TextWidget actualusuario__60 = new TextWidget();
+                        {
+                        ((ContainerWidget)div_actualusuario__50).addComponent(actualusuario__60,"actualusuario_");
+                        setAttrFor_actualusuario__60(actualusuario__60);
+                        }
+                    }
                 DivPanelWidget div_label1__50 = new DivPanelWidget();
                     {
                     ((ContainerWidget)cajaarribaMenu__40).addComponent(div_label1__50,"div_label1_");
@@ -434,16 +444,6 @@ private void dodiv_cajagrandeMenu__10(Widget div_cajagrandeMenu__10)
                         {
                         ((ContainerWidget)div_label211__50).addComponent(label211__60,"label211_");
                         setAttrFor_label211__60(label211__60);
-                        }
-                    }
-                DivPanelWidget div_actualusuario__50 = new DivPanelWidget();
-                    {
-                    ((ContainerWidget)cajaarribaMenu__40).addComponent(div_actualusuario__50,"div_actualusuario_");
-                    setAttrFor_div_actualusuario__50(div_actualusuario__50);
-                    TextWidget actualusuario__60 = new TextWidget();
-                        {
-                        ((ContainerWidget)div_actualusuario__50).addComponent(actualusuario__60,"actualusuario_");
-                        setAttrFor_actualusuario__60(actualusuario__60);
                         }
                     }
                 }

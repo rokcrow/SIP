@@ -18,9 +18,10 @@ dodiv_view1__10(div_view1__10);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("resize_browser","true");
-	widget.addAttribute("displaywidth","700");
+	widget.addAttribute("displaywidth","1058");
+	widget.addAttribute("select_on_click","false");
 	widget.addAttribute("stylesheets","");
-	widget.addAttribute("displayheight","600");
+	widget.addAttribute("displayheight","720");
 	widget.addAttribute("fieldheight","720");
 	widget.addAttribute("fieldwidth","1058");
 	widget.addStyle("background-color","#999999");

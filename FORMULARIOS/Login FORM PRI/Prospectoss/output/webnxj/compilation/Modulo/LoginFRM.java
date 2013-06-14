@@ -395,9 +395,10 @@ public class LoginFRM
 		    getSession().queueNextForm("Modulo.MenuFRM");
 		    }
 		else
-		    {
-		    getSession().queueNextForm("Modulo.MenuFRM");
-		    }
+		    if (us$registerPool.allocateRegister().load(cajagrandeLogin.xpr_password).eqOp(us$registerPool.allocateRegister().load(xus_password)).getBooleanValueNullOk())
+			{
+			getSession().queueNextForm("Modulo.MenuFRM");
+			}
 	} // run
     } // logincmd
 

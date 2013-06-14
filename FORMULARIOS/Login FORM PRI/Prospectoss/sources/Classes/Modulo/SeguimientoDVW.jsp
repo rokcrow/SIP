@@ -72,7 +72,6 @@
                         clear_after_au="false"
                         commands=""
                         connection="Connection1"
-                        detail_keys="vps_proyecto;vps_prospecto"
                         displayheight="258"
                         displayleft="56"
                         displaytop="434"
@@ -81,8 +80,6 @@
                         id=".top:PUBLIC_vps_prosigue."
                         key=".top:PUBLIC_vps_prosigue."
                         kind="data_region"
-                        master_keys="vpp_proyecto;vpp_numero"
-                        master_region="SeguimientoDVW"
                         original_name="view1"
                         relationship_method=""
                         target_table="PUBLIC.vps_prosigue"
@@ -1585,7 +1582,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 153px; left: 445px; width:25px; height:22px">
+                    style="position: absolute; top: 153px; left: 445px; width:45px; height:22px">
 
                     <input
                         accell_type="String"
@@ -1597,7 +1594,7 @@
                         displayheight="22"
                         displayleft="445"
                         displaytop="153"
-                        displaywidth="25"
+                        displaywidth="45"
                         explicit_search_mode="default"
                         field_length="2"
                         field_type="text"
@@ -1609,7 +1606,7 @@
                         name=".top:vpp_proyecto."
                         original_name="textfield1"
                         retrieve_value="true"
-                        size="4"
+                        size="7"
                         target_field="vpp_proyecto"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315424064"
@@ -1692,7 +1689,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 862px; left: 112px; width:25px; height:22px">
+                    style="position: absolute; top: 862px; left: 112px; width:45px; height:22px">
 
                     <input
                         accell_type="String"
@@ -1703,7 +1700,7 @@
                         displayheight="22"
                         displayleft="112"
                         displaytop="862"
-                        displaywidth="25"
+                        displaywidth="45"
                         explicit_search_mode="default"
                         field_length="3"
                         field_type="text"
@@ -1715,7 +1712,7 @@
                         name=".top:vpp_vendedor."
                         original_name="textfield1"
                         retrieve_value="true"
-                        size="4"
+                        size="7"
                         target_field="vpp_vendedor"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316180037"
@@ -1728,22 +1725,22 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 153px; left: 477px; width:250px; height:22px">
+                    style="position: absolute; top: 153px; left: 492px; width:201px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
-                        displayleft="477"
+                        displayleft="492"
                         displaytop="153"
-                        displaywidth="250"
+                        displaywidth="201"
                         field_type="text"
                         field_weight="499"
                         findable="false"
                         key=".top:vpy_nombre."
                         name=".top:vpy_nombre."
                         original_name="textfield1"
-                        size="41"
+                        size="33"
                         stop_for_input="false"
                         target_field=""
                         type="text"

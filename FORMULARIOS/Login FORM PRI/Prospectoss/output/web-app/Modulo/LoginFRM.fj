@@ -33,7 +33,7 @@ FORM LoginFRM
                                 session.displayToMessageBox("Su clave expiro. Proceda a cambiarla, por favor.");
                                 session.queueNextForm("Modulo.MenuFRM");
                             }    
-                            else
+                            else if (cajagrandeLogin.xpr_password == xus_password)
                             { 
                                 session.queueNextForm("Modulo.MenuFRM");
                            

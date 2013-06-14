@@ -38,9 +38,9 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("displayleft","190");
 	widget.addAttribute("id","view1.");
 	widget.addAttribute("displaytop","30");
+	widget.addAttribute("displayleft","190");
 	widget.addStyle("overflow","hidden");
 }
 

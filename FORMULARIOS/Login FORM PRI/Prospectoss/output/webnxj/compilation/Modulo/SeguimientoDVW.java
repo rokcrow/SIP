@@ -118,6 +118,7 @@ public class SeguimientoDVW
     NullableString xpr_usuario = NullableFactory.createNullableString("xpr_usuario");
     NullableString vpy_tipo = NullableFactory.createNullableString("vpy_tipo");
     NullableTime hora = NullableFactory.createNullableTime("hora");
+    NullableStringVariable view1 = NullableFactory.createNullableStringVariable(this, "view1", false, false);
 
     public void initDataView()
 	throws Exception
@@ -135,80 +136,6 @@ public class SeguimientoDVW
 	    } // evaluate
 	});
     } // initDataView
-
-    public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$getPUBLIC_vps_prosigue_1_FindExpressions()
-    {
-	return new com.unify.nxj.mgr.NXJMasterRelationshipExpression[]
-	    {
-	    new com.unify.nxj.mgr.NXJMasterRelationshipExpression()
-	    {
-
-		public String getColumnName()
-		{
-		    return "vps_proyecto";
-		} // getColumnName
-
-		public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
-		    throws Exception
-		{
-		    return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
-			{
-			new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, SeguimientoDVW.vpp_proyecto, null)
-			};
-		} // evaluate
-	    }, new com.unify.nxj.mgr.NXJMasterRelationshipExpression()
-	    {
-
-		public String getColumnName()
-		{
-		    return "vps_prospecto";
-		} // getColumnName
-
-		public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
-		    throws Exception
-		{
-		    return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
-			{
-			new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, SeguimientoDVW.vpp_numero, null)
-			};
-		} // evaluate
-	    }
-	    };
-    } // us$getPUBLIC_vps_prosigue_1_FindExpressions
-
-    public com.unify.nxj.mgr.NXJMasterAddExpression[] us$getPUBLIC_vps_prosigue_1_AddExpressions()
-    {
-	return new com.unify.nxj.mgr.NXJMasterAddExpression[]
-	    {
-	    new com.unify.nxj.mgr.NXJMasterAddExpression()
-	    {
-
-		public String getColumnName()
-		{
-		    return "vps_proyecto";
-		} // getColumnName
-
-		public Nullable evaluate()
-		    throws Exception
-		{
-		    return SeguimientoDVW.vpp_proyecto;
-		} // evaluate
-	    }, new com.unify.nxj.mgr.NXJMasterAddExpression()
-	    {
-
-		public String getColumnName()
-		{
-		    return "vps_prospecto";
-		} // getColumnName
-
-		public Nullable evaluate()
-		    throws Exception
-		{
-		    return SeguimientoDVW.vpp_numero;
-		} // evaluate
-	    }
-	    };
-    } // us$getPUBLIC_vps_prosigue_1_AddExpressions
     private SeguimientoDVW SeguimientoDVW = this;
     public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
     public NXJLabelControl label10 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label10", false);
@@ -1275,9 +1202,6 @@ public class SeguimientoDVW
 	setStartInAddMode(true);
 	setClearAfterAdd(false);
 	setFindCount(20);
-	Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue.us$setMasterDataView(Modulo.SeguimientoDVW.this);
-	Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue.us$setMasterRelationshipCriteria(Modulo.SeguimientoDVW.this.us$getPUBLIC_vps_prosigue_1_FindExpressions());
-	Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue.us$setMasterRelationshipAddExpr(Modulo.SeguimientoDVW.this.us$getPUBLIC_vps_prosigue_1_AddExpressions());
 	Modulo.SeguimientoDVW.this.us$setMasterDataView(Modulo.SeguimientoDVW.this.PUBLIC_vps_prosigue);
 	us$setBackgroundColor("#cccccc");
 	label1.setStyleClass("label");

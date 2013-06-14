@@ -10,6 +10,8 @@ DATA VIEW SeguimientoDVW
     NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora;
     NullableTime    hora;
     
+     NullableStringVariable   view1;
+    
     INIT DATA VIEW
     {
      vpp_estadopro.clearFindExp = "A";

@@ -13,7 +13,7 @@
         auto_find = "false"
         background_color = "#cccccc"
         binary_variables = ""
-        bloom_filter = "00000000000400042040000000000000"
+        bloom_filter = "00000000000400040040000000000000"
         cascade_deletes = "false"
         cascade_updates = "false"
         commands = "empresausuario"
@@ -520,6 +520,99 @@
         key = ".top:Label9."
         style_class = "label"
         uid = "form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776395"
+        view = "label">
+    </control>
+    <control 
+        background_color = "#e30000"
+        binary_variables = ""
+        commands = ""
+        display_name = "cajaabajoRegistroP"
+        field_weight = "5299"
+        key = ".top:cajaabajoRegistroP."
+        original_name = "box1"
+        style_class = "box"
+        target_field = ""
+        uid = "desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369343805083"
+        view = "fieldset">
+    </control>
+    <control 
+        base_class = "Classes/ItemsForm/Logo.fx"
+        binary_variables = ""
+        display_base_class = "ItemsForm.Logo"
+        display_name = "image1"
+        foundation_type = "Classes/Foundation/Image"
+        key = ".top:cajaabajoRegistroP:image1."
+        kind = "instance"
+        original_name = "image1"
+        uid = "itemsform_dataview1_1368038367945_c486553ba63e77316f04c86372ffc3ae6f0d73b1_1368040829176"
+        uid_to_name = ""
+        view = "img">
+    </control>
+    <control 
+        background_color = "#e30000"
+        binary_variables = ""
+        commands = ""
+        display_name = "cajaarribaRegistroP"
+        field_weight = "99"
+        key = ".top:cajaarribaRegistroP."
+        original_name = "box1"
+        style_class = "box"
+        target_field = ""
+        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
+        view = "fieldset">
+    </control>
+    <field 
+        binary_variables = ""
+        display_name = "actualempresa"
+        field_type = "text"
+        field_weight = "99"
+        findable = "false"
+        immediate = "true"
+        key = ".top:cajaarribaRegistroP:actualempresa."
+        multi_valued = "true"
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "actualusuario"
+        field_type = "text"
+        field_weight = "199"
+        findable = "false"
+        immediate = "true"
+        key = ".top:cajaarribaRegistroP:actualusuario."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+        view = "text">
+    </field>
+    <control 
+        base_class = "Classes/ItemsForm/TituloLBL.fx"
+        binary_variables = ""
+        display_base_class = "ItemsForm.TituloLBL"
+        display_name = "label1"
+        foundation_type = "Classes/Foundation/Label"
+        key = ".top:cajaarribaRegistroP:label1."
+        kind = "instance"
+        original_name = "label1"
+        uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
+        uid_to_name = ""
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label211"
+        key = ".top:cajaarribaRegistroP:label211."
+        original_name = "label2"
+        style_class = "label"
+        target_field = ""
+        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
         view = "label">
     </control>
     <control 
@@ -1838,98 +1931,5 @@
         updateable = "false"
         view = "text">
     </field>
-    <control 
-        background_color = "#e30000"
-        binary_variables = ""
-        commands = ""
-        display_name = "cajaabajoRegistroP"
-        field_weight = "5299"
-        key = "cajaabajoRegistroP."
-        original_name = "box1"
-        style_class = "box"
-        target_field = ""
-        uid = "desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369343805083"
-        view = "fieldset">
-    </control>
-    <control 
-        base_class = "Classes/ItemsForm/Logo.fx"
-        binary_variables = ""
-        display_base_class = "ItemsForm.Logo"
-        display_name = "image1"
-        foundation_type = "Classes/Foundation/Image"
-        key = "cajaabajoRegistroP:image1."
-        kind = "instance"
-        original_name = "image1"
-        uid = "itemsform_dataview1_1368038367945_c486553ba63e77316f04c86372ffc3ae6f0d73b1_1368040829176"
-        uid_to_name = ""
-        view = "img">
-    </control>
-    <control 
-        background_color = "#e30000"
-        binary_variables = ""
-        commands = ""
-        display_name = "cajaarribaRegistroP"
-        field_weight = "99"
-        key = "cajaarribaRegistroP."
-        original_name = "box1"
-        style_class = "box"
-        target_field = ""
-        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
-        view = "fieldset">
-    </control>
-    <field 
-        binary_variables = ""
-        display_name = "actualempresa"
-        field_type = "text"
-        field_weight = "99"
-        findable = "false"
-        immediate = "true"
-        key = "cajaarribaRegistroP:actualempresa."
-        multi_valued = "true"
-        original_name = "textfield1"
-        stop_for_input = "false"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
-        display_name = "actualusuario"
-        field_type = "text"
-        field_weight = "199"
-        findable = "false"
-        immediate = "true"
-        key = "cajaarribaRegistroP:actualusuario."
-        original_name = "textfield1"
-        stop_for_input = "false"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-        view = "text">
-    </field>
-    <control 
-        base_class = "Classes/ItemsForm/TituloLBL.fx"
-        binary_variables = ""
-        display_base_class = "ItemsForm.TituloLBL"
-        display_name = "label1"
-        foundation_type = "Classes/Foundation/Label"
-        key = "cajaarribaRegistroP:label1."
-        kind = "instance"
-        original_name = "label1"
-        uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
-        uid_to_name = ""
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label211"
-        key = "cajaarribaRegistroP:label211."
-        original_name = "label2"
-        style_class = "label"
-        target_field = ""
-        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
-        view = "label">
-    </control>
 
 </form>
