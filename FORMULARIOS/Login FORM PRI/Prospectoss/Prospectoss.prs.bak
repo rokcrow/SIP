@@ -645,7 +645,7 @@
     </file>
 
     <file
-         path="Classes/Modulo/LoginFRM22.fx"
+         path="Classes/Modulo/LoginFRM.fx"
           type="form"
           state="4"
           flags="0"
@@ -656,11 +656,11 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;LoginFRM22&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;LoginFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
           target-type="0"
           description=""
-          default-label="Modulo.LoginFRM22"
+          default-label="Modulo.LoginFRM"
           add_to_menu="true"
           override-entry-point-name="false"
           expose-as-portlet="false"
@@ -829,39 +829,6 @@
           checked-in-path=""
           base-class=""
           tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;GradoInteresFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
-         path="Classes/Modulo/SeguimientoDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1371048961650"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;SeguimientoDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
-         path="Classes/Modulo/SeguimientoFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1371048961668"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;SeguimientoFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>

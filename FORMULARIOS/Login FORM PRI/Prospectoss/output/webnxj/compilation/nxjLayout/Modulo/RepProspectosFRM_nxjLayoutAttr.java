@@ -17,14 +17,14 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1198");
 	widget.addAttribute("stylesheets","");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","413");
 	widget.addAttribute("fieldheight","413");
 	widget.addAttribute("fieldwidth","1198");
-	widget.addStyle("background-color","#999999");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -50,9 +50,9 @@ private void setAttrFor_div_TodosLoProy__30(Widget widget)
 
 private void setAttrFor_TodosLoProy__40(Widget widget)
 {
-	widget.addAttribute("type","checkbox");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)TodosLoProy.");
 	widget.addAttribute("name","view1:TodosLoProy.");
+	widget.addAttribute("type","checkbox");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -62,9 +62,9 @@ private void setAttrFor_div_TodosLosVend__30(Widget widget)
 
 private void setAttrFor_TodosLosVend__40(Widget widget)
 {
-	widget.addAttribute("type","checkbox");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)TodosLosVend.");
 	widget.addAttribute("name","view1:TodosLosVend.");
+	widget.addAttribute("type","checkbox");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -118,9 +118,9 @@ private void setAttrFor_div_textfield1__50(Widget widget)
 
 private void setAttrFor_textfield1__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)box111:(Modulo.RepProspectosDVW)textfield1.");
 	widget.addAttribute("name","view1:box111:textfield1.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -130,9 +130,9 @@ private void setAttrFor_div_textfield11__50(Widget widget)
 
 private void setAttrFor_textfield11__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)box111:(Modulo.RepProspectosDVW)textfield11.");
 	widget.addAttribute("name","view1:box111:textfield11.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -142,9 +142,9 @@ private void setAttrFor_div_ejecutarbtn__30(Widget widget)
 
 private void setAttrFor_ejecutarbtn__40(Widget widget)
 {
-	widget.addAttribute("type","button");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)ejecutarbtn.");
 	widget.addAttribute("name","view1:ejecutarbtn.");
+	widget.addAttribute("type","button");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -278,9 +278,9 @@ private void setAttrFor_div_regresarbtn__30(Widget widget)
 
 private void setAttrFor_regresarbtn__40(Widget widget)
 {
-	widget.addAttribute("type","button");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)regresarbtn.");
 	widget.addAttribute("name","view1:regresarbtn.");
+	widget.addAttribute("type","button");
 	widget.addStyle("overflow","hidden");
 }
 

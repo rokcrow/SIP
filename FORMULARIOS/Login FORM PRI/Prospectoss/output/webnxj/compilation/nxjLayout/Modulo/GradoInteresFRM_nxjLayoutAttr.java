@@ -17,16 +17,16 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
+	widget.addAttribute("footer","none");
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1060");
 	widget.addAttribute("stylesheets","");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","608");
 	widget.addAttribute("fieldheight","608");
 	widget.addAttribute("fieldwidth","1060");
-	widget.addStyle("background-color","#999999");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -40,8 +40,8 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayheight","574");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displaytop","32");
 	widget.addAttribute("displaywidth","1110");
 	widget.addAttribute("displayleft","50");
@@ -66,10 +66,10 @@ private void setAttrFor_div_xpc_codigo__50(Widget widget)
 private void setAttrFor_xpc_codigo__60(Widget widget)
 {
 	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","49");
-	widget.addAttribute("headertitle","Codigo");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_codigo.");
 	widget.addAttribute("name","view1:xpc_codigo.");
+	widget.addAttribute("fieldwidth","49");
+	widget.addAttribute("headertitle","Codigo");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -79,10 +79,10 @@ private void setAttrFor_div_xpc_clase__50(Widget widget)
 
 private void setAttrFor_xpc_clase__60(Widget widget)
 {
-	widget.addAttribute("fieldwidth","87");
-	widget.addAttribute("headertitle","Clase");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_clase.");
 	widget.addAttribute("name","view1:xpc_clase.");
+	widget.addAttribute("fieldwidth","87");
+	widget.addAttribute("headertitle","Clase");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -93,10 +93,10 @@ private void setAttrFor_div_xpc_nombre__50(Widget widget)
 private void setAttrFor_xpc_nombre__60(Widget widget)
 {
 	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","209");
-	widget.addAttribute("headertitle","Nombre");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_nombre.");
 	widget.addAttribute("name","view1:xpc_nombre.");
+	widget.addAttribute("fieldwidth","209");
+	widget.addAttribute("headertitle","Nombre");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -106,10 +106,10 @@ private void setAttrFor_div_xpc_califica__50(Widget widget)
 
 private void setAttrFor_xpc_califica__60(Widget widget)
 {
-	widget.addAttribute("fieldwidth","184");
-	widget.addAttribute("headertitle","Calificacion");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_califica.");
 	widget.addAttribute("name","view1:xpc_califica.");
+	widget.addAttribute("fieldwidth","184");
+	widget.addAttribute("headertitle","Calificacion");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -120,10 +120,10 @@ private void setAttrFor_div_xpc_dias_pac__50(Widget widget)
 private void setAttrFor_xpc_dias_pac__60(Widget widget)
 {
 	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","85");
-	widget.addAttribute("headertitle","Dias Alto Costo");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_dias_pac.");
 	widget.addAttribute("name","view1:xpc_dias_pac.");
+	widget.addAttribute("fieldwidth","85");
+	widget.addAttribute("headertitle","Dias Alto Costo");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -134,10 +134,10 @@ private void setAttrFor_div_xpc_dias_pvt__50(Widget widget)
 private void setAttrFor_xpc_dias_pvt__60(Widget widget)
 {
 	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","190");
-	widget.addAttribute("headertitle","Dias VTradicional");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_dias_pvt.");
 	widget.addAttribute("name","view1:xpc_dias_pvt.");
+	widget.addAttribute("fieldwidth","190");
+	widget.addAttribute("headertitle","Dias VTradicional");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -202,9 +202,9 @@ private void setAttrFor_div_textfield1__50(Widget widget)
 
 private void setAttrFor_textfield1__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)box111:(Modulo.GradoInteresDVW)textfield1.");
 	widget.addAttribute("name","view1:box111:textfield1.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -214,9 +214,9 @@ private void setAttrFor_div_textfield11__50(Widget widget)
 
 private void setAttrFor_textfield11__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)box111:(Modulo.GradoInteresDVW)textfield11.");
 	widget.addAttribute("name","view1:box111:textfield11.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
