@@ -106,11 +106,6 @@ import com.unify.pub.NameValuePair;
 public class MediospDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
-
-    public void initDataView()
-	throws Exception
-    {
-    } // initDataView
     private MediospDVW MediospDVW = this;
     public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
     public /*multi_valued*/ NullableStringField vmp_categoria = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmp_categoria", true, true, 2);

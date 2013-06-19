@@ -17,16 +17,16 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("footer","none");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
+	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("displaywidth","1060");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","608");
-	widget.addAttribute("fieldheight","608");
-	widget.addAttribute("fieldwidth","1060");
+	widget.addAttribute("fieldheight","611");
+	widget.addAttribute("fieldwidth","1165");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -40,11 +40,11 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("displayheight","574");
-	widget.addAttribute("id","view1.");
-	widget.addAttribute("displaytop","32");
 	widget.addAttribute("displaywidth","1110");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
+	widget.addAttribute("displaytop","32");
+	widget.addAttribute("displayheight","574");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -54,6 +54,7 @@ private void setAttrFor_div_RepeatingArea1__30(Widget widget)
 
 private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
+	widget.addAttribute("occurrences","12");
 	widget.addAttribute("_id","view1:(Modulo.GradoInteresDVW)RepeatingArea1.");
 	widget.addAttribute("id","view1:RepeatingArea1.");
 	widget.addStyle("overflow","hidden");
@@ -65,11 +66,11 @@ private void setAttrFor_div_xpc_codigo__50(Widget widget)
 
 private void setAttrFor_xpc_codigo__60(Widget widget)
 {
+	widget.addAttribute("fieldwidth","49");
+	widget.addAttribute("headertitle","Codigo");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_codigo.");
 	widget.addAttribute("name","view1:xpc_codigo.");
-	widget.addAttribute("fieldwidth","49");
-	widget.addAttribute("headertitle","Codigo");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -79,10 +80,10 @@ private void setAttrFor_div_xpc_clase__50(Widget widget)
 
 private void setAttrFor_xpc_clase__60(Widget widget)
 {
-	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_clase.");
-	widget.addAttribute("name","view1:xpc_clase.");
 	widget.addAttribute("fieldwidth","87");
 	widget.addAttribute("headertitle","Clase");
+	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_clase.");
+	widget.addAttribute("name","view1:xpc_clase.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -92,11 +93,11 @@ private void setAttrFor_div_xpc_nombre__50(Widget widget)
 
 private void setAttrFor_xpc_nombre__60(Widget widget)
 {
+	widget.addAttribute("fieldwidth","209");
+	widget.addAttribute("headertitle","Nombre");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_nombre.");
 	widget.addAttribute("name","view1:xpc_nombre.");
-	widget.addAttribute("fieldwidth","209");
-	widget.addAttribute("headertitle","Nombre");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -106,10 +107,10 @@ private void setAttrFor_div_xpc_califica__50(Widget widget)
 
 private void setAttrFor_xpc_califica__60(Widget widget)
 {
-	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_califica.");
-	widget.addAttribute("name","view1:xpc_califica.");
 	widget.addAttribute("fieldwidth","184");
 	widget.addAttribute("headertitle","Calificacion");
+	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_califica.");
+	widget.addAttribute("name","view1:xpc_califica.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -119,11 +120,11 @@ private void setAttrFor_div_xpc_dias_pac__50(Widget widget)
 
 private void setAttrFor_xpc_dias_pac__60(Widget widget)
 {
+	widget.addAttribute("fieldwidth","85");
+	widget.addAttribute("headertitle","Dias Alto Costo");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_dias_pac.");
 	widget.addAttribute("name","view1:xpc_dias_pac.");
-	widget.addAttribute("fieldwidth","85");
-	widget.addAttribute("headertitle","Dias Alto Costo");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -133,11 +134,11 @@ private void setAttrFor_div_xpc_dias_pvt__50(Widget widget)
 
 private void setAttrFor_xpc_dias_pvt__60(Widget widget)
 {
+	widget.addAttribute("fieldwidth","190");
+	widget.addAttribute("headertitle","Dias VTradicional");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_dias_pvt.");
 	widget.addAttribute("name","view1:xpc_dias_pvt.");
-	widget.addAttribute("fieldwidth","190");
-	widget.addAttribute("headertitle","Dias VTradicional");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -176,12 +177,18 @@ private void setAttrFor_box111__40(Widget widget)
 
 private void setAttrFor_div_label1__50(Widget widget)
 {
+	widget.addStyle("left","241px");
+	widget.addStyle("top","14px");
+	widget.addStyle("width","200px");
+	widget.addStyle("height","23px");
 }
 
 private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.GradoInteresDVW)box111:(Modulo.GradoInteresDVW)label1.");
 	widget.addAttribute("id","view1:box111:label1.");
+	widget.addAttribute("displaywidth","200");
+	widget.addAttribute("fieldwidth","200");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -222,12 +229,18 @@ private void setAttrFor_textfield11__60(Widget widget)
 
 private void setAttrFor_div_label11__30(Widget widget)
 {
+	widget.addStyle("left","20px");
+	widget.addStyle("top","96px");
+	widget.addStyle("width","133px");
+	widget.addStyle("height","18px");
 }
 
 private void setAttrFor_label11__40(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.GradoInteresDVW)label11.");
 	widget.addAttribute("id","view1:label11.");
+	widget.addAttribute("displaywidth","133");
+	widget.addAttribute("fieldwidth","133");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_view1__10(Widget div_view1__10)

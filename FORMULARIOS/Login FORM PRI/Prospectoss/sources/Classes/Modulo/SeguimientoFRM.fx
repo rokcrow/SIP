@@ -2,7 +2,7 @@
     aud_on_entry = "false"
     background_color = "#999999"
     binary_variables = ""
-    bloom_filter = "00080000000000000800000000000000"
+    bloom_filter = "00000000000400040000000000000000"
     commands = ""
     connection = "Connection1"
     field_order = ""
@@ -728,7 +728,7 @@
         target_field = "vpp_fecha"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -751,7 +751,7 @@
         target_field = "vpp_fechaestado"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "String"

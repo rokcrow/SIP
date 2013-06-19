@@ -11,6 +11,10 @@ public ProspectosDVW_nxjLayoutAttr()
 {
 this.isLocalized = false;
 setAttrFor_this(this);
+DivPanelWidget div_vpp_corredor__10 = new DivPanelWidget();
+dodiv_vpp_corredor__10(div_vpp_corredor__10);
+DivPanelWidget div_vpp_mediopub__10 = new DivPanelWidget();
+dodiv_vpp_mediopub__10(div_vpp_mediopub__10);
 DivPanelWidget div_Label1__10 = new DivPanelWidget();
 dodiv_Label1__10(div_Label1__10);
 DivPanelWidget div_Label10__10 = new DivPanelWidget();
@@ -141,8 +145,6 @@ DivPanelWidget div_vpp_califica__10 = new DivPanelWidget();
 dodiv_vpp_califica__10(div_vpp_califica__10);
 DivPanelWidget div_vpp_ciudad__10 = new DivPanelWidget();
 dodiv_vpp_ciudad__10(div_vpp_ciudad__10);
-DivPanelWidget div_vpp_corredor__10 = new DivPanelWidget();
-dodiv_vpp_corredor__10(div_vpp_corredor__10);
 DivPanelWidget div_vpp_correo__10 = new DivPanelWidget();
 dodiv_vpp_correo__10(div_vpp_correo__10);
 DivPanelWidget div_vpp_cuanta_correo2__10 = new DivPanelWidget();
@@ -183,8 +185,6 @@ DivPanelWidget div_vpp_ingreso__10 = new DivPanelWidget();
 dodiv_vpp_ingreso__10(div_vpp_ingreso__10);
 DivPanelWidget div_vpp_mediodes__10 = new DivPanelWidget();
 dodiv_vpp_mediodes__10(div_vpp_mediodes__10);
-DivPanelWidget div_vpp_mediopub__10 = new DivPanelWidget();
-dodiv_vpp_mediopub__10(div_vpp_mediopub__10);
 DivPanelWidget div_vpp_motivo__10 = new DivPanelWidget();
 dodiv_vpp_motivo__10(div_vpp_motivo__10);
 DivPanelWidget div_vpp_nacionalidad__10 = new DivPanelWidget();
@@ -245,6 +245,62 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("fieldheight","1455");
 	widget.addAttribute("fieldwidth","1005");
 	widget.setClass("data_view");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vpp_corredor__10(Widget widget)
+{
+	widget.addStyle("left","721px");
+	widget.addStyle("top","1275px");
+	widget.addStyle("width","45px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vpp_corredor__20(Widget widget)
+{
+	widget.addAttribute("field_weight","4799");
+	widget.addAttribute("immediate","true");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
+	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("name",".top:vpp_corredor.");
+	widget.addAttribute("displayleft","721");
+	widget.addAttribute("size","7");
+	widget.addAttribute("displaytop","1275");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.addStyle("font-size","12");
+	widget.addStyle("color","Black");
+	widget.setClass("textfield");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vpp_mediopub__10(Widget widget)
+{
+	widget.addStyle("left","122px");
+	widget.addStyle("top","879px");
+	widget.addStyle("width","45px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vpp_mediopub__20(Widget widget)
+{
+	widget.addAttribute("field_weight","3699");
+	widget.addAttribute("immediate","true");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
+	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("name",".top:vpp_mediopub.");
+	widget.addAttribute("displayleft","122");
+	widget.addAttribute("size","7");
+	widget.addAttribute("displaytop","879");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.addStyle("font-size","12");
+	widget.addStyle("color","Black");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -2002,34 +2058,6 @@ private void setAttrFor_vpp_ciudad__20(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vpp_corredor__10(Widget widget)
-{
-	widget.addStyle("left","721px");
-	widget.addStyle("top","1275px");
-	widget.addStyle("width","45px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vpp_corredor__20(Widget widget)
-{
-	widget.addAttribute("field_weight","4799");
-	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("name",".top:vpp_corredor.");
-	widget.addAttribute("displayleft","721");
-	widget.addAttribute("size","7");
-	widget.addAttribute("displaytop","1275");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","45");
-	widget.addStyle("font-size","12");
-	widget.addStyle("color","Black");
-	widget.setClass("textfield");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_vpp_correo__10(Widget widget)
 {
 	widget.addStyle("left","112px");
@@ -2595,34 +2623,6 @@ private void setAttrFor_vpp_mediodes__20(Widget widget)
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","300");
-	widget.addStyle("font-size","12");
-	widget.addStyle("color","Black");
-	widget.setClass("textfield");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vpp_mediopub__10(Widget widget)
-{
-	widget.addStyle("left","122px");
-	widget.addStyle("top","879px");
-	widget.addStyle("width","45px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vpp_mediopub__20(Widget widget)
-{
-	widget.addAttribute("field_weight","3699");
-	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("name",".top:vpp_mediopub.");
-	widget.addAttribute("displayleft","122");
-	widget.addAttribute("size","7");
-	widget.addAttribute("displaytop","879");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","45");
 	widget.addStyle("font-size","12");
 	widget.addStyle("color","Black");
 	widget.setClass("textfield");
@@ -3230,6 +3230,26 @@ private void setAttrFor_xpc_nombre__20(Widget widget)
 	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
+private void dodiv_vpp_corredor__10(Widget div_vpp_corredor__10)
+    {
+    ((ContainerWidget)this).addComponent(div_vpp_corredor__10,"div_vpp_corredor_");
+    setAttrFor_div_vpp_corredor__10(div_vpp_corredor__10);
+    TextWidget vpp_corredor__20 = new TextWidget();
+        {
+        ((ContainerWidget)div_vpp_corredor__10).addComponent(vpp_corredor__20,"vpp_corredor_");
+        setAttrFor_vpp_corredor__20(vpp_corredor__20);
+        }
+    }
+private void dodiv_vpp_mediopub__10(Widget div_vpp_mediopub__10)
+    {
+    ((ContainerWidget)this).addComponent(div_vpp_mediopub__10,"div_vpp_mediopub_");
+    setAttrFor_div_vpp_mediopub__10(div_vpp_mediopub__10);
+    TextWidget vpp_mediopub__20 = new TextWidget();
+        {
+        ((ContainerWidget)div_vpp_mediopub__10).addComponent(vpp_mediopub__20,"vpp_mediopub_");
+        setAttrFor_vpp_mediopub__20(vpp_mediopub__20);
+        }
+    }
 private void dodiv_Label1__10(Widget div_Label1__10)
     {
     ((ContainerWidget)this).addComponent(div_Label1__10,"div_Label1_");
@@ -3930,16 +3950,6 @@ private void dodiv_vpp_ciudad__10(Widget div_vpp_ciudad__10)
         setAttrFor_vpp_ciudad__20(vpp_ciudad__20);
         }
     }
-private void dodiv_vpp_corredor__10(Widget div_vpp_corredor__10)
-    {
-    ((ContainerWidget)this).addComponent(div_vpp_corredor__10,"div_vpp_corredor_");
-    setAttrFor_div_vpp_corredor__10(div_vpp_corredor__10);
-    TextWidget vpp_corredor__20 = new TextWidget();
-        {
-        ((ContainerWidget)div_vpp_corredor__10).addComponent(vpp_corredor__20,"vpp_corredor_");
-        setAttrFor_vpp_corredor__20(vpp_corredor__20);
-        }
-    }
 private void dodiv_vpp_correo__10(Widget div_vpp_correo__10)
     {
     ((ContainerWidget)this).addComponent(div_vpp_correo__10,"div_vpp_correo_");
@@ -4138,16 +4148,6 @@ private void dodiv_vpp_mediodes__10(Widget div_vpp_mediodes__10)
         {
         ((ContainerWidget)div_vpp_mediodes__10).addComponent(vpp_mediodes__20,"vpp_mediodes_");
         setAttrFor_vpp_mediodes__20(vpp_mediodes__20);
-        }
-    }
-private void dodiv_vpp_mediopub__10(Widget div_vpp_mediopub__10)
-    {
-    ((ContainerWidget)this).addComponent(div_vpp_mediopub__10,"div_vpp_mediopub_");
-    setAttrFor_div_vpp_mediopub__10(div_vpp_mediopub__10);
-    TextWidget vpp_mediopub__20 = new TextWidget();
-        {
-        ((ContainerWidget)div_vpp_mediopub__10).addComponent(vpp_mediopub__20,"vpp_mediopub_");
-        setAttrFor_vpp_mediopub__20(vpp_mediopub__20);
         }
     }
 private void dodiv_vpp_motivo__10(Widget div_vpp_motivo__10)

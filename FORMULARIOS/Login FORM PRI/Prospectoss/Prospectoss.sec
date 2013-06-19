@@ -181,6 +181,12 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/VendedoresDVW/Box"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/MediospFRM.fx"
         type="0"
     >
@@ -670,22 +676,16 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/VendedoresFRM/view1/Box1"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
         path="Classes/Modulo/RepProspectosFRM/view1"
         type="36"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -1022,12 +1022,6 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/VendedoresDVW/Box1"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
         path="Classes/Modulo/ProyectosFRM/view1"
         type="36"
     >
@@ -1160,6 +1154,12 @@
     <object
         project=""
         path="Classes/Modulo/VendedoresDVW/box11"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/VendedoresFRM/view1/Box"
         type="35"
     >
     </object>
@@ -1591,6 +1591,11 @@
         project=""
         path="classes/modulo/menufrm/view1"
         value="classes/modulo/menudvw.fx"
+    />
+    <base-class
+        project=""
+        path="classes/modulo/vendedoresfrm/view1/box"
+        value="classes/modulo/vendedoresdvw.fx:box"
     />
     <base-class
         project=""

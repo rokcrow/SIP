@@ -23,18 +23,18 @@ dodiv_label11__10(div_label11__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.setClass("data_view");
-	widget.addAttribute("name",".top.");
 	widget.addAttribute("displaywidth","1005");
+	widget.addAttribute("id",".top.");
+	widget.addAttribute("name",".top.");
 	widget.addStyle("border-width","1");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","solid");
 	widget.addStyle("background-color","#cccccc");
-	widget.addAttribute("id",".top.");
 	widget.addAttribute("displaytop","25");
 	widget.addAttribute("displayheight","566");
 	widget.addAttribute("fieldheight","566");
 	widget.addAttribute("fieldwidth","1005");
+	widget.setClass("data_view");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -48,21 +48,21 @@ private void setAttrFor_div_RepeatingArea1__10(Widget widget)
 
 private void setAttrFor_RepeatingArea1__20(Widget widget)
 {
-	widget.addAttribute("row_class","ROW");
-	widget.addAttribute("altRowClass","alternate_row");
-	widget.addAttribute("field_weight","199");
-	widget.addAttribute("repeat_style","Grid");
+	widget.addAttribute("list_columns",".top:vpy_empresa.0:158;.top:vpy_codigo.158:172;.top:vpy_nombre.330:259;.top:vpy_estado.589:110");
 	widget.addAttribute("occurrences","11");
 	widget.addAttribute("selected_row_class","selected_row");
-	widget.addAttribute("list_columns",".top:vpy_empresa.0:158;.top:vpy_codigo.158:172;.top:vpy_nombre.330:259;.top:vpy_estado.589:110");
-	widget.setClass("repeating_area");
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("row_class","ROW");
+	widget.addAttribute("repeat_style","Grid");
+	widget.addAttribute("altRowClass","alternate_row");
 	widget.addAttribute("displaywidth","718");
-	widget.addAttribute("displayleft","112");
 	widget.addAttribute("id",".top:RepeatingArea1.");
+	widget.addAttribute("displayleft","112");
 	widget.addAttribute("displaytop","165");
 	widget.addAttribute("displayheight","277");
 	widget.addAttribute("fieldheight","277");
 	widget.addAttribute("fieldwidth","718");
+	widget.setClass("repeating_area");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -73,21 +73,21 @@ private void setAttrFor_div_vpy_empresa__30(Widget widget)
 
 private void setAttrFor_vpy_empresa__40(Widget widget)
 {
-	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("accell_type","String");
-	widget.setClass("textfield");
-	widget.addAttribute("size","26");
-	widget.addAttribute("name",".top:vpy_empresa.");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","158");
+	widget.addAttribute("name",".top:vpy_empresa.");
 	widget.addAttribute("displayleft","0");
+	widget.addAttribute("size","26");
 	widget.addAttribute("headertitle","Codigo de Empresa");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","158");
 	widget.addAttribute("title","vpy_empresa");
-	widget.addAttribute("type","text");
+	widget.addAttribute("fieldwidth","158");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -98,21 +98,21 @@ private void setAttrFor_div_vpy_codigo__30(Widget widget)
 
 private void setAttrFor_vpy_codigo__40(Widget widget)
 {
-	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("accell_type","String");
-	widget.setClass("textfield");
-	widget.addAttribute("size","28");
-	widget.addAttribute("name",".top:vpy_codigo.");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","172");
+	widget.addAttribute("name",".top:vpy_codigo.");
 	widget.addAttribute("displayleft","104");
+	widget.addAttribute("size","28");
 	widget.addAttribute("headertitle","Codigo de Proyecto");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","172");
 	widget.addAttribute("title","vpy_codigo");
-	widget.addAttribute("type","text");
+	widget.addAttribute("fieldwidth","172");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -123,22 +123,22 @@ private void setAttrFor_div_vpy_nombre__30(Widget widget)
 
 private void setAttrFor_vpy_nombre__40(Widget widget)
 {
-	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("auto_complete","true");
-	widget.setClass("textfield");
-	widget.addAttribute("size","43");
-	widget.addAttribute("name",".top:vpy_nombre.");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","259");
+	widget.addAttribute("name",".top:vpy_nombre.");
 	widget.addAttribute("displayleft","234");
+	widget.addAttribute("size","43");
 	widget.addAttribute("headertitle","Nombre de Proyecto");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","259");
 	widget.addAttribute("title","vpy_nombre");
-	widget.addAttribute("type","text");
+	widget.addAttribute("fieldwidth","259");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -149,20 +149,20 @@ private void setAttrFor_div_vpy_estado__30(Widget widget)
 
 private void setAttrFor_vpy_estado__40(Widget widget)
 {
-	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("options","Temporal=T;Real=R");
-	widget.setClass("textfield");
-	widget.addAttribute("size","1");
-	widget.addAttribute("name",".top:vpy_estado.");
 	widget.addAttribute("displaywidth","110");
+	widget.addAttribute("name",".top:vpy_estado.");
 	widget.addAttribute("displayleft","351");
+	widget.addAttribute("size","1");
 	widget.addAttribute("headertitle","Estado");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","110");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -177,16 +177,16 @@ private void setAttrFor_div_navigationbar1__30(Widget widget)
 
 private void setAttrFor_navigationbar1__40(Widget widget)
 {
-	widget.setClass("navigation");
 	widget.addAttribute("displaywidth","340");
+	widget.addAttribute("id",".top:navigationbar1.");
 	widget.addAttribute("displayleft","20");
 	widget.addAttribute("navigationtype","pages");
-	widget.addAttribute("id",".top:navigationbar1.");
 	widget.addAttribute("linkinrement","1");
 	widget.addAttribute("displaytop","243");
 	widget.addAttribute("displayheight","25");
 	widget.addAttribute("fieldheight","25");
 	widget.addAttribute("fieldwidth","340");
+	widget.setClass("navigation");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -201,18 +201,18 @@ private void setAttrFor_div_box11__10(Widget widget)
 private void setAttrFor_box11__20(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
-	widget.setClass("box");
 	widget.addAttribute("displaywidth","996");
+	widget.addAttribute("id",".top:box11.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addStyle("background-color","#e30000");
-	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displaytop","511");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
+	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -227,8 +227,8 @@ private void setAttrFor_div_image1__30(Widget widget)
 private void setAttrFor_image1__40(Widget widget)
 {
 	widget.addAttribute("displayheight","46");
-	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displaytop","2");
+	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -245,18 +245,18 @@ private void setAttrFor_div_box111__10(Widget widget)
 private void setAttrFor_box111__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.setClass("box");
 	widget.addAttribute("displaywidth","996");
+	widget.addAttribute("id",".top:box111.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addStyle("background-color","#e30000");
-	widget.addAttribute("id",".top:box111.");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
+	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -272,9 +272,9 @@ private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","PROYECTOS EN VENTA");
 	widget.addAttribute("displayheight","23");
-	widget.addAttribute("id",".top:box111:label1.");
 	widget.addAttribute("displaytop","14");
 	widget.addStyle("text-align","left");
+	widget.addAttribute("id",".top:box111:label1.");
 	widget.addAttribute("displaywidth","522");
 	widget.addAttribute("displayleft","241");
 	widget.addStyle("overflow","hidden");
@@ -290,19 +290,19 @@ private void setAttrFor_div_textfield1__30(Widget widget)
 
 private void setAttrFor_textfield1__40(Widget widget)
 {
+	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_weight","99");
-	widget.setClass("textfield");
-	widget.addAttribute("size","32");
-	widget.addAttribute("name",".top:box111:textfield1.");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","197");
+	widget.addAttribute("name",".top:box111:textfield1.");
 	widget.addAttribute("displayleft","16");
+	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.addAttribute("type","text");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -316,19 +316,19 @@ private void setAttrFor_div_textfield11__30(Widget widget)
 
 private void setAttrFor_textfield11__40(Widget widget)
 {
+	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_weight","199");
-	widget.setClass("textfield");
-	widget.addAttribute("size","18");
-	widget.addAttribute("name",".top:box111:textfield11.");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","110");
+	widget.addAttribute("name",".top:box111:textfield11.");
 	widget.addAttribute("displayleft","800");
+	widget.addAttribute("size","18");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.addAttribute("type","text");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -342,20 +342,20 @@ private void setAttrFor_div_label11__10(Widget widget)
 
 private void setAttrFor_label11__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Proyectos en venta");
-	widget.addStyle("font-size","14");
-	widget.addAttribute("displaywidth","149");
-	widget.addAttribute("displayleft","20");
 	widget.addStyle("font-weight","bold");
+	widget.addAttribute("displaywidth","149");
 	widget.addAttribute("id",".top:label11.");
-	widget.addStyle("color","Black");
+	widget.addAttribute("displayleft","20");
+	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("displaytop","96");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("fieldwidth","149");
-	widget.addStyle("font-family","Verdana");
+	widget.addStyle("font-size","14");
 	widget.addStyle("text-align","left");
+	widget.addStyle("color","Black");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_RepeatingArea1__10(Widget div_RepeatingArea1__10)

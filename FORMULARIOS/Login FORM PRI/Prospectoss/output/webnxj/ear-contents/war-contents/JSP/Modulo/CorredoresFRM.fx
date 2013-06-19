@@ -1,21 +1,20 @@
 <form 
     background_color = "#999999"
-    binary_variables = ""
     bloom_filter = "00000000000400040008000000000000"
     commands = ""
     footer = "none"
-    form_height = "496"
-    form_width = "1054"
+    form_height = "500"
+    form_width = "1060"
     foundation_type = "Classes/Foundation/Form"
     resize_browser = "true"
     style_class = "form"
     uid_prefix = "modulo_form1_1369575410527"
     view = "form"
+    zoom_return_expressions = "view1.vco_codigo"
     reuse="true">
 
     <div 
         base_class = "Classes/Modulo/CorredoresDVW.fx"
-        binary_variables = ""
         commands = ""
         display_base_class = "Modulo.CorredoresDVW"
         display_name = "view1"

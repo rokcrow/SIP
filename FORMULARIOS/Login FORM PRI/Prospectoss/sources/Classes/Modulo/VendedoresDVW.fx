@@ -28,32 +28,19 @@
     <control 
         binary_variables = ""
         commands = ""
-        display_name = "Box1"
-        key = ".top:Box1."
-        kind = "repeating_area_header"
+        display_name = "Box"
+        key = ".top:Box."
+        original_name = "Box"
         style_class = "header"
-        uid = "parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256310350"
+        uid = "itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644153"
         view = "fieldset">
     </control>
     <control 
         binary_variables = ""
-        display_name = "Label1"
-        font_size = "12"
-        font_weight = "normal"
-        key = ".top:Box1:Label1."
-        style_class = "label"
-        uid = "parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256310357"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label2"
-        font_size = "12"
-        font_weight = "normal"
-        key = ".top:Box1:label2."
-        original_name = "label2"
-        style_class = "label"
-        uid = "itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369588126400"
+        display_name = "Label"
+        key = ".top:Box:Label."
+        original_name = "Label"
+        uid = "itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644181"
         view = "label">
     </control>
     <control 
@@ -85,10 +72,10 @@
         findable = "false"
         key = ".top:NombVend."
         multi_valued = "true"
-        original_name = "textfield1"
+        original_name = "NombVend"
         style_class = "textfield"
         target_field = ""
-        uid = "parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256440438"
+        uid = "itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644182"
         view = "text">
     </field>
     <div 
@@ -98,8 +85,8 @@
         field_weight = "199"
         key = ".top:RepeatingArea1."
         kind = "repeating_area"
-        list_columns = ".top:vvh_vendedora.0:118;.top:NombVend.134:302"
-        occurrences = "13"
+        list_columns = ".top:vvh_vendedora.0:118;.top:NombVend.118:318"
+        occurrences = "1000"
         repeat_style = "List"
         row_class = "ROW"
         selected_row_class = "selected_row"
@@ -117,6 +104,7 @@
         kind = "grid"
         original_name = "UnifyRepeatingArea"
         rep_row = "top:UnifyRepeatingArea"
+        uid = "itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653646022"
         view = "grid">
     </div>
     <control 
@@ -237,10 +225,11 @@
         findable = "true"
         key = ".top:vvh_vendedora."
         multi_valued = "true"
+        original_name = "vvh_vendedora"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vvh_vendedora"
-        uid = "parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256310364"
+        uid = "itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644169"
         updateable = "true"
         view = "text">
     </field>

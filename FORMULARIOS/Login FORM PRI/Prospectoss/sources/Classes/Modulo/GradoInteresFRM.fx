@@ -1,22 +1,21 @@
 <form 
     auto_find = "true"
     background_color = "#999999"
-    binary_variables = ""
     bloom_filter = "00020000000400040000000000000000"
     commands = ""
     footer = "none"
-    form_height = "608"
-    form_width = "1060"
+    form_height = "611"
+    form_width = "1165"
     foundation_type = "Classes/Foundation/Form"
     resize_browser = "true"
     style_class = "form"
     uid_prefix = "modulo_form1_1369578651997"
     view = "form"
+    zoom_return_expressions = "view1.xpc_codigo"
     reuse="true">
 
     <div 
         base_class = "Classes/Modulo/GradoInteresDVW.fx"
-        binary_variables = ""
         commands = ""
         display_base_class = "Modulo.GradoInteresDVW"
         display_name = "view1"

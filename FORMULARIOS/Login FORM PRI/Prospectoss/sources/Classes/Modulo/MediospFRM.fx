@@ -11,6 +11,7 @@
     style_class = "form"
     uid_prefix = "modulo_form1_1369582976348"
     view = "form"
+    zoom_return_expressions = "view1.vmp_codigo"
     reuse="true">
 
     <div 

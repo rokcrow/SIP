@@ -1259,7 +1259,7 @@
         target_field = "vpp_fecha"
         uid = "form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1282,7 +1282,7 @@
         target_field = "vpp_fecha_nacio"
         uid = "form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1304,7 +1304,7 @@
         target_field = "vpp_fecha_visita"
         uid = "form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1325,7 +1325,7 @@
         target_field = "vpp_fechaestado"
         uid = "form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "String"

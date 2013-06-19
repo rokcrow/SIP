@@ -49,18 +49,18 @@ dodiv_vendedor__10(div_vendedor__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.setClass("data_view");
-	widget.addAttribute("name",".top.");
 	widget.addAttribute("displaywidth","1005");
+	widget.addAttribute("id",".top.");
+	widget.addAttribute("name",".top.");
 	widget.addStyle("border-width","1");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","solid");
 	widget.addStyle("background-color","#cccccc");
-	widget.addAttribute("id",".top.");
 	widget.addAttribute("displaytop","25");
 	widget.addAttribute("displayheight","380");
 	widget.addAttribute("fieldheight","380");
 	widget.addAttribute("fieldwidth","1005");
+	widget.setClass("data_view");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -74,20 +74,20 @@ private void setAttrFor_div_TodosLoProy__10(Widget widget)
 
 private void setAttrFor_TodosLoProy__20(Widget widget)
 {
+	widget.addAttribute("field_weight","299");
 	widget.addAttribute("checkbox_store_format","T/N");
+	widget.addAttribute("checkbox_on_values","T");
 	widget.addAttribute("field_type","checkbox");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("checkbox_on_values","T");
-	widget.addAttribute("field_weight","299");
-	widget.setClass("checkbox");
-	widget.addAttribute("name",".top:TodosLoProy.");
+	widget.addAttribute("type","checkbox");
 	widget.addAttribute("displaywidth","21");
+	widget.addAttribute("name",".top:TodosLoProy.");
 	widget.addAttribute("displayleft","341");
 	widget.addAttribute("displaytop","153");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","21");
-	widget.addAttribute("type","checkbox");
+	widget.setClass("checkbox");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -101,20 +101,20 @@ private void setAttrFor_div_TodosLosVend__10(Widget widget)
 
 private void setAttrFor_TodosLosVend__20(Widget widget)
 {
+	widget.addAttribute("field_weight","599");
 	widget.addAttribute("checkbox_store_format","T/N");
+	widget.addAttribute("checkbox_on_values","T");
 	widget.addAttribute("field_type","checkbox");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("checkbox_on_values","T");
-	widget.addAttribute("field_weight","599");
-	widget.setClass("checkbox");
-	widget.addAttribute("name",".top:TodosLosVend.");
+	widget.addAttribute("type","checkbox");
 	widget.addAttribute("displaywidth","21");
+	widget.addAttribute("name",".top:TodosLosVend.");
 	widget.addAttribute("displayleft","341");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","21");
-	widget.addAttribute("type","checkbox");
+	widget.setClass("checkbox");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -129,18 +129,18 @@ private void setAttrFor_div_box11__10(Widget widget)
 private void setAttrFor_box11__20(Widget widget)
 {
 	widget.addAttribute("field_weight","799");
-	widget.setClass("box");
 	widget.addAttribute("displaywidth","996");
+	widget.addAttribute("id",".top:box11.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addStyle("background-color","#e30000");
-	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displaytop","325");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
+	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -155,8 +155,8 @@ private void setAttrFor_div_image1__30(Widget widget)
 private void setAttrFor_image1__40(Widget widget)
 {
 	widget.addAttribute("displayheight","46");
-	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displaytop","2");
+	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -173,18 +173,18 @@ private void setAttrFor_div_box111__10(Widget widget)
 private void setAttrFor_box111__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.setClass("box");
 	widget.addAttribute("displaywidth","996");
+	widget.addAttribute("id",".top:box111.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addStyle("background-color","#e30000");
-	widget.addAttribute("id",".top:box111.");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
+	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -200,8 +200,8 @@ private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","Reportes");
 	widget.addAttribute("displaywidth","522");
-	widget.addAttribute("displayleft","241");
 	widget.addAttribute("id",".top:box111:label1.");
+	widget.addAttribute("displayleft","241");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
 	widget.addStyle("text-align","left");
@@ -218,19 +218,19 @@ private void setAttrFor_div_textfield1__30(Widget widget)
 
 private void setAttrFor_textfield1__40(Widget widget)
 {
+	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_weight","99");
-	widget.setClass("textfield");
-	widget.addAttribute("size","32");
-	widget.addAttribute("name",".top:box111:textfield1.");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","197");
+	widget.addAttribute("name",".top:box111:textfield1.");
 	widget.addAttribute("displayleft","16");
+	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.addAttribute("type","text");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -244,19 +244,19 @@ private void setAttrFor_div_textfield11__30(Widget widget)
 
 private void setAttrFor_textfield11__40(Widget widget)
 {
+	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_weight","199");
-	widget.setClass("textfield");
-	widget.addAttribute("size","18");
-	widget.addAttribute("name",".top:box111:textfield11.");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","110");
+	widget.addAttribute("name",".top:box111:textfield11.");
 	widget.addAttribute("displayleft","800");
+	widget.addAttribute("size","18");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.addAttribute("type","text");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -270,12 +270,12 @@ private void setAttrFor_div_ejecutarbtn__10(Widget widget)
 
 private void setAttrFor_ejecutarbtn__20(Widget widget)
 {
-	widget.addAttribute("field_type","button");
 	widget.addAttribute("command","reportecmd");
-	widget.addAttribute("type","button");
+	widget.addAttribute("field_type","button");
 	widget.addAttribute("value","EJECUTAR");
-	widget.addAttribute("name",".top:ejecutarbtn.");
 	widget.addAttribute("displaytop","256");
+	widget.addAttribute("name",".top:ejecutarbtn.");
+	widget.addAttribute("type","button");
 	widget.addAttribute("displayleft","368");
 	widget.addStyle("overflow","hidden");
 }
@@ -290,16 +290,16 @@ private void setAttrFor_div_fecha1__10(Widget widget)
 
 private void setAttrFor_fecha1__20(Widget widget)
 {
-	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("field_weight","399");
-	widget.setClass("textfield");
+	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("displaywidth","140");
-	widget.addAttribute("displayleft","690");
 	widget.addAttribute("id",".top:fecha1.");
+	widget.addAttribute("displayleft","690");
 	widget.addAttribute("displaytop","153");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","140");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -320,16 +320,16 @@ private void setAttrFor_div_fecha2__10(Widget widget)
 
 private void setAttrFor_fecha2__20(Widget widget)
 {
-	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("field_weight","699");
-	widget.setClass("textfield");
+	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("displaywidth","140");
-	widget.addAttribute("displayleft","690");
 	widget.addAttribute("id",".top:fecha2.");
+	widget.addAttribute("displayleft","690");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","140");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -350,17 +350,17 @@ private void setAttrFor_div_label1__10(Widget widget)
 
 private void setAttrFor_label1__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Código Proyecto");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("displaywidth","103");
-	widget.addAttribute("displayleft","112");
 	widget.addAttribute("id",".top:label1.");
+	widget.addAttribute("displayleft","112");
 	widget.addAttribute("displaytop","127");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","103");
+	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -374,20 +374,20 @@ private void setAttrFor_div_label11__10(Widget widget)
 
 private void setAttrFor_label11__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Reporte de Prospectos");
-	widget.addStyle("font-size","14");
-	widget.addAttribute("displaywidth","177");
-	widget.addAttribute("displayleft","20");
 	widget.addStyle("font-weight","bold");
+	widget.addAttribute("displaywidth","177");
 	widget.addAttribute("id",".top:label11.");
-	widget.addStyle("color","Black");
+	widget.addAttribute("displayleft","20");
+	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("displaytop","96");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("fieldwidth","177");
-	widget.addStyle("font-family","Verdana");
+	widget.addStyle("font-size","14");
 	widget.addStyle("text-align","left");
+	widget.addStyle("color","Black");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -401,17 +401,17 @@ private void setAttrFor_div_label111__10(Widget widget)
 
 private void setAttrFor_label111__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Código Vendedor");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("displaywidth","109");
-	widget.addAttribute("displayleft","112");
 	widget.addAttribute("id",".top:label111.");
+	widget.addAttribute("displayleft","112");
 	widget.addAttribute("displaytop","183");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","109");
+	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -425,17 +425,17 @@ private void setAttrFor_div_label12__10(Widget widget)
 
 private void setAttrFor_label12__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Fecha Final");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("displaywidth","70");
-	widget.addAttribute("displayleft","690");
 	widget.addAttribute("id",".top:label12.");
+	widget.addAttribute("displayleft","690");
 	widget.addAttribute("displaytop","183");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","70");
+	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -449,17 +449,17 @@ private void setAttrFor_div_label13__10(Widget widget)
 
 private void setAttrFor_label13__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Fecha Inicial");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("displaywidth","77");
-	widget.addAttribute("displayleft","690");
 	widget.addAttribute("id",".top:label13.");
+	widget.addAttribute("displayleft","690");
 	widget.addAttribute("displaytop","127");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","77");
+	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -473,17 +473,17 @@ private void setAttrFor_div_label14__10(Widget widget)
 
 private void setAttrFor_label14__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Seleccionar todos los proyectos");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("displaywidth","199");
-	widget.addAttribute("displayleft","368");
 	widget.addAttribute("id",".top:label14.");
+	widget.addAttribute("displayleft","368");
 	widget.addAttribute("displaytop","153");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","199");
+	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -497,17 +497,17 @@ private void setAttrFor_div_label141__10(Widget widget)
 
 private void setAttrFor_label141__20(Widget widget)
 {
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Seleccionar todos los vendedores");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("displaywidth","212");
-	widget.addAttribute("displayleft","368");
 	widget.addAttribute("id",".top:label141.");
+	widget.addAttribute("displayleft","368");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","212");
+	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -521,17 +521,17 @@ private void setAttrFor_div_proyecto__10(Widget widget)
 
 private void setAttrFor_proyecto__20(Widget widget)
 {
-	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("field_weight","199");
-	widget.setClass("textfield");
-	widget.addAttribute("size","1");
-	widget.addAttribute("name",".top:proyecto.");
+	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("displaywidth","135");
+	widget.addAttribute("name",".top:proyecto.");
 	widget.addAttribute("displayleft","112");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","153");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","135");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -545,12 +545,12 @@ private void setAttrFor_div_regresarbtn__10(Widget widget)
 
 private void setAttrFor_regresarbtn__20(Widget widget)
 {
-	widget.addAttribute("field_type","button");
 	widget.addAttribute("command","Previous Form");
-	widget.addAttribute("type","button");
+	widget.addAttribute("field_type","button");
 	widget.addAttribute("value","REGRESAR");
-	widget.addAttribute("name",".top:regresarbtn.");
 	widget.addAttribute("displaytop","256");
+	widget.addAttribute("name",".top:regresarbtn.");
+	widget.addAttribute("type","button");
 	widget.addAttribute("displayleft","528");
 	widget.addStyle("overflow","hidden");
 }
@@ -565,17 +565,17 @@ private void setAttrFor_div_vendedor__10(Widget widget)
 
 private void setAttrFor_vendedor__20(Widget widget)
 {
-	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("field_weight","499");
-	widget.setClass("textfield");
-	widget.addAttribute("size","1");
-	widget.addAttribute("name",".top:vendedor.");
+	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("displaywidth","135");
+	widget.addAttribute("name",".top:vendedor.");
 	widget.addAttribute("displayleft","112");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","135");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_TodosLoProy__10(Widget div_TodosLoProy__10)

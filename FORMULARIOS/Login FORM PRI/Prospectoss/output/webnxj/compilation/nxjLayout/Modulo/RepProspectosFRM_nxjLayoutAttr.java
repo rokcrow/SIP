@@ -17,14 +17,14 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1198");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","413");
 	widget.addAttribute("fieldheight","413");
 	widget.addAttribute("fieldwidth","1198");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -38,8 +38,8 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displaytop","30");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","190");
 	widget.addStyle("overflow","hidden");
 }

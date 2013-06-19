@@ -1207,7 +1207,7 @@ public class ProspectosDVW
 	    super(Modulo.ProspectosDVW.this, "vpp_fecha", true, true, 100);
 	    setStyleClass("textfield");
 	    us$setMultiValued(true);
-	    us$setView("text");
+	    us$setView("date");
 	    us$setCandidateTargetColumnName("vpp_fecha");
 	    setValueRetrievedDuringFetch(true);
 	    setRequired(true);
@@ -1239,7 +1239,7 @@ public class ProspectosDVW
 	    super(Modulo.ProspectosDVW.this, "vpp_fecha_nacio", true, true, 100);
 	    setStyleClass("textfield");
 	    us$setMultiValued(true);
-	    us$setView("text");
+	    us$setView("date");
 	    us$setCandidateTargetColumnName("vpp_fecha_nacio");
 	    setValueRetrievedDuringFetch(true);
 	    setFindable(true);
@@ -1272,7 +1272,7 @@ public class ProspectosDVW
 	    super(Modulo.ProspectosDVW.this, "vpp_fecha_visita", true, true, 100);
 	    setStyleClass("textfield");
 	    us$setMultiValued(true);
-	    us$setView("text");
+	    us$setView("date");
 	    us$setCandidateTargetColumnName("vpp_fecha_visita");
 	    setValueRetrievedDuringFetch(true);
 	    setRequired(true);
@@ -1413,25 +1413,6 @@ public class ProspectosDVW
 		}
 	} // whenValueChanges
 
-	public void beforeField()
-	    throws Exception
-	{
-	    vpp_mediopub.setZoomEnabled(true);
-	    vpp_mediopub.setZoomFormName("Modulo.MediospFRM");
-	    vpp_mediopub.setZoomReturnValuesInto(new NXJZoomReturnValuesInto()
-	    {
-
-		public void assignValues(com.unify.nxj.mgr.datatypes.Register[] values)
-		    throws Exception
-		{
-		    if (values.length != 2)
-			throw new Exception("TODO: handle value array size mismatch");
-		    vpp_mediopub.us$assignZoomValue(values[0]);
-		    vmp_descripcion.us$assignZoomValue(values[1]);
-		} // assignValues
-	    });
-	} // beforeField
-
 	public vpp_mediopub()
 	{
 	    super(Modulo.ProspectosDVW.this, "vpp_mediopub", true, true, 2);
@@ -1449,7 +1430,6 @@ public class ProspectosDVW
 	    setZoomEnabled(true);
 	    setForegroundColor("Black");
 	    setFontSize("12");
-	    us$executesCodeBeforeInput = true;
 	    us$executesDataAcceptValueChanges = true;
 	} // <init>
     } // vpp_mediopub
@@ -2499,7 +2479,7 @@ public class ProspectosDVW
 	vpp_estado_civil.setFontSize("12");
 	vpp_fechaestado.setStyleClass("textfield");
 	vpp_fechaestado.us$setMultiValued(true);
-	vpp_fechaestado.us$setView("text");
+	vpp_fechaestado.us$setView("date");
 	vpp_fechaestado.us$setCandidateTargetColumnName("vpp_fechaestado");
 	vpp_fechaestado.setValueRetrievedDuringFetch(true);
 	vpp_fechaestado.setRequired(true);

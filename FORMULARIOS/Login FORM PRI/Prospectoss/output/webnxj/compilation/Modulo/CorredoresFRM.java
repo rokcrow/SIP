@@ -134,6 +134,28 @@ public class CorredoresFRM
     private void us$initializeFormSpecificProperties()
     {
 	us$setBackgroundColor("#999999");
+	setZoomReturnExpressions(new NXJZoomReturnExpressions()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.Register[] evaluate()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		return new com.unify.nxj.mgr.datatypes.Register[]
+		    {
+		    us$registerPool.allocateRegister().load(view1.vco_codigo)
+		    };
+	    } // evaluate
+
+	    public com.unify.nxj.mgr.datatypes.NullableVariable[] getVariables()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NullableVariable[]
+		    {
+		    view1.vco_codigo
+		    };
+	    } // getVariables
+	});
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "CorredoresFRM";
 } // CorredoresFRM

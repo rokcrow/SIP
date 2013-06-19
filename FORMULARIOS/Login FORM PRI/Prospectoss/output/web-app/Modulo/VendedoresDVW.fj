@@ -23,9 +23,7 @@ DATA VIEW VendedoresDVW
     {
     
     }
-    BOX Box1
-    {
-    }
+
     FIELD vvh_vendedora
     {
           WHEN VALUE CHANGES
@@ -40,8 +38,11 @@ DATA VIEW VendedoresDVW
     FIELD NombVend
     {
     }
+    BOX Box
+    {
     
-    
+    }
+
 }
 /*----------------------------------------------------------------------*
 * BEGIN MODIFICATION HISTORY

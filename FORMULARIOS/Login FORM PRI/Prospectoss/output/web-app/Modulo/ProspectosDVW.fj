@@ -549,13 +549,13 @@ DATA VIEW ProspectosDVW
             into vmp_descripcion;
         }
         
-        BEFORE FIELD
+      /*  BEFORE FIELD
         {
             vpp_mediopub.zoomEnabled = true;
             vpp_mediopub.zoomFormName = "Modulo.MediospFRM";
             vpp_mediopub.zoomReturnValuesInto = vpp_mediopub, vmp_descripcion;
         }
-    
+    */
     }
 
     FIELD vpp_referido_nombre
@@ -653,7 +653,7 @@ DATA VIEW ProspectosDVW
     {
            ON DATA ACCEPT
         {
-            /*EXEC SQL
+            /*EXEC SQL   -------ERRONEO
             SELECT vve_nombre
             FROM   vve_vendedora
             WHERE  vve_codigo = :vpp_vendedor
@@ -675,7 +675,7 @@ DATA VIEW ProspectosDVW
 
         WHEN VALUE CHANGES
         {
-           /* EXEC SQL
+           /* EXEC SQL -----------ERRONEO
             SELECT vve_nombre
             FROM   vve_vendedora
             WHERE  vve_codigo = :vpp_vendedor

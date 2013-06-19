@@ -66,7 +66,7 @@
                         id=".top:RepeatingArea1."
                         key=".top:RepeatingArea1."
                         kind="repeating_area"
-                        list_columns=".top:vvh_vendedora.0:118;.top:NombVend.134:302"
+                        list_columns=".top:vvh_vendedora.0:118;.top:NombVend.118:318"
                         occurrences="1000"
                         repeat_style="List"
                         row_class="ROW"
@@ -77,20 +77,20 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 10px; left: 10px; width:456px; height:21px">
+                            style="position: absolute; top: 0px; left: 10px; width:456px; height:14px">
 
                             <fieldset
                                 binary_variables=""
                                 class="header"
                                 commands=""
-                                displayheight="21"
+                                displayheight="14"
                                 displayleft="10"
-                                displaytop="10"
+                                displaytop="0"
                                 displaywidth="456"
-                                id=".top:Box1."
-                                key=".top:Box1."
-                                kind="repeating_area_header"
-                                uid="parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256310350"
+                                id=".top:Box."
+                                key=".top:Box."
+                                original_name="Box"
+                                uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644153"
                                 view="fieldset"
                                 style="border-style:none">
 
@@ -98,25 +98,23 @@
                                     binary_variables=""
                                     view="div"
                                     align="center" 
-                                    style="position: absolute; top: 4px; left: 16px; width:89px; height:16px">
+                                    style="position: absolute; top: 0px; left: 10px; width:118px; height:14px">
                                     
                                     
                                     <label
                                         binary_variables=""
-                                        class="label"
-                                        displayheight="16"
-                                        displayleft="16"
-                                        displaytop="4"
-                                        displaywidth="89"
-                                        id=".top:Box1:Label1."
-                                        key=".top:Box1:Label1."
+                                        displayheight="14"
+                                        displayleft="10"
+                                        displaytop="0"
+                                        displaywidth="118"
+                                        id=".top:Box:Label."
+                                        key=".top:Box:Label."
                                         labelalign="center"
-                                        labeltitle="Codigo"
-                                        uid="parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256310357"
-                                        view="label"
-                                        style="font-weight: normal;
-                                            font-size: 12px">
-                                        <nobr>Codigo</nobr>
+                                        labeltitle="Vendedor (a)"
+                                        original_name="Label"
+                                        uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644181"
+                                        view="label">
+                                        <nobr>Vendedor (a)</nobr>
                                     </label>
 
                                 </div>
@@ -124,27 +122,24 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    align="left" 
-                                    style="position: absolute; top: 4px; left: 138px; width:83px; height:16px">
+                                    align="center" 
+                                    style="position: absolute; top: 0px; left: 128px; width:339px; height:14px">
                                     
                                     
                                     <label
                                         binary_variables=""
-                                        class="label"
-                                        displayheight="16"
-                                        displayleft="138"
-                                        displaytop="4"
-                                        displaywidth="83"
-                                        id=".top:Box1:label2."
-                                        key=".top:Box1:label2."
-                                        labelalign="left"
-                                        labeltitle="Vendedor (a)"
-                                        original_name="label2"
-                                        uid="itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369588126400"
-                                        view="label"
-                                        style="font-weight: normal;
-                                            font-size: 12px">
-                                        <nobr>Vendedor (a)</nobr>
+                                        displayheight="14"
+                                        displayleft="128"
+                                        displaytop="0"
+                                        displaywidth="339"
+                                        id=".top:Box:Label."
+                                        key=".top:Box:Label."
+                                        labelalign="center"
+                                        labeltitle="Codigo"
+                                        original_name="Label"
+                                        uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644181"
+                                        view="label">
+                                        <nobr>Codigo</nobr>
                                     </label>
 
                                 </div>
@@ -156,81 +151,27 @@
                         <div
                             binary_variables=""
                             view="div"
-                            align="center" 
-                            style="position: absolute; top: 258px; left: 14px; width:89px; height:14px">
-                            
-                            
-                            <label
-                                binary_variables=""
-                                class="label"
-                                displayheight="14"
-                                displayleft="14"
-                                displaytop="258"
-                                displaywidth="89"
-                                id=".top:Label1."
-                                key=".top:Label1."
-                                labelalign="center"
-                                labeltitle="Vendedor (a)"
-                                uid="itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369588100962"
-                                view="label"
-                                style="font-weight: bold;
-                                    font-size: 10px">
-                                <nobr>Vendedor (a)</nobr>
-                            </label>
-
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            align="center" 
-                            style="position: absolute; top: 257px; left: 144px; width:89px; height:14px">
-                            
-                            
-                            <label
-                                binary_variables=""
-                                class="label"
-                                displayheight="14"
-                                displayleft="144"
-                                displaytop="257"
-                                displaywidth="89"
-                                id=".top:Label11."
-                                key=".top:Label11."
-                                labelalign="center"
-                                labeltitle="Vendedor (a)"
-                                target_field=""
-                                uid="itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369588108635"
-                                view="label"
-                                style="font-weight: bold;
-                                    font-size: 10px">
-                                <nobr>Vendedor (a)</nobr>
-                            </label>
-
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 269px; left: 144px; width:161px; height:22px">
+                            style="position: absolute; top: 270px; left: 128px; width:339px; height:22px">
 
                             <input
                                 binary_variables=""
                                 class="textfield"
                                 displayheight="22"
-                                displayleft="144"
-                                displaytop="269"
-                                displaywidth="161"
+                                displayleft="128"
+                                displaytop="270"
+                                displaywidth="339"
                                 field_type="text"
                                 field_weight="199"
                                 findable="false"
+                                headertitle="Codigo"
                                 key=".top:NombVend."
                                 multi_valued="true"
                                 name=".top:NombVend."
-                                original_name="textfield1"
+                                original_name="NombVend"
                                 size="26"
                                 target_field=""
                                 type="text"
-                                uid="parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256440438"
+                                uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644182"
                                 view="text">
                         </div>
 
@@ -253,14 +194,16 @@
                                 field_type="text"
                                 field_weight="99"
                                 findable="true"
+                                headertitle="Vendedor (a)"
                                 key=".top:vvh_vendedora."
                                 multi_valued="true"
                                 name=".top:vvh_vendedora."
+                                original_name="vvh_vendedora"
                                 retrieve_value="true"
                                 size="19"
                                 target_field="vvh_vendedora"
                                 type="text"
-                                uid="parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256310364"
+                                uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644169"
                                 updateable="true"
                                 view="text">
                         </div>

@@ -187,30 +187,23 @@ public class VendedoresDVW
     } // vvh_vendedora
 
     public /*multi_valued*/ vvh_vendedora vvh_vendedora = new vvh_vendedora();
-    public class Box1
+    public class Box
 	extends com.unify.nxj.mgr.NXJBox
     {
-	public NXJLabelControl Label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label1", false);
-	public NXJLabelControl label2 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label2", false);
+	public NXJLabelControl Label = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label", false);
 
-	public Box1(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	public Box(com.unify.nxj.mgr.NXJContainer enclosingContainer)
 	{
-	    super("Box1", enclosingContainer);
-	    Box1propertySetter_0();
+	    super("Box", enclosingContainer);
+	    BoxpropertySetter_0();
 	} // <init>
 
-	private void Box1propertySetter_0()
+	private void BoxpropertySetter_0()
 	{
-	    Label1.setStyleClass("label");
-	    Label1.setFontSize("12");
-	    Label1.us$setFontWeight("normal");
-	    label2.setStyleClass("label");
-	    label2.setFontSize("12");
-	    label2.us$setFontWeight("normal");
-	} // Box1propertySetter_0
-    } // Box1
+	} // BoxpropertySetter_0
+    } // Box
 
-    public final Box1 Box1 = new Box1(this);
+    public final Box Box = new Box(this);
     public class box11
 	extends com.unify.nxj.mgr.NXJBox
     {

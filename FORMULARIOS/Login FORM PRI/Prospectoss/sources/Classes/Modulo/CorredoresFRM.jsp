@@ -12,13 +12,14 @@
         displayheight="496"
         displaywidth="1054"
         footer="none"
-        form_height="496"
-        form_width="1054"
+        form_height="500"
+        form_width="1060"
         foundation_type="Classes/Foundation/Form"
         name="NXJForm"
         resize_browser="true"
         uid_prefix="modulo_form1_1369575410527"
         view="form"
+        zoom_return_expressions="view1.vco_codigo"
         style="background-color: #999999">
 
         <div

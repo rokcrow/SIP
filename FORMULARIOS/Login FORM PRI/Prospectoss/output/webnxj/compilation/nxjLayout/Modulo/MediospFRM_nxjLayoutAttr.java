@@ -17,16 +17,16 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("footer","none");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
+	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("displaywidth","1135");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","712");
 	widget.addAttribute("fieldheight","722");
 	widget.addAttribute("fieldwidth","1140");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -41,8 +41,8 @@ private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displayheight","566");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displaytop","33");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
 }
@@ -55,6 +55,42 @@ private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.MediospDVW)RepeatingArea1.");
 	widget.addAttribute("id","view1:RepeatingArea1.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_codigo__50(Widget widget)
+{
+}
+
+private void setAttrFor_vmp_codigo__60(Widget widget)
+{
+	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.");
+	widget.addAttribute("name","view1:vmp_codigo.");
+	widget.addAttribute("type","text");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_categoria__50(Widget widget)
+{
+}
+
+private void setAttrFor_vmp_categoria__60(Widget widget)
+{
+	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.");
+	widget.addAttribute("name","view1:vmp_categoria.");
+	widget.addAttribute("type","text");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_descripcion__50(Widget widget)
+{
+}
+
+private void setAttrFor_vmp_descripcion__60(Widget widget)
+{
+	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.");
+	widget.addAttribute("name","view1:vmp_descripcion.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -102,51 +138,15 @@ private void setAttrFor_Label1__81(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vmp_categoria__50(Widget widget)
-{
-}
-
-private void setAttrFor_vmp_categoria__60(Widget widget)
-{
-	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.");
-	widget.addAttribute("name","view1:vmp_categoria.");
-	widget.addAttribute("type","text");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vmp_codigo__50(Widget widget)
-{
-}
-
-private void setAttrFor_vmp_codigo__60(Widget widget)
-{
-	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.");
-	widget.addAttribute("name","view1:vmp_codigo.");
-	widget.addAttribute("type","text");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vmp_descripcion__50(Widget widget)
-{
-}
-
-private void setAttrFor_vmp_descripcion__60(Widget widget)
-{
-	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.");
-	widget.addAttribute("name","view1:vmp_descripcion.");
-	widget.addAttribute("type","text");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_vmp_categoria_0_50(Widget widget)
 {
 }
 
 private void setAttrFor_vmp_categoria_0_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.0");
 	widget.addAttribute("name","view1:vmp_categoria.0");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -156,9 +156,9 @@ private void setAttrFor_div_vmp_categoria_1_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_1_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.1");
 	widget.addAttribute("name","view1:vmp_categoria.1");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -168,9 +168,9 @@ private void setAttrFor_div_vmp_categoria_2_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_2_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.2");
 	widget.addAttribute("name","view1:vmp_categoria.2");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -180,9 +180,9 @@ private void setAttrFor_div_vmp_categoria_3_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_3_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.3");
 	widget.addAttribute("name","view1:vmp_categoria.3");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -192,9 +192,9 @@ private void setAttrFor_div_vmp_categoria_4_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_4_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.4");
 	widget.addAttribute("name","view1:vmp_categoria.4");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -204,9 +204,9 @@ private void setAttrFor_div_vmp_categoria_5_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_5_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.5");
 	widget.addAttribute("name","view1:vmp_categoria.5");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -216,9 +216,9 @@ private void setAttrFor_div_vmp_categoria_6_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_6_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.6");
 	widget.addAttribute("name","view1:vmp_categoria.6");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -228,9 +228,9 @@ private void setAttrFor_div_vmp_categoria_7_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_7_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.7");
 	widget.addAttribute("name","view1:vmp_categoria.7");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -240,9 +240,9 @@ private void setAttrFor_div_vmp_categoria_8_50(Widget widget)
 
 private void setAttrFor_vmp_categoria_8_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.8");
 	widget.addAttribute("name","view1:vmp_categoria.8");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -252,9 +252,9 @@ private void setAttrFor_div_vmp_codigo_0_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_0_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.0");
 	widget.addAttribute("name","view1:vmp_codigo.0");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -264,9 +264,9 @@ private void setAttrFor_div_vmp_codigo_1_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_1_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.1");
 	widget.addAttribute("name","view1:vmp_codigo.1");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -276,9 +276,9 @@ private void setAttrFor_div_vmp_codigo_2_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_2_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.2");
 	widget.addAttribute("name","view1:vmp_codigo.2");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -288,9 +288,9 @@ private void setAttrFor_div_vmp_codigo_3_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_3_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.3");
 	widget.addAttribute("name","view1:vmp_codigo.3");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -300,9 +300,9 @@ private void setAttrFor_div_vmp_codigo_4_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_4_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.4");
 	widget.addAttribute("name","view1:vmp_codigo.4");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -312,9 +312,9 @@ private void setAttrFor_div_vmp_codigo_5_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_5_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.5");
 	widget.addAttribute("name","view1:vmp_codigo.5");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -324,9 +324,9 @@ private void setAttrFor_div_vmp_codigo_6_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_6_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.6");
 	widget.addAttribute("name","view1:vmp_codigo.6");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -336,9 +336,9 @@ private void setAttrFor_div_vmp_codigo_7_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_7_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.7");
 	widget.addAttribute("name","view1:vmp_codigo.7");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -348,9 +348,9 @@ private void setAttrFor_div_vmp_codigo_8_50(Widget widget)
 
 private void setAttrFor_vmp_codigo_8_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.8");
 	widget.addAttribute("name","view1:vmp_codigo.8");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -360,9 +360,9 @@ private void setAttrFor_div_vmp_descripcion_0_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_0_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.0");
 	widget.addAttribute("name","view1:vmp_descripcion.0");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -372,9 +372,9 @@ private void setAttrFor_div_vmp_descripcion_1_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_1_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.1");
 	widget.addAttribute("name","view1:vmp_descripcion.1");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -384,9 +384,9 @@ private void setAttrFor_div_vmp_descripcion_2_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_2_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.2");
 	widget.addAttribute("name","view1:vmp_descripcion.2");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -396,9 +396,9 @@ private void setAttrFor_div_vmp_descripcion_3_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_3_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.3");
 	widget.addAttribute("name","view1:vmp_descripcion.3");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -408,9 +408,9 @@ private void setAttrFor_div_vmp_descripcion_4_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_4_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.4");
 	widget.addAttribute("name","view1:vmp_descripcion.4");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -420,9 +420,9 @@ private void setAttrFor_div_vmp_descripcion_5_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_5_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.5");
 	widget.addAttribute("name","view1:vmp_descripcion.5");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -432,9 +432,9 @@ private void setAttrFor_div_vmp_descripcion_6_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_6_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.6");
 	widget.addAttribute("name","view1:vmp_descripcion.6");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -444,9 +444,9 @@ private void setAttrFor_div_vmp_descripcion_7_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_7_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.7");
 	widget.addAttribute("name","view1:vmp_descripcion.7");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -456,9 +456,9 @@ private void setAttrFor_div_vmp_descripcion_8_50(Widget widget)
 
 private void setAttrFor_vmp_descripcion_8_60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.8");
 	widget.addAttribute("name","view1:vmp_descripcion.8");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -567,6 +567,36 @@ private void dodiv_view1__10(Widget div_view1__10)
             if (RepeatingArea1__40 != null)
                 {
                 setAttrFor_RepeatingArea1__40(RepeatingArea1__40);
+                Widget div_vmp_codigo__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_codigo_");
+                if (div_vmp_codigo__50 != null)
+                    {
+                    setAttrFor_div_vmp_codigo__50(div_vmp_codigo__50);
+                    Widget vmp_codigo__60 = ((ContainerWidget)div_vmp_codigo__50).getComponent("vmp_codigo_");
+                    if (vmp_codigo__60 != null)
+                        {
+                        setAttrFor_vmp_codigo__60(vmp_codigo__60);
+                        }
+                    }
+                Widget div_vmp_categoria__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_categoria_");
+                if (div_vmp_categoria__50 != null)
+                    {
+                    setAttrFor_div_vmp_categoria__50(div_vmp_categoria__50);
+                    Widget vmp_categoria__60 = ((ContainerWidget)div_vmp_categoria__50).getComponent("vmp_categoria_");
+                    if (vmp_categoria__60 != null)
+                        {
+                        setAttrFor_vmp_categoria__60(vmp_categoria__60);
+                        }
+                    }
+                Widget div_vmp_descripcion__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_descripcion_");
+                if (div_vmp_descripcion__50 != null)
+                    {
+                    setAttrFor_div_vmp_descripcion__50(div_vmp_descripcion__50);
+                    Widget vmp_descripcion__60 = ((ContainerWidget)div_vmp_descripcion__50).getComponent("vmp_descripcion_");
+                    if (vmp_descripcion__60 != null)
+                        {
+                        setAttrFor_vmp_descripcion__60(vmp_descripcion__60);
+                        }
+                    }
                 Widget div_Box__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_Box_");
                 if (div_Box__50 != null)
                     {
@@ -605,36 +635,6 @@ private void dodiv_view1__10(Widget div_view1__10)
                                 setAttrFor_Label1__81(Label1__81);
                                 }
                             }
-                        }
-                    }
-                Widget div_vmp_categoria__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_categoria_");
-                if (div_vmp_categoria__50 != null)
-                    {
-                    setAttrFor_div_vmp_categoria__50(div_vmp_categoria__50);
-                    Widget vmp_categoria__60 = ((ContainerWidget)div_vmp_categoria__50).getComponent("vmp_categoria_");
-                    if (vmp_categoria__60 != null)
-                        {
-                        setAttrFor_vmp_categoria__60(vmp_categoria__60);
-                        }
-                    }
-                Widget div_vmp_codigo__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_codigo_");
-                if (div_vmp_codigo__50 != null)
-                    {
-                    setAttrFor_div_vmp_codigo__50(div_vmp_codigo__50);
-                    Widget vmp_codigo__60 = ((ContainerWidget)div_vmp_codigo__50).getComponent("vmp_codigo_");
-                    if (vmp_codigo__60 != null)
-                        {
-                        setAttrFor_vmp_codigo__60(vmp_codigo__60);
-                        }
-                    }
-                Widget div_vmp_descripcion__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_descripcion_");
-                if (div_vmp_descripcion__50 != null)
-                    {
-                    setAttrFor_div_vmp_descripcion__50(div_vmp_descripcion__50);
-                    Widget vmp_descripcion__60 = ((ContainerWidget)div_vmp_descripcion__50).getComponent("vmp_descripcion_");
-                    if (vmp_descripcion__60 != null)
-                        {
-                        setAttrFor_vmp_descripcion__60(vmp_descripcion__60);
                         }
                     }
                 Widget div_vmp_categoria_0_50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_categoria_0");

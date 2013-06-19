@@ -17,16 +17,16 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("footer","none");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
+	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("displaywidth","1074");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addStyle("background-color","#999999");
-	widget.addAttribute("displayheight","495");
-	widget.addAttribute("fieldheight","495");
+	widget.addAttribute("displayheight","501");
+	widget.addAttribute("fieldheight","501");
 	widget.addAttribute("fieldwidth","1074");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -40,10 +40,10 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("displayheight","466");
 	widget.addAttribute("id","view1.");
-	widget.addAttribute("displaytop","30");
 	widget.addAttribute("displayleft","50");
+	widget.addAttribute("displaytop","30");
+	widget.addAttribute("displayheight","466");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -53,6 +53,8 @@ private void setAttrFor_div_RepeatingArea1__30(Widget widget)
 
 private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
+	widget.addAttribute("list_columns","view1:vvh_vendedora.0:118;view1:NombVend.118:318");
+	widget.addAttribute("occurrences","14");
 	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)RepeatingArea1.");
 	widget.addAttribute("id","view1:RepeatingArea1.");
 	widget.addStyle("overflow","hidden");
@@ -60,60 +62,42 @@ private void setAttrFor_RepeatingArea1__40(Widget widget)
 
 private void setAttrFor_div_UnifyRepeatingArea_50(Widget widget)
 {
+	widget.addStyle("left","10px");
+	widget.addStyle("top","24px");
+	widget.addStyle("width","456px");
+	widget.addStyle("height","236px");
 }
 
-private void setAttrFor_div_Box1__50(Widget widget)
+private void setAttrFor_div_Box__50(Widget widget)
 {
 }
 
-private void setAttrFor_Box1__60(Widget widget)
+private void setAttrFor_Box__60(Widget widget)
 {
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box1.");
-	widget.addAttribute("id","view1:Box1.");
+	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box.");
+	widget.addAttribute("id","view1:Box.");
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_Label1__70(Widget widget)
+private void setAttrFor_div_Label__70(Widget widget)
 {
 }
 
-private void setAttrFor_Label1__80(Widget widget)
+private void setAttrFor_Label__80(Widget widget)
 {
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box1:(Modulo.VendedoresDVW)Label1.");
-	widget.addAttribute("id","view1:Box1:Label1.");
+	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box:(Modulo.VendedoresDVW)Label.");
+	widget.addAttribute("id","view1:Box:Label.");
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_label2__70(Widget widget)
+private void setAttrFor_div_Label__71(Widget widget)
 {
 }
 
-private void setAttrFor_label2__80(Widget widget)
+private void setAttrFor_Label__81(Widget widget)
 {
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box1:(Modulo.VendedoresDVW)label2.");
-	widget.addAttribute("id","view1:Box1:label2.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_Label1__50(Widget widget)
-{
-}
-
-private void setAttrFor_Label1__60(Widget widget)
-{
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Label1.");
-	widget.addAttribute("id","view1:Label1.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_Label11__50(Widget widget)
-{
-}
-
-private void setAttrFor_Label11__60(Widget widget)
-{
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Label11.");
-	widget.addAttribute("id","view1:Label11.");
+	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box:(Modulo.VendedoresDVW)Label.");
+	widget.addAttribute("id","view1:Box:Label.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -256,54 +240,34 @@ private void dodiv_view1__10(Widget div_view1__10)
                         UnifyRepeatingArea_60.addAttribute("id","view1:UnifyRepeatingArea");
                         }
                     }
-                Widget div_Box1__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_Box1_");
-                if (div_Box1__50 != null)
+                Widget div_Box__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_Box_");
+                if (div_Box__50 != null)
                     {
-                    setAttrFor_div_Box1__50(div_Box1__50);
-                    Widget Box1__60 = ((ContainerWidget)div_Box1__50).getComponent("Box1_");
-                    if (Box1__60 != null)
+                    setAttrFor_div_Box__50(div_Box__50);
+                    Widget Box__60 = ((ContainerWidget)div_Box__50).getComponent("Box_");
+                    if (Box__60 != null)
                         {
-                        setAttrFor_Box1__60(Box1__60);
-                        Widget div_Label1__70 = ((ContainerWidget)Box1__60).getComponent("div_Label1_");
-                        if (div_Label1__70 != null)
+                        setAttrFor_Box__60(Box__60);
+                        Widget div_Label__70 = ((ContainerWidget)Box__60).getComponent("div_Label_");
+                        if (div_Label__70 != null)
                             {
-                            setAttrFor_div_Label1__70(div_Label1__70);
-                            Widget Label1__80 = ((ContainerWidget)div_Label1__70).getComponent("Label1_");
-                            if (Label1__80 != null)
+                            setAttrFor_div_Label__70(div_Label__70);
+                            Widget Label__80 = ((ContainerWidget)div_Label__70).getComponent("Label_");
+                            if (Label__80 != null)
                                 {
-                                setAttrFor_Label1__80(Label1__80);
+                                setAttrFor_Label__80(Label__80);
                                 }
                             }
-                        Widget div_label2__70 = ((ContainerWidget)Box1__60).getComponent("div_label2_");
-                        if (div_label2__70 != null)
+                        Widget div_Label__71 = ((ContainerWidget)Box__60).getComponent("div_Label_");
+                        if (div_Label__71 != null)
                             {
-                            setAttrFor_div_label2__70(div_label2__70);
-                            Widget label2__80 = ((ContainerWidget)div_label2__70).getComponent("label2_");
-                            if (label2__80 != null)
+                            setAttrFor_div_Label__71(div_Label__71);
+                            Widget Label__81 = ((ContainerWidget)div_Label__71).getComponent("Label_");
+                            if (Label__81 != null)
                                 {
-                                setAttrFor_label2__80(label2__80);
+                                setAttrFor_Label__81(Label__81);
                                 }
                             }
-                        }
-                    }
-                Widget div_Label1__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_Label1_");
-                if (div_Label1__50 != null)
-                    {
-                    setAttrFor_div_Label1__50(div_Label1__50);
-                    Widget Label1__60 = ((ContainerWidget)div_Label1__50).getComponent("Label1_");
-                    if (Label1__60 != null)
-                        {
-                        setAttrFor_Label1__60(Label1__60);
-                        }
-                    }
-                Widget div_Label11__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_Label11_");
-                if (div_Label11__50 != null)
-                    {
-                    setAttrFor_div_Label11__50(div_Label11__50);
-                    Widget Label11__60 = ((ContainerWidget)div_Label11__50).getComponent("Label11_");
-                    if (Label11__60 != null)
-                        {
-                        setAttrFor_Label11__60(Label11__60);
                         }
                     }
                 Widget div_NombVend__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_NombVend_");

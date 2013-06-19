@@ -4,12 +4,7 @@ package Modulo;
 
 DATA VIEW MediospDVW
 {
-    INIT DATA VIEW
-    {
-             /* mediosp.zoomReturnExpressions = vmp_codigo, vmp_descripcion;
-              MediospDVW.*/
-    }
-
+   
     BOX box111
     {
     
