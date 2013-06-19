@@ -6,6 +6,7 @@
     commands = ""
     connection = "Connection1"
     field_order = ""
+    footer = "none"
     form_height = "1025"
     form_width = "1209"
     foundation_type = "Classes/Foundation/Form"
@@ -727,7 +728,7 @@
         target_field = "vpp_fecha"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
         updateable = "true"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "Date"
@@ -750,7 +751,7 @@
         target_field = "vpp_fechaestado"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
         updateable = "true"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "String"

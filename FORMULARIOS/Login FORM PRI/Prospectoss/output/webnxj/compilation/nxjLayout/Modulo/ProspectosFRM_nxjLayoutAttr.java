@@ -17,17 +17,17 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("menu","default");
-	widget.addAttribute("footer","none");
 	widget.addAttribute("header","default");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
+	widget.addAttribute("footer","none");
+	widget.addAttribute("menu","default");
 	widget.addAttribute("displaywidth","1227");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","default.css");
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","1493");
 	widget.addAttribute("fieldheight","1493");
 	widget.addAttribute("fieldwidth","1227");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -42,8 +42,8 @@ private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displayheight","1455");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displaytop","30");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","190");
 	widget.addStyle("overflow","hidden");
 }
