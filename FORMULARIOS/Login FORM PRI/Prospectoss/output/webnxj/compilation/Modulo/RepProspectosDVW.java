@@ -442,7 +442,7 @@ public class RepProspectosDVW
 	    NullableString strReporte = NullableFactory.createNullableString("strReporte");
 	    vFecha1.assign(us$registerPool.allocateRegister().load(vFecha1.substring(3, 5).toString() + "/" + vFecha1.substring(0, 2).toString() + "/" + vFecha1.substring(6, 10).toString()));
 	    vFecha2.assign(us$registerPool.allocateRegister().load(vFecha2.substring(3, 5).toString() + "/" + vFecha2.substring(0, 2).toString() + "/" + vFecha2.substring(6, 10).toString()));
-	    strReporte.assign(us$registerPool.allocateRegister().load("http://localhost:8080/birt/preview?__report=reporttest.rptdesign&format=pdf&PROYECTO=" + proyecto.toString() + "&VENDEDOR=" + vendedor.toString() + "&FECHAINI=" + vFecha1.toString() + "&FECHAFIN=" + vFecha2.toString()));
+	    strReporte.assign(us$registerPool.allocateRegister().load("http://localhost:8080/birt/frameset?__report=informe_visitas.rptdesign&PROYECTO=" + proyecto.toString() + "&USUARIO=" + ((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario.toString() + "&EMPRESA=" + ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.toString() + "&FECHAI=" + vFecha1.toString() + "&FECHAF=" + vFecha2.toString()));
 	    getSession().openURL(us$registerPool.allocateRegister().load(strReporte).getStringValue());
 	} // run
     } // reportecmd
@@ -456,10 +456,10 @@ public class RepProspectosDVW
 	setStartInAddMode(true);
 	us$setBackgroundColor("#cccccc");
 	fecha1.setStyleClass("textfield");
-	fecha1.us$setView("date");
+	fecha1.us$setView("text");
 	fecha1.setFindable(false);
 	fecha2.setStyleClass("textfield");
-	fecha2.us$setView("date");
+	fecha2.us$setView("text");
 	fecha2.setFindable(false);
 	label1.setStyleClass("label");
 	label1.setFontSize("12");

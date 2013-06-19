@@ -43,27 +43,6 @@
         uid = "itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644181"
         view = "label">
     </control>
-    <control 
-        binary_variables = ""
-        display_name = "Label1"
-        font_size = "10"
-        font_weight = "bold"
-        key = ".top:Label1."
-        style_class = "label"
-        uid = "itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369588100962"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "Label11"
-        font_size = "10"
-        font_weight = "bold"
-        key = ".top:Label11."
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369588108635"
-        view = "label">
-    </control>
     <field 
         binary_variables = ""
         display_name = "NombVend"
@@ -86,7 +65,7 @@
         key = ".top:RepeatingArea1."
         kind = "repeating_area"
         list_columns = ".top:vvh_vendedora.0:118;.top:NombVend.118:318"
-        occurrences = "1000"
+        occurrences = "14"
         repeat_style = "List"
         row_class = "ROW"
         selected_row_class = "selected_row"
@@ -104,7 +83,6 @@
         kind = "grid"
         original_name = "UnifyRepeatingArea"
         rep_row = "top:UnifyRepeatingArea"
-        uid = "itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653646022"
         view = "grid">
     </div>
     <control 

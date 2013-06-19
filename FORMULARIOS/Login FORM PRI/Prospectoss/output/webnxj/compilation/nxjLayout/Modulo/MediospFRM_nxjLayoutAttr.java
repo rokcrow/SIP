@@ -58,42 +58,6 @@ private void setAttrFor_RepeatingArea1__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vmp_codigo__50(Widget widget)
-{
-}
-
-private void setAttrFor_vmp_codigo__60(Widget widget)
-{
-	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.");
-	widget.addAttribute("name","view1:vmp_codigo.");
-	widget.addAttribute("type","text");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vmp_categoria__50(Widget widget)
-{
-}
-
-private void setAttrFor_vmp_categoria__60(Widget widget)
-{
-	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.");
-	widget.addAttribute("name","view1:vmp_categoria.");
-	widget.addAttribute("type","text");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vmp_descripcion__50(Widget widget)
-{
-}
-
-private void setAttrFor_vmp_descripcion__60(Widget widget)
-{
-	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.");
-	widget.addAttribute("name","view1:vmp_descripcion.");
-	widget.addAttribute("type","text");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_Box__50(Widget widget)
 {
 }
@@ -135,6 +99,42 @@ private void setAttrFor_Label1__81(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.MediospDVW)Box:(Modulo.MediospDVW)Label1.");
 	widget.addAttribute("id","view1:Box:Label1.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_categoria__50(Widget widget)
+{
+}
+
+private void setAttrFor_vmp_categoria__60(Widget widget)
+{
+	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.");
+	widget.addAttribute("name","view1:vmp_categoria.");
+	widget.addAttribute("type","text");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_codigo__50(Widget widget)
+{
+}
+
+private void setAttrFor_vmp_codigo__60(Widget widget)
+{
+	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.");
+	widget.addAttribute("name","view1:vmp_codigo.");
+	widget.addAttribute("type","text");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_descripcion__50(Widget widget)
+{
+}
+
+private void setAttrFor_vmp_descripcion__60(Widget widget)
+{
+	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.");
+	widget.addAttribute("name","view1:vmp_descripcion.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -567,36 +567,6 @@ private void dodiv_view1__10(Widget div_view1__10)
             if (RepeatingArea1__40 != null)
                 {
                 setAttrFor_RepeatingArea1__40(RepeatingArea1__40);
-                Widget div_vmp_codigo__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_codigo_");
-                if (div_vmp_codigo__50 != null)
-                    {
-                    setAttrFor_div_vmp_codigo__50(div_vmp_codigo__50);
-                    Widget vmp_codigo__60 = ((ContainerWidget)div_vmp_codigo__50).getComponent("vmp_codigo_");
-                    if (vmp_codigo__60 != null)
-                        {
-                        setAttrFor_vmp_codigo__60(vmp_codigo__60);
-                        }
-                    }
-                Widget div_vmp_categoria__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_categoria_");
-                if (div_vmp_categoria__50 != null)
-                    {
-                    setAttrFor_div_vmp_categoria__50(div_vmp_categoria__50);
-                    Widget vmp_categoria__60 = ((ContainerWidget)div_vmp_categoria__50).getComponent("vmp_categoria_");
-                    if (vmp_categoria__60 != null)
-                        {
-                        setAttrFor_vmp_categoria__60(vmp_categoria__60);
-                        }
-                    }
-                Widget div_vmp_descripcion__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_descripcion_");
-                if (div_vmp_descripcion__50 != null)
-                    {
-                    setAttrFor_div_vmp_descripcion__50(div_vmp_descripcion__50);
-                    Widget vmp_descripcion__60 = ((ContainerWidget)div_vmp_descripcion__50).getComponent("vmp_descripcion_");
-                    if (vmp_descripcion__60 != null)
-                        {
-                        setAttrFor_vmp_descripcion__60(vmp_descripcion__60);
-                        }
-                    }
                 Widget div_Box__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_Box_");
                 if (div_Box__50 != null)
                     {
@@ -635,6 +605,36 @@ private void dodiv_view1__10(Widget div_view1__10)
                                 setAttrFor_Label1__81(Label1__81);
                                 }
                             }
+                        }
+                    }
+                Widget div_vmp_categoria__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_categoria_");
+                if (div_vmp_categoria__50 != null)
+                    {
+                    setAttrFor_div_vmp_categoria__50(div_vmp_categoria__50);
+                    Widget vmp_categoria__60 = ((ContainerWidget)div_vmp_categoria__50).getComponent("vmp_categoria_");
+                    if (vmp_categoria__60 != null)
+                        {
+                        setAttrFor_vmp_categoria__60(vmp_categoria__60);
+                        }
+                    }
+                Widget div_vmp_codigo__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_codigo_");
+                if (div_vmp_codigo__50 != null)
+                    {
+                    setAttrFor_div_vmp_codigo__50(div_vmp_codigo__50);
+                    Widget vmp_codigo__60 = ((ContainerWidget)div_vmp_codigo__50).getComponent("vmp_codigo_");
+                    if (vmp_codigo__60 != null)
+                        {
+                        setAttrFor_vmp_codigo__60(vmp_codigo__60);
+                        }
+                    }
+                Widget div_vmp_descripcion__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_descripcion_");
+                if (div_vmp_descripcion__50 != null)
+                    {
+                    setAttrFor_div_vmp_descripcion__50(div_vmp_descripcion__50);
+                    Widget vmp_descripcion__60 = ((ContainerWidget)div_vmp_descripcion__50).getComponent("vmp_descripcion_");
+                    if (vmp_descripcion__60 != null)
+                        {
+                        setAttrFor_vmp_descripcion__60(vmp_descripcion__60);
                         }
                     }
                 Widget div_vmp_categoria_0_50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vmp_categoria_0");

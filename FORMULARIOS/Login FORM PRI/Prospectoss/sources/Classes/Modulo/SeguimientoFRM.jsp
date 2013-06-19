@@ -1,4 +1,4 @@
-<html>
+<html title="Seguimiento de Prospectos">
 <head>
 
 </head>
@@ -1585,6 +1585,7 @@
 
                     <input
                         accell_type="String"
+                        auto_accept="true"
                         binary_variables=""
                         case_conversion="Upper"
                         class="textfield"
@@ -1605,12 +1606,14 @@
                         name="CajaSegui:vpp_proyecto."
                         original_name="textfield1"
                         retrieve_value="true"
+                        return_values_into="vpp_proyecto"
                         size="7"
                         target_field="vpp_proyecto"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315424064"
                         updateable="true"
                         view="text"
+                        zoom_form="Modulo/ProyectosFRM"
                         style="font-size: 12px;
                             color: Black">
                 </div>
@@ -1727,7 +1730,9 @@
                     style="position: absolute; top: 153px; left: 499px; width:201px; height:22px">
 
                     <input
+                        accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         displayheight="22"
                         displayleft="499"
@@ -1735,8 +1740,9 @@
                         displaywidth="201"
                         field_type="text"
                         field_weight="499"
-                        findable="false"
+                        findable="true"
                         key="CajaSegui:vpy_nombre."
+                        multi_valued="true"
                         name="CajaSegui:vpy_nombre."
                         original_name="textfield1"
                         size="33"

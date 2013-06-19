@@ -12,6 +12,7 @@
         commands=""
         displayheight="413"
         displaywidth="1198"
+        footer="none"
         form_height="413"
         form_width="1198"
         foundation_type="Classes/Foundation/Form"

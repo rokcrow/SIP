@@ -9,11 +9,12 @@ DATA VIEW RepProspectosDVW
         NullableString vFecha1 = fecha1.toString();
         NullableString vFecha2 = fecha2.toString();
         NullableString strReporte;
+        
         vFecha1 = vFecha1.substring(3,5) + "/" + vFecha1.substring(0,2) + "/" + vFecha1.substring(6,10);
         vFecha2 = vFecha2.substring(3,5) + "/" + vFecha2.substring(0,2) + "/" + vFecha2.substring(6,10);
-       // strReporte = "http://localhost:8080/birt/frameset?__report=reporttest.rptdesign&PROYECTO=" + box1.proyecto + "&VENDEDOR=" + box1.vendedor + "&FECHAINI=" + vFecha1 + "&FECHAFIN=" + vFecha2;
+        strReporte = "http://localhost:8080/birt/frameset?__report=informe_visitas.rptdesign&PROYECTO=" + proyecto + "&USUARIO=" + Modulo.LoginFRM#cajagrandeLogin.xpr_usuario   + "&EMPRESA=" + Modulo.MenuFRM#cajagrandeMenu.EMPRESA + "&FECHAI=" + vFecha1 + "&FECHAF=" + vFecha2;
         
-        strReporte = "http://localhost:8080/birt/preview?__report=reporttest.rptdesign&format=pdf&PROYECTO=" + proyecto + "&VENDEDOR=" + vendedor + "&FECHAINI=" + vFecha1 + "&FECHAFIN=" + vFecha2;
+        //strReporte = "http://localhost:8080/birt/preview?__report=informe_visitas.rptdesign&format=pdf&PROYECTO=" + proyecto + "&USUARIO=" + Modulo.LoginFRM#cajagrandeLogin.xpr_usuario   + "&EMPRESA=" + Modulo.MenuFRM#cajagrandeMenu.EMPRESA + "&FECHAI=" + vFecha1 + "&FECHAF=" + vFecha2;
         
         session.openURL(strReporte);
     }
@@ -39,7 +40,7 @@ DATA VIEW RepProspectosDVW
     }
     FIELD fecha2
     {
-    }
+    } 
     
     FIELD vendedor
     {

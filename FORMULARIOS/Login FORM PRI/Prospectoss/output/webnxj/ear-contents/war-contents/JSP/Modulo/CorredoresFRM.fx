@@ -1,5 +1,6 @@
 <form 
     background_color = "#999999"
+    binary_variables = ""
     bloom_filter = "00000000000400040008000000000000"
     commands = ""
     footer = "none"
@@ -15,6 +16,7 @@
 
     <div 
         base_class = "Classes/Modulo/CorredoresDVW.fx"
+        binary_variables = ""
         commands = ""
         display_base_class = "Modulo.CorredoresDVW"
         display_name = "view1"

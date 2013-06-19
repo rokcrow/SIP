@@ -105,14 +105,45 @@ FORM SeguimientoFRM
 
         FIELD vpp_proyecto
         {
-             WHEN VALUE CHANGES
+           /*  WHEN VALUE CHANGES
             {
                 EXEC SQL 
                 SELECT vpy_nombre, vpy_tipo
                 FROM   vpy_proyectos
                 WHERE  vpy_codigo = :vpp_proyecto
                 into vpy_nombre, vpy_tipo;
-            }   
+            }   */// ORIGINAL
+            
+            /*****///NUEVO
+            
+            
+             ON DATA ACCEPT
+            {
+                    EXEC SQL 
+                    SELECT vpy_nombre
+                    FROM   vpy_proyectos
+                    WHERE  vpy_codigo = :vpp_proyecto
+                    AND    vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                    into vpy_nombre;
+                    
+                    if (session.status == StatusCode.SS_NOREC)
+                     {
+                                session.displayToMessageBox("No existe el proyecto seleccionado en el maestro de proyectos");
+                                vpp_proyecto = " ";
+                                rejectOperation();
+                      }
+                }
+        
+                WHEN VALUE CHANGES
+                {
+                    EXEC SQL 
+                    SELECT vpy_nombre
+                    FROM   vpy_proyectos
+                    WHERE  vpy_codigo = :vpp_proyecto
+                    AND    vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                    into vpy_nombre;
+                }
+            
         }
         FIELD vpy_nombre
         {
@@ -134,7 +165,7 @@ FORM SeguimientoFRM
             {
               vps_fecha   = session.currentDate;
               vps_hora    = session.currentTime;
-            //  vps_usuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario; 
+         vps_usuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario; 
               EXEC SQL	  
               SELECT vps_consecu
               FROM   vps_prosigue
@@ -160,7 +191,7 @@ FORM SeguimientoFRM
                    else if (xpc_califica == "M") vps_estado = "M";
                      else if (xpc_califica == "P") vps_estado = "N";
                 NullableDate f_pcontacto;
-                /*
+               
                 EXEC SQL
                 SELECT vps_f_pcontacto
                 FROM   vps_prosigue
@@ -168,8 +199,8 @@ FORM SeguimientoFRM
                 AND    vps_prospecto = :vps_prospecto
                 AND    vps_consecu = :vps_consecu -1
                 into   f_pcontacto;
+                
                 if ( session.status != StatusCode.SS_NORM )
-                */
                 f_pcontacto = session.currentDate;
                 if (vpy_tipo == "A") 
                     vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
@@ -249,7 +280,7 @@ FORM SeguimientoFRM
                             session.displayToMessageBox("No existe el vendedor seleccionado en el maestro de vendedores");
                             rejectOperation();
                             }
-              /*                                  
+                                              
                 EXEC SQL        
                 SELECT vvh_vendedora,vvh_fret_obra, vvh_fing_obra 
                 from    vvh_venobras
@@ -258,7 +289,7 @@ FORM SeguimientoFRM
                 and    vvh_vendedora = :vpp_vendedor
                 order by vvh_fing_obra DESC
                 into    vendedora,    fret_obra , fing_obra;
-        */
+        
                 if (session.status == StatusCode.SS_NOREC) {
                     session.displayToMessageBox("La vendedora no pertenece al proyecto en cuestion");
                     rejectOperation();

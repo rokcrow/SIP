@@ -53,7 +53,6 @@ private void setAttrFor_div_RepeatingArea1__30(Widget widget)
 
 private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
-	widget.addAttribute("occurrences","11");
 	widget.addAttribute("_id","view1:(Modulo.CorredoresDVW)RepeatingArea1.");
 	widget.addAttribute("id","view1:RepeatingArea1.");
 	widget.addStyle("overflow","hidden");
@@ -150,18 +149,12 @@ private void setAttrFor_box111__40(Widget widget)
 
 private void setAttrFor_div_label1__50(Widget widget)
 {
-	widget.addStyle("left","241px");
-	widget.addStyle("top","14px");
-	widget.addStyle("width","243px");
-	widget.addStyle("height","23px");
 }
 
 private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.CorredoresDVW)box111:(Modulo.CorredoresDVW)label1.");
 	widget.addAttribute("id","view1:box111:label1.");
-	widget.addAttribute("displaywidth","243");
-	widget.addAttribute("fieldwidth","243");
 	widget.addStyle("overflow","hidden");
 }
 

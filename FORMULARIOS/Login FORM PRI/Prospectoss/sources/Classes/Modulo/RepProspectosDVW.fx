@@ -1,8 +1,8 @@
 <form 
     binary_variables = ""
     field_order = ""
-    form_height = "513"
-    form_width = "1057"
+    form_height = "430"
+    form_width = "1055"
     object_type = "data_view"
     style_class = "form"
     view = "form"
@@ -167,7 +167,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767427541"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "Date"
@@ -182,7 +182,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767428554"
-        view = "date">
+        view = "text">
     </field>
     <control 
         binary_variables = ""

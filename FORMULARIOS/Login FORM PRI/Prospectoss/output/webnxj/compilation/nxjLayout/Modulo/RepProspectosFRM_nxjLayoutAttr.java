@@ -17,6 +17,7 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
+	widget.addAttribute("footer","none");
 	widget.addAttribute("displaywidth","1198");
 	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");

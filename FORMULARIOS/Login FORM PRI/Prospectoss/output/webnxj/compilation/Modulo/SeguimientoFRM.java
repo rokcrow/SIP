@@ -551,9 +551,10 @@ public class SeguimientoFRM
 	    extends com.unify.nxj.mgr.datatypes.NXJStringField
 	{
 
-	    public void whenValueChanges()
+	    public void onDataAccept()
 		throws Exception
 	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
@@ -562,24 +563,24 @@ public class SeguimientoFRM
 		    ResultSet us$rs3 = null;
 		    try
 			{
-			us$stmt3 = us$conn3.prepareStatement("SELECT vpy_nombre, vpy_tipo FROM vpy_proyectos WHERE vpy_codigo =  ?");
+			us$stmt3 = us$conn3.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
 			vpp_proyecto.us$setSqlParameterValue(us$stmt3, 1);
+			((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt3, 2);
 			us$rs3 = us$stmt3.executeQuery();
 			int us$rowsTouched3 = 0;
 			try
 			    {
 			    java.sql.ResultSetMetaData us$rsmd3 = us$rs3.getMetaData();
-			    if (us$rsmd3.getColumnCount() != 2)
+			    if (us$rsmd3.getColumnCount() != 1)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd3.getColumnCount()), "2"
+				    Integer.toString(us$rsmd3.getColumnCount()), "1"
 				    }));
 			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter3 = us$conn3.createDataIterator(us$rs3);
 			    if (us$getter3.next())
 				{
 				++us$rowsTouched3;
 				us$getter3.assignValueToVariable(vpy_nombre, 1);
-				us$getter3.assignValueToVariable(vpy_tipo, 2);
 				}
 			    }
 			finally
@@ -606,38 +607,17 @@ public class SeguimientoFRM
 			    us$conn3.us$closeStatement(us$stmt3);
 			}
 		    }
-	    } // whenValueChanges
+		if (getSession().getStatus() == StatusCode.SS_NOREC)
+		    {
+		    getSession().displayToMessageBox("No existe el proyecto seleccionado en el maestro de proyectos");
+		    vpp_proyecto.assign(us$registerPool.allocateRegister().load(" "));
+		    rejectOperation();
+		    }
+	    } // onDataAccept
 
-	    public vpp_proyecto()
-	    {
-		super(Modulo.SeguimientoFRM.CajaSegui.this, "vpp_proyecto", true, true, 2);
-		setStyleClass("textfield");
-		us$setMultiValued(true);
-		us$setView("text");
-		us$setFieldLength(2);
-		us$setCandidateTargetColumnName("vpp_proyecto");
-		setValueRetrievedDuringFetch(true);
-		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-		setFindable(true);
-		setUpdateable(true);
-		setCaseConversion(NullableField.CaseConversion_UPPER);
-		setForegroundColor("Black");
-		setFontSize("12");
-		us$executesDataAcceptValueChanges = true;
-	    } // <init>
-	} // vpp_proyecto
-
-	public /*multi_valued*/ vpp_proyecto vpp_proyecto = new vpp_proyecto();
-	public /*multi_valued*/ NullableStringField vpp_telofi = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_telofi", true, true, 30);
-	public /*multi_valued*/ NullableStringField vpp_telres = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_telres", true, true, 30);
-	public class vpp_vendedor
-	    extends com.unify.nxj.mgr.datatypes.NXJStringField
-	{
-
-	    public void onDataAccept()
+	    public void whenValueChanges()
 		throws Exception
 	    {
-		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
@@ -646,8 +626,9 @@ public class SeguimientoFRM
 		    ResultSet us$rs4 = null;
 		    try
 			{
-			us$stmt4 = us$conn4.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
-			vpp_vendedor.us$setSqlParameterValue(us$stmt4, 1);
+			us$stmt4 = us$conn4.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
+			vpp_proyecto.us$setSqlParameterValue(us$stmt4, 1);
+			((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt4, 2);
 			us$rs4 = us$stmt4.executeQuery();
 			int us$rowsTouched4 = 0;
 			try
@@ -662,7 +643,7 @@ public class SeguimientoFRM
 			    if (us$getter4.next())
 				{
 				++us$rowsTouched4;
-				us$getter4.assignValueToVariable(vve_nombre, 1);
+				us$getter4.assignValueToVariable(vpy_nombre, 1);
 				}
 			    }
 			finally
@@ -689,29 +670,41 @@ public class SeguimientoFRM
 			    us$conn4.us$closeStatement(us$stmt4);
 			}
 		    }
-		if (getSession().getStatus() == StatusCode.SS_NOREC)
-		    {
-		    getSession().displayToMessageBox("No existe el vendedor seleccionado en el maestro de vendedores");
-		    rejectOperation();
-		    }
-		if (getSession().getStatus() == StatusCode.SS_NOREC)
-		    {
-		    getSession().displayToMessageBox("La vendedora no pertenece al proyecto en cuestion");
-		    rejectOperation();
-		    }
-		if (!fret_obra.isNull() && fret_obra.toString() != "01/01/01")
-		    {
-		    if (us$registerPool.allocateRegister().load(fret_obra).ltOp(us$registerPool.allocateRegister().load(vpp_fecha)).getBooleanValueNullOk())
-			{
-			getSession().displayToMessageBox("La vendedora ya fue retirada del Proyecto");
-			rejectOperation();
-			}
-		    }
-	    } // onDataAccept
+	    } // whenValueChanges
 
-	    public void whenValueChanges()
+	    public vpp_proyecto()
+	    {
+		super(Modulo.SeguimientoFRM.CajaSegui.this, "vpp_proyecto", true, true, 2);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(2);
+		setAutoAccept(true);
+		us$setCandidateTargetColumnName("vpp_proyecto");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		setCaseConversion(NullableField.CaseConversion_UPPER);
+		setZoomFormName("Modulo/ProyectosFRM");
+		setZoomEnabled(true);
+		setForegroundColor("Black");
+		setFontSize("12");
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vpp_proyecto
+
+	public /*multi_valued*/ vpp_proyecto vpp_proyecto = new vpp_proyecto();
+	public /*multi_valued*/ NullableStringField vpp_telofi = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_telofi", true, true, 30);
+	public /*multi_valued*/ NullableStringField vpp_telres = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_telres", true, true, 30);
+	public class vpp_vendedor
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void onDataAccept()
 		throws Exception
 	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
@@ -763,41 +756,11 @@ public class SeguimientoFRM
 			    us$conn5.us$closeStatement(us$stmt5);
 			}
 		    }
-	    } // whenValueChanges
-
-	    public vpp_vendedor()
-	    {
-		super(Modulo.SeguimientoFRM.CajaSegui.this, "vpp_vendedor", true, true, 3);
-		setStyleClass("textfield");
-		us$setMultiValued(true);
-		us$setView("text");
-		us$setFieldLength(3);
-		us$setCandidateTargetColumnName("vpp_vendedor");
-		setValueRetrievedDuringFetch(true);
-		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-		setFindable(true);
-		setUpdateable(true);
-		setForegroundColor("Black");
-		setFontSize("12");
-		us$executesDataAcceptValueChanges = true;
-	    } // <init>
-	} // vpp_vendedor
-
-	public /*multi_valued*/ vpp_vendedor vpp_vendedor = new vpp_vendedor();
-	public NullableStringField vpy_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpy_nombre", false, true, 100);
-	public NullableStringField vve_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vve_nombre", false, true, 100);
-	public class PUBLIC_vps_prosigue
-	    extends com.unify.nxj.mgr.NXJDataView
-	{
-	    /*multi_valued*/ NullableStringVariable vps_proyecto = NullableFactory.createNullableStringVariable(this, "vps_proyecto", true, false);
-	    /*multi_valued*/ NullableNumericVariable vps_prospecto = NullableFactory.createNullableNumericVariable(this, "vps_prospecto", true, false);
-
-	    public void onClearToAdd()
-		throws Exception
-	    {
-		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-		vps_fecha.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
-		vps_hora.assign(us$registerPool.allocateRegister().load(getSession().getCurrentTime()));
+		if (getSession().getStatus() == StatusCode.SS_NOREC)
+		    {
+		    getSession().displayToMessageBox("No existe el vendedor seleccionado en el maestro de vendedores");
+		    rejectOperation();
+		    }
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
@@ -806,24 +769,27 @@ public class SeguimientoFRM
 		    ResultSet us$rs6 = null;
 		    try
 			{
-			us$stmt6 = us$conn6.prepareStatement("SELECT vps_consecu FROM vps_prosigue WHERE vps_proyecto =  ?  AND vps_prospecto =  ?  order by vps_consecu desc");
-			vpp_proyecto.us$setSqlParameterValue(us$stmt6, 1);
-			vpp_numero.us$setSqlParameterValue(us$stmt6, 2);
+			us$stmt6 = us$conn6.prepareStatement("SELECT vvh_vendedora,vvh_fret_obra, vvh_fing_obra from vvh_venobras where vvh_empresa =  ?  and vvh_proyecto =  ?  and vvh_vendedora =  ?  order by vvh_fing_obra DESC");
+			((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt6, 1);
+			vpp_proyecto.us$setSqlParameterValue(us$stmt6, 2);
+			vpp_vendedor.us$setSqlParameterValue(us$stmt6, 3);
 			us$rs6 = us$stmt6.executeQuery();
 			int us$rowsTouched6 = 0;
 			try
 			    {
 			    java.sql.ResultSetMetaData us$rsmd6 = us$rs6.getMetaData();
-			    if (us$rsmd6.getColumnCount() != 1)
+			    if (us$rsmd6.getColumnCount() != 3)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd6.getColumnCount()), "1"
+				    Integer.toString(us$rsmd6.getColumnCount()), "3"
 				    }));
 			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter6 = us$conn6.createDataIterator(us$rs6);
 			    if (us$getter6.next())
 				{
 				++us$rowsTouched6;
-				us$getter6.assignValueToVariable(consecutivo, 1);
+				us$getter6.assignValueToVariable(vendedora, 1);
+				us$getter6.assignValueToVariable(fret_obra, 2);
+				us$getter6.assignValueToVariable(fing_obra, 3);
 				}
 			    }
 			finally
@@ -848,6 +814,163 @@ public class SeguimientoFRM
 			{
 			if (us$stmt6 != null)
 			    us$conn6.us$closeStatement(us$stmt6);
+			}
+		    }
+		if (getSession().getStatus() == StatusCode.SS_NOREC)
+		    {
+		    getSession().displayToMessageBox("La vendedora no pertenece al proyecto en cuestion");
+		    rejectOperation();
+		    }
+		if (!fret_obra.isNull() && fret_obra.toString() != "01/01/01")
+		    {
+		    if (us$registerPool.allocateRegister().load(fret_obra).ltOp(us$registerPool.allocateRegister().load(vpp_fecha)).getBooleanValueNullOk())
+			{
+			getSession().displayToMessageBox("La vendedora ya fue retirada del Proyecto");
+			rejectOperation();
+			}
+		    }
+	    } // onDataAccept
+
+	    public void whenValueChanges()
+		throws Exception
+	    {
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn7 = getConnection();
+		    java.sql.PreparedStatement us$stmt7 = null;
+		    ResultSet us$rs7 = null;
+		    try
+			{
+			us$stmt7 = us$conn7.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
+			vpp_vendedor.us$setSqlParameterValue(us$stmt7, 1);
+			us$rs7 = us$stmt7.executeQuery();
+			int us$rowsTouched7 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd7 = us$rs7.getMetaData();
+			    if (us$rsmd7.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd7.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter7 = us$conn7.createDataIterator(us$rs7);
+			    if (us$getter7.next())
+				{
+				++us$rowsTouched7;
+				us$getter7.assignValueToVariable(vve_nombre, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched7 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs7 != null)
+				us$rs7.close();
+			    }
+			}
+		    catch (SQLException us$ex7)
+			{
+			getSession().us$setStatus(us$conn7.mapToStatusCode(us$ex7));
+			throw us$ex7;
+			}
+		    catch (NXJDataConnectionException us$ex7)
+			{
+			getSession().us$setStatus(us$conn7.mapToStatusCode(us$ex7));
+			throw us$ex7;
+			}
+		    finally
+			{
+			if (us$stmt7 != null)
+			    us$conn7.us$closeStatement(us$stmt7);
+			}
+		    }
+	    } // whenValueChanges
+
+	    public vpp_vendedor()
+	    {
+		super(Modulo.SeguimientoFRM.CajaSegui.this, "vpp_vendedor", true, true, 3);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(3);
+		us$setCandidateTargetColumnName("vpp_vendedor");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		setForegroundColor("Black");
+		setFontSize("12");
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vpp_vendedor
+
+	public /*multi_valued*/ vpp_vendedor vpp_vendedor = new vpp_vendedor();
+	public /*multi_valued*/ NullableStringField vpy_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpy_nombre", true, true, 100);
+	public NullableStringField vve_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vve_nombre", false, true, 100);
+	public class PUBLIC_vps_prosigue
+	    extends com.unify.nxj.mgr.NXJDataView
+	{
+	    /*multi_valued*/ NullableStringVariable vps_proyecto = NullableFactory.createNullableStringVariable(this, "vps_proyecto", true, false);
+	    /*multi_valued*/ NullableNumericVariable vps_prospecto = NullableFactory.createNullableNumericVariable(this, "vps_prospecto", true, false);
+
+	    public void onClearToAdd()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		vps_fecha.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
+		vps_hora.assign(us$registerPool.allocateRegister().load(getSession().getCurrentTime()));
+		vps_usuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn8 = getConnection();
+		    java.sql.PreparedStatement us$stmt8 = null;
+		    ResultSet us$rs8 = null;
+		    try
+			{
+			us$stmt8 = us$conn8.prepareStatement("SELECT vps_consecu FROM vps_prosigue WHERE vps_proyecto =  ?  AND vps_prospecto =  ?  order by vps_consecu desc");
+			vpp_proyecto.us$setSqlParameterValue(us$stmt8, 1);
+			vpp_numero.us$setSqlParameterValue(us$stmt8, 2);
+			us$rs8 = us$stmt8.executeQuery();
+			int us$rowsTouched8 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd8 = us$rs8.getMetaData();
+			    if (us$rsmd8.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd8.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter8 = us$conn8.createDataIterator(us$rs8);
+			    if (us$getter8.next())
+				{
+				++us$rowsTouched8;
+				us$getter8.assignValueToVariable(consecutivo, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched8 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs8 != null)
+				us$rs8.close();
+			    }
+			}
+		    catch (SQLException us$ex8)
+			{
+			getSession().us$setStatus(us$conn8.mapToStatusCode(us$ex8));
+			throw us$ex8;
+			}
+		    catch (NXJDataConnectionException us$ex8)
+			{
+			getSession().us$setStatus(us$conn8.mapToStatusCode(us$ex8));
+			throw us$ex8;
+			}
+		    finally
+			{
+			if (us$stmt8 != null)
+			    us$conn8.us$closeStatement(us$stmt8);
 			}
 		    }
 		if (getSession().getStatus() != StatusCode.SS_NORM)
@@ -877,7 +1000,61 @@ public class SeguimientoFRM
 			if (us$registerPool.allocateRegister().load(xpc_califica).eqOp("P").getBooleanValueNullOk())
 			    vps_estado.assign(us$registerPool.allocateRegister().load("N"));
 		NullableDate f_pcontacto = NullableFactory.createNullableDate("f_pcontacto");
-		f_pcontacto.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn9 = getConnection();
+		    java.sql.PreparedStatement us$stmt9 = null;
+		    ResultSet us$rs9 = null;
+		    try
+			{
+			us$stmt9 = us$conn9.prepareStatement("SELECT vps_f_pcontacto FROM vps_prosigue WHERE vps_proyecto =  ?  AND vps_prospecto =  ?  AND vps_consecu =  ?  -1");
+			vps_proyecto.us$setSqlParameterValue(us$stmt9, 1);
+			vps_prospecto.us$setSqlParameterValue(us$stmt9, 2);
+			vps_consecu.us$setSqlParameterValue(us$stmt9, 3);
+			us$rs9 = us$stmt9.executeQuery();
+			int us$rowsTouched9 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd9 = us$rs9.getMetaData();
+			    if (us$rsmd9.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd9.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter9 = us$conn9.createDataIterator(us$rs9);
+			    if (us$getter9.next())
+				{
+				++us$rowsTouched9;
+				us$getter9.assignValueToVariable(f_pcontacto, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched9 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs9 != null)
+				us$rs9.close();
+			    }
+			}
+		    catch (SQLException us$ex9)
+			{
+			getSession().us$setStatus(us$conn9.mapToStatusCode(us$ex9));
+			throw us$ex9;
+			}
+		    catch (NXJDataConnectionException us$ex9)
+			{
+			getSession().us$setStatus(us$conn9.mapToStatusCode(us$ex9));
+			throw us$ex9;
+			}
+		    finally
+			{
+			if (us$stmt9 != null)
+			    us$conn9.us$closeStatement(us$stmt9);
+			}
+		    }
+		if (getSession().getStatus() != StatusCode.SS_NORM)
+		    f_pcontacto.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
 		if (us$registerPool.allocateRegister().load(vpy_tipo).eqOp("A").getBooleanValueNullOk())
 		    vps_f_pcontacto.assign(us$registerPool.allocateRegister().load(f_pcontacto).plusOp(us$registerPool.allocateRegister().load(xpc_dias_pac)));
 		else
@@ -896,55 +1073,55 @@ public class SeguimientoFRM
 
 			{
 			getSession().us$setStatus(StatusCode.SS_NORM);
-			NXJDataConnection us$conn7 = getConnection();
-			java.sql.PreparedStatement us$stmt7 = null;
-			ResultSet us$rs7 = null;
+			NXJDataConnection us$conn10 = getConnection();
+			java.sql.PreparedStatement us$stmt10 = null;
+			ResultSet us$rs10 = null;
 			try
 			    {
-			    us$stmt7 = us$conn7.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
-			    vps_califica.us$setSqlParameterValue(us$stmt7, 1);
-			    us$rs7 = us$stmt7.executeQuery();
-			    int us$rowsTouched7 = 0;
+			    us$stmt10 = us$conn10.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+			    vps_califica.us$setSqlParameterValue(us$stmt10, 1);
+			    us$rs10 = us$stmt10.executeQuery();
+			    int us$rowsTouched10 = 0;
 			    try
 				{
-				java.sql.ResultSetMetaData us$rsmd7 = us$rs7.getMetaData();
-				if (us$rsmd7.getColumnCount() != 4)
+				java.sql.ResultSetMetaData us$rsmd10 = us$rs10.getMetaData();
+				if (us$rsmd10.getColumnCount() != 4)
 				    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 					{
-					Integer.toString(us$rsmd7.getColumnCount()), "4"
+					Integer.toString(us$rsmd10.getColumnCount()), "4"
 					}));
-				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter7 = us$conn7.createDataIterator(us$rs7);
-				if (us$getter7.next())
+				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter10 = us$conn10.createDataIterator(us$rs10);
+				if (us$getter10.next())
 				    {
-				    ++us$rowsTouched7;
-				    us$getter7.assignValueToVariable(xpc_nombre, 1);
-				    us$getter7.assignValueToVariable(xpc_califica, 2);
-				    us$getter7.assignValueToVariable(xpc_dias_pac, 3);
-				    us$getter7.assignValueToVariable(xpc_dias_pvt, 4);
+				    ++us$rowsTouched10;
+				    us$getter10.assignValueToVariable(xpc_nombre, 1);
+				    us$getter10.assignValueToVariable(xpc_califica, 2);
+				    us$getter10.assignValueToVariable(xpc_dias_pac, 3);
+				    us$getter10.assignValueToVariable(xpc_dias_pvt, 4);
 				    }
 				}
 			    finally
 				{
-				if (us$rowsTouched7 == 0)
+				if (us$rowsTouched10 == 0)
 				    getSession().us$setStatus(StatusCode.SS_NOREC);
-				if (us$rs7 != null)
-				    us$rs7.close();
+				if (us$rs10 != null)
+				    us$rs10.close();
 				}
 			    }
-			catch (SQLException us$ex7)
+			catch (SQLException us$ex10)
 			    {
-			    getSession().us$setStatus(us$conn7.mapToStatusCode(us$ex7));
-			    throw us$ex7;
+			    getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
+			    throw us$ex10;
 			    }
-			catch (NXJDataConnectionException us$ex7)
+			catch (NXJDataConnectionException us$ex10)
 			    {
-			    getSession().us$setStatus(us$conn7.mapToStatusCode(us$ex7));
-			    throw us$ex7;
+			    getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
+			    throw us$ex10;
 			    }
 			finally
 			    {
-			    if (us$stmt7 != null)
-				us$conn7.us$closeStatement(us$stmt7);
+			    if (us$stmt10 != null)
+				us$conn10.us$closeStatement(us$stmt10);
 			    }
 			}
 		    if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -971,55 +1148,55 @@ public class SeguimientoFRM
 
 			{
 			getSession().us$setStatus(StatusCode.SS_NORM);
-			NXJDataConnection us$conn8 = getConnection();
-			java.sql.PreparedStatement us$stmt8 = null;
-			ResultSet us$rs8 = null;
+			NXJDataConnection us$conn11 = getConnection();
+			java.sql.PreparedStatement us$stmt11 = null;
+			ResultSet us$rs11 = null;
 			try
 			    {
-			    us$stmt8 = us$conn8.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
-			    vps_califica.us$setSqlParameterValue(us$stmt8, 1);
-			    us$rs8 = us$stmt8.executeQuery();
-			    int us$rowsTouched8 = 0;
+			    us$stmt11 = us$conn11.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+			    vps_califica.us$setSqlParameterValue(us$stmt11, 1);
+			    us$rs11 = us$stmt11.executeQuery();
+			    int us$rowsTouched11 = 0;
 			    try
 				{
-				java.sql.ResultSetMetaData us$rsmd8 = us$rs8.getMetaData();
-				if (us$rsmd8.getColumnCount() != 4)
+				java.sql.ResultSetMetaData us$rsmd11 = us$rs11.getMetaData();
+				if (us$rsmd11.getColumnCount() != 4)
 				    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 					{
-					Integer.toString(us$rsmd8.getColumnCount()), "4"
+					Integer.toString(us$rsmd11.getColumnCount()), "4"
 					}));
-				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter8 = us$conn8.createDataIterator(us$rs8);
-				if (us$getter8.next())
+				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter11 = us$conn11.createDataIterator(us$rs11);
+				if (us$getter11.next())
 				    {
-				    ++us$rowsTouched8;
-				    us$getter8.assignValueToVariable(xpc_nombre, 1);
-				    us$getter8.assignValueToVariable(xpc_califica, 2);
-				    us$getter8.assignValueToVariable(xpc_dias_pac, 3);
-				    us$getter8.assignValueToVariable(xpc_dias_pvt, 4);
+				    ++us$rowsTouched11;
+				    us$getter11.assignValueToVariable(xpc_nombre, 1);
+				    us$getter11.assignValueToVariable(xpc_califica, 2);
+				    us$getter11.assignValueToVariable(xpc_dias_pac, 3);
+				    us$getter11.assignValueToVariable(xpc_dias_pvt, 4);
 				    }
 				}
 			    finally
 				{
-				if (us$rowsTouched8 == 0)
+				if (us$rowsTouched11 == 0)
 				    getSession().us$setStatus(StatusCode.SS_NOREC);
-				if (us$rs8 != null)
-				    us$rs8.close();
+				if (us$rs11 != null)
+				    us$rs11.close();
 				}
 			    }
-			catch (SQLException us$ex8)
+			catch (SQLException us$ex11)
 			    {
-			    getSession().us$setStatus(us$conn8.mapToStatusCode(us$ex8));
-			    throw us$ex8;
+			    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
+			    throw us$ex11;
 			    }
-			catch (NXJDataConnectionException us$ex8)
+			catch (NXJDataConnectionException us$ex11)
 			    {
-			    getSession().us$setStatus(us$conn8.mapToStatusCode(us$ex8));
-			    throw us$ex8;
+			    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
+			    throw us$ex11;
 			    }
 			finally
 			    {
-			    if (us$stmt8 != null)
-				us$conn8.us$closeStatement(us$stmt8);
+			    if (us$stmt11 != null)
+				us$conn11.us$closeStatement(us$stmt11);
 			    }
 			}
 		} // whenValueChanges
@@ -1218,6 +1395,17 @@ public class SeguimientoFRM
 	{
 	    super("CajaSegui", enclosingContainer);
 	    us$setBackgroundColor("#cccccc");
+	    vpp_proyecto.setZoomReturnValuesInto(new NXJZoomReturnValuesInto()
+	    {
+
+		public void assignValues(com.unify.nxj.mgr.datatypes.Register[] values)
+		    throws Exception
+		{
+		    if (values.length != 1)
+			throw new Exception("TODO: handle value array size mismatch");
+		    vpp_proyecto.us$assignZoomValue(values[0]);
+		} // assignValues
+	    });
 	    CajaSeguipropertySetter_0();
 	    CajaSeguipropertySetter_1();
 	} // <init>
@@ -1363,9 +1551,11 @@ public class SeguimientoFRM
 	    vpp_telres.setForegroundColor("Black");
 	    vpp_telres.setFontSize("12");
 	    vpy_nombre.setStyleClass("textfield");
+	    vpy_nombre.us$setMultiValued(true);
 	    vpy_nombre.us$setView("text");
-	    vpy_nombre.setFindable(false);
+	    vpy_nombre.setFindable(true);
 	    vpy_nombre.setStopForInput(false);
+	    vpy_nombre.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vpy_nombre.setForegroundColor("Black");
 	    vpy_nombre.setFontSize("12");
 	    vve_nombre.setStyleClass("textfield");

@@ -8,11 +8,11 @@
     <form
         binary_variables=""
         class="form"
-        displayheight="871"
+        displayheight="430"
         displaywidth="1055"
         field_order=""
-        form_height="513"
-        form_width="1057"
+        form_height="430"
+        form_width="1055"
         name="NXJForm"
         object_type="data_view"
         view="form">
@@ -188,7 +188,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:91px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -196,7 +196,7 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="91"
+                                displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
                                 id=".top:box111:label1."
                                 key=".top:box111:label1."

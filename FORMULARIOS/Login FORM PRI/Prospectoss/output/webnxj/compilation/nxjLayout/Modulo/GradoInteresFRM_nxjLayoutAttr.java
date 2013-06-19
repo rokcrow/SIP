@@ -40,11 +40,11 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("displaywidth","1110");
-	widget.addAttribute("id","view1.");
-	widget.addAttribute("displayleft","50");
-	widget.addAttribute("displaytop","32");
 	widget.addAttribute("displayheight","574");
+	widget.addAttribute("displaytop","32");
+	widget.addAttribute("id","view1.");
+	widget.addAttribute("displaywidth","1110");
+	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -54,7 +54,6 @@ private void setAttrFor_div_RepeatingArea1__30(Widget widget)
 
 private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
-	widget.addAttribute("occurrences","12");
 	widget.addAttribute("_id","view1:(Modulo.GradoInteresDVW)RepeatingArea1.");
 	widget.addAttribute("id","view1:RepeatingArea1.");
 	widget.addStyle("overflow","hidden");
@@ -177,18 +176,12 @@ private void setAttrFor_box111__40(Widget widget)
 
 private void setAttrFor_div_label1__50(Widget widget)
 {
-	widget.addStyle("left","241px");
-	widget.addStyle("top","14px");
-	widget.addStyle("width","200px");
-	widget.addStyle("height","23px");
 }
 
 private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.GradoInteresDVW)box111:(Modulo.GradoInteresDVW)label1.");
 	widget.addAttribute("id","view1:box111:label1.");
-	widget.addAttribute("displaywidth","200");
-	widget.addAttribute("fieldwidth","200");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -229,18 +222,12 @@ private void setAttrFor_textfield11__60(Widget widget)
 
 private void setAttrFor_div_label11__30(Widget widget)
 {
-	widget.addStyle("left","20px");
-	widget.addStyle("top","96px");
-	widget.addStyle("width","133px");
-	widget.addStyle("height","18px");
 }
 
 private void setAttrFor_label11__40(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.GradoInteresDVW)label11.");
 	widget.addAttribute("id","view1:label11.");
-	widget.addAttribute("displaywidth","133");
-	widget.addAttribute("fieldwidth","133");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_view1__10(Widget div_view1__10)

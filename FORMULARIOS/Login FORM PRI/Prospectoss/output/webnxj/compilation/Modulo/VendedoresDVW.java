@@ -107,8 +107,6 @@ public class VendedoresDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
     private VendedoresDVW VendedoresDVW = this;
-    public NXJLabelControl Label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label1", false);
-    public NXJLabelControl Label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label11", false);
     public /*multi_valued*/ NullableStringField NombVend = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombVend", true, true, 100);
     public NXJLabelControl label111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label111", false);
     public class vvh_vendedora
@@ -277,12 +275,6 @@ public class VendedoresDVW
 	setStartInAddMode(false);
 	us$setBindingType("connection");
 	us$setBackgroundColor("#cccccc");
-	Label1.setStyleClass("label");
-	Label1.setFontSize("10");
-	Label1.us$setFontWeight("bold");
-	Label11.setStyleClass("label");
-	Label11.setFontSize("10");
-	Label11.us$setFontWeight("bold");
 	NombVend.setStyleClass("textfield");
 	NombVend.us$setMultiValued(true);
 	NombVend.us$setView("text");

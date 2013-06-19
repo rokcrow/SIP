@@ -827,6 +827,7 @@
     </field>
     <field 
         accell_type = "String"
+        auto_accept = "true"
         binary_variables = ""
         case_conversion = "Upper"
         db_length = "2"
@@ -844,11 +845,13 @@
         multi_valued = "true"
         original_name = "textfield1"
         retrieve_value = "true"
+        return_values_into = "vpp_proyecto"
         style_class = "textfield"
         target_field = "vpp_proyecto"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315424064"
         updateable = "true"
-        view = "text">
+        view = "text"
+        zoom_form = "Modulo/ProyectosFRM">
     </field>
     <field 
         accell_type = "String"
@@ -921,14 +924,17 @@
         view = "text">
     </field>
     <field 
+        accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         display_name = "vpy_nombre"
         field_type = "text"
         field_weight = "499"
-        findable = "false"
+        findable = "true"
         font_size = "12"
         foreground_color = "Black"
         key = "CajaSegui:vpy_nombre."
+        multi_valued = "true"
         original_name = "textfield1"
         stop_for_input = "false"
         style_class = "textfield"

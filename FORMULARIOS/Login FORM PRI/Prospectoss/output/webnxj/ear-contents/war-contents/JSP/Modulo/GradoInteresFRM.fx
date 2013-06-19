@@ -1,6 +1,7 @@
 <form 
     auto_find = "true"
     background_color = "#999999"
+    binary_variables = ""
     bloom_filter = "00020000000400040000000000000000"
     commands = ""
     footer = "none"
@@ -16,6 +17,7 @@
 
     <div 
         base_class = "Classes/Modulo/GradoInteresDVW.fx"
+        binary_variables = ""
         commands = ""
         display_base_class = "Modulo.GradoInteresDVW"
         display_name = "view1"

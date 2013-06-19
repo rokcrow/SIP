@@ -3,6 +3,7 @@
     binary_variables = ""
     bloom_filter = "00000000000400040000000008000000"
     commands = ""
+    footer = "none"
     form_height = "720"
     form_width = "1058"
     foundation_type = "Classes/Foundation/Form"

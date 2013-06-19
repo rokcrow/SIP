@@ -67,87 +67,6 @@ private void setAttrFor_RepeatingArea1__20(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vmp_codigo__30(Widget widget)
-{
-	widget.addStyle("left","10px");
-	widget.addStyle("top","20px");
-	widget.addStyle("width","92px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vmp_codigo__40(Widget widget)
-{
-	widget.addAttribute("field_weight","99");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","92");
-	widget.addAttribute("name",".top:vmp_codigo.");
-	widget.addAttribute("displayleft","10");
-	widget.addAttribute("size","15");
-	widget.addAttribute("headertitle","vmp_codigo");
-	widget.addAttribute("displaytop","20");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","vmp_codigo");
-	widget.addAttribute("fieldwidth","92");
-	widget.setClass("textfield");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vmp_categoria__30(Widget widget)
-{
-	widget.addStyle("left","402px");
-	widget.addStyle("top","20px");
-	widget.addStyle("width","125px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vmp_categoria__40(Widget widget)
-{
-	widget.addAttribute("field_weight","299");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","125");
-	widget.addAttribute("name",".top:vmp_categoria.");
-	widget.addAttribute("displayleft","402");
-	widget.addAttribute("size","20");
-	widget.addAttribute("headertitle","vmp_categoria");
-	widget.addAttribute("displaytop","20");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","vmp_categoria");
-	widget.addAttribute("fieldwidth","125");
-	widget.setClass("textfield");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vmp_descripcion__30(Widget widget)
-{
-	widget.addStyle("left","102px");
-	widget.addStyle("top","20px");
-	widget.addStyle("width","300px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vmp_descripcion__40(Widget widget)
-{
-	widget.addAttribute("field_weight","199");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","300");
-	widget.addAttribute("name",".top:vmp_descripcion.");
-	widget.addAttribute("displayleft","102");
-	widget.addAttribute("size","50");
-	widget.addAttribute("headertitle","vmp_descripcion");
-	widget.addAttribute("displaytop","20");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","vmp_descripcion");
-	widget.addAttribute("fieldwidth","300");
-	widget.setClass("textfield");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_Box__30(Widget widget)
 {
 	widget.addStyle("left","10px");
@@ -239,6 +158,87 @@ private void setAttrFor_Label1__61(Widget widget)
 	widget.addAttribute("fieldwidth","38");
 	widget.addStyle("text-align","center");
 	widget.addStyle("color","Black");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_categoria__30(Widget widget)
+{
+	widget.addStyle("left","402px");
+	widget.addStyle("top","20px");
+	widget.addStyle("width","125px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vmp_categoria__40(Widget widget)
+{
+	widget.addAttribute("field_weight","299");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
+	widget.addAttribute("displaywidth","125");
+	widget.addAttribute("name",".top:vmp_categoria.");
+	widget.addAttribute("displayleft","402");
+	widget.addAttribute("size","20");
+	widget.addAttribute("headertitle","vmp_categoria");
+	widget.addAttribute("displaytop","20");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("title","vmp_categoria");
+	widget.addAttribute("fieldwidth","125");
+	widget.setClass("textfield");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_codigo__30(Widget widget)
+{
+	widget.addStyle("left","10px");
+	widget.addStyle("top","20px");
+	widget.addStyle("width","92px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vmp_codigo__40(Widget widget)
+{
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
+	widget.addAttribute("displaywidth","92");
+	widget.addAttribute("name",".top:vmp_codigo.");
+	widget.addAttribute("displayleft","10");
+	widget.addAttribute("size","15");
+	widget.addAttribute("headertitle","vmp_codigo");
+	widget.addAttribute("displaytop","20");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("title","vmp_codigo");
+	widget.addAttribute("fieldwidth","92");
+	widget.setClass("textfield");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vmp_descripcion__30(Widget widget)
+{
+	widget.addStyle("left","102px");
+	widget.addStyle("top","20px");
+	widget.addStyle("width","300px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vmp_descripcion__40(Widget widget)
+{
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("type","text");
+	widget.addAttribute("displaywidth","300");
+	widget.addAttribute("name",".top:vmp_descripcion.");
+	widget.addAttribute("displayleft","102");
+	widget.addAttribute("size","50");
+	widget.addAttribute("headertitle","vmp_descripcion");
+	widget.addAttribute("displaytop","20");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("title","vmp_descripcion");
+	widget.addAttribute("fieldwidth","300");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1170,36 +1170,6 @@ private void dodiv_RepeatingArea1__10(Widget div_RepeatingArea1__10)
         {
         ((ContainerWidget)div_RepeatingArea1__10).addComponent(RepeatingArea1__20,"RepeatingArea1_");
         setAttrFor_RepeatingArea1__20(RepeatingArea1__20);
-        DivPanelWidget div_vmp_codigo__30 = new DivPanelWidget();
-            {
-            ((ContainerWidget)RepeatingArea1__20).addComponent(div_vmp_codigo__30,"div_vmp_codigo_");
-            setAttrFor_div_vmp_codigo__30(div_vmp_codigo__30);
-            TextWidget vmp_codigo__40 = new TextWidget();
-                {
-                ((ContainerWidget)div_vmp_codigo__30).addComponent(vmp_codigo__40,"vmp_codigo_");
-                setAttrFor_vmp_codigo__40(vmp_codigo__40);
-                }
-            }
-        DivPanelWidget div_vmp_categoria__30 = new DivPanelWidget();
-            {
-            ((ContainerWidget)RepeatingArea1__20).addComponent(div_vmp_categoria__30,"div_vmp_categoria_");
-            setAttrFor_div_vmp_categoria__30(div_vmp_categoria__30);
-            TextWidget vmp_categoria__40 = new TextWidget();
-                {
-                ((ContainerWidget)div_vmp_categoria__30).addComponent(vmp_categoria__40,"vmp_categoria_");
-                setAttrFor_vmp_categoria__40(vmp_categoria__40);
-                }
-            }
-        DivPanelWidget div_vmp_descripcion__30 = new DivPanelWidget();
-            {
-            ((ContainerWidget)RepeatingArea1__20).addComponent(div_vmp_descripcion__30,"div_vmp_descripcion_");
-            setAttrFor_div_vmp_descripcion__30(div_vmp_descripcion__30);
-            TextWidget vmp_descripcion__40 = new TextWidget();
-                {
-                ((ContainerWidget)div_vmp_descripcion__30).addComponent(vmp_descripcion__40,"vmp_descripcion_");
-                setAttrFor_vmp_descripcion__40(vmp_descripcion__40);
-                }
-            }
         DivPanelWidget div_Box__30 = new DivPanelWidget();
             {
             ((ContainerWidget)RepeatingArea1__20).addComponent(div_Box__30,"div_Box_");
@@ -1238,6 +1208,36 @@ private void dodiv_RepeatingArea1__10(Widget div_RepeatingArea1__10)
                         setAttrFor_Label1__61(Label1__61);
                         }
                     }
+                }
+            }
+        DivPanelWidget div_vmp_categoria__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)RepeatingArea1__20).addComponent(div_vmp_categoria__30,"div_vmp_categoria_");
+            setAttrFor_div_vmp_categoria__30(div_vmp_categoria__30);
+            TextWidget vmp_categoria__40 = new TextWidget();
+                {
+                ((ContainerWidget)div_vmp_categoria__30).addComponent(vmp_categoria__40,"vmp_categoria_");
+                setAttrFor_vmp_categoria__40(vmp_categoria__40);
+                }
+            }
+        DivPanelWidget div_vmp_codigo__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)RepeatingArea1__20).addComponent(div_vmp_codigo__30,"div_vmp_codigo_");
+            setAttrFor_div_vmp_codigo__30(div_vmp_codigo__30);
+            TextWidget vmp_codigo__40 = new TextWidget();
+                {
+                ((ContainerWidget)div_vmp_codigo__30).addComponent(vmp_codigo__40,"vmp_codigo_");
+                setAttrFor_vmp_codigo__40(vmp_codigo__40);
+                }
+            }
+        DivPanelWidget div_vmp_descripcion__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)RepeatingArea1__20).addComponent(div_vmp_descripcion__30,"div_vmp_descripcion_");
+            setAttrFor_div_vmp_descripcion__30(div_vmp_descripcion__30);
+            TextWidget vmp_descripcion__40 = new TextWidget();
+                {
+                ((ContainerWidget)div_vmp_descripcion__30).addComponent(vmp_descripcion__40,"vmp_descripcion_");
+                setAttrFor_vmp_descripcion__40(vmp_descripcion__40);
                 }
             }
         DivPanelWidget div_vmp_categoria_0_30 = new DivPanelWidget();

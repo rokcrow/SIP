@@ -199,12 +199,12 @@ private void setAttrFor_div_label1__30(Widget widget)
 private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","Reportes");
-	widget.addAttribute("displaywidth","522");
-	widget.addAttribute("id",".top:box111:label1.");
-	widget.addAttribute("displayleft","241");
-	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
+	widget.addAttribute("displaytop","14");
 	widget.addStyle("text-align","left");
+	widget.addAttribute("id",".top:box111:label1.");
+	widget.addAttribute("displaywidth","522");
+	widget.addAttribute("displayleft","241");
 	widget.addStyle("overflow","hidden");
 }
 

@@ -24,6 +24,7 @@ private void setAttrFor_this(Widget widget)
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","1025");
 	widget.addAttribute("fieldheight","1025");
+	widget.addAttribute("title","Seguimiento de Prospectos");
 	widget.addAttribute("fieldwidth","1209");
 	widget.setClass("form");
 }

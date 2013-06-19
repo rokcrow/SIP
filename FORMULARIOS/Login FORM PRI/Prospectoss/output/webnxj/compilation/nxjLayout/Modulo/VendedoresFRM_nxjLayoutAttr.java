@@ -40,10 +40,10 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("displayheight","466");
+	widget.addAttribute("displaytop","30");
 	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
-	widget.addAttribute("displaytop","30");
-	widget.addAttribute("displayheight","466");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -53,8 +53,6 @@ private void setAttrFor_div_RepeatingArea1__30(Widget widget)
 
 private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
-	widget.addAttribute("list_columns","view1:vvh_vendedora.0:118;view1:NombVend.118:318");
-	widget.addAttribute("occurrences","14");
 	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)RepeatingArea1.");
 	widget.addAttribute("id","view1:RepeatingArea1.");
 	widget.addStyle("overflow","hidden");
@@ -62,10 +60,6 @@ private void setAttrFor_RepeatingArea1__40(Widget widget)
 
 private void setAttrFor_div_UnifyRepeatingArea_50(Widget widget)
 {
-	widget.addStyle("left","10px");
-	widget.addStyle("top","24px");
-	widget.addStyle("width","456px");
-	widget.addStyle("height","236px");
 }
 
 private void setAttrFor_div_Box__50(Widget widget)
