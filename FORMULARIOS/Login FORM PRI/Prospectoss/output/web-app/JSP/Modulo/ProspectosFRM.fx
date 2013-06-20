@@ -11,6 +11,7 @@
     form_width = "1227"
     foundation_type = "Classes/Foundation/Form"
     header = "default"
+    localized = "true"
     menu = "default"
     style_class = "form"
     uid_prefix = "modulo_form1_1369321540519"

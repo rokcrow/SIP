@@ -1333,7 +1333,7 @@ private void setAttrFor_div_Label46__10(Widget widget)
 
 private void setAttrFor_Label46__20(Widget widget)
 {
-	widget.addAttribute("labeltitle","Grado de Interes");
+	widget.addAttribute("labeltitle","Grado de Interés");
 	widget.addAttribute("displaywidth","108");
 	widget.addAttribute("id",".top:Label46.");
 	widget.addAttribute("displayleft","473");

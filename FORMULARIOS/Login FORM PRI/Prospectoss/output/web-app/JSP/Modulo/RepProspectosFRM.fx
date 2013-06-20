@@ -7,6 +7,7 @@
     form_height = "413"
     form_width = "1198"
     foundation_type = "Classes/Foundation/Form"
+    localized = "true"
     stop_without_fields = "false"
     style_class = "form"
     uid_prefix = "modulo_form1_1371068984916"

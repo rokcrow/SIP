@@ -290,16 +290,16 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 187px; left: 451px; width:62px; height:16px">
+                    style="position: absolute; top: 187px; left: 448px; width:86px; height:16px">
                     
                     
                     <label
                         binary_variables=""
                         class="label"
                         displayheight="16"
-                        displayleft="451"
+                        displayleft="448"
                         displaytop="187"
-                        displaywidth="62"
+                        displaywidth="86"
                         id="cajagrandeLogin:label31."
                         key="cajagrandeLogin:label31."
                         labelalign="left"

@@ -2,7 +2,7 @@
     binary_variables = ""
     field_order = ""
     form_height = "1505"
-    form_width = "1077"
+    form_width = "1055"
     object_type = "data_view"
     style_class = "form"
     view = "form"

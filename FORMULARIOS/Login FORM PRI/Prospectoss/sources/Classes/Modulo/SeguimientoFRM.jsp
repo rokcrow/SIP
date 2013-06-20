@@ -1,4 +1,4 @@
-<html title="Seguimiento de Prospectos">
+<html title="SeguimientodeProspectos1">
 <head>
 
 </head>
@@ -19,6 +19,7 @@
         form_height="1025"
         form_width="1209"
         foundation_type="Classes/Foundation/Form"
+        localized="true"
         name="NXJForm"
         target_table="PUBLIC.vpp_prospectos"
         uid_prefix="form1_1371588526491"
@@ -611,7 +612,7 @@
                                 key="CajaSegui:box111:label1."
                                 kind="instance"
                                 labelalign="left"
-                                labeltitle="SEGUIMIENTO DE PROSPECTOS"
+                                labeltitle="SEGUIMIENTODEPROSPECTOS"
                                 original_name="label1"
                                 uid="form1_1371588526491_624e34f928f8586fb84ca3c2412c191af5f96f12_1371589158625"
                                 uid_to_name=""
@@ -638,12 +639,12 @@
                                 id="CajaSegui:box111:label211."
                                 key="CajaSegui:box111:label211."
                                 labelalign="left"
-                                labeltitle="top: 1024"
+                                labeltitle="top1024"
                                 original_name="label2"
                                 target_field=""
                                 uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
                                 view="label">
-                                <nobr>top: 1024</nobr>
+                                <nobr>top1024</nobr>
                             </label>
 
                         </div>
@@ -723,13 +724,13 @@
                         id="CajaSegui:label1."
                         key="CajaSegui:label1."
                         labelalign="left"
-                        labeltitle="Número"
+                        labeltitle="Numero"
                         original_name="label1"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314716670"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>N&uacute;mero</nobr>
+                        <nobr>Numero</nobr>
                     </label>
 
                 </div>
@@ -751,13 +752,13 @@
                         id="CajaSegui:label10."
                         key="CajaSegui:label10."
                         labelalign="left"
-                        labeltitle="Teléfono Oficina"
+                        labeltitle="TelefonoOficina"
                         original_name="label10"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314890754"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Tel&eacute;fono Oficina</nobr>
+                        <nobr>TelefonoOficina</nobr>
                     </label>
 
                 </div>
@@ -779,7 +780,7 @@
                         id="CajaSegui:label11."
                         key="CajaSegui:label11."
                         labelalign="left"
-                        labeltitle="Datos del Prospecto"
+                        labeltitle="DatosdelProspecto"
                         original_name="label1"
                         target_field=""
                         uid="desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656"
@@ -788,7 +789,7 @@
                             font-family: Verdana;
                             font-size: 14px;
                             color: Black">
-                        <nobr>Datos del Prospecto</nobr>
+                        <nobr>DatosdelProspecto</nobr>
                     </label>
 
                 </div>
@@ -839,7 +840,7 @@
                         id="CajaSegui:label11211."
                         key="CajaSegui:label11211."
                         labelalign="left"
-                        labeltitle="Asesor de Ventas"
+                        labeltitle="AsesordeVentas"
                         original_name="label1"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_8f881d62e4f69ddd223110dc73ed230ca145b37b_1369335393547"
@@ -848,7 +849,7 @@
                             font-family: Verdana;
                             font-size: 14px;
                             color: Black">
-                        <nobr>Asesor de Ventas</nobr>
+                        <nobr>AsesordeVentas</nobr>
                     </label>
 
                 </div>
@@ -898,13 +899,13 @@
                         id="CajaSegui:label13."
                         key="CajaSegui:label13."
                         labelalign="left"
-                        labeltitle="Email 2"
+                        labeltitle="Email2"
                         original_name="label13"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314914577"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Email 2</nobr>
+                        <nobr>Email2</nobr>
                     </label>
 
                 </div>
@@ -926,13 +927,13 @@
                         id="CajaSegui:label14."
                         key="CajaSegui:label14."
                         labelalign="left"
-                        labeltitle="Vendedor(a) / Demostrador(a)"
+                        labeltitle="VendedoraDemostradora"
                         original_name="label14"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316397216"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Vendedor(a) / Demostrador(a)</nobr>
+                        <nobr>VendedoraDemostradora</nobr>
                     </label>
 
                 </div>
@@ -954,13 +955,13 @@
                         id="CajaSegui:label2."
                         key="CajaSegui:label2."
                         labelalign="left"
-                        labeltitle="Estado Prospecto"
+                        labeltitle="EstadoProspecto"
                         original_name="label2"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314722561"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Estado Prospecto</nobr>
+                        <nobr>EstadoProspecto</nobr>
                     </label>
 
                 </div>
@@ -982,13 +983,13 @@
                         id="CajaSegui:label3."
                         key="CajaSegui:label3."
                         labelalign="left"
-                        labeltitle="Fecha Estado"
+                        labeltitle="FechaEstado"
                         original_name="label3"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314726522"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Fecha Estado</nobr>
+                        <nobr>FechaEstado</nobr>
                     </label>
 
                 </div>
@@ -1038,13 +1039,13 @@
                         id="CajaSegui:label5."
                         key="CajaSegui:label5."
                         labelalign="left"
-                        labeltitle="Fecha Registro"
+                        labeltitle="FechaRegistro"
                         original_name="label5"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314732523"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Fecha Registro</nobr>
+                        <nobr>FechaRegistro</nobr>
                     </label>
 
                 </div>
@@ -1094,13 +1095,13 @@
                         id="CajaSegui:label7."
                         key="CajaSegui:label7."
                         labelalign="left"
-                        labeltitle="Dirección"
+                        labeltitle="Direccion"
                         original_name="label7"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314851028"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Direcci&oacute;n</nobr>
+                        <nobr>Direccion</nobr>
                     </label>
 
                 </div>
@@ -1122,13 +1123,13 @@
                         id="CajaSegui:label8."
                         key="CajaSegui:label8."
                         labelalign="left"
-                        labeltitle="País"
+                        labeltitle="Pais"
                         original_name="label8"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369314853819"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Pa&iacute;s</nobr>
+                        <nobr>Pais</nobr>
                     </label>
 
                 </div>
@@ -1381,7 +1382,7 @@
                         key="CajaSegui:vpp_estadopro."
                         multi_valued="true"
                         name="CajaSegui:vpp_estadopro."
-                        options="Activo=A&#59;Cliente Provivienda=B&#59;No aplica para comprar=C&#59;Compro a la competencia=D"
+                        options="Activo=A&#59;Cliente Provivienda=B&#59;No aplica para comprar=C&#59;Comproalacompetencia=D"
                         original_name="select1"
                         retrieve_value="true"
                         size="1"

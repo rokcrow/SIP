@@ -11,14 +11,15 @@
         class="form"
         commands=""
         connection="Connection1"
-        displayheight="465"
-        displaywidth="1196"
+        displayheight="469"
+        displaywidth="1279"
         field_order=""
         footer="none"
         form_height="469"
-        form_width="1199"
+        form_width="1279"
         foundation_type="Classes/Foundation/Form"
         header="none"
+        localized="true"
         menu="none"
         name="NXJForm"
         uid_prefix="modulo_form1_1369423869434"
@@ -255,7 +256,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:200px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:844px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -263,14 +264,14 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="522"
+                                displaywidth="844"
                                 foundation_type="Classes/Foundation/Label"
                                 id="cajagrandeMenu:cajaarribaMenu:label1."
-                                instancewidth="522"
+                                instancewidth="844"
                                 key="cajagrandeMenu:cajaarribaMenu:label1."
                                 kind="instance"
                                 labelalign="left"
-                                labeltitle="MENU DEL SISTEMA"
+                                labeltitle="MENUDELSISTEMA"
                                 original_name="label1"
                                 uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
                                 uid_to_name=""
@@ -327,12 +328,12 @@
                         id="cajagrandeMenu:label1."
                         key="cajagrandeMenu:label1."
                         labelalign="left"
-                        labeltitle="Sociedades Disponibles"
+                        labeltitle="SociedadesDisponibles"
                         original_name="label1"
                         uid="itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369580705909"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Sociedades Disponibles</nobr>
+                        <nobr>SociedadesDisponibles</nobr>
                     </label>
 
                 </div>
@@ -354,13 +355,13 @@
                         id="cajagrandeMenu:label11."
                         key="cajagrandeMenu:label11."
                         labelalign="left"
-                        labeltitle="Nombre del Formulario"
+                        labeltitle="NombredelFormulario"
                         original_name="label1"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369580830638"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Nombre del Formulario</nobr>
+                        <nobr>NombredelFormulario</nobr>
                     </label>
 
                 </div>

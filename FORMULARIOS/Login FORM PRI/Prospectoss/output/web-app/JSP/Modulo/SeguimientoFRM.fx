@@ -10,6 +10,7 @@
     form_height = "1025"
     form_width = "1209"
     foundation_type = "Classes/Foundation/Form"
+    localized = "true"
     style_class = "form"
     target_table = "PUBLIC.vpp_prospectos"
     uid_prefix = "form1_1371588526491"
@@ -698,7 +699,7 @@
         foreground_color = "Black"
         key = "CajaSegui:vpp_estadopro."
         multi_valued = "true"
-        options = "Activo=A;Cliente Provivienda=B;No aplica para comprar=C;Compro a la competencia=D"
+        options = "Activo=A;Cliente Provivienda=B;No aplica para comprar=C;Comproalacompetencia=D"
         original_name = "select1"
         retrieve_value = "true"
         style_class = "dropdown_list"
@@ -728,7 +729,7 @@
         target_field = "vpp_fecha"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
         updateable = "true"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "Date"
@@ -751,7 +752,7 @@
         target_field = "vpp_fechaestado"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
         updateable = "true"
-        view = "date">
+        view = "text">
     </field>
     <field 
         accell_type = "String"

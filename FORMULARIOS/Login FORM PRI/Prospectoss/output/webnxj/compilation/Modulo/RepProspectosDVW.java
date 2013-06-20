@@ -456,10 +456,10 @@ public class RepProspectosDVW
 	setStartInAddMode(true);
 	us$setBackgroundColor("#cccccc");
 	fecha1.setStyleClass("textfield");
-	fecha1.us$setView("text");
+	fecha1.us$setView("date");
 	fecha1.setFindable(false);
 	fecha2.setStyleClass("textfield");
-	fecha2.us$setView("text");
+	fecha2.us$setView("date");
 	fecha2.setFindable(false);
 	label1.setStyleClass("label");
 	label1.setFontSize("12");

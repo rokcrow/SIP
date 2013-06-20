@@ -13,7 +13,7 @@
         displaywidth="1055"
         field_order=""
         form_height="1505"
-        form_width="1077"
+        form_width="1055"
         name="NXJForm"
         object_type="data_view"
         view="form">
@@ -1235,12 +1235,12 @@
                         id=".top:Label46."
                         key=".top:Label46."
                         labelalign="left"
-                        labeltitle="Grado de Interes"
+                        labeltitle="Grado de Interés"
                         uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777586"
                         view="label"
                         style="font-size: 12px;
                             color: Black">
-                        <nobr>Grado de Interes</nobr>
+                        <nobr>Grado de Inter&eacute;s</nobr>
                     </label>
 
                 </div>
@@ -2617,7 +2617,7 @@
                         target_field="vpp_fecha"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
@@ -2651,7 +2651,7 @@
                         target_field="vpp_fecha_nacio"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
                         updateable="true"
-                        view="date"
+                        view="text"
                         style="font-size: 12px;
                             color: Black">
 
@@ -2688,7 +2688,7 @@
                         target_field="vpp_fecha_visita"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
@@ -2722,7 +2722,7 @@
                         target_field="vpp_fechaestado"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 

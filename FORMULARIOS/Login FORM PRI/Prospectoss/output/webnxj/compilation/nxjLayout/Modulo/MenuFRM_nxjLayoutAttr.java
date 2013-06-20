@@ -9,7 +9,7 @@ public class
 
 public MenuFRM_nxjLayoutAttr()
 {
-this.isLocalized = false;
+this.isLocalized = true;
 setAttrFor_this(this);
 DivPanelWidget div_cajagrandeMenu__10 = new DivPanelWidget();
 dodiv_cajagrandeMenu__10(div_cajagrandeMenu__10);
@@ -20,13 +20,14 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("header","none");
 	widget.addAttribute("footer","none");
 	widget.addAttribute("menu","none");
-	widget.addAttribute("displaywidth","1196");
+	widget.addAttribute("localized","true");
+	widget.addAttribute("displaywidth","1279");
 	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addStyle("background-color","#999999");
-	widget.addAttribute("displayheight","465");
+	widget.addAttribute("displayheight","469");
 	widget.addAttribute("fieldheight","469");
-	widget.addAttribute("fieldwidth","1199");
+	widget.addAttribute("fieldwidth","1279");
 	widget.setClass("form");
 }
 
@@ -235,21 +236,21 @@ private void setAttrFor_div_label1__50(Widget widget)
 {
 	widget.addStyle("left","241px");
 	widget.addStyle("top","14px");
-	widget.addStyle("width","522px");
+	widget.addStyle("width","844px");
 	widget.addStyle("height","23px");
 }
 
 private void setAttrFor_label1__60(Widget widget)
 {
-	widget.addAttribute("labeltitle","MENU DEL SISTEMA");
-	widget.addAttribute("displaywidth","522");
+	widget.addAttribute("labeltitle","MENUDELSISTEMA");
+	widget.addAttribute("displaywidth","844");
 	widget.addAttribute("id","cajagrandeMenu:cajaarribaMenu:label1.");
 	widget.addAttribute("displayleft","241");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
-	widget.addAttribute("fieldwidth","522");
+	widget.addAttribute("fieldwidth","844");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("instancewidth","522");
+	widget.addAttribute("instancewidth","844");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -285,7 +286,7 @@ private void setAttrFor_div_label1__30(Widget widget)
 
 private void setAttrFor_label1__40(Widget widget)
 {
-	widget.addAttribute("labeltitle","Sociedades Disponibles");
+	widget.addAttribute("labeltitle","SociedadesDisponibles");
 	widget.addAttribute("displaywidth","148");
 	widget.addAttribute("id","cajagrandeMenu:label1.");
 	widget.addAttribute("displayleft","365");
@@ -309,7 +310,7 @@ private void setAttrFor_div_label11__30(Widget widget)
 
 private void setAttrFor_label11__40(Widget widget)
 {
-	widget.addAttribute("labeltitle","Nombre del Formulario");
+	widget.addAttribute("labeltitle","NombredelFormulario");
 	widget.addAttribute("displaywidth","142");
 	widget.addAttribute("id","cajagrandeMenu:label11.");
 	widget.addAttribute("displayleft","365");

@@ -8,10 +8,10 @@
     <form
         binary_variables=""
         class="form"
-        displayheight="871"
-        displaywidth="1055"
+        displayheight="624"
+        displaywidth="1160"
         form_height="624"
-        form_width="1139"
+        form_width="1160"
         name="NXJForm"
         object_type="data_view"
         view="form">

@@ -9,7 +9,7 @@ public class
 
 public RepProspectosFRM_nxjLayoutAttr()
 {
-this.isLocalized = false;
+this.isLocalized = true;
 setAttrFor_this(this);
 DivPanelWidget div_view1__10 = new DivPanelWidget();
 dodiv_view1__10(div_view1__10);
@@ -18,6 +18,7 @@ dodiv_view1__10(div_view1__10);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
+	widget.addAttribute("localized","true");
 	widget.addAttribute("displaywidth","1198");
 	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
@@ -39,6 +40,8 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767438614-labeltitle","CodigoProyecto");
+	widget.addAttribute("parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767439751-labeltitle","CodigoVendedor");
 	widget.addAttribute("displaytop","30");
 	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","190");
@@ -160,7 +163,7 @@ private void setAttrFor_fecha1__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha1.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha1.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content/', '', '', '', '', '');");
+	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha1.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha1.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","140");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -178,7 +181,7 @@ private void setAttrFor_fecha2__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha2.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha2.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content/', '', '', '', '', '');");
+	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha2.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha2.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","140");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -187,12 +190,17 @@ private void setAttrFor_fecha2__40(Widget widget)
 
 private void setAttrFor_div_label1__30(Widget widget)
 {
+	widget.addStyle("left","112px");
+	widget.addStyle("top","127px");
+	widget.addStyle("width","103px");
+	widget.addStyle("height","16px");
 }
 
 private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.RepProspectosDVW)label1.");
 	widget.addAttribute("id","view1:label1.");
+	widget.addAttribute("labeltitle","CodigoProyecto");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -209,12 +217,17 @@ private void setAttrFor_label11__40(Widget widget)
 
 private void setAttrFor_div_label111__30(Widget widget)
 {
+	widget.addStyle("left","112px");
+	widget.addStyle("top","183px");
+	widget.addStyle("width","109px");
+	widget.addStyle("height","16px");
 }
 
 private void setAttrFor_label111__40(Widget widget)
 {
 	widget.addAttribute("_id","view1:(Modulo.RepProspectosDVW)label111.");
 	widget.addAttribute("id","view1:label111.");
+	widget.addAttribute("labeltitle","CodigoVendedor");
 	widget.addStyle("overflow","hidden");
 }
 
