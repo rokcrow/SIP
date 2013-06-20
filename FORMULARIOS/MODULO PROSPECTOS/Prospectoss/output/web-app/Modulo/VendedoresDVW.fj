@@ -1,0 +1,55 @@
+package Modulo;
+
+
+
+DATA VIEW VendedoresDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+
+    FIELD vvh_vendedora
+    {
+          WHEN VALUE CHANGES
+        {
+            EXEC SQL
+            SELECT vve_nombre FROM vve_vendedora
+            WHERE vve_codigo = :vvh_vendedora
+            INTO NombVend;
+        }
+    }
+    
+    FIELD NombVend
+    {
+    }
+    BOX Box
+    {
+    
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

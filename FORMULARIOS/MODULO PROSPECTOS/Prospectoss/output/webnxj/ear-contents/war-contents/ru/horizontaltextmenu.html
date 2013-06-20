@@ -1,0 +1,418 @@
+<html>
+<!--
+/*----------------------------------------------------------------------*
+ *	CLASS:	 	Horizontal Text Menu for Unify NXJ
+ *
+ *	ORIGINATOR:	aig
+ *	CREATION DATE:	Thu Apr 29 11:09:53 PDT 1999
+ *
+ *----------------------------------------------------------------------*/
+
+/**
+ * This HTML page displays the Unify NXJ Horizontal Text Menu.
+ *
+ * @author	aig
+ * @author	$Author: harada $	$State$
+ * @version	$Revision: 35573 $	$Date: 2005-09-22 19:14:48 -0700 (Thu, 22 Sep 2005) $
+ */
+-->
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title>Horizontal Text Menu wih application-specific commands</title>
+	<style type="text/css">
+<!--
+a { font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 10pt; }
+a:link { color: black; text-decoration: none; size: 10pt; }
+-->
+</style>
+	<script src="../adjustMenuHeight.js"> </script>
+
+    <script language="JavaScript">
+
+    // Suffix for normal image
+
+    var		NORMAL_SUFFIX		= "Off.gif";
+
+    // Suffix for the rollover image
+
+    var		ROLLOVER_SUFFIX		= "On.gif";
+
+	var		PREFERRED_HEIGHT	= "60";
+
+	var		PREFERRED_COLS			= "0,*";
+
+
+
+    function doMouseOver(
+    	link
+	)
+    {
+
+
+	var	name = link.name;
+	var	image = document.images[name];
+
+	if (image == null)
+	    {
+	    if (link.style.color == window.normalColor)
+		{
+		link.style.color           = window.activeColor;
+		link.style.backgroundColor = window.activeBackground;
+		}
+	    }
+	else
+	    {
+
+	    // If the current image ends with the "normal" suffix then
+	    // change the current image to the rollver image.
+
+	    var	suffix = image.src.indexOf(NORMAL_SUFFIX);
+
+	    if (suffix != -1)
+		{
+		image.src = image.src.substring(0, suffix) + ROLLOVER_SUFFIX;
+		}
+
+	    // If normalImages contains the name of the normal image then
+	    // reset it to the rollover image.
+
+	    if (window.normalImages != null)
+		{
+		var	command = image.name;
+		var	normalImage = window.normalImages[command];
+
+		suffix = normalImage.indexOf(NORMAL_SUFFIX);
+
+		if (suffix != -1)
+		    {
+		    window.normalImages[command]
+		    	= normalImage.substring(0, suffix) + ROLLOVER_SUFFIX;
+		    }
+		}
+	    }
+
+    }
+
+    function doMouseOut(
+    	link
+	)
+    {
+
+	var	name = link.name;
+	var	image = document.images[name];
+
+	if (image == null)
+	    {
+	    if (link.style.color == window.activeColor
+	        || link.style.color == window.altActiveColor)
+		{
+		link.style.color           = window.normalColor;
+		link.style.backgroundColor = "transparent";
+		}
+	    }
+	else 
+	    {
+
+	    // If the current image ends with the "rollover" suffix then
+	    // change the current image to the wnormal image.
+
+	    var	suffix = image.src.indexOf(ROLLOVER_SUFFIX);
+
+	    if (suffix != -1)
+		{
+		image.src = image.src.substring(0, suffix) + NORMAL_SUFFIX;
+		}
+
+	    // If normalImages contains the name of the rollover image then
+	    // reset it to the normal image.
+
+	    if (window.normalImages != null)
+		{
+		var	command = image.name;
+					  
+		var	normalImage = window.normalImages[command];
+
+		suffix = normalImage.indexOf(ROLLOVER_SUFFIX);
+
+		if (suffix != -1)
+		    {
+		    window.normalImages[command]
+			    = normalImage.substring(0, suffix) + NORMAL_SUFFIX;
+		    }
+		}
+	    }
+
+    }
+
+    function doOnLoad()
+    {
+
+	window.normalColor      = "black";
+	window.disabledColor    = "gray";
+	window.activeColor      = "#ffffff";
+	window.altActiveColor   = "rgb(255,255,255)";
+	window.activeBackground = "#5B7D9A";
+    	window.normalImages     = new Array();
+    	window.disabledImages   = new Array();
+
+	window.normalImages["CANCEL_ZOOM"]     
+				= "images/cancelzoomOff.gif";
+	window.normalImages["ADD_UPDATE"]      
+				= "images/addupdateOff.gif";
+	window.normalImages["CLEAR_TO_ADD"]    
+				= "images/cleartoaddOff.gif";
+	window.normalImages["CLEAR_TO_FIND"]   
+				= "images/cleartofindOff.gif";
+	window.normalImages["DELETE_RECORD"]   
+				= "images/deleterecordOff.gif";
+	window.normalImages["EXIT"]            
+				= "images/exitOff.gif";
+	window.normalImages["FIND"]            
+				= "images/findOff.gif";
+	window.normalImages["FIRST_RECORD"]    
+				= "images/firstrecordOff.gif";
+	window.normalImages["PREVIOUS_RECORD"] 
+				= "images/previousrecordOff.gif";
+	window.normalImages["PREVIOUS_SET"]    
+				= "images/previoussetOff.gif";
+	window.normalImages["NEXT_RECORD"]     
+				= "images/nextrecordOff.gif";
+	window.normalImages["NEXT_SET"]        
+				= "images/nextsetOff.gif";
+	window.normalImages["LAST_RECORD"]     
+				= "images/lastrecordOff.gif";
+	window.normalImages["PREVIOUS_FORM"]   
+				= "images/previousformOff.gif";
+	window.normalImages["NEXT_FORM"]       
+				= "images/nextformOff.gif";
+	window.normalImages["ZOOM"]            
+				= "images/zoomOff.gif";
+	window.normalImages["HELP"]            
+				= "images/helpOff.gif";
+
+
+	window.disabledImages["CANCEL_ZOOM"]     
+				= "images/cancelzoomstippled.gif";
+	window.disabledImages["ADD_UPDATE"]      
+				= "images/addupdatestippled.gif";
+	window.disabledImages["CLEAR_TO_ADD"]    
+				= "images/cleartoaddstippled.gif";
+	window.disabledImages["CLEAR_TO_FIND"]   
+				= "images/cleartofindstippled.gif";
+	window.disabledImages["DELETE_RECORD"]   
+				= "images/deleterecordstippled.gif";
+	window.disabledImages["EXIT"]            
+				= "images/exitstippled.gif";
+	window.disabledImages["FIND"]            
+				= "images/findstippled.gif";
+	window.disabledImages["FIRST_RECORD"]    
+				= "images/firstrecordstippled.gif";
+	window.disabledImages["PREVIOUS_RECORD"] 
+				= "images/previousrecordstippled.gif";
+	window.disabledImages["PREVIOUS_SET"]    
+				= "images/previoussetstippled.gif";
+	window.disabledImages["NEXT_RECORD"]     
+				= "images/nextrecordstippled.gif";
+	window.disabledImages["NEXT_SET"]        
+				= "images/nextsetstippled.gif";
+	window.disabledImages["LAST_RECORD"]     
+				= "images/lastrecordstippled.gif";
+	window.disabledImages["PREVIOUS_FORM"]   
+				= "images/previousformstippled.gif";
+	window.disabledImages["NEXT_FORM"]       
+				= "images/nextformstippled.gif";
+	window.disabledImages["ZOOM"]            
+				= "images/zoomstippled.gif";
+	window.disabledImages["HELP"]            
+				= "images/helpstippled.gif";
+
+	// If the ClientManager has already been initialized then
+	// set the link states.  This handles the case where the
+	// mainFrame is loaded first or where the two frames are
+	// loaded in parallel.
+
+	if (window.parent.clientManager != null)
+	    {
+	    window.parent.clientManager.setControlStates(true);
+	    }
+
+	// adjust the menu frame height
+	adjustMenuHeight(PREFERRED_HEIGHT, PREFERRED_COLS);
+
+    }
+
+
+
+    </script>
+</head>
+
+  
+<body onLoad=doOnLoad() topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0">
+
+    <!-- In order to use imane buttons, we need a form.  However,
+         we never want the form to be submitted.  We just want to
+	 handle the mouse clicks.  We prevent the form from being
+	 submitted bt having an onSubmit handler that returns false.
+
+    -->
+
+  <form name="form" onSubmit="return false">
+
+			
+  <table cellpadding="0"
+         cellspacing="0"
+	 border="0"
+	 align=left 
+	 valign=top
+	 width="600">
+    <tr> 
+      <td align=center> <a  href="#"
+	NAME="PREVIOUS_FORM" 
+	TITLE="Вернуться к предыдущей форме" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" 
+	style="color: gray; text-decoration: none; size: 10pt">Назад</a>
+      </td>
+      <td align=center> <a  href="#"  NAME="NEXT_FORM" 
+	TITLE="Перейти к следующей форме" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Вперед</a></td>
+      <td align=center> <a  href="#" 
+	NAME="CLEAR_TO_FIND" 
+	TITLE="Задать критерии для поиска" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Поиск</a></td>
+      <td align=center> <a  href="#" 
+	NAME="FIND" 
+	TITLE="Искать по заданным критериям" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Искать</a></td>
+      <td align=center> <a  href="#" 
+	NAME="CLEAR_TO_ADD" 
+	TITLE="Начать ввод новой записи" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Добавить</a></td>
+      <td align=center> <a  href="#" 
+	NAME="ADD_UPDATE" 
+	TITLE="Сохранить текущую запись в базе данных" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Сохранить</a></td>
+      <td align=center> <a  href="#" 
+	NAME="DELETE_RECORD" 
+	TITLE="Удалить текущую запись из базы данных" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Удалить</a></td>
+      <td align=center> <a  href="#" 
+	NAME="ZOOM" 
+	TITLE="Перейти к форме выбора" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Выбор</a></td>
+      <td align=center> <a  href="#" 
+	NAME="CANCEL_ZOOM" 
+	TITLE="Отказаться от выбора" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Отказ</a></td>
+      <td align=center> <a  href="#" 
+	NAME="EXIT" 
+	TITLE="Выйти из приложения" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Выход</a></td>
+    </tr>
+    <tr> 
+      <td align=center colspan="10"> 
+        <hr size="0">
+      </td>
+    </tr>
+    <tr> 
+      <td align=center colspan="10"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="9%" height="2"> 
+              <div align="center"><a  href="#" 
+	name="HELP"
+	TITLE="Вывести подсказку для текущего поля" 
+	onMouseOver="doMouseOver(this)"
+	onMouseOut="doMouseOut(this)" style="color: gray; text-decoration: none; size: 10pt">Помощь</a></div>
+            </td>
+            <td width="44%"> 
+              <div align="center"><font size="5" face="Arial, Helvetica, sans-serif"><b><font color="#033864" size="2">Powered 
+                by- </font> <font color="#033864" size="4"> Unify NXJ</font></b></font></div>
+            </td>
+            <td width="47%" height="2"> 
+              <div align="right"><a href="#"
+		    name="FIRST_RECORD"
+		    class="UNDERLINE"
+		    TITLE="Показать первую запись"
+		    onMouseOver="doMouseOver(this)"
+		    onMouseOut="doMouseOut(this)"
+		    style="color:gray; 
+		           font-family:Arial, Helvetica, sans-serif;
+			   font-size: 12pt;
+			   font-weight: bold">
+		       |&lt;&lt;&nbsp
+		    </a>
+			<a href="#"
+		    name="PREVIOUS_SET"
+		    TITLE="Показать предыдущую выборку"
+		    onMouseOver="doMouseOver(this)"
+		    onMouseOut="doMouseOut(this)"
+		    style="color:gray; 
+		           font-family:Arial, Helvetica, sans-serif;
+			   font-size: 12pt;
+			   font-weight: bold">
+		    &lt;&lt;</a>&nbsp;&nbsp; 
+			<a href="#"
+		    name="PREVIOUS_RECORD"
+		    TITLE="Показать предыдущую запись"
+		    onMouseOver="doMouseOver(this)"
+		    onMouseOut="doMouseOut(this)"
+		    style="color:gray; 
+		           font-family:Arial, Helvetica, sans-serif;
+			   font-size: 12pt;
+			   font-weight: bold">
+		    &lt; 
+                 </a> &nbsp;&nbsp; <a href="#"
+		    name="NEXT_RECORD"
+		    TITLE="Показать следующую запись"
+		    onMouseOver="doMouseOver(this)"
+		    onMouseOut="doMouseOut(this)"
+		    style="color:gray; 
+		           font-family:Arial, Helvetica, sans-serif;
+			   font-size: 12pt;
+			   font-weight: bold">
+                &gt;  </a> &nbsp;&nbsp;
+		<a href="#"
+		    name="NEXT_SET"
+		    TITLE="Показать следующую выборку"
+		    onMouseOver="doMouseOver(this)"
+		    onMouseOut="doMouseOut(this)"
+		    style="color:gray; 
+		           font-family:Arial, Helvetica, sans-serif;
+			   font-size: 12pt;
+			   font-weight: bold">
+                &gt;&gt;  </a>
+		&nbsp;&nbsp;
+		<a href="#"
+		    name="LAST_RECORD"
+		    TITLE="Показать последнюю запись"
+		    onMouseOver="doMouseOver(this)"
+		    onMouseOut="doMouseOut(this)"
+		    style="color:gray; 
+		           font-family:Arial, Helvetica, sans-serif;
+			   font-size: 12pt;
+			   font-weight: bold">
+		    &gt;&gt;| </a>
+			</div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+    <p></p>
+    <p></p>
+    <p></p>
+    </form>
+  </body>
+</html>

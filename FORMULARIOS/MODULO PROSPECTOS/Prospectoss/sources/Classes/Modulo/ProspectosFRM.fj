@@ -1,0 +1,26 @@
+package Modulo;
+
+FORM ProspectosFRM
+{
+   
+    DATA VIEW view1 extends Modulo.ProspectosDVW
+    {
+    
+    
+        INIT DATA VIEW
+        {
+                     //session.displayToMessageBox("LA GAZZETA DELLO SPORT");
+                     cajaarribaRegistroP.actualempresa  = "CORRIERE DELLO SPORT";
+        }
+
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

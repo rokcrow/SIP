@@ -1,0 +1,52 @@
+package Modulo;
+
+
+
+DATA VIEW CorredoresDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD vco_codigo
+    {
+    }
+    
+    FIELD vco_telefono1
+    {
+    }
+    
+    FIELD vco_telefono2
+    {
+    }
+    
+    FIELD vco_nombre
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

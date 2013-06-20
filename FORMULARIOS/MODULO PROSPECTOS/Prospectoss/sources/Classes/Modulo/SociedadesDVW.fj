@@ -1,0 +1,54 @@
+package Modulo;
+
+
+
+DATA VIEW SociedadesDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD xem_codigo
+    {
+    }
+    
+    FIELD xem_nombre
+    {
+    }
+    
+    DATA VIEW PUBLIC_xel_emprelogo
+    {
+        FIELD  xel_codigo
+        {
+        }
+        NXJ FILE CHOOSER chooser1
+        {
+        }
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

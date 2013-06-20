@@ -1,0 +1,97 @@
+package Modulo;
+
+FORM LoginFRM
+{
+                    NullableString xus_password;
+                    NullableDate xus_factualiza;
+                    NullableNumeric intentos = 0;
+                    
+                    
+            
+ 
+                
+            
+                    COMMAND logincmd
+                        {
+                            if(cajagrandeLogin.xpr_password != xus_password)
+                            {
+                                intentos = intentos + 1;
+                                session.displayToMessageBox("Password Invalido");
+                                    
+                                    if(intentos < 4)
+                                      {  session.queueNextField(cajagrandeLogin.xpr_password);}
+                                    else
+                                    {
+                                        session.displayToMessageBox("Excedio el numero de intentos permitidos. Intente despues.");
+                                        session.wait(10);
+                                        session.queueCommand("exit");// NO FUNCIONA
+                                    }
+                                    
+                            }     
+                            else if ((session.currentDate - xus_factualiza) > 90)
+                            {
+                                session.displayToMessageBox("Su clave expiro. Proceda a cambiarla, por favor.");
+                                session.queueNextForm("Modulo.MenuFRM");
+                            }    
+                            else if (cajagrandeLogin.xpr_password == xus_password)
+                            { 
+                                session.queueNextForm("Modulo.MenuFRM");
+                           
+                            }
+                        }
+                    
+  
+
+    BOX cajagrandeLogin 
+    {
+                    FIELD xpr_usuario
+                    {
+                        ON DATA ACCEPT
+                        {
+                        EXEC SQL
+                        SELECT xus_password, xus_factualiza, xus_grupo
+                        FROM xus_usuarios
+                        WHERE xus_usuario = :xpr_usuario
+                        INTO xus_password, xus_factualiza, xpr_grupo;
+                            
+                            if(session.status != StatusCode.SS_NORM) 
+                            {
+                                session.displayToMessageBox("Usuario Invalido. Verifique por favor.");
+                                rejectOperation();
+                                session.queueCommand("CLEAR_TO_FIND");
+                            }
+                        }
+                        
+                        WHEN VALUE CHANGES
+                        {
+                            EXEC SQL 
+                            SELECT xus_password, xus_factualiza, xus_grupo
+                            FROM xus_usuarios
+                            WHERE xus_usuario = :xpr_usuario
+                            INTO xus_password, xus_factualiza, xpr_grupo;
+                        }
+                    }
+                    
+                    FIELD xpr_grupo
+                    {
+                
+                    }
+                    
+                    FIELD xpr_password
+                    {
+                    }
+                    
+                    
+                    BOX cajaarribaLogin{}
+                    BOX cajaabajoLogin{ }
+        }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
