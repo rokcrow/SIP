@@ -3,7 +3,7 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
 
     <form
         binary_variables=""

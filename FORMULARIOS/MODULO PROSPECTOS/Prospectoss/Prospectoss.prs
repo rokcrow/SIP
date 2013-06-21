@@ -846,7 +846,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ProyectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -862,7 +862,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ProspectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -880,22 +880,6 @@
           base-class=""
           tooltip=""
           language="jbiz"
-         >
-    </file>
-
-    <file
-         path="Classes/Modulo/SociedadesDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1371760635926"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;SociedadesDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -929,6 +913,21 @@
 
     <color
          rgb="Black"
+         >
+    </color>
+
+    <color
+         rgb="#009933"
+         >
+    </color>
+
+    <color
+         rgb="#009900"
+         >
+    </color>
+
+    <color
+         rgb="#00cc00"
          >
     </color>
 

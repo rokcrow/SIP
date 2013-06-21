@@ -161,18 +161,21 @@ FORM SeguimientoFRM
         {
             multi_valued NullableStringVariable  vps_proyecto;
             multi_valued NullableNumericVariable vps_prospecto;
+            
             ON CLEAR TO ADD
             {
               vps_fecha   = session.currentDate;
               vps_hora    = session.currentTime;
-         vps_usuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario; 
+              vps_usuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario; 
+              
               EXEC SQL	  
-              SELECT vps_consecu
-              FROM   vps_prosigue
-              WHERE  vps_proyecto  = :vpp_proyecto
-              AND    vps_prospecto = :vpp_numero
-              order by vps_consecu desc
-              into    consecutivo;
+                            SELECT vps_consecu
+                            FROM   vps_prosigue
+                            WHERE  vps_proyecto  = :vpp_proyecto
+                            AND    vps_prospecto = :vpp_numero
+                            ORDER BY  vps_consecu DESC
+                            INTO    consecutivo;
+                            
               if (session.status != StatusCode.SS_NORM)
                 {
                  if (session.status == StatusCode.SS_NOREC) 
@@ -190,18 +193,19 @@ FORM SeguimientoFRM
                  if (xpc_califica == "I") vps_estado = "S";
                    else if (xpc_califica == "M") vps_estado = "M";
                      else if (xpc_califica == "P") vps_estado = "N";
-                NullableDate f_pcontacto;
+               
+                 NullableDate f_pcontacto;
                
                 EXEC SQL
-                SELECT vps_f_pcontacto
-                FROM   vps_prosigue
-                WHERE  vps_proyecto = :vps_proyecto
-                AND    vps_prospecto = :vps_prospecto
-                AND    vps_consecu = :vps_consecu -1
-                into   f_pcontacto;
+                            SELECT vps_f_pcontacto
+                            FROM   vps_prosigue
+                            WHERE  vps_proyecto = :vps_proyecto
+                            AND    vps_prospecto = :vps_prospecto
+                            AND    vps_consecu = :vps_consecu -1
+                            INTO   f_pcontacto;
                 
                 if ( session.status != StatusCode.SS_NORM )
-                f_pcontacto = session.currentDate;
+                    f_pcontacto = session.currentDate;
                 if (vpy_tipo == "A") 
                     vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
                 else

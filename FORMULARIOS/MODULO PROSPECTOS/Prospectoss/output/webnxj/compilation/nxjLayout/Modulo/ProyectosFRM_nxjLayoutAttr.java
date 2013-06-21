@@ -19,8 +19,6 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1058");
 	widget.addAttribute("select_on_click","false");
 	widget.addAttribute("stylesheets","");
@@ -28,6 +26,8 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("fieldheight","720");
 	widget.addAttribute("fieldwidth","1058");
 	widget.addStyle("background-color","#999999");
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)

@@ -846,7 +846,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ProyectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -862,7 +862,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ProspectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -900,7 +900,7 @@
     </file>
 
     <file
-         path="Classes/Modulo/Form1.fx"
+         path="Classes/Modulo/SociedadesFRM.fx"
           type="form"
           state="4"
           flags="0"
@@ -911,7 +911,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;p&gt;&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;SociedadesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>
@@ -928,7 +928,22 @@
     </connection>
 
     <color
-         rgb="#ccccff"
+         rgb="#009933"
+         >
+    </color>
+
+    <color
+         rgb="#00cc00"
+         >
+    </color>
+
+    <color
+         rgb="Black"
+         >
+    </color>
+
+    <color
+         rgb="transparent"
          >
     </color>
 
@@ -944,16 +959,6 @@
 
     <color
          rgb="#666666"
-         >
-    </color>
-
-    <color
-         rgb="transparent"
-         >
-    </color>
-
-    <color
-         rgb="Black"
          >
     </color>
 

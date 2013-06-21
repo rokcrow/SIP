@@ -4,7 +4,7 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
 
     <form
         binary_variables=""
@@ -57,7 +57,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 127px; left: 112px; width:95px; height:16px">
+                    style="position: absolute; top: 127px; left: 112px; width:103px; height:16px">
                     
                     
                     <label
@@ -66,7 +66,7 @@
                         displayheight="16"
                         displayleft="112"
                         displaytop="127"
-                        displaywidth="95"
+                        displaywidth="103"
                         id=".top:Label1."
                         key=".top:Label1."
                         labelalign="left"
@@ -103,6 +103,34 @@
                         style="font-size: 12px;
                             color: Black">
                         <nobr>Fecha de Nacimiento</nobr>
+                    </label>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    align="left" 
+                    style="position: absolute; top: 62px; left: 27px; width:129px; height:14px">
+                    
+                    
+                    <label
+                        binary_variables=""
+                        class="label"
+                        displayheight="14"
+                        displayleft="27"
+                        displaytop="62"
+                        displaywidth="129"
+                        id=".top:Label11."
+                        key=".top:Label11."
+                        labelalign="left"
+                        labeltitle="Campos obligatorios"
+                        target_field=""
+                        uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831975022"
+                        view="label"
+                        style="font-size: 10px;
+                            color: Black">
+                        <nobr>Campos obligatorios</nobr>
                     </label>
 
                 </div>
@@ -1675,6 +1703,120 @@
                 <div
                     binary_variables=""
                     view="div"
+                    align="Left" 
+                    style="position: absolute; top: 128px; left: 98px; width:13px; height:16px">
+                    
+                    
+                    <label
+                        binary_variables=""
+                        class="label"
+                        displayheight="16"
+                        displayleft="98"
+                        displaytop="128"
+                        displaywidth="13"
+                        id=".top:label47."
+                        key=".top:label47."
+                        labeltitle="*"
+                        original_name="label47"
+                        uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831856214"
+                        view="label"
+                        style="font-family: KaiTi;
+                            font-size: 14px">
+                        <nobr>*</nobr>
+                    </label>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    align="left" 
+                    style="position: absolute; top: 185px; left: 98px; width:7px; height:16px">
+                    
+                    
+                    <label
+                        binary_variables=""
+                        class="label"
+                        displayheight="16"
+                        displayleft="98"
+                        displaytop="185"
+                        displaywidth="7"
+                        id=".top:label471."
+                        key=".top:label471."
+                        labelalign="left"
+                        labeltitle="*"
+                        original_name="label47"
+                        target_field=""
+                        uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831924190"
+                        view="label"
+                        style="font-family: KaiTi;
+                            font-size: 14px">
+                        <nobr>*</nobr>
+                    </label>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    align="left" 
+                    style="position: absolute; top: 237px; left: 98px; width:7px; height:16px">
+                    
+                    
+                    <label
+                        binary_variables=""
+                        class="label"
+                        displayheight="16"
+                        displayleft="98"
+                        displaytop="237"
+                        displaywidth="7"
+                        id=".top:label472."
+                        key=".top:label472."
+                        labelalign="left"
+                        labeltitle="*"
+                        original_name="label47"
+                        target_field=""
+                        uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831934046"
+                        view="label"
+                        style="font-family: KaiTi;
+                            font-size: 14px">
+                        <nobr>*</nobr>
+                    </label>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    align="left" 
+                    style="position: absolute; top: 63px; left: 17px; width:7px; height:16px">
+                    
+                    
+                    <label
+                        binary_variables=""
+                        class="label"
+                        displayheight="16"
+                        displayleft="17"
+                        displaytop="63"
+                        displaywidth="7"
+                        id=".top:label473."
+                        key=".top:label473."
+                        labelalign="left"
+                        labeltitle="*"
+                        original_name="label47"
+                        target_field=""
+                        uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831960566"
+                        view="label"
+                        style="font-family: KaiTi;
+                            font-size: 14px">
+                        <nobr>*</nobr>
+                    </label>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
                     style="position: absolute; top: 558px; left: 7px; width:988px; height:1px">
 
                     <div
@@ -2590,7 +2732,7 @@
                         target_field="vpp_fecha"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2624,7 +2766,7 @@
                         target_field="vpp_fecha_nacio"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 
@@ -2661,7 +2803,7 @@
                         target_field="vpp_fecha_visita"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2695,7 +2837,7 @@
                         target_field="vpp_fechaestado"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -3304,6 +3446,7 @@
                         field_type="SELECT"
                         field_weight="3999"
                         findable="true"
+                        immediate="true"
                         key=".top:vpp_referido_sn."
                         multi_valued="true"
                         name=".top:vpp_referido_sn."

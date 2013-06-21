@@ -3,7 +3,7 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
 
     <form
         binary_variables=""
@@ -66,9 +66,9 @@
                         id=".top:RepeatingArea1."
                         key=".top:RepeatingArea1."
                         kind="repeating_area"
-                        list_columns=".top:vvh_vendedora.0:118;.top:NombVend.118:318"
-                        occurrences="1000"
-                        repeat_style="List"
+                        list_columns=".top:vvh_vendedora.0:118;.top:NombVend.118:339"
+                        occurrences="18"
+                        repeat_style="Grid"
                         row_class="ROW"
                         selected_row_class="selected_row"
                         uid="parametros_form1_1369255928704_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369256310312"
@@ -77,108 +77,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 10px; width:456px; height:14px">
-
-                            <fieldset
-                                binary_variables=""
-                                class="header"
-                                commands=""
-                                displayheight="14"
-                                displayleft="10"
-                                displaytop="0"
-                                displaywidth="456"
-                                id=".top:Box."
-                                key=".top:Box."
-                                original_name="Box"
-                                uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644153"
-                                view="fieldset"
-                                style="border-style:none">
-
-                                <div
-                                    binary_variables=""
-                                    view="div"
-                                    align="center" 
-                                    style="position: absolute; top: 0px; left: 10px; width:118px; height:14px">
-                                    
-                                    
-                                    <label
-                                        binary_variables=""
-                                        displayheight="14"
-                                        displayleft="10"
-                                        displaytop="0"
-                                        displaywidth="118"
-                                        id=".top:Box:Label."
-                                        key=".top:Box:Label."
-                                        labelalign="center"
-                                        labeltitle="Vendedor (a)"
-                                        original_name="Label"
-                                        uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644181"
-                                        view="label">
-                                        <nobr>Vendedor (a)</nobr>
-                                    </label>
-
-                                </div>
-
-                                <div
-                                    binary_variables=""
-                                    view="div"
-                                    align="center" 
-                                    style="position: absolute; top: 0px; left: 128px; width:339px; height:14px">
-                                    
-                                    
-                                    <label
-                                        binary_variables=""
-                                        displayheight="14"
-                                        displayleft="128"
-                                        displaytop="0"
-                                        displaywidth="339"
-                                        id=".top:Box:Label."
-                                        key=".top:Box:Label."
-                                        labelalign="center"
-                                        labeltitle="Codigo"
-                                        original_name="Label"
-                                        uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644181"
-                                        view="label">
-                                        <nobr>Codigo</nobr>
-                                    </label>
-
-                                </div>
-
-                            </fieldset>
-
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 270px; left: 128px; width:339px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="128"
-                                displaytop="270"
-                                displaywidth="339"
-                                field_type="text"
-                                field_weight="199"
-                                findable="false"
-                                headertitle="Codigo"
-                                key=".top:NombVend."
-                                multi_valued="true"
-                                name=".top:NombVend."
-                                original_name="NombVend"
-                                size="26"
-                                target_field=""
-                                type="text"
-                                uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644182"
-                                view="text">
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 270px; left: 10px; width:118px; height:22px">
+                            style="position: absolute; top: 0px; left: 0px; width:118px; height:22px">
 
                             <input
                                 accell_type="String"
@@ -188,13 +87,13 @@
                                 db_type="String"
                                 displayheight="22"
                                 displayleft="10"
-                                displaytop="270"
+                                displaytop="20"
                                 displaywidth="118"
                                 field_length="3"
                                 field_type="text"
                                 field_weight="99"
                                 findable="true"
-                                headertitle="Vendedor (a)"
+                                headertitle="Codigo"
                                 key=".top:vvh_vendedora."
                                 multi_valued="true"
                                 name=".top:vvh_vendedora."
@@ -203,8 +102,35 @@
                                 size="19"
                                 target_field="vvh_vendedora"
                                 type="text"
-                                uid="itemsform_dataview1_1368038367945_c09c3c805aede7b255093bcda3ab892fab46b474_1371653644169"
+                                uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819637443"
                                 updateable="true"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            style="position: absolute; top: 0px; left: 118px; width:339px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="128"
+                                displaytop="20"
+                                displaywidth="339"
+                                field_type="text"
+                                field_weight="199"
+                                findable="false"
+                                headertitle="Vendedor (a)"
+                                key=".top:NombVend."
+                                multi_valued="true"
+                                name=".top:NombVend."
+                                original_name="NombVend"
+                                size="56"
+                                target_field=""
+                                type="text"
+                                uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819637456"
                                 view="text">
                         </div>
 

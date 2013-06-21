@@ -28,26 +28,6 @@
     </div>
     <control 
         binary_variables = ""
-        commands = ""
-        display_name = "Box"
-        key = ".top:Box."
-        original_name = "Box"
-        style_class = "header"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255025915"
-        view = "fieldset">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "Label"
-        font_weight = "bold"
-        foreground_color = "Black"
-        key = ".top:Box:Label."
-        original_name = "Label"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026235"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
         display_name = "Label1"
         font_weight = "bold"
         foreground_color = "Black"
@@ -65,9 +45,8 @@
         foreground_color = "Black"
         key = ".top:RepeatingArea1."
         kind = "repeating_area"
-        list_columns = "vmp_codigo.0:92;vmp_descripcion.92:300;vmp_categoria.392:114"
-        occurrences = "10"
-        repeat_style = "Fields"
+        list_columns = ".top:vmp_codigo.0:92;.top:vmp_descripcion.92:300;.top:vmp_categoria.392:125"
+        occurrences = "16"
         row_class = "ROW"
         selected_row_class = "selected_row"
         style_class = "repeating_area"
@@ -196,7 +175,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -217,7 +196,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -238,7 +217,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -259,7 +238,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -280,7 +259,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -301,7 +280,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -322,7 +301,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -343,7 +322,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -364,7 +343,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -385,7 +364,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_categoria"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
         updateable = "true"
         view = "text">
     </field>
@@ -405,7 +384,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -426,7 +405,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -447,7 +426,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -468,7 +447,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -489,7 +468,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -510,7 +489,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -531,7 +510,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -552,7 +531,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -573,7 +552,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -594,7 +573,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_codigo"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
         updateable = "true"
         view = "text">
     </field>
@@ -614,7 +593,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -635,7 +614,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -656,7 +635,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -677,7 +656,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -698,7 +677,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -719,7 +698,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -740,7 +719,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -761,7 +740,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -782,7 +761,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>
@@ -803,7 +782,7 @@
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmp_descripcion"
-        uid = "parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
         updateable = "true"
         view = "text">
     </field>

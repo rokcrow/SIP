@@ -929,7 +929,7 @@ public class SeguimientoFRM
 		    ResultSet us$rs8 = null;
 		    try
 			{
-			us$stmt8 = us$conn8.prepareStatement("SELECT vps_consecu FROM vps_prosigue WHERE vps_proyecto =  ?  AND vps_prospecto =  ?  order by vps_consecu desc");
+			us$stmt8 = us$conn8.prepareStatement("SELECT vps_consecu FROM vps_prosigue WHERE vps_proyecto =  ?  AND vps_prospecto =  ?  ORDER BY vps_consecu DESC");
 			vpp_proyecto.us$setSqlParameterValue(us$stmt8, 1);
 			vpp_numero.us$setSqlParameterValue(us$stmt8, 2);
 			us$rs8 = us$stmt8.executeQuery();
@@ -1235,7 +1235,7 @@ public class SeguimientoFRM
 		us$setConnectionName("Connection1");
 		us$setTargetTableName("PUBLIC.vps_prosigue");
 		setAutoFind(true);
-		setStartInAddMode(true);
+		setStartInAddMode(false);
 		setClearAfterAdd(false);
 		us$setBindingType("connection");
 		label1.setStyleClass("label");
@@ -1482,7 +1482,7 @@ public class SeguimientoFRM
 	    vpp_direccion.setFontSize("12");
 	    vpp_fecha.setStyleClass("textfield");
 	    vpp_fecha.us$setMultiValued(true);
-	    vpp_fecha.us$setView("date");
+	    vpp_fecha.us$setView("text");
 	    vpp_fecha.us$setCandidateTargetColumnName("vpp_fecha");
 	    vpp_fecha.setValueRetrievedDuringFetch(true);
 	    vpp_fecha.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
@@ -1496,7 +1496,7 @@ public class SeguimientoFRM
 	{
 	    vpp_fechaestado.setStyleClass("textfield");
 	    vpp_fechaestado.us$setMultiValued(true);
-	    vpp_fechaestado.us$setView("date");
+	    vpp_fechaestado.us$setView("text");
 	    vpp_fechaestado.us$setCandidateTargetColumnName("vpp_fechaestado");
 	    vpp_fechaestado.setValueRetrievedDuringFetch(true);
 	    vpp_fechaestado.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);

@@ -3,7 +3,7 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
 
     <form
         binary_variables=""
@@ -67,9 +67,9 @@
                         id=".top:RepeatingArea1."
                         key=".top:RepeatingArea1."
                         kind="repeating_area"
-                        list_columns="vmp_codigo.0:92;vmp_descripcion.92:300;vmp_categoria.392:114"
-                        occurrences="10"
-                        repeat_style="Fields"
+                        list_columns=".top:vmp_codigo.0:92;.top:vmp_descripcion.92:300;.top:vmp_categoria.392:125"
+                        occurrences="16"
+                        repeat_style="Grid"
                         row_class="ROW"
                         selected_row_class="selected_row"
                         uid="parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369254961254"
@@ -79,148 +79,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 10px; width:536px; height:14px">
-
-                            <fieldset
-                                binary_variables=""
-                                class="header"
-                                commands=""
-                                displayheight="14"
-                                displayleft="10"
-                                displaytop="0"
-                                displaywidth="536"
-                                id=".top:Box."
-                                key=".top:Box."
-                                original_name="Box"
-                                uid="parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255025915"
-                                view="fieldset"
-                                style="border-style:none">
-
-                                <div
-                                    binary_variables=""
-                                    view="div"
-                                    align="center" 
-                                    style="position: absolute; top: 0px; left: 437px; width:55px; height:14px">
-                                    
-                                    
-                                    <label
-                                        binary_variables=""
-                                        displayheight="14"
-                                        displayleft="402"
-                                        displaytop="0"
-                                        displaywidth="55"
-                                        id=".top:Box:Label."
-                                        key=".top:Box:Label."
-                                        labelalign="center"
-                                        labeltitle="Categoria"
-                                        original_name="Label"
-                                        uid="parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026235"
-                                        view="label"
-                                        style="font-weight: bold;
-                                            color: Black">
-                                        <nobr>Categoria</nobr>
-                                    </label>
-
-                                </div>
-
-                                <div
-                                    binary_variables=""
-                                    view="div"
-                                    align="center" 
-                                    style="position: absolute; top: 0px; left: 219px; width:65px; height:14px">
-                                    
-                                    
-                                    <label
-                                        binary_variables=""
-                                        displayheight="14"
-                                        displayleft="102"
-                                        displaytop="0"
-                                        displaywidth="65"
-                                        id=".top:Box:Label1."
-                                        key="Box:Label."
-                                        labelalign="center"
-                                        labeltitle="Descripcion"
-                                        original_name="Label"
-                                        target_field=""
-                                        uid="itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369583090171"
-                                        view="label"
-                                        style="font-weight: bold;
-                                            color: Black">
-                                        <nobr>Descripcion</nobr>
-                                    </label>
-
-                                </div>
-
-                                <div
-                                    binary_variables=""
-                                    view="div"
-                                    align="center" 
-                                    style="position: absolute; top: 0px; left: 37px; width:38px; height:14px">
-                                    
-                                    
-                                    <label
-                                        binary_variables=""
-                                        displayheight="14"
-                                        displayleft="10"
-                                        displaytop="0"
-                                        displaywidth="38"
-                                        id=".top:Box:Label1."
-                                        key="Box:Label."
-                                        labelalign="center"
-                                        labeltitle="Codigo"
-                                        original_name="Label"
-                                        target_field=""
-                                        uid="itemsform_dataview1_1368038367945_708bd40661cf4354755bed835ef17ac327fd9ef9_1369583090171"
-                                        view="label"
-                                        style="font-weight: bold;
-                                            color: Black">
-                                        <nobr>Codigo</nobr>
-                                    </label>
-
-                                </div>
-
-                            </fieldset>
-
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 20px; left: 402px; width:125px; height:22px">
-
-                            <input
-                                accell_type="String"
-                                binary_variables=""
-                                class="textfield"
-                                db_length="2"
-                                db_type="String"
-                                displayheight="22"
-                                displayleft="402"
-                                displaytop="20"
-                                displaywidth="125"
-                                field_length="2"
-                                field_type="text"
-                                field_weight="299"
-                                findable="true"
-                                headertitle="vmp_categoria"
-                                key=".top:vmp_categoria."
-                                multi_valued="true"
-                                name=".top:vmp_categoria."
-                                original_name="vmp_categoria"
-                                retrieve_value="true"
-                                size="20"
-                                target_field="vmp_categoria"
-                                title="vmp_categoria"
-                                type="text"
-                                uid="parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026244"
-                                updateable="true"
-                                view="text">
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 20px; left: 10px; width:92px; height:22px">
+                            style="position: absolute; top: 0px; left: 0px; width:92px; height:22px">
 
                             <input
                                 accell_type="String"
@@ -236,7 +95,7 @@
                                 field_type="text"
                                 field_weight="99"
                                 findable="true"
-                                headertitle="vmp_codigo"
+                                headertitle="Codigo"
                                 key=".top:vmp_codigo."
                                 multi_valued="true"
                                 name=".top:vmp_codigo."
@@ -246,7 +105,7 @@
                                 target_field="vmp_codigo"
                                 title="vmp_codigo"
                                 type="text"
-                                uid="parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026004"
+                                uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277072"
                                 updateable="true"
                                 view="text">
                         </div>
@@ -254,7 +113,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 20px; left: 102px; width:300px; height:22px">
+                            style="position: absolute; top: 0px; left: 92px; width:300px; height:22px">
 
                             <input
                                 accell_type="String"
@@ -270,7 +129,7 @@
                                 field_type="text"
                                 field_weight="199"
                                 findable="true"
-                                headertitle="vmp_descripcion"
+                                headertitle="Descripcion"
                                 key=".top:vmp_descripcion."
                                 multi_valued="true"
                                 name=".top:vmp_descripcion."
@@ -280,7 +139,41 @@
                                 target_field="vmp_descripcion"
                                 title="vmp_descripcion"
                                 type="text"
-                                uid="parametros_form1_1369254869826_647d3cfa19944ebba64c7194ad7d74d6de70b8f2_1369255026018"
+                                uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277084"
+                                updateable="true"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            style="position: absolute; top: 0px; left: 392px; width:125px; height:22px">
+
+                            <input
+                                accell_type="String"
+                                binary_variables=""
+                                class="textfield"
+                                db_length="2"
+                                db_type="String"
+                                displayheight="22"
+                                displayleft="402"
+                                displaytop="20"
+                                displaywidth="125"
+                                field_length="2"
+                                field_type="text"
+                                field_weight="299"
+                                findable="true"
+                                headertitle="Categoria"
+                                key=".top:vmp_categoria."
+                                multi_valued="true"
+                                name=".top:vmp_categoria."
+                                original_name="vmp_categoria"
+                                retrieve_value="true"
+                                size="20"
+                                target_field="vmp_categoria"
+                                title="vmp_categoria"
+                                type="text"
+                                uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371819277096"
                                 updateable="true"
                                 view="text">
                         </div>

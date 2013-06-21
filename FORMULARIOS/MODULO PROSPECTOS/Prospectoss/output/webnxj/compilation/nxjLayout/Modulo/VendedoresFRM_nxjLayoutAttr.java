@@ -19,14 +19,14 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1074");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displayheight","501");
 	widget.addAttribute("fieldheight","501");
 	widget.addAttribute("fieldwidth","1074");
 	widget.addStyle("background-color","#999999");
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -58,40 +58,17 @@ private void setAttrFor_RepeatingArea1__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_UnifyRepeatingArea_50(Widget widget)
+private void setAttrFor_div_vvh_vendedora__50(Widget widget)
 {
 }
 
-private void setAttrFor_div_Box__50(Widget widget)
+private void setAttrFor_vvh_vendedora__60(Widget widget)
 {
-}
-
-private void setAttrFor_Box__60(Widget widget)
-{
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box.");
-	widget.addAttribute("id","view1:Box.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_Label__70(Widget widget)
-{
-}
-
-private void setAttrFor_Label__80(Widget widget)
-{
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box:(Modulo.VendedoresDVW)Label.");
-	widget.addAttribute("id","view1:Box:Label.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_Label__71(Widget widget)
-{
-}
-
-private void setAttrFor_Label__81(Widget widget)
-{
-	widget.addAttribute("_id","view1:(Modulo.VendedoresDVW)Box:(Modulo.VendedoresDVW)Label.");
-	widget.addAttribute("id","view1:Box:Label.");
+	widget.addAttribute("type","text");
+	widget.addAttribute("fieldwidth","118");
+	widget.addAttribute("headertitle","Codigo");
+	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)vvh_vendedora.");
+	widget.addAttribute("name","view1:vvh_vendedora.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -102,20 +79,10 @@ private void setAttrFor_div_NombVend__50(Widget widget)
 private void setAttrFor_NombVend__60(Widget widget)
 {
 	widget.addAttribute("type","text");
+	widget.addAttribute("fieldwidth","339");
+	widget.addAttribute("headertitle","Vendedor (a)");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)NombVend.");
 	widget.addAttribute("name","view1:NombVend.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vvh_vendedora__50(Widget widget)
-{
-}
-
-private void setAttrFor_vvh_vendedora__60(Widget widget)
-{
-	widget.addAttribute("type","text");
-	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)vvh_vendedora.");
-	widget.addAttribute("name","view1:vvh_vendedora.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -224,44 +191,17 @@ private void dodiv_view1__10(Widget div_view1__10)
             if (RepeatingArea1__40 != null)
                 {
                 setAttrFor_RepeatingArea1__40(RepeatingArea1__40);
-                Widget div_UnifyRepeatingArea_50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_UnifyRepeatingArea");
-                if (div_UnifyRepeatingArea_50 != null)
+                Widget div_FXGRID_50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_FXGRID");
+                if (div_FXGRID_50 != null)
                     {
-                    setAttrFor_div_UnifyRepeatingArea_50(div_UnifyRepeatingArea_50);
-                    Widget UnifyRepeatingArea_60 = ((ContainerWidget)div_UnifyRepeatingArea_50).getComponent("UnifyRepeatingArea");
-                    if (UnifyRepeatingArea_60 != null)
-                        {
-                        UnifyRepeatingArea_60.addAttribute("id","view1:UnifyRepeatingArea");
-                        }
-                    }
-                Widget div_Box__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_Box_");
-                if (div_Box__50 != null)
+                Widget div_vvh_vendedora__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vvh_vendedora_");
+                if (div_vvh_vendedora__50 != null)
                     {
-                    setAttrFor_div_Box__50(div_Box__50);
-                    Widget Box__60 = ((ContainerWidget)div_Box__50).getComponent("Box_");
-                    if (Box__60 != null)
+                    setAttrFor_div_vvh_vendedora__50(div_vvh_vendedora__50);
+                    Widget vvh_vendedora__60 = ((ContainerWidget)div_vvh_vendedora__50).getComponent("vvh_vendedora_");
+                    if (vvh_vendedora__60 != null)
                         {
-                        setAttrFor_Box__60(Box__60);
-                        Widget div_Label__70 = ((ContainerWidget)Box__60).getComponent("div_Label_");
-                        if (div_Label__70 != null)
-                            {
-                            setAttrFor_div_Label__70(div_Label__70);
-                            Widget Label__80 = ((ContainerWidget)div_Label__70).getComponent("Label_");
-                            if (Label__80 != null)
-                                {
-                                setAttrFor_Label__80(Label__80);
-                                }
-                            }
-                        Widget div_Label__71 = ((ContainerWidget)Box__60).getComponent("div_Label_");
-                        if (div_Label__71 != null)
-                            {
-                            setAttrFor_div_Label__71(div_Label__71);
-                            Widget Label__81 = ((ContainerWidget)div_Label__71).getComponent("Label_");
-                            if (Label__81 != null)
-                                {
-                                setAttrFor_Label__81(Label__81);
-                                }
-                            }
+                        setAttrFor_vvh_vendedora__60(vvh_vendedora__60);
                         }
                     }
                 Widget div_NombVend__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_NombVend_");
@@ -274,15 +214,8 @@ private void dodiv_view1__10(Widget div_view1__10)
                         setAttrFor_NombVend__60(NombVend__60);
                         }
                     }
-                Widget div_vvh_vendedora__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_vvh_vendedora_");
-                if (div_vvh_vendedora__50 != null)
-                    {
-                    setAttrFor_div_vvh_vendedora__50(div_vvh_vendedora__50);
-                    Widget vvh_vendedora__60 = ((ContainerWidget)div_vvh_vendedora__50).getComponent("vvh_vendedora_");
-                    if (vvh_vendedora__60 != null)
-                        {
-                        setAttrFor_vvh_vendedora__60(vvh_vendedora__60);
-                        }
+                    div_FXGRID_50.addAttribute("id","view1_FXGRID");
+                    div_FXGRID_50.addAttribute("jsinit","   var view1_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Codigo', 	'1', 	'1', 	'118', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'', 'view1:vvh_vendedora.', '', ''), new NXJGridColumn( 	'Vendedor (a)', 	'1', 	'1', 	'339', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'', 'view1:NombVend.', '', '') ]; ; if (!window.namesToComponents['view1_FXGRID'])     {     window.namesToComponents['view1_FXGRID'] = new NXJGrid('view1_FXGRID', view1_RepeatingArea1__FXColumns, 16, null, null, '__NXJ_CONTEXT_PATH__/unify', '', '', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/');     } ");
                     }
                 }
             }

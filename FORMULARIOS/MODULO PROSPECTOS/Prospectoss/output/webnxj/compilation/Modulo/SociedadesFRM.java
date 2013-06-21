@@ -182,7 +182,7 @@ public class SociedadesFRM
 		Image1.setWidth(255);
 		Image1.setHeight(33);
 		chooser1.setStyleClass("file");
-		chooser1.setStorageVariable("xel_codigo");
+		chooser1.setStorageVariable("xel_logo");
 		label3.setStyleClass("label");
 		label3.setFontSize("12");
 		label31.setStyleClass("label");
@@ -314,6 +314,7 @@ public class SociedadesFRM
     {
 	us$setConnectionName("Connection1");
 	us$setTargetTableName("PUBLIC.xem_empresas");
+	setAutoFind(true);
 	setStartInAddMode(false);
 	us$setBindingType("connection");
 	Modulo.SociedadesFRM.this.cajagrandeSociedades.PUBLIC_xel_emprelogo1.us$setMasterDataView(Modulo.SociedadesFRM.this);

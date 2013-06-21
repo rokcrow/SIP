@@ -7,6 +7,7 @@
 
     <form
         aud_on_entry="false"
+        auto_find="true"
         binary_variables=""
         binding_type="connection"
         bloom_filter="00000000000400040000000000000000"
@@ -123,14 +124,15 @@
                             style="position: absolute; top: 114px; left: 66px; width:234px; height:24px">
 
                             <input
-                                binary_variables="Storage Variable=xel_codigo"
+                                binary_variables="Storage Variable=xel_logo"
                                 class="file"
                                 displayheight="27"
                                 displayleft="66"
                                 displaytop="114"
                                 displaywidth="234"
                                 field_type="file"
-                                file_target="xel_codigo"
+                                file_target="xel_logo"
+                                immediate="false"
                                 key="cajagrandeSociedades:PUBLIC_xel_emprelogo1:chooser1."
                                 name="cajagrandeSociedades:PUBLIC_xel_emprelogo1:chooser1."
                                 original_name="chooser1"
@@ -411,7 +413,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:132px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -419,7 +421,7 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="132"
+                                displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
                                 id="cajagrandeSociedades:box111:label1."
                                 instancewidth="522"

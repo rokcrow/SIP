@@ -57,7 +57,7 @@
                     style="position: absolute; top: 434px; left: 56px; width:880px; height:258px">
 
                     <div
-                        aud_on_entry="true"
+                        aud_on_entry="false"
                         auto_find="true"
                         binary_variables=""
                         binding_type="connection"

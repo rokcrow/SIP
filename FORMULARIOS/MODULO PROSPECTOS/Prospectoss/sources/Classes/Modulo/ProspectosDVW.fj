@@ -287,10 +287,13 @@ DATA VIEW ProspectosDVW
                             else vpp_actitiempo.nextField = "vpp_ingreso "; */
                             
                             if (vpp_actitiempo == "B") 
-                            {vpp_actilugar.stopForInput = false;}
-                            else  
-                            {//vpp_actitiempo.nextField ;
+                            {  
+                                vpp_actilugar = " ";
+                                vpp_actilugar.stopForInput = false;
                             }
+                            
+                            if (vpp_actitiempo == "A") 
+                            {vpp_actilugar.stopForInput = true;}
         }
     }
 
@@ -598,12 +601,24 @@ DATA VIEW ProspectosDVW
             {
                 if(vpp_referido_sn == "N")
                 {
+                    vpp_referido_nombre = " ";
+                    vpp_referido_telefono = " ";
+                    vpp_referido_celular = " "; 
+                    vpp_referido_correo = " ";
+                
                     vpp_referido_nombre.stopForInput = false;
                     vpp_referido_telefono.stopForInput = false;
                     vpp_referido_celular.stopForInput = false; 
+                    vpp_referido_correo.stopForInput = false;
                 }
-                else{}
-                //vpp_referido_sn.nextField;
+                
+                if(vpp_referido_sn == "S")
+                {
+                    vpp_referido_nombre.stopForInput = true;
+                    vpp_referido_telefono.stopForInput = true;
+                    vpp_referido_celular.stopForInput = true; 
+                    vpp_referido_correo.stopForInput = true;
+                }
             }
     }
 

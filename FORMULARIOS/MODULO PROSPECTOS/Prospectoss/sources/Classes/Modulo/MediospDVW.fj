@@ -24,10 +24,6 @@ DATA VIEW MediospDVW
     {
     
     }
-    BOX Box
-     {
-     }
-    
     FIELD vmp_categoria
     {
     }
@@ -39,8 +35,6 @@ DATA VIEW MediospDVW
     FIELD vmp_descripcion
     {
     }
-    
-
 }
 /*----------------------------------------------------------------------*
 * BEGIN MODIFICATION HISTORY

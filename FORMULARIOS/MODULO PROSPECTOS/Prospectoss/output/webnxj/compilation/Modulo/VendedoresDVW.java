@@ -185,23 +185,6 @@ public class VendedoresDVW
     } // vvh_vendedora
 
     public /*multi_valued*/ vvh_vendedora vvh_vendedora = new vvh_vendedora();
-    public class Box
-	extends com.unify.nxj.mgr.NXJBox
-    {
-	public NXJLabelControl Label = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label", false);
-
-	public Box(com.unify.nxj.mgr.NXJContainer enclosingContainer)
-	{
-	    super("Box", enclosingContainer);
-	    BoxpropertySetter_0();
-	} // <init>
-
-	private void BoxpropertySetter_0()
-	{
-	} // BoxpropertySetter_0
-    } // Box
-
-    public final Box Box = new Box(this);
     public class box11
 	extends com.unify.nxj.mgr.NXJBox
     {

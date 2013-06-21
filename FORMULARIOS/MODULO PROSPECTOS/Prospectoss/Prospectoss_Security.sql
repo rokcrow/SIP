@@ -62,6 +62,8 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.MenuFRM', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MediospFRM:INTERACTIVE-ADD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:cajagrandeSociedades:PUBLIC_xel_emprelogo1:INTERACTIVE-UPDATE', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.VendedoresFRM:DELETE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MenuFRM:DELETE', '', '0');
@@ -73,8 +75,6 @@ INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleLis
 VALUES         ('Prospectoss', 'classes', 'Modulo.LoginFRM:LOGINCMD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.RepProspectosFRM:FIND', '', '0');
-INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
-VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:box1:PUBLIC_xel_emprelogo1:INTERACTIVE-UPDATE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.SeguimientoFRM:CajaSegui:PUBLIC_vps_prosigue:INTERACTIVE-ADD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
@@ -106,8 +106,6 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.RepProspectosFRM:view1:INTERAC
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.RepProspectosFRM:INTERACTIVE-UPDATE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
-VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:box1:PUBLIC_xel_emprelogo1:INTERACTIVE-ADD', '', '0');
-INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.RepProspectosFRM:view1:REPORTECMD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProspectosFRM:view1:DELETE', '', '0');
@@ -122,11 +120,11 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.SeguimientoFRM:CajaSegui:PUBLI
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.CorredoresFRM', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
-VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:box1:PUBLIC_xel_emprelogo1:DELETE', '', '0');
-INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.RepProspectosFRM:view1:DELETE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProspectosFRM', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:cajagrandeSociedades:PUBLIC_xel_emprelogo1:DELETE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProyectosFRM:INTERACTIVE-UPDATE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
@@ -176,6 +174,10 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.VendedoresFRM', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProspectosFRM:view1:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:cajagrandeSociedades:PUBLIC_xel_emprelogo1:FIND', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:cajagrandeSociedades:PUBLIC_xel_emprelogo1:INTERACTIVE-ADD', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MediospFRM:INTERACTIVE-UPDATE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MediospFRM:view1:INTERACTIVE-UPDATE', '', '0');
@@ -197,8 +199,6 @@ INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleLis
 VALUES         ('Prospectoss', 'classes', 'Modulo.RepProspectosFRM:view1:INTERACTIVE-ADD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProyectosFRM:view1:FIND', '', '0');
-INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
-VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:box1:PUBLIC_xel_emprelogo1:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MenuFRM:INTERACTIVE-UPDATE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)

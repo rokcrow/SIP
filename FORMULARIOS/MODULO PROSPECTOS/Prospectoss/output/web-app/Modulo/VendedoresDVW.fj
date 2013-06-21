@@ -38,11 +38,6 @@ DATA VIEW VendedoresDVW
     FIELD NombVend
     {
     }
-    BOX Box
-    {
-    
-    }
-
 }
 /*----------------------------------------------------------------------*
 * BEGIN MODIFICATION HISTORY

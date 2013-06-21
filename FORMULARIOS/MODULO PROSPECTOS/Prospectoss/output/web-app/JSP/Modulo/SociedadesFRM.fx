@@ -1,5 +1,6 @@
 <form 
     aud_on_entry = "false"
+    auto_find = "true"
     background_color = "#999999"
     binary_variables = ""
     binding_type = "connection"
@@ -70,10 +71,11 @@
         view = "img">
     </control>
     <control 
-        binary_variables = "Storage Variable=xel_codigo"
+        binary_variables = "Storage Variable=xel_logo"
         display_name = "chooser1"
         field_type = "file"
-        file_target = "xel_codigo"
+        file_target = "xel_logo"
+        immediate = "false"
         key = "cajagrandeSociedades:PUBLIC_xel_emprelogo1:chooser1."
         original_name = "chooser1"
         style_class = "file"

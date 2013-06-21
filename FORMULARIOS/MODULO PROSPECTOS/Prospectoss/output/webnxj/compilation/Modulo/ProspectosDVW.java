@@ -352,6 +352,7 @@ public class ProspectosDVW
     private ProspectosDVW ProspectosDVW = this;
     public NXJLabelControl Label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label1", false);
     public NXJLabelControl Label10 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label10", false);
+    public NXJLabelControl Label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label11", false);
     public NXJLabelControl Label111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label111", false);
     public NXJLabelControl Label12 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label12", false);
     public NXJLabelControl Label13 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label13", false);
@@ -403,6 +404,10 @@ public class ProspectosDVW
     public NXJLabelControl label112 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label112", false);
     public NXJLabelControl label1121 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1121", false);
     public NXJLabelControl label11211 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11211", false);
+    public NXJLabelControl label47 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label47", false);
+    public NXJLabelControl label471 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label471", false);
+    public NXJLabelControl label472 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label472", false);
+    public NXJLabelControl label473 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label473", false);
     public class line1
 	extends ItemsForm.LineaRoja
     {
@@ -534,10 +539,12 @@ public class ProspectosDVW
 	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 	    if (us$registerPool.allocateRegister().load(vpp_actitiempo).eqOp("B").getBooleanValueNullOk())
 		{
+		vpp_actilugar.assign(us$registerPool.allocateRegister().load(" "));
 		vpp_actilugar.setStopForInput(false);
 		}
-	    else
+	    if (us$registerPool.allocateRegister().load(vpp_actitiempo).eqOp("A").getBooleanValueNullOk())
 		{
+		vpp_actilugar.setStopForInput(true);
 		}
 	} // onDataAccept
 
@@ -1728,12 +1735,21 @@ public class ProspectosDVW
 	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 	    if (us$registerPool.allocateRegister().load(vpp_referido_sn).eqOp("N").getBooleanValueNullOk())
 		{
+		vpp_referido_nombre.assign(us$registerPool.allocateRegister().load(" "));
+		vpp_referido_telefono.assign(us$registerPool.allocateRegister().load(" "));
+		vpp_referido_celular.assign(us$registerPool.allocateRegister().load(" "));
+		vpp_referido_correo.assign(us$registerPool.allocateRegister().load(" "));
 		vpp_referido_nombre.setStopForInput(false);
 		vpp_referido_telefono.setStopForInput(false);
 		vpp_referido_celular.setStopForInput(false);
+		vpp_referido_correo.setStopForInput(false);
 		}
-	    else
+	    if (us$registerPool.allocateRegister().load(vpp_referido_sn).eqOp("S").getBooleanValueNullOk())
 		{
+		vpp_referido_nombre.setStopForInput(true);
+		vpp_referido_telefono.setStopForInput(true);
+		vpp_referido_celular.setStopForInput(true);
+		vpp_referido_correo.setStopForInput(true);
 		}
 	} // onDataAccept
 
@@ -2174,6 +2190,9 @@ public class ProspectosDVW
 	Label10.setStyleClass("label");
 	Label10.setForegroundColor("Black");
 	Label10.setFontSize("12");
+	Label11.setStyleClass("label");
+	Label11.setForegroundColor("Black");
+	Label11.setFontSize("10");
 	Label111.setStyleClass("label");
 	Label111.setForegroundColor("Black");
 	Label111.setFontSize("12");
@@ -2335,6 +2354,18 @@ public class ProspectosDVW
 	label11211.setFontFamily("Verdana");
 	label11211.setFontSize("14");
 	label11211.us$setFontWeight("bold");
+	label47.setStyleClass("label");
+	label47.setFontFamily("KaiTi");
+	label47.setFontSize("14");
+	label471.setStyleClass("label");
+	label471.setFontFamily("KaiTi");
+	label471.setFontSize("14");
+	label472.setStyleClass("label");
+	label472.setFontFamily("KaiTi");
+	label472.setFontSize("14");
+	label473.setStyleClass("label");
+	label473.setFontFamily("KaiTi");
+	label473.setFontSize("14");
 	vco_nombre.setStyleClass("textfield");
 	vco_nombre.us$setView("text");
 	vco_nombre.setFindable(false);

@@ -50,6 +50,17 @@
     </control>
     <control 
         binary_variables = ""
+        display_name = "Label11"
+        font_size = "10"
+        foreground_color = "Black"
+        key = ".top:Label11."
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831975022"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
         display_name = "Label111"
         font_size = "12"
         foreground_color = "Black"
@@ -659,6 +670,53 @@
         style_class = "label"
         target_field = ""
         uid = "itemsform_dataview1_1368038367945_8f881d62e4f69ddd223110dc73ed230ca145b37b_1369335393547"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label47"
+        font_family = "KaiTi"
+        font_size = "14"
+        key = ".top:label47."
+        original_name = "label47"
+        style_class = "label"
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831856214"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label471"
+        font_family = "KaiTi"
+        font_size = "14"
+        key = ".top:label471."
+        original_name = "label47"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831924190"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label472"
+        font_family = "KaiTi"
+        font_size = "14"
+        key = ".top:label472."
+        original_name = "label47"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831934046"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label473"
+        font_family = "KaiTi"
+        font_size = "14"
+        key = ".top:label473."
+        original_name = "label47"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831960566"
         view = "label">
     </control>
     <control 
@@ -1711,6 +1769,7 @@
         findable = "true"
         font_size = "12"
         foreground_color = "Black"
+        immediate = "true"
         key = ".top:vpp_referido_sn."
         multi_valued = "true"
         options = "Si=S;No=N"
