@@ -268,6 +268,13 @@
      <env-entry-type>java.lang.String</env-entry-type>
    </env-entry>
   <env-entry>
+    <description>This entry provides the name of the default connection.  The default connection name is used by entry forms that are configured to inherit their connection name.
+    </description>
+    <env-entry-name>unify/defaultConnectionName</env-entry-name>
+    <env-entry-value>Connection1</env-entry-value>
+    <env-entry-type>java.lang.String</env-entry-type>
+  </env-entry>
+  <env-entry>
     <description>This entry provides the currency symbol to be used while displaying values of type AMOUNT. Specifying true for this property will imply that the property, unify/currencySymbol is also defined.
     </description>
     <env-entry-name>unify/useSpecifiedCurrencyValues</env-entry-name>

@@ -451,55 +451,6 @@
     </file>
 
     <file
-         path="Static_Content/application.properties"
-          type="property"
-          state="4"
-          flags="0"
-          timestamp="1369343406784"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip=""
-         >
-    </file>
-
-    <file
-         path="Classes/Modulo/ProspectosDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1369343411162"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ProspectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
-         path="Classes/Modulo/ProspectosFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1369343411226"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;ProspectosFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
          path="Classes/ItemsForm/Boton.fx"
           type="button"
           state="4"
@@ -665,22 +616,6 @@
           override-entry-point-name="false"
           expose-as-portlet="false"
           hide-entry-point="false"
-         >
-    </file>
-
-    <file
-         path="Classes/Modulo/ProyectosDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1370637843705"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ProyectosDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
@@ -879,6 +814,71 @@
           checked-in-path=""
           base-class=""
           tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;SeguimientoFRM&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Static_Content/application.properties"
+          type="property"
+          state="4"
+          flags="0"
+          timestamp="1371852493412"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/ProyectosDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371852691970"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/ProspectosDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371852713027"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/ProspectosFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1371852713048"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
           language="jbiz"
          >
     </file>

@@ -1544,33 +1544,6 @@
 
                         </div>
 
-                        <div
-                            binary_variables=""
-                            view="div"
-                            align="left" 
-                            style="position: absolute; top: 65px; left: 778px; width:55px; height:14px">
-                            
-                            
-                            <label
-                                binary_variables=""
-                                class="label"
-                                displayheight="21"
-                                displayleft="778"
-                                displaytop="65"
-                                displaywidth="55"
-                                id=".top:cajaarribaRegistroP:label211."
-                                key=".top:cajaarribaRegistroP:label211."
-                                labelalign="left"
-                                labeltitle="top: 1024"
-                                original_name="label2"
-                                target_field=""
-                                uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
-                                view="label">
-                                <nobr>top: 1024</nobr>
-                            </label>
-
-                        </div>
-
                     </fieldset>
 
                 </div>
