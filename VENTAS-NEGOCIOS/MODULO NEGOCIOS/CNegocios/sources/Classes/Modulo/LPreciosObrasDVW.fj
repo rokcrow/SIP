@@ -1,0 +1,52 @@
+package Modulo;
+
+
+
+DATA VIEW LPreciosObrasDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD textfield121
+    {
+    }
+    
+    FIELD textfield1
+    {
+    }
+    
+    FIELD textfield12
+    {
+    }
+    
+    FIELD textfield11
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+
