@@ -1,7 +1,7 @@
 <form 
     binary_variables = ""
-    form_height = "1053"
-    form_width = "1056"
+    form_height = "1060"
+    form_width = "1068"
     object_type = "data_view"
     style_class = "form"
     view = "form"
@@ -10,7 +10,7 @@
     <div 
         background_color = "#cccccc"
         binary_variables = ""
-        bloom_filter = "00080000000000000800000000000000"
+        bloom_filter = "00080000000000000800000000000040"
         commands = ""
         display_name = ".top"
         foundation_type = "Classes/Foundation/Data view"
@@ -25,7 +25,7 @@
         binary_variables = ""
         commands = ""
         display_name = "box11"
-        field_weight = "3999"
+        field_weight = "4199"
         key = ".top:box11."
         original_name = "box1"
         style_class = "box"
@@ -112,6 +112,20 @@
         uid_to_name = ""
         view = "img">
     </control>
+    <control 
+        base_class = "Classes/ItemsForm/Boton.fx"
+        binary_variables = ""
+        display_base_class = "ItemsForm.Boton"
+        display_name = "button1"
+        field_type = "button"
+        foundation_type = "Classes/Foundation/Button"
+        key = ".top:button1."
+        kind = "instance"
+        original_name = "button1"
+        uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368028211102"
+        uid_to_name = ""
+        view = "button">
+    </control>
     <field 
         display_name = "date1"
         field_type = "TEXT"
@@ -126,7 +140,7 @@
     <field 
         display_name = "date11"
         field_type = "TEXT"
-        field_weight = "1699"
+        field_weight = "1099"
         key = ".top:date11."
         kind = "date"
         original_name = "date1"
@@ -138,7 +152,7 @@
     <field 
         display_name = "date111"
         field_type = "TEXT"
-        field_weight = "1799"
+        field_weight = "1299"
         key = ".top:date111."
         kind = "date"
         original_name = "date1"
@@ -148,9 +162,33 @@
         view = "text">
     </field>
     <field 
+        display_name = "date1111"
+        field_type = "TEXT"
+        field_weight = "4099"
+        key = ".top:date1111."
+        kind = "date"
+        original_name = "date1"
+        style_class = "date_picker"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917870801"
+        view = "text">
+    </field>
+    <field 
+        display_name = "date112"
+        field_type = "TEXT"
+        field_weight = "1499"
+        key = ".top:date112."
+        kind = "date"
+        original_name = "date1"
+        style_class = "date_picker"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371916900680"
+        view = "text">
+    </field>
+    <field 
         display_name = "date2"
         field_type = "TEXT"
-        field_weight = "1899"
+        field_weight = "1399"
         key = ".top:date2."
         kind = "date"
         original_name = "date2"
@@ -161,7 +199,7 @@
     <field 
         display_name = "date21"
         field_type = "TEXT"
-        field_weight = "1999"
+        field_weight = "1199"
         key = ".top:date21."
         kind = "date"
         original_name = "date2"
@@ -268,7 +306,7 @@
         original_name = "label3"
         style_class = "label"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843257427"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917654458"
         view = "label">
     </control>
     <control 
@@ -284,6 +322,28 @@
     </control>
     <control 
         binary_variables = ""
+        display_name = "label311111112"
+        font_size = "12"
+        key = ".top:label311111112."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371915049721"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label311111113"
+        font_size = "12"
+        key = ".top:label311111113."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917376189"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
         display_name = "label31111112"
         font_size = "12"
         key = ".top:label31111112."
@@ -295,13 +355,24 @@
     </control>
     <control 
         binary_variables = ""
+        display_name = "label311112"
+        font_size = "12"
+        key = ".top:label311112."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917004880"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
         display_name = "label312"
         font_size = "12"
         key = ".top:label312."
         original_name = "label3"
         style_class = "label"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843196284"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371915918040"
         view = "label">
     </control>
     <control 
@@ -312,29 +383,18 @@
         original_name = "label3"
         style_class = "label"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843210108"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917246409"
         view = "label">
     </control>
     <control 
         binary_variables = ""
-        display_name = "label313"
+        display_name = "label3122"
         font_size = "12"
-        key = ".top:label313."
+        key = ".top:label3122."
         original_name = "label3"
         style_class = "label"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843294347"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label3131"
-        font_size = "12"
-        key = ".top:label3131."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843305411"
+        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843196284"
         view = "label">
     </control>
     <control 
@@ -368,6 +428,17 @@
         style_class = "label"
         target_field = ""
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843398186"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label31311111"
+        font_size = "12"
+        key = ".top:label31311111."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917870822"
         view = "label">
     </control>
     <control 
@@ -422,7 +493,51 @@
         original_name = "label3"
         style_class = "label"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843467602"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917599440"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label31311111111111"
+        font_size = "12"
+        key = ".top:label31311111111111."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917609877"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label31311111111112"
+        font_size = "12"
+        key = ".top:label31311111111112."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917629571"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label31311111111113"
+        font_size = "12"
+        key = ".top:label31311111111113."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917699151"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label313111111111131"
+        font_size = "12"
+        key = ".top:label313111111111131."
+        original_name = "label3"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917836606"
         view = "label">
     </control>
     <control 
@@ -438,131 +553,19 @@
     </control>
     <control 
         binary_variables = ""
-        display_name = "label3131111111121"
+        display_name = "label3131112"
         font_size = "12"
-        key = ".top:label3131111111121."
+        key = ".top:label3131112."
         original_name = "label3"
         style_class = "label"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843491193"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371916900666"
         view = "label">
     </control>
-    <control 
-        binary_variables = ""
-        display_name = "label31311111111211"
-        font_size = "12"
-        key = ".top:label31311111111211."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843510210"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label313111111112111"
-        font_size = "12"
-        key = ".top:label313111111112111."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843519482"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label3131111111121111"
-        font_size = "12"
-        key = ".top:label3131111111121111."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843531170"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label31311111111211111"
-        font_size = "12"
-        key = ".top:label31311111111211111."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843536418"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label313111111112111111"
-        font_size = "12"
-        key = ".top:label313111111112111111."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843547769"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label3131111111121112"
-        font_size = "12"
-        key = ".top:label3131111111121112."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843563465"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label31311111111211121"
-        font_size = "12"
-        key = ".top:label31311111111211121."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843570857"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label313111111112111211"
-        font_size = "12"
-        key = ".top:label313111111112111211."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843576610"
-        view = "label">
-    </control>
-    <field 
-        display_name = "select1"
-        field_type = "SELECT"
-        field_weight = "1099"
-        findable = "false"
-        key = ".top:select1."
-        original_name = "select1"
-        style_class = "dropdown_list"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844988381"
-        view = "select">
-    </field>
-    <field 
-        display_name = "select11"
-        field_type = "SELECT"
-        field_weight = "1199"
-        findable = "false"
-        key = ".top:select11."
-        original_name = "select1"
-        style_class = "dropdown_list"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845113776"
-        view = "select">
-    </field>
     <field 
         display_name = "select111"
         field_type = "SELECT"
-        field_weight = "1499"
+        field_weight = "2799"
         findable = "false"
         key = ".top:select111."
         original_name = "select1"
@@ -570,56 +573,6 @@
         target_field = ""
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845120465"
         view = "select">
-    </field>
-    <field 
-        display_name = "select2"
-        field_type = "SELECT"
-        field_weight = "2899"
-        findable = "false"
-        key = ".top:select2."
-        original_name = "select2"
-        style_class = "dropdown_list"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846271051"
-        view = "select">
-    </field>
-    <field 
-        display_name = "select21"
-        field_type = "SELECT"
-        field_weight = "2599"
-        findable = "false"
-        key = ".top:select21."
-        original_name = "select2"
-        style_class = "dropdown_list"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847117198"
-        view = "select"
-        visible = "true">
-    </field>
-    <field 
-        display_name = "select211"
-        field_type = "SELECT"
-        field_weight = "2999"
-        findable = "false"
-        key = ".top:select211."
-        original_name = "select2"
-        style_class = "dropdown_list"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847121063"
-        view = "select">
-    </field>
-    <field 
-        display_name = "textarea1"
-        field_length = "0"
-        field_type = "TEXTAREA"
-        field_weight = "3899"
-        findable = "false"
-        key = ".top:textarea1."
-        original_name = "textarea1"
-        style_class = "textarea"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846980137"
-        view = "textarea">
     </field>
     <field 
         binary_variables = ""
@@ -638,7 +591,7 @@
         binary_variables = ""
         display_name = "textfield121"
         field_type = "text"
-        field_weight = "399"
+        field_weight = "499"
         findable = "false"
         key = ".top:textfield121."
         original_name = "textfield1"
@@ -651,7 +604,7 @@
         binary_variables = ""
         display_name = "textfield122"
         field_type = "text"
-        field_weight = "499"
+        field_weight = "599"
         findable = "false"
         key = ".top:textfield122."
         original_name = "textfield1"
@@ -664,7 +617,7 @@
         binary_variables = ""
         display_name = "textfield123"
         field_type = "text"
-        field_weight = "599"
+        field_weight = "699"
         findable = "false"
         key = ".top:textfield123."
         original_name = "textfield1"
@@ -677,9 +630,22 @@
         binary_variables = ""
         display_name = "textfield1231"
         field_type = "text"
-        field_weight = "699"
+        field_weight = "1599"
         findable = "false"
         key = ".top:textfield1231."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917004890"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "textfield12311"
+        field_type = "text"
+        field_weight = "2299"
+        findable = "false"
+        key = ".top:textfield12311."
         original_name = "textfield1"
         style_class = "textfield"
         target_field = ""
@@ -688,22 +654,9 @@
     </field>
     <field 
         binary_variables = ""
-        display_name = "textfield12311"
-        field_type = "text"
-        field_weight = "799"
-        findable = "false"
-        key = ".top:textfield12311."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844692595"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
         display_name = "textfield123111"
         field_type = "text"
-        field_weight = "899"
+        field_weight = "1699"
         findable = "false"
         key = ".top:textfield123111."
         original_name = "textfield1"
@@ -716,7 +669,7 @@
         binary_variables = ""
         display_name = "textfield1231111"
         field_type = "text"
-        field_weight = "999"
+        field_weight = "1799"
         findable = "false"
         key = ".top:textfield1231111."
         original_name = "textfield1"
@@ -729,7 +682,7 @@
         binary_variables = ""
         display_name = "textfield12311111"
         field_type = "text"
-        field_weight = "1299"
+        field_weight = "2099"
         findable = "false"
         key = ".top:textfield12311111."
         original_name = "textfield1"
@@ -742,7 +695,7 @@
         binary_variables = ""
         display_name = "textfield123111111"
         field_type = "text"
-        field_weight = "1599"
+        field_weight = "2699"
         findable = "false"
         key = ".top:textfield123111111."
         original_name = "textfield1"
@@ -753,9 +706,35 @@
     </field>
     <field 
         binary_variables = ""
+        display_name = "textfield123111112"
+        field_type = "text"
+        field_weight = "2599"
+        findable = "false"
+        key = ".top:textfield123111112."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371915049682"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "textfield123111113"
+        field_type = "text"
+        field_weight = "3799"
+        findable = "false"
+        key = ".top:textfield123111113."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917654433"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
         display_name = "textfield12311112"
         field_type = "text"
-        field_weight = "1399"
+        field_weight = "2199"
         findable = "false"
         key = ".top:textfield12311112."
         original_name = "textfield1"
@@ -766,74 +745,61 @@
     </field>
     <field 
         binary_variables = ""
+        display_name = "textfield123112"
+        field_type = "text"
+        field_weight = "2499"
+        findable = "false"
+        key = ".top:textfield123112."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371909903900"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "textfield123113"
+        field_type = "text"
+        field_weight = "2399"
+        findable = "false"
+        key = ".top:textfield123113."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371909900653"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
         display_name = "textfield12312"
         field_type = "text"
-        field_weight = "3499"
+        field_weight = "3899"
         findable = "false"
         key = ".top:textfield12312."
         original_name = "textfield1"
         style_class = "textfield"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846863224"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917828343"
         view = "text">
     </field>
     <field 
         binary_variables = ""
         display_name = "textfield123121"
         field_type = "text"
-        field_weight = "3699"
+        field_weight = "3999"
         findable = "false"
         key = ".top:textfield123121."
         original_name = "textfield1"
         style_class = "textfield"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846872912"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
-        display_name = "textfield1231211"
-        field_type = "text"
-        field_weight = "3599"
-        findable = "false"
-        key = ".top:textfield1231211."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846877046"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
-        display_name = "textfield12312111"
-        field_type = "text"
-        field_weight = "3799"
-        findable = "false"
-        key = ".top:textfield12312111."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846892176"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
-        display_name = "textfield12312112"
-        field_type = "text"
-        field_weight = "3399"
-        findable = "false"
-        key = ".top:textfield12312112."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846906159"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917836574"
         view = "text">
     </field>
     <field 
         binary_variables = ""
         display_name = "textfield123122"
         field_type = "text"
-        field_weight = "2699"
+        field_weight = "2899"
         findable = "false"
         key = ".top:textfield123122."
         original_name = "textfield1"
@@ -844,22 +810,9 @@
     </field>
     <field 
         binary_variables = ""
-        display_name = "textfield1231221"
-        field_type = "text"
-        field_weight = "3099"
-        findable = "false"
-        key = ".top:textfield1231221."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847050638"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
         display_name = "textfield1231222"
         field_type = "text"
-        field_weight = "2799"
+        field_weight = "2999"
         findable = "false"
         key = ".top:textfield1231222."
         original_name = "textfield1"
@@ -870,22 +823,9 @@
     </field>
     <field 
         binary_variables = ""
-        display_name = "textfield12312221"
-        field_type = "text"
-        field_weight = "3199"
-        findable = "false"
-        key = ".top:textfield12312221."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847067909"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
         display_name = "textfield12312222"
         field_type = "text"
-        field_weight = "2399"
+        field_weight = "3399"
         findable = "false"
         key = ".top:textfield12312222."
         original_name = "textfield1"
@@ -898,7 +838,7 @@
         binary_variables = ""
         display_name = "textfield1231223"
         field_type = "text"
-        field_weight = "2299"
+        field_weight = "3299"
         findable = "false"
         key = ".top:textfield1231223."
         original_name = "textfield1"
@@ -909,40 +849,68 @@
     </field>
     <field 
         binary_variables = ""
-        display_name = "textfield1232"
+        display_name = "textfield12312231"
         field_type = "text"
-        field_weight = "2499"
+        field_weight = "3499"
         findable = "false"
-        key = ".top:textfield1232."
+        key = ".top:textfield12312231."
         original_name = "textfield1"
         style_class = "textfield"
         target_field = ""
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846019675"
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917599451"
         view = "text">
     </field>
     <field 
-        accell_type = "String"
         binary_variables = ""
-        db_length = "30"
-        db_type = "String"
-        display_name = "vpp_direccion"
-        field_length = "30"
-        field_type = "SELECT"
-        field_weight = "3299"
-        findable = "true"
-        font_size = "12"
-        foreground_color = "Black"
-        key = ".top:vpp_direccion."
-        multi_valued = "true"
-        original_name = "vpp_direccion"
-        query = "select xzo_nombre from xzo_zonas;"
-        query_row_limit = "300"
-        retrieve_value = "true"
+        display_name = "textfield123122311"
+        field_type = "text"
+        field_weight = "3599"
+        findable = "false"
+        key = ".top:textfield123122311."
+        original_name = "textfield1"
         style_class = "textfield"
-        target_field = "vpp_direccion"
-        uid = "form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369153592814"
-        updateable = "true"
-        view = "select">
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917609857"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "textfield123122312"
+        field_type = "text"
+        field_weight = "3699"
+        findable = "false"
+        key = ".top:textfield123122312."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917629538"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "textfield124"
+        field_type = "text"
+        field_weight = "899"
+        findable = "false"
+        key = ".top:textfield124."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371915918051"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "textfield1241"
+        field_type = "text"
+        field_weight = "1899"
+        findable = "false"
+        key = ".top:textfield1241."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917246373"
+        view = "text">
     </field>
     <field 
         accell_type = "String"
@@ -954,7 +922,7 @@
         display_name = "vpp_vendedor"
         field_length = "3"
         field_type = "text"
-        field_weight = "2099"
+        field_weight = "3099"
         findable = "true"
         font_size = "12"
         foreground_color = "Black"
@@ -976,7 +944,7 @@
         case_conversion = "Upper"
         display_name = "vve_nombre"
         field_type = "text"
-        field_weight = "2199"
+        field_weight = "3199"
         findable = "false"
         font_size = "12"
         foreground_color = "Black"
@@ -986,6 +954,78 @@
         style_class = "textfield"
         target_field = ""
         uid = "form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368631155520"
+        updateable = "false"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        case_conversion = "Upper"
+        display_name = "vve_nombre1"
+        field_type = "text"
+        field_weight = "799"
+        findable = "false"
+        font_size = "12"
+        foreground_color = "Black"
+        key = ".top:vve_nombre1."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371914816168"
+        updateable = "false"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        case_conversion = "Upper"
+        display_name = "vve_nombre11"
+        field_type = "text"
+        field_weight = "399"
+        findable = "false"
+        font_size = "12"
+        foreground_color = "Black"
+        key = ".top:vve_nombre11."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371914893766"
+        updateable = "false"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        case_conversion = "Upper"
+        display_name = "vve_nombre111"
+        field_type = "text"
+        field_weight = "999"
+        findable = "false"
+        font_size = "12"
+        foreground_color = "Black"
+        key = ".top:vve_nombre111."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371915918080"
+        updateable = "false"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        case_conversion = "Upper"
+        display_name = "vve_nombre1111"
+        field_type = "text"
+        field_weight = "1999"
+        findable = "false"
+        font_size = "12"
+        foreground_color = "Black"
+        key = ".top:vve_nombre1111."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371917246414"
         updateable = "false"
         view = "text">
     </field>

@@ -595,7 +595,7 @@
     </file>
 
     <file
-         path="Classes/Modulo/LPreciosDVW.fx"
+         path="Classes/Modulo/CPPantallaDVW.fx"
           type="data_view"
           state="4"
           flags="0"
@@ -627,7 +627,7 @@
     </file>
 
     <file
-         path="Classes/Modulo/LPreciosObrasDVW.fx"
+         path="Classes/Modulo/LPClientesDVW.fx"
           type="data_view"
           state="4"
           flags="0"
@@ -638,16 +638,112 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;LPreciosObrasDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;LPClientesDVW&lt;/FONT&gt;&lt;/HTML&gt;"
          >
     </file>
 
     <file
-         path="Classes/Modulo/Standar.fx"
+         path="Classes/Modulo/CCBoletinDVW.fx"
           type="data_view"
           state="4"
           flags="0"
           timestamp="1371842882779"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;CCBoletinDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/RBoletinesDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371908706520"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;RBoletinesDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/CIBoletinesDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371909655598"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;CIBoletinesDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/ROAdicionalesDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371913088113"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ROAdicionalesDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/ECContableDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371914468530"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ECContableDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/ECClienteDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371927218499"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ECClienteDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/LPreciosObrasDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1371927608288"
           ctimestamp="0"
           scversion=""
           private="false"

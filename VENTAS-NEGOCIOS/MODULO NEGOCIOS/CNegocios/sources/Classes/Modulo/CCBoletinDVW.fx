@@ -1,6 +1,6 @@
 <form 
     binary_variables = ""
-    form_height = "1053"
+    form_height = "1058"
     form_width = "1056"
     object_type = "data_view"
     style_class = "form"

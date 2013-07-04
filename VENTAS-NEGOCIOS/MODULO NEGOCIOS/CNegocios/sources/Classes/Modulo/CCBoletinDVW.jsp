@@ -10,7 +10,7 @@
         class="form"
         displayheight="871"
         displaywidth="1055"
-        form_height="1053"
+        form_height="1058"
         form_width="1056"
         name="NXJForm"
         object_type="data_view"
@@ -19,7 +19,7 @@
         <div
             binary_variables=""
             view="div"
-            style="position: absolute; top: 25px; left: 25px; width:1005px; height:1003px">
+            style="position: absolute; top: 25px; left: 25px; width:1005px; height:1008px">
 
             <div
                 binary_variables=""
@@ -27,11 +27,11 @@
                 border-width="1"
                 class="data_view"
                 commands=""
-                displayheight="1003"
+                displayheight="1008"
                 displayleft="25"
                 displaytop="25"
                 displaywidth="1005"
-                fieldheight="1003"
+                fieldheight="1008"
                 fieldwidth="1005"
                 foundation_type="Classes/Foundation/Data view"
                 id=".top."
@@ -129,7 +129,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:362px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -137,13 +137,14 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="522"
+                                displaywidth="362"
                                 foundation_type="Classes/Foundation/Label"
                                 id=".top:box111:label1."
+                                instancewidth="362"
                                 key=".top:box111:label1."
                                 kind="instance"
                                 labelalign="left"
-                                labeltitle="REGISTRO DE BOLETINES"
+                                labeltitle="CAMBIO DE CONDICIONES BOLETíN"
                                 original_name="label1"
                                 uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
                                 uid_to_name=""
@@ -360,7 +361,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 96px; left: 20px; width:165px; height:18px">
+                    style="position: absolute; top: 96px; left: 20px; width:248px; height:18px">
                     
                     
                     <label
@@ -369,11 +370,11 @@
                         displayheight="18"
                         displayleft="20"
                         displaytop="96"
-                        displaywidth="165"
+                        displaywidth="248"
                         id=".top:label11."
                         key=".top:label11."
                         labelalign="left"
-                        labeltitle="Registro de Boletines"
+                        labeltitle="Cambio de Condiciones Boletín"
                         original_name="label1"
                         target_field=""
                         uid="desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656"
@@ -382,7 +383,7 @@
                             font-family: Verdana;
                             font-size: 14px;
                             color: Black">
-                        <nobr>Registro de Boletines</nobr>
+                        <nobr>Cambio de Condiciones Bolet&iacute;n</nobr>
                     </label>
 
                 </div>
@@ -726,7 +727,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 295px; left: 112px; width:44px; height:16px">
+                    style="position: absolute; top: 295px; left: 112px; width:73px; height:16px">
                     
                     
                     <label
@@ -735,17 +736,17 @@
                         displayheight="16"
                         displayleft="112"
                         displaytop="295"
-                        displaywidth="44"
+                        displaywidth="73"
                         id=".top:label313."
                         key=".top:label313."
                         labelalign="left"
-                        labeltitle="Gastos"
+                        labeltitle="Gastos Esc."
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843294347"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Gastos</nobr>
+                        <nobr>Gastos Esc.</nobr>
                     </label>
 
                 </div>

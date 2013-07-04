@@ -10,7 +10,7 @@
         class="form"
         displayheight="871"
         displaywidth="1055"
-        form_height="1053"
+        form_height="826"
         form_width="1056"
         name="NXJForm"
         object_type="data_view"
@@ -19,7 +19,7 @@
         <div
             binary_variables=""
             view="div"
-            style="position: absolute; top: 25px; left: 25px; width:1005px; height:1003px">
+            style="position: absolute; top: 25px; left: 25px; width:1005px; height:776px">
 
             <div
                 binary_variables=""
@@ -27,11 +27,11 @@
                 border-width="1"
                 class="data_view"
                 commands=""
-                displayheight="1003"
+                displayheight="776"
                 displayleft="25"
                 displaytop="25"
                 displaywidth="1005"
-                fieldheight="1003"
+                fieldheight="776"
                 fieldwidth="1005"
                 foundation_type="Classes/Foundation/Data view"
                 id=".top."
@@ -47,7 +47,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 953px; left: 4px; width:996px; height:50px">
+                    style="position: absolute; top: 726px; left: 4px; width:996px; height:50px">
 
                     <fieldset
                         binary_variables=""
@@ -56,9 +56,9 @@
                         commands=""
                         displayheight="50"
                         displayleft="4"
-                        displaytop="953"
+                        displaytop="726"
                         displaywidth="996"
-                        field_weight="3999"
+                        field_weight="3399"
                         id=".top:box11."
                         key=".top:box11."
                         original_name="box1"
@@ -129,7 +129,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:362px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -137,13 +137,14 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="522"
+                                displaywidth="362"
                                 foundation_type="Classes/Foundation/Label"
                                 id=".top:box111:label1."
+                                instancewidth="362"
                                 key=".top:box111:label1."
                                 kind="instance"
                                 labelalign="left"
-                                labeltitle="REGISTRO DE BOLETINES"
+                                labeltitle="CARGUE INICIAL DE BOLETINES"
                                 original_name="label1"
                                 uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
                                 uid_to_name=""
@@ -263,16 +264,16 @@
 
                 <div
                     view="div"
-                    style="position: absolute; top: 472px; left: 112px; width:165px; height:22px">
+                    style="position: absolute; top: 377px; left: 112px; width:165px; height:22px">
 
                     <div
                         class="date_picker"
                         displayheight="22"
                         displayleft="112"
-                        displaytop="472"
+                        displaytop="377"
                         displaywidth="165"
                         field_type="TEXT"
-                        field_weight="1699"
+                        field_weight="1799"
                         id=".top:date11."
                         key=".top:date11."
                         kind="date"
@@ -287,16 +288,16 @@
 
                 <div
                     view="div"
-                    style="position: absolute; top: 472px; left: 308px; width:165px; height:22px">
+                    style="position: absolute; top: 377px; left: 308px; width:165px; height:22px">
 
                     <div
                         class="date_picker"
                         displayheight="22"
                         displayleft="308"
-                        displaytop="472"
+                        displaytop="377"
                         displaywidth="165"
                         field_type="TEXT"
-                        field_weight="1799"
+                        field_weight="1899"
                         id=".top:date111."
                         key=".top:date111."
                         kind="date"
@@ -311,16 +312,16 @@
 
                 <div
                     view="div"
-                    style="position: absolute; top: 472px; left: 513px; width:165px; height:22px">
+                    style="position: absolute; top: 377px; left: 513px; width:165px; height:22px">
 
                     <div
                         class="date_picker"
                         displayheight="22"
                         displayleft="513"
-                        displaytop="472"
+                        displaytop="377"
                         displaywidth="165"
                         field_type="TEXT"
-                        field_weight="1899"
+                        field_weight="1999"
                         id=".top:date2."
                         key=".top:date2."
                         kind="date"
@@ -333,34 +334,10 @@
                 </div>
 
                 <div
-                    view="div"
-                    style="position: absolute; top: 472px; left: 731px; width:165px; height:22px">
-
-                    <div
-                        class="date_picker"
-                        displayheight="22"
-                        displayleft="731"
-                        displaytop="472"
-                        displaywidth="165"
-                        field_type="TEXT"
-                        field_weight="1999"
-                        id=".top:date21."
-                        key=".top:date21."
-                        kind="date"
-                        original_name="date2"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
-                        view="text">
-
-                    </div>
-
-                </div>
-
-                <div
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 96px; left: 20px; width:165px; height:18px">
+                    style="position: absolute; top: 96px; left: 20px; width:171px; height:18px">
                     
                     
                     <label
@@ -369,7 +346,7 @@
                         displayheight="18"
                         displayleft="20"
                         displaytop="96"
-                        displaywidth="165"
+                        displaywidth="171"
                         id=".top:label11."
                         key=".top:label11."
                         labelalign="left"
@@ -502,7 +479,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 183px; left: 731px; width:63px; height:16px">
+                    style="position: absolute; top: 127px; left: 731px; width:63px; height:16px">
                     
                     
                     <label
@@ -510,7 +487,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="731"
-                        displaytop="183"
+                        displaytop="127"
                         displaywidth="63"
                         id=".top:label31111."
                         key=".top:label31111."
@@ -558,7 +535,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 239px; left: 731px; width:92px; height:16px">
+                    style="position: absolute; top: 183px; left: 731px; width:92px; height:16px">
                     
                     
                     <label
@@ -566,7 +543,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="731"
-                        displaytop="239"
+                        displaytop="183"
                         displaywidth="92"
                         id=".top:label3111111."
                         key=".top:label3111111."
@@ -614,35 +591,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 351px; left: 731px; width:99px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="731"
-                        displaytop="351"
-                        displaywidth="99"
-                        id=".top:label311111111."
-                        key=".top:label311111111."
-                        labelalign="left"
-                        labeltitle="Derecho Uso "
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843268756"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Derecho Uso </nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 295px; left: 731px; width:90px; height:16px">
+                    style="position: absolute; top: 295px; left: 731px; width:99px; height:16px">
                     
                     
                     <label
@@ -651,6 +600,34 @@
                         displayheight="16"
                         displayleft="731"
                         displaytop="295"
+                        displaywidth="99"
+                        id=".top:label311111111."
+                        key=".top:label311111111."
+                        labelalign="left"
+                        labeltitle="Valor de Uso "
+                        original_name="label3"
+                        target_field=""
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843268756"
+                        view="label"
+                        style="font-size: 12px">
+                        <nobr>Valor de Uso </nobr>
+                    </label>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    align="left" 
+                    style="position: absolute; top: 239px; left: 731px; width:90px; height:16px">
+                    
+                    
+                    <label
+                        binary_variables=""
+                        class="label"
+                        displayheight="16"
+                        displayleft="731"
+                        displaytop="239"
                         displaywidth="90"
                         id=".top:label31111112."
                         key=".top:label31111112."
@@ -683,13 +660,13 @@
                         id=".top:label312."
                         key=".top:label312."
                         labelalign="left"
-                        labeltitle="Área Lote"
+                        labeltitle="Garajes"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843196284"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>&Aacute;rea Lote</nobr>
+                        <nobr>Garajes</nobr>
                     </label>
 
                 </div>
@@ -698,35 +675,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 239px; left: 308px; width:102px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="308"
-                        displaytop="239"
-                        displaywidth="102"
-                        id=".top:label3121."
-                        key=".top:label3121."
-                        labelalign="left"
-                        labeltitle="Área Construida"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843210108"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>&Aacute;rea Construida</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 295px; left: 112px; width:44px; height:16px">
+                    style="position: absolute; top: 295px; left: 112px; width:48px; height:16px">
                     
                     
                     <label
@@ -735,7 +684,7 @@
                         displayheight="16"
                         displayleft="112"
                         displaytop="295"
-                        displaywidth="44"
+                        displaywidth="48"
                         id=".top:label313."
                         key=".top:label313."
                         labelalign="left"
@@ -754,7 +703,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 295px; left: 308px; width:59px; height:16px">
+                    style="position: absolute; top: 239px; left: 308px; width:59px; height:16px">
                     
                     
                     <label
@@ -762,7 +711,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="308"
-                        displaytop="295"
+                        displaytop="239"
                         displaywidth="59"
                         id=".top:label3131."
                         key=".top:label3131."
@@ -782,15 +731,15 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 351px; left: 112px; width:75px; height:16px">
+                    style="position: absolute; top: 295px; left: 308px; width:75px; height:16px">
                     
                     
                     <label
                         binary_variables=""
                         class="label"
                         displayheight="16"
-                        displayleft="112"
-                        displaytop="351"
+                        displayleft="308"
+                        displaytop="295"
                         displaywidth="75"
                         id=".top:label31311."
                         key=".top:label31311."
@@ -810,7 +759,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 446px; left: 112px; width:75px; height:16px">
+                    style="position: absolute; top: 351px; left: 112px; width:75px; height:16px">
                     
                     
                     <label
@@ -818,7 +767,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="112"
-                        displaytop="446"
+                        displaytop="351"
                         displaywidth="75"
                         id=".top:label313111."
                         key=".top:label313111."
@@ -838,7 +787,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 446px; left: 308px; width:70px; height:16px">
+                    style="position: absolute; top: 351px; left: 308px; width:70px; height:16px">
                     
                     
                     <label
@@ -846,7 +795,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="308"
-                        displaytop="446"
+                        displaytop="351"
                         displaywidth="70"
                         id=".top:label3131111."
                         key=".top:label3131111."
@@ -866,7 +815,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 446px; left: 513px; width:105px; height:16px">
+                    style="position: absolute; top: 351px; left: 513px; width:55px; height:16px">
                     
                     
                     <label
@@ -874,18 +823,18 @@
                         class="label"
                         displayheight="16"
                         displayleft="513"
-                        displaytop="446"
-                        displaywidth="105"
+                        displaytop="351"
+                        displaywidth="55"
                         id=".top:label313111111."
                         key=".top:label313111111."
                         labelalign="left"
-                        labeltitle="Entrega Pactada"
+                        labeltitle="Entrega"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843415074"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Entrega Pactada</nobr>
+                        <nobr>Entrega</nobr>
                     </label>
 
                 </div>
@@ -894,35 +843,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 443px; left: 731px; width:131px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="731"
-                        displaytop="443"
-                        displaywidth="131"
-                        id=".top:label3131111111."
-                        key=".top:label3131111111."
-                        labelalign="left"
-                        labeltitle="Entrega Programada"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843421178"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Entrega Programada</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 502px; left: 112px; width:83px; height:16px">
+                    style="position: absolute; top: 407px; left: 112px; width:83px; height:16px">
                     
                     
                     <label
@@ -930,7 +851,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="112"
-                        displaytop="502"
+                        displaytop="407"
                         displaywidth="83"
                         id=".top:label31311111111."
                         key=".top:label31311111111."
@@ -950,7 +871,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 502px; left: 416px; width:44px; height:16px">
+                    style="position: absolute; top: 407px; left: 416px; width:44px; height:16px">
                     
                     
                     <label
@@ -958,7 +879,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="416"
-                        displaytop="502"
+                        displaytop="407"
                         displaywidth="44"
                         id=".top:label313111111111."
                         key=".top:label313111111111."
@@ -978,35 +899,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 502px; left: 734px; width:68px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="734"
-                        displaytop="502"
-                        displaywidth="68"
-                        id=".top:label3131111111111."
-                        key=".top:label3131111111111."
-                        labelalign="left"
-                        labeltitle="No Trámite"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843467602"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>No Tr&aacute;mite</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 558px; left: 112px; width:69px; height:16px">
+                    style="position: absolute; top: 463px; left: 112px; width:69px; height:16px">
                     
                     
                     <label
@@ -1014,7 +907,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="112"
-                        displaytop="558"
+                        displaytop="463"
                         displaywidth="69"
                         id=".top:label313111111112."
                         key=".top:label313111111112."
@@ -1034,63 +927,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 558px; left: 568px; width:76px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="568"
-                        displaytop="558"
-                        displaywidth="76"
-                        id=".top:label3131111111121."
-                        key=".top:label3131111111121."
-                        labelalign="left"
-                        labeltitle="Tramitadora"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843491193"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Tramitadora</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 558px; left: 467px; width:56px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="467"
-                        displaytop="558"
-                        displaywidth="56"
-                        id=".top:label31311111111211."
-                        key=".top:label31311111111211."
-                        labelalign="left"
-                        labeltitle="Finiquito"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843510210"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Finiquito</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 614px; left: 112px; width:56px; height:16px">
+                    style="position: absolute; top: 519px; left: 112px; width:56px; height:16px">
                     
                     
                     <label
@@ -1098,7 +935,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="112"
-                        displaytop="614"
+                        displaytop="519"
                         displaywidth="56"
                         id=".top:label313111111112111."
                         key=".top:label313111111112111."
@@ -1118,7 +955,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 614px; left: 467px; width:44px; height:16px">
+                    style="position: absolute; top: 519px; left: 467px; width:44px; height:16px">
                     
                     
                     <label
@@ -1126,7 +963,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="467"
-                        displaytop="614"
+                        displaytop="519"
                         displaywidth="44"
                         id=".top:label3131111111121111."
                         key=".top:label3131111111121111."
@@ -1146,7 +983,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 670px; left: 112px; width:100px; height:16px">
+                    style="position: absolute; top: 575px; left: 112px; width:100px; height:16px">
                     
                     
                     <label
@@ -1154,7 +991,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="112"
-                        displaytop="670"
+                        displaytop="575"
                         displaywidth="100"
                         id=".top:label31311111111211111."
                         key=".top:label31311111111211111."
@@ -1174,7 +1011,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 726px; left: 112px; width:128px; height:16px">
+                    style="position: absolute; top: 631px; left: 112px; width:128px; height:16px">
                     
                     
                     <label
@@ -1182,7 +1019,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="112"
-                        displaytop="726"
+                        displaytop="631"
                         displaywidth="128"
                         id=".top:label313111111112111111."
                         key=".top:label313111111112111111."
@@ -1202,7 +1039,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 670px; left: 467px; width:56px; height:16px">
+                    style="position: absolute; top: 575px; left: 467px; width:56px; height:16px">
                     
                     
                     <label
@@ -1210,7 +1047,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="467"
-                        displaytop="670"
+                        displaytop="575"
                         displaywidth="56"
                         id=".top:label3131111111121112."
                         key=".top:label3131111111121112."
@@ -1230,7 +1067,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 726px; left: 467px; width:45px; height:16px">
+                    style="position: absolute; top: 631px; left: 467px; width:45px; height:16px">
                     
                     
                     <label
@@ -1238,7 +1075,7 @@
                         class="label"
                         displayheight="16"
                         displayleft="467"
-                        displaytop="726"
+                        displaytop="631"
                         displaywidth="45"
                         id=".top:label31311111111211121."
                         key=".top:label31311111111211121."
@@ -1255,34 +1092,6 @@
                 </div>
 
                 <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 782px; left: 112px; width:86px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="112"
-                        displaytop="782"
-                        displaywidth="86"
-                        id=".top:label313111111112111211."
-                        key=".top:label313111111112111211."
-                        labelalign="left"
-                        labeltitle="Observación"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843576610"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Observaci&oacute;n</nobr>
-                    </label>
-
-                </div>
-
-                <div
                     view="div"
                     style="position: absolute; top: 321px; left: 112px; width:115px; height:21px">
 
@@ -1293,7 +1102,7 @@
                         displaytop="321"
                         displaywidth="115"
                         field_type="SELECT"
-                        field_weight="1099"
+                        field_weight="1399"
                         findable="false"
                         key=".top:select1."
                         name=".top:select1."
@@ -1309,16 +1118,16 @@
 
                 <div
                     view="div"
-                    style="position: absolute; top: 321px; left: 308px; width:115px; height:21px">
+                    style="position: absolute; top: 265px; left: 308px; width:115px; height:21px">
 
                     <select
                         class="dropdown_list"
                         displayheight="21"
                         displayleft="308"
-                        displaytop="321"
+                        displaytop="265"
                         displaywidth="115"
                         field_type="SELECT"
-                        field_weight="1199"
+                        field_weight="1099"
                         findable="false"
                         key=".top:select11."
                         name=".top:select11."
@@ -1334,13 +1143,13 @@
 
                 <div
                     view="div"
-                    style="position: absolute; top: 377px; left: 112px; width:115px; height:21px">
+                    style="position: absolute; top: 321px; left: 308px; width:115px; height:21px">
 
                     <select
                         class="dropdown_list"
                         displayheight="21"
-                        displayleft="112"
-                        displaytop="377"
+                        displayleft="308"
+                        displaytop="321"
                         displaywidth="115"
                         field_type="SELECT"
                         field_weight="1499"
@@ -1359,41 +1168,16 @@
 
                 <div
                     view="div"
-                    style="position: absolute; top: 584px; left: 467px; width:42px; height:21px">
-
-                    <select
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="467"
-                        displaytop="584"
-                        displaywidth="42"
-                        field_type="SELECT"
-                        field_weight="2899"
-                        findable="false"
-                        key=".top:select2."
-                        name=".top:select2."
-                        original_name="select2"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846271051"
-                        view="select"
-                        style="width:42px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    view="div"
-                    style="position: absolute; top: 584px; left: 112px; width:45px; height:21px">
+                    style="position: absolute; top: 489px; left: 112px; width:45px; height:21px">
 
                     <select
                         class="dropdown_list"
                         displayheight="21"
                         displayleft="112"
-                        displaytop="584"
+                        displaytop="489"
                         displaywidth="45"
                         field_type="SELECT"
-                        field_weight="2599"
+                        field_weight="2499"
                         findable="false"
                         key=".top:select21."
                         name=".top:select21."
@@ -1405,56 +1189,6 @@
                         style="visibility:visible;
                             width:45px; height: 21px">
                     </select>
-
-                </div>
-
-                <div
-                    view="div"
-                    style="position: absolute; top: 584px; left: 568px; width:42px; height:21px">
-
-                    <select
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="568"
-                        displaytop="584"
-                        displaywidth="42"
-                        field_type="SELECT"
-                        field_weight="2999"
-                        findable="false"
-                        key=".top:select211."
-                        name=".top:select211."
-                        original_name="select2"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847121063"
-                        view="select"
-                        style="width:42px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    view="div"
-                    style="position: absolute; top: 808px; left: 112px; width:783px; height:76px">
-
-                    <textarea
-                        class="textarea"
-                        cols="71"
-                        displayheight="76"
-                        displayleft="112"
-                        displaytop="808"
-                        displaywidth="783"
-                        field_length="0"
-                        field_type="TEXTAREA"
-                        field_weight="3899"
-                        findable="false"
-                        key=".top:textarea1."
-                        name=".top:textarea1."
-                        original_name="textarea1"
-                        rows="4"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846980137"
-                        view="textarea">                    </textarea>
 
                 </div>
 
@@ -1471,7 +1205,7 @@
                         displaytop="209"
                         displaywidth="45"
                         field_type="text"
-                        field_weight="299"
+                        field_weight="399"
                         findable="false"
                         key=".top:textfield12."
                         name=".top:textfield12."
@@ -1496,7 +1230,7 @@
                         displaytop="209"
                         displaywidth="45"
                         field_type="text"
-                        field_weight="399"
+                        field_weight="499"
                         findable="false"
                         key=".top:textfield121."
                         name=".top:textfield121."
@@ -1521,7 +1255,7 @@
                         displaytop="209"
                         displaywidth="45"
                         field_type="text"
-                        field_weight="499"
+                        field_weight="599"
                         findable="false"
                         key=".top:textfield122."
                         name=".top:textfield122."
@@ -1536,17 +1270,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 209px; left: 731px; width:80px; height:22px">
+                    style="position: absolute; top: 153px; left: 731px; width:80px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="731"
-                        displaytop="209"
+                        displaytop="153"
                         displaywidth="80"
                         field_type="text"
-                        field_weight="599"
+                        field_weight="299"
                         findable="false"
                         key=".top:textfield123."
                         name=".top:textfield123."
@@ -1561,7 +1295,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 265px; left: 112px; width:80px; height:22px">
+                    style="position: absolute; top: 265px; left: 112px; width:45px; height:22px">
 
                     <input
                         binary_variables=""
@@ -1569,14 +1303,14 @@
                         displayheight="22"
                         displayleft="112"
                         displaytop="265"
-                        displaywidth="80"
+                        displaywidth="45"
                         field_type="text"
-                        field_weight="699"
+                        field_weight="799"
                         findable="false"
                         key=".top:textfield1231."
                         name=".top:textfield1231."
                         original_name="textfield1"
-                        size="13"
+                        size="7"
                         target_field=""
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844682532"
@@ -1586,25 +1320,25 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 265px; left: 308px; width:80px; height:22px">
+                    style="position: absolute; top: 265px; left: 163px; width:45px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
-                        displayleft="308"
+                        displayleft="163"
                         displaytop="265"
-                        displaywidth="80"
+                        displaywidth="45"
                         field_type="text"
-                        field_weight="799"
+                        field_weight="899"
                         findable="false"
                         key=".top:textfield12311."
                         name=".top:textfield12311."
                         original_name="textfield1"
-                        size="13"
+                        size="7"
                         target_field=""
                         type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844692595"
+                        uid="itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371909900653"
                         view="text">
                 </div>
 
@@ -1621,7 +1355,7 @@
                         displaytop="265"
                         displaywidth="150"
                         field_type="text"
-                        field_weight="899"
+                        field_weight="1199"
                         findable="false"
                         key=".top:textfield123111."
                         name=".top:textfield123111."
@@ -1636,17 +1370,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 265px; left: 731px; width:150px; height:22px">
+                    style="position: absolute; top: 209px; left: 731px; width:150px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="731"
-                        displaytop="265"
+                        displaytop="209"
                         displaywidth="150"
                         field_type="text"
-                        field_weight="999"
+                        field_weight="699"
                         findable="false"
                         key=".top:textfield1231111."
                         name=".top:textfield1231111."
@@ -1671,7 +1405,7 @@
                         displaytop="321"
                         displaywidth="150"
                         field_type="text"
-                        field_weight="1299"
+                        field_weight="1599"
                         findable="false"
                         key=".top:textfield12311111."
                         name=".top:textfield12311111."
@@ -1680,31 +1414,6 @@
                         target_field=""
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844814386"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 377px; left: 731px; width:150px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="731"
-                        displaytop="377"
-                        displaywidth="150"
-                        field_type="text"
-                        field_weight="1599"
-                        findable="false"
-                        key=".top:textfield123111111."
-                        name=".top:textfield123111111."
-                        original_name="textfield1"
-                        size="25"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844818546"
                         view="text">
                 </div>
 
@@ -1721,7 +1430,32 @@
                         displaytop="321"
                         displaywidth="150"
                         field_type="text"
-                        field_weight="1399"
+                        field_weight="1699"
+                        findable="false"
+                        key=".top:textfield123111111."
+                        name=".top:textfield123111111."
+                        original_name="textfield1"
+                        size="25"
+                        target_field=""
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844818546"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 265px; left: 731px; width:150px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="731"
+                        displaytop="265"
+                        displaywidth="150"
+                        field_type="text"
+                        field_weight="1299"
                         findable="false"
                         key=".top:textfield12311112."
                         name=".top:textfield12311112."
@@ -1736,17 +1470,42 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 696px; left: 112px; width:90px; height:22px">
+                    style="position: absolute; top: 265px; left: 213px; width:45px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="213"
+                        displaytop="265"
+                        displaywidth="45"
+                        field_type="text"
+                        field_weight="999"
+                        findable="false"
+                        key=".top:textfield123112."
+                        name=".top:textfield123112."
+                        original_name="textfield1"
+                        size="7"
+                        target_field=""
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_8331b5aeab431d43b7d56c1719b2b5b17260c9c8_1371909903900"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 601px; left: 112px; width:90px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="112"
-                        displaytop="696"
+                        displaytop="601"
                         displaywidth="90"
                         field_type="text"
-                        field_weight="3499"
+                        field_weight="2999"
                         findable="false"
                         key=".top:textfield12312."
                         name=".top:textfield12312."
@@ -1761,17 +1520,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 752px; left: 112px; width:90px; height:22px">
+                    style="position: absolute; top: 657px; left: 112px; width:90px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="112"
-                        displaytop="752"
+                        displaytop="657"
                         displaywidth="90"
                         field_type="text"
-                        field_weight="3699"
+                        field_weight="3199"
                         findable="false"
                         key=".top:textfield123121."
                         name=".top:textfield123121."
@@ -1786,17 +1545,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 696px; left: 467px; width:240px; height:22px">
+                    style="position: absolute; top: 601px; left: 467px; width:240px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="467"
-                        displaytop="696"
+                        displaytop="601"
                         displaywidth="240"
                         field_type="text"
-                        field_weight="3599"
+                        field_weight="3099"
                         findable="false"
                         key=".top:textfield1231211."
                         name=".top:textfield1231211."
@@ -1811,17 +1570,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 752px; left: 467px; width:240px; height:22px">
+                    style="position: absolute; top: 657px; left: 467px; width:240px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="467"
-                        displaytop="752"
+                        displaytop="657"
                         displaywidth="240"
                         field_type="text"
-                        field_weight="3799"
+                        field_weight="3299"
                         findable="false"
                         key=".top:textfield12312111."
                         name=".top:textfield12312111."
@@ -1836,17 +1595,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 640px; left: 467px; width:240px; height:22px">
+                    style="position: absolute; top: 545px; left: 467px; width:240px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="467"
-                        displaytop="640"
+                        displaytop="545"
                         displaywidth="240"
                         field_type="text"
-                        field_weight="3399"
+                        field_weight="2899"
                         findable="false"
                         key=".top:textfield12312112."
                         name=".top:textfield12312112."
@@ -1861,17 +1620,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 584px; left: 162px; width:45px; height:22px">
+                    style="position: absolute; top: 489px; left: 162px; width:45px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="162"
-                        displaytop="584"
+                        displaytop="489"
                         displaywidth="45"
                         field_type="text"
-                        field_weight="2699"
+                        field_weight="2599"
                         findable="false"
                         key=".top:textfield123122."
                         name=".top:textfield123122."
@@ -1886,42 +1645,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 584px; left: 615px; width:45px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="615"
-                        displaytop="584"
-                        displaywidth="45"
-                        field_type="text"
-                        field_weight="3099"
-                        findable="false"
-                        key=".top:textfield1231221."
-                        name=".top:textfield1231221."
-                        original_name="textfield1"
-                        size="7"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847050638"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 584px; left: 213px; width:235px; height:22px">
+                    style="position: absolute; top: 489px; left: 213px; width:235px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="213"
-                        displaytop="584"
+                        displaytop="489"
                         displaywidth="235"
                         field_type="text"
-                        field_weight="2799"
+                        field_weight="2699"
                         findable="false"
                         key=".top:textfield1231222."
                         name=".top:textfield1231222."
@@ -1936,39 +1670,14 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 584px; left: 665px; width:235px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="665"
-                        displaytop="584"
-                        displaywidth="235"
-                        field_type="text"
-                        field_weight="3199"
-                        findable="false"
-                        key=".top:textfield12312221."
-                        name=".top:textfield12312221."
-                        original_name="textfield1"
-                        size="39"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847067909"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 528px; left: 467px; width:235px; height:22px">
+                    style="position: absolute; top: 433px; left: 467px; width:235px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="467"
-                        displaytop="528"
+                        displaytop="433"
                         displaywidth="235"
                         field_type="text"
                         field_weight="2399"
@@ -1986,14 +1695,14 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 528px; left: 416px; width:45px; height:22px">
+                    style="position: absolute; top: 433px; left: 416px; width:45px; height:22px">
 
                     <input
                         binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="416"
-                        displaytop="528"
+                        displaytop="433"
                         displaywidth="45"
                         field_type="text"
                         field_weight="2299"
@@ -2011,32 +1720,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 528px; left: 734px; width:80px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="734"
-                        displaytop="528"
-                        displaywidth="80"
-                        field_type="text"
-                        field_weight="2499"
-                        findable="false"
-                        key=".top:textfield1232."
-                        name=".top:textfield1232."
-                        original_name="textfield1"
-                        size="13"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846019675"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 640px; left: 112px; width:240px; height:21px">
+                    style="position: absolute; top: 545px; left: 112px; width:240px; height:21px">
 
                     <select
                         accell_type="String"
@@ -2046,11 +1730,11 @@
                         db_type="String"
                         displayheight="21"
                         displayleft="112"
-                        displaytop="640"
+                        displaytop="545"
                         displaywidth="240"
                         field_length="30"
                         field_type="SELECT"
-                        field_weight="3299"
+                        field_weight="2799"
                         findable="true"
                         key=".top:vpp_direccion."
                         multi_valued="true"
@@ -2074,7 +1758,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 528px; left: 112px; width:45px; height:22px">
+                    style="position: absolute; top: 433px; left: 112px; width:45px; height:22px">
 
                     <input
                         accell_type="String"
@@ -2086,7 +1770,7 @@
                         db_type="String"
                         displayheight="22"
                         displayleft="112"
-                        displaytop="528"
+                        displaytop="433"
                         displaywidth="45"
                         field_length="3"
                         field_type="text"
@@ -2113,7 +1797,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 528px; left: 162px; width:235px; height:22px">
+                    style="position: absolute; top: 433px; left: 162px; width:235px; height:22px">
 
                     <input
                         binary_variables=""
@@ -2121,7 +1805,7 @@
                         class="textfield"
                         displayheight="22"
                         displayleft="162"
-                        displaytop="528"
+                        displaytop="433"
                         displaywidth="235"
                         field_type="text"
                         field_weight="2199"
