@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM LPVendedorFRM
+{
+    DATA VIEW view1 extends Modulo.LPVendedorDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

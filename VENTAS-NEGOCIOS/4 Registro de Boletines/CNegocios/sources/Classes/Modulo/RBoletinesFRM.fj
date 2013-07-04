@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM RBoletinesFRM
+{
+    DATA VIEW view1 extends Modulo.RBoletinesDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

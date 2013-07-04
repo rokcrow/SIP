@@ -1,0 +1,57 @@
+package ItemsForm;
+
+
+
+DATA VIEW Standar
+{
+    FIELD date1
+    {
+    
+    }
+
+    FIELD textfield1
+    {
+    
+    }
+
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    TAB SET tabset1
+    {
+    
+    }
+
+    BOX box11
+    {
+    
+    }
+
+    FIELD radio1
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

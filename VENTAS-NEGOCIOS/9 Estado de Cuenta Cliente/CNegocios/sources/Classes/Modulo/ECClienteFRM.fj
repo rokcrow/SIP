@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM ECClienteFRM
+{
+    DATA VIEW view1 extends Modulo.ECClienteDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

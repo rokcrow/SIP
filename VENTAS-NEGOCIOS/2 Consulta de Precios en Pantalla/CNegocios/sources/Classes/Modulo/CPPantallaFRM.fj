@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM CPPantallaFRM
+{
+    DATA VIEW view1 extends Modulo.CPPantallaDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
