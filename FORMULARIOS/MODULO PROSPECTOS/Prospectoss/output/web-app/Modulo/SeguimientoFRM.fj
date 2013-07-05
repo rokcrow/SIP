@@ -2,17 +2,29 @@ package Modulo;
 
 FORM SeguimientoFRM
 {
-     NullableDate    fecha_mini, fret_obra, fing_obra;
-    NullableNumeric xpc_dias_pac, xpc_dias_pvt, consecutivo;
-    NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora;
-    NullableTime    hora;
+            NullableDate    fecha_mini, fret_obra, fing_obra;
+            NullableNumeric xpc_dias_pac, xpc_dias_pvt, consecutivo;
+            NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora;
+            NullableTime    hora;
+            
+            NullableStringVariable   view1;
+            
+            NullableString empresanombre;
     
-     NullableStringVariable   view1;
-    
-    BEFORE FORM
-    {
-     CajaSegui.vpp_estadopro.clearFindExp = "A";
-    }
+        BEFORE FORM
+        {
+        CajaSegui.vpp_estadopro.clearFindExp = "A";
+        
+        EXEC SQL
+            SELECT xem_nombre
+            FROM xem_empresas
+            WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+            INTO  empresanombre;
+            
+        
+            CajaSegui.cajaarribaSProspectos.actualempresa  = empresanombre ;
+            CajaSegui.cajaarribaSProspectos.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+        }
     BOX CajaSegui
     {
         FIELD vpp_fechaestado
@@ -93,12 +105,12 @@ FORM SeguimientoFRM
         FIELD vpp_nacionalidad
         {
         }
-        BOX box111
+        BOX cajaarribaSProspectos
         {
-            FIELD textfield1
+            FIELD actualempresa
             {
             }
-            FIELD textfield11
+            FIELD actualusuario
             {
             }
         }

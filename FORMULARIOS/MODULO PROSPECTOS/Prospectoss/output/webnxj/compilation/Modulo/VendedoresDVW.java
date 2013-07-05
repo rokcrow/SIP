@@ -106,6 +106,66 @@ import com.unify.pub.NameValuePair;
 public class VendedoresDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
+    NullableString empresanombre = NullableFactory.createNullableString("empresanombre");
+
+    public void initDataView()
+	throws Exception
+    {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+
+	    {
+	    getSession().us$setStatus(StatusCode.SS_NORM);
+	    NXJDataConnection us$conn1 = getConnection();
+	    java.sql.PreparedStatement us$stmt1 = null;
+	    ResultSet us$rs1 = null;
+	    try
+		{
+		us$stmt1 = us$conn1.prepareStatement("SELECT xem_nombre FROM xem_empresas WHERE xem_codigo =  ?");
+		((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt1, 1);
+		us$rs1 = us$stmt1.executeQuery();
+		int us$rowsTouched1 = 0;
+		try
+		    {
+		    java.sql.ResultSetMetaData us$rsmd1 = us$rs1.getMetaData();
+		    if (us$rsmd1.getColumnCount() != 1)
+			throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+			    {
+			    Integer.toString(us$rsmd1.getColumnCount()), "1"
+			    }));
+		    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter1 = us$conn1.createDataIterator(us$rs1);
+		    if (us$getter1.next())
+			{
+			++us$rowsTouched1;
+			us$getter1.assignValueToVariable(empresanombre, 1);
+			}
+		    }
+		finally
+		    {
+		    if (us$rowsTouched1 == 0)
+			getSession().us$setStatus(StatusCode.SS_NOREC);
+		    if (us$rs1 != null)
+			us$rs1.close();
+		    }
+		}
+	    catch (SQLException us$ex1)
+		{
+		getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+		throw us$ex1;
+		}
+	    catch (NXJDataConnectionException us$ex1)
+		{
+		getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+		throw us$ex1;
+		}
+	    finally
+		{
+		if (us$stmt1 != null)
+		    us$conn1.us$closeStatement(us$stmt1);
+		}
+	    }
+	cajaarribaVendedores.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
+	cajaarribaVendedores.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
+    } // initDataView
     private VendedoresDVW VendedoresDVW = this;
     public /*multi_valued*/ NullableStringField NombVend = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombVend", true, true, 100);
     public NXJLabelControl label111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label111", false);
@@ -119,52 +179,52 @@ public class VendedoresDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn1 = getConnection();
-		java.sql.PreparedStatement us$stmt1 = null;
-		ResultSet us$rs1 = null;
+		NXJDataConnection us$conn2 = getConnection();
+		java.sql.PreparedStatement us$stmt2 = null;
+		ResultSet us$rs2 = null;
 		try
 		    {
-		    us$stmt1 = us$conn1.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
-		    vvh_vendedora.us$setSqlParameterValue(us$stmt1, 1);
-		    us$rs1 = us$stmt1.executeQuery();
-		    int us$rowsTouched1 = 0;
+		    us$stmt2 = us$conn2.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
+		    vvh_vendedora.us$setSqlParameterValue(us$stmt2, 1);
+		    us$rs2 = us$stmt2.executeQuery();
+		    int us$rowsTouched2 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd1 = us$rs1.getMetaData();
-			if (us$rsmd1.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd2 = us$rs2.getMetaData();
+			if (us$rsmd2.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd1.getColumnCount()), "1"
+				Integer.toString(us$rsmd2.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter1 = us$conn1.createDataIterator(us$rs1);
-			if (us$getter1.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter2 = us$conn2.createDataIterator(us$rs2);
+			if (us$getter2.next())
 			    {
-			    ++us$rowsTouched1;
-			    us$getter1.assignValueToVariable(NombVend, 1);
+			    ++us$rowsTouched2;
+			    us$getter2.assignValueToVariable(NombVend, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched1 == 0)
+			if (us$rowsTouched2 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs1 != null)
-			    us$rs1.close();
+			if (us$rs2 != null)
+			    us$rs2.close();
 			}
 		    }
-		catch (SQLException us$ex1)
+		catch (SQLException us$ex2)
 		    {
-		    getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
-		    throw us$ex1;
+		    getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+		    throw us$ex2;
 		    }
-		catch (NXJDataConnectionException us$ex1)
+		catch (NXJDataConnectionException us$ex2)
 		    {
-		    getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
-		    throw us$ex1;
+		    getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+		    throw us$ex2;
 		    }
 		finally
 		    {
-		    if (us$stmt1 != null)
-			us$conn1.us$closeStatement(us$stmt1);
+		    if (us$stmt2 != null)
+			us$conn2.us$closeStatement(us$stmt2);
 		    }
 		}
 	} // whenValueChanges
@@ -208,46 +268,46 @@ public class VendedoresDVW
     } // box11
 
     public final box11 box11 = new box11(this);
-    public class box111
+    public class cajaarribaVendedores
 	extends com.unify.nxj.mgr.NXJBox
     {
+	public NullableStringField actualempresa = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "actualempresa", false, true, 100);
+	public NullableStringField actualusuario = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "actualusuario", false, true, 100);
 	public class label1
 	    extends ItemsForm.TituloLBL
 	{
 
 	    public label1()
 	    {
-		super(Modulo.VendedoresDVW.box111.this, "label1", false);
+		super(Modulo.VendedoresDVW.cajaarribaVendedores.this, "label1", false);
 	    } // <init>
 	} // label1
 
 	public label1 label1 = new label1();
 	public NXJLabelControl label211 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label211", false);
-	public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
-	public NullableStringField textfield11 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield11", false, true, 100);
 
-	public box111(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	public cajaarribaVendedores(com.unify.nxj.mgr.NXJContainer enclosingContainer)
 	{
-	    super("box111", enclosingContainer);
+	    super("cajaarribaVendedores", enclosingContainer);
 	    us$setBackgroundColor("#e30000");
-	    box111propertySetter_0();
+	    cajaarribaVendedorespropertySetter_0();
 	} // <init>
 
-	private void box111propertySetter_0()
+	private void cajaarribaVendedorespropertySetter_0()
 	{
+	    actualempresa.setStyleClass("textfield");
+	    actualempresa.us$setView("text");
+	    actualempresa.setFindable(false);
+	    actualempresa.setStopForInput(false);
+	    actualusuario.setStyleClass("textfield");
+	    actualusuario.us$setView("text");
+	    actualusuario.setFindable(false);
+	    actualusuario.setStopForInput(false);
 	    label211.setStyleClass("label");
-	    textfield1.setStyleClass("textfield");
-	    textfield1.us$setView("text");
-	    textfield1.setFindable(false);
-	    textfield1.setStopForInput(false);
-	    textfield11.setStyleClass("textfield");
-	    textfield11.us$setView("text");
-	    textfield11.setFindable(false);
-	    textfield11.setStopForInput(false);
-	} // box111propertySetter_0
-    } // box111
+	} // cajaarribaVendedorespropertySetter_0
+    } // cajaarribaVendedores
 
-    public final box111 box111 = new box111(this);
+    public final cajaarribaVendedores cajaarribaVendedores = new cajaarribaVendedores(this);
 
     public VendedoresDVW(String dataViewName, com.unify.nxj.mgr.NXJContainer container)
     {
@@ -267,6 +327,34 @@ public class VendedoresDVW
 	label111.setFontFamily("Verdana");
 	label111.setFontSize("14");
 	label111.us$setFontWeight("bold");
+	us$addProxyObject(Modulo.VendedoresDVW.class, "empresanombre", false);
     } // <init>
+
+    protected com.unify.nxj.mgr.NXJProxyNullable us$createProxyNullable(java.lang.reflect.Field targetField, boolean multiValued)
+    {
+	return new NXJProxyNullableImpl(targetField, multiValued);
+    } // us$createProxyNullable
+    protected final class NXJProxyNullableImpl
+	extends com.unify.nxj.mgr.NXJProxyNullable
+    {
+
+	public NXJProxyNullableImpl(java.lang.reflect.Field fld, boolean multiValued)
+	{
+	    super(Modulo.VendedoresDVW.this, fld, multiValued);
+	} // <init>
+
+	protected Nullable getValue()
+	    throws IllegalAccessException
+	{
+	    return (Nullable)fld.get(Modulo.VendedoresDVW.this);
+	} // getValue
+
+	protected void setValue(Nullable newValue)
+	    throws IllegalAccessException
+	{
+	    fld.set(Modulo.VendedoresDVW.this, newValue);
+	} // setValue
+    } // NXJProxyNullableImpl
+
 } // VendedoresDVW
 

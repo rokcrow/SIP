@@ -106,10 +106,65 @@ import com.unify.pub.NameValuePair;
 public class GradoInteresDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
+    NullableString empresanombre = NullableFactory.createNullableString("empresanombre");
 
     public void initDataView()
 	throws Exception
     {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+
+	    {
+	    getSession().us$setStatus(StatusCode.SS_NORM);
+	    NXJDataConnection us$conn1 = getConnection();
+	    java.sql.PreparedStatement us$stmt1 = null;
+	    ResultSet us$rs1 = null;
+	    try
+		{
+		us$stmt1 = us$conn1.prepareStatement("SELECT xem_nombre FROM xem_empresas WHERE xem_codigo =  ?");
+		((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt1, 1);
+		us$rs1 = us$stmt1.executeQuery();
+		int us$rowsTouched1 = 0;
+		try
+		    {
+		    java.sql.ResultSetMetaData us$rsmd1 = us$rs1.getMetaData();
+		    if (us$rsmd1.getColumnCount() != 1)
+			throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+			    {
+			    Integer.toString(us$rsmd1.getColumnCount()), "1"
+			    }));
+		    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter1 = us$conn1.createDataIterator(us$rs1);
+		    if (us$getter1.next())
+			{
+			++us$rowsTouched1;
+			us$getter1.assignValueToVariable(empresanombre, 1);
+			}
+		    }
+		finally
+		    {
+		    if (us$rowsTouched1 == 0)
+			getSession().us$setStatus(StatusCode.SS_NOREC);
+		    if (us$rs1 != null)
+			us$rs1.close();
+		    }
+		}
+	    catch (SQLException us$ex1)
+		{
+		getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+		throw us$ex1;
+		}
+	    catch (NXJDataConnectionException us$ex1)
+		{
+		getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+		throw us$ex1;
+		}
+	    finally
+		{
+		if (us$stmt1 != null)
+		    us$conn1.us$closeStatement(us$stmt1);
+		}
+	    }
+	cajaarribaGInteres.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
+	cajaarribaGInteres.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
     } // initDataView
     private GradoInteresDVW GradoInteresDVW = this;
     public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
@@ -142,46 +197,46 @@ public class GradoInteresDVW
     } // box11
 
     public final box11 box11 = new box11(this);
-    public class box111
+    public class cajaarribaGInteres
 	extends com.unify.nxj.mgr.NXJBox
     {
+	public NullableStringField actualempresa = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "actualempresa", false, true, 100);
+	public NullableStringField actualusuario = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "actualusuario", false, true, 100);
 	public class label1
 	    extends ItemsForm.TituloLBL
 	{
 
 	    public label1()
 	    {
-		super(Modulo.GradoInteresDVW.box111.this, "label1", false);
+		super(Modulo.GradoInteresDVW.cajaarribaGInteres.this, "label1", false);
 	    } // <init>
 	} // label1
 
 	public label1 label1 = new label1();
 	public NXJLabelControl label211 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label211", false);
-	public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
-	public NullableStringField textfield11 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield11", false, true, 100);
 
-	public box111(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	public cajaarribaGInteres(com.unify.nxj.mgr.NXJContainer enclosingContainer)
 	{
-	    super("box111", enclosingContainer);
+	    super("cajaarribaGInteres", enclosingContainer);
 	    us$setBackgroundColor("#e30000");
-	    box111propertySetter_0();
+	    cajaarribaGInterespropertySetter_0();
 	} // <init>
 
-	private void box111propertySetter_0()
+	private void cajaarribaGInterespropertySetter_0()
 	{
+	    actualempresa.setStyleClass("textfield");
+	    actualempresa.us$setView("text");
+	    actualempresa.setFindable(false);
+	    actualempresa.setStopForInput(false);
+	    actualusuario.setStyleClass("textfield");
+	    actualusuario.us$setView("text");
+	    actualusuario.setFindable(false);
+	    actualusuario.setStopForInput(false);
 	    label211.setStyleClass("label");
-	    textfield1.setStyleClass("textfield");
-	    textfield1.us$setView("text");
-	    textfield1.setFindable(false);
-	    textfield1.setStopForInput(false);
-	    textfield11.setStyleClass("textfield");
-	    textfield11.us$setView("text");
-	    textfield11.setFindable(false);
-	    textfield11.setStopForInput(false);
-	} // box111propertySetter_0
-    } // box111
+	} // cajaarribaGInterespropertySetter_0
+    } // cajaarribaGInteres
 
-    public final box111 box111 = new box111(this);
+    public final cajaarribaGInteres cajaarribaGInteres = new cajaarribaGInteres(this);
 
     public GradoInteresDVW(String dataViewName, com.unify.nxj.mgr.NXJContainer container)
     {
@@ -245,6 +300,34 @@ public class GradoInteresDVW
 	xpc_nombre.setValueRetrievedDuringFetch(true);
 	xpc_nombre.setFindable(true);
 	xpc_nombre.setUpdateable(true);
+	us$addProxyObject(Modulo.GradoInteresDVW.class, "empresanombre", false);
     } // <init>
+
+    protected com.unify.nxj.mgr.NXJProxyNullable us$createProxyNullable(java.lang.reflect.Field targetField, boolean multiValued)
+    {
+	return new NXJProxyNullableImpl(targetField, multiValued);
+    } // us$createProxyNullable
+    protected final class NXJProxyNullableImpl
+	extends com.unify.nxj.mgr.NXJProxyNullable
+    {
+
+	public NXJProxyNullableImpl(java.lang.reflect.Field fld, boolean multiValued)
+	{
+	    super(Modulo.GradoInteresDVW.this, fld, multiValued);
+	} // <init>
+
+	protected Nullable getValue()
+	    throws IllegalAccessException
+	{
+	    return (Nullable)fld.get(Modulo.GradoInteresDVW.this);
+	} // getValue
+
+	protected void setValue(Nullable newValue)
+	    throws IllegalAccessException
+	{
+	    fld.set(Modulo.GradoInteresDVW.this, newValue);
+	} // setValue
+    } // NXJProxyNullableImpl
+
 } // GradoInteresDVW
 

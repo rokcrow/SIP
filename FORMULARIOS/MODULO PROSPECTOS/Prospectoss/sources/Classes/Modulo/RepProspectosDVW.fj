@@ -4,6 +4,23 @@ package Modulo;
 
 DATA VIEW RepProspectosDVW
 {
+    
+     NullableString empresanombre;
+
+    INIT DATA VIEW
+    {
+        EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+      
+        cajaarribaRProspectos.actualempresa  = empresanombre ;
+        cajaarribaRProspectos.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+    
+    
     COMMAND reportecmd
     {
         NullableString vFecha1 = fecha1.toString();
@@ -19,15 +36,15 @@ DATA VIEW RepProspectosDVW
         session.openURL(strReporte);
     }
 
-    BOX box111
+    BOX cajaarribaRProspectos
     {
     
-        FIELD textfield1
+        FIELD actualempresa
         {
         
         }
 
-        FIELD textfield11
+        FIELD actualusuario
         {
         
         }

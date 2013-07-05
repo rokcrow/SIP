@@ -1,11 +1,16 @@
 package Modulo;
 
 FORM MenuFRM
-{
+{ NullableString empresanombre;
     BEFORE FORM
     {
         cajagrandeMenu.NombreForma1 = this.formName;
+        
+      
+        cajagrandeMenu.cajaarribaMenu.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
     }
+
+
 
     BOX cajagrandeMenu
     {
@@ -17,7 +22,6 @@ FORM MenuFRM
                             
                             
                             NXJMenu ParametrosMenu = new NXJMenu("Parámetros");
-                                           // NXJMenu SociedadesMenu = new NXJMenu("Sociedades");
                             NXJMenu ObrasMenu = new NXJMenu("Obras");
                                             NXJMenu TablasComunesMenu = new NXJMenu("Tablas Comunes -->");
                                                         NXJMenu TablasMenu = new NXJMenu("Tablas -->");
@@ -526,6 +530,15 @@ FORM MenuFRM
             ON DATA ACCEPT
             {
                 menu();
+                
+                  EXEC SQL
+                    SELECT xem_nombre
+                    FROM xem_empresas
+                    WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                    INTO  empresanombre;
+                    
+                
+                    cajaarribaMenu.actualempresa  = empresanombre ;
             }
 
         }

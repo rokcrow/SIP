@@ -9,14 +9,14 @@
     reuse="true">
 
     <div 
-        aud_on_entry = "false"
+        aud_on_entry = "true"
         auto_find = "false"
         background_color = "#cccccc"
         binary_variables = ""
         bloom_filter = "00000000000400040040000000000000"
         cascade_deletes = "false"
         cascade_updates = "false"
-        commands = "empresausuario"
+        commands = ""
         connection = "Connection1"
         display_name = ".top"
         foundation_type = "Classes/Foundation/Data view"
@@ -563,9 +563,9 @@
         background_color = "#e30000"
         binary_variables = ""
         commands = ""
-        display_name = "cajaarribaRegistroP"
+        display_name = "cajaarribaRProspectos"
         field_weight = "99"
-        key = ".top:cajaarribaRegistroP."
+        key = ".top:cajaarribaRProspectos."
         original_name = "box1"
         style_class = "box"
         target_field = ""
@@ -578,14 +578,15 @@
         field_type = "text"
         field_weight = "99"
         findable = "false"
-        immediate = "true"
-        key = ".top:cajaarribaRegistroP:actualempresa."
-        multi_valued = "true"
+        immediate = "false"
+        key = ".top:cajaarribaRProspectos:actualempresa."
+        multi_valued = "false"
         original_name = "textfield1"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+        updateable = "false"
         view = "text">
     </field>
     <field 
@@ -594,13 +595,14 @@
         field_type = "text"
         field_weight = "199"
         findable = "false"
-        immediate = "true"
-        key = ".top:cajaarribaRegistroP:actualusuario."
+        immediate = "false"
+        key = ".top:cajaarribaRProspectos:actualusuario."
         original_name = "textfield1"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+        updateable = "false"
         view = "text">
     </field>
     <control 
@@ -609,7 +611,7 @@
         display_base_class = "ItemsForm.TituloLBL"
         display_name = "label1"
         foundation_type = "Classes/Foundation/Label"
-        key = ".top:cajaarribaRegistroP:label1."
+        key = ".top:cajaarribaRProspectos:label1."
         kind = "instance"
         original_name = "label1"
         uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"

@@ -1,6 +1,6 @@
 <form 
-    add_allowed = "false"
-    aud_on_entry = "false"
+    add_allowed = "true"
+    aud_on_entry = "true"
     background_color = "#999999"
     binary_variables = ""
     bloom_filter = "00000000000400040000000000000000"
@@ -306,72 +306,6 @@
         view = "fieldset">
     </control>
     <control 
-        background_color = "#e30000"
-        binary_variables = ""
-        commands = ""
-        display_name = "box111"
-        field_weight = "99"
-        key = "CajaSegui:box111."
-        original_name = "box1"
-        style_class = "box"
-        target_field = ""
-        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
-        view = "fieldset">
-    </control>
-    <control 
-        base_class = "Classes/ItemsForm/TituloLBL.fx"
-        binary_variables = ""
-        display_base_class = "ItemsForm.TituloLBL"
-        display_name = "label1"
-        foundation_type = "Classes/Foundation/Label"
-        key = "CajaSegui:box111:label1."
-        kind = "instance"
-        original_name = "label1"
-        uid = "form1_1371588526491_624e34f928f8586fb84ca3c2412c191af5f96f12_1371589158625"
-        uid_to_name = ""
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label211"
-        key = "CajaSegui:box111:label211."
-        original_name = "label2"
-        style_class = "label"
-        target_field = ""
-        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
-        view = "label">
-    </control>
-    <field 
-        binary_variables = ""
-        display_name = "textfield1"
-        field_type = "text"
-        field_weight = "99"
-        findable = "false"
-        immediate = "true"
-        key = "CajaSegui:box111:textfield1."
-        original_name = "textfield1"
-        stop_for_input = "false"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
-        display_name = "textfield11"
-        field_type = "text"
-        field_weight = "199"
-        findable = "false"
-        immediate = "true"
-        key = "CajaSegui:box111:textfield11."
-        original_name = "textfield1"
-        stop_for_input = "false"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-        view = "text">
-    </field>
-    <control 
         base_class = "Classes/ItemsForm/Logo.fx"
         binary_variables = ""
         display_base_class = "ItemsForm.Logo"
@@ -385,6 +319,72 @@
         uid = "form1_1371588526491_624e34f928f8586fb84ca3c2412c191af5f96f12_1371589168779"
         uid_to_name = ""
         view = "img">
+    </control>
+    <control 
+        background_color = "#e30000"
+        binary_variables = ""
+        commands = ""
+        display_name = "cajaarribaSProspectos"
+        field_weight = "99"
+        key = "CajaSegui:cajaarribaSProspectos."
+        original_name = "box1"
+        style_class = "box"
+        target_field = ""
+        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
+        view = "fieldset">
+    </control>
+    <field 
+        binary_variables = ""
+        display_name = "actualempresa"
+        field_type = "text"
+        field_weight = "99"
+        findable = "false"
+        immediate = "false"
+        key = "CajaSegui:cajaarribaSProspectos:actualempresa."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "actualusuario"
+        field_type = "text"
+        field_weight = "199"
+        findable = "false"
+        immediate = "false"
+        key = "CajaSegui:cajaarribaSProspectos:actualusuario."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+        view = "text">
+    </field>
+    <control 
+        base_class = "Classes/ItemsForm/TituloLBL.fx"
+        binary_variables = ""
+        display_base_class = "ItemsForm.TituloLBL"
+        display_name = "label1"
+        foundation_type = "Classes/Foundation/Label"
+        key = "CajaSegui:cajaarribaSProspectos:label1."
+        kind = "instance"
+        original_name = "label1"
+        uid = "form1_1371588526491_624e34f928f8586fb84ca3c2412c191af5f96f12_1371589158625"
+        uid_to_name = ""
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
+        display_name = "label211"
+        key = "CajaSegui:cajaarribaSProspectos:label211."
+        original_name = "label2"
+        style_class = "label"
+        target_field = ""
+        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
+        view = "label">
     </control>
     <control 
         binary_variables = ""

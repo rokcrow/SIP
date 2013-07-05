@@ -4,15 +4,32 @@ package Modulo;
 
 DATA VIEW VendedoresDVW
 {
-    BOX box111
+
+    NullableString empresanombre;
+
+    INIT DATA VIEW
+    {
+        EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+      
+        cajaarribaVendedores.actualempresa  = empresanombre ;
+        cajaarribaVendedores.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+
+
+    BOX cajaarribaVendedores
     {
     
-        FIELD textfield1
+        FIELD actualempresa
         {
         
         }
 
-        FIELD textfield11
+        FIELD actualusuario
         {
         
         }

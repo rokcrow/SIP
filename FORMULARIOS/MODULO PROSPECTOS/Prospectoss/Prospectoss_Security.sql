@@ -40,8 +40,6 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.MediospFRM:view1:INTERACTIVE-A
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Servicios.ServAdmin', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
-VALUES         ('Prospectoss', 'classes', 'Modulo.ProspectosFRM:view1:EMPRESAUSUARIO', '', '0');
-INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.VendedoresFRM:INTERACTIVE-ADD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.GradoInteresFRM:view1:DELETE', '', '0');

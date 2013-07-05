@@ -6,8 +6,8 @@
 <body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
-        add_allowed="false"
-        aud_on_entry="false"
+        add_allowed="true"
+        aud_on_entry="true"
         binary_variables=""
         bloom_filter="00000000000400040000000000000000"
         class="form"
@@ -584,8 +584,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id="CajaSegui:box111."
-                        key="CajaSegui:box111."
+                        id="CajaSegui:cajaarribaSProspectos."
+                        key="CajaSegui:cajaarribaSProspectos."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -598,8 +598,62 @@
                         <div
                             binary_variables=""
                             view="div"
+                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="16"
+                                displaytop="14"
+                                displaywidth="197"
+                                field_type="text"
+                                field_weight="99"
+                                findable="false"
+                                immediate="false"
+                                key="CajaSegui:cajaarribaSProspectos:actualempresa."
+                                name="CajaSegui:cajaarribaSProspectos:actualempresa."
+                                original_name="textfield1"
+                                size="32"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="800"
+                                displaytop="14"
+                                displaywidth="110"
+                                field_type="text"
+                                field_weight="199"
+                                findable="false"
+                                immediate="false"
+                                key="CajaSegui:cajaarribaSProspectos:actualusuario."
+                                name="CajaSegui:cajaarribaSProspectos:actualusuario."
+                                original_name="textfield1"
+                                size="18"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
                             align="left" 
-                            style="position: absolute; top: 15px; left: 242px; width:522px; height:23px">
+                            style="position: absolute; top: 15px; left: 242px; width:323px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -607,11 +661,11 @@
                                 displayheight="23"
                                 displayleft="242"
                                 displaytop="15"
-                                displaywidth="522"
+                                displaywidth="323"
                                 foundation_type="Classes/Foundation/Label"
-                                id="CajaSegui:box111:label1."
-                                instancewidth="522"
-                                key="CajaSegui:box111:label1."
+                                id="CajaSegui:cajaarribaSProspectos:label1."
+                                instancewidth="323"
+                                key="CajaSegui:cajaarribaSProspectos:label1."
                                 kind="instance"
                                 labelalign="left"
                                 labeltitle="SEGUIMIENTODEPROSPECTOS"
@@ -638,8 +692,8 @@
                                 displayleft="778"
                                 displaytop="65"
                                 displaywidth="55"
-                                id="CajaSegui:box111:label211."
-                                key="CajaSegui:box111:label211."
+                                id="CajaSegui:cajaarribaSProspectos:label211."
+                                key="CajaSegui:cajaarribaSProspectos:label211."
                                 labelalign="left"
                                 labeltitle="top1024"
                                 original_name="label2"
@@ -649,60 +703,6 @@
                                 <nobr>top1024</nobr>
                             </label>
 
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="16"
-                                displaytop="14"
-                                displaywidth="197"
-                                field_type="text"
-                                field_weight="99"
-                                findable="false"
-                                immediate="true"
-                                key="CajaSegui:box111:textfield1."
-                                name="CajaSegui:box111:textfield1."
-                                original_name="textfield1"
-                                size="32"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
-                                view="text">
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="800"
-                                displaytop="14"
-                                displaywidth="110"
-                                field_type="text"
-                                field_weight="199"
-                                findable="false"
-                                immediate="true"
-                                key="CajaSegui:box111:textfield11."
-                                name="CajaSegui:box111:textfield11."
-                                original_name="textfield1"
-                                size="18"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-                                view="text">
                         </div>
 
                     </fieldset>

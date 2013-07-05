@@ -24,7 +24,7 @@
             style="position: absolute; top: 25px; left: 25px; width:1005px; height:1455px">
 
             <div
-                aud_on_entry="false"
+                aud_on_entry="true"
                 auto_find="false"
                 binary_variables=""
                 bloom_filter="00000000000400040040000000000000"
@@ -32,7 +32,7 @@
                 cascade_deletes="false"
                 cascade_updates="false"
                 class="data_view"
-                commands="empresausuario"
+                commands=""
                 connection="Connection1"
                 displayheight="1455"
                 displayleft="25"
@@ -111,7 +111,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 62px; left: 27px; width:129px; height:14px">
+                    style="position: absolute; top: 62px; left: 27px; width:107px; height:14px">
                     
                     
                     <label
@@ -120,17 +120,17 @@
                         displayheight="14"
                         displayleft="27"
                         displaytop="62"
-                        displaywidth="129"
+                        displaywidth="107"
                         id=".top:Label11."
                         key=".top:Label11."
                         labelalign="left"
-                        labeltitle="Campos obligatorios"
+                        labeltitle="Campo obligatorio"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831975022"
                         view="label"
                         style="font-size: 10px;
                             color: Black">
-                        <nobr>Campos obligatorios</nobr>
+                        <nobr>Campo obligatorio</nobr>
                     </label>
 
                 </div>
@@ -1478,8 +1478,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id=".top:cajaarribaRegistroP."
-                        key=".top:cajaarribaRegistroP."
+                        id="cajaarribaRProspectos."
+                        key="cajaarribaRProspectos."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -1504,16 +1504,17 @@
                                 field_type="text"
                                 field_weight="99"
                                 findable="false"
-                                immediate="true"
-                                key=".top:cajaarribaRegistroP:actualempresa."
-                                multi_valued="true"
-                                name=".top:cajaarribaRegistroP:actualempresa."
+                                immediate="false"
+                                key="cajaarribaRProspectos:actualempresa."
+                                multi_valued="false"
+                                name="cajaarribaRProspectos:actualempresa."
                                 original_name="textfield1"
                                 size="32"
                                 stop_for_input="false"
                                 target_field=""
                                 type="text"
                                 uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+                                updateable="false"
                                 view="text">
                         </div>
 
@@ -1532,15 +1533,16 @@
                                 field_type="text"
                                 field_weight="199"
                                 findable="false"
-                                immediate="true"
-                                key=".top:cajaarribaRegistroP:actualusuario."
-                                name=".top:cajaarribaRegistroP:actualusuario."
+                                immediate="false"
+                                key="cajaarribaRProspectos:actualusuario."
+                                name="cajaarribaRProspectos:actualusuario."
                                 original_name="textfield1"
                                 size="18"
                                 stop_for_input="false"
                                 target_field=""
                                 type="text"
                                 uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+                                updateable="false"
                                 view="text">
                         </div>
 
@@ -1548,7 +1550,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:277px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -1556,10 +1558,10 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="522"
+                                displaywidth="277"
                                 foundation_type="Classes/Foundation/Label"
-                                id=".top:cajaarribaRegistroP:label1."
-                                key=".top:cajaarribaRegistroP:label1."
+                                id="cajaarribaRProspectos:label1."
+                                key="cajaarribaRProspectos:label1."
                                 kind="instance"
                                 labelalign="left"
                                 labeltitle="REGISTRO DE PROSPECTOS"
@@ -1703,7 +1705,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    align="Left" 
+                    align="left" 
                     style="position: absolute; top: 128px; left: 98px; width:13px; height:16px">
                     
                     
@@ -1716,6 +1718,7 @@
                         displaywidth="13"
                         id=".top:label47."
                         key=".top:label47."
+                        labelalign="left"
                         labeltitle="*"
                         original_name="label47"
                         uid="itemsform_dataview1_1368038367945_38c45a09c5d3bfcc3bead76604e3d13b040ef94b_1371831856214"

@@ -318,8 +318,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id=".top:box111."
-                        key=".top:box111."
+                        id="cajaarribaPVenta."
+                        key="cajaarribaPVenta."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -328,34 +328,6 @@
                             border-style:None;
                             border-color:transparent;
                             background-color: #e30000">
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
-
-                            <div
-                                base_class="Classes/ItemsForm/TituloLBL.fx"
-                                binary_variables=""
-                                displayheight="23"
-                                displayleft="241"
-                                displaytop="14"
-                                displaywidth="522"
-                                foundation_type="Classes/Foundation/Label"
-                                id=".top:box111:label1."
-                                key=".top:box111:label1."
-                                kind="instance"
-                                labelalign="left"
-                                labeltitle="PROYECTOS EN VENTA"
-                                original_name="label1"
-                                uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
-                                uid_to_name=""
-                                view="label">
-
-                            </div>
-
-                        </div>
 
                         <div
                             binary_variables=""
@@ -372,9 +344,9 @@
                                 field_type="text"
                                 field_weight="99"
                                 findable="false"
-                                immediate="true"
-                                key=".top:box111:textfield1."
-                                name=".top:box111:textfield1."
+                                immediate="false"
+                                key="cajaarribaPVenta:actualempresa."
+                                name="cajaarribaPVenta:actualempresa."
                                 original_name="textfield1"
                                 size="32"
                                 stop_for_input="false"
@@ -399,9 +371,9 @@
                                 field_type="text"
                                 field_weight="199"
                                 findable="false"
-                                immediate="true"
-                                key=".top:box111:textfield11."
-                                name=".top:box111:textfield11."
+                                immediate="false"
+                                key="cajaarribaPVenta:actualusuario."
+                                name="cajaarribaPVenta:actualusuario."
                                 original_name="textfield1"
                                 size="18"
                                 stop_for_input="false"
@@ -409,6 +381,35 @@
                                 type="text"
                                 uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
                                 view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            align="left" 
+                            style="position: absolute; top: 14px; left: 241px; width:248px; height:23px">
+
+                            <div
+                                base_class="Classes/ItemsForm/TituloLBL.fx"
+                                binary_variables=""
+                                displayheight="23"
+                                displayleft="241"
+                                displaytop="14"
+                                displaywidth="248"
+                                foundation_type="Classes/Foundation/Label"
+                                id="cajaarribaPVenta:label1."
+                                instancewidth="248"
+                                key="cajaarribaPVenta:label1."
+                                kind="instance"
+                                labelalign="left"
+                                labeltitle="PROYECTOS EN VENTA"
+                                original_name="label1"
+                                uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
+                                uid_to_name=""
+                                view="label">
+
+                            </div>
+
                         </div>
 
                     </fieldset>

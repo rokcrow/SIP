@@ -3,14 +3,15 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/FORMULARIOS/Login FORM PRI/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
 
     <form
         binary_variables=""
         class="form"
         displayheight="871"
         displaywidth="1055"
-        form_height="552"
+        field_order=""
+        form_height="557"
         form_width="1056"
         name="NXJForm"
         object_type="data_view"
@@ -19,7 +20,7 @@
         <div
             binary_variables=""
             view="div"
-            style="position: absolute; top: 25px; left: 25px; width:1005px; height:465px">
+            style="position: absolute; top: 25px; left: 25px; width:1005px; height:470px">
 
             <div
                 aud_on_entry="false"
@@ -31,11 +32,11 @@
                 class="data_view"
                 commands=""
                 connection="Connection1"
-                displayheight="465"
+                displayheight="470"
                 displayleft="25"
                 displaytop="25"
                 displaywidth="1005"
-                fieldheight="465"
+                fieldheight="470"
                 fieldwidth="1005"
                 foundation_type="Classes/Foundation/Data view"
                 id=".top."
@@ -280,8 +281,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id=".top:box111."
-                        key=".top:box111."
+                        id=".top:cajaarribaCorredores."
+                        key=".top:cajaarribaCorredores."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -294,8 +295,62 @@
                         <div
                             binary_variables=""
                             view="div"
+                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="16"
+                                displaytop="14"
+                                displaywidth="197"
+                                field_type="text"
+                                field_weight="99"
+                                findable="false"
+                                immediate="false"
+                                key=".top:cajaarribaCorredores:actualempresa."
+                                name=".top:cajaarribaCorredores:actualempresa."
+                                original_name="textfield1"
+                                size="32"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="800"
+                                displaytop="14"
+                                displaywidth="110"
+                                field_type="text"
+                                field_weight="199"
+                                findable="false"
+                                immediate="false"
+                                key=".top:cajaarribaCorredores:actualusuario."
+                                name=".top:cajaarribaCorredores:actualusuario."
+                                original_name="textfield1"
+                                size="18"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:254px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -303,10 +358,11 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="522"
+                                displaywidth="254"
                                 foundation_type="Classes/Foundation/Label"
-                                id=".top:box111:label1."
-                                key=".top:box111:label1."
+                                id=".top:cajaarribaCorredores:label1."
+                                instancewidth="254"
+                                key=".top:cajaarribaCorredores:label1."
                                 kind="instance"
                                 labelalign="left"
                                 labeltitle="CORREDORES DE VENTA"
@@ -333,8 +389,8 @@
                                 displayleft="778"
                                 displaytop="65"
                                 displaywidth="55"
-                                id=".top:box111:label211."
-                                key=".top:box111:label211."
+                                id=".top:cajaarribaCorredores:label211."
+                                key=".top:cajaarribaCorredores:label211."
                                 labelalign="left"
                                 labeltitle="top: 1024"
                                 original_name="label2"
@@ -344,60 +400,6 @@
                                 <nobr>top: 1024</nobr>
                             </label>
 
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="16"
-                                displaytop="14"
-                                displaywidth="197"
-                                field_type="text"
-                                field_weight="99"
-                                findable="false"
-                                immediate="true"
-                                key=".top:box111:textfield1."
-                                name=".top:box111:textfield1."
-                                original_name="textfield1"
-                                size="32"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
-                                view="text">
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="800"
-                                displaytop="14"
-                                displaywidth="110"
-                                field_type="text"
-                                field_weight="199"
-                                findable="false"
-                                immediate="true"
-                                key=".top:box111:textfield11."
-                                name=".top:box111:textfield11."
-                                original_name="textfield1"
-                                size="18"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-                                view="text">
                         </div>
 
                     </fieldset>

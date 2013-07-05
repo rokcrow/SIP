@@ -1,4 +1,4 @@
-<html>
+<html title="Menu">
 <head>
 
 </head>
@@ -205,9 +205,9 @@
                                 field_type="text"
                                 field_weight="99"
                                 findable="false"
-                                immediate="true"
+                                immediate="false"
                                 key="cajagrandeMenu:cajaarribaMenu:actualempresa."
-                                multi_valued="true"
+                                multi_valued="false"
                                 name="cajagrandeMenu:cajaarribaMenu:actualempresa."
                                 original_name="textfield1"
                                 size="32"
@@ -237,7 +237,7 @@
                                 findable="false"
                                 immediate="false"
                                 key="cajagrandeMenu:cajaarribaMenu:actualusuario."
-                                multi_valued="true"
+                                multi_valued="false"
                                 name="cajagrandeMenu:cajaarribaMenu:actualusuario."
                                 original_name="textfield1"
                                 readers_field="false"
@@ -256,18 +256,18 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:844px; height:23px">
+                            style="position: absolute; top: 14px; left: 240px; width:221px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
                                 binary_variables=""
                                 displayheight="23"
-                                displayleft="241"
+                                displayleft="240"
                                 displaytop="14"
-                                displaywidth="844"
+                                displaywidth="221"
                                 foundation_type="Classes/Foundation/Label"
                                 id="cajagrandeMenu:cajaarribaMenu:label1."
-                                instancewidth="844"
+                                instancewidth="221"
                                 key="cajagrandeMenu:cajaarribaMenu:label1."
                                 kind="instance"
                                 labelalign="left"

@@ -6,25 +6,23 @@ DATA VIEW ProspectosDVW
 {
     NullableDate    fecha_mini, fret_obra, fing_obra;
     NullableNumeric xpc_dias_pac, xpc_dias_pvt;
-    NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora,  empresanombre;;
+    NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora,  empresanombre;
     NullableTime    hora;
  
  
- COMMAND empresausuario
-    {
-        /**********************Empresa                                                          usuario *********************************/    
-        EXEC SQL
-        SELECT xem_nombre
-        FROM xem_empresas
-        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
-        INTO  empresanombre;
-        
-       
-        cajaarribaRegistroP.actualempresa  = empresanombre ;
-        cajaarribaRegistroP.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
-        
-        session.displayToMessageBox("cállate");
-    }
+ 
+        INIT DATA VIEW
+        {
+            EXEC SQL
+                SELECT xem_nombre
+                FROM xem_empresas
+                WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                INTO  empresanombre;
+                
+            
+                cajaarribaRProspectos.actualempresa  = empresanombre ;
+                cajaarribaRProspectos.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+        }
  
 
       ON CLEAR TO ADD
@@ -186,7 +184,9 @@ DATA VIEW ProspectosDVW
     
  
 
-    BOX cajaarribaRegistroP
+   
+
+    BOX cajaarribaRProspectos
     {
     
         FIELD actualempresa
@@ -762,7 +762,6 @@ DATA VIEW ProspectosDVW
     {
     
     }
-
 
 }
 /*----------------------------------------------------------------------*

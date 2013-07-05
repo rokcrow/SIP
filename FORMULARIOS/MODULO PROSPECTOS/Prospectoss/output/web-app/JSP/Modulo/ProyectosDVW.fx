@@ -55,62 +55,6 @@
         view = "fieldset">
     </control>
     <control 
-        background_color = "#e30000"
-        binary_variables = ""
-        commands = ""
-        display_name = "box111"
-        field_weight = "99"
-        key = ".top:box111."
-        original_name = "box1"
-        style_class = "box"
-        target_field = ""
-        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
-        view = "fieldset">
-    </control>
-    <control 
-        base_class = "Classes/ItemsForm/TituloLBL.fx"
-        binary_variables = ""
-        display_base_class = "ItemsForm.TituloLBL"
-        display_name = "label1"
-        foundation_type = "Classes/Foundation/Label"
-        key = ".top:box111:label1."
-        kind = "instance"
-        original_name = "label1"
-        uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
-        uid_to_name = ""
-        view = "label">
-    </control>
-    <field 
-        binary_variables = ""
-        display_name = "textfield1"
-        field_type = "text"
-        field_weight = "99"
-        findable = "false"
-        immediate = "true"
-        key = ".top:box111:textfield1."
-        original_name = "textfield1"
-        stop_for_input = "false"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
-        view = "text">
-    </field>
-    <field 
-        binary_variables = ""
-        display_name = "textfield11"
-        field_type = "text"
-        field_weight = "199"
-        findable = "false"
-        immediate = "true"
-        key = ".top:box111:textfield11."
-        original_name = "textfield1"
-        stop_for_input = "false"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-        view = "text">
-    </field>
-    <control 
         base_class = "Classes/ItemsForm/Logo.fx"
         binary_variables = ""
         display_base_class = "ItemsForm.Logo"
@@ -122,6 +66,62 @@
         uid = "itemsform_dataview1_1368038367945_c486553ba63e77316f04c86372ffc3ae6f0d73b1_1368040829176"
         uid_to_name = ""
         view = "img">
+    </control>
+    <control 
+        background_color = "#e30000"
+        binary_variables = ""
+        commands = ""
+        display_name = "cajaarribaPVenta"
+        field_weight = "99"
+        key = ".top:cajaarribaPVenta."
+        original_name = "box1"
+        style_class = "box"
+        target_field = ""
+        uid = "desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
+        view = "fieldset">
+    </control>
+    <field 
+        binary_variables = ""
+        display_name = "actualempresa"
+        field_type = "text"
+        field_weight = "99"
+        findable = "false"
+        immediate = "false"
+        key = ".top:cajaarribaPVenta:actualempresa."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "actualusuario"
+        field_type = "text"
+        field_weight = "199"
+        findable = "false"
+        immediate = "false"
+        key = ".top:cajaarribaPVenta:actualusuario."
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+        view = "text">
+    </field>
+    <control 
+        base_class = "Classes/ItemsForm/TituloLBL.fx"
+        binary_variables = ""
+        display_base_class = "ItemsForm.TituloLBL"
+        display_name = "label1"
+        foundation_type = "Classes/Foundation/Label"
+        key = ".top:cajaarribaPVenta:label1."
+        kind = "instance"
+        original_name = "label1"
+        uid = "form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
+        uid_to_name = ""
+        view = "label">
     </control>
     <control 
         binary_variables = ""

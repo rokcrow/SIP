@@ -10,6 +10,7 @@
         class="form"
         displayheight="871"
         displaywidth="1055"
+        field_order=""
         form_height="661"
         form_width="1056"
         name="NXJForm"
@@ -208,8 +209,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id=".top:box111."
-                        key=".top:box111."
+                        id="cajaarribaVendedores."
+                        key="cajaarribaVendedores."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -222,8 +223,62 @@
                         <div
                             binary_variables=""
                             view="div"
+                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="16"
+                                displaytop="14"
+                                displaywidth="197"
+                                field_type="text"
+                                field_weight="99"
+                                findable="false"
+                                immediate="false"
+                                key="cajaarribaVendedores:actualempresa."
+                                name="cajaarribaVendedores:actualempresa."
+                                original_name="textfield1"
+                                size="32"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
+
+                            <input
+                                binary_variables=""
+                                class="textfield"
+                                displayheight="22"
+                                displayleft="800"
+                                displaytop="14"
+                                displaywidth="110"
+                                field_type="text"
+                                field_weight="199"
+                                findable="false"
+                                immediate="false"
+                                key="cajaarribaVendedores:actualusuario."
+                                name="cajaarribaVendedores:actualusuario."
+                                original_name="textfield1"
+                                size="18"
+                                stop_for_input="false"
+                                target_field=""
+                                type="text"
+                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+                                view="text">
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:137px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -231,10 +286,10 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="522"
+                                displaywidth="137"
                                 foundation_type="Classes/Foundation/Label"
-                                id=".top:box111:label1."
-                                key=".top:box111:label1."
+                                id="cajaarribaVendedores:label1."
+                                key="cajaarribaVendedores:label1."
                                 kind="instance"
                                 labelalign="left"
                                 labeltitle="VENDEDORES"
@@ -261,8 +316,8 @@
                                 displayleft="778"
                                 displaytop="65"
                                 displaywidth="55"
-                                id=".top:box111:label211."
-                                key=".top:box111:label211."
+                                id="cajaarribaVendedores:label211."
+                                key="cajaarribaVendedores:label211."
                                 labelalign="left"
                                 labeltitle="top: 1024"
                                 original_name="label2"
@@ -272,60 +327,6 @@
                                 <nobr>top: 1024</nobr>
                             </label>
 
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 16px; width:197px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="16"
-                                displaytop="14"
-                                displaywidth="197"
-                                field_type="text"
-                                field_weight="99"
-                                findable="false"
-                                immediate="true"
-                                key=".top:box111:textfield1."
-                                name=".top:box111:textfield1."
-                                original_name="textfield1"
-                                size="32"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
-                                view="text">
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 14px; left: 800px; width:110px; height:22px">
-
-                            <input
-                                binary_variables=""
-                                class="textfield"
-                                displayheight="22"
-                                displayleft="800"
-                                displaytop="14"
-                                displaywidth="110"
-                                field_type="text"
-                                field_weight="199"
-                                findable="false"
-                                immediate="true"
-                                key=".top:box111:textfield11."
-                                name=".top:box111:textfield11."
-                                original_name="textfield1"
-                                size="18"
-                                stop_for_input="false"
-                                target_field=""
-                                type="text"
-                                uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
-                                view="text">
                         </div>
 
                     </fieldset>
