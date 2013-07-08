@@ -1,0 +1,76 @@
+package Modulo;
+
+
+
+DATA VIEW GradoInteresDVW
+{
+
+   NullableString empresanombre;
+
+    INIT DATA VIEW
+    {
+        EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+      
+        cajaarribaGInteres.actualempresa  = empresanombre ;
+        cajaarribaGInteres.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+
+    BOX cajaarribaGInteres
+    {
+    
+        FIELD actualempresa
+        {
+        
+        }
+
+        FIELD actualusuario
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD xpc_codigo
+    {
+    }
+    
+    FIELD xpc_clase
+    {
+    }
+    
+    FIELD xpc_nombre
+    {
+    }
+    
+    FIELD xpc_califica
+    {
+    }
+    
+    FIELD xpc_dias_pac
+    {
+    }
+    
+    FIELD xpc_dias_pvt
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

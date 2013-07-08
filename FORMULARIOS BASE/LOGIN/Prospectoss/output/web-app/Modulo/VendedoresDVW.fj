@@ -1,0 +1,67 @@
+package Modulo;
+
+
+
+DATA VIEW VendedoresDVW
+{
+
+    NullableString empresanombre;
+
+    INIT DATA VIEW
+    {
+        EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+      
+        cajaarribaVendedores.actualempresa  = empresanombre ;
+        cajaarribaVendedores.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+
+
+    BOX cajaarribaVendedores
+    {
+    
+        FIELD actualempresa
+        {
+        
+        }
+
+        FIELD actualusuario
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+
+    FIELD vvh_vendedora
+    {
+          WHEN VALUE CHANGES
+        {
+            EXEC SQL
+            SELECT vve_nombre FROM vve_vendedora
+            WHERE vve_codigo = :vvh_vendedora
+            INTO NombVend;
+        }
+    }
+    
+    FIELD NombVend
+    {
+    }
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

@@ -1,0 +1,347 @@
+package Modulo;
+
+FORM SeguimientoFRM
+{
+            NullableDate    fecha_mini, fret_obra, fing_obra;
+            NullableNumeric xpc_dias_pac, xpc_dias_pvt, consecutivo;
+            NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora;
+            NullableTime    hora;
+            
+            NullableStringVariable   view1;
+            
+            NullableString empresanombre;
+    
+        BEFORE FORM
+        {
+        CajaSegui.vpp_estadopro.clearFindExp = "A";
+        
+        EXEC SQL
+            SELECT xem_nombre
+            FROM xem_empresas
+            WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+            INTO  empresanombre;
+            
+        
+            CajaSegui.cajaarribaSProspectos.actualempresa  = empresanombre ;
+            CajaSegui.cajaarribaSProspectos.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+        }
+    BOX CajaSegui
+    {
+        FIELD vpp_fechaestado
+        {
+        }
+        FIELD vpp_telres
+        {
+        }
+        FIELD vpp_direccion
+        {
+        }
+        FIELD vpp_cuanta_correo2
+        {
+                ON DATA ACCEPT
+            {
+            if ( ! vpp_cuanta_correo2.isNull() ) 
+            {
+                String StrCorreo;
+                StrCorreo = vpp_cuanta_correo2;
+                    if (StrCorreo.indexOf("@") < 0) 
+                    {
+                    session.displayToMessageBox("El formato del correo no es correcto agregue el @");
+                    rejectOperation();
+                    }
+                    if (StrCorreo.indexOf(',') > 0) {
+                    session.displayToMessageBox("El formato del correo no es correcto elimine la ,");
+                    rejectOperation();
+                    }
+                }
+            }   
+        }
+        FIELD vpp_correo
+        {
+            ON DATA ACCEPT
+            {
+            if ( ! vpp_correo.isNull() ) {
+                String StrCorreo;
+                StrCorreo = vpp_cuanta_correo2;
+                    if (StrCorreo.indexOf("@") < 0) {
+                    session.displayToMessageBox("El formato del correo no es correcto agregue el @");
+                    rejectOperation();
+                    }
+                    if (StrCorreo.indexOf(',') > 0) {
+                    session.displayToMessageBox("El formato del correo no es correcto elimine la ,");
+                    rejectOperation();
+                    }
+                }
+            }  
+        }
+        FIELD vpp_numero
+        {
+        }
+        FIELD vpp_telofi
+        {
+        }
+        FIELD vpp_estadopro
+        {
+            BEFORE FIELD
+            {
+            estadopro_ant = vpp_estadopro;
+            }
+            ON DATA ACCEPT
+            {
+                if (vpp_estadopro != estadopro_ant)
+                {
+                 if (vpp_fechaestado != "B")
+                    {
+                    vpp_fechaestado = session.currentDate;
+                    }
+                 else
+                    {
+                     session.displayToMessageBox("El nuevo estado NO puede ser asignado manualmente...");
+                     vpp_estadopro = estadopro_ant;
+                    }
+                }
+            }    
+        }
+        FIELD vpp_nacionalidad
+        {
+        }
+        BOX cajaarribaSProspectos
+        {
+            FIELD actualempresa
+            {
+            }
+            FIELD actualusuario
+            {
+            }
+        }
+
+        FIELD vpp_proyecto
+        {
+           /*  WHEN VALUE CHANGES
+            {
+                EXEC SQL 
+                SELECT vpy_nombre, vpy_tipo
+                FROM   vpy_proyectos
+                WHERE  vpy_codigo = :vpp_proyecto
+                into vpy_nombre, vpy_tipo;
+            }   */// ORIGINAL
+            
+            /*****///NUEVO
+            
+            
+             ON DATA ACCEPT
+            {
+                    EXEC SQL 
+                    SELECT vpy_nombre
+                    FROM   vpy_proyectos
+                    WHERE  vpy_codigo = :vpp_proyecto
+                    AND    vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                    into vpy_nombre;
+                    
+                    if (session.status == StatusCode.SS_NOREC)
+                     {
+                                session.displayToMessageBox("No existe el proyecto seleccionado en el maestro de proyectos");
+                                vpp_proyecto = " ";
+                                rejectOperation();
+                      }
+                }
+        
+                WHEN VALUE CHANGES
+                {
+                    EXEC SQL 
+                    SELECT vpy_nombre
+                    FROM   vpy_proyectos
+                    WHERE  vpy_codigo = :vpp_proyecto
+                    AND    vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                    into vpy_nombre;
+                }
+            
+        }
+        FIELD vpy_nombre
+        {
+        }
+        FIELD vpp_ciudad
+        {
+        }
+        FIELD vpp_nombre
+        {
+        }
+        FIELD vpp_fecha
+        {
+        }
+        DATA VIEW PUBLIC_vps_prosigue
+        {
+            multi_valued NullableStringVariable  vps_proyecto;
+            multi_valued NullableNumericVariable vps_prospecto;
+            
+            ON CLEAR TO ADD
+            {
+              vps_fecha   = session.currentDate;
+              vps_hora    = session.currentTime;
+              vps_usuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario; 
+              
+              EXEC SQL	  
+                            SELECT vps_consecu
+                            FROM   vps_prosigue
+                            WHERE  vps_proyecto  = :vpp_proyecto
+                            AND    vps_prospecto = :vpp_numero
+                            ORDER BY  vps_consecu DESC
+                            INTO    consecutivo;
+                            
+              if (session.status != StatusCode.SS_NORM)
+                {
+                 if (session.status == StatusCode.SS_NOREC) 
+                    vps_consecu = 1;
+                   else
+                    {
+                     session.displayToMessageBox("El consecutivo esta ocupado por otro usuario");
+                     session.queueCommand("CLEAR_TO_FIND");
+                    }        	     
+                }
+               else vps_consecu = consecutivo + 1;
+            }
+            BEFORE ADD
+            {
+                 if (xpc_califica == "I") vps_estado = "S";
+                   else if (xpc_califica == "M") vps_estado = "M";
+                     else if (xpc_califica == "P") vps_estado = "N";
+               
+                 NullableDate f_pcontacto;
+               
+                EXEC SQL
+                            SELECT vps_f_pcontacto
+                            FROM   vps_prosigue
+                            WHERE  vps_proyecto = :vps_proyecto
+                            AND    vps_prospecto = :vps_prospecto
+                            AND    vps_consecu = :vps_consecu -1
+                            INTO   f_pcontacto;
+                
+                if ( session.status != StatusCode.SS_NORM )
+                    f_pcontacto = session.currentDate;
+                if (vpy_tipo == "A") 
+                    vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
+                else
+                    vps_f_pcontacto = f_pcontacto + xpc_dias_pvt;                
+            }
+            FIELD textfield1
+            {
+            }
+            FIELD vps_comentario1
+            {
+            }
+            FIELD vps_consecu
+            {
+            }
+            FIELD vps_fecha
+            {
+            }
+            FIELD vps_hora
+            {
+            }
+            FIELD vps_usuario
+            {
+            }
+            FIELD vps_mediocon
+            {
+            }
+            FIELD vps_califica
+            {
+                        ON DATA ACCEPT
+                    {
+                        EXEC SQL
+                        SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
+                        FROM   xpc_proscalif
+                        WHERE  xpc_codigo = :vps_califica
+                        into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+                        if (session.status == StatusCode.SS_NOREC) {
+                                    session.displayToMessageBox("No existe la calificacion seleccionado en el maestro");
+                                    rejectOperation();
+                                    }
+                        else
+                        {
+                        if (xpc_califica == "I") vps_estado = "S";
+                        else if (xpc_califica == "M") vps_estado = "M";
+                            else if (xpc_califica == "P") vps_estado = "N"; 	                                               
+                        }               
+                    }
+                    WHEN VALUE CHANGES
+                    {
+                        EXEC SQL
+                        SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
+                        FROM   xpc_proscalif
+                        WHERE  xpc_codigo = :vps_califica
+                        into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+                    }
+            }
+            FIELD xpc_nombre
+            {
+            }
+            FIELD vps_estado
+            {
+            }
+            FIELD vps_f_pcontacto
+            {
+            }
+        }
+        FIELD vpp_vendedor
+        {
+                 ON DATA ACCEPT
+            {
+                EXEC SQL
+                SELECT vve_nombre
+                FROM   vve_vendedora
+                WHERE  vve_codigo = :vpp_vendedor
+                into   vve_nombre;
+                if (session.status == StatusCode.SS_NOREC) {
+                            session.displayToMessageBox("No existe el vendedor seleccionado en el maestro de vendedores");
+                            rejectOperation();
+                            }
+                                              
+                EXEC SQL        
+                SELECT vvh_vendedora,vvh_fret_obra, vvh_fing_obra 
+                from    vvh_venobras
+                where  vvh_empresa   = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                and    vvh_proyecto  = :vpp_proyecto
+                and    vvh_vendedora = :vpp_vendedor
+                order by vvh_fing_obra DESC
+                into    vendedora,    fret_obra , fing_obra;
+        
+                if (session.status == StatusCode.SS_NOREC) {
+                    session.displayToMessageBox("La vendedora no pertenece al proyecto en cuestion");
+                    rejectOperation();
+                    }
+            if  (( ! (fret_obra.isNull()) )
+                && ( fret_obra.toString() != "01/01/01"))
+              {                         
+               if (fret_obra < vpp_fecha)
+                 {
+                    session.displayToMessageBox("La vendedora ya fue retirada del Proyecto");
+                    rejectOperation();
+                 }
+              }                                 
+            }
+             WHEN VALUE CHANGES
+            {
+                EXEC SQL
+                SELECT vve_nombre
+                FROM   vve_vendedora
+                WHERE  vve_codigo = :vpp_vendedor
+                into   vve_nombre;            
+            } 
+        }
+        
+        FIELD vve_nombre
+        {
+        }
+        
+    }
+    
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

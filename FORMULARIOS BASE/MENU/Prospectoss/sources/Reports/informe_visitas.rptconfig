@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__USUARIO_82_0</property>
+            <property name="value">carlos</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__EMPRESA_84_1</property>
+            <property name="value">GP</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__PROYECTO_231_2</property>
+            <property name="value">*</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__FECHAI_314_3</property>
+            <property name="value">01/04/2013</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__FECHAF_315_4</property>
+            <property name="value">15/04/2013</property>
+        </structure>
+        <structure>
+            <property name="name">USUARIO_82_5</property>
+            <property name="value">carlos</property>
+        </structure>
+        <structure>
+            <property name="name">USUARIO_82_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">EMPRESA_84_6</property>
+            <property name="value">GP</property>
+        </structure>
+        <structure>
+            <property name="name">EMPRESA_84_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAI_314_7</property>
+            <property name="value">2013-04-01</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAI_314_type_</property>
+            <property name="value">date</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAF_315_8</property>
+            <property name="value">2013-04-15</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAF_315_type_</property>
+            <property name="value">date</property>
+        </structure>
+        <structure>
+            <property name="name">PROYECTO_231_9</property>
+            <property name="value">*</property>
+        </structure>
+        <structure>
+            <property name="name">PROYECTO_231_type_</property>
+            <property name="value">string</property>
+        </structure>
+    </list-property>
+</report>

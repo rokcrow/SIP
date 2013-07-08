@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__PROYECTO_9_0</property>
+            <property name="value">CP</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__FECHAINI_10_1</property>
+            <property name="value">15/01/2013</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__FECHAFIN_11_2</property>
+            <property name="value">27/05/2013</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__VENDEDOR_89_3</property>
+            <property name="value">*</property>
+        </structure>
+        <structure>
+            <property name="name">VENDEDOR_89_4</property>
+            <property name="value">*</property>
+        </structure>
+        <structure>
+            <property name="name">VENDEDOR_89_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAINI_10_5</property>
+            <property name="value">2013-01-15</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAINI_10_type_</property>
+            <property name="value">date</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAFIN_11_6</property>
+            <property name="value">2013-05-27</property>
+        </structure>
+        <structure>
+            <property name="name">FECHAFIN_11_type_</property>
+            <property name="value">date</property>
+        </structure>
+        <structure>
+            <property name="name">PROYECTO_9_7</property>
+            <property name="value">CP</property>
+        </structure>
+        <structure>
+            <property name="name">PROYECTO_9_type_</property>
+            <property name="value">string</property>
+        </structure>
+    </list-property>
+</report>

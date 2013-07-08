@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+
+<ejb-jar id='EjbJar_ID'>
+  <enterprise-beans>
+    <session id='nxjFieldManager_ID'>
+      <ejb-name>nxjFieldManager</ejb-name>
+      <local-home>com.unify.nxj.mgrejb.NXJFieldManagerHome</local-home>
+      <local>com.unify.nxj.mgrejb.NXJFieldManager</local>
+      <ejb-class>com.unify.nxj.mgrejb.NXJFieldManagerBean</ejb-class>
+      <session-type>Stateful</session-type>
+      <transaction-type>Bean</transaction-type>
+      <env-entry>
+        <description>This entry provides the name of the default connection.  The default connection name is used by entry forms that are configured to inherit their connection name.
+        </description>
+        <env-entry-name>unify/defaultConnectionName</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>Connection1</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>This entry provides the currency symbol to be used while displaying values of type AMOUNT. Specifying true for this property will imply that the property, unify/currencySymbol is also defined.
+        </description>
+        <env-entry-name>unify/useSpecifiedCurrencyValues</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>false</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>This entry provides the scale to be used while displaying values of type AMOUNT.
+        </description>
+        <env-entry-name>unify/currencyScale</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>2</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>The name of the application package.</description>
+        <env-entry-name>unify/appPackageName</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>Prospectoss</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>The location of the unify home directory.</description>
+        <env-entry-name>unify/home</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>C:\Unify\NXJ</env-entry-value>
+      </env-entry>
+   <env-entry>
+     <description>This entry provides the name of the default look and feel.
+     </description>
+     <env-entry-name>unify/lookAndFeel</env-entry-name>
+     <env-entry-type>java.lang.String</env-entry-type>
+     <env-entry-value>BaseLAF</env-entry-value>
+   </env-entry>
+   <ejb-local-ref id='SecurityLocalRefnxjFieldManager_ID'>
+     <ejb-ref-name>SecurityLocalRef</ejb-ref-name>
+     <ejb-ref-type>Session</ejb-ref-type>
+     <local-home>com.unify.nxj.security.ejb.SecurityLocalHome</local-home>
+     <local>com.unify.nxj.security.ejb.SecurityLocal</local>
+     <ejb-link>SecurityEJB</ejb-link>
+   </ejb-local-ref>
+   <ejb-local-ref id='nxjC3PORef_ID'>
+     <ejb-ref-name>nxjC3PORef</ejb-ref-name>
+     <ejb-ref-type>Session</ejb-ref-type>
+     <local-home>com.unify.nxj.c3po.C3POHome</local-home>
+     <local>com.unify.nxj.c3po.C3PO</local>
+     <ejb-link>nxjC3PO</ejb-link>
+   </ejb-local-ref>
+      <resource-ref id='ResourceRef_Application_nxjFieldManagerConnection1_ID'>
+          <res-ref-name>jdbc/application/Connection1</res-ref-name>
+          <res-type>javax.sql.DataSource</res-type>
+          <res-auth>Application</res-auth>
+      </resource-ref>
+      <resource-ref id='ResourceRef_Container_nxjFieldManagerConnection1_ID'>
+          <res-ref-name>jdbc/container/Connection1</res-ref-name>
+          <res-type>javax.sql.DataSource</res-type>
+          <res-auth>Container</res-auth>
+      </resource-ref>
+      <resource-ref id='ResourceRef_Application_nxjFieldManagerNXJDS_ID'>
+          <res-ref-name>jdbc/NXJDS</res-ref-name>
+          <res-type>javax.sql.DataSource</res-type>
+          <res-auth>Container</res-auth>
+      </resource-ref>
+    </session>
+    <session id='nxjC3PO_ID'>
+      <ejb-name>nxjC3PO</ejb-name>
+      <local-home>com.unify.nxj.c3po.C3POHome</local-home>
+      <local>com.unify.nxj.c3po.C3PO</local>
+      <ejb-class>com.unify.nxj.c3po.C3POBean</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Bean</transaction-type>
+    </session>
+    <session id='SecurityEJB_ID'>
+      <ejb-name>SecurityEJB</ejb-name>
+      <local-home>com.unify.nxj.security.ejb.SecurityLocalHome</local-home>
+      <local>com.unify.nxj.security.ejb.SecurityLocal</local>
+      <ejb-class>com.unify.nxj.security.ejb.NoSecurityBean</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+      <resource-ref id="SecurityHelperDS_ID">
+        <description/>
+        <res-ref-name>jdbc/NXJDS</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+      </resource-ref>
+    </session>
+    <session id='nxjPolicyWrapper_ID'>
+      <ejb-name>nxjPolicyWrapper</ejb-name>
+      <home>com.unify.util.PolicyWrapperHome</home>
+      <remote>com.unify.util.PolicyWrapperEJB</remote>
+      <ejb-class>com.unify.nxj.mgr.PolicyWrapperImpl</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Bean</transaction-type>
+      <env-entry>
+        <description>This entry provides the name of the default connection.  The default connection name is used by entry forms that are configured to inherit their connection name.
+        </description>
+        <env-entry-name>unify/defaultConnectionName</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>Connection1</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>This entry provides the currency symbol to be used while displaying values of type AMOUNT. Specifying true for this property will imply that the property, unify/currencySymbol is also defined.
+        </description>
+        <env-entry-name>unify/useSpecifiedCurrencyValues</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>false</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>This entry provides the scale to be used while displaying values of type AMOUNT.
+        </description>
+        <env-entry-name>unify/currencyScale</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>2</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>The name of the application package.</description>
+        <env-entry-name>unify/appPackageName</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>Prospectoss</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <description>The location of the unify home directory.</description>
+        <env-entry-name>unify/home</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>C:\Unify\NXJ</env-entry-value>
+      </env-entry>
+   <ejb-local-ref id='SecurityLocalRefnxjPolicyWrapper_ID'>
+     <ejb-ref-name>SecurityLocalRef</ejb-ref-name>
+     <ejb-ref-type>Session</ejb-ref-type>
+     <local-home>com.unify.nxj.security.ejb.SecurityLocalHome</local-home>
+     <local>com.unify.nxj.security.ejb.SecurityLocal</local>
+     <ejb-link>SecurityEJB</ejb-link>
+   </ejb-local-ref>
+      <resource-ref id='ResourceRef_Application_nxjPolicyWrapperConnection1_ID'>
+          <res-ref-name>jdbc/application/Connection1</res-ref-name>
+          <res-type>javax.sql.DataSource</res-type>
+          <res-auth>Application</res-auth>
+      </resource-ref>
+      <resource-ref id='ResourceRef_Container_nxjPolicyWrapperConnection1_ID'>
+          <res-ref-name>jdbc/container/Connection1</res-ref-name>
+          <res-type>javax.sql.DataSource</res-type>
+          <res-auth>Container</res-auth>
+      </resource-ref>
+      <resource-ref id='ResourceRef_Application_nxjPolicyWrapperNXJDS_ID'>
+          <res-ref-name>jdbc/NXJDS</res-ref-name>
+          <res-type>javax.sql.DataSource</res-type>
+          <res-auth>Container</res-auth>
+      </resource-ref>
+    </session>
+  </enterprise-beans>
+  <assembly-descriptor>
+    <method-permission>
+      <unchecked/>
+      <method>
+        <ejb-name>nxjFieldManager</ejb-name>
+        <method-name>*</method-name>
+      </method>
+    </method-permission>
+    <method-permission>
+      <unchecked/>
+      <method>
+        <ejb-name>nxjC3PO</ejb-name>
+        <method-name>*</method-name>
+      </method>
+    </method-permission>
+    <method-permission>
+      <unchecked/>
+      <method>
+        <ejb-name>SecurityEJB</ejb-name>
+        <method-name>*</method-name>
+      </method>
+    </method-permission>
+    <container-transaction>
+      <method>
+        <ejb-name>SecurityEJB</ejb-name>
+        <method-name>*</method-name>
+      </method>
+      <trans-attribute>RequiresNew</trans-attribute>
+    </container-transaction>
+  </assembly-descriptor>
+</ejb-jar>
