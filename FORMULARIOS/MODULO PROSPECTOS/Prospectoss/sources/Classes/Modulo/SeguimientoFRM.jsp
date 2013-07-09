@@ -35,7 +35,7 @@
 
             <fieldset
                 binary_variables=""
-                border-width="1"
+                border-width="0"
                 class="box"
                 commands=""
                 displayheight="981"
@@ -48,7 +48,8 @@
                 original_name="box1"
                 uid="form1_1371588526491_624e34f928f8586fb84ca3c2412c191af5f96f12_1371589358805"
                 view="fieldset"
-                style="border-width:1;
+                style="border-width:0;
+                    border-color:transparent;
                     background-color: #cccccc">
 
                 <div

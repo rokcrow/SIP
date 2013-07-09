@@ -1,7 +1,7 @@
 <form 
     background_color = "#999999"
     binary_variables = ""
-    bloom_filter = "00000000000400040000000000000000"
+    bloom_filter = "00080000000000000800000000000000"
     commands = ""
     connection = "Connection1"
     field_order = ""

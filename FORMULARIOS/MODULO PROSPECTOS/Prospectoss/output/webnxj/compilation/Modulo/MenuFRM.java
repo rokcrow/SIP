@@ -139,7 +139,8 @@ public class MenuFRM
 	    NXJMenu AdministracionMenu = new NXJMenu("Administracion");
 	    NXJMenu VentasMenu = new NXJMenu("Ventas");
 	    NXJMenu ProspectosMenu = new NXJMenu("Prospectos -->");
-	    NXJMenu ReportesVentasMenu = new NXJMenu("Reportes");
+	    NXJMenu CNegociosMenu = new NXJMenu("Creaci\u00F3n de Negocios -->");
+	    NXJMenu ReportesVentasMenu = new NXJMenu("Reportes -->");
 	    NXJMenu TesoreriaMenu = new NXJMenu("Tesoreria");
 	    NXJMenu ContabilidadMenu = new NXJMenu("Contabilidad");
 	    NXJMenu PlanillaMenu = new NXJMenu("Planilla");
@@ -311,9 +312,12 @@ public class MenuFRM
 		}
 	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
 		{
-		NXJMenuItem CreacionNadd = new NXJMenuItem("Creacion de Negocios");
-		CreacionNadd.setTitle("Creaci\u00F3n de Negocios");
-		VentasMenu.add(CreacionNadd);
+		NXJMenuItem DUDisponiblesadd = new NXJMenuItem("Directorio de Unidades Disponibles");
+		DUDisponiblesadd.setTitle("Directorio de Unidades Disponibles");
+		DUDisponiblesadd.setCommand("Go To Form");
+		DUDisponiblesadd.setCommandParameter("Modulo.DUDisponiblesFRM");
+		CNegociosMenu.add(DUDisponiblesadd);
+		VentasMenu.add(CNegociosMenu);
 		}
 	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
 		{

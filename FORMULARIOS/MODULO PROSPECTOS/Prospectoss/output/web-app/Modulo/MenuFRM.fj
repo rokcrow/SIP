@@ -36,7 +36,8 @@ FORM MenuFRM
                                                         
                             NXJMenu VentasMenu = new NXJMenu("Ventas");
                                             NXJMenu ProspectosMenu = new NXJMenu("Prospectos -->");
-                                            NXJMenu ReportesVentasMenu = new NXJMenu("Reportes");
+                                            NXJMenu CNegociosMenu = new NXJMenu("Creación de Negocios -->");
+                                            NXJMenu ReportesVentasMenu = new NXJMenu("Reportes -->");
                                             
                             NXJMenu TesoreriaMenu = new NXJMenu("Tesoreria");
                             NXJMenu ContabilidadMenu = new NXJMenu("Contabilidad");
@@ -283,36 +284,46 @@ FORM MenuFRM
                             VentasMenu.add(Comisionesadd);
                          }
                          
-                          /**  Menu: Ventas: Prospectos: Registro de Prospectos **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
-                         {
-                            NXJMenuItem RegistroPadd = new NXJMenuItem("Registro de Prospectos");
-                            RegistroPadd.title = "Registro de Prospectos";
-                            RegistroPadd.command = "Go To Form"; 
-                            RegistroPadd.commandParameter = ("Modulo.ProspectosFRM");
-                            
-                            ProspectosMenu.add(RegistroPadd);
-                            VentasMenu.add(ProspectosMenu);
-                         }
+                            /************************  MENU - VENTAS - PROSPECTOS ********************/ 
                          
-                          /**  Menu: Ventas: Prospectos: Seguimiento de Prospectos **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
-                         {
-                            NXJMenuItem SeguimientoPadd = new NXJMenuItem("Seguimiento de Prospectos");
-                            SeguimientoPadd.title = "Seguimiento de Prospectos";
-                            SeguimientoPadd.command = "Go To Form"; 
-                            SeguimientoPadd.commandParameter = ("Modulo.SeguimientoFRM");
-                            
-                            ProspectosMenu.add(SeguimientoPadd);
-                         }
+                                        /**  Menu: Ventas: Prospectos: Registro de Prospectos **/ 
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        {
+                                            NXJMenuItem RegistroPadd = new NXJMenuItem("Registro de Prospectos");
+                                            RegistroPadd.title = "Registro de Prospectos";
+                                            RegistroPadd.command = "Go To Form"; 
+                                            RegistroPadd.commandParameter = ("Modulo.ProspectosFRM");
+                                            
+                                            ProspectosMenu.add(RegistroPadd);
+                                            VentasMenu.add(ProspectosMenu);
+                                        }
+                                        
+                                        /**  Menu: Ventas: Prospectos: Seguimiento de Prospectos **/ 
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        {
+                                            NXJMenuItem SeguimientoPadd = new NXJMenuItem("Seguimiento de Prospectos");
+                                            SeguimientoPadd.title = "Seguimiento de Prospectos";
+                                            SeguimientoPadd.command = "Go To Form"; 
+                                            SeguimientoPadd.commandParameter = ("Modulo.SeguimientoFRM");
+                                            
+                                            ProspectosMenu.add(SeguimientoPadd);
+                                        }
                          
-                         /**  Menu: Ventas: Creación de Negocios **/ 
-                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
-                         {
-                            NXJMenuItem CreacionNadd = new NXJMenuItem("Creacion de Negocios");
-                            CreacionNadd.title = "Creación de Negocios";
-                            VentasMenu.add(CreacionNadd);
-                         }
+                         
+                                /************************  MENU - VENTAS - CREACION DE NEGOCIOS ********************/ 
+                         
+                                        /**  Menu: Ventas: Creación de Negocios: Directorio de Unidades Disponibles **/ 
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        {
+                                            NXJMenuItem DUDisponiblesadd = new NXJMenuItem("Directorio de Unidades Disponibles");
+                                            DUDisponiblesadd.title = "Directorio de Unidades Disponibles";
+                                            DUDisponiblesadd.command = "Go To Form";
+                                            DUDisponiblesadd.commandParameter = ("Modulo.DUDisponiblesFRM");
+                                            
+                                            CNegociosMenu.add(DUDisponiblesadd);
+                                            VentasMenu.add(CNegociosMenu);
+                                            
+                                        }
                          
                            /**  Menu: Ventas: Trámites **/ 
                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))

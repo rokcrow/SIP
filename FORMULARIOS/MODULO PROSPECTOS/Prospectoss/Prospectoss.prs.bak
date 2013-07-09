@@ -579,23 +579,6 @@
     </file>
 
     <file
-         path="Classes/Modulo/MenuFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1369423869421"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;MenuFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
          path="Classes/Modulo/LoginFRM.fx"
           type="form"
           state="4"
@@ -878,7 +861,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;ProspectosFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>
@@ -900,22 +883,6 @@
          >
     </file>
 
-    <file
-         path="Classes/ItemsForm/actualempresa.fx"
-          type="text_field"
-          state="4"
-          flags="0"
-          timestamp="1373037870458"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FIELD &lt;/b&gt;actualempresa&lt;p&gt;&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
     <connection
          name="Connection1"
           path=""
@@ -928,12 +895,7 @@
     </connection>
 
     <color
-         rgb="#009933"
-         >
-    </color>
-
-    <color
-         rgb="#00cc00"
+         rgb="transparent"
          >
     </color>
 
@@ -943,7 +905,7 @@
     </color>
 
     <color
-         rgb="transparent"
+         rgb="#00cc00"
          >
     </color>
 
