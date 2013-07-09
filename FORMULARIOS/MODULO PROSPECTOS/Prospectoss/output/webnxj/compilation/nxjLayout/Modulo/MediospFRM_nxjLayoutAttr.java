@@ -17,18 +17,18 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
-	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("localized","true");
-	widget.addAttribute("displaywidth","1140");
+	widget.addAttribute("resize_browser","true");
+	widget.addAttribute("footer","none");
 	widget.addAttribute("name","NXJForm");
-	widget.addAttribute("stylesheets","");
 	widget.addStyle("background-color","#999999");
+	widget.addAttribute("displaywidth","1140");
+	widget.addAttribute("stylesheets","");
+	widget.setClass("form");
 	widget.addAttribute("displayheight","722");
 	widget.addAttribute("fieldheight","722");
-	widget.addAttribute("title","MediosPublicitarios");
 	widget.addAttribute("fieldwidth","1140");
-	widget.setClass("form");
+	widget.addAttribute("title","MediosPublicitarios");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -42,9 +42,9 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayheight","566");
 	widget.addAttribute("displaytop","33");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
 }
@@ -66,9 +66,9 @@ private void setAttrFor_div_vmp_codigo__50(Widget widget)
 
 private void setAttrFor_vmp_codigo__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldwidth","92");
 	widget.addAttribute("headertitle","Codigo");
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_codigo.");
 	widget.addAttribute("name","view1:vmp_codigo.");
 	widget.addStyle("overflow","hidden");
@@ -80,9 +80,9 @@ private void setAttrFor_div_vmp_descripcion__50(Widget widget)
 
 private void setAttrFor_vmp_descripcion__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldwidth","300");
 	widget.addAttribute("headertitle","Descripcion");
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_descripcion.");
 	widget.addAttribute("name","view1:vmp_descripcion.");
 	widget.addStyle("overflow","hidden");
@@ -94,9 +94,9 @@ private void setAttrFor_div_vmp_categoria__50(Widget widget)
 
 private void setAttrFor_vmp_categoria__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldwidth","125");
 	widget.addAttribute("headertitle","Categoria");
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)vmp_categoria.");
 	widget.addAttribute("name","view1:vmp_categoria.");
 	widget.addStyle("overflow","hidden");
@@ -141,9 +141,9 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)cajaarribaMPublicitarios:(Modulo.MediospDVW)actualempresa.");
 	widget.addAttribute("name","view1:cajaarribaMPublicitarios:actualempresa.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -153,9 +153,9 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.MediospDVW)cajaarribaMPublicitarios:(Modulo.MediospDVW)actualusuario.");
 	widget.addAttribute("name","view1:cajaarribaMPublicitarios:actualusuario.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 

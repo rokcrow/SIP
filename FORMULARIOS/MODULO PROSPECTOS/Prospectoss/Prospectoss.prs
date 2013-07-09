@@ -888,14 +888,47 @@
           type="form"
           state="4"
           flags="0"
-          timestamp="1373319115600"
+          timestamp="1373379658156"
           ctimestamp="0"
           scversion=""
           private="false"
           binary="false"
           checked-in-path=""
           base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;MenuFRM&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Classes/ModuloCNegocios"
+          type="folder"
+          state="4"
+          flags="0"
+          timestamp="1373395553491"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path="Classes/Folder1"
+          base-class=""
           tooltip=""
+         >
+    </file>
+
+    <file
+         path="Classes/ModuloCNegocios/DUDisponiblesFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1373406342063"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;DUDisponiblesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>
