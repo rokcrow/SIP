@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM ROAdicionalesFRM
+{
+    DATA VIEW view1 extends Modulo.ROAdicionalesDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

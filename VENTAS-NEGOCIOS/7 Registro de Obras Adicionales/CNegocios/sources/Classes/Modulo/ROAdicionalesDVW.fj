@@ -1,0 +1,51 @@
+package Modulo;
+
+
+
+DATA VIEW ROAdicionalesDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD textfield121
+    {
+    }
+    FIELD textfield12
+    {
+    }
+    
+    FIELD vve_nombre11
+    {
+    }
+    
+    FIELD textfield122
+    {
+    }
+    
+    
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

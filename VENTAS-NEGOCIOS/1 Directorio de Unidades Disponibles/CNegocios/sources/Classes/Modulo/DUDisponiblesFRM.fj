@@ -1,0 +1,99 @@
+package Modulo;
+
+FORM DUDisponiblesFRM
+{             multi_valued NullableStringVariable  xob_empresa;
+
+
+    BEFORE FORM
+    {
+        
+    }
+
+    BOX cajagrandeDUDisponibles
+    {
+    
+        FIELD xob_obra
+        {
+        }
+        
+        FIELD textfield11
+        {
+        }
+        
+        FIELD total1
+        {
+        }
+        
+        FIELD xob_proyecto
+        {
+        }
+        
+        FIELD textfield1
+        {
+        }
+        
+        FIELD total2
+        {
+        }
+        
+        BOX cajaarribaDUDisponibles
+        {
+            FIELD actualempresa
+            {
+            }
+            FIELD actualusuario
+            {
+            }
+        }
+        
+        BOX box11
+        {
+        }
+                 
+        DATA VIEW PUBLIC_vuu_unidades
+        {
+            multi_valued NullableStringVariable vuu_obra, vuu_empresa;
+            FIELD  vuu_manzana
+            {
+            }
+            FIELD  vuu_unidad
+            {
+            }
+            FIELD  vuu_modelo
+            {
+            }
+            FIELD  vuu_area_lote
+            {
+            }
+            FIELD  vuu_area_const
+            {
+            }
+            FIELD  vuu_esquina
+            {
+            }
+            FIELD  vuu_muro1
+            {
+            }
+            FIELD  vuu_muro2
+            {
+            }
+            FIELD  vuu_parque
+            {
+            }
+            FIELD  vuu_precio_uni
+            {
+            }
+        }
+        
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

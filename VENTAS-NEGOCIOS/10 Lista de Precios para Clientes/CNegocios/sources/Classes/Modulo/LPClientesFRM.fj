@@ -1,0 +1,19 @@
+package Modulo;
+
+FORM LPClientesFRM
+{
+    DATA VIEW view1 extends Modulo.LPClientesDVW
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

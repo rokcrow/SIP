@@ -1,0 +1,85 @@
+<project
+     pres-layers="1"
+      modified="true"
+      includePath=""
+      localize-by-default="false"
+      runtime-charset="ISO-8859-1"
+      exitURL=""
+      logoutURL=""
+      version="11"
+      use-locale="true"
+      currency_symbol="B"
+      currency_scale="2"
+      default-connection="Connection1"
+      default-entry=""
+      nxj_release="Unify NXJ Version 12.1B 	build 51123"
+      reuse-enabled="true"
+      lotus-model="false"
+      enable-security="false"
+      enable-SSO-security="false"
+      lotus-server=""
+      lotus-db-names=""
+      include-bpm-jars="false"
+      include-wasp-jars="false"
+      include-report-jars="false"
+      include-jars-in-ear="true"
+      progress-dialog-delay="-1"
+      timeout-page=""
+      startup-error-page=""
+      servlet-error-page=""
+      login-form=""
+      not-authorized-form=""
+ >
+
+    <env-property
+         env-name="LookAndFeel"
+          env-type="String"
+          env-required="true"
+          env-allowed="default"
+          env-multi-valied="false"
+          env-default="BaseLAF"
+          env-description=""
+         >
+    </env-property>
+
+    <env-property
+         env-name="TmpDir"
+          env-type="String"
+          env-required="true"
+          env-allowed=""
+          env-multi-valied="false"
+          env-default="$TMP"
+          env-description=""
+         >
+    </env-property>
+
+    <libraries
+         libraries="$UNIFY_PROJ/BaseProjects/standard/standard.prj"
+         >
+    </libraries>
+
+    <environment
+         currentLF="Look_and_Feels/BaseLAF"
+          language="0"
+          tempDirectory="$TMP"
+         >
+    </environment>
+
+    <build
+         host=""
+          directory=""
+          script=""
+          buildIncludePath=""
+          DBNAME=""
+          DBPATH=""
+         >
+    </build>
+</project>
+<!--====================================================================*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ============  ========  ========  ==========
+* $Log$*
+* END MODIFICATION HISTORY
+*====================================================================-->

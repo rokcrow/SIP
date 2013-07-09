@@ -1,0 +1,59 @@
+package Modulo;
+
+
+
+DATA VIEW DUDisponiblesDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD textfield1
+    {
+    }
+    
+    FIELD textfield11
+    {
+    }
+    FIELD textfield12
+    {
+    }
+    
+    FIELD textfield121
+    {
+    }
+    
+    FIELD textfield111
+    {
+    }
+    
+    FIELD textfield1111
+    {
+    }
+    
+    
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

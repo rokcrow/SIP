@@ -1,0 +1,16 @@
+datasource=
+driver=simba.jdbc.SimbaDriver
+jar=$UNIFY_HOME\\lib\\jdbcDrivers\\SimbaJDBC.jar
+name=Connection1
+password=E\:00aa0010005d00d800eb003e0004004d00a0
+type=DataServer
+url=jdbc\:simba\:192.168.1.7\:1583/DataServer_DSN
+user=root
+##############################################################################
+## BEGIN MODIFICATION HISTORY
+##
+## Revision #      Date      Time    Changes By
+## ------------  --------  --------  ----------
+## $Log$##
+## END MODIFICATION HISTORY
+##############################################################################

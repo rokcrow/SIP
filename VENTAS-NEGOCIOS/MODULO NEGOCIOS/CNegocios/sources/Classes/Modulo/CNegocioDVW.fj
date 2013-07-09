@@ -1,0 +1,52 @@
+package Modulo;
+
+
+
+DATA VIEW CNegocioDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD textfield12
+    {
+    }
+    
+    FIELD textfield1
+    {
+    }
+    
+    FIELD textfield123
+    {
+    }
+    
+    FIELD vve_nombre1
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+
