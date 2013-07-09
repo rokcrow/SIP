@@ -13,13 +13,14 @@
         class="form"
         commands=""
         connection="Connection1"
-        displayheight="748"
-        displaywidth="1194"
+        displayheight="751"
+        displaywidth="1199"
         field_order=""
         footer="none"
-        form_height="748"
-        form_width="1194"
+        form_height="751"
+        form_width="1199"
         foundation_type="Classes/Foundation/Form"
+        localized="true"
         name="NXJForm"
         target_table="PUBLIC.xob_obras"
         uid_prefix="modulo_form1_1372970373750"
@@ -53,11 +54,12 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 277px; left: 79px; width:831px; height:203px">
+                    style="position: absolute; top: 277px; left: 79px; width:903px; height:203px">
 
                     <div
                         aud_on_entry="false"
                         auto_find="true"
+                        auto_refresh="true"
                         binary_variables=""
                         binding_type="connection"
                         border-width="1"
@@ -70,7 +72,7 @@
                         displayheight="203"
                         displayleft="79"
                         displaytop="277"
-                        displaywidth="831"
+                        displaywidth="903"
                         field_weight="699"
                         id="cajagrandeDUDisponibles:PUBLIC_vuu_unidades."
                         key="cajagrandeDUDisponibles:PUBLIC_vuu_unidades."
@@ -88,7 +90,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 8px; left: 10px; width:815px; height:193px">
+                            style="position: absolute; top: 8px; left: 10px; width:858px; height:193px">
 
                             <div
                                 alternate_row_class="alternate_row"
@@ -97,16 +99,15 @@
                                 displayheight="193"
                                 displayleft="10"
                                 displaytop="10"
-                                displaywidth="815"
+                                displaywidth="858"
                                 field_weight="99"
                                 horizontal_scroll_width="82%"
                                 id="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1."
                                 key="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1."
                                 kind="repeating_area"
-                                list_columns="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:104;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.104:101;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.205:95;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.300:98;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.398:98;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.496:89;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.585:84;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.669:81;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.750:76;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.826:105"
+                                list_columns="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.145:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.211:75;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.286:81;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.367:65;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.432:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.504:57;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.561:114;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.675:164"
                                 occurrences="12"
                                 repeat_style="Grid"
-                                row_class="ROW"
                                 selected_row_class="selected_row"
                                 uid="modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629957"
                                 view="repeating_area">
@@ -114,7 +115,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 0px; width:99px; height:22px">
+                                    style="position: absolute; top: 0px; left: 0px; width:72px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -125,7 +126,7 @@
                                         displayheight="22"
                                         displayleft="0"
                                         displaytop="0"
-                                        displaywidth="104"
+                                        displaywidth="72"
                                         field_length="3"
                                         field_type="text"
                                         field_weight="99"
@@ -135,7 +136,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana."
                                         retrieve_value="true"
-                                        size="17"
+                                        size="12"
                                         target_field="vuu_manzana"
                                         title="vuu_manzana"
                                         type="text"
@@ -147,7 +148,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 99px; width:95px; height:22px">
+                                    style="position: absolute; top: 0px; left: 72px; width:73px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -158,7 +159,7 @@
                                         displayheight="22"
                                         displayleft="106"
                                         displaytop="0"
-                                        displaywidth="101"
+                                        displaywidth="73"
                                         field_length="4"
                                         field_type="text"
                                         field_weight="199"
@@ -168,7 +169,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad."
                                         retrieve_value="true"
-                                        size="16"
+                                        size="12"
                                         target_field="vuu_unidad"
                                         title="vuu_unidad"
                                         type="text"
@@ -180,7 +181,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 194px; width:89px; height:22px">
+                                    style="position: absolute; top: 0px; left: 145px; width:66px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -191,7 +192,7 @@
                                         displayheight="22"
                                         displayleft="194"
                                         displaytop="0"
-                                        displaywidth="95"
+                                        displaywidth="66"
                                         field_length="3"
                                         field_type="text"
                                         field_weight="299"
@@ -201,7 +202,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo."
                                         retrieve_value="true"
-                                        size="15"
+                                        size="11"
                                         target_field="vuu_modelo"
                                         title="vuu_modelo"
                                         type="text"
@@ -213,7 +214,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 283px; width:93px; height:22px">
+                                    style="position: absolute; top: 0px; left: 211px; width:75px; height:22px">
 
                                     <input
                                         accell_type="Amount"
@@ -225,17 +226,17 @@
                                         displayheight="22"
                                         displayleft="287"
                                         displaytop="0"
-                                        displaywidth="98"
+                                        displaywidth="75"
                                         field_length="16"
                                         field_type="text"
                                         field_weight="399"
                                         findable="true"
-                                        headertitle="Área Lote"
+                                        headertitle="AreaLote"
                                         key="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote."
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote."
                                         retrieve_value="true"
-                                        size="16"
+                                        size="12"
                                         target_field="vuu_area_lote"
                                         title="vuu_area_lote"
                                         type="text"
@@ -247,7 +248,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 376px; width:93px; height:22px">
+                                    style="position: absolute; top: 0px; left: 286px; width:81px; height:22px">
 
                                     <input
                                         accell_type="Amount"
@@ -259,17 +260,17 @@
                                         displayheight="22"
                                         displayleft="397"
                                         displaytop="0"
-                                        displaywidth="98"
+                                        displaywidth="81"
                                         field_length="16"
                                         field_type="text"
                                         field_weight="499"
                                         findable="true"
-                                        headertitle="Área Const."
+                                        headertitle="AreaConst"
                                         key="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const."
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const."
                                         retrieve_value="true"
-                                        size="16"
+                                        size="13"
                                         target_field="vuu_area_const"
                                         title="vuu_area_const"
                                         type="text"
@@ -281,7 +282,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 469px; width:84px; height:22px">
+                                    style="position: absolute; top: 0px; left: 367px; width:65px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -292,7 +293,7 @@
                                         displayheight="22"
                                         displayleft="519"
                                         displaytop="0"
-                                        displaywidth="89"
+                                        displaywidth="65"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="599"
@@ -302,7 +303,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina."
                                         retrieve_value="true"
-                                        size="14"
+                                        size="10"
                                         target_field="vuu_esquina"
                                         title="vuu_esquina"
                                         type="text"
@@ -314,7 +315,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 553px; width:80px; height:22px">
+                                    style="position: absolute; top: 0px; left: 432px; width:72px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -325,7 +326,7 @@
                                         displayheight="22"
                                         displayleft="615"
                                         displaytop="0"
-                                        displaywidth="84"
+                                        displaywidth="72"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="699"
@@ -335,7 +336,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1."
                                         retrieve_value="true"
-                                        size="14"
+                                        size="12"
                                         target_field="vuu_muro1"
                                         title="vuu_muro1"
                                         type="text"
@@ -347,7 +348,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 633px; width:76px; height:22px">
+                                    style="position: absolute; top: 0px; left: 504px; width:57px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -358,7 +359,7 @@
                                         displayheight="22"
                                         displayleft="701"
                                         displaytop="0"
-                                        displaywidth="81"
+                                        displaywidth="57"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="799"
@@ -368,7 +369,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2."
                                         retrieve_value="true"
-                                        size="13"
+                                        size="9"
                                         target_field="vuu_muro2"
                                         title="vuu_muro2"
                                         type="text"
@@ -380,7 +381,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 709px; width:72px; height:22px">
+                                    style="position: absolute; top: 0px; left: 561px; width:114px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -391,7 +392,7 @@
                                         displayheight="22"
                                         displayleft="787"
                                         displaytop="0"
-                                        displaywidth="76"
+                                        displaywidth="114"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="899"
@@ -401,7 +402,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque."
                                         retrieve_value="true"
-                                        size="12"
+                                        size="19"
                                         target_field="vuu_parque"
                                         title="vuu_parque"
                                         type="text"
@@ -413,7 +414,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 781px; width:15px; height:22px">
+                                    style="position: absolute; top: 0px; left: 675px; width:164px; height:22px">
 
                                     <input
                                         accell_type="Amount"
@@ -425,7 +426,7 @@
                                         displayheight="22"
                                         displayleft="877"
                                         displaytop="0"
-                                        displaywidth="105"
+                                        displaywidth="164"
                                         field_length="25"
                                         field_type="text"
                                         field_weight="999"
@@ -435,7 +436,7 @@
                                         multi_valued="true"
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni."
                                         retrieve_value="true"
-                                        size="17"
+                                        size="27"
                                         target_field="vuu_precio_uni"
                                         title="vuu_precio_uni"
                                         type="text"
@@ -606,7 +607,7 @@
                                 key="cajagrandeDUDisponibles:cajaarribaDUDisponibles:label1."
                                 kind="instance"
                                 labelalign="left"
-                                labeltitle="DIRECTORIO DE UNIDADES DISPONIBLES"
+                                labeltitle="DIRECTORIODEUNIDADESDISPONIBLES"
                                 original_name="label1"
                                 uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
                                 uid_to_name=""
@@ -633,12 +634,12 @@
                                 id="cajagrandeDUDisponibles:cajaarribaDUDisponibles:label211."
                                 key="cajagrandeDUDisponibles:cajaarribaDUDisponibles:label211."
                                 labelalign="left"
-                                labeltitle="top: 1024"
+                                labeltitle="top1024"
                                 original_name="label2"
                                 target_field=""
                                 uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
                                 view="label">
-                                <nobr>top: 1024</nobr>
+                                <nobr>top1024</nobr>
                             </label>
 
                         </div>
@@ -689,7 +690,7 @@
                         id="cajagrandeDUDisponibles:label11."
                         key="cajagrandeDUDisponibles:label11."
                         labelalign="left"
-                        labeltitle="Directorio de Unidades Disponibles"
+                        labeltitle="DirectoriodeUnidadesDisponibles"
                         original_name="label1"
                         target_field=""
                         uid="desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656"
@@ -698,7 +699,7 @@
                             font-family: Verdana;
                             font-size: 14px;
                             color: Black">
-                        <nobr>Directorio de Unidades Disponibles</nobr>
+                        <nobr>DirectoriodeUnidadesDisponibles</nobr>
                     </label>
 
                 </div>
@@ -789,291 +790,12 @@
                 <div
                     binary_variables=""
                     view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 55px; width:57px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="55"
-                        displaytop="250"
-                        displaywidth="57"
-                        id="cajagrandeDUDisponibles:label32."
-                        key="cajagrandeDUDisponibles:label32."
-                        labelalign="left"
-                        labeltitle="Manzana"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098191251"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Manzana</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 132px; width:44px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="132"
-                        displaytop="250"
-                        displaywidth="44"
-                        id="cajagrandeDUDisponibles:label321."
-                        key="cajagrandeDUDisponibles:label321."
-                        labelalign="left"
-                        labeltitle="Unidad"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098203003"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Unidad</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 212px; width:45px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="212"
-                        displaytop="250"
-                        displaywidth="45"
-                        id="cajagrandeDUDisponibles:label3211."
-                        key="cajagrandeDUDisponibles:label3211."
-                        labelalign="left"
-                        labeltitle="Modelo"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098204386"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Modelo</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 523px; width:26px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="523"
-                        displaytop="250"
-                        displaywidth="26"
-                        id="cajagrandeDUDisponibles:label32111."
-                        key="cajagrandeDUDisponibles:label32111."
-                        labelalign="left"
-                        labeltitle="ESQ"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098217076"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>ESQ</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 835px; width:86px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="835"
-                        displaytop="250"
-                        displaywidth="86"
-                        id="cajagrandeDUDisponibles:label321111."
-                        key="cajagrandeDUDisponibles:label321111."
-                        labelalign="left"
-                        labeltitle="Precio Unidad"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222173"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>Precio Unidad</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 600px; width:26px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="600"
-                        displaytop="250"
-                        displaywidth="26"
-                        id="cajagrandeDUDisponibles:label32112."
-                        key="cajagrandeDUDisponibles:label32112."
-                        labelalign="left"
-                        labeltitle="MTC"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222163"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>MTC</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 380px; width:114px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="380"
-                        displaytop="250"
-                        displaywidth="114"
-                        id="cajagrandeDUDisponibles:label3212."
-                        key="cajagrandeDUDisponibles:label3212."
-                        labelalign="left"
-                        labeltitle="Área Construcción"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098217087"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>&Aacute;rea Construcci&oacute;n</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 755px; width:34px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="755"
-                        displaytop="250"
-                        displaywidth="34"
-                        id="cajagrandeDUDisponibles:label32121."
-                        key="cajagrandeDUDisponibles:label32121."
-                        labelalign="left"
-                        labeltitle="PARQ"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222188"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>PARQ</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 290px; width:61px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="290"
-                        displaytop="250"
-                        displaywidth="61"
-                        id="cajagrandeDUDisponibles:label322."
-                        key="cajagrandeDUDisponibles:label322."
-                        labelalign="left"
-                        labeltitle="Área Lote"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098217094"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>&Aacute;rea Lote</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 250px; left: 678px; width:25px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="678"
-                        displaytop="250"
-                        displaywidth="25"
-                        id="cajagrandeDUDisponibles:label3221."
-                        key="cajagrandeDUDisponibles:label3221."
-                        labelalign="left"
-                        labeltitle="MLA"
-                        original_name="label3"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222180"
-                        view="label"
-                        style="font-size: 12px">
-                        <nobr>MLA</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
                     style="position: absolute; top: 549px; left: 365px; width:138px; height:48px">
 
                     <div
                         base_class="Classes/ItemsForm/Boton.fx"
                         binary_variables=""
+                        command="Previous Form"
                         displayleft="365"
                         displaytop="549"
                         field_type="button"
@@ -1095,36 +817,12 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 153px; left: 394px; width:204px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="394"
-                        displaytop="153"
-                        displaywidth="204"
-                        field_type="text"
-                        field_weight="299"
-                        findable="false"
-                        key="cajagrandeDUDisponibles:textfield1."
-                        name="cajagrandeDUDisponibles:textfield1."
-                        original_name="textfield1"
-                        size="34"
-                        target_field=""
-                        type="text"
-                        uid="desing_form1_1369342922091_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767260538"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
                     style="position: absolute; top: 208px; left: 394px; width:204px; height:22px">
 
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="30"
                         db_type="String"
@@ -1203,11 +901,42 @@
                 <div
                     binary_variables=""
                     view="div"
+                    style="position: absolute; top: 153px; left: 394px; width:204px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        case_conversion="Upper"
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="394"
+                        displaytop="153"
+                        displaywidth="204"
+                        field_type="text"
+                        field_weight="299"
+                        findable="true"
+                        key="cajagrandeDUDisponibles:vpy_nombre."
+                        multi_valued="true"
+                        name="cajagrandeDUDisponibles:vpy_nombre."
+                        original_name="textfield1"
+                        size="34"
+                        stop_for_input="false"
+                        target_field=""
+                        type="text"
+                        uid="desing_form1_1369342922091_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767260538"
+                        updateable="false"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
                     style="position: absolute; top: 208px; left: 347px; width:45px; height:22px">
 
                     <input
                         accell_type="String"
+                        auto_accept="true"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="2"
                         db_type="String"
@@ -1220,6 +949,7 @@
                         field_type="text"
                         field_weight="399"
                         findable="true"
+                        immediate="true"
                         key="cajagrandeDUDisponibles:xob_obra."
                         multi_valued="true"
                         name="cajagrandeDUDisponibles:xob_obra."
@@ -1242,6 +972,7 @@
                         accell_type="String"
                         auto_accept="true"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="2"
                         db_type="String"
@@ -1254,6 +985,7 @@
                         field_type="text"
                         field_weight="199"
                         findable="true"
+                        immediate="true"
                         key="cajagrandeDUDisponibles:xob_proyecto."
                         multi_valued="true"
                         name="cajagrandeDUDisponibles:xob_proyecto."

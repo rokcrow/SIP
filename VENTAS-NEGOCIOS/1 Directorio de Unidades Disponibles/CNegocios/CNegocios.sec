@@ -12,13 +12,7 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles/box11"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
-        path="Static_Content/system/silver/menugradient.png"
+        path="Static_Content/system/silver/TreeOpen.gif"
         type="6"
     >
         <permission
@@ -29,7 +23,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/TreeOpen.gif"
+        path="Static_Content/system/silver/menugradient.png"
         type="6"
     >
         <permission
@@ -51,8 +45,8 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/doclink.gif"
-        type="6"
+        path="Static_Content/system"
+        type="16"
     >
         <permission
             name="Access"
@@ -73,51 +67,14 @@
     </object>
     <object
         project=""
-        path="Static_Content/system"
-        type="16"
+        path="Static_Content/system/default/doclink.gif"
+        type="6"
     >
         <permission
             name="Access"
             value=""
             timestamp="0"
         />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/DUDisponiblesFRM.fx"
-        type="0"
-    >
-        <permission
-            name="Form"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Update"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Find"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Add"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Delete"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles"
-        type="35"
-    >
     </object>
     <object
         project=""
@@ -173,12 +130,6 @@
             value=""
             timestamp="0"
         />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles/cajaarribaDUDisponibles"
-        type="35"
-    >
     </object>
     <object
         project=""
@@ -321,7 +272,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/TreeOpen.gif"
+        path="Static_Content/system/default/tabactive.gif"
         type="6"
     >
         <permission
@@ -332,7 +283,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/tabactive.gif"
+        path="Static_Content/system/default/TreeOpen.gif"
         type="6"
     >
         <permission
@@ -363,12 +314,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -418,17 +369,6 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/gridtop.png"
-        type="6"
-    >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
         path="Static_Content/system/silver/tabactive.gif"
         type="6"
     >
@@ -440,26 +380,11 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles/PUBLIC_vuu_unidades"
-        type="36"
+        path="Static_Content/system/default/gridtop.png"
+        type="6"
     >
         <permission
-            name="Update"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Find"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Add"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Delete"
+            name="Access"
             value=""
             timestamp="0"
         />
@@ -470,12 +395,12 @@
         type="-1"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />

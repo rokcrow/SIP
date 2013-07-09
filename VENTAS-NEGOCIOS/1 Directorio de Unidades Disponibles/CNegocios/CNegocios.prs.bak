@@ -594,40 +594,6 @@
          >
     </file>
 
-    <file
-         path="Classes/Modulo/DUDisponiblesFRMX.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1372950591452"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;DUDisponiblesFRMX&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
-         path="Classes/Modulo/DUDisponiblesFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1372970373738"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;DUDisponiblesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
     <connection
          name="Connection1"
           path=""

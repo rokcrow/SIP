@@ -8,9 +8,10 @@
     connection = "Connection1"
     field_order = ""
     footer = "none"
-    form_height = "749"
+    form_height = "751"
     form_width = "1199"
     foundation_type = "Classes/Foundation/Form"
+    localized = "true"
     style_class = "form"
     target_table = "PUBLIC.xob_obras"
     uid_prefix = "modulo_form1_1372970373750"
@@ -32,6 +33,7 @@
     <div 
         aud_on_entry = "false"
         auto_find = "true"
+        auto_refresh = "true"
         binary_variables = ""
         binding_type = "connection"
         cascade_deletes = "false"
@@ -40,7 +42,7 @@
         connection = "Connection1"
         detail_keys = "vuu_obra;vuu_empresa"
         display_name = "PUBLIC_vuu_unidades"
-        field_weight = "599"
+        field_weight = "699"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades."
         kind = "data_region"
         master_keys = "xob_obra;xob_empresa"
@@ -59,9 +61,8 @@
         field_weight = "99"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1."
         kind = "repeating_area"
-        list_columns = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:106;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.106:88;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.194:93;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.287:110;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.397:122;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.519:96;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.615:86;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.701:86;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.787:90;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.877:150"
+        list_columns = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.145:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.211:75;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.286:81;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.367:65;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.432:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.504:57;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.561:114;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.675:164"
         occurrences = "12"
-        row_class = "ROW"
         selected_row_class = "selected_row"
         style_class = "repeating_area"
         uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629957"
@@ -413,116 +414,6 @@
         view = "label">
     </control>
     <control 
-        binary_variables = ""
-        display_name = "label32"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label32."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098191251"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label321"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label321."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098203003"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label3211"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label3211."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098204386"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label32111"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label32111."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098217076"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label321111"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label321111."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222173"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label32112"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label32112."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222163"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label3212"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label3212."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098217087"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label32121"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label32121."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222188"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label322"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label322."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098217094"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label3221"
-        font_size = "12"
-        key = "cajagrandeDUDisponibles:label3221."
-        original_name = "label3"
-        style_class = "label"
-        target_field = ""
-        uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1370098222180"
-        view = "label">
-    </control>
-    <control 
         base_class = "Classes/ItemsForm/Boton.fx"
         binary_variables = ""
         display_base_class = "ItemsForm.Boton"
@@ -538,21 +429,9 @@
         view = "button">
     </control>
     <field 
-        binary_variables = ""
-        display_name = "textfield1"
-        field_type = "text"
-        field_weight = "299"
-        findable = "false"
-        key = "cajagrandeDUDisponibles:textfield1."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "desing_form1_1369342922091_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767260538"
-        view = "text">
-    </field>
-    <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "30"
         db_type = "String"
         display_name = "textfield11"
@@ -575,7 +454,7 @@
         binary_variables = ""
         display_name = "total1"
         field_type = "text"
-        field_weight = "699"
+        field_weight = "599"
         findable = "false"
         key = "cajagrandeDUDisponibles:total1."
         original_name = "textfield1"
@@ -598,8 +477,27 @@
         view = "text">
     </field>
     <field 
-        accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
+        display_name = "vpy_nombre"
+        field_type = "text"
+        field_weight = "299"
+        findable = "true"
+        key = "cajagrandeDUDisponibles:vpy_nombre."
+        multi_valued = "true"
+        original_name = "textfield1"
+        stop_for_input = "false"
+        style_class = "textfield"
+        target_field = ""
+        uid = "desing_form1_1369342922091_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767260538"
+        updateable = "false"
+        view = "text">
+    </field>
+    <field 
+        accell_type = "String"
+        auto_accept = "true"
+        binary_variables = ""
+        case_conversion = "Upper"
         db_length = "2"
         db_type = "String"
         display_name = "xob_obra"
@@ -608,6 +506,7 @@
         field_type = "text"
         field_weight = "399"
         findable = "true"
+        immediate = "true"
         key = "cajagrandeDUDisponibles:xob_obra."
         multi_valued = "true"
         original_name = "textfield1"
@@ -622,6 +521,7 @@
         accell_type = "String"
         auto_accept = "true"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "2"
         db_type = "String"
         display_name = "xob_proyecto"
@@ -630,6 +530,7 @@
         field_type = "text"
         field_weight = "199"
         findable = "true"
+        immediate = "true"
         key = "cajagrandeDUDisponibles:xob_proyecto."
         multi_valued = "true"
         original_name = "textfield1"

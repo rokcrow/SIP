@@ -64,10 +64,6 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>webTierEntryPoint</servlet-name>
-    <url-pattern>/Modulo.DUDisponiblesFRM</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
     <servlet-name>ajspHandler</servlet-name>
     <url-pattern>/UnifyNXJ.jsp</url-pattern>
   </servlet-mapping>

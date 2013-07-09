@@ -108,6 +108,12 @@ public class DUDisponiblesFRM
 {
     /*multi_valued*/ NullableStringVariable xob_empresa = NullableFactory.createNullableStringVariable(this, "xob_empresa", true, false);
 
+    public void beforeForm()
+	throws Exception
+    {
+	xob_empresa.setClearAddExp((ERROR).cajagrandeMenu.EMPRESA);
+    } // beforeForm
+
     public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$getPUBLIC_vuu_unidades_1_FindExpressions()
     {
 	return new com.unify.nxj.mgr.NXJMasterRelationshipExpression[]
@@ -200,16 +206,6 @@ public class DUDisponiblesFRM
 	public NXJLabelControl label3 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3", false);
 	public NXJLabelControl label31 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label31", false);
 	public NXJLabelControl label311 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label311", false);
-	public NXJLabelControl label32 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label32", false);
-	public NXJLabelControl label321 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label321", false);
-	public NXJLabelControl label3211 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3211", false);
-	public NXJLabelControl label32111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label32111", false);
-	public NXJLabelControl label321111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label321111", false);
-	public NXJLabelControl label32112 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label32112", false);
-	public NXJLabelControl label3212 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3212", false);
-	public NXJLabelControl label32121 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label32121", false);
-	public NXJLabelControl label322 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label322", false);
-	public NXJLabelControl label3221 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3221", false);
 	public class regresarbtn
 	    extends ItemsForm.Boton
 	{
@@ -221,12 +217,155 @@ public class DUDisponiblesFRM
 	} // regresarbtn
 
 	public regresarbtn regresarbtn = new regresarbtn();
-	public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
 	public /*multi_valued*/ NullableStringField textfield11 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield11", true, true, 30);
 	public NullableStringField total1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "total1", false, true, 100);
 	public NullableStringField total2 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "total2", false, true, 100);
+	public /*multi_valued*/ NullableStringField vpy_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpy_nombre", true, true, 100);
 	public /*multi_valued*/ NullableStringField xob_obra = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xob_obra", true, true, 2);
-	public /*multi_valued*/ NullableStringField xob_proyecto = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xob_proyecto", true, true, 2);
+	public class xob_proyecto
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn1 = getConnection();
+		    java.sql.PreparedStatement us$stmt1 = null;
+		    ResultSet us$rs1 = null;
+		    try
+			{
+			us$stmt1 = us$conn1.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
+			xob_proyecto.us$setSqlParameterValue(us$stmt1, 1);
+			us$stmt1.setString(2, (ERROR).cajagrandeMenu.EMPRESA.getStringValue());
+			us$rs1 = us$stmt1.executeQuery();
+			int us$rowsTouched1 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd1 = us$rs1.getMetaData();
+			    if (us$rsmd1.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd1.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter1 = us$conn1.createDataIterator(us$rs1);
+			    if (us$getter1.next())
+				{
+				++us$rowsTouched1;
+				us$getter1.assignValueToVariable(vpy_nombre, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched1 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs1 != null)
+				us$rs1.close();
+			    }
+			}
+		    catch (SQLException us$ex1)
+			{
+			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+			throw us$ex1;
+			}
+		    catch (NXJDataConnectionException us$ex1)
+			{
+			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+			throw us$ex1;
+			}
+		    finally
+			{
+			if (us$stmt1 != null)
+			    us$conn1.us$closeStatement(us$stmt1);
+			}
+		    }
+		if (getSession().getStatus() == StatusCode.SS_NOREC)
+		    {
+		    getSession().displayToMessageBox("No existe el proyecto seleccionado en el maestro de proyectos");
+		    xob_proyecto.assign(us$registerPool.allocateRegister().load(" "));
+		    rejectOperation();
+		    }
+	    } // onDataAccept
+
+	    public void whenValueChanges()
+		throws Exception
+	    {
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn2 = getConnection();
+		    java.sql.PreparedStatement us$stmt2 = null;
+		    ResultSet us$rs2 = null;
+		    try
+			{
+			us$stmt2 = us$conn2.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
+			xob_proyecto.us$setSqlParameterValue(us$stmt2, 1);
+			us$stmt2.setString(2, (ERROR).cajagrandeMenu.EMPRESA.getStringValue());
+			us$rs2 = us$stmt2.executeQuery();
+			int us$rowsTouched2 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd2 = us$rs2.getMetaData();
+			    if (us$rsmd2.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd2.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter2 = us$conn2.createDataIterator(us$rs2);
+			    if (us$getter2.next())
+				{
+				++us$rowsTouched2;
+				us$getter2.assignValueToVariable(vpy_nombre, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched2 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs2 != null)
+				us$rs2.close();
+			    }
+			}
+		    catch (SQLException us$ex2)
+			{
+			getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+			throw us$ex2;
+			}
+		    catch (NXJDataConnectionException us$ex2)
+			{
+			getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+			throw us$ex2;
+			}
+		    finally
+			{
+			if (us$stmt2 != null)
+			    us$conn2.us$closeStatement(us$stmt2);
+			}
+		    }
+	    } // whenValueChanges
+
+	    public xob_proyecto()
+	    {
+		super(Modulo.DUDisponiblesFRM.cajagrandeDUDisponibles.this, "xob_proyecto", true, true, 2);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(2);
+		setAutoAccept(true);
+		us$setCandidateTargetColumnName("xob_proyecto");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		setCaseConversion(NullableField.CaseConversion_UPPER);
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // xob_proyecto
+
+	public /*multi_valued*/ xob_proyecto xob_proyecto = new xob_proyecto();
 	public class PUBLIC_vuu_unidades
 	    extends com.unify.nxj.mgr.NXJDataView
 	{
@@ -249,6 +388,7 @@ public class DUDisponiblesFRM
 		us$setConnectionName("Connection1");
 		us$setTargetTableName("PUBLIC.vuu_unidades");
 		setAutoFind(true);
+		us$setAutoRefresh(true);
 		setStartInAddMode(false);
 		us$setBindingType("connection");
 		vuu_area_const.setStyleClass("textfield");
@@ -424,29 +564,6 @@ public class DUDisponiblesFRM
 	    label31.setFontSize("12");
 	    label311.setStyleClass("label");
 	    label311.setFontSize("12");
-	    label32.setStyleClass("label");
-	    label32.setFontSize("12");
-	    label321.setStyleClass("label");
-	    label321.setFontSize("12");
-	    label3211.setStyleClass("label");
-	    label3211.setFontSize("12");
-	    label32111.setStyleClass("label");
-	    label32111.setFontSize("12");
-	    label321111.setStyleClass("label");
-	    label321111.setFontSize("12");
-	    label32112.setStyleClass("label");
-	    label32112.setFontSize("12");
-	    label3212.setStyleClass("label");
-	    label3212.setFontSize("12");
-	    label32121.setStyleClass("label");
-	    label32121.setFontSize("12");
-	    label322.setStyleClass("label");
-	    label322.setFontSize("12");
-	    label3221.setStyleClass("label");
-	    label3221.setFontSize("12");
-	    textfield1.setStyleClass("textfield");
-	    textfield1.us$setView("text");
-	    textfield1.setFindable(false);
 	    textfield11.setStyleClass("textfield");
 	    textfield11.us$setMultiValued(true);
 	    textfield11.us$setView("text");
@@ -456,31 +573,31 @@ public class DUDisponiblesFRM
 	    textfield11.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    textfield11.setFindable(true);
 	    textfield11.setUpdateable(true);
+	    textfield11.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    total1.setStyleClass("textfield");
 	    total1.us$setView("text");
 	    total1.setFindable(false);
 	    total2.setStyleClass("textfield");
 	    total2.us$setView("text");
 	    total2.setFindable(false);
+	    vpy_nombre.setStyleClass("textfield");
+	    vpy_nombre.us$setMultiValued(true);
+	    vpy_nombre.us$setView("text");
+	    vpy_nombre.setFindable(true);
+	    vpy_nombre.setUpdateable(false);
+	    vpy_nombre.setStopForInput(false);
+	    vpy_nombre.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    xob_obra.setStyleClass("textfield");
 	    xob_obra.us$setMultiValued(true);
 	    xob_obra.us$setView("text");
 	    xob_obra.us$setFieldLength(2);
+	    xob_obra.setAutoAccept(true);
 	    xob_obra.us$setCandidateTargetColumnName("xob_obra");
 	    xob_obra.setValueRetrievedDuringFetch(true);
 	    xob_obra.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    xob_obra.setFindable(true);
 	    xob_obra.setUpdateable(true);
-	    xob_proyecto.setStyleClass("textfield");
-	    xob_proyecto.us$setMultiValued(true);
-	    xob_proyecto.us$setView("text");
-	    xob_proyecto.us$setFieldLength(2);
-	    xob_proyecto.setAutoAccept(true);
-	    xob_proyecto.us$setCandidateTargetColumnName("xob_proyecto");
-	    xob_proyecto.setValueRetrievedDuringFetch(true);
-	    xob_proyecto.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    xob_proyecto.setFindable(true);
-	    xob_proyecto.setUpdateable(true);
+	    xob_obra.setCaseConversion(NullableField.CaseConversion_UPPER);
 	} // cajagrandeDUDisponiblespropertySetter_0
     } // cajagrandeDUDisponibles
 
