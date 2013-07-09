@@ -336,6 +336,54 @@ FORM MenuFRM
                                             CNegociosMenu.add(CPPantallaadd);
                                             
                                         }
+                                        
+                                             /**  Menu: Ventas: Creación de Negocios: Registro de Boletines **/ 
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        {
+                                            NXJMenuItem RBoletinesadd = new NXJMenuItem("Registro de Boletines");
+                                            RBoletinesadd.title = "Registro de Boletines";
+                                            RBoletinesadd.command = "Go To Form";
+                                            RBoletinesadd.commandParameter = ("Modulo.RBoletinesFRM");
+                                            
+                                            CNegociosMenu.add(RBoletinesadd);
+                                            
+                                        }
+                                        
+                                           /**  Menu: Ventas: Creación de Negocios: Registro de Obras Adicionales **/ 
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        {
+                                            NXJMenuItem ROAdicionalesadd = new NXJMenuItem("Registro de Obras Adicionales");
+                                            ROAdicionalesadd.title = "Registro de Obras Adicionales";
+                                            ROAdicionalesadd.command = "Go To Form";
+                                            ROAdicionalesadd.commandParameter = ("Modulo.ROAdicionalesFRM");
+                                            
+                                            CNegociosMenu.add(ROAdicionalesadd);
+                                            
+                                        }
+                                        
+                                         /**  Menu: Ventas: Creación de Negocios: Estado de Cuenta Contable **/ 
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        {
+                                            NXJMenuItem ECContableadd = new NXJMenuItem("Estado de Cuenta Contable");
+                                            ECContableadd.title = "Estado de Cuenta Contable";
+                                            ECContableadd.command = "Go To Form";
+                                            ECContableadd.commandParameter = ("Modulo.ECContableFRM");
+                                            
+                                            CNegociosMenu.add(ECContableadd);
+                                            
+                                        }
+                                        
+                                         /**  Menu: Ventas: Creación de Negocios: Lista de Precios para Clientes **/ 
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        {
+                                            NXJMenuItem LPClientesadd = new NXJMenuItem("Lista de Precios para Clientes");
+                                            LPClientesadd.title = "Lista de Precios para Clientes";
+                                            LPClientesadd.command = "Go To Form";
+                                            LPClientesadd.commandParameter = ("Modulo.LPClientesFRM");
+                                            
+                                            CNegociosMenu.add(LPClientesadd);
+                                            
+                                        }
                          
                            /**  Menu: Ventas: Trámites **/ 
                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
