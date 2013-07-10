@@ -17,19 +17,19 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("field_type","button");
 	widget.addAttribute("type","button");
-	widget.addAttribute("name",".top.");
 	widget.addAttribute("displaywidth","138");
-	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("value","PRESS");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","None");
-	widget.setClass("button");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaytop","25");
+	widget.setClass("button");
 	widget.addAttribute("displayheight","48");
+	widget.addStyle("color","White");
 	widget.addAttribute("fieldheight","48");
 	widget.addAttribute("fieldwidth","138");
-	widget.addStyle("color","White");
-	widget.addStyle("font-weight","bold");
+	widget.addAttribute("name",".top.");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("overflow","hidden");
 }
 }

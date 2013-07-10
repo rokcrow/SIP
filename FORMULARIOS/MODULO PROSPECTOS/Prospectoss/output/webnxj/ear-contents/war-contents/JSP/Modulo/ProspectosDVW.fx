@@ -711,6 +711,18 @@
     </control>
     <control 
         binary_variables = ""
+        display_name = "label4721"
+        font_family = "KaiTi"
+        font_size = "14"
+        key = ".top:label4721."
+        original_name = "label47"
+        style_class = "label"
+        target_field = ""
+        uid = "itemsform_dataview1_1368038367945_1858763a9413fe5108b969996a94508d545ee73b_1373463122652"
+        view = "label">
+    </control>
+    <control 
+        binary_variables = ""
         display_name = "label473"
         font_family = "KaiTi"
         font_size = "14"
@@ -972,6 +984,7 @@
         immediate = "true"
         key = ".top:vpp_correo."
         multi_valued = "true"
+        required = "true"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vpp_correo"

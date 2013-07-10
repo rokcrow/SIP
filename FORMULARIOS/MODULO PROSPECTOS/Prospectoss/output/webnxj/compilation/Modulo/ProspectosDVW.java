@@ -466,6 +466,7 @@ public class ProspectosDVW
     public NXJLabelControl label47 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label47", false);
     public NXJLabelControl label471 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label471", false);
     public NXJLabelControl label472 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label472", false);
+    public NXJLabelControl label4721 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label4721", false);
     public NXJLabelControl label473 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label473", false);
     public class line1
 	extends ItemsForm.LineaRoja
@@ -1054,6 +1055,7 @@ public class ProspectosDVW
 	    us$setFieldLength(40);
 	    us$setCandidateTargetColumnName("vpp_correo");
 	    setValueRetrievedDuringFetch(true);
+	    setRequired(true);
 	    setFindable(true);
 	    setUpdateable(true);
 	    setForegroundColor("Black");
@@ -2352,6 +2354,9 @@ public class ProspectosDVW
 	label472.setStyleClass("label");
 	label472.setFontFamily("KaiTi");
 	label472.setFontSize("14");
+	label4721.setStyleClass("label");
+	label4721.setFontFamily("KaiTi");
+	label4721.setFontSize("14");
 	label473.setStyleClass("label");
 	label473.setFontFamily("KaiTi");
 	label473.setFontSize("14");

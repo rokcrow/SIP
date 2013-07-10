@@ -3,21 +3,37 @@ package ModuloCNegocios;
 
 
 
-
 FORM DUDisponiblesFRM
 {     
     
     multi_valued NullableStringVariable  xob_empresa;
+    NullableAmount TPrecioVAR;
+    NullableNumeric TUnidades;
 
 
     BEFORE FORM
     {
-        xob_empresa.clearAddExp =  Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+          xob_empresa.clearFindExp =   Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+            
+     
+     TPrecioVAR = 0.0;
+     TUnidades = 0;
+     
+     cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+     cajagrandeDUDisponibles.TUnidades = TUnidades;
+     
+    
+    
     }
+
+    
+ 
 
     BOX cajagrandeDUDisponibles
     {
         
+        
+
          FIELD xob_proyecto
         {
             
@@ -58,14 +74,14 @@ FORM DUDisponiblesFRM
         {
         }
         
-        FIELD textfield11
+        FIELD xob_nombre
         {
         } 
         FIELD vpy_nombre
         {
         }
         
-        FIELD total2
+        FIELD TUnidades
         {
         }
         
@@ -85,7 +101,31 @@ FORM DUDisponiblesFRM
                  
         DATA VIEW PUBLIC_vuu_unidades
         {
-            multi_valued NullableStringVariable vuu_obra, vuu_empresa;
+    
+            multi_valued NullableStringVariable vuu_obra, vuu_empresa, vuu_estado;
+    
+            
+                ON FIND
+                {      
+                 //   vuu_estado = "D";
+                
+                    if (vuu_manzana == "ZZZ" || vuu_manzana == "UUU")
+                            rejectRecord();
+                    
+                        TPrecioVAR = TPrecioVAR + vuu_precio_uni;
+                      
+                    session.displayToMessageBox(TPrecioVAR);
+                
+                }
+                      
+                      
+                     
+                                            
+            AFTER FIND
+            {
+                 cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+            }
+
             FIELD  vuu_manzana
             {
             }

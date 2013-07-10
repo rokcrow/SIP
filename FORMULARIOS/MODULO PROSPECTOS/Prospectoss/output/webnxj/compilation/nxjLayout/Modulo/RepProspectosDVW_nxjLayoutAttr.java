@@ -49,18 +49,18 @@ dodiv_vendedor__10(div_vendedor__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("name",".top.");
 	widget.addAttribute("displaywidth","1005");
-	widget.addStyle("background-color","#cccccc");
 	widget.addStyle("border-width","1");
+	widget.addAttribute("id",".top.");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","solid");
-	widget.setClass("data_view");
 	widget.addAttribute("displaytop","25");
+	widget.setClass("data_view");
 	widget.addAttribute("displayheight","380");
 	widget.addAttribute("fieldheight","380");
 	widget.addAttribute("fieldwidth","1005");
-	widget.addAttribute("id",".top.");
+	widget.addAttribute("name",".top.");
+	widget.addStyle("background-color","#cccccc");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -74,20 +74,20 @@ private void setAttrFor_div_TodosLoProy__10(Widget widget)
 
 private void setAttrFor_TodosLoProy__20(Widget widget)
 {
+	widget.addAttribute("checkbox_on_values","T");
+	widget.addAttribute("field_weight","299");
 	widget.addAttribute("immediate","true");
 	widget.addAttribute("checkbox_store_format","T/N");
-	widget.addAttribute("field_weight","299");
-	widget.addAttribute("checkbox_on_values","T");
 	widget.addAttribute("field_type","checkbox");
 	widget.addAttribute("type","checkbox");
-	widget.addAttribute("name",".top:TodosLoProy.");
 	widget.addAttribute("displaywidth","21");
 	widget.addAttribute("displayleft","341");
-	widget.setClass("checkbox");
 	widget.addAttribute("displaytop","153");
+	widget.setClass("checkbox");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","21");
+	widget.addAttribute("name",".top:TodosLoProy.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -101,20 +101,20 @@ private void setAttrFor_div_TodosLosVend__10(Widget widget)
 
 private void setAttrFor_TodosLosVend__20(Widget widget)
 {
+	widget.addAttribute("checkbox_on_values","T");
+	widget.addAttribute("field_weight","599");
 	widget.addAttribute("immediate","true");
 	widget.addAttribute("checkbox_store_format","T/N");
-	widget.addAttribute("field_weight","599");
-	widget.addAttribute("checkbox_on_values","T");
 	widget.addAttribute("field_type","checkbox");
 	widget.addAttribute("type","checkbox");
-	widget.addAttribute("name",".top:TodosLosVend.");
 	widget.addAttribute("displaywidth","21");
 	widget.addAttribute("displayleft","341");
-	widget.setClass("checkbox");
 	widget.addAttribute("displaytop","209");
+	widget.setClass("checkbox");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","21");
+	widget.addAttribute("name",".top:TodosLosVend.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -130,17 +130,17 @@ private void setAttrFor_box11__20(Widget widget)
 {
 	widget.addAttribute("field_weight","799");
 	widget.addAttribute("displaywidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-width","0");
+	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.setClass("box");
 	widget.addAttribute("displaytop","325");
+	widget.setClass("box");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addAttribute("id",".top:box11.");
 	widget.addStyle("border-color","transparent");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -154,9 +154,9 @@ private void setAttrFor_div_image1__30(Widget widget)
 
 private void setAttrFor_image1__40(Widget widget)
 {
-	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displayheight","46");
 	widget.addAttribute("displaytop","2");
+	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -174,17 +174,17 @@ private void setAttrFor_cajaarribaRProspectos__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-width","0");
+	widget.addAttribute("id",".top:cajaarribaRProspectos.");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.setClass("box");
 	widget.addAttribute("displaytop","2");
+	widget.setClass("box");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addAttribute("id",".top:cajaarribaRProspectos.");
 	widget.addStyle("border-color","transparent");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -198,19 +198,19 @@ private void setAttrFor_div_actualempresa__30(Widget widget)
 
 private void setAttrFor_actualempresa__40(Widget widget)
 {
-	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("type","text");
-	widget.addAttribute("name",".top:cajaarribaRProspectos:actualempresa.");
 	widget.addAttribute("displaywidth","197");
 	widget.addAttribute("displayleft","16");
-	widget.setClass("textfield");
+	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","14");
+	widget.setClass("textfield");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.addAttribute("size","32");
+	widget.addAttribute("name",".top:cajaarribaRProspectos:actualempresa.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -224,19 +224,19 @@ private void setAttrFor_div_actualusuario__30(Widget widget)
 
 private void setAttrFor_actualusuario__40(Widget widget)
 {
-	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_weight","199");
+	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("type","text");
-	widget.addAttribute("name",".top:cajaarribaRProspectos:actualusuario.");
 	widget.addAttribute("displaywidth","110");
 	widget.addAttribute("displayleft","800");
-	widget.setClass("textfield");
+	widget.addAttribute("size","18");
 	widget.addAttribute("displaytop","14");
+	widget.setClass("textfield");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.addAttribute("size","18");
+	widget.addAttribute("name",".top:cajaarribaRProspectos:actualusuario.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -252,12 +252,12 @@ private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","Reportes");
 	widget.addAttribute("displaywidth","109");
+	widget.addAttribute("id",".top:cajaarribaRProspectos:label1.");
 	widget.addAttribute("displayleft","241");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","109");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:cajaarribaRProspectos:label1.");
 	widget.addAttribute("instancewidth","109");
 	widget.addStyle("overflow","hidden");
 }
@@ -274,10 +274,10 @@ private void setAttrFor_ejecutarbtn__20(Widget widget)
 {
 	widget.addAttribute("command","reportecmd");
 	widget.addAttribute("field_type","button");
-	widget.addAttribute("type","button");
+	widget.addAttribute("value","EJECUTAR");
 	widget.addAttribute("name",".top:ejecutarbtn.");
 	widget.addAttribute("displaytop","256");
-	widget.addAttribute("value","EJECUTAR");
+	widget.addAttribute("type","button");
 	widget.addAttribute("displayleft","368");
 	widget.addStyle("overflow","hidden");
 }
@@ -295,13 +295,13 @@ private void setAttrFor_fecha1__20(Widget widget)
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("displaywidth","140");
+	widget.addAttribute("id",".top:fecha1.");
 	widget.addAttribute("displayleft","690");
-	widget.setClass("textfield");
 	widget.addAttribute("displaytop","153");
+	widget.setClass("textfield");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","140");
-	widget.addAttribute("id",".top:fecha1.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -325,13 +325,13 @@ private void setAttrFor_fecha2__20(Widget widget)
 	widget.addAttribute("field_weight","699");
 	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("displaywidth","140");
+	widget.addAttribute("id",".top:fecha2.");
 	widget.addAttribute("displayleft","690");
-	widget.setClass("textfield");
 	widget.addAttribute("displaytop","209");
+	widget.setClass("textfield");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","140");
-	widget.addAttribute("id",".top:fecha2.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -354,15 +354,15 @@ private void setAttrFor_label1__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Código Proyecto");
 	widget.addAttribute("displaywidth","103");
+	widget.addAttribute("id",".top:label1.");
 	widget.addAttribute("displayleft","112");
-	widget.setClass("label");
 	widget.addAttribute("displaytop","127");
+	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","103");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:label1.");
-	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -378,18 +378,18 @@ private void setAttrFor_label11__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Reporte de Prospectos");
 	widget.addAttribute("displaywidth","177");
-	widget.addAttribute("displayleft","20");
-	widget.addStyle("font-family","Verdana");
-	widget.setClass("label");
-	widget.addAttribute("displaytop","96");
-	widget.addAttribute("displayheight","18");
-	widget.addAttribute("fieldheight","18");
-	widget.addAttribute("fieldwidth","177");
-	widget.addStyle("color","Black");
-	widget.addStyle("text-align","left");
-	widget.addStyle("font-weight","bold");
 	widget.addAttribute("id",".top:label11.");
+	widget.addAttribute("displayleft","20");
+	widget.addStyle("font-weight","bold");
+	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("displaytop","96");
+	widget.setClass("label");
+	widget.addAttribute("displayheight","18");
+	widget.addStyle("color","Black");
+	widget.addAttribute("fieldheight","18");
 	widget.addStyle("font-size","14");
+	widget.addAttribute("fieldwidth","177");
+	widget.addStyle("text-align","left");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -405,15 +405,15 @@ private void setAttrFor_label111__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Código Vendedor");
 	widget.addAttribute("displaywidth","109");
+	widget.addAttribute("id",".top:label111.");
 	widget.addAttribute("displayleft","112");
-	widget.setClass("label");
 	widget.addAttribute("displaytop","183");
+	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","109");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:label111.");
-	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -429,15 +429,15 @@ private void setAttrFor_label12__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Fecha Final");
 	widget.addAttribute("displaywidth","70");
+	widget.addAttribute("id",".top:label12.");
 	widget.addAttribute("displayleft","690");
-	widget.setClass("label");
 	widget.addAttribute("displaytop","183");
+	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","70");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:label12.");
-	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -453,15 +453,15 @@ private void setAttrFor_label13__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Fecha Inicial");
 	widget.addAttribute("displaywidth","77");
+	widget.addAttribute("id",".top:label13.");
 	widget.addAttribute("displayleft","690");
-	widget.setClass("label");
 	widget.addAttribute("displaytop","127");
+	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","77");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:label13.");
-	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -477,15 +477,15 @@ private void setAttrFor_label14__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Seleccionar todos los proyectos");
 	widget.addAttribute("displaywidth","199");
+	widget.addAttribute("id",".top:label14.");
 	widget.addAttribute("displayleft","368");
-	widget.setClass("label");
 	widget.addAttribute("displaytop","153");
+	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","199");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:label14.");
-	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -501,15 +501,15 @@ private void setAttrFor_label141__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Seleccionar todos los vendedores");
 	widget.addAttribute("displaywidth","212");
+	widget.addAttribute("id",".top:label141.");
 	widget.addAttribute("displayleft","368");
-	widget.setClass("label");
 	widget.addAttribute("displaytop","209");
+	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","212");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:label141.");
-	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -525,15 +525,15 @@ private void setAttrFor_proyecto__20(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","SELECT");
-	widget.addAttribute("name",".top:proyecto.");
 	widget.addAttribute("displaywidth","135");
 	widget.addAttribute("displayleft","112");
-	widget.setClass("textfield");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","153");
+	widget.setClass("textfield");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","135");
-	widget.addAttribute("size","1");
+	widget.addAttribute("name",".top:proyecto.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -549,10 +549,10 @@ private void setAttrFor_regresarbtn__20(Widget widget)
 {
 	widget.addAttribute("command","Previous Form");
 	widget.addAttribute("field_type","button");
-	widget.addAttribute("type","button");
+	widget.addAttribute("value","REGRESAR");
 	widget.addAttribute("name",".top:regresarbtn.");
 	widget.addAttribute("displaytop","256");
-	widget.addAttribute("value","REGRESAR");
+	widget.addAttribute("type","button");
 	widget.addAttribute("displayleft","528");
 	widget.addStyle("overflow","hidden");
 }
@@ -569,15 +569,15 @@ private void setAttrFor_vendedor__20(Widget widget)
 {
 	widget.addAttribute("field_weight","499");
 	widget.addAttribute("field_type","SELECT");
-	widget.addAttribute("name",".top:vendedor.");
 	widget.addAttribute("displaywidth","135");
 	widget.addAttribute("displayleft","112");
-	widget.setClass("textfield");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","209");
+	widget.setClass("textfield");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","135");
-	widget.addAttribute("size","1");
+	widget.addAttribute("name",".top:vendedor.");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_TodosLoProy__10(Widget div_TodosLoProy__10)

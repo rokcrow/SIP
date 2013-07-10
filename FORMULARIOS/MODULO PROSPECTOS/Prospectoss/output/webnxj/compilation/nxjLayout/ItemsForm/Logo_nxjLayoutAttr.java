@@ -15,18 +15,18 @@ setAttrFor_this(this);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("name",".top.");
-	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("width","164");
-	widget.addAttribute("displayleft","25");
-	widget.setClass("image");
 	widget.addAttribute("src","ProviLogo.png");
+	widget.addAttribute("displaywidth","164");
+	widget.addAttribute("height","46");
+	widget.addAttribute("id",".top.");
+	widget.addAttribute("displayleft","25");
 	widget.addAttribute("displaytop","25");
+	widget.setClass("image");
 	widget.addAttribute("displayheight","46");
 	widget.addAttribute("fieldheight","46");
-	widget.addAttribute("height","46");
 	widget.addAttribute("fieldwidth","164");
-	widget.addAttribute("id",".top.");
+	widget.addAttribute("name",".top.");
 	widget.addStyle("overflow","hidden");
 }
 }

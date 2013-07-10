@@ -107,19 +107,29 @@ public class DUDisponiblesFRM
     extends com.unify.nxj.mgr.NXJForm
 {
     /*multi_valued*/ NullableStringVariable xob_empresa = NullableFactory.createNullableStringVariable(this, "xob_empresa", true, false);
+    NullableAmount TPrecioVAR = NullableFactory.createNullableAmount("TPrecioVAR");
+    NullableNumeric TUnidades = NullableFactory.createNullableNumeric("TUnidades");
 
     public void beforeForm()
 	throws Exception
     {
-	xob_empresa.setClearAddExp(new NXJClearToAddExpression()
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	xob_empresa.setClearFindExp(new NXJClearToFindExpression()
 	{
 
-	    public Nullable evaluate()
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
 		throws Exception
 	    {
-		return ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA;
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA, null)
+		    };
 	    } // evaluate
 	});
+	TPrecioVAR.assign(us$registerPool.allocateRegister().load(0.0));
+	TUnidades.assign(us$registerPool.allocateRegister().load(0));
+	cajagrandeDUDisponibles.TPrecioFLD.assign(us$registerPool.allocateRegister().load(TPrecioVAR));
+	cajagrandeDUDisponibles.TUnidades.assign(us$registerPool.allocateRegister().load(TUnidades));
     } // beforeForm
 
     public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$getPUBLIC_vuu_unidades_1_FindExpressions()
@@ -199,6 +209,8 @@ public class DUDisponiblesFRM
     public class cajagrandeDUDisponibles
 	extends com.unify.nxj.mgr.NXJBox
     {
+	public NullableAmountField TPrecioFLD = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "TPrecioFLD", false, true, 100);
+	public NullableNumericField TUnidades = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "TUnidades", false, true, 100);
 	public class imprimirbtn
 	    extends ItemsForm.Boton
 	{
@@ -225,10 +237,8 @@ public class DUDisponiblesFRM
 	} // regresarbtn
 
 	public regresarbtn regresarbtn = new regresarbtn();
-	public /*multi_valued*/ NullableStringField textfield11 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield11", true, true, 30);
-	public NullableStringField total1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "total1", false, true, 100);
-	public NullableStringField total2 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "total2", false, true, 100);
 	public /*multi_valued*/ NullableStringField vpy_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpy_nombre", true, true, 100);
+	public /*multi_valued*/ NullableStringField xob_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xob_nombre", true, true, 30);
 	public /*multi_valued*/ NullableStringField xob_obra = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xob_obra", true, true, 2);
 	public class xob_proyecto
 	    extends com.unify.nxj.mgr.datatypes.NXJStringField
@@ -379,10 +389,29 @@ public class DUDisponiblesFRM
 	public class PUBLIC_vuu_unidades
 	    extends com.unify.nxj.mgr.NXJDataView
 	{
+	    /*multi_valued*/ NullableStringVariable vuu_estado = NullableFactory.createNullableStringVariable(this, "vuu_estado", true, false);
 	    /*multi_valued*/ NullableStringVariable vuu_empresa = NullableFactory.createNullableStringVariable(this, "vuu_empresa", true, false);
 	    /*multi_valued*/ NullableStringVariable vuu_obra = NullableFactory.createNullableStringVariable(this, "vuu_obra", true, false);
-	    public /*multi_valued*/ NullableAmountField vuu_area_const = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vuu_area_const", true, true, 16);
-	    public /*multi_valued*/ NullableAmountField vuu_area_lote = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vuu_area_lote", true, true, 16);
+
+	    public void onFind()
+		throws Exception
+	    {
+		com.unify.nxj.mgr.datatypes.Register us$R3;
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (((us$R3 = us$registerPool.allocateRegister().load(vuu_manzana).eqOp("ZZZ")).isLogicalOrDecided() ? us$R3 : us$R3.logicalOrOp(us$registerPool.allocateRegister().load(vuu_manzana).eqOp("UUU"))).getBooleanValueNullOk())
+		    rejectRecord();
+		TPrecioVAR.assign(us$registerPool.allocateRegister().load(TPrecioVAR).plusOp(us$registerPool.allocateRegister().load(vuu_precio_uni)));
+		getSession().displayToMessageBox(us$registerPool.allocateRegister().load(TPrecioVAR).getStringValue());
+	    } // onFind
+
+	    public void afterFind()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		cajagrandeDUDisponibles.TPrecioFLD.assign(us$registerPool.allocateRegister().load(TPrecioVAR));
+	    } // afterFind
+	    public /*multi_valued*/ NullableFloatField vuu_area_const = new com.unify.nxj.mgr.datatypes.NXJFloatField(this, "vuu_area_const", true, true, 16);
+	    public /*multi_valued*/ NullableFloatField vuu_area_lote = new com.unify.nxj.mgr.datatypes.NXJFloatField(this, "vuu_area_lote", true, true, 16);
 	    public /*multi_valued*/ NullableStringField vuu_esquina = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vuu_esquina", true, true, 2);
 	    public /*multi_valued*/ NullableStringField vuu_manzana = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vuu_manzana", true, true, 3);
 	    public /*multi_valued*/ NullableStringField vuu_modelo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vuu_modelo", true, true, 3);
@@ -410,6 +439,7 @@ public class DUDisponiblesFRM
 		vuu_area_const.setFindable(true);
 		vuu_area_const.setUpdateable(true);
 		vuu_area_const.setDisplayJustify(NullableField.DisplayJustify_LEFT);
+		vuu_area_const.setBackgroundColor("#999999");
 		vuu_area_lote.setStyleClass("textfield");
 		vuu_area_lote.us$setMultiValued(true);
 		vuu_area_lote.us$setView("text");
@@ -419,6 +449,7 @@ public class DUDisponiblesFRM
 		vuu_area_lote.setFindable(true);
 		vuu_area_lote.setUpdateable(true);
 		vuu_area_lote.setDisplayJustify(NullableField.DisplayJustify_LEFT);
+		vuu_area_lote.setBackgroundColor("#999999");
 		vuu_esquina.setStyleClass("textfield");
 		vuu_esquina.us$setMultiValued(true);
 		vuu_esquina.us$setView("text");
@@ -427,6 +458,7 @@ public class DUDisponiblesFRM
 		vuu_esquina.setValueRetrievedDuringFetch(true);
 		vuu_esquina.setFindable(true);
 		vuu_esquina.setUpdateable(true);
+		vuu_esquina.setBackgroundColor("#999999");
 		vuu_manzana.setStyleClass("textfield");
 		vuu_manzana.us$setMultiValued(true);
 		vuu_manzana.us$setView("text");
@@ -435,6 +467,7 @@ public class DUDisponiblesFRM
 		vuu_manzana.setValueRetrievedDuringFetch(true);
 		vuu_manzana.setFindable(true);
 		vuu_manzana.setUpdateable(true);
+		vuu_manzana.setBackgroundColor("#999999");
 		vuu_modelo.setStyleClass("textfield");
 		vuu_modelo.us$setMultiValued(true);
 		vuu_modelo.us$setView("text");
@@ -443,6 +476,7 @@ public class DUDisponiblesFRM
 		vuu_modelo.setValueRetrievedDuringFetch(true);
 		vuu_modelo.setFindable(true);
 		vuu_modelo.setUpdateable(true);
+		vuu_modelo.setBackgroundColor("#999999");
 		vuu_muro1.setStyleClass("textfield");
 		vuu_muro1.us$setMultiValued(true);
 		vuu_muro1.us$setView("text");
@@ -451,6 +485,7 @@ public class DUDisponiblesFRM
 		vuu_muro1.setValueRetrievedDuringFetch(true);
 		vuu_muro1.setFindable(true);
 		vuu_muro1.setUpdateable(true);
+		vuu_muro1.setBackgroundColor("#999999");
 		vuu_muro2.setStyleClass("textfield");
 		vuu_muro2.us$setMultiValued(true);
 		vuu_muro2.us$setView("text");
@@ -459,6 +494,7 @@ public class DUDisponiblesFRM
 		vuu_muro2.setValueRetrievedDuringFetch(true);
 		vuu_muro2.setFindable(true);
 		vuu_muro2.setUpdateable(true);
+		vuu_muro2.setBackgroundColor("#999999");
 		vuu_parque.setStyleClass("textfield");
 		vuu_parque.us$setMultiValued(true);
 		vuu_parque.us$setView("text");
@@ -467,6 +503,7 @@ public class DUDisponiblesFRM
 		vuu_parque.setValueRetrievedDuringFetch(true);
 		vuu_parque.setFindable(true);
 		vuu_parque.setUpdateable(true);
+		vuu_parque.setBackgroundColor("#999999");
 		vuu_precio_uni.setStyleClass("textfield");
 		vuu_precio_uni.us$setMultiValued(true);
 		vuu_precio_uni.us$setView("text");
@@ -476,6 +513,7 @@ public class DUDisponiblesFRM
 		vuu_precio_uni.setFindable(true);
 		vuu_precio_uni.setUpdateable(true);
 		vuu_precio_uni.setDisplayJustify(NullableField.DisplayJustify_LEFT);
+		vuu_precio_uni.setBackgroundColor("#999999");
 		vuu_unidad.setStyleClass("textfield");
 		vuu_unidad.us$setMultiValued(true);
 		vuu_unidad.us$setView("text");
@@ -484,8 +522,10 @@ public class DUDisponiblesFRM
 		vuu_unidad.setValueRetrievedDuringFetch(true);
 		vuu_unidad.setFindable(true);
 		vuu_unidad.setUpdateable(true);
+		vuu_unidad.setBackgroundColor("#999999");
 		us$addTargetMapping("vuu_empresa", "vuu_empresa");
 		us$addTargetMapping("vuu_obra", "vuu_obra");
+		us$addTargetMapping("vuu_estado", "vuu_estado");
 	    } // <init>
 	} // PUBLIC_vuu_unidades
 
@@ -574,6 +614,18 @@ public class DUDisponiblesFRM
 
 	private void cajagrandeDUDisponiblespropertySetter_0()
 	{
+	    TPrecioFLD.setStyleClass("textfield");
+	    TPrecioFLD.us$setMultiValued(false);
+	    TPrecioFLD.us$setView("text");
+	    TPrecioFLD.setAutoAccept(false);
+	    TPrecioFLD.setFindable(false);
+	    TPrecioFLD.setUpdateable(false);
+	    TPrecioFLD.setStopForInput(false);
+	    TUnidades.setStyleClass("textfield");
+	    TUnidades.us$setView("text");
+	    TUnidades.setFindable(false);
+	    TUnidades.setUpdateable(false);
+	    TUnidades.setStopForInput(false);
 	    label11.setStyleClass("label");
 	    label11.setForegroundColor("Black");
 	    label11.setFontFamily("Verdana");
@@ -585,29 +637,25 @@ public class DUDisponiblesFRM
 	    label31.setFontSize("12");
 	    label311.setStyleClass("label");
 	    label311.setFontSize("12");
-	    textfield11.setStyleClass("textfield");
-	    textfield11.us$setMultiValued(true);
-	    textfield11.us$setView("text");
-	    textfield11.us$setFieldLength(30);
-	    textfield11.us$setCandidateTargetColumnName("xob_nombre");
-	    textfield11.setValueRetrievedDuringFetch(true);
-	    textfield11.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    textfield11.setFindable(true);
-	    textfield11.setUpdateable(true);
-	    textfield11.setCaseConversion(NullableField.CaseConversion_UPPER);
-	    total1.setStyleClass("textfield");
-	    total1.us$setView("text");
-	    total1.setFindable(false);
-	    total2.setStyleClass("textfield");
-	    total2.us$setView("text");
-	    total2.setFindable(false);
 	    vpy_nombre.setStyleClass("textfield");
 	    vpy_nombre.us$setMultiValued(true);
 	    vpy_nombre.us$setView("text");
+	    vpy_nombre.setAutoAccept(true);
 	    vpy_nombre.setFindable(true);
 	    vpy_nombre.setUpdateable(false);
 	    vpy_nombre.setStopForInput(false);
 	    vpy_nombre.setCaseConversion(NullableField.CaseConversion_UPPER);
+	    xob_nombre.setStyleClass("textfield");
+	    xob_nombre.us$setMultiValued(true);
+	    xob_nombre.us$setView("text");
+	    xob_nombre.us$setFieldLength(30);
+	    xob_nombre.us$setCandidateTargetColumnName("xob_nombre");
+	    xob_nombre.setValueRetrievedDuringFetch(true);
+	    xob_nombre.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    xob_nombre.setFindable(true);
+	    xob_nombre.setUpdateable(false);
+	    xob_nombre.setStopForInput(false);
+	    xob_nombre.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    xob_obra.setStyleClass("textfield");
 	    xob_obra.us$setMultiValued(true);
 	    xob_obra.us$setView("text");
@@ -647,7 +695,36 @@ public class DUDisponiblesFRM
 	ModuloCNegocios.DUDisponiblesFRM.this.cajagrandeDUDisponibles.PUBLIC_vuu_unidades.us$setMasterRelationshipAddExpr(ModuloCNegocios.DUDisponiblesFRM.this.us$getPUBLIC_vuu_unidades_1_AddExpressions());
 	us$setBackgroundColor("#999999");
 	us$addTargetMapping("xob_empresa", "xob_empresa");
+	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "TUnidades", false);
+	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "TPrecioVAR", false);
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "DUDisponiblesFRM";
+
+    protected com.unify.nxj.mgr.NXJProxyNullable us$createProxyNullable(java.lang.reflect.Field targetField, boolean multiValued)
+    {
+	return new NXJProxyNullableImpl(targetField, multiValued);
+    } // us$createProxyNullable
+    protected final class NXJProxyNullableImpl
+	extends com.unify.nxj.mgr.NXJProxyNullable
+    {
+
+	public NXJProxyNullableImpl(java.lang.reflect.Field fld, boolean multiValued)
+	{
+	    super(ModuloCNegocios.DUDisponiblesFRM.this, fld, multiValued);
+	} // <init>
+
+	protected Nullable getValue()
+	    throws IllegalAccessException
+	{
+	    return (Nullable)fld.get(ModuloCNegocios.DUDisponiblesFRM.this);
+	} // getValue
+
+	protected void setValue(Nullable newValue)
+	    throws IllegalAccessException
+	{
+	    fld.set(ModuloCNegocios.DUDisponiblesFRM.this, newValue);
+	} // setValue
+    } // NXJProxyNullableImpl
+
 } // DUDisponiblesFRM
 

@@ -1792,6 +1792,35 @@
                     binary_variables=""
                     view="div"
                     align="left" 
+                    style="position: absolute; top: 294px; left: 98px; width:7px; height:16px">
+                    
+                    
+                    <label
+                        binary_variables=""
+                        class="label"
+                        displayheight="16"
+                        displayleft="98"
+                        displaytop="294"
+                        displaywidth="7"
+                        id=".top:label4721."
+                        key=".top:label4721."
+                        labelalign="left"
+                        labeltitle="*"
+                        original_name="label47"
+                        target_field=""
+                        uid="itemsform_dataview1_1368038367945_1858763a9413fe5108b969996a94508d545ee73b_1373463122652"
+                        view="label"
+                        style="font-family: KaiTi;
+                            font-size: 14px">
+                        <nobr>*</nobr>
+                    </label>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    align="left" 
                     style="position: absolute; top: 63px; left: 17px; width:7px; height:16px">
                     
                     
@@ -2219,6 +2248,7 @@
                         key=".top:vpp_correo."
                         multi_valued="true"
                         name=".top:vpp_correo."
+                        required="true"
                         retrieve_value="true"
                         size="40"
                         target_field="vpp_correo"
@@ -2735,7 +2765,7 @@
                         target_field="vpp_fecha"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
@@ -2769,7 +2799,7 @@
                         target_field="vpp_fecha_nacio"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
                         updateable="true"
-                        view="date"
+                        view="text"
                         style="font-size: 12px;
                             color: Black">
 
@@ -2806,7 +2836,7 @@
                         target_field="vpp_fecha_visita"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
@@ -2840,7 +2870,7 @@
                         target_field="vpp_fechaestado"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
