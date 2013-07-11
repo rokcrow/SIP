@@ -108,7 +108,8 @@ public class DUDisponiblesFRM
 {
     /*multi_valued*/ NullableStringVariable xob_empresa = NullableFactory.createNullableStringVariable(this, "xob_empresa", true, false);
     NullableAmount TPrecioVAR = NullableFactory.createNullableAmount("TPrecioVAR");
-    NullableNumeric TUnidades = NullableFactory.createNullableNumeric("TUnidades");
+    NullableNumeric TUnidadesVAR = NullableFactory.createNullableNumeric("TUnidadesVAR");
+    NullableString EUnidad = NullableFactory.createNullableString("EUnidad");
 
     public void beforeForm()
 	throws Exception
@@ -126,11 +127,33 @@ public class DUDisponiblesFRM
 		    };
 	    } // evaluate
 	});
+	cajagrandeDUDisponibles.PUBLIC_vuu_unidades.vuu_estado.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, new com.unify.nxj.mgr.datatypes.Register().load("D"), null)
+		    };
+	    } // evaluate
+	});
 	TPrecioVAR.assign(us$registerPool.allocateRegister().load(0.0));
-	TUnidades.assign(us$registerPool.allocateRegister().load(0));
+	TUnidadesVAR.assign(us$registerPool.allocateRegister().load(0));
 	cajagrandeDUDisponibles.TPrecioFLD.assign(us$registerPool.allocateRegister().load(TPrecioVAR));
-	cajagrandeDUDisponibles.TUnidades.assign(us$registerPool.allocateRegister().load(TUnidades));
+	cajagrandeDUDisponibles.TUnidadesFLD.assign(us$registerPool.allocateRegister().load(TUnidadesVAR));
     } // beforeForm
+
+    public void onClearToFind()
+	throws Exception
+    {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	TPrecioVAR.assign(us$registerPool.allocateRegister().load(0.0));
+	TUnidadesVAR.assign(us$registerPool.allocateRegister().load(0));
+	cajagrandeDUDisponibles.TPrecioFLD.assign(us$registerPool.allocateRegister().load(TPrecioVAR));
+	cajagrandeDUDisponibles.TUnidadesFLD.assign(us$registerPool.allocateRegister().load(TUnidadesVAR));
+    } // onClearToFind
 
     public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$getPUBLIC_vuu_unidades_1_FindExpressions()
     {
@@ -210,7 +233,7 @@ public class DUDisponiblesFRM
 	extends com.unify.nxj.mgr.NXJBox
     {
 	public NullableAmountField TPrecioFLD = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "TPrecioFLD", false, true, 100);
-	public NullableNumericField TUnidades = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "TUnidades", false, true, 100);
+	public NullableNumericField TUnidadesFLD = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "TUnidadesFLD", false, true, 100);
 	public class imprimirbtn
 	    extends ItemsForm.Boton
 	{
@@ -400,8 +423,11 @@ public class DUDisponiblesFRM
 		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 		if (((us$R3 = us$registerPool.allocateRegister().load(vuu_manzana).eqOp("ZZZ")).isLogicalOrDecided() ? us$R3 : us$R3.logicalOrOp(us$registerPool.allocateRegister().load(vuu_manzana).eqOp("UUU"))).getBooleanValueNullOk())
 		    rejectRecord();
-		TPrecioVAR.assign(us$registerPool.allocateRegister().load(TPrecioVAR).plusOp(us$registerPool.allocateRegister().load(vuu_precio_uni)));
-		getSession().displayToMessageBox(us$registerPool.allocateRegister().load(TPrecioVAR).getStringValue());
+		else
+		    {
+		    TPrecioVAR.assign(us$registerPool.allocateRegister().load(TPrecioVAR).plusOp(us$registerPool.allocateRegister().load(vuu_precio_uni)));
+		    TUnidadesVAR.assign(us$registerPool.allocateRegister().load(TUnidadesVAR).plusOp(1));
+		    }
 	    } // onFind
 
 	    public void afterFind()
@@ -409,6 +435,9 @@ public class DUDisponiblesFRM
 	    {
 		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 		cajagrandeDUDisponibles.TPrecioFLD.assign(us$registerPool.allocateRegister().load(TPrecioVAR));
+		cajagrandeDUDisponibles.TUnidadesFLD.assign(us$registerPool.allocateRegister().load(TUnidadesVAR));
+		TPrecioVAR.assign(us$registerPool.allocateRegister().load(0.0));
+		TUnidadesVAR.assign(us$registerPool.allocateRegister().load(0));
 	    } // afterFind
 	    public /*multi_valued*/ NullableFloatField vuu_area_const = new com.unify.nxj.mgr.datatypes.NXJFloatField(this, "vuu_area_const", true, true, 16);
 	    public /*multi_valued*/ NullableFloatField vuu_area_lote = new com.unify.nxj.mgr.datatypes.NXJFloatField(this, "vuu_area_lote", true, true, 16);
@@ -617,15 +646,16 @@ public class DUDisponiblesFRM
 	    TPrecioFLD.setStyleClass("textfield");
 	    TPrecioFLD.us$setMultiValued(false);
 	    TPrecioFLD.us$setView("text");
-	    TPrecioFLD.setAutoAccept(false);
 	    TPrecioFLD.setFindable(false);
 	    TPrecioFLD.setUpdateable(false);
 	    TPrecioFLD.setStopForInput(false);
-	    TUnidades.setStyleClass("textfield");
-	    TUnidades.us$setView("text");
-	    TUnidades.setFindable(false);
-	    TUnidades.setUpdateable(false);
-	    TUnidades.setStopForInput(false);
+	    TPrecioFLD.setDisplayJustify(NullableField.DisplayJustify_RIGHT);
+	    TUnidadesFLD.setStyleClass("textfield");
+	    TUnidadesFLD.us$setView("text");
+	    TUnidadesFLD.setFindable(false);
+	    TUnidadesFLD.setUpdateable(false);
+	    TUnidadesFLD.setStopForInput(false);
+	    TUnidadesFLD.setDisplayJustify(NullableField.DisplayJustify_RIGHT);
 	    label11.setStyleClass("label");
 	    label11.setForegroundColor("Black");
 	    label11.setFontFamily("Verdana");
@@ -695,7 +725,8 @@ public class DUDisponiblesFRM
 	ModuloCNegocios.DUDisponiblesFRM.this.cajagrandeDUDisponibles.PUBLIC_vuu_unidades.us$setMasterRelationshipAddExpr(ModuloCNegocios.DUDisponiblesFRM.this.us$getPUBLIC_vuu_unidades_1_AddExpressions());
 	us$setBackgroundColor("#999999");
 	us$addTargetMapping("xob_empresa", "xob_empresa");
-	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "TUnidades", false);
+	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "EUnidad", false);
+	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "TUnidadesVAR", false);
 	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "TPrecioVAR", false);
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "DUDisponiblesFRM";

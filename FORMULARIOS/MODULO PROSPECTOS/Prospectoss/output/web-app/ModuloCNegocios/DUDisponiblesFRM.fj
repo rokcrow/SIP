@@ -8,30 +8,36 @@ FORM DUDisponiblesFRM
     
     multi_valued NullableStringVariable  xob_empresa;
     NullableAmount TPrecioVAR;
-    NullableNumeric TUnidades;
+    NullableNumeric TUnidadesVAR;
+    NullableString EUnidad;
 
 
     BEFORE FORM
     {
-          xob_empresa.clearFindExp =   Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        xob_empresa.clearFindExp =   Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        cajagrandeDUDisponibles.PUBLIC_vuu_unidades.vuu_estado.clearFindExp = "D";
             
      
-     TPrecioVAR = 0.0;
-     TUnidades = 0;
-     
-     cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
-     cajagrandeDUDisponibles.TUnidades = TUnidades;
-     
-    
-    
+        TPrecioVAR = 0.0;
+        TUnidadesVAR = 0;
+        
+        cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+        cajagrandeDUDisponibles.TUnidadesFLD = TUnidadesVAR;
+        
     }
 
     
- 
+    ON CLEAR TO FIND
+    {
+        TPrecioVAR = 0.0;
+        TUnidadesVAR = 0;
+        
+        cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+        cajagrandeDUDisponibles.TUnidadesFLD = TUnidadesVAR;
+    }
 
     BOX cajagrandeDUDisponibles
     {
-        
         
 
          FIELD xob_proyecto
@@ -81,7 +87,7 @@ FORM DUDisponiblesFRM
         {
         }
         
-        FIELD TUnidades
+        FIELD TUnidadesFLD
         {
         }
         
@@ -98,7 +104,10 @@ FORM DUDisponiblesFRM
         BOX box11
         {
         }
-                 
+        
+        
+        
+        
         DATA VIEW PUBLIC_vuu_unidades
         {
     
@@ -106,25 +115,30 @@ FORM DUDisponiblesFRM
     
             
                 ON FIND
-                {      
-                 //   vuu_estado = "D";
-                
+                {   
+                                 
                     if (vuu_manzana == "ZZZ" || vuu_manzana == "UUU")
                             rejectRecord();
-                    
-                        TPrecioVAR = TPrecioVAR + vuu_precio_uni;
-                      
-                    session.displayToMessageBox(TPrecioVAR);
-                
+                    else 
+                        {
+                            TPrecioVAR = TPrecioVAR + vuu_precio_uni;
+                            TUnidadesVAR = TUnidadesVAR + 1;
+                        }
+              
                 }
-                      
                       
                      
                                             
             AFTER FIND
-            {
-                 cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+            { 
+                cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+                cajagrandeDUDisponibles.TUnidadesFLD = TUnidadesVAR;
+                
+                TPrecioVAR = 0.0;
+                TUnidadesVAR = 0;
             }
+
+         
 
             FIELD  vuu_manzana
             {
@@ -156,6 +170,10 @@ FORM DUDisponiblesFRM
             FIELD  vuu_precio_uni
             {
             }
+        }
+        
+        FIELD TPrecioFLD
+        {
         }
         
     }

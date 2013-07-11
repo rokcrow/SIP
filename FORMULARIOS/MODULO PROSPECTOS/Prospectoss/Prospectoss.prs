@@ -954,13 +954,23 @@
           base-class=""
           tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;DUDisponiblesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
-          target-type="0"
-          description=""
-          default-label="Modulo.DUDisponiblesFRM"
-          add_to_menu="true"
-          override-entry-point-name="false"
-          expose-as-portlet="false"
-          hide-entry-point="false"
+         >
+    </file>
+
+    <file
+         path="Classes/ModuloCNegocios/CPPantallaFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1373579856760"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip=""
+          language="jbiz"
          >
     </file>
 

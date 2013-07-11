@@ -21,12 +21,12 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("footer","none");
 	widget.addAttribute("displaywidth","1199");
 	widget.addAttribute("stylesheets","");
-	widget.setClass("form");
 	widget.addAttribute("displayheight","751");
 	widget.addAttribute("fieldheight","751");
 	widget.addAttribute("fieldwidth","1199");
-	widget.addAttribute("name","NXJForm");
 	widget.addStyle("background-color","#999999");
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_cajagrandeDUDisponibles__10(Widget widget)
@@ -42,331 +42,15 @@ private void setAttrFor_cajagrandeDUDisponibles__20(Widget widget)
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","1004");
 	widget.addStyle("border-width","0");
-	widget.addAttribute("id","cajagrandeDUDisponibles.");
 	widget.addAttribute("displayleft","190");
+	widget.addAttribute("id","cajagrandeDUDisponibles.");
 	widget.addAttribute("displaytop","30");
-	widget.setClass("box");
 	widget.addAttribute("displayheight","716");
 	widget.addAttribute("fieldheight","716");
 	widget.addAttribute("fieldwidth","1004");
-	widget.addStyle("border-color","transparent");
 	widget.addStyle("background-color","#cccccc");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_PUBLIC_vuu_unidades__30(Widget widget)
-{
-	widget.addStyle("left","64px");
-	widget.addStyle("top","277px");
-	widget.addStyle("width","877px");
-	widget.addStyle("height","203px");
-}
-
-private void setAttrFor_PUBLIC_vuu_unidades__40(Widget widget)
-{
-	widget.addAttribute("field_weight","699");
-	widget.addAttribute("displaywidth","877");
-	widget.addStyle("border-width","0");
-	widget.addAttribute("id","cajagrandeDUDisponibles:PUBLIC_vuu_unidades.");
-	widget.addAttribute("displayleft","64");
-	widget.addStyle("border-style","None");
-	widget.addAttribute("displaytop","277");
-	widget.setClass("data_view");
-	widget.addAttribute("displayheight","203");
-	widget.addAttribute("fieldheight","203");
-	widget.addAttribute("fieldwidth","877");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_RepeatingArea1__50(Widget widget)
-{
-	widget.addStyle("left","10px");
-	widget.addStyle("top","10px");
-	widget.addStyle("width","852px");
-	widget.addStyle("height","193px");
-}
-
-private void setAttrFor_RepeatingArea1__60(Widget widget)
-{
-	widget.addAttribute("list_columns","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.144:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.210:74;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.284:82;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.366:69;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.435:75;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.510:61;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.571:113;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.684:149");
-	widget.addAttribute("repeat_style","Grid");
-	widget.addAttribute("field_weight","99");
-	widget.addAttribute("occurrences","12");
-	widget.addAttribute("altRowClass","alternate_row");
-	widget.addAttribute("selected_row_class","selected_row");
-	widget.addAttribute("displaywidth","852");
-	widget.addAttribute("id","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1.");
-	widget.addAttribute("displayleft","10");
-	widget.addAttribute("horizontal_scroll_width","1000");
-	widget.addAttribute("displaytop","10");
-	widget.setClass("repeating_area");
-	widget.addAttribute("displayheight","193");
-	widget.addAttribute("fieldheight","193");
-	widget.addAttribute("fieldwidth","852");
-	widget.addStyle("background-color","transparent");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_manzana__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_manzana__80(Widget widget)
-{
-	widget.addAttribute("field_weight","99");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","72");
-	widget.addAttribute("displayleft","10");
-	widget.addAttribute("size","12");
-	widget.addAttribute("title","vuu_manzana");
-	widget.addAttribute("headertitle","Manzana");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","72");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_unidad__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_unidad__80(Widget widget)
-{
-	widget.addAttribute("field_weight","199");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","72");
-	widget.addAttribute("displayleft","82");
-	widget.addAttribute("size","12");
-	widget.addAttribute("title","vuu_unidad");
-	widget.addAttribute("headertitle","Unidad");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","72");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_modelo__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_modelo__80(Widget widget)
-{
-	widget.addAttribute("field_weight","299");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","66");
-	widget.addAttribute("displayleft","155");
-	widget.addAttribute("size","11");
-	widget.addAttribute("title","vuu_modelo");
-	widget.addAttribute("headertitle","Modelo");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","66");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_area_lote__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_area_lote__80(Widget widget)
-{
-	widget.addAttribute("field_weight","399");
-	widget.addAttribute("accell_type","Float");
-	widget.addAttribute("display_justify","Left");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","74");
-	widget.addAttribute("displayleft","221");
-	widget.addAttribute("size","12");
-	widget.addAttribute("title","vuu_area_lote");
-	widget.addAttribute("headertitle","AreaLote");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","74");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_area_const__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_area_const__80(Widget widget)
-{
-	widget.addAttribute("field_weight","499");
-	widget.addAttribute("accell_type","Float");
-	widget.addAttribute("display_justify","Left");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","82");
-	widget.addAttribute("displayleft","296");
-	widget.addAttribute("size","13");
-	widget.addAttribute("title","vuu_area_const");
-	widget.addAttribute("headertitle","AreaConst");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","82");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_esquina__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_esquina__80(Widget widget)
-{
-	widget.addAttribute("field_weight","599");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","69");
-	widget.addAttribute("displayleft","379");
-	widget.addAttribute("size","11");
-	widget.addAttribute("title","vuu_esquina");
-	widget.addAttribute("headertitle","ESQ");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","69");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_muro1__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_muro1__80(Widget widget)
-{
-	widget.addAttribute("field_weight","699");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","75");
-	widget.addAttribute("displayleft","448");
-	widget.addAttribute("size","12");
-	widget.addAttribute("title","vuu_muro1");
-	widget.addAttribute("headertitle","MTC");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","75");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_muro2__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_muro2__80(Widget widget)
-{
-	widget.addAttribute("field_weight","799");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","61");
-	widget.addAttribute("displayleft","524");
-	widget.addAttribute("size","10");
-	widget.addAttribute("title","vuu_muro2");
-	widget.addAttribute("headertitle","MLA");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","61");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_parque__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_parque__80(Widget widget)
-{
-	widget.addAttribute("field_weight","899");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","113");
-	widget.addAttribute("displayleft","585");
-	widget.addAttribute("size","18");
-	widget.addAttribute("title","vuu_parque");
-	widget.addAttribute("headertitle","PARQ");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","113");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.");
-	widget.addStyle("background-color","#999999");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vuu_precio_uni__70(Widget widget)
-{
-	widget.addStyle("display","none");
-}
-
-private void setAttrFor_vuu_precio_uni__80(Widget widget)
-{
-	widget.addAttribute("field_weight","999");
-	widget.addAttribute("accell_type","Amount");
-	widget.addAttribute("display_justify","Left");
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","149");
-	widget.addAttribute("displayleft","699");
-	widget.addAttribute("size","24");
-	widget.addAttribute("title","vuu_precio_uni");
-	widget.addAttribute("headertitle","Precio Unidad");
-	widget.addAttribute("displaytop","16");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","149");
-	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.");
-	widget.addStyle("background-color","#999999");
+	widget.setClass("box");
+	widget.addStyle("border-color","transparent");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -380,44 +64,384 @@ private void setAttrFor_div_TPrecioFLD__30(Widget widget)
 
 private void setAttrFor_TPrecioFLD__40(Widget widget)
 {
-	widget.addAttribute("field_weight","599");
-	widget.addAttribute("immediate","false");
+	widget.addAttribute("field_weight","699");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","188");
+	widget.addAttribute("immediate","false");
+	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("displayleft","716");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","188");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:TPrecioFLD.");
+	widget.addAttribute("displaywidth","188");
 	widget.addAttribute("size","31");
 	widget.addAttribute("displaytop","558");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","188");
-	widget.addAttribute("name","cajagrandeDUDisponibles:TPrecioFLD.");
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_TUnidades__30(Widget widget)
+private void setAttrFor_div_label311__30(Widget widget)
 {
-	widget.addStyle("left","792px");
+	widget.addStyle("left","716px");
+	widget.addStyle("top","538px");
+	widget.addStyle("width","47px");
+	widget.addStyle("height","16px");
+}
+
+private void setAttrFor_label311__40(Widget widget)
+{
+	widget.addStyle("font-size","12");
+	widget.addAttribute("labeltitle","Total");
+	widget.addAttribute("displaywidth","47");
+	widget.addAttribute("displayleft","716");
+	widget.addAttribute("id","cajagrandeDUDisponibles:label311.");
+	widget.addAttribute("displaytop","538");
+	widget.addAttribute("displayheight","16");
+	widget.addAttribute("fieldheight","16");
+	widget.addAttribute("fieldwidth","47");
+	widget.addStyle("text-align","left");
+	widget.setClass("label");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_PUBLIC_vuu_unidades__30(Widget widget)
+{
+	widget.addStyle("left","64px");
+	widget.addStyle("top","277px");
+	widget.addStyle("width","877px");
+	widget.addStyle("height","203px");
+}
+
+private void setAttrFor_PUBLIC_vuu_unidades__40(Widget widget)
+{
+	widget.addAttribute("field_weight","599");
+	widget.addAttribute("fieldheight","203");
+	widget.addAttribute("displayleft","64");
+	widget.addAttribute("displayheight","203");
+	widget.addAttribute("fieldwidth","877");
+	widget.addStyle("border-width","0");
+	widget.setClass("data_view");
+	widget.addStyle("border-style","None");
+	widget.addAttribute("displaywidth","877");
+	widget.addAttribute("id","cajagrandeDUDisponibles:PUBLIC_vuu_unidades.");
+	widget.addAttribute("displaytop","277");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_RepeatingArea1__50(Widget widget)
+{
+	widget.addStyle("left","10px");
+	widget.addStyle("top","10px");
+	widget.addStyle("width","852px");
+	widget.addStyle("height","193px");
+}
+
+private void setAttrFor_RepeatingArea1__60(Widget widget)
+{
+	widget.addAttribute("list_columns","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.144:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.210:74;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.284:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.357:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.430:79;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.509:64;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.573:116;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.689:144");
+	widget.addAttribute("altRowClass","alternate_row");
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("selected_row_class","selected_row");
+	widget.addAttribute("repeat_style","Grid");
+	widget.addAttribute("occurrences","12");
+	widget.addAttribute("displaywidth","852");
+	widget.addAttribute("displayleft","10");
+	widget.addAttribute("horizontal_scroll_width","1000");
+	widget.addAttribute("id","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1.");
+	widget.addAttribute("displaytop","10");
+	widget.addAttribute("displayheight","193");
+	widget.addAttribute("fieldheight","193");
+	widget.addAttribute("fieldwidth","852");
+	widget.addStyle("background-color","transparent");
+	widget.setClass("repeating_area");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_manzana__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_manzana__80(Widget widget)
+{
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","10");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","72");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","Manzana");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_manzana");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.");
+	widget.addAttribute("displaywidth","72");
+	widget.addAttribute("size","12");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_unidad__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_unidad__80(Widget widget)
+{
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","82");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","72");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","Unidad");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_unidad");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.");
+	widget.addAttribute("displaywidth","72");
+	widget.addAttribute("size","12");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_modelo__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_modelo__80(Widget widget)
+{
+	widget.addAttribute("field_weight","299");
+	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","155");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","66");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","Modelo");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_modelo");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.");
+	widget.addAttribute("displaywidth","66");
+	widget.addAttribute("size","11");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_area_lote__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_area_lote__80(Widget widget)
+{
+	widget.addAttribute("display_justify","Left");
+	widget.addAttribute("field_weight","399");
+	widget.addAttribute("accell_type","Float");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","221");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","74");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","AreaLote");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_area_lote");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.");
+	widget.addAttribute("displaywidth","74");
+	widget.addAttribute("size","12");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_area_const__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_area_const__80(Widget widget)
+{
+	widget.addAttribute("display_justify","Left");
+	widget.addAttribute("field_weight","499");
+	widget.addAttribute("accell_type","Float");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","296");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","73");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","AreaConst");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_area_const");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.");
+	widget.addAttribute("displaywidth","73");
+	widget.addAttribute("size","12");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_esquina__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_esquina__80(Widget widget)
+{
+	widget.addAttribute("field_weight","599");
+	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","379");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","73");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","ESQ");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_esquina");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.");
+	widget.addAttribute("displaywidth","73");
+	widget.addAttribute("size","12");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_muro1__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_muro1__80(Widget widget)
+{
+	widget.addAttribute("field_weight","699");
+	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","448");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","79");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","MTC");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_muro1");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.");
+	widget.addAttribute("displaywidth","79");
+	widget.addAttribute("size","13");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_muro2__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_muro2__80(Widget widget)
+{
+	widget.addAttribute("field_weight","799");
+	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","524");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","64");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","MLA");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_muro2");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.");
+	widget.addAttribute("displaywidth","64");
+	widget.addAttribute("size","10");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_parque__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_parque__80(Widget widget)
+{
+	widget.addAttribute("field_weight","899");
+	widget.addAttribute("accell_type","String");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","585");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","116");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","PARQ");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_parque");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.");
+	widget.addAttribute("displaywidth","116");
+	widget.addAttribute("size","19");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vuu_precio_uni__70(Widget widget)
+{
+	widget.addStyle("display","none");
+}
+
+private void setAttrFor_vuu_precio_uni__80(Widget widget)
+{
+	widget.addAttribute("display_justify","Left");
+	widget.addAttribute("field_weight","999");
+	widget.addAttribute("accell_type","Amount");
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","699");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","144");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("headertitle","Precio Unidad");
+	widget.setClass("textfield");
+	widget.addAttribute("title","vuu_precio_uni");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.");
+	widget.addAttribute("displaywidth","144");
+	widget.addAttribute("size","24");
+	widget.addAttribute("displaytop","16");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_TUnidadesFLD__30(Widget widget)
+{
+	widget.addStyle("left","716px");
 	widget.addStyle("top","590px");
 	widget.addStyle("width","112px");
 	widget.addStyle("height","22px");
 }
 
-private void setAttrFor_TUnidades__40(Widget widget)
+private void setAttrFor_TUnidadesFLD__40(Widget widget)
 {
 	widget.addAttribute("field_weight","799");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","112");
-	widget.addAttribute("displayleft","792");
-	widget.addAttribute("size","18");
+	widget.addAttribute("displayleft","716");
 	widget.addAttribute("displaytop","590");
-	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","112");
-	widget.addAttribute("name","cajagrandeDUDisponibles:TUnidades.");
+	widget.addAttribute("size","18");
+	widget.setClass("textfield");
+	widget.addAttribute("name","cajagrandeDUDisponibles:TUnidadesFLD.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -434,16 +458,16 @@ private void setAttrFor_box11__40(Widget widget)
 	widget.addAttribute("field_weight","899");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
-	widget.addAttribute("id","cajagrandeDUDisponibles:box11.");
 	widget.addAttribute("displayleft","3");
 	widget.addStyle("border-style","None");
+	widget.addAttribute("id","cajagrandeDUDisponibles:box11.");
 	widget.addAttribute("displaytop","666");
-	widget.setClass("box");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("border-color","transparent");
 	widget.addStyle("background-color","#e30000");
+	widget.addStyle("border-color","transparent");
+	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -457,11 +481,11 @@ private void setAttrFor_div_image1__50(Widget widget)
 
 private void setAttrFor_image1__60(Widget widget)
 {
-	widget.addAttribute("displayheight","46");
-	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id","cajagrandeDUDisponibles:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
+	widget.addAttribute("id","cajagrandeDUDisponibles:box11:image1.");
+	widget.addAttribute("displaytop","2");
+	widget.addAttribute("displayheight","46");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -478,16 +502,16 @@ private void setAttrFor_cajaarribaDUDisponibles__40(Widget widget)
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
-	widget.addAttribute("id","cajagrandeDUDisponibles:cajaarribaDUDisponibles.");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
+	widget.addAttribute("id","cajagrandeDUDisponibles:cajaarribaDUDisponibles.");
 	widget.addAttribute("displaytop","2");
-	widget.setClass("box");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("border-color","transparent");
 	widget.addStyle("background-color","#e30000");
+	widget.addStyle("border-color","transparent");
+	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -502,17 +526,17 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 private void setAttrFor_actualempresa__60(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
+	widget.addAttribute("immediate","false");
 	widget.addAttribute("displaywidth","197");
 	widget.addAttribute("displayleft","16");
-	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","14");
-	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
+	widget.addAttribute("size","32");
+	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeDUDisponibles:cajaarribaDUDisponibles:actualempresa.");
 	widget.addStyle("overflow","hidden");
 }
@@ -528,17 +552,17 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 private void setAttrFor_actualusuario__60(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
-	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
+	widget.addAttribute("immediate","false");
 	widget.addAttribute("displaywidth","110");
 	widget.addAttribute("displayleft","800");
-	widget.addAttribute("size","18");
 	widget.addAttribute("displaytop","14");
-	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
+	widget.addAttribute("size","18");
+	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeDUDisponibles:cajaarribaDUDisponibles:actualusuario.");
 	widget.addStyle("overflow","hidden");
 }
@@ -555,8 +579,8 @@ private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","dudisponibles");
 	widget.addAttribute("displaywidth","522");
-	widget.addAttribute("id","cajagrandeDUDisponibles:cajaarribaDUDisponibles:label1.");
 	widget.addAttribute("displayleft","241");
+	widget.addAttribute("id","cajagrandeDUDisponibles:cajaarribaDUDisponibles:label1.");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","522");
@@ -577,14 +601,14 @@ private void setAttrFor_label211__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","top1024");
 	widget.addAttribute("displaywidth","55");
-	widget.addAttribute("id","cajagrandeDUDisponibles:cajaarribaDUDisponibles:label211.");
 	widget.addAttribute("displayleft","778");
+	widget.addAttribute("id","cajagrandeDUDisponibles:cajaarribaDUDisponibles:label211.");
 	widget.addAttribute("displaytop","65");
-	widget.setClass("label");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","14");
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -599,11 +623,11 @@ private void setAttrFor_div_imprimirbtn__30(Widget widget)
 private void setAttrFor_imprimirbtn__40(Widget widget)
 {
 	widget.addAttribute("field_type","button");
+	widget.addAttribute("displayleft","204");
 	widget.addAttribute("value","IMPRIMIR");
-	widget.addAttribute("name","cajagrandeDUDisponibles:imprimirbtn.");
 	widget.addAttribute("displaytop","549");
 	widget.addAttribute("type","button");
-	widget.addAttribute("displayleft","204");
+	widget.addAttribute("name","cajagrandeDUDisponibles:imprimirbtn.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -617,20 +641,20 @@ private void setAttrFor_div_label11__30(Widget widget)
 
 private void setAttrFor_label11__40(Widget widget)
 {
-	widget.addAttribute("labeltitle","ddudisponibles");
+	widget.addAttribute("fieldheight","18");
+	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("displayleft","19");
+	widget.addAttribute("displayheight","18");
+	widget.addAttribute("fieldwidth","269");
+	widget.addStyle("color","Black");
+	widget.addStyle("font-size","14");
+	widget.setClass("label");
+	widget.addStyle("text-align","left");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaywidth","269");
 	widget.addAttribute("id","cajagrandeDUDisponibles:label11.");
-	widget.addAttribute("displayleft","19");
-	widget.addStyle("font-weight","bold");
-	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("labeltitle","ddudisponibles");
 	widget.addAttribute("displaytop","96");
-	widget.setClass("label");
-	widget.addAttribute("displayheight","18");
-	widget.addStyle("color","Black");
-	widget.addAttribute("fieldheight","18");
-	widget.addStyle("font-size","14");
-	widget.addAttribute("fieldwidth","269");
-	widget.addStyle("text-align","left");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -644,17 +668,17 @@ private void setAttrFor_div_label3__30(Widget widget)
 
 private void setAttrFor_label3__40(Widget widget)
 {
+	widget.addStyle("font-size","12");
 	widget.addAttribute("labeltitle","Proyecto");
 	widget.addAttribute("displaywidth","55");
-	widget.addAttribute("id","cajagrandeDUDisponibles:label3.");
 	widget.addAttribute("displayleft","347");
+	widget.addAttribute("id","cajagrandeDUDisponibles:label3.");
 	widget.addAttribute("displaytop","127");
-	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -668,41 +692,17 @@ private void setAttrFor_div_label31__30(Widget widget)
 
 private void setAttrFor_label31__40(Widget widget)
 {
+	widget.addStyle("font-size","12");
 	widget.addAttribute("labeltitle","Obra");
 	widget.addAttribute("displaywidth","31");
-	widget.addAttribute("id","cajagrandeDUDisponibles:label31.");
 	widget.addAttribute("displayleft","347");
+	widget.addAttribute("id","cajagrandeDUDisponibles:label31.");
 	widget.addAttribute("displaytop","183");
-	widget.setClass("label");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
-	widget.addStyle("font-size","12");
 	widget.addAttribute("fieldwidth","31");
 	widget.addStyle("text-align","left");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_label311__30(Widget widget)
-{
-	widget.addStyle("left","716px");
-	widget.addStyle("top","538px");
-	widget.addStyle("width","31px");
-	widget.addStyle("height","16px");
-}
-
-private void setAttrFor_label311__40(Widget widget)
-{
-	widget.addAttribute("labeltitle","Total");
-	widget.addAttribute("displaywidth","31");
-	widget.addAttribute("id","cajagrandeDUDisponibles:label311.");
-	widget.addAttribute("displayleft","716");
-	widget.addAttribute("displaytop","538");
 	widget.setClass("label");
-	widget.addAttribute("displayheight","16");
-	widget.addAttribute("fieldheight","16");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("fieldwidth","31");
-	widget.addStyle("text-align","left");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -718,11 +718,11 @@ private void setAttrFor_regresarbtn__40(Widget widget)
 {
 	widget.addAttribute("command","Previous Form");
 	widget.addAttribute("field_type","button");
+	widget.addAttribute("displayleft","365");
 	widget.addAttribute("value","REGRESAR");
-	widget.addAttribute("name","cajagrandeDUDisponibles:regresarbtn.");
 	widget.addAttribute("displaytop","549");
 	widget.addAttribute("type","button");
-	widget.addAttribute("displayleft","365");
+	widget.addAttribute("name","cajagrandeDUDisponibles:regresarbtn.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -730,7 +730,7 @@ private void setAttrFor_div_vpy_nombre__30(Widget widget)
 {
 	widget.addStyle("left","394px");
 	widget.addStyle("top","153px");
-	widget.addStyle("width","204px");
+	widget.addStyle("width","274px");
 	widget.addStyle("height","22px");
 }
 
@@ -738,16 +738,16 @@ private void setAttrFor_vpy_nombre__40(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","204");
-	widget.addAttribute("displayleft","394");
-	widget.addAttribute("size","34");
-	widget.addAttribute("displaytop","153");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","204");
+	widget.addAttribute("displayleft","394");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","274");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addAttribute("name","cajagrandeDUDisponibles:vpy_nombre.");
+	widget.addAttribute("displaywidth","274");
+	widget.addAttribute("size","45");
+	widget.addAttribute("displaytop","153");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -755,7 +755,7 @@ private void setAttrFor_div_xob_nombre__30(Widget widget)
 {
 	widget.addStyle("left","394px");
 	widget.addStyle("top","208px");
-	widget.addStyle("width","204px");
+	widget.addStyle("width","274px");
 	widget.addStyle("height","22px");
 }
 
@@ -763,16 +763,16 @@ private void setAttrFor_xob_nombre__40(Widget widget)
 {
 	widget.addAttribute("field_weight","499");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","204");
-	widget.addAttribute("displayleft","394");
-	widget.addAttribute("size","34");
-	widget.addAttribute("displaytop","208");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","204");
+	widget.addAttribute("displayleft","394");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","274");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addAttribute("name","cajagrandeDUDisponibles:xob_nombre.");
+	widget.addAttribute("displaywidth","274");
+	widget.addAttribute("size","45");
+	widget.addAttribute("displaytop","208");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -787,18 +787,18 @@ private void setAttrFor_div_xob_obra__30(Widget widget)
 private void setAttrFor_xob_obra__40(Widget widget)
 {
 	widget.addAttribute("field_weight","399");
-	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("immediate","true");
+	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("displayleft","347");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:xob_obra.");
+	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("size","7");
 	widget.addAttribute("displaytop","208");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("name","cajagrandeDUDisponibles:xob_obra.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -815,16 +815,16 @@ private void setAttrFor_xob_proyecto__40(Widget widget)
 	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("displayleft","347");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeDUDisponibles:xob_proyecto.");
+	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("size","7");
 	widget.addAttribute("displaytop","153");
-	widget.setClass("textfield");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("name","cajagrandeDUDisponibles:xob_proyecto.");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_cajagrandeDUDisponibles__10(Widget div_cajagrandeDUDisponibles__10)
@@ -835,6 +835,26 @@ private void dodiv_cajagrandeDUDisponibles__10(Widget div_cajagrandeDUDisponible
         {
         ((ContainerWidget)div_cajagrandeDUDisponibles__10).addComponent(cajagrandeDUDisponibles__20,"cajagrandeDUDisponibles_");
         setAttrFor_cajagrandeDUDisponibles__20(cajagrandeDUDisponibles__20);
+        DivPanelWidget div_TPrecioFLD__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)cajagrandeDUDisponibles__20).addComponent(div_TPrecioFLD__30,"div_TPrecioFLD_");
+            setAttrFor_div_TPrecioFLD__30(div_TPrecioFLD__30);
+            TextWidget TPrecioFLD__40 = new TextWidget();
+                {
+                ((ContainerWidget)div_TPrecioFLD__30).addComponent(TPrecioFLD__40,"TPrecioFLD_");
+                setAttrFor_TPrecioFLD__40(TPrecioFLD__40);
+                }
+            }
+        DivPanelWidget div_label311__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)cajagrandeDUDisponibles__20).addComponent(div_label311__30,"div_label311_");
+            setAttrFor_div_label311__30(div_label311__30);
+            LabelWidget label311__40 = new LabelWidget();
+                {
+                ((ContainerWidget)div_label311__30).addComponent(label311__40,"label311_");
+                setAttrFor_label311__40(label311__40);
+                }
+            }
         DivPanelWidget div_PUBLIC_vuu_unidades__30 = new DivPanelWidget();
             {
             ((ContainerWidget)cajagrandeDUDisponibles__20).addComponent(div_PUBLIC_vuu_unidades__30,"div_PUBLIC_vuu_unidades_");
@@ -963,30 +983,20 @@ private void dodiv_cajagrandeDUDisponibles__10(Widget div_cajagrandeDUDisponible
                             div_FXGRID_70.addStyle("overflow-y","hidden");
                             div_FXGRID_70.addAttribute("jsinclude","NXJGrid.js");
                             div_FXGRID_70.addAttribute("jslinks","NXJGrid.css");
-                            div_FXGRID_70.addAttribute("jsinit","   var cajagrandeDUDisponibles_PUBLIC_vuu_unidades_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Manzana', 	'1', 	'1', 	'72', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_manzana', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.', '', ''), new NXJGridColumn( 	'Unidad', 	'1', 	'1', 	'72', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_unidad', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.', '', ''), new NXJGridColumn( 	'Modelo', 	'1', 	'1', 	'66', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_modelo', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.', '', ''), new NXJGridColumn( 	'AreaLote', 	'1', 	'3', 	'74', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_area_lote', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.', '', ''), new NXJGridColumn( 	'AreaConst', 	'1', 	'3', 	'82', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_area_const', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.', '', ''), new NXJGridColumn( 	'ESQ', 	'1', 	'1', 	'69', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_esquina', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.', '', ''), new NXJGridColumn( 	'MTC', 	'1', 	'1', 	'75', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_muro1', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.', '', ''), new NXJGridColumn( 	'MLA', 	'1', 	'1', 	'61', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_muro2', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.', '', ''), new NXJGridColumn( 	'PARQ', 	'1', 	'1', 	'113', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_parque', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.', '', ''), new NXJGridColumn( 	'Precio Unidad', 	'1', 	'4', 	'149', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_precio_uni', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.', '', '') ]; ; if (!window.namesToComponents['cajagrandeDUDisponibles:PUBLIC_vuu_unidades_FXGRID'])     {     window.namesToComponents['cajagrandeDUDisponibles:PUBLIC_vuu_unidades_FXGRID'] = new NXJGrid('cajagrandeDUDisponibles:PUBLIC_vuu_unidades_FXGRID', cajagrandeDUDisponibles_PUBLIC_vuu_unidades_RepeatingArea1__FXColumns, 16, null, null, '__NXJ_CONTEXT_PATH__/unify', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/');     } ");
+                            div_FXGRID_70.addAttribute("jsinit","   var cajagrandeDUDisponibles_PUBLIC_vuu_unidades_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Manzana', 	'1', 	'1', 	'72', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_manzana', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.', '', ''), new NXJGridColumn( 	'Unidad', 	'1', 	'1', 	'72', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_unidad', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.', '', ''), new NXJGridColumn( 	'Modelo', 	'1', 	'1', 	'66', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_modelo', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.', '', ''), new NXJGridColumn( 	'AreaLote', 	'1', 	'3', 	'74', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_area_lote', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.', '', ''), new NXJGridColumn( 	'AreaConst', 	'1', 	'3', 	'73', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_area_const', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.', '', ''), new NXJGridColumn( 	'ESQ', 	'1', 	'1', 	'73', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_esquina', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.', '', ''), new NXJGridColumn( 	'MTC', 	'1', 	'1', 	'79', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_muro1', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.', '', ''), new NXJGridColumn( 	'MLA', 	'1', 	'1', 	'64', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_muro2', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.', '', ''), new NXJGridColumn( 	'PARQ', 	'1', 	'1', 	'116', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_parque', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.', '', ''), new NXJGridColumn( 	'Precio Unidad', 	'1', 	'4', 	'144', 	' text-align: Left; background-color: #999999', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'vuu_precio_uni', 'cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.', '', '') ]; ; if (!window.namesToComponents['cajagrandeDUDisponibles:PUBLIC_vuu_unidades_FXGRID'])     {     window.namesToComponents['cajagrandeDUDisponibles:PUBLIC_vuu_unidades_FXGRID'] = new NXJGrid('cajagrandeDUDisponibles:PUBLIC_vuu_unidades_FXGRID', cajagrandeDUDisponibles_PUBLIC_vuu_unidades_RepeatingArea1__FXColumns, 16, null, null, '__NXJ_CONTEXT_PATH__/unify', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/');     } ");
                             }
                         }
                     }
                 }
             }
-        DivPanelWidget div_TPrecioFLD__30 = new DivPanelWidget();
+        DivPanelWidget div_TUnidadesFLD__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)cajagrandeDUDisponibles__20).addComponent(div_TPrecioFLD__30,"div_TPrecioFLD_");
-            setAttrFor_div_TPrecioFLD__30(div_TPrecioFLD__30);
-            TextWidget TPrecioFLD__40 = new TextWidget();
+            ((ContainerWidget)cajagrandeDUDisponibles__20).addComponent(div_TUnidadesFLD__30,"div_TUnidadesFLD_");
+            setAttrFor_div_TUnidadesFLD__30(div_TUnidadesFLD__30);
+            TextWidget TUnidadesFLD__40 = new TextWidget();
                 {
-                ((ContainerWidget)div_TPrecioFLD__30).addComponent(TPrecioFLD__40,"TPrecioFLD_");
-                setAttrFor_TPrecioFLD__40(TPrecioFLD__40);
-                }
-            }
-        DivPanelWidget div_TUnidades__30 = new DivPanelWidget();
-            {
-            ((ContainerWidget)cajagrandeDUDisponibles__20).addComponent(div_TUnidades__30,"div_TUnidades_");
-            setAttrFor_div_TUnidades__30(div_TUnidades__30);
-            TextWidget TUnidades__40 = new TextWidget();
-                {
-                ((ContainerWidget)div_TUnidades__30).addComponent(TUnidades__40,"TUnidades_");
-                setAttrFor_TUnidades__40(TUnidades__40);
+                ((ContainerWidget)div_TUnidadesFLD__30).addComponent(TUnidadesFLD__40,"TUnidadesFLD_");
+                setAttrFor_TUnidadesFLD__40(TUnidadesFLD__40);
                 }
             }
         DivPanelWidget div_box11__30 = new DivPanelWidget();
@@ -1097,16 +1107,6 @@ private void dodiv_cajagrandeDUDisponibles__10(Widget div_cajagrandeDUDisponible
                 {
                 ((ContainerWidget)div_label31__30).addComponent(label31__40,"label31_");
                 setAttrFor_label31__40(label31__40);
-                }
-            }
-        DivPanelWidget div_label311__30 = new DivPanelWidget();
-            {
-            ((ContainerWidget)cajagrandeDUDisponibles__20).addComponent(div_label311__30,"div_label311_");
-            setAttrFor_div_label311__30(div_label311__30);
-            LabelWidget label311__40 = new LabelWidget();
-                {
-                ((ContainerWidget)div_label311__30).addComponent(label311__40,"label311_");
-                setAttrFor_label311__40(label311__40);
                 }
             }
         DivPanelWidget div_regresarbtn__30 = new DivPanelWidget();

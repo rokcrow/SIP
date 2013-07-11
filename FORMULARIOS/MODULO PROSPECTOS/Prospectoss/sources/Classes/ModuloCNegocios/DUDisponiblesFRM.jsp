@@ -73,7 +73,7 @@
                         displayleft="64"
                         displaytop="277"
                         displaywidth="877"
-                        field_weight="699"
+                        field_weight="599"
                         id="cajagrandeDUDisponibles:PUBLIC_vuu_unidades."
                         key="cajagrandeDUDisponibles:PUBLIC_vuu_unidades."
                         kind="data_region"
@@ -105,7 +105,7 @@
                                 id="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1."
                                 key="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1."
                                 kind="repeating_area"
-                                list_columns="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.144:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.210:74;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.284:82;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.366:69;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.435:75;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.510:61;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.571:113;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.684:149"
+                                list_columns="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.144:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.210:74;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.284:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.357:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.430:79;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.509:64;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.573:116;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.689:144"
                                 occurrences="12"
                                 repeat_style="Grid"
                                 selected_row_class="selected_row"
@@ -257,7 +257,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 284px; width:82px; height:22px">
+                                    style="position: absolute; top: 0px; left: 284px; width:73px; height:22px">
 
                                     <input
                                         accell_type="Float"
@@ -269,7 +269,7 @@
                                         displayheight="22"
                                         displayleft="296"
                                         displaytop="16"
-                                        displaywidth="82"
+                                        displaywidth="73"
                                         field_length="16"
                                         field_type="text"
                                         field_weight="499"
@@ -280,7 +280,7 @@
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const."
                                         original_name="vuu_area_const"
                                         retrieve_value="true"
-                                        size="13"
+                                        size="12"
                                         target_field="vuu_area_const"
                                         title="vuu_area_const"
                                         type="text"
@@ -293,7 +293,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 366px; width:69px; height:22px">
+                                    style="position: absolute; top: 0px; left: 357px; width:73px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -304,7 +304,7 @@
                                         displayheight="22"
                                         displayleft="379"
                                         displaytop="16"
-                                        displaywidth="69"
+                                        displaywidth="73"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="599"
@@ -315,7 +315,7 @@
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina."
                                         original_name="vuu_esquina"
                                         retrieve_value="true"
-                                        size="11"
+                                        size="12"
                                         target_field="vuu_esquina"
                                         title="vuu_esquina"
                                         type="text"
@@ -328,7 +328,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 435px; width:75px; height:22px">
+                                    style="position: absolute; top: 0px; left: 430px; width:79px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -339,7 +339,7 @@
                                         displayheight="22"
                                         displayleft="448"
                                         displaytop="16"
-                                        displaywidth="75"
+                                        displaywidth="79"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="699"
@@ -350,7 +350,7 @@
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1."
                                         original_name="vuu_muro1"
                                         retrieve_value="true"
-                                        size="12"
+                                        size="13"
                                         target_field="vuu_muro1"
                                         title="vuu_muro1"
                                         type="text"
@@ -363,7 +363,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 510px; width:61px; height:22px">
+                                    style="position: absolute; top: 0px; left: 509px; width:64px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -374,7 +374,7 @@
                                         displayheight="22"
                                         displayleft="524"
                                         displaytop="16"
-                                        displaywidth="61"
+                                        displaywidth="64"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="799"
@@ -398,7 +398,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 571px; width:113px; height:22px">
+                                    style="position: absolute; top: 0px; left: 573px; width:116px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -409,7 +409,7 @@
                                         displayheight="22"
                                         displayleft="585"
                                         displaytop="16"
-                                        displaywidth="113"
+                                        displaywidth="116"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="899"
@@ -420,7 +420,7 @@
                                         name="cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque."
                                         original_name="vuu_parque"
                                         retrieve_value="true"
-                                        size="18"
+                                        size="19"
                                         target_field="vuu_parque"
                                         title="vuu_parque"
                                         type="text"
@@ -433,7 +433,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 684px; width:149px; height:22px">
+                                    style="position: absolute; top: 0px; left: 689px; width:144px; height:22px">
 
                                     <input
                                         accell_type="Amount"
@@ -441,11 +441,11 @@
                                         class="textfield"
                                         db_length="15"
                                         db_type="Amount"
-                                        display_justify="Left"
+                                        display_justify="Right"
                                         displayheight="22"
                                         displayleft="699"
                                         displaytop="16"
-                                        displaywidth="149"
+                                        displaywidth="144"
                                         field_length="25"
                                         field_type="text"
                                         field_weight="999"
@@ -481,15 +481,15 @@
 
                     <input
                         accell_type="Amount"
-                        auto_accept="false"
                         binary_variables=""
                         class="textfield"
+                        display_justify="Right"
                         displayheight="22"
                         displayleft="716"
                         displaytop="558"
                         displaywidth="188"
                         field_type="text"
-                        field_weight="599"
+                        field_weight="699"
                         findable="false"
                         immediate="false"
                         key="cajagrandeDUDisponibles:TPrecioFLD."
@@ -500,7 +500,7 @@
                         stop_for_input="false"
                         target_field=""
                         type="text"
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1371746659557"
+                        uid="modulo_form1_1372970373750_0bf148f2cf21e1869eda9c88db18c5008d647d1a_1373550746608"
                         updateable="false"
                         view="text">
                 </div>
@@ -508,21 +508,22 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 590px; left: 792px; width:112px; height:22px">
+                    style="position: absolute; top: 590px; left: 716px; width:112px; height:22px">
 
                     <input
                         accell_type="Numeric"
                         binary_variables=""
                         class="textfield"
+                        display_justify="Right"
                         displayheight="22"
-                        displayleft="792"
+                        displayleft="716"
                         displaytop="590"
                         displaywidth="112"
                         field_type="text"
                         field_weight="799"
                         findable="false"
-                        key="cajagrandeDUDisponibles:TUnidades."
-                        name="cajagrandeDUDisponibles:TUnidades."
+                        key="cajagrandeDUDisponibles:TUnidadesFLD."
+                        name="cajagrandeDUDisponibles:TUnidadesFLD."
                         original_name="textfield1"
                         size="18"
                         stop_for_input="false"
@@ -843,7 +844,7 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 538px; left: 716px; width:31px; height:16px">
+                    style="position: absolute; top: 538px; left: 716px; width:47px; height:16px">
                     
                     
                     <label
@@ -852,7 +853,7 @@
                         displayheight="16"
                         displayleft="716"
                         displaytop="538"
-                        displaywidth="31"
+                        displaywidth="47"
                         id="cajagrandeDUDisponibles:label311."
                         key="cajagrandeDUDisponibles:label311."
                         labelalign="left"
@@ -897,7 +898,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 153px; left: 394px; width:204px; height:22px">
+                    style="position: absolute; top: 153px; left: 394px; width:274px; height:22px">
 
                     <input
                         auto_accept="true"
@@ -907,7 +908,7 @@
                         displayheight="22"
                         displayleft="394"
                         displaytop="153"
-                        displaywidth="204"
+                        displaywidth="274"
                         field_type="text"
                         field_weight="299"
                         findable="true"
@@ -915,7 +916,7 @@
                         multi_valued="true"
                         name="cajagrandeDUDisponibles:vpy_nombre."
                         original_name="textfield1"
-                        size="34"
+                        size="45"
                         stop_for_input="false"
                         target_field=""
                         type="text"
@@ -927,7 +928,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 208px; left: 394px; width:204px; height:22px">
+                    style="position: absolute; top: 208px; left: 394px; width:274px; height:22px">
 
                     <input
                         accell_type="String"
@@ -939,7 +940,7 @@
                         displayheight="22"
                         displayleft="394"
                         displaytop="208"
-                        displaywidth="204"
+                        displaywidth="274"
                         explicit_search_mode="default"
                         field_length="30"
                         field_type="text"
@@ -950,7 +951,7 @@
                         name="cajagrandeDUDisponibles:xob_nombre."
                         original_name="textfield1"
                         retrieve_value="true"
-                        size="34"
+                        size="45"
                         stop_for_input="false"
                         target_field="xob_nombre"
                         type="text"

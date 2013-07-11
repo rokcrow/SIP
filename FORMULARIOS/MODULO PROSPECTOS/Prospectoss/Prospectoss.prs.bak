@@ -941,30 +941,6 @@
     </file>
 
     <file
-         path="Classes/DUDisponiblesFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1373467501841"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;DUDisponiblesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-          target-type="0"
-          description=""
-          default-label="Modulo.DUDisponiblesFRM"
-          add_to_menu="true"
-          override-entry-point-name="false"
-          expose-as-portlet="false"
-          hide-entry-point="false"
-         >
-    </file>
-
-    <file
          path="Classes/ModuloCNegocios/DUDisponiblesFRM.fx"
           type="form"
           state="4"
@@ -976,7 +952,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;DUDisponiblesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
           target-type="0"
           description=""
@@ -1005,17 +981,27 @@
     </color>
 
     <color
+         rgb="White"
+         >
+    </color>
+
+    <color
+         rgb="#ccccff"
+         >
+    </color>
+
+    <color
+         rgb="#cccccc"
+         >
+    </color>
+
+    <color
          rgb="Black"
          >
     </color>
 
     <color
          rgb="#00cc00"
-         >
-    </color>
-
-    <color
-         rgb="#cccccc"
          >
     </color>
 
@@ -1096,11 +1082,6 @@
 
     <color
          rgb="Gray"
-         >
-    </color>
-
-    <color
-         rgb="White"
          >
     </color>
 
