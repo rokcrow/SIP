@@ -9,7 +9,6 @@ FORM DUDisponiblesFRM
     multi_valued NullableStringVariable  xob_empresa;
     NullableAmount TPrecioVAR;
     NullableNumeric TUnidadesVAR;
-    NullableString EUnidad;
 
 
     BEFORE FORM

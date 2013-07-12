@@ -3,20 +3,22 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/2 Consulta de Precios en Pantalla/CNegocios/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
         aud_on_entry="false"
+        auto_find="false"
+        binary_variables=""
         binding_type="connection"
-        bloom_filter="00080000000000000800000000000000"
+        bloom_filter="00000000000400040000000000000000"
         class="form"
         commands=""
         connection="Connection1"
-        displayheight="768"
+        displayheight="632"
         displaywidth="700"
         field_order=""
         footer="none"
-        form_height="768"
+        form_height="637"
         form_width="1201"
         foundation_type="Classes/Foundation/Form"
         name="NXJForm"
@@ -26,14 +28,16 @@
         style="background-color: #999999">
 
         <div
+            binary_variables=""
             view="div"
-            style="position: absolute; top: 30px; left: 192px; width:1004px; height:732px">
+            style="position: absolute; top: 30px; left: 192px; width:1004px; height:602px">
 
             <fieldset
+                binary_variables=""
                 border-width="0"
                 class="box"
                 commands=""
-                displayheight="732"
+                displayheight="602"
                 displayleft="192"
                 displaytop="30"
                 displaywidth="1004"
@@ -48,19 +52,21 @@
                     background-color: #cccccc">
 
                 <div
+                    binary_variables=""
                     view="div"
-                    style="position: absolute; top: 278px; left: 175px; width:713px; height:334px">
+                    style="position: absolute; top: 278px; left: 175px; width:713px; height:204px">
 
                     <div
                         aud_on_entry="false"
                         auto_find="true"
+                        binary_variables=""
                         binding_type="connection"
                         border-width="0"
                         class="data_view"
                         commands=""
                         connection="Connection1"
                         detail_keys="vlp_empresa;vlp_obra"
-                        displayheight="334"
+                        displayheight="204"
                         displayleft="175"
                         displaytop="278"
                         displaywidth="713"
@@ -79,13 +85,15 @@
                             border-style:None">
 
                         <div
+                            binary_variables=""
                             view="div"
-                            style="position: absolute; top: 10px; left: 32px; width:618px; height:314px">
+                            style="position: absolute; top: 10px; left: 32px; width:618px; height:193px">
 
                             <div
                                 alternate_row_class="alternate_row"
+                                binary_variables=""
                                 class="repeating_area"
-                                displayheight="314"
+                                displayheight="193"
                                 displayleft="10"
                                 displaytop="10"
                                 displaywidth="618"
@@ -93,8 +101,8 @@
                                 id="cajagrandeCPPantalla:PUBLIC_vlp_listapre:RepeatingArea1."
                                 key="cajagrandeCPPantalla:PUBLIC_vlp_listapre:RepeatingArea1."
                                 kind="repeating_area"
-                                list_columns="cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_manzana.0:101;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_unidad.101:82;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_f_inicial.183:89;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_f_final.272:78;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_precio_uni.350:150;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_usuario.500:88"
-                                occurrences="19"
+                                list_columns="cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_manzana.0:101;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_unidad.101:82;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_f_inicial.183:89;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_f_final.272:78;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_precio_uni.350:150;cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_usuario.500:99"
+                                occurrences="12"
                                 repeat_style="Grid"
                                 row_class="ROW"
                                 selected_row_class="selected_row"
@@ -102,11 +110,13 @@
                                 view="repeating_area">
 
                                 <div
+                                    binary_variables=""
                                     view="div"
                                     style="position: absolute; top: 0px; left: 0px; width:101px; height:22px">
 
                                     <input
                                         accell_type="String"
+                                        binary_variables=""
                                         class="textfield"
                                         db_length="3"
                                         db_type="String"
@@ -133,11 +143,13 @@
                                 </div>
 
                                 <div
+                                    binary_variables=""
                                     view="div"
                                     style="position: absolute; top: 0px; left: 101px; width:82px; height:22px">
 
                                     <input
                                         accell_type="String"
+                                        binary_variables=""
                                         class="textfield"
                                         db_length="4"
                                         db_type="String"
@@ -164,11 +176,13 @@
                                 </div>
 
                                 <div
+                                    binary_variables=""
                                     view="div"
                                     style="position: absolute; top: 0px; left: 183px; width:89px; height:22px">
 
                                     <input
                                         accell_type="Date"
+                                        binary_variables=""
                                         class="textfield"
                                         db_length="10"
                                         db_type="Date"
@@ -195,11 +209,13 @@
                                 </div>
 
                                 <div
+                                    binary_variables=""
                                     view="div"
                                     style="position: absolute; top: 0px; left: 272px; width:78px; height:22px">
 
                                     <input
                                         accell_type="Date"
+                                        binary_variables=""
                                         class="textfield"
                                         db_length="10"
                                         db_type="Date"
@@ -226,11 +242,13 @@
                                 </div>
 
                                 <div
+                                    binary_variables=""
                                     view="div"
                                     style="position: absolute; top: 0px; left: 350px; width:150px; height:22px">
 
                                     <input
                                         accell_type="Amount"
+                                        binary_variables=""
                                         class="textfield"
                                         db_length="15"
                                         db_type="Amount"
@@ -258,18 +276,20 @@
                                 </div>
 
                                 <div
+                                    binary_variables=""
                                     view="div"
                                     style="position: absolute; top: 0px; left: 500px; width:99px; height:22px">
 
                                     <input
                                         accell_type="String"
+                                        binary_variables=""
                                         class="textfield"
                                         db_length="8"
                                         db_type="String"
                                         displayheight="22"
                                         displayleft="500"
                                         displaytop="0"
-                                        displaywidth="88"
+                                        displaywidth="99"
                                         field_length="8"
                                         field_type="text"
                                         field_weight="599"
@@ -279,7 +299,7 @@
                                         multi_valued="true"
                                         name="cajagrandeCPPantalla:PUBLIC_vlp_listapre:vlp_usuario."
                                         retrieve_value="true"
-                                        size="14"
+                                        size="16"
                                         target_field="vlp_usuario"
                                         title="vlp_usuario"
                                         type="text"
@@ -299,7 +319,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 681px; left: 2px; width:996px; height:50px">
+                    style="position: absolute; top: 551px; left: 2px; width:996px; height:50px">
 
                     <fieldset
                         binary_variables=""
@@ -308,7 +328,7 @@
                         commands=""
                         displayheight="50"
                         displayleft="2"
-                        displaytop="681"
+                        displaytop="551"
                         displaywidth="996"
                         field_weight="699"
                         id="cajagrandeCPPantalla:box11."
@@ -381,7 +401,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:347px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -389,7 +409,7 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="347"
+                                displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
                                 id="cajagrandeCPPantalla:cajaarribaCPPantalla:label1."
                                 instancewidth="522"
@@ -671,12 +691,14 @@
                         name="cajagrandeCPPantalla:xob_obra."
                         original_name="textfield1"
                         retrieve_value="true"
+                        return_values_into="xob_obra"
                         size="7"
                         target_field="xob_obra"
                         type="text"
                         uid="modulo_form1_1370116094841_78da72979176fe75f7d37b9d8c9c658040e52e54_1373576199180"
                         updateable="true"
-                        view="text">
+                        view="text"
+                        zoom_form="ModuloCNegocios/ObrasFRM">
                 </div>
 
                 <div

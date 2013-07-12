@@ -245,7 +245,7 @@
         binary_variables = ""
         db_length = "15"
         db_type = "Amount"
-        display_justify = "Left"
+        display_justify = "Right"
         display_name = "vuu_precio_uni"
         field_length = "25"
         field_type = "text"

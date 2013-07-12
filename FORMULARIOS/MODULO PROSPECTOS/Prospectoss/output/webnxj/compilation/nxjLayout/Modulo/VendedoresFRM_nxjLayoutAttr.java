@@ -19,15 +19,15 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.addAttribute("title","Vendedores");
+	widget.setClass("form");
 	widget.addAttribute("displaywidth","1074");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("stylesheets","");
+	widget.addAttribute("title","Vendedores");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displayheight","501");
 	widget.addAttribute("fieldheight","501");
 	widget.addAttribute("fieldwidth","1074");
-	widget.addStyle("background-color","#999999");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -41,8 +41,8 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayheight","466");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displaytop","30");
 	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
@@ -66,10 +66,10 @@ private void setAttrFor_div_vvh_vendedora__50(Widget widget)
 private void setAttrFor_vvh_vendedora__60(Widget widget)
 {
 	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","118");
-	widget.addAttribute("headertitle","Codigo");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)vvh_vendedora.");
 	widget.addAttribute("name","view1:vvh_vendedora.");
+	widget.addAttribute("fieldwidth","118");
+	widget.addAttribute("headertitle","Codigo");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -80,10 +80,10 @@ private void setAttrFor_div_NombVend__50(Widget widget)
 private void setAttrFor_NombVend__60(Widget widget)
 {
 	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","339");
-	widget.addAttribute("headertitle","Vendedor (a)");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)NombVend.");
 	widget.addAttribute("name","view1:NombVend.");
+	widget.addAttribute("fieldwidth","339");
+	widget.addAttribute("headertitle","Vendedor (a)");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -126,9 +126,9 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)cajaarribaVendedores:(Modulo.VendedoresDVW)actualempresa.");
 	widget.addAttribute("name","view1:cajaarribaVendedores:actualempresa.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -138,9 +138,9 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)cajaarribaVendedores:(Modulo.VendedoresDVW)actualusuario.");
 	widget.addAttribute("name","view1:cajaarribaVendedores:actualusuario.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 

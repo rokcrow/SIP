@@ -109,7 +109,6 @@ public class DUDisponiblesFRM
     /*multi_valued*/ NullableStringVariable xob_empresa = NullableFactory.createNullableStringVariable(this, "xob_empresa", true, false);
     NullableAmount TPrecioVAR = NullableFactory.createNullableAmount("TPrecioVAR");
     NullableNumeric TUnidadesVAR = NullableFactory.createNullableNumeric("TUnidadesVAR");
-    NullableString EUnidad = NullableFactory.createNullableString("EUnidad");
 
     public void beforeForm()
 	throws Exception
@@ -541,7 +540,7 @@ public class DUDisponiblesFRM
 		vuu_precio_uni.setValueRetrievedDuringFetch(true);
 		vuu_precio_uni.setFindable(true);
 		vuu_precio_uni.setUpdateable(true);
-		vuu_precio_uni.setDisplayJustify(NullableField.DisplayJustify_LEFT);
+		vuu_precio_uni.setDisplayJustify(NullableField.DisplayJustify_RIGHT);
 		vuu_precio_uni.setBackgroundColor("#999999");
 		vuu_unidad.setStyleClass("textfield");
 		vuu_unidad.us$setMultiValued(true);
@@ -725,7 +724,6 @@ public class DUDisponiblesFRM
 	ModuloCNegocios.DUDisponiblesFRM.this.cajagrandeDUDisponibles.PUBLIC_vuu_unidades.us$setMasterRelationshipAddExpr(ModuloCNegocios.DUDisponiblesFRM.this.us$getPUBLIC_vuu_unidades_1_AddExpressions());
 	us$setBackgroundColor("#999999");
 	us$addTargetMapping("xob_empresa", "xob_empresa");
-	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "EUnidad", false);
 	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "TUnidadesVAR", false);
 	us$addProxyObject(ModuloCNegocios.DUDisponiblesFRM.class, "TPrecioVAR", false);
     } // us$initializeFormSpecificProperties

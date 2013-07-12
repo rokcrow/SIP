@@ -12,6 +12,12 @@
     </object>
     <object
         project=""
+        path="Classes/ModuloCNegocios/CPPantallaFRM/cajagrandeCPPantalla/cajaarribaCPPantalla"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Static_Content/system/silver/menugradient.png"
         type="6"
     >
@@ -20,12 +26,6 @@
             value=""
             timestamp="0"
         />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles/box11"
-        type="35"
-    >
     </object>
     <object
         project=""
@@ -38,12 +38,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -94,6 +94,32 @@
         />
     </object>
     <object
+        project=""
+        path="Classes/ModuloCNegocios/ObrasFRM/cajagrandeObrasFRM/PUBLIC_xob_obras"
+        type="36"
+    >
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
         project="standard"
         path="Static_Content/toolbars"
         type="16"
@@ -112,6 +138,12 @@
     </object>
     <object
         project=""
+        path="Classes/ModuloCNegocios/ObrasFRM/cajagrandeObrasFRM/cajaarribaObrasFRM"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/GradoInteresDVW.fx"
         type="36"
     >
@@ -121,12 +153,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -147,12 +179,12 @@
         type="36"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -178,12 +210,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -215,12 +247,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -237,6 +269,12 @@
     </object>
     <object
         project=""
+        path="Classes/ModuloCNegocios/ObrasFRM/cajagrandeObrasFRM/box11"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/MediospFRM.fx"
         type="0"
     >
@@ -246,12 +284,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -313,12 +351,12 @@
         type="36"
     >
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -350,12 +388,12 @@
         type="-1"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -395,13 +433,13 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/LoginFRM/cajagrandeLogin/cajaarribaLogin"
+        path="Classes/Modulo/CorredoresFRM/view1/box11"
         type="35"
     >
     </object>
     <object
         project=""
-        path="Classes/Modulo/CorredoresFRM/view1/box11"
+        path="Classes/Modulo/LoginFRM/cajagrandeLogin/cajaarribaLogin"
         type="35"
     >
     </object>
@@ -433,12 +471,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -461,16 +499,22 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/SeguimientoFRM/CajaSegui/PUBLIC_vps_prosigue"
+        path="Classes/ModuloCNegocios/CPPantallaFRM/cajagrandeCPPantalla"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Classes/ModuloCNegocios/DUDisponiblesFRM/cajagrandeDUDisponibles/PUBLIC_vuu_unidades"
         type="36"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -487,16 +531,16 @@
     </object>
     <object
         project=""
-        path="Classes/ModuloCNegocios/DUDisponiblesFRM/cajagrandeDUDisponibles/PUBLIC_vuu_unidades"
+        path="Classes/Modulo/SeguimientoFRM/CajaSegui/PUBLIC_vps_prosigue"
         type="36"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -522,12 +566,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -553,12 +597,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -584,12 +628,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -606,6 +650,12 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/SociedadesFRM/cajagrandeSociedades/box11"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Static_Content/system/default"
         type="16"
     >
@@ -617,13 +667,7 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/SociedadesFRM/cajagrandeSociedades/box11"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/ProspectosFRM.fx"
+        path="Classes/ModuloCNegocios/ObrasFRM.fx"
         type="0"
     >
         <permission
@@ -654,15 +698,106 @@
     </object>
     <object
         project=""
-        path="Classes/ItemsForm/Standar/box111"
-        type="35"
+        path="Classes/Modulo/ProspectosFRM.fx"
+        type="0"
     >
+        <permission
+            name="Form"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
     </object>
     <object
         project=""
         path="Classes/Modulo/CorredoresFRM/view1"
         type="36"
     >
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/ItemsForm/Standar/box111"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/CorredoresDVW/box11"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/MediospFRM/view1/cajaarribaMPublicitarios"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/default/elevatorfillactive.png"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/MenuFRM/cajagrandeMenu/cajaarribaMenu"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Classes/ModuloCNegocios/CPPantallaFRM.fx"
+        type="0"
+    >
+        <permission
+            name="Form"
+            value=""
+            timestamp="0"
+        />
         <permission
             name="Update"
             value=""
@@ -680,35 +815,6 @@
         />
         <permission
             name="Delete"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/MediospFRM/view1/cajaarribaMPublicitarios"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/CorredoresDVW/box11"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/MenuFRM/cajagrandeMenu/cajaarribaMenu"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
-        path="Static_Content/system/default/elevatorfillactive.png"
-        type="6"
-    >
-        <permission
-            name="Access"
             value=""
             timestamp="0"
         />
@@ -737,32 +843,6 @@
     >
         <permission
             name="Access"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles/PUBLIC_vuu_unidades"
-        type="36"
-    >
-        <permission
-            name="Find"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Update"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Add"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Delete"
             value=""
             timestamp="0"
         />
@@ -849,12 +929,12 @@
         type="36"
     >
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -886,12 +966,12 @@
         type="36"
     >
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -917,12 +997,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -965,12 +1045,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -1007,12 +1087,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -1100,12 +1180,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -1148,12 +1228,38 @@
         type="36"
     >
         <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
             name="Find"
             value=""
             timestamp="0"
         />
         <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/ModuloCNegocios/CPPantallaFRM/cajagrandeCPPantalla/PUBLIC_vlp_listapre"
+        type="36"
+    >
+        <permission
             name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -1179,12 +1285,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -1209,6 +1315,12 @@
             value=""
             timestamp="0"
         />
+    </object>
+    <object
+        project=""
+        path="Classes/ModuloCNegocios/CPPantallaFRM/cajagrandeCPPantalla/box11"
+        type="35"
+    >
     </object>
     <object
         project=""
@@ -1270,43 +1382,6 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/DUDisponiblesFRM.fx"
-        type="0"
-    >
-        <permission
-            name="Form"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Find"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Update"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Add"
-            value=""
-            timestamp="0"
-        />
-        <permission
-            name="Delete"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
         path="Static_Content/system/silver/gridtop.png"
         type="6"
     >
@@ -1340,12 +1415,12 @@
         type="36"
     >
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -1368,15 +1443,20 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/DUDisponiblesFRM/cajagrandeDUDisponibles/cajaarribaDUDisponibles"
-        type="35"
+        path="Classes/ItemsForm/Standar/tabset1"
+        type="38"
     >
     </object>
     <object
         project=""
-        path="Classes/ItemsForm/Standar/tabset1"
-        type="38"
+        path="Static_Content/system/default/menugradient.png"
+        type="6"
     >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
     </object>
     <object
         project=""
@@ -1391,7 +1471,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/menugradient.png"
+        path="Static_Content/system/silver/elevatorfillinactive.png"
         type="6"
     >
         <permission
@@ -1411,12 +1491,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -1438,8 +1518,8 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/elevatorfillinactive.png"
-        type="6"
+        path="Static_Content/system/silver"
+        type="16"
     >
         <permission
             name="Access"
@@ -1458,12 +1538,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -1474,17 +1554,6 @@
         />
         <permission
             name="Delete"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
-        path="Static_Content/system/silver"
-        type="16"
-    >
-        <permission
-            name="Access"
             value=""
             timestamp="0"
         />
@@ -1511,12 +1580,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -1530,12 +1599,6 @@
             value=""
             timestamp="0"
         />
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/RepProspectosFRM/view1/box11"
-        type="35"
-    >
     </object>
     <object
         project=""
@@ -1550,13 +1613,7 @@
     </object>
     <object
         project=""
-        path="Classes/Modulo/ProyectosFRM/view1/cajaarribaPVenta"
-        type="35"
-    >
-    </object>
-    <object
-        project=""
-        path="Classes/Modulo/GradoInteresDVW/cajaarribaGInteres"
+        path="Classes/Modulo/RepProspectosFRM/view1/box11"
         type="35"
     >
     </object>
@@ -1571,12 +1628,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -1593,6 +1650,18 @@
     </object>
     <object
         project=""
+        path="Classes/Modulo/GradoInteresDVW/cajaarribaGInteres"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/ProyectosFRM/view1/cajaarribaPVenta"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
         path="Classes/Modulo/LoginFRM.fx"
         type="0"
     >
@@ -1602,12 +1671,12 @@
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
@@ -1633,6 +1702,12 @@
         type="35"
     >
     </object>
+    <object
+        project=""
+        path="Classes/ModuloCNegocios/ObrasFRM/cajagrandeObrasFRM"
+        type="35"
+    >
+    </object>
     <filter
         project=""
         path="Classes/Modulo/ProyectosDVW.fx"
@@ -1645,12 +1720,12 @@
     />
     <filter
         project=""
-        path="Classes/Modulo/MenuDVW.fx"
+        path="Classes/Modulo/MediospDVW.fx"
         value="00000000000400040000000000000000"
     />
     <filter
         project=""
-        path="Classes/Modulo/MediospDVW.fx"
+        path="Classes/Modulo/MenuDVW.fx"
         value="00000000000400040000000000000000"
     />
     <filter
@@ -1670,8 +1745,8 @@
     />
     <filter
         project=""
-        path="Classes/ModuloCNegocios/DUDisponiblesFRM.fx"
-        value="00000000000400042000000000000000"
+        path="Classes/Modulo/GradoInteresDVW.fx"
+        value="00000000000400040000000000000000"
     />
     <filter
         project=""
@@ -1680,8 +1755,8 @@
     />
     <filter
         project=""
-        path="Classes/Modulo/GradoInteresDVW.fx"
-        value="00000000000400040000000000000000"
+        path="Classes/ModuloCNegocios/DUDisponiblesFRM.fx"
+        value="00000000000400042000000000000000"
     />
     <filter
         project=""
@@ -1707,6 +1782,11 @@
         project=""
         path="Classes/Modulo/RepProspectosFRM.fx"
         value="40000000000400042000000000000000"
+    />
+    <filter
+        project=""
+        path="Classes/ModuloCNegocios/ObrasFRM.fx"
+        value="00000000000400040000000000000000"
     />
     <filter
         project=""
@@ -1750,6 +1830,11 @@
     />
     <filter
         project=""
+        path="Classes/ModuloCNegocios/CPPantallaFRM.fx"
+        value="00000000000400040000000000000000"
+    />
+    <filter
+        project=""
         path="Classes/Modulo/ProspectosDVW.fx"
         value="00000000000400040040000000000000"
     />
@@ -1785,13 +1870,13 @@
     />
     <base-class
         project=""
-        path="classes/modulo/menufrm/view1/box11"
-        value="classes/modulo/menudvw.fx:box11"
+        path="classes/modulo/gradointeresfrm/view1/box111"
+        value="classes/modulo/gradointeresdvw.fx:box111"
     />
     <base-class
         project=""
-        path="classes/modulo/gradointeresfrm/view1/box111"
-        value="classes/modulo/gradointeresdvw.fx:box111"
+        path="classes/modulo/menufrm/view1/box11"
+        value="classes/modulo/menudvw.fx:box11"
     />
     <base-class
         project=""
@@ -1805,8 +1890,8 @@
     />
     <base-class
         project=""
-        path="classes/modulo/vendedoresfrm/view1/box"
-        value="classes/modulo/vendedoresdvw.fx:box"
+        path="classes/modulo/loginfrm/view1"
+        value="classes/modulo/logindvw.fx"
     />
     <base-class
         project=""
@@ -1815,8 +1900,8 @@
     />
     <base-class
         project=""
-        path="classes/modulo/loginfrm/view1"
-        value="classes/modulo/logindvw.fx"
+        path="classes/modulo/vendedoresfrm/view1/box"
+        value="classes/modulo/vendedoresdvw.fx:box"
     />
     <base-class
         project=""
@@ -1925,13 +2010,13 @@
     />
     <base-class
         project=""
-        path="classes/modulo/mediospfrm/view1"
-        value="classes/modulo/mediospdvw.fx"
+        path="classes/modulo/repprospectosfrm/view1/box11"
+        value="classes/modulo/repprospectosdvw.fx:box11"
     />
     <base-class
         project=""
-        path="classes/modulo/repprospectosfrm/view1/box11"
-        value="classes/modulo/repprospectosdvw.fx:box11"
+        path="classes/modulo/mediospfrm/view1"
+        value="classes/modulo/mediospdvw.fx"
     />
     <base-class
         project=""
@@ -1945,13 +2030,13 @@
     />
     <base-class
         project=""
-        path="classes/modulo/corredoresfrm/view1/cajaarribacorredores"
-        value="classes/modulo/corredoresdvw.fx:cajaarribacorredores"
+        path="classes/modulo/vendedoresfrm/view1/box11"
+        value="classes/modulo/vendedoresdvw.fx:box11"
     />
     <base-class
         project=""
-        path="classes/modulo/vendedoresfrm/view1/box11"
-        value="classes/modulo/vendedoresdvw.fx:box11"
+        path="classes/modulo/corredoresfrm/view1/cajaarribacorredores"
+        value="classes/modulo/corredoresdvw.fx:cajaarribacorredores"
     />
     <base-class
         project=""
@@ -1965,8 +2050,8 @@
     />
     <base-class
         project=""
-        path="classes/modulo/loginfrm/view1/box111"
-        value="classes/modulo/logindvw.fx:box111"
+        path="classes/modulo/vendedoresfrm/view1/box111"
+        value="classes/modulo/vendedoresdvw.fx:box111"
     />
     <base-class
         project=""
@@ -1975,8 +2060,8 @@
     />
     <base-class
         project=""
-        path="classes/modulo/vendedoresfrm/view1/box111"
-        value="classes/modulo/vendedoresdvw.fx:box111"
+        path="classes/modulo/loginfrm/view1/box111"
+        value="classes/modulo/logindvw.fx:box111"
     />
     <base-class
         project=""

@@ -68,14 +68,6 @@
     <url-pattern>/Modulo.LoginFRM</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>webTierEntryPoint</servlet-name>
-    <url-pattern>/Modulo.DUDisponiblesFRM</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>webTierEntryPoint</servlet-name>
-    <url-pattern>/ModuloCNegocios.DUDisponiblesFRM</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
     <servlet-name>ajspHandler</servlet-name>
     <url-pattern>/UnifyNXJ.jsp</url-pattern>
   </servlet-mapping>
