@@ -17,19 +17,19 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
 	widget.addAttribute("localized","true");
 	widget.addAttribute("menu","default");
+	widget.addAttribute("footer","none");
 	widget.addAttribute("header","default");
 	widget.setClass("form");
 	widget.addAttribute("displaywidth","1227");
-	widget.addStyle("background-color","#999999");
 	widget.addAttribute("stylesheets","default.css");
-	widget.addAttribute("title","RegistroProspectos");
 	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displayheight","1493");
 	widget.addAttribute("fieldheight","1493");
 	widget.addAttribute("fieldwidth","1227");
+	widget.addAttribute("title","RegistroProspectos");
+	widget.addStyle("background-color","#999999");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -60,9 +60,9 @@ private void setAttrFor_view1__20(Widget widget)
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776395-labeltitle","Genero");
 	widget.addAttribute("desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656-labeltitle","DatosBasicos");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776855-labeltitle","Comodesearialadistribuciondesuhogar");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776705-labeltitle","Hacompradoconnosotrosantes");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776675-labeltitle","Ocupacion");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777296-labeltitle","TelefonoFijo");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777146-labeltitle","Comoseenterodenuestroproyecto");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368626980605-options","De Inmediato=A;En 3 Meses=B;En 6 Meses=C;Masde6Meses=D");

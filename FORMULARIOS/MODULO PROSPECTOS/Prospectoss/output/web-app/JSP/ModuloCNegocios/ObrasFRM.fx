@@ -60,7 +60,7 @@
         field_weight = "99"
         key = "cajagrandeObrasFRM:PUBLIC_xob_obras:RepeatingArea1."
         kind = "repeating_area"
-        list_columns = "cajagrandeObrasFRM:PUBLIC_xob_obras:xob_proyecto.0:105;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_obra.105:72;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_nombre.177:180"
+        list_columns = "cajagrandeObrasFRM:PUBLIC_xob_obras:xob_proyecto.0:105;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_obra.105:72;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_nombre.177:191"
         occurrences = "10"
         row_class = "ROW"
         selected_row_class = "selected_row"

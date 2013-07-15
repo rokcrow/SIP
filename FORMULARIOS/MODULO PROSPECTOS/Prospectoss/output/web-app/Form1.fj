@@ -1,0 +1,22 @@
+FORM Form1
+{
+    TAB SET tabset1
+    {
+
+        DATA VIEW view1 extends Modulo.ProspectosDVW
+        {
+        
+        }
+
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

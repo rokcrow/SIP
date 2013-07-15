@@ -5,8 +5,8 @@
       timestamp="0"
       ctimestamp="0"
       scversion=""
-      component-chooser-selection=""
-      component-chooser-expanded=""
+      component-chooser-selection="Modulo\ProspectosDVW"
+      component-chooser-expanded="[Components, Libraries, standard];[Components, Foundation];[Components, Libraries];[Components];[Components, ModuloCNegocios];[Components, Modulo]"
  >
 
     <security
@@ -592,13 +592,6 @@
           base-class=""
           tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;LoginFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
-          target-type="0"
-          description=""
-          default-label="Modulo.LoginFRM"
-          add_to_menu="true"
-          override-entry-point-name="false"
-          expose-as-portlet="false"
-          hide-entry-point="false"
          >
     </file>
 
@@ -917,30 +910,6 @@
     </file>
 
     <file
-         path="Classes/Modulo/DUDisponiblesFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1373467469254"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip=""
-          language="jbiz"
-          target-type="0"
-          description=""
-          default-label="Modulo.DUDisponiblesFRM"
-          add_to_menu="true"
-          override-entry-point-name="false"
-          expose-as-portlet="false"
-          hide-entry-point="false"
-         >
-    </file>
-
-    <file
          path="Classes/ModuloCNegocios/DUDisponiblesFRM.fx"
           type="form"
           state="4"
@@ -986,7 +955,48 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Obras&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;ObrasFRM&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Classes/Form1.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1373904880352"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+          target-type="0"
+          description=""
+          default-label="Form1"
+          add_to_menu="true"
+          override-entry-point-name="false"
+          expose-as-portlet="false"
+          hide-entry-point="false"
+         >
+    </file>
+
+    <file
+         path="Classes/ModuloCNegocios/RBoletinesFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1373914428605"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;RBoletinesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>

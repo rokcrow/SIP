@@ -17,17 +17,17 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
 	widget.addAttribute("localized","true");
+	widget.addAttribute("footer","none");
 	widget.setClass("form");
 	widget.addAttribute("displaywidth","1198");
-	widget.addStyle("background-color","#999999");
 	widget.addAttribute("stylesheets","");
-	widget.addAttribute("title","ReportesProspectos");
 	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displayheight","413");
 	widget.addAttribute("fieldheight","413");
 	widget.addAttribute("fieldwidth","1198");
+	widget.addAttribute("title","ReportesProspectos");
+	widget.addStyle("background-color","#999999");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
