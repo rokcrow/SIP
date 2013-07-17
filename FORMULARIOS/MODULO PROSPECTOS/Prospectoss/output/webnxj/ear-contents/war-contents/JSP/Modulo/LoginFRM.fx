@@ -6,7 +6,7 @@
     connection = "Connection1"
     field_order = ""
     footer = "none"
-    form_height = "600"
+    form_height = "475"
     form_width = "1201"
     foundation_type = "Classes/Foundation/Form"
     header = "none"

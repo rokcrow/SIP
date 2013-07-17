@@ -9,71 +9,74 @@ public class
 
 public RBoletinesFRM_nxjLayoutAttr()
 {
-this.isLocalized = false;
+this.isLocalized = true;
 setAttrFor_this(this);
-DivPanelWidget div_box1__10 = new DivPanelWidget();
-dodiv_box1__10(div_box1__10);
+DivPanelWidget div_cajagrandeRBoletines__10 = new DivPanelWidget();
+dodiv_cajagrandeRBoletines__10(div_cajagrandeRBoletines__10);
 }
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.setClass("form");
-	widget.addAttribute("displaywidth","1089");
-	widget.addAttribute("stylesheets","");
+	widget.addAttribute("footer","none");
+	widget.addAttribute("localized","true");
+	widget.addAttribute("displaywidth","1199");
 	widget.addAttribute("name","NXJForm");
-	widget.addAttribute("displayheight","1032");
-	widget.addAttribute("fieldheight","1038");
-	widget.addAttribute("fieldwidth","1199");
+	widget.addAttribute("stylesheets","");
 	widget.addStyle("background-color","#999999");
+	widget.addAttribute("displayheight","1167");
+	widget.addAttribute("fieldheight","1167");
+	widget.addAttribute("auto_fill","false");
+	widget.addAttribute("fieldwidth","1199");
+	widget.setClass("form");
 }
 
-private void setAttrFor_div_box1__10(Widget widget)
+private void setAttrFor_div_cajagrandeRBoletines__10(Widget widget)
 {
 	widget.addStyle("left","190px");
 	widget.addStyle("top","30px");
 	widget.addStyle("width","1004px");
-	widget.addStyle("height","1003px");
+	widget.addStyle("height","1132px");
 }
 
-private void setAttrFor_box1__20(Widget widget)
+private void setAttrFor_cajagrandeRBoletines__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.setClass("box");
+	widget.addAttribute("id","cajagrandeRBoletines.");
 	widget.addAttribute("displaywidth","1004");
 	widget.addAttribute("displayleft","190");
-	widget.addAttribute("displaytop","30");
-	widget.addAttribute("displayheight","1003");
-	widget.addAttribute("fieldheight","1003");
-	widget.addAttribute("fieldwidth","1004");
-	widget.addAttribute("id","box1.");
-	widget.addStyle("border-color","transparent");
 	widget.addStyle("background-color","#cccccc");
+	widget.addAttribute("displaytop","30");
+	widget.addAttribute("displayheight","1132");
+	widget.addAttribute("fieldheight","1132");
+	widget.addAttribute("fieldwidth","1004");
+	widget.setClass("box");
+	widget.addStyle("border-color","transparent");
 	widget.addStyle("overflow","hidden");
 }
 
 private void setAttrFor_div_box11__30(Widget widget)
 {
 	widget.addStyle("left","4px");
-	widget.addStyle("top","953px");
+	widget.addStyle("top","1082px");
 	widget.addStyle("width","996px");
 	widget.addStyle("height","50px");
 }
 
 private void setAttrFor_box11__40(Widget widget)
 {
-	widget.addAttribute("field_weight","3999");
-	widget.setClass("box");
+	widget.addAttribute("field_weight","4099");
+	widget.addAttribute("id","cajagrandeRBoletines:box11.");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addAttribute("displaytop","953");
+	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("displaytop","1082");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addAttribute("id","box1:box11.");
+	widget.setClass("box");
 	widget.addStyle("border-color","transparent");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -87,11 +90,11 @@ private void setAttrFor_div_image1__50(Widget widget)
 
 private void setAttrFor_image1__60(Widget widget)
 {
-	widget.addAttribute("id","box1:box11:image1.");
-	widget.addAttribute("displayheight","46");
-	widget.addAttribute("displaytop","2");
+	widget.addAttribute("id","cajagrandeRBoletines:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
+	widget.addAttribute("displaytop","2");
+	widget.addAttribute("displayheight","46");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -106,18 +109,18 @@ private void setAttrFor_div_box111__30(Widget widget)
 private void setAttrFor_box111__40(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.setClass("box");
+	widget.addAttribute("id","cajagrandeRBoletines:box111.");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addAttribute("id","box1:box111.");
+	widget.setClass("box");
 	widget.addStyle("border-color","transparent");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -131,14 +134,14 @@ private void setAttrFor_div_label1__50(Widget widget)
 
 private void setAttrFor_label1__60(Widget widget)
 {
-	widget.addAttribute("labeltitle","REGISTRO DE BOLETINES");
+	widget.addAttribute("id","cajagrandeRBoletines:box111:label1.");
+	widget.addAttribute("labeltitle","REGISTRODEBOLETINES");
 	widget.addAttribute("displaywidth","522");
 	widget.addAttribute("displayleft","241");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","522");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:box111:label1.");
 	widget.addAttribute("instancewidth","522");
 	widget.addStyle("overflow","hidden");
 }
@@ -153,8 +156,8 @@ private void setAttrFor_div_label211__50(Widget widget)
 
 private void setAttrFor_label211__60(Widget widget)
 {
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","top: 1024");
+	widget.addAttribute("id","cajagrandeRBoletines:box111:label211.");
+	widget.addAttribute("labeltitle","top1024");
 	widget.addAttribute("displaywidth","55");
 	widget.addAttribute("displayleft","778");
 	widget.addAttribute("displaytop","65");
@@ -162,7 +165,7 @@ private void setAttrFor_label211__60(Widget widget)
 	widget.addAttribute("fieldheight","14");
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:box111:label211.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -177,18 +180,18 @@ private void setAttrFor_div_textfield1__50(Widget widget)
 private void setAttrFor_textfield1__60(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("immediate","true");
 	widget.addAttribute("size","32");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:box111:textfield1.");
 	widget.addAttribute("displayleft","16");
-	widget.addAttribute("name","box1:box111:textfield1.");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -203,18 +206,18 @@ private void setAttrFor_div_textfield11__50(Widget widget)
 private void setAttrFor_textfield11__60(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
-	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("immediate","true");
 	widget.addAttribute("size","18");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:box111:textfield11.");
 	widget.addAttribute("displayleft","800");
-	widget.addAttribute("name","box1:box111:textfield11.");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -228,20 +231,20 @@ private void setAttrFor_div_date1__30(Widget widget)
 
 private void setAttrFor_date1__40(Widget widget)
 {
-	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("field_weight","199");
-	widget.setClass("date_picker");
+	widget.addAttribute("field_type","TEXT");
+	widget.addAttribute("id","cajagrandeRBoletines:date1.");
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","153");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","box1:date1.");
+	widget.setClass("date_picker");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['box1:date1.'] = new NXJDatePicker('box1:date1.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', '', '', '');");
+	widget.addAttribute("jsinit","window.namesToComponents['cajagrandeRBoletines:date1.'] = new NXJDatePicker('cajagrandeRBoletines:date1.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","165");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -260,18 +263,18 @@ private void setAttrFor_date11__40(Widget widget)
 {
 	widget.addAttribute("field_weight","1699");
 	widget.addAttribute("field_type","TEXT");
-	widget.setClass("date_picker");
+	widget.addAttribute("id","cajagrandeRBoletines:date11.");
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","472");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","box1:date11.");
+	widget.setClass("date_picker");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['box1:date11.'] = new NXJDatePicker('box1:date11.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', '', '', '');");
+	widget.addAttribute("jsinit","window.namesToComponents['cajagrandeRBoletines:date11.'] = new NXJDatePicker('cajagrandeRBoletines:date11.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","165");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -290,18 +293,18 @@ private void setAttrFor_date111__40(Widget widget)
 {
 	widget.addAttribute("field_weight","1799");
 	widget.addAttribute("field_type","TEXT");
-	widget.setClass("date_picker");
+	widget.addAttribute("id","cajagrandeRBoletines:date111.");
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","306");
 	widget.addAttribute("displaytop","472");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","box1:date111.");
+	widget.setClass("date_picker");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['box1:date111.'] = new NXJDatePicker('box1:date111.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', '', '', '');");
+	widget.addAttribute("jsinit","window.namesToComponents['cajagrandeRBoletines:date111.'] = new NXJDatePicker('cajagrandeRBoletines:date111.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","165");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -318,20 +321,20 @@ private void setAttrFor_div_date2__30(Widget widget)
 
 private void setAttrFor_date2__40(Widget widget)
 {
-	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("field_weight","1899");
-	widget.setClass("date_picker");
+	widget.addAttribute("field_type","TEXT");
+	widget.addAttribute("id","cajagrandeRBoletines:date2.");
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","511");
 	widget.addAttribute("displaytop","472");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","box1:date2.");
+	widget.setClass("date_picker");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['box1:date2.'] = new NXJDatePicker('box1:date2.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', '', '', '');");
+	widget.addAttribute("jsinit","window.namesToComponents['cajagrandeRBoletines:date2.'] = new NXJDatePicker('cajagrandeRBoletines:date2.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","165");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -350,18 +353,18 @@ private void setAttrFor_date21__40(Widget widget)
 {
 	widget.addAttribute("field_weight","1999");
 	widget.addAttribute("field_type","TEXT");
-	widget.setClass("date_picker");
+	widget.addAttribute("id","cajagrandeRBoletines:date21.");
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","729");
 	widget.addAttribute("displaytop","472");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","box1:date21.");
+	widget.setClass("date_picker");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['box1:date21.'] = new NXJDatePicker('box1:date21.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', '', '', '');");
+	widget.addAttribute("jsinit","window.namesToComponents['cajagrandeRBoletines:date21.'] = new NXJDatePicker('cajagrandeRBoletines:date21.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","165");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -378,20 +381,20 @@ private void setAttrFor_div_label11__30(Widget widget)
 
 private void setAttrFor_label11__40(Widget widget)
 {
-	widget.addStyle("font-size","14");
-	widget.setClass("label");
-	widget.addStyle("font-family","Verdana");
-	widget.addAttribute("labeltitle","Registro de Boletines");
-	widget.addAttribute("displaywidth","165");
-	widget.addStyle("font-weight","bold");
-	widget.addAttribute("displayleft","19");
-	widget.addStyle("color","Black");
-	widget.addAttribute("displaytop","96");
-	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
+	widget.addAttribute("displayleft","19");
+	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldwidth","165");
+	widget.addStyle("color","Black");
+	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("id","cajagrandeRBoletines:label11.");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label11.");
+	widget.addStyle("font-weight","bold");
+	widget.setClass("label");
+	widget.addAttribute("displaywidth","165");
+	widget.addAttribute("labeltitle","RegistrodeBoletines");
+	widget.addStyle("font-size","14");
+	widget.addAttribute("displaytop","96");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -406,8 +409,8 @@ private void setAttrFor_div_label3__30(Widget widget)
 private void setAttrFor_label3__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Grabación");
+	widget.addAttribute("id","cajagrandeRBoletines:label3.");
+	widget.addAttribute("labeltitle","Grabacion");
 	widget.addAttribute("displaywidth","63");
 	widget.addAttribute("displayleft","112");
 	widget.addAttribute("displaytop","127");
@@ -415,7 +418,7 @@ private void setAttrFor_label3__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","63");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -430,7 +433,7 @@ private void setAttrFor_div_label31__30(Widget widget)
 private void setAttrFor_label31__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label31.");
 	widget.addAttribute("labeltitle","Obra");
 	widget.addAttribute("displaywidth","31");
 	widget.addAttribute("displayleft","110");
@@ -439,7 +442,7 @@ private void setAttrFor_label31__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","31");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -454,7 +457,7 @@ private void setAttrFor_div_label311__30(Widget widget)
 private void setAttrFor_label311__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label311.");
 	widget.addAttribute("labeltitle","Manzana");
 	widget.addAttribute("displaywidth","57");
 	widget.addAttribute("displayleft","306");
@@ -463,7 +466,7 @@ private void setAttrFor_label311__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","57");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label311.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -478,7 +481,7 @@ private void setAttrFor_div_label3111__30(Widget widget)
 private void setAttrFor_label3111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label3111.");
 	widget.addAttribute("labeltitle","Unidad");
 	widget.addAttribute("displaywidth","44");
 	widget.addAttribute("displayleft","511");
@@ -487,7 +490,7 @@ private void setAttrFor_label3111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","44");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -502,7 +505,7 @@ private void setAttrFor_div_label31111__30(Widget widget)
 private void setAttrFor_label31111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label31111.");
 	widget.addAttribute("labeltitle","Prospecto");
 	widget.addAttribute("displaywidth","63");
 	widget.addAttribute("displayleft","729");
@@ -511,7 +514,7 @@ private void setAttrFor_label31111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","63");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -526,8 +529,8 @@ private void setAttrFor_div_label311111__30(Widget widget)
 private void setAttrFor_label311111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Valor Unidad ");
+	widget.addAttribute("id","cajagrandeRBoletines:label311111.");
+	widget.addAttribute("labeltitle","ValorUnidad");
 	widget.addAttribute("displaywidth","84");
 	widget.addAttribute("displayleft","511");
 	widget.addAttribute("displaytop","239");
@@ -535,7 +538,7 @@ private void setAttrFor_label311111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","84");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label311111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -550,8 +553,8 @@ private void setAttrFor_div_label3111111__30(Widget widget)
 private void setAttrFor_label3111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Valor Garaje ");
+	widget.addAttribute("id","cajagrandeRBoletines:label3111111.");
+	widget.addAttribute("labeltitle","ValorGaraje");
 	widget.addAttribute("displaywidth","82");
 	widget.addAttribute("displayleft","729");
 	widget.addAttribute("displaytop","239");
@@ -559,7 +562,7 @@ private void setAttrFor_label3111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","82");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -574,8 +577,8 @@ private void setAttrFor_div_label31111111__30(Widget widget)
 private void setAttrFor_label31111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Descuentos ");
+	widget.addAttribute("id","cajagrandeRBoletines:label31111111.");
+	widget.addAttribute("labeltitle","Descuentos");
 	widget.addAttribute("displaywidth","78");
 	widget.addAttribute("displayleft","511");
 	widget.addAttribute("displaytop","295");
@@ -583,7 +586,7 @@ private void setAttrFor_label31111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","78");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -598,8 +601,8 @@ private void setAttrFor_div_label311111111__30(Widget widget)
 private void setAttrFor_label311111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Derecho Uso ");
+	widget.addAttribute("id","cajagrandeRBoletines:label311111111.");
+	widget.addAttribute("labeltitle","DerechoUso");
 	widget.addAttribute("displaywidth","84");
 	widget.addAttribute("displayleft","729");
 	widget.addAttribute("displaytop","351");
@@ -607,7 +610,7 @@ private void setAttrFor_label311111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","84");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label311111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -622,8 +625,8 @@ private void setAttrFor_div_label31111112__30(Widget widget)
 private void setAttrFor_label31111112__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Valor Venta ");
+	widget.addAttribute("id","cajagrandeRBoletines:label31111112.");
+	widget.addAttribute("labeltitle","ValorVenta");
 	widget.addAttribute("displaywidth","77");
 	widget.addAttribute("displayleft","729");
 	widget.addAttribute("displaytop","295");
@@ -631,7 +634,7 @@ private void setAttrFor_label31111112__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","77");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31111112.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -646,8 +649,8 @@ private void setAttrFor_div_label312__30(Widget widget)
 private void setAttrFor_label312__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Área Lote");
+	widget.addAttribute("id","cajagrandeRBoletines:label312.");
+	widget.addAttribute("labeltitle","AreaLote");
 	widget.addAttribute("displaywidth","61");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","239");
@@ -655,7 +658,7 @@ private void setAttrFor_label312__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","61");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label312.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -670,8 +673,8 @@ private void setAttrFor_div_label3121__30(Widget widget)
 private void setAttrFor_label3121__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Área Construida");
+	widget.addAttribute("id","cajagrandeRBoletines:label3121.");
+	widget.addAttribute("labeltitle","areaConstruida");
 	widget.addAttribute("displaywidth","102");
 	widget.addAttribute("displayleft","306");
 	widget.addAttribute("displaytop","239");
@@ -679,7 +682,7 @@ private void setAttrFor_label3121__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","102");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3121.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -694,7 +697,7 @@ private void setAttrFor_div_label313__30(Widget widget)
 private void setAttrFor_label313__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label313.");
 	widget.addAttribute("labeltitle","Gastos");
 	widget.addAttribute("displaywidth","44");
 	widget.addAttribute("displayleft","110");
@@ -703,7 +706,7 @@ private void setAttrFor_label313__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","44");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -718,7 +721,7 @@ private void setAttrFor_div_label3131__30(Widget widget)
 private void setAttrFor_label3131__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131.");
 	widget.addAttribute("labeltitle","Inmueble");
 	widget.addAttribute("displaywidth","59");
 	widget.addAttribute("displayleft","306");
@@ -727,7 +730,7 @@ private void setAttrFor_label3131__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","59");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3131.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -742,8 +745,8 @@ private void setAttrFor_div_label31311__30(Widget widget)
 private void setAttrFor_label31311__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Forma Pago");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311.");
+	widget.addAttribute("labeltitle","FormaPago");
 	widget.addAttribute("displaywidth","75");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","351");
@@ -751,7 +754,7 @@ private void setAttrFor_label31311__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","75");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31311.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -766,8 +769,8 @@ private void setAttrFor_div_label313111__30(Widget widget)
 private void setAttrFor_label313111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Separación");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111.");
+	widget.addAttribute("labeltitle","Separacion");
 	widget.addAttribute("displaywidth","70");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","446");
@@ -775,7 +778,7 @@ private void setAttrFor_label313111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","70");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -790,7 +793,7 @@ private void setAttrFor_div_label3131111__30(Widget widget)
 private void setAttrFor_label3131111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111.");
 	widget.addAttribute("labeltitle","Escritura");
 	widget.addAttribute("displaywidth","55");
 	widget.addAttribute("displayleft","306");
@@ -799,7 +802,7 @@ private void setAttrFor_label3131111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3131111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -814,8 +817,8 @@ private void setAttrFor_div_label313111111__30(Widget widget)
 private void setAttrFor_label313111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Entrega Pactada");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111.");
+	widget.addAttribute("labeltitle","EntregaPactada");
 	widget.addAttribute("displaywidth","105");
 	widget.addAttribute("displayleft","511");
 	widget.addAttribute("displaytop","446");
@@ -823,7 +826,7 @@ private void setAttrFor_label313111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","105");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -838,8 +841,8 @@ private void setAttrFor_div_label3131111111__30(Widget widget)
 private void setAttrFor_label3131111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Entrega Programada");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111.");
+	widget.addAttribute("labeltitle","EntregaProgramada");
 	widget.addAttribute("displaywidth","131");
 	widget.addAttribute("displayleft","729");
 	widget.addAttribute("displaytop","446");
@@ -847,7 +850,7 @@ private void setAttrFor_label3131111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","131");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3131111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -862,8 +865,8 @@ private void setAttrFor_div_label31311111111__30(Widget widget)
 private void setAttrFor_label31311111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Vendedor(a)");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111.");
+	widget.addAttribute("labeltitle","Vendedora");
 	widget.addAttribute("displaywidth","79");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","502");
@@ -871,7 +874,7 @@ private void setAttrFor_label31311111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","79");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31311111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -886,7 +889,7 @@ private void setAttrFor_div_label313111111111__30(Widget widget)
 private void setAttrFor_label313111111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111111.");
 	widget.addAttribute("labeltitle","Banco");
 	widget.addAttribute("displaywidth","38");
 	widget.addAttribute("displayleft","414");
@@ -895,7 +898,7 @@ private void setAttrFor_label313111111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","38");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313111111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -910,8 +913,8 @@ private void setAttrFor_div_label3131111111111__30(Widget widget)
 private void setAttrFor_label3131111111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","No Trámite");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111111.");
+	widget.addAttribute("labeltitle","NoTramite");
 	widget.addAttribute("displaywidth","68");
 	widget.addAttribute("displayleft","732");
 	widget.addAttribute("displaytop","502");
@@ -919,7 +922,7 @@ private void setAttrFor_label3131111111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","68");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3131111111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -934,7 +937,7 @@ private void setAttrFor_div_label313111111112__30(Widget widget)
 private void setAttrFor_label313111111112__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112.");
 	widget.addAttribute("labeltitle","Corredor");
 	widget.addAttribute("displaywidth","56");
 	widget.addAttribute("displayleft","110");
@@ -943,7 +946,7 @@ private void setAttrFor_label313111111112__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","56");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313111111112.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -958,7 +961,7 @@ private void setAttrFor_div_label3131111111121__30(Widget widget)
 private void setAttrFor_label3131111111121__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121.");
 	widget.addAttribute("labeltitle","Tramitadora");
 	widget.addAttribute("displaywidth","76");
 	widget.addAttribute("displayleft","566");
@@ -967,7 +970,7 @@ private void setAttrFor_label3131111111121__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","76");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3131111111121.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -982,7 +985,7 @@ private void setAttrFor_div_label31311111111211__30(Widget widget)
 private void setAttrFor_label31311111111211__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211.");
 	widget.addAttribute("labeltitle","Finiquito");
 	widget.addAttribute("displaywidth","53");
 	widget.addAttribute("displayleft","465");
@@ -991,7 +994,7 @@ private void setAttrFor_label31311111111211__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","53");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31311111111211.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1006,8 +1009,8 @@ private void setAttrFor_div_label313111111112111__30(Widget widget)
 private void setAttrFor_label313111111112111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Dirección");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111.");
+	widget.addAttribute("labeltitle","Direccion");
 	widget.addAttribute("displaywidth","56");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","614");
@@ -1015,7 +1018,7 @@ private void setAttrFor_label313111111112111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","56");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313111111112111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1030,7 +1033,7 @@ private void setAttrFor_div_label3131111111121111__30(Widget widget)
 private void setAttrFor_label3131111111121111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121111.");
 	widget.addAttribute("labeltitle","Ciudad");
 	widget.addAttribute("displaywidth","44");
 	widget.addAttribute("displayleft","465");
@@ -1039,7 +1042,7 @@ private void setAttrFor_label3131111111121111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","44");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3131111111121111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1054,8 +1057,8 @@ private void setAttrFor_div_label31311111111211111__30(Widget widget)
 private void setAttrFor_label31311111111211111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Teléfono Oficina");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211111.");
+	widget.addAttribute("labeltitle","TelefonoOficina");
 	widget.addAttribute("displaywidth","100");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","670");
@@ -1063,7 +1066,7 @@ private void setAttrFor_label31311111111211111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","100");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31311111111211111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1078,8 +1081,8 @@ private void setAttrFor_div_label313111111112111111__30(Widget widget)
 private void setAttrFor_label313111111112111111__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Teléfono Residencial");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111111.");
+	widget.addAttribute("labeltitle","TelefonoResidencial");
 	widget.addAttribute("displaywidth","128");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","726");
@@ -1087,7 +1090,7 @@ private void setAttrFor_label313111111112111111__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","128");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313111111112111111.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1102,8 +1105,8 @@ private void setAttrFor_div_label3131111111121112__30(Widget widget)
 private void setAttrFor_label3131111111121112__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Email 1");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121112.");
+	widget.addAttribute("labeltitle","Email1");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","465");
 	widget.addAttribute("displaytop","670");
@@ -1111,7 +1114,7 @@ private void setAttrFor_label3131111111121112__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","45");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label3131111111121112.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1126,8 +1129,8 @@ private void setAttrFor_div_label31311111111211121__30(Widget widget)
 private void setAttrFor_label31311111111211121__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Email 2");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211121.");
+	widget.addAttribute("labeltitle","Email2");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","465");
 	widget.addAttribute("displaytop","726");
@@ -1135,7 +1138,7 @@ private void setAttrFor_label31311111111211121__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","45");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label31311111111211121.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1150,8 +1153,8 @@ private void setAttrFor_div_label313111111112111211__30(Widget widget)
 private void setAttrFor_label313111111112111211__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Observación");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111211.");
+	widget.addAttribute("labeltitle","Observacion");
 	widget.addAttribute("displaywidth","78");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","782");
@@ -1159,7 +1162,7 @@ private void setAttrFor_label313111111112111211__40(Widget widget)
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","78");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","box1:label313111111112111211.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1176,14 +1179,14 @@ private void setAttrFor_select1__40(Widget widget)
 	widget.addAttribute("field_weight","1099");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("size","1");
-	widget.setClass("dropdown_list");
 	widget.addAttribute("displaywidth","115");
+	widget.addAttribute("name","cajagrandeRBoletines:select1.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:select1.");
 	widget.addAttribute("displaytop","321");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","115");
+	widget.setClass("dropdown_list");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1200,14 +1203,14 @@ private void setAttrFor_select11__40(Widget widget)
 	widget.addAttribute("field_weight","1199");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("size","1");
-	widget.setClass("dropdown_list");
 	widget.addAttribute("displaywidth","115");
+	widget.addAttribute("name","cajagrandeRBoletines:select11.");
 	widget.addAttribute("displayleft","306");
-	widget.addAttribute("name","box1:select11.");
 	widget.addAttribute("displaytop","321");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","115");
+	widget.setClass("dropdown_list");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1224,14 +1227,14 @@ private void setAttrFor_select111__40(Widget widget)
 	widget.addAttribute("field_weight","1499");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("size","1");
-	widget.setClass("dropdown_list");
 	widget.addAttribute("displaywidth","115");
+	widget.addAttribute("name","cajagrandeRBoletines:select111.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:select111.");
 	widget.addAttribute("displaytop","377");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","115");
+	widget.setClass("dropdown_list");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1248,14 +1251,14 @@ private void setAttrFor_select2__40(Widget widget)
 	widget.addAttribute("field_weight","2899");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("size","1");
-	widget.setClass("dropdown_list");
 	widget.addAttribute("displaywidth","42");
+	widget.addAttribute("name","cajagrandeRBoletines:select2.");
 	widget.addAttribute("displayleft","465");
-	widget.addAttribute("name","box1:select2.");
 	widget.addAttribute("displaytop","584");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","42");
+	widget.setClass("dropdown_list");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1269,18 +1272,18 @@ private void setAttrFor_div_select21__30(Widget widget)
 
 private void setAttrFor_select21__40(Widget widget)
 {
-	widget.addAttribute("field_weight","2599");
 	widget.addStyle("visibility","visible");
+	widget.addAttribute("field_weight","2599");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("size","1");
-	widget.setClass("dropdown_list");
 	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("name","cajagrandeRBoletines:select21.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:select21.");
 	widget.addAttribute("displaytop","584");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","45");
+	widget.setClass("dropdown_list");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1297,14 +1300,83 @@ private void setAttrFor_select211__40(Widget widget)
 	widget.addAttribute("field_weight","2999");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("size","1");
-	widget.setClass("dropdown_list");
 	widget.addAttribute("displaywidth","42");
+	widget.addAttribute("name","cajagrandeRBoletines:select211.");
 	widget.addAttribute("displayleft","566");
-	widget.addAttribute("name","box1:select211.");
 	widget.addAttribute("displaytop","584");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","42");
+	widget.setClass("dropdown_list");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_tabset1__30(Widget widget)
+{
+	widget.addStyle("left","376px");
+	widget.addStyle("top","928px");
+	widget.addStyle("width","262px");
+	widget.addStyle("height","85px");
+}
+
+private void setAttrFor_tabset1__40(Widget widget)
+{
+	widget.addAttribute("field_weight","3999");
+	widget.addAttribute("elevator","true");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1.");
+	widget.addStyle("font-family","Calibri");
+	widget.addAttribute("displaywidth","262");
+	widget.addAttribute("displayleft","376");
+	widget.addAttribute("displaytop","928");
+	widget.addAttribute("displayheight","85");
+	widget.addAttribute("fieldheight","85");
+	widget.addAttribute("fieldwidth","262");
+	widget.setClass("tab_set");
+	widget.addStyle("overflow","hidden");
+	widget.suppressAttribute("name");
+	widget.addAttribute("jsinclude","NXJNotebook.js");
+	widget.addAttribute("jslinks","winxp.css");
+}
+
+private void setAttrFor_tab1__50(Widget widget)
+{
+	widget.addAttribute("notebook_title","IdentificaciondeCompradores");
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab1.");
+	widget.addAttribute("displaywidth","250");
+	widget.addStyle("background-color","transparent");
+	widget.addAttribute("displayheight","250");
+	widget.addAttribute("fieldheight","-1");
+	widget.addAttribute("fieldwidth","260");
+	widget.setClass("selected_tab");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_tab2__50(Widget widget)
+{
+	widget.addAttribute("notebook_title","InformacionAdicionaldeClientes");
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab2.");
+	widget.addAttribute("displaywidth","250");
+	widget.addStyle("background-color","transparent");
+	widget.addAttribute("displayheight","250");
+	widget.addAttribute("fieldheight","-1");
+	widget.addAttribute("fieldwidth","260");
+	widget.setClass("selected_tab");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_tab3__50(Widget widget)
+{
+	widget.addAttribute("notebook_title","CompromisosdelNegocio");
+	widget.addAttribute("field_weight","299");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab3.");
+	widget.addAttribute("displaywidth","250");
+	widget.addStyle("background-color","transparent");
+	widget.addAttribute("displayheight","250");
+	widget.addAttribute("fieldheight","-1");
+	widget.addAttribute("fieldwidth","260");
+	widget.setClass("selected_tab");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1320,20 +1392,20 @@ private void setAttrFor_textarea1__40(Widget widget)
 {
 	widget.addAttribute("field_weight","3899");
 	widget.addAttribute("field_type","TEXTAREA");
-	widget.setClass("textarea");
 	widget.addAttribute("displaywidth","783");
+	widget.addAttribute("name","cajagrandeRBoletines:textarea1.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:textarea1.");
-	widget.addAttribute("displaytop","808");
+	widget.addAttribute("rows","4");
 	widget.addAttribute("cols","71");
+	widget.addAttribute("displaytop","808");
 	widget.addAttribute("displayheight","76");
 	widget.addAttribute("fieldheight","76");
 	widget.addAttribute("fieldwidth","783");
-	widget.addAttribute("rows","4");
+	widget.setClass("textarea");
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_textfield12__30(Widget widget)
+private void setAttrFor_div_vmu_obra__30(Widget widget)
 {
 	widget.addStyle("left","110px");
 	widget.addStyle("top","209px");
@@ -1341,20 +1413,20 @@ private void setAttrFor_div_textfield12__30(Widget widget)
 	widget.addStyle("height","22px");
 }
 
-private void setAttrFor_textfield12__40(Widget widget)
+private void setAttrFor_vmu_obra__40(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","7");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:vmu_obra.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:textfield12.");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1371,15 +1443,15 @@ private void setAttrFor_textfield121__40(Widget widget)
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","7");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield121.");
 	widget.addAttribute("displayleft","306");
-	widget.addAttribute("name","box1:textfield121.");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1396,15 +1468,15 @@ private void setAttrFor_textfield122__40(Widget widget)
 	widget.addAttribute("field_weight","499");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","7");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield122.");
 	widget.addAttribute("displayleft","511");
-	widget.addAttribute("name","box1:textfield122.");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1421,15 +1493,15 @@ private void setAttrFor_textfield123__40(Widget widget)
 	widget.addAttribute("field_weight","599");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","13");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","80");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield123.");
 	widget.addAttribute("displayleft","729");
-	widget.addAttribute("name","box1:textfield123.");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","80");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1446,15 +1518,15 @@ private void setAttrFor_textfield1231__40(Widget widget)
 	widget.addAttribute("field_weight","699");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","13");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","80");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield1231.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:textfield1231.");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","80");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1471,15 +1543,15 @@ private void setAttrFor_textfield12311__40(Widget widget)
 	widget.addAttribute("field_weight","799");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","13");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","80");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12311.");
 	widget.addAttribute("displayleft","306");
-	widget.addAttribute("name","box1:textfield12311.");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","80");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1496,15 +1568,15 @@ private void setAttrFor_textfield123111__40(Widget widget)
 	widget.addAttribute("field_weight","899");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","25");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","150");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield123111.");
 	widget.addAttribute("displayleft","511");
-	widget.addAttribute("name","box1:textfield123111.");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","150");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1521,15 +1593,15 @@ private void setAttrFor_textfield1231111__40(Widget widget)
 	widget.addAttribute("field_weight","999");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","25");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","150");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield1231111.");
 	widget.addAttribute("displayleft","729");
-	widget.addAttribute("name","box1:textfield1231111.");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","150");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1546,15 +1618,15 @@ private void setAttrFor_textfield12311111__40(Widget widget)
 	widget.addAttribute("field_weight","1299");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","25");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","150");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12311111.");
 	widget.addAttribute("displayleft","511");
-	widget.addAttribute("name","box1:textfield12311111.");
 	widget.addAttribute("displaytop","320");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","150");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1571,15 +1643,15 @@ private void setAttrFor_textfield123111111__40(Widget widget)
 	widget.addAttribute("field_weight","1599");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","25");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","150");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield123111111.");
 	widget.addAttribute("displayleft","729");
-	widget.addAttribute("name","box1:textfield123111111.");
 	widget.addAttribute("displaytop","376");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","150");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1596,15 +1668,15 @@ private void setAttrFor_textfield12311112__40(Widget widget)
 	widget.addAttribute("field_weight","1399");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","25");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","150");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12311112.");
 	widget.addAttribute("displayleft","729");
-	widget.addAttribute("name","box1:textfield12311112.");
 	widget.addAttribute("displaytop","320");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","150");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1621,15 +1693,15 @@ private void setAttrFor_textfield12312__40(Widget widget)
 	widget.addAttribute("field_weight","3499");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","15");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","90");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12312.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:textfield12312.");
 	widget.addAttribute("displaytop","696");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","90");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1646,15 +1718,15 @@ private void setAttrFor_textfield123121__40(Widget widget)
 	widget.addAttribute("field_weight","3699");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","15");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","90");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield123121.");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:textfield123121.");
 	widget.addAttribute("displaytop","752");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","90");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1671,15 +1743,15 @@ private void setAttrFor_textfield1231211__40(Widget widget)
 	widget.addAttribute("field_weight","3599");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","40");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","240");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield1231211.");
 	widget.addAttribute("displayleft","465");
-	widget.addAttribute("name","box1:textfield1231211.");
 	widget.addAttribute("displaytop","696");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","240");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1696,15 +1768,15 @@ private void setAttrFor_textfield12312111__40(Widget widget)
 	widget.addAttribute("field_weight","3799");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","40");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","240");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12312111.");
 	widget.addAttribute("displayleft","465");
-	widget.addAttribute("name","box1:textfield12312111.");
 	widget.addAttribute("displaytop","752");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","240");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1721,15 +1793,15 @@ private void setAttrFor_textfield12312112__40(Widget widget)
 	widget.addAttribute("field_weight","3399");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","40");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","240");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12312112.");
 	widget.addAttribute("displayleft","465");
-	widget.addAttribute("name","box1:textfield12312112.");
 	widget.addAttribute("displaytop","639");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","240");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1746,15 +1818,15 @@ private void setAttrFor_textfield123122__40(Widget widget)
 	widget.addAttribute("field_weight","2699");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","7");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield123122.");
 	widget.addAttribute("displayleft","160");
-	widget.addAttribute("name","box1:textfield123122.");
 	widget.addAttribute("displaytop","583");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1771,15 +1843,15 @@ private void setAttrFor_textfield1231221__40(Widget widget)
 	widget.addAttribute("field_weight","3099");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","7");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield1231221.");
 	widget.addAttribute("displayleft","613");
-	widget.addAttribute("name","box1:textfield1231221.");
 	widget.addAttribute("displaytop","583");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1796,15 +1868,15 @@ private void setAttrFor_textfield1231222__40(Widget widget)
 	widget.addAttribute("field_weight","2799");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","39");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","235");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield1231222.");
 	widget.addAttribute("displayleft","211");
-	widget.addAttribute("name","box1:textfield1231222.");
 	widget.addAttribute("displaytop","583");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","235");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1821,15 +1893,15 @@ private void setAttrFor_textfield12312221__40(Widget widget)
 	widget.addAttribute("field_weight","3199");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","39");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","235");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12312221.");
 	widget.addAttribute("displayleft","663");
-	widget.addAttribute("name","box1:textfield12312221.");
 	widget.addAttribute("displaytop","583");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","235");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1846,15 +1918,15 @@ private void setAttrFor_textfield12312222__40(Widget widget)
 	widget.addAttribute("field_weight","2399");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","39");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","235");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield12312222.");
 	widget.addAttribute("displayleft","465");
-	widget.addAttribute("name","box1:textfield12312222.");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","235");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1871,15 +1943,15 @@ private void setAttrFor_textfield1231223__40(Widget widget)
 	widget.addAttribute("field_weight","2299");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","7");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield1231223.");
 	widget.addAttribute("displayleft","414");
-	widget.addAttribute("name","box1:textfield1231223.");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","45");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1896,15 +1968,15 @@ private void setAttrFor_textfield1232__40(Widget widget)
 	widget.addAttribute("field_weight","2499");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","13");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","80");
-	widget.addAttribute("type","text");
+	widget.addAttribute("name","cajagrandeRBoletines:textfield1232.");
 	widget.addAttribute("displayleft","732");
-	widget.addAttribute("name","box1:textfield1232.");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","80");
+	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1920,17 +1992,17 @@ private void setAttrFor_vpp_direccion__40(Widget widget)
 {
 	widget.addAttribute("field_weight","3299");
 	widget.addAttribute("field_type","SELECT");
-	widget.addStyle("font-size","12");
+	widget.addAttribute("fieldheight","21");
+	widget.addAttribute("displayleft","110");
 	widget.addAttribute("size","1");
+	widget.addAttribute("displayheight","21");
+	widget.addAttribute("fieldwidth","240");
+	widget.addStyle("color","Black");
+	widget.addAttribute("name","cajagrandeRBoletines:vpp_direccion.");
 	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","240");
-	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:vpp_direccion.");
-	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","640");
-	widget.addAttribute("displayheight","21");
-	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("fieldwidth","240");
+	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1945,20 +2017,20 @@ private void setAttrFor_div_vpp_vendedor__30(Widget widget)
 private void setAttrFor_vpp_vendedor__40(Widget widget)
 {
 	widget.addAttribute("field_weight","2099");
-	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_type","text");
-	widget.addStyle("font-size","12");
+	widget.addAttribute("immediate","true");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","110");
 	widget.addAttribute("size","7");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.addStyle("color","Black");
+	widget.addAttribute("name","cajagrandeRBoletines:vpp_vendedor.");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displayleft","110");
-	widget.addAttribute("name","box1:vpp_vendedor.");
-	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","528");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","45");
+	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1974,31 +2046,31 @@ private void setAttrFor_vve_nombre__40(Widget widget)
 {
 	widget.addAttribute("field_weight","2199");
 	widget.addAttribute("field_type","text");
-	widget.addStyle("font-size","12");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("displayleft","160");
 	widget.addAttribute("size","39");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldwidth","235");
+	widget.addStyle("color","Black");
+	widget.addAttribute("name","cajagrandeRBoletines:vve_nombre.");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","235");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displayleft","160");
-	widget.addAttribute("name","box1:vve_nombre.");
-	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","528");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","235");
+	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
-private void dodiv_box1__10(Widget div_box1__10)
+private void dodiv_cajagrandeRBoletines__10(Widget div_cajagrandeRBoletines__10)
     {
-    ((ContainerWidget)this).addComponent(div_box1__10,"div_box1_");
-    setAttrFor_div_box1__10(div_box1__10);
-    FieldSetWidget box1__20 = new FieldSetWidget();
+    ((ContainerWidget)this).addComponent(div_cajagrandeRBoletines__10,"div_cajagrandeRBoletines_");
+    setAttrFor_div_cajagrandeRBoletines__10(div_cajagrandeRBoletines__10);
+    FieldSetWidget cajagrandeRBoletines__20 = new FieldSetWidget();
         {
-        ((ContainerWidget)div_box1__10).addComponent(box1__20,"box1_");
-        setAttrFor_box1__20(box1__20);
+        ((ContainerWidget)div_cajagrandeRBoletines__10).addComponent(cajagrandeRBoletines__20,"cajagrandeRBoletines_");
+        setAttrFor_cajagrandeRBoletines__20(cajagrandeRBoletines__20);
         DivPanelWidget div_box11__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_box11__30,"div_box11_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_box11__30,"div_box11_");
             setAttrFor_div_box11__30(div_box11__30);
             FieldSetWidget box11__40 = new FieldSetWidget();
                 {
@@ -2018,7 +2090,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_box111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_box111__30,"div_box111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_box111__30,"div_box111_");
             setAttrFor_div_box111__30(div_box111__30);
             FieldSetWidget box111__40 = new FieldSetWidget();
                 {
@@ -2068,7 +2140,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_date1__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_date1__30,"div_date1_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_date1__30,"div_date1_");
             setAttrFor_div_date1__30(div_date1__30);
             DatePickerWidget date1__40 = new DatePickerWidget();
                 {
@@ -2078,7 +2150,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_date11__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_date11__30,"div_date11_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_date11__30,"div_date11_");
             setAttrFor_div_date11__30(div_date11__30);
             DatePickerWidget date11__40 = new DatePickerWidget();
                 {
@@ -2088,7 +2160,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_date111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_date111__30,"div_date111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_date111__30,"div_date111_");
             setAttrFor_div_date111__30(div_date111__30);
             DatePickerWidget date111__40 = new DatePickerWidget();
                 {
@@ -2098,7 +2170,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_date2__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_date2__30,"div_date2_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_date2__30,"div_date2_");
             setAttrFor_div_date2__30(div_date2__30);
             DatePickerWidget date2__40 = new DatePickerWidget();
                 {
@@ -2108,7 +2180,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_date21__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_date21__30,"div_date21_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_date21__30,"div_date21_");
             setAttrFor_div_date21__30(div_date21__30);
             DatePickerWidget date21__40 = new DatePickerWidget();
                 {
@@ -2118,7 +2190,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label11__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label11__30,"div_label11_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label11__30,"div_label11_");
             setAttrFor_div_label11__30(div_label11__30);
             LabelWidget label11__40 = new LabelWidget();
                 {
@@ -2128,7 +2200,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3__30,"div_label3_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3__30,"div_label3_");
             setAttrFor_div_label3__30(div_label3__30);
             LabelWidget label3__40 = new LabelWidget();
                 {
@@ -2138,7 +2210,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31__30,"div_label31_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31__30,"div_label31_");
             setAttrFor_div_label31__30(div_label31__30);
             LabelWidget label31__40 = new LabelWidget();
                 {
@@ -2148,7 +2220,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label311__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label311__30,"div_label311_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label311__30,"div_label311_");
             setAttrFor_div_label311__30(div_label311__30);
             LabelWidget label311__40 = new LabelWidget();
                 {
@@ -2158,7 +2230,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3111__30,"div_label3111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3111__30,"div_label3111_");
             setAttrFor_div_label3111__30(div_label3111__30);
             LabelWidget label3111__40 = new LabelWidget();
                 {
@@ -2168,7 +2240,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31111__30,"div_label31111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31111__30,"div_label31111_");
             setAttrFor_div_label31111__30(div_label31111__30);
             LabelWidget label31111__40 = new LabelWidget();
                 {
@@ -2178,7 +2250,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label311111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label311111__30,"div_label311111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label311111__30,"div_label311111_");
             setAttrFor_div_label311111__30(div_label311111__30);
             LabelWidget label311111__40 = new LabelWidget();
                 {
@@ -2188,7 +2260,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3111111__30,"div_label3111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3111111__30,"div_label3111111_");
             setAttrFor_div_label3111111__30(div_label3111111__30);
             LabelWidget label3111111__40 = new LabelWidget();
                 {
@@ -2198,7 +2270,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31111111__30,"div_label31111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31111111__30,"div_label31111111_");
             setAttrFor_div_label31111111__30(div_label31111111__30);
             LabelWidget label31111111__40 = new LabelWidget();
                 {
@@ -2208,7 +2280,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label311111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label311111111__30,"div_label311111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label311111111__30,"div_label311111111_");
             setAttrFor_div_label311111111__30(div_label311111111__30);
             LabelWidget label311111111__40 = new LabelWidget();
                 {
@@ -2218,7 +2290,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31111112__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31111112__30,"div_label31111112_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31111112__30,"div_label31111112_");
             setAttrFor_div_label31111112__30(div_label31111112__30);
             LabelWidget label31111112__40 = new LabelWidget();
                 {
@@ -2228,7 +2300,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label312__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label312__30,"div_label312_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label312__30,"div_label312_");
             setAttrFor_div_label312__30(div_label312__30);
             LabelWidget label312__40 = new LabelWidget();
                 {
@@ -2238,7 +2310,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3121__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3121__30,"div_label3121_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3121__30,"div_label3121_");
             setAttrFor_div_label3121__30(div_label3121__30);
             LabelWidget label3121__40 = new LabelWidget();
                 {
@@ -2248,7 +2320,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313__30,"div_label313_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313__30,"div_label313_");
             setAttrFor_div_label313__30(div_label313__30);
             LabelWidget label313__40 = new LabelWidget();
                 {
@@ -2258,7 +2330,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3131__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3131__30,"div_label3131_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3131__30,"div_label3131_");
             setAttrFor_div_label3131__30(div_label3131__30);
             LabelWidget label3131__40 = new LabelWidget();
                 {
@@ -2268,7 +2340,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31311__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31311__30,"div_label31311_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31311__30,"div_label31311_");
             setAttrFor_div_label31311__30(div_label31311__30);
             LabelWidget label31311__40 = new LabelWidget();
                 {
@@ -2278,7 +2350,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313111__30,"div_label313111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313111__30,"div_label313111_");
             setAttrFor_div_label313111__30(div_label313111__30);
             LabelWidget label313111__40 = new LabelWidget();
                 {
@@ -2288,7 +2360,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3131111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3131111__30,"div_label3131111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3131111__30,"div_label3131111_");
             setAttrFor_div_label3131111__30(div_label3131111__30);
             LabelWidget label3131111__40 = new LabelWidget();
                 {
@@ -2298,7 +2370,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313111111__30,"div_label313111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313111111__30,"div_label313111111_");
             setAttrFor_div_label313111111__30(div_label313111111__30);
             LabelWidget label313111111__40 = new LabelWidget();
                 {
@@ -2308,7 +2380,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3131111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3131111111__30,"div_label3131111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3131111111__30,"div_label3131111111_");
             setAttrFor_div_label3131111111__30(div_label3131111111__30);
             LabelWidget label3131111111__40 = new LabelWidget();
                 {
@@ -2318,7 +2390,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31311111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31311111111__30,"div_label31311111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31311111111__30,"div_label31311111111_");
             setAttrFor_div_label31311111111__30(div_label31311111111__30);
             LabelWidget label31311111111__40 = new LabelWidget();
                 {
@@ -2328,7 +2400,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313111111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313111111111__30,"div_label313111111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313111111111__30,"div_label313111111111_");
             setAttrFor_div_label313111111111__30(div_label313111111111__30);
             LabelWidget label313111111111__40 = new LabelWidget();
                 {
@@ -2338,7 +2410,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3131111111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3131111111111__30,"div_label3131111111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3131111111111__30,"div_label3131111111111_");
             setAttrFor_div_label3131111111111__30(div_label3131111111111__30);
             LabelWidget label3131111111111__40 = new LabelWidget();
                 {
@@ -2348,7 +2420,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313111111112__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313111111112__30,"div_label313111111112_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313111111112__30,"div_label313111111112_");
             setAttrFor_div_label313111111112__30(div_label313111111112__30);
             LabelWidget label313111111112__40 = new LabelWidget();
                 {
@@ -2358,7 +2430,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3131111111121__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3131111111121__30,"div_label3131111111121_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3131111111121__30,"div_label3131111111121_");
             setAttrFor_div_label3131111111121__30(div_label3131111111121__30);
             LabelWidget label3131111111121__40 = new LabelWidget();
                 {
@@ -2368,7 +2440,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31311111111211__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31311111111211__30,"div_label31311111111211_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31311111111211__30,"div_label31311111111211_");
             setAttrFor_div_label31311111111211__30(div_label31311111111211__30);
             LabelWidget label31311111111211__40 = new LabelWidget();
                 {
@@ -2378,7 +2450,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313111111112111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313111111112111__30,"div_label313111111112111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313111111112111__30,"div_label313111111112111_");
             setAttrFor_div_label313111111112111__30(div_label313111111112111__30);
             LabelWidget label313111111112111__40 = new LabelWidget();
                 {
@@ -2388,7 +2460,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3131111111121111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3131111111121111__30,"div_label3131111111121111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3131111111121111__30,"div_label3131111111121111_");
             setAttrFor_div_label3131111111121111__30(div_label3131111111121111__30);
             LabelWidget label3131111111121111__40 = new LabelWidget();
                 {
@@ -2398,7 +2470,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31311111111211111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31311111111211111__30,"div_label31311111111211111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31311111111211111__30,"div_label31311111111211111_");
             setAttrFor_div_label31311111111211111__30(div_label31311111111211111__30);
             LabelWidget label31311111111211111__40 = new LabelWidget();
                 {
@@ -2408,7 +2480,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313111111112111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313111111112111111__30,"div_label313111111112111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313111111112111111__30,"div_label313111111112111111_");
             setAttrFor_div_label313111111112111111__30(div_label313111111112111111__30);
             LabelWidget label313111111112111111__40 = new LabelWidget();
                 {
@@ -2418,7 +2490,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label3131111111121112__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label3131111111121112__30,"div_label3131111111121112_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label3131111111121112__30,"div_label3131111111121112_");
             setAttrFor_div_label3131111111121112__30(div_label3131111111121112__30);
             LabelWidget label3131111111121112__40 = new LabelWidget();
                 {
@@ -2428,7 +2500,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label31311111111211121__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label31311111111211121__30,"div_label31311111111211121_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label31311111111211121__30,"div_label31311111111211121_");
             setAttrFor_div_label31311111111211121__30(div_label31311111111211121__30);
             LabelWidget label31311111111211121__40 = new LabelWidget();
                 {
@@ -2438,7 +2510,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_label313111111112111211__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_label313111111112111211__30,"div_label313111111112111211_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_label313111111112111211__30,"div_label313111111112111211_");
             setAttrFor_div_label313111111112111211__30(div_label313111111112111211__30);
             LabelWidget label313111111112111211__40 = new LabelWidget();
                 {
@@ -2448,7 +2520,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_select1__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_select1__30,"div_select1_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_select1__30,"div_select1_");
             setAttrFor_div_select1__30(div_select1__30);
             ListWidget select1__40 = new ListWidget();
                 {
@@ -2458,7 +2530,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_select11__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_select11__30,"div_select11_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_select11__30,"div_select11_");
             setAttrFor_div_select11__30(div_select11__30);
             ListWidget select11__40 = new ListWidget();
                 {
@@ -2468,7 +2540,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_select111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_select111__30,"div_select111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_select111__30,"div_select111_");
             setAttrFor_div_select111__30(div_select111__30);
             ListWidget select111__40 = new ListWidget();
                 {
@@ -2478,7 +2550,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_select2__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_select2__30,"div_select2_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_select2__30,"div_select2_");
             setAttrFor_div_select2__30(div_select2__30);
             ListWidget select2__40 = new ListWidget();
                 {
@@ -2488,7 +2560,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_select21__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_select21__30,"div_select21_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_select21__30,"div_select21_");
             setAttrFor_div_select21__30(div_select21__30);
             ListWidget select21__40 = new ListWidget();
                 {
@@ -2498,7 +2570,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_select211__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_select211__30,"div_select211_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_select211__30,"div_select211_");
             setAttrFor_div_select211__30(div_select211__30);
             ListWidget select211__40 = new ListWidget();
                 {
@@ -2506,9 +2578,34 @@ private void dodiv_box1__10(Widget div_box1__10)
                 setAttrFor_select211__40(select211__40);
                 }
             }
+        DivPanelWidget div_tabset1__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_tabset1__30,"div_tabset1_");
+            setAttrFor_div_tabset1__30(div_tabset1__30);
+            TabSetWidget tabset1__40 = new TabSetWidget();
+                {
+                ((ContainerWidget)div_tabset1__30).addComponent(tabset1__40,"tabset1_");
+                setAttrFor_tabset1__40(tabset1__40);
+                TabWidget tab1__50 = new TabWidget();
+                    {
+                    ((ContainerWidget)tabset1__40).addComponent(tab1__50,"tab1_");
+                    setAttrFor_tab1__50(tab1__50);
+                    }
+                TabWidget tab2__50 = new TabWidget();
+                    {
+                    ((ContainerWidget)tabset1__40).addComponent(tab2__50,"tab2_");
+                    setAttrFor_tab2__50(tab2__50);
+                    }
+                TabWidget tab3__50 = new TabWidget();
+                    {
+                    ((ContainerWidget)tabset1__40).addComponent(tab3__50,"tab3_");
+                    setAttrFor_tab3__50(tab3__50);
+                    }
+                }
+            }
         DivPanelWidget div_textarea1__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textarea1__30,"div_textarea1_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textarea1__30,"div_textarea1_");
             setAttrFor_div_textarea1__30(div_textarea1__30);
             TextAreaWidget textarea1__40 = new TextAreaWidget();
                 {
@@ -2516,19 +2613,19 @@ private void dodiv_box1__10(Widget div_box1__10)
                 setAttrFor_textarea1__40(textarea1__40);
                 }
             }
-        DivPanelWidget div_textfield12__30 = new DivPanelWidget();
+        DivPanelWidget div_vmu_obra__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12__30,"div_textfield12_");
-            setAttrFor_div_textfield12__30(div_textfield12__30);
-            TextWidget textfield12__40 = new TextWidget();
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vmu_obra__30,"div_vmu_obra_");
+            setAttrFor_div_vmu_obra__30(div_vmu_obra__30);
+            TextWidget vmu_obra__40 = new TextWidget();
                 {
-                ((ContainerWidget)div_textfield12__30).addComponent(textfield12__40,"textfield12_");
-                setAttrFor_textfield12__40(textfield12__40);
+                ((ContainerWidget)div_vmu_obra__30).addComponent(vmu_obra__40,"vmu_obra_");
+                setAttrFor_vmu_obra__40(vmu_obra__40);
                 }
             }
         DivPanelWidget div_textfield121__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield121__30,"div_textfield121_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield121__30,"div_textfield121_");
             setAttrFor_div_textfield121__30(div_textfield121__30);
             TextWidget textfield121__40 = new TextWidget();
                 {
@@ -2538,7 +2635,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield122__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield122__30,"div_textfield122_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield122__30,"div_textfield122_");
             setAttrFor_div_textfield122__30(div_textfield122__30);
             TextWidget textfield122__40 = new TextWidget();
                 {
@@ -2548,7 +2645,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield123__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield123__30,"div_textfield123_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield123__30,"div_textfield123_");
             setAttrFor_div_textfield123__30(div_textfield123__30);
             TextWidget textfield123__40 = new TextWidget();
                 {
@@ -2558,7 +2655,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield1231__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield1231__30,"div_textfield1231_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield1231__30,"div_textfield1231_");
             setAttrFor_div_textfield1231__30(div_textfield1231__30);
             TextWidget textfield1231__40 = new TextWidget();
                 {
@@ -2568,7 +2665,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12311__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12311__30,"div_textfield12311_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12311__30,"div_textfield12311_");
             setAttrFor_div_textfield12311__30(div_textfield12311__30);
             TextWidget textfield12311__40 = new TextWidget();
                 {
@@ -2578,7 +2675,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield123111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield123111__30,"div_textfield123111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield123111__30,"div_textfield123111_");
             setAttrFor_div_textfield123111__30(div_textfield123111__30);
             TextWidget textfield123111__40 = new TextWidget();
                 {
@@ -2588,7 +2685,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield1231111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield1231111__30,"div_textfield1231111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield1231111__30,"div_textfield1231111_");
             setAttrFor_div_textfield1231111__30(div_textfield1231111__30);
             TextWidget textfield1231111__40 = new TextWidget();
                 {
@@ -2598,7 +2695,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12311111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12311111__30,"div_textfield12311111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12311111__30,"div_textfield12311111_");
             setAttrFor_div_textfield12311111__30(div_textfield12311111__30);
             TextWidget textfield12311111__40 = new TextWidget();
                 {
@@ -2608,7 +2705,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield123111111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield123111111__30,"div_textfield123111111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield123111111__30,"div_textfield123111111_");
             setAttrFor_div_textfield123111111__30(div_textfield123111111__30);
             TextWidget textfield123111111__40 = new TextWidget();
                 {
@@ -2618,7 +2715,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12311112__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12311112__30,"div_textfield12311112_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12311112__30,"div_textfield12311112_");
             setAttrFor_div_textfield12311112__30(div_textfield12311112__30);
             TextWidget textfield12311112__40 = new TextWidget();
                 {
@@ -2628,7 +2725,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12312__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12312__30,"div_textfield12312_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12312__30,"div_textfield12312_");
             setAttrFor_div_textfield12312__30(div_textfield12312__30);
             TextWidget textfield12312__40 = new TextWidget();
                 {
@@ -2638,7 +2735,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield123121__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield123121__30,"div_textfield123121_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield123121__30,"div_textfield123121_");
             setAttrFor_div_textfield123121__30(div_textfield123121__30);
             TextWidget textfield123121__40 = new TextWidget();
                 {
@@ -2648,7 +2745,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield1231211__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield1231211__30,"div_textfield1231211_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield1231211__30,"div_textfield1231211_");
             setAttrFor_div_textfield1231211__30(div_textfield1231211__30);
             TextWidget textfield1231211__40 = new TextWidget();
                 {
@@ -2658,7 +2755,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12312111__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12312111__30,"div_textfield12312111_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12312111__30,"div_textfield12312111_");
             setAttrFor_div_textfield12312111__30(div_textfield12312111__30);
             TextWidget textfield12312111__40 = new TextWidget();
                 {
@@ -2668,7 +2765,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12312112__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12312112__30,"div_textfield12312112_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12312112__30,"div_textfield12312112_");
             setAttrFor_div_textfield12312112__30(div_textfield12312112__30);
             TextWidget textfield12312112__40 = new TextWidget();
                 {
@@ -2678,7 +2775,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield123122__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield123122__30,"div_textfield123122_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield123122__30,"div_textfield123122_");
             setAttrFor_div_textfield123122__30(div_textfield123122__30);
             TextWidget textfield123122__40 = new TextWidget();
                 {
@@ -2688,7 +2785,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield1231221__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield1231221__30,"div_textfield1231221_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield1231221__30,"div_textfield1231221_");
             setAttrFor_div_textfield1231221__30(div_textfield1231221__30);
             TextWidget textfield1231221__40 = new TextWidget();
                 {
@@ -2698,7 +2795,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield1231222__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield1231222__30,"div_textfield1231222_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield1231222__30,"div_textfield1231222_");
             setAttrFor_div_textfield1231222__30(div_textfield1231222__30);
             TextWidget textfield1231222__40 = new TextWidget();
                 {
@@ -2708,7 +2805,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12312221__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12312221__30,"div_textfield12312221_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12312221__30,"div_textfield12312221_");
             setAttrFor_div_textfield12312221__30(div_textfield12312221__30);
             TextWidget textfield12312221__40 = new TextWidget();
                 {
@@ -2718,7 +2815,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield12312222__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield12312222__30,"div_textfield12312222_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield12312222__30,"div_textfield12312222_");
             setAttrFor_div_textfield12312222__30(div_textfield12312222__30);
             TextWidget textfield12312222__40 = new TextWidget();
                 {
@@ -2728,7 +2825,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield1231223__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield1231223__30,"div_textfield1231223_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield1231223__30,"div_textfield1231223_");
             setAttrFor_div_textfield1231223__30(div_textfield1231223__30);
             TextWidget textfield1231223__40 = new TextWidget();
                 {
@@ -2738,7 +2835,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_textfield1232__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_textfield1232__30,"div_textfield1232_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_textfield1232__30,"div_textfield1232_");
             setAttrFor_div_textfield1232__30(div_textfield1232__30);
             TextWidget textfield1232__40 = new TextWidget();
                 {
@@ -2748,7 +2845,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_vpp_direccion__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_vpp_direccion__30,"div_vpp_direccion_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vpp_direccion__30,"div_vpp_direccion_");
             setAttrFor_div_vpp_direccion__30(div_vpp_direccion__30);
             ListWidget vpp_direccion__40 = new ListWidget();
                 {
@@ -2758,7 +2855,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_vpp_vendedor__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_vpp_vendedor__30,"div_vpp_vendedor_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vpp_vendedor__30,"div_vpp_vendedor_");
             setAttrFor_div_vpp_vendedor__30(div_vpp_vendedor__30);
             TextWidget vpp_vendedor__40 = new TextWidget();
                 {
@@ -2768,7 +2865,7 @@ private void dodiv_box1__10(Widget div_box1__10)
             }
         DivPanelWidget div_vve_nombre__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)box1__20).addComponent(div_vve_nombre__30,"div_vve_nombre_");
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vve_nombre__30,"div_vve_nombre_");
             setAttrFor_div_vve_nombre__30(div_vve_nombre__30);
             TextWidget vve_nombre__40 = new TextWidget();
                 {

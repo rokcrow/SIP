@@ -17,21 +17,21 @@ dodiv_cajagrandeLogin__10(div_cajagrandeLogin__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("localized","true");
 	widget.addAttribute("key_map","ENTER=DEFAULT_COMMAND;");
-	widget.addAttribute("menu","none");
-	widget.addAttribute("footer","none");
 	widget.addAttribute("header","none");
-	widget.addAttribute("fieldheight","600");
-	widget.addAttribute("displayheight","600");
-	widget.addAttribute("title","MLogin");
-	widget.addAttribute("fieldwidth","1201");
-	widget.addAttribute("name","NXJForm");
-	widget.addAttribute("stylesheets","");
-	widget.addAttribute("displaywidth","1201");
+	widget.addAttribute("footer","none");
+	widget.addAttribute("localized","true");
+	widget.addAttribute("menu","none");
+	widget.addAttribute("fieldheight","475");
 	widget.addStyle("background-color","#999999");
-	widget.addAttribute("defaultcommand","logincmd");
+	widget.addAttribute("displayheight","475");
+	widget.addAttribute("fieldwidth","1201");
+	widget.addAttribute("stylesheets","");
+	widget.addAttribute("name","NXJForm");
 	widget.setClass("form");
+	widget.addAttribute("displaywidth","1201");
+	widget.addAttribute("title","MLogin");
+	widget.addAttribute("defaultcommand","logincmd");
 }
 
 private void setAttrFor_div_cajagrandeLogin__10(Widget widget)
@@ -45,17 +45,17 @@ private void setAttrFor_div_cajagrandeLogin__10(Widget widget)
 private void setAttrFor_cajagrandeLogin__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.setClass("box");
+	widget.addAttribute("id","cajagrandeLogin.");
 	widget.addAttribute("displaywidth","1004");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","190");
+	widget.addStyle("background-color","#cccccc");
 	widget.addAttribute("displaytop","100");
 	widget.addAttribute("displayheight","363");
 	widget.addAttribute("fieldheight","363");
 	widget.addAttribute("fieldwidth","1004");
-	widget.addAttribute("id","cajagrandeLogin.");
+	widget.setClass("box");
 	widget.addStyle("border-color","transparent");
-	widget.addStyle("background-color","#cccccc");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -69,24 +69,24 @@ private void setAttrFor_div_button1__30(Widget widget)
 
 private void setAttrFor_button1__40(Widget widget)
 {
-	widget.addAttribute("command","logincmd");
 	widget.addAttribute("field_type","button");
-	widget.setClass("button");
+	widget.addAttribute("command","logincmd");
 	widget.addAttribute("displaywidth","206");
+	widget.addAttribute("title","IniciarSesion");
+	widget.addAttribute("name","cajagrandeLogin:button1.");
 	widget.addStyle("border-width","0");
-	widget.addStyle("font-weight","bold");
-	widget.addAttribute("type","button");
 	widget.addAttribute("displayleft","378");
 	widget.addStyle("border-style","None");
-	widget.addAttribute("name","cajagrandeLogin:button1.");
+	widget.addStyle("background-color","Red");
 	widget.addStyle("color","White");
-	widget.addAttribute("value","INICIARSESION");
 	widget.addAttribute("displaytop","243");
 	widget.addAttribute("displayheight","51");
 	widget.addAttribute("fieldheight","51");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("fieldwidth","206");
-	widget.addAttribute("title","IniciarSesion");
-	widget.addStyle("background-color","Red");
+	widget.addAttribute("value","INICIARSESION");
+	widget.setClass("button");
+	widget.addAttribute("type","button");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -101,18 +101,18 @@ private void setAttrFor_div_cajaabajoLogin__30(Widget widget)
 private void setAttrFor_cajaabajoLogin__40(Widget widget)
 {
 	widget.addAttribute("field_weight","499");
-	widget.setClass("box");
+	widget.addAttribute("id","cajagrandeLogin:cajaabajoLogin.");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaytop","312");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addAttribute("id","cajagrandeLogin:cajaabajoLogin.");
+	widget.setClass("box");
 	widget.addStyle("border-color","transparent");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -126,8 +126,8 @@ private void setAttrFor_div_image1__50(Widget widget)
 
 private void setAttrFor_image1__60(Widget widget)
 {
-	widget.addAttribute("id","cajagrandeLogin:cajaabajoLogin:image1.");
 	widget.addAttribute("displayheight","46");
+	widget.addAttribute("id","cajagrandeLogin:cajaabajoLogin:image1.");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
@@ -145,18 +145,18 @@ private void setAttrFor_div_cajaarribaLogin__30(Widget widget)
 private void setAttrFor_cajaarribaLogin__40(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
-	widget.setClass("box");
+	widget.addAttribute("id","cajagrandeLogin:cajaarribaLogin.");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addAttribute("id","cajagrandeLogin:cajaarribaLogin.");
+	widget.setClass("box");
 	widget.addStyle("border-color","transparent");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -170,6 +170,7 @@ private void setAttrFor_div_label1__50(Widget widget)
 
 private void setAttrFor_label1__60(Widget widget)
 {
+	widget.addAttribute("id","cajagrandeLogin:cajaarribaLogin:label1.");
 	widget.addAttribute("labeltitle","SISTEMADEINFORMACIONDEPROVIVIENDA");
 	widget.addAttribute("displaywidth","522");
 	widget.addAttribute("displayleft","241");
@@ -177,7 +178,6 @@ private void setAttrFor_label1__60(Widget widget)
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","522");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeLogin:cajaarribaLogin:label1.");
 	widget.addAttribute("instancewidth","522");
 	widget.addStyle("overflow","hidden");
 }
@@ -193,18 +193,18 @@ private void setAttrFor_div_label1__30(Widget widget)
 private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
+	widget.addAttribute("id","cajagrandeLogin:label1.");
 	widget.addStyle("font-family","Verdana");
-	widget.setClass("label");
 	widget.addAttribute("labeltitle","Grupo");
 	widget.addAttribute("displaywidth","38");
-	widget.addStyle("font-weight","normal");
 	widget.addAttribute("displayleft","674");
 	widget.addAttribute("displaytop","131");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-weight","normal");
 	widget.addAttribute("fieldwidth","38");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeLogin:label1.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -219,19 +219,19 @@ private void setAttrFor_div_label11__30(Widget widget)
 private void setAttrFor_label11__40(Widget widget)
 {
 	widget.addStyle("font-size","14");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeLogin:label11.");
 	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("labeltitle","IniciarSesion");
 	widget.addAttribute("displaywidth","106");
-	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displayleft","7");
 	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","100");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("fieldwidth","106");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeLogin:label11.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -246,19 +246,19 @@ private void setAttrFor_div_label3__30(Widget widget)
 private void setAttrFor_label3__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeLogin:label3.");
 	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("labeltitle","Usuario");
 	widget.addAttribute("displaywidth","48");
-	widget.addStyle("font-weight","normal");
 	widget.addAttribute("displayleft","451");
 	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","131");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-weight","normal");
 	widget.addAttribute("fieldwidth","48");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeLogin:label3.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -273,19 +273,19 @@ private void setAttrFor_div_label31__30(Widget widget)
 private void setAttrFor_label31__40(Widget widget)
 {
 	widget.addStyle("font-size","12");
-	widget.setClass("label");
+	widget.addAttribute("id","cajagrandeLogin:label31.");
 	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("labeltitle","Password");
 	widget.addAttribute("displaywidth","86");
-	widget.addStyle("font-weight","normal");
 	widget.addAttribute("displayleft","448");
 	widget.addStyle("color","Black");
 	widget.addAttribute("displaytop","187");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
+	widget.addStyle("font-weight","normal");
 	widget.addAttribute("fieldwidth","86");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeLogin:label31.");
+	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -300,20 +300,20 @@ private void setAttrFor_div_xpr_grupo__30(Widget widget)
 private void setAttrFor_xpr_grupo__40(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
-	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("immediate","true");
 	widget.addAttribute("size","20");
 	widget.addStyle("font-family","Verdana");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","122");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displayleft","674");
 	widget.addAttribute("name","cajagrandeLogin:xpr_grupo.");
+	widget.addAttribute("title","Grupoalquepertenece");
+	widget.addAttribute("displayleft","674");
 	widget.addAttribute("displaytop","157");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","122");
-	widget.addAttribute("title","Grupoalquepertenece");
+	widget.addAttribute("type","text");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -329,20 +329,20 @@ private void setAttrFor_xpr_password__40(Widget widget)
 {
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("password","true");
-	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("immediate","false");
 	widget.addAttribute("size","20");
 	widget.addStyle("font-family","Verdana");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","123");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displayleft","420");
 	widget.addAttribute("name","cajagrandeLogin:xpr_password.");
+	widget.addAttribute("title","IngresePassword");
+	widget.addAttribute("displayleft","420");
 	widget.addAttribute("displaytop","213");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","123");
-	widget.addAttribute("title","IngresePassword");
+	widget.addAttribute("type","text");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -357,20 +357,20 @@ private void setAttrFor_div_xpr_usuario__30(Widget widget)
 private void setAttrFor_xpr_usuario__40(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
-	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("immediate","true");
 	widget.addAttribute("size","20");
 	widget.addStyle("font-family","Verdana");
-	widget.setClass("textfield");
 	widget.addAttribute("displaywidth","122");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displayleft","420");
 	widget.addAttribute("name","cajagrandeLogin:xpr_usuario.");
+	widget.addAttribute("title","IngreseUsuario");
+	widget.addAttribute("displayleft","420");
 	widget.addAttribute("displaytop","157");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","122");
-	widget.addAttribute("title","IngreseUsuario");
+	widget.addAttribute("type","text");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_cajagrandeLogin__10(Widget div_cajagrandeLogin__10)

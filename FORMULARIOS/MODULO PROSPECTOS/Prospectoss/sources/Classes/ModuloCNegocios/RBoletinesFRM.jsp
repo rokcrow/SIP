@@ -6,18 +6,25 @@
 <body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
+        aud_on_entry="false"
+        auto_fill="false"
         binary_variables=""
         binding_type="connection"
-        bloom_filter="00000000000400040000000000000000"
+        bloom_filter="00000000000400042000000000000000"
         class="form"
         commands=""
         connection="Connection1"
-        displayheight="1032"
-        displaywidth="1089"
-        form_height="1038"
+        delete_allowed="true"
+        displayheight="1167"
+        displaywidth="1199"
+        field_order=""
+        footer="none"
+        form_height="1167"
         form_width="1199"
         foundation_type="Classes/Foundation/Form"
+        localized="true"
         name="NXJForm"
+        target_table="PUBLIC.vmu_maestro"
         uid_prefix="modulo_form1_1372953290702"
         view="form"
         style="background-color: #999999">
@@ -25,19 +32,19 @@
         <div
             binary_variables=""
             view="div"
-            style="position: absolute; top: 30px; left: 190px; width:1004px; height:1003px">
+            style="position: absolute; top: 30px; left: 190px; width:1004px; height:1132px">
 
             <fieldset
                 binary_variables=""
                 class="box"
                 commands=""
-                displayheight="1003"
+                displayheight="1132"
                 displayleft="190"
                 displaytop="30"
                 displaywidth="1004"
                 field_weight="99"
-                id="box1."
-                key="box1."
+                id="cajagrandeRBoletines."
+                key="cajagrandeRBoletines."
                 original_name="box1"
                 uid="modulo_form1_1372953290702_52616bbef1f0ecc2d07e723833b06f449c050852_1373896389087"
                 view="fieldset"
@@ -47,7 +54,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 953px; left: 4px; width:996px; height:50px">
+                    style="position: absolute; top: 1082px; left: 4px; width:996px; height:50px">
 
                     <fieldset
                         binary_variables=""
@@ -56,11 +63,11 @@
                         commands=""
                         displayheight="50"
                         displayleft="4"
-                        displaytop="953"
+                        displaytop="1082"
                         displaywidth="996"
-                        field_weight="3999"
-                        id="box1:box11."
-                        key="box1:box11."
+                        field_weight="4099"
+                        id="cajagrandeRBoletines:box11."
+                        key="cajagrandeRBoletines:box11."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369343805083"
@@ -83,8 +90,8 @@
                                 displaytop="2"
                                 displaywidth="164"
                                 foundation_type="Classes/Foundation/Image"
-                                id="box1:box11:image1."
-                                key="box1:box11:image1."
+                                id="cajagrandeRBoletines:box11:image1."
+                                key="cajagrandeRBoletines:box11:image1."
                                 kind="instance"
                                 original_name="image1"
                                 uid="itemsform_dataview1_1368038367945_c486553ba63e77316f04c86372ffc3ae6f0d73b1_1368040829176"
@@ -114,8 +121,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id="box1:box111."
-                        key="box1:box111."
+                        id="cajagrandeRBoletines:box111."
+                        key="cajagrandeRBoletines:box111."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -129,7 +136,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:258px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -139,12 +146,12 @@
                                 displaytop="14"
                                 displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
-                                id="box1:box111:label1."
+                                id="cajagrandeRBoletines:box111:label1."
                                 instancewidth="522"
-                                key="box1:box111:label1."
+                                key="cajagrandeRBoletines:box111:label1."
                                 kind="instance"
                                 labelalign="left"
-                                labeltitle="REGISTRO DE BOLETINES"
+                                labeltitle="REGISTRODEBOLETINES"
                                 original_name="label1"
                                 uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
                                 uid_to_name=""
@@ -168,15 +175,15 @@
                                 displayleft="778"
                                 displaytop="65"
                                 displaywidth="55"
-                                id="box1:box111:label211."
-                                key="box1:box111:label211."
+                                id="cajagrandeRBoletines:box111:label211."
+                                key="cajagrandeRBoletines:box111:label211."
                                 labelalign="left"
-                                labeltitle="top: 1024"
+                                labeltitle="top1024"
                                 original_name="label2"
                                 target_field=""
                                 uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
                                 view="label">
-                                <nobr>top: 1024</nobr>
+                                <nobr>top1024</nobr>
                             </label>
 
                         </div>
@@ -197,8 +204,8 @@
                                 field_weight="99"
                                 findable="false"
                                 immediate="true"
-                                key="box1:box111:textfield1."
-                                name="box1:box111:textfield1."
+                                key="cajagrandeRBoletines:box111:textfield1."
+                                name="cajagrandeRBoletines:box111:textfield1."
                                 original_name="textfield1"
                                 size="32"
                                 stop_for_input="false"
@@ -224,8 +231,8 @@
                                 field_weight="199"
                                 findable="false"
                                 immediate="true"
-                                key="box1:box111:textfield11."
-                                name="box1:box111:textfield11."
+                                key="cajagrandeRBoletines:box111:textfield11."
+                                name="cajagrandeRBoletines:box111:textfield11."
                                 original_name="textfield1"
                                 size="18"
                                 stop_for_input="false"
@@ -253,8 +260,8 @@
                         displaywidth="165"
                         field_type="TEXT"
                         field_weight="199"
-                        id="box1:date1."
-                        key="box1:date1."
+                        id="cajagrandeRBoletines:date1."
+                        key="cajagrandeRBoletines:date1."
                         kind="date"
                         original_name="date1"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845174491"
@@ -278,8 +285,8 @@
                         displaywidth="165"
                         field_type="TEXT"
                         field_weight="1699"
-                        id="box1:date11."
-                        key="box1:date11."
+                        id="cajagrandeRBoletines:date11."
+                        key="cajagrandeRBoletines:date11."
                         kind="date"
                         original_name="date1"
                         target_field=""
@@ -304,8 +311,8 @@
                         displaywidth="165"
                         field_type="TEXT"
                         field_weight="1799"
-                        id="box1:date111."
-                        key="box1:date111."
+                        id="cajagrandeRBoletines:date111."
+                        key="cajagrandeRBoletines:date111."
                         kind="date"
                         original_name="date1"
                         target_field=""
@@ -330,8 +337,8 @@
                         displaywidth="165"
                         field_type="TEXT"
                         field_weight="1899"
-                        id="box1:date2."
-                        key="box1:date2."
+                        id="cajagrandeRBoletines:date2."
+                        key="cajagrandeRBoletines:date2."
                         kind="date"
                         original_name="date2"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845261753"
@@ -355,8 +362,8 @@
                         displaywidth="165"
                         field_type="TEXT"
                         field_weight="1999"
-                        id="box1:date21."
-                        key="box1:date21."
+                        id="cajagrandeRBoletines:date21."
+                        key="cajagrandeRBoletines:date21."
                         kind="date"
                         original_name="date2"
                         target_field=""
@@ -381,10 +388,10 @@
                         displayleft="19"
                         displaytop="96"
                         displaywidth="165"
-                        id="box1:label11."
-                        key="box1:label11."
+                        id="cajagrandeRBoletines:label11."
+                        key="cajagrandeRBoletines:label11."
                         labelalign="left"
-                        labeltitle="Registro de Boletines"
+                        labeltitle="RegistrodeBoletines"
                         original_name="label1"
                         target_field=""
                         uid="desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656"
@@ -393,7 +400,7 @@
                             font-family: Verdana;
                             font-size: 14px;
                             color: Black">
-                        <nobr>Registro de Boletines</nobr>
+                        <nobr>RegistrodeBoletines</nobr>
                     </label>
 
                 </div>
@@ -412,15 +419,15 @@
                         displayleft="112"
                         displaytop="127"
                         displaywidth="63"
-                        id="box1:label3."
-                        key="box1:label3."
+                        id="cajagrandeRBoletines:label3."
+                        key="cajagrandeRBoletines:label3."
                         labelalign="left"
-                        labeltitle="Grabación"
+                        labeltitle="Grabacion"
                         original_name="label3"
                         uid="desing_form1_1369342922091_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767264011"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Grabaci&oacute;n</nobr>
+                        <nobr>Grabacion</nobr>
                     </label>
 
                 </div>
@@ -439,8 +446,8 @@
                         displayleft="110"
                         displaytop="183"
                         displaywidth="31"
-                        id="box1:label31."
-                        key="box1:label31."
+                        id="cajagrandeRBoletines:label31."
+                        key="cajagrandeRBoletines:label31."
                         labelalign="left"
                         labeltitle="Obra"
                         original_name="label3"
@@ -467,8 +474,8 @@
                         displayleft="306"
                         displaytop="183"
                         displaywidth="57"
-                        id="box1:label311."
-                        key="box1:label311."
+                        id="cajagrandeRBoletines:label311."
+                        key="cajagrandeRBoletines:label311."
                         labelalign="left"
                         labeltitle="Manzana"
                         original_name="label3"
@@ -495,8 +502,8 @@
                         displayleft="511"
                         displaytop="183"
                         displaywidth="44"
-                        id="box1:label3111."
-                        key="box1:label3111."
+                        id="cajagrandeRBoletines:label3111."
+                        key="cajagrandeRBoletines:label3111."
                         labelalign="left"
                         labeltitle="Unidad"
                         original_name="label3"
@@ -523,8 +530,8 @@
                         displayleft="729"
                         displaytop="183"
                         displaywidth="63"
-                        id="box1:label31111."
-                        key="box1:label31111."
+                        id="cajagrandeRBoletines:label31111."
+                        key="cajagrandeRBoletines:label31111."
                         labelalign="left"
                         labeltitle="Prospecto"
                         original_name="label3"
@@ -551,16 +558,16 @@
                         displayleft="511"
                         displaytop="239"
                         displaywidth="84"
-                        id="box1:label311111."
-                        key="box1:label311111."
+                        id="cajagrandeRBoletines:label311111."
+                        key="cajagrandeRBoletines:label311111."
                         labelalign="left"
-                        labeltitle="Valor Unidad "
+                        labeltitle="ValorUnidad"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843228612"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Valor Unidad </nobr>
+                        <nobr>ValorUnidad</nobr>
                     </label>
 
                 </div>
@@ -579,16 +586,16 @@
                         displayleft="729"
                         displaytop="239"
                         displaywidth="82"
-                        id="box1:label3111111."
-                        key="box1:label3111111."
+                        id="cajagrandeRBoletines:label3111111."
+                        key="cajagrandeRBoletines:label3111111."
                         labelalign="left"
-                        labeltitle="Valor Garaje "
+                        labeltitle="ValorGaraje"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843248395"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Valor Garaje </nobr>
+                        <nobr>ValorGaraje</nobr>
                     </label>
 
                 </div>
@@ -607,16 +614,16 @@
                         displayleft="511"
                         displaytop="295"
                         displaywidth="78"
-                        id="box1:label31111111."
-                        key="box1:label31111111."
+                        id="cajagrandeRBoletines:label31111111."
+                        key="cajagrandeRBoletines:label31111111."
                         labelalign="left"
-                        labeltitle="Descuentos "
+                        labeltitle="Descuentos"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843257427"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Descuentos </nobr>
+                        <nobr>Descuentos</nobr>
                     </label>
 
                 </div>
@@ -635,16 +642,16 @@
                         displayleft="729"
                         displaytop="351"
                         displaywidth="84"
-                        id="box1:label311111111."
-                        key="box1:label311111111."
+                        id="cajagrandeRBoletines:label311111111."
+                        key="cajagrandeRBoletines:label311111111."
                         labelalign="left"
-                        labeltitle="Derecho Uso "
+                        labeltitle="DerechoUso"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843268756"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Derecho Uso </nobr>
+                        <nobr>DerechoUso</nobr>
                     </label>
 
                 </div>
@@ -663,16 +670,16 @@
                         displayleft="729"
                         displaytop="295"
                         displaywidth="77"
-                        id="box1:label31111112."
-                        key="box1:label31111112."
+                        id="cajagrandeRBoletines:label31111112."
+                        key="cajagrandeRBoletines:label31111112."
                         labelalign="left"
-                        labeltitle="Valor Venta "
+                        labeltitle="ValorVenta"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844890049"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Valor Venta </nobr>
+                        <nobr>ValorVenta</nobr>
                     </label>
 
                 </div>
@@ -691,16 +698,16 @@
                         displayleft="110"
                         displaytop="239"
                         displaywidth="61"
-                        id="box1:label312."
-                        key="box1:label312."
+                        id="cajagrandeRBoletines:label312."
+                        key="cajagrandeRBoletines:label312."
                         labelalign="left"
-                        labeltitle="Área Lote"
+                        labeltitle="AreaLote"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843196284"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>&Aacute;rea Lote</nobr>
+                        <nobr>AreaLote</nobr>
                     </label>
 
                 </div>
@@ -719,16 +726,16 @@
                         displayleft="306"
                         displaytop="239"
                         displaywidth="102"
-                        id="box1:label3121."
-                        key="box1:label3121."
+                        id="cajagrandeRBoletines:label3121."
+                        key="cajagrandeRBoletines:label3121."
                         labelalign="left"
-                        labeltitle="Área Construida"
+                        labeltitle="areaConstruida"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843210108"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>&Aacute;rea Construida</nobr>
+                        <nobr>areaConstruida</nobr>
                     </label>
 
                 </div>
@@ -747,8 +754,8 @@
                         displayleft="110"
                         displaytop="295"
                         displaywidth="44"
-                        id="box1:label313."
-                        key="box1:label313."
+                        id="cajagrandeRBoletines:label313."
+                        key="cajagrandeRBoletines:label313."
                         labelalign="left"
                         labeltitle="Gastos"
                         original_name="label3"
@@ -775,8 +782,8 @@
                         displayleft="306"
                         displaytop="295"
                         displaywidth="59"
-                        id="box1:label3131."
-                        key="box1:label3131."
+                        id="cajagrandeRBoletines:label3131."
+                        key="cajagrandeRBoletines:label3131."
                         labelalign="left"
                         labeltitle="Inmueble"
                         original_name="label3"
@@ -803,16 +810,16 @@
                         displayleft="110"
                         displaytop="351"
                         displaywidth="75"
-                        id="box1:label31311."
-                        key="box1:label31311."
+                        id="cajagrandeRBoletines:label31311."
+                        key="cajagrandeRBoletines:label31311."
                         labelalign="left"
-                        labeltitle="Forma Pago"
+                        labeltitle="FormaPago"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843319316"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Forma Pago</nobr>
+                        <nobr>FormaPago</nobr>
                     </label>
 
                 </div>
@@ -831,16 +838,16 @@
                         displayleft="110"
                         displaytop="446"
                         displaywidth="70"
-                        id="box1:label313111."
-                        key="box1:label313111."
+                        id="cajagrandeRBoletines:label313111."
+                        key="cajagrandeRBoletines:label313111."
                         labelalign="left"
-                        labeltitle="Separación"
+                        labeltitle="Separacion"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843388026"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Separaci&oacute;n</nobr>
+                        <nobr>Separacion</nobr>
                     </label>
 
                 </div>
@@ -859,8 +866,8 @@
                         displayleft="306"
                         displaytop="446"
                         displaywidth="55"
-                        id="box1:label3131111."
-                        key="box1:label3131111."
+                        id="cajagrandeRBoletines:label3131111."
+                        key="cajagrandeRBoletines:label3131111."
                         labelalign="left"
                         labeltitle="Escritura"
                         original_name="label3"
@@ -887,16 +894,16 @@
                         displayleft="511"
                         displaytop="446"
                         displaywidth="105"
-                        id="box1:label313111111."
-                        key="box1:label313111111."
+                        id="cajagrandeRBoletines:label313111111."
+                        key="cajagrandeRBoletines:label313111111."
                         labelalign="left"
-                        labeltitle="Entrega Pactada"
+                        labeltitle="EntregaPactada"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843415074"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Entrega Pactada</nobr>
+                        <nobr>EntregaPactada</nobr>
                     </label>
 
                 </div>
@@ -915,16 +922,16 @@
                         displayleft="729"
                         displaytop="446"
                         displaywidth="131"
-                        id="box1:label3131111111."
-                        key="box1:label3131111111."
+                        id="cajagrandeRBoletines:label3131111111."
+                        key="cajagrandeRBoletines:label3131111111."
                         labelalign="left"
-                        labeltitle="Entrega Programada"
+                        labeltitle="EntregaProgramada"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843421178"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Entrega Programada</nobr>
+                        <nobr>EntregaProgramada</nobr>
                     </label>
 
                 </div>
@@ -943,16 +950,16 @@
                         displayleft="110"
                         displaytop="502"
                         displaywidth="79"
-                        id="box1:label31311111111."
-                        key="box1:label31311111111."
+                        id="cajagrandeRBoletines:label31311111111."
+                        key="cajagrandeRBoletines:label31311111111."
                         labelalign="left"
-                        labeltitle="Vendedor(a)"
+                        labeltitle="Vendedora"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843432818"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Vendedor(a)</nobr>
+                        <nobr>Vendedora</nobr>
                     </label>
 
                 </div>
@@ -971,8 +978,8 @@
                         displayleft="414"
                         displaytop="502"
                         displaywidth="38"
-                        id="box1:label313111111111."
-                        key="box1:label313111111111."
+                        id="cajagrandeRBoletines:label313111111111."
+                        key="cajagrandeRBoletines:label313111111111."
                         labelalign="left"
                         labeltitle="Banco"
                         original_name="label3"
@@ -999,16 +1006,16 @@
                         displayleft="732"
                         displaytop="502"
                         displaywidth="68"
-                        id="box1:label3131111111111."
-                        key="box1:label3131111111111."
+                        id="cajagrandeRBoletines:label3131111111111."
+                        key="cajagrandeRBoletines:label3131111111111."
                         labelalign="left"
-                        labeltitle="No Trámite"
+                        labeltitle="NoTramite"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843467602"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>No Tr&aacute;mite</nobr>
+                        <nobr>NoTramite</nobr>
                     </label>
 
                 </div>
@@ -1027,8 +1034,8 @@
                         displayleft="110"
                         displaytop="558"
                         displaywidth="56"
-                        id="box1:label313111111112."
-                        key="box1:label313111111112."
+                        id="cajagrandeRBoletines:label313111111112."
+                        key="cajagrandeRBoletines:label313111111112."
                         labelalign="left"
                         labeltitle="Corredor"
                         original_name="label3"
@@ -1055,8 +1062,8 @@
                         displayleft="566"
                         displaytop="558"
                         displaywidth="76"
-                        id="box1:label3131111111121."
-                        key="box1:label3131111111121."
+                        id="cajagrandeRBoletines:label3131111111121."
+                        key="cajagrandeRBoletines:label3131111111121."
                         labelalign="left"
                         labeltitle="Tramitadora"
                         original_name="label3"
@@ -1083,8 +1090,8 @@
                         displayleft="465"
                         displaytop="558"
                         displaywidth="53"
-                        id="box1:label31311111111211."
-                        key="box1:label31311111111211."
+                        id="cajagrandeRBoletines:label31311111111211."
+                        key="cajagrandeRBoletines:label31311111111211."
                         labelalign="left"
                         labeltitle="Finiquito"
                         original_name="label3"
@@ -1111,16 +1118,16 @@
                         displayleft="110"
                         displaytop="614"
                         displaywidth="56"
-                        id="box1:label313111111112111."
-                        key="box1:label313111111112111."
+                        id="cajagrandeRBoletines:label313111111112111."
+                        key="cajagrandeRBoletines:label313111111112111."
                         labelalign="left"
-                        labeltitle="Dirección"
+                        labeltitle="Direccion"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843519482"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Direcci&oacute;n</nobr>
+                        <nobr>Direccion</nobr>
                     </label>
 
                 </div>
@@ -1139,8 +1146,8 @@
                         displayleft="465"
                         displaytop="614"
                         displaywidth="44"
-                        id="box1:label3131111111121111."
-                        key="box1:label3131111111121111."
+                        id="cajagrandeRBoletines:label3131111111121111."
+                        key="cajagrandeRBoletines:label3131111111121111."
                         labelalign="left"
                         labeltitle="Ciudad"
                         original_name="label3"
@@ -1167,16 +1174,16 @@
                         displayleft="110"
                         displaytop="670"
                         displaywidth="100"
-                        id="box1:label31311111111211111."
-                        key="box1:label31311111111211111."
+                        id="cajagrandeRBoletines:label31311111111211111."
+                        key="cajagrandeRBoletines:label31311111111211111."
                         labelalign="left"
-                        labeltitle="Teléfono Oficina"
+                        labeltitle="TelefonoOficina"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843536418"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Tel&eacute;fono Oficina</nobr>
+                        <nobr>TelefonoOficina</nobr>
                     </label>
 
                 </div>
@@ -1195,16 +1202,16 @@
                         displayleft="110"
                         displaytop="726"
                         displaywidth="128"
-                        id="box1:label313111111112111111."
-                        key="box1:label313111111112111111."
+                        id="cajagrandeRBoletines:label313111111112111111."
+                        key="cajagrandeRBoletines:label313111111112111111."
                         labelalign="left"
-                        labeltitle="Teléfono Residencial"
+                        labeltitle="TelefonoResidencial"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843547769"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Tel&eacute;fono Residencial</nobr>
+                        <nobr>TelefonoResidencial</nobr>
                     </label>
 
                 </div>
@@ -1223,16 +1230,16 @@
                         displayleft="465"
                         displaytop="670"
                         displaywidth="45"
-                        id="box1:label3131111111121112."
-                        key="box1:label3131111111121112."
+                        id="cajagrandeRBoletines:label3131111111121112."
+                        key="cajagrandeRBoletines:label3131111111121112."
                         labelalign="left"
-                        labeltitle="Email 1"
+                        labeltitle="Email1"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843563465"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Email 1</nobr>
+                        <nobr>Email1</nobr>
                     </label>
 
                 </div>
@@ -1251,16 +1258,16 @@
                         displayleft="465"
                         displaytop="726"
                         displaywidth="45"
-                        id="box1:label31311111111211121."
-                        key="box1:label31311111111211121."
+                        id="cajagrandeRBoletines:label31311111111211121."
+                        key="cajagrandeRBoletines:label31311111111211121."
                         labelalign="left"
-                        labeltitle="Email 2"
+                        labeltitle="Email2"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843570857"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Email 2</nobr>
+                        <nobr>Email2</nobr>
                     </label>
 
                 </div>
@@ -1279,16 +1286,16 @@
                         displayleft="110"
                         displaytop="782"
                         displaywidth="78"
-                        id="box1:label313111111112111211."
-                        key="box1:label313111111112111211."
+                        id="cajagrandeRBoletines:label313111111112111211."
+                        key="cajagrandeRBoletines:label313111111112111211."
                         labelalign="left"
-                        labeltitle="Observación"
+                        labeltitle="Observacion"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843576610"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Observaci&oacute;n</nobr>
+                        <nobr>Observacion</nobr>
                     </label>
 
                 </div>
@@ -1308,8 +1315,8 @@
                         field_type="SELECT"
                         field_weight="1099"
                         findable="false"
-                        key="box1:select1."
-                        name="box1:select1."
+                        key="cajagrandeRBoletines:select1."
+                        name="cajagrandeRBoletines:select1."
                         original_name="select1"
                         size="1"
                         target_field=""
@@ -1335,8 +1342,8 @@
                         field_type="SELECT"
                         field_weight="1199"
                         findable="false"
-                        key="box1:select11."
-                        name="box1:select11."
+                        key="cajagrandeRBoletines:select11."
+                        name="cajagrandeRBoletines:select11."
                         original_name="select1"
                         size="1"
                         target_field=""
@@ -1362,8 +1369,8 @@
                         field_type="SELECT"
                         field_weight="1499"
                         findable="false"
-                        key="box1:select111."
-                        name="box1:select111."
+                        key="cajagrandeRBoletines:select111."
+                        name="cajagrandeRBoletines:select111."
                         original_name="select1"
                         size="1"
                         target_field=""
@@ -1389,8 +1396,8 @@
                         field_type="SELECT"
                         field_weight="2899"
                         findable="false"
-                        key="box1:select2."
-                        name="box1:select2."
+                        key="cajagrandeRBoletines:select2."
+                        name="cajagrandeRBoletines:select2."
                         original_name="select2"
                         size="1"
                         target_field=""
@@ -1416,8 +1423,8 @@
                         field_type="SELECT"
                         field_weight="2599"
                         findable="false"
-                        key="box1:select21."
-                        name="box1:select21."
+                        key="cajagrandeRBoletines:select21."
+                        name="cajagrandeRBoletines:select21."
                         original_name="select2"
                         size="1"
                         target_field=""
@@ -1444,8 +1451,8 @@
                         field_type="SELECT"
                         field_weight="2999"
                         findable="false"
-                        key="box1:select211."
-                        name="box1:select211."
+                        key="cajagrandeRBoletines:select211."
+                        name="cajagrandeRBoletines:select211."
                         original_name="select2"
                         size="1"
                         target_field=""
@@ -1453,6 +1460,87 @@
                         view="select"
                         style="width:42px; height: 21px">
                     </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 928px; left: 376px; width:262px; height:85px">
+
+                    <div
+                        binary_variables=""
+                        class="tab_set"
+                        commands=""
+                        displayheight="85"
+                        displayleft="376"
+                        displaytop="928"
+                        displaywidth="262"
+                        elevator="true"
+                        field_weight="3999"
+                        id="cajagrandeRBoletines:tabset1."
+                        key="cajagrandeRBoletines:tabset1."
+                        kind="notebook"
+                        original_name="tabset1"
+                        uid="modulo_form1_1372953290702_9e2fbad8bead24457759d32fb4301242bb3b1074_1374080545135"
+                        view="notebook"
+                        style="font-family: Calibri">
+
+                        <div
+                            binary_variables=""
+                            class="selected_tab"
+                            displayheight="250"
+                            displaywidth="250"
+                            field_weight="99"
+                            id="cajagrandeRBoletines:tabset1:tab1."
+                            key="cajagrandeRBoletines:tabset1:tab1."
+                            kind="notebook_page"
+                            notebook_title="IdentificaciondeCompradores"
+                            original_name="tab1"
+                            uid="modulo_form1_1372953290702_9e2fbad8bead24457759d32fb4301242bb3b1074_1374080548023"
+                            view="notebook_page"
+                            style=" width:250px; height:250px;
+                                background-color: transparent">
+
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            class="selected_tab"
+                            displayheight="250"
+                            displaywidth="250"
+                            field_weight="199"
+                            id="cajagrandeRBoletines:tabset1:tab2."
+                            key="cajagrandeRBoletines:tabset1:tab2."
+                            kind="notebook_page"
+                            notebook_title="InformacionAdicionaldeClientes"
+                            original_name="tab2"
+                            uid="modulo_form1_1372953290702_9e2fbad8bead24457759d32fb4301242bb3b1074_1374080554343"
+                            view="notebook_page"
+                            style=" width:250px; height:250px;
+                                background-color: transparent">
+
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            class="selected_tab"
+                            displayheight="250"
+                            displaywidth="250"
+                            field_weight="299"
+                            id="cajagrandeRBoletines:tabset1:tab3."
+                            key="cajagrandeRBoletines:tabset1:tab3."
+                            kind="notebook_page"
+                            notebook_title="CompromisosdelNegocio"
+                            original_name="tab3"
+                            uid="modulo_form1_1372953290702_9e2fbad8bead24457759d32fb4301242bb3b1074_1374080559407"
+                            view="notebook_page"
+                            style=" width:250px; height:250px;
+                                background-color: transparent">
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -1473,39 +1561,14 @@
                         field_type="TEXTAREA"
                         field_weight="3899"
                         findable="false"
-                        key="box1:textarea1."
-                        name="box1:textarea1."
+                        key="cajagrandeRBoletines:textarea1."
+                        name="cajagrandeRBoletines:textarea1."
                         original_name="textarea1"
                         rows="4"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846980137"
                         view="textarea">                    </textarea>
 
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 209px; left: 110px; width:45px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="110"
-                        displaytop="209"
-                        displaywidth="45"
-                        field_type="text"
-                        field_weight="299"
-                        findable="false"
-                        key="box1:textfield12."
-                        name="box1:textfield12."
-                        original_name="textfield1"
-                        size="7"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1371740682449"
-                        view="text">
                 </div>
 
                 <div
@@ -1523,8 +1586,8 @@
                         field_type="text"
                         field_weight="399"
                         findable="false"
-                        key="box1:textfield121."
-                        name="box1:textfield121."
+                        key="cajagrandeRBoletines:textfield121."
+                        name="cajagrandeRBoletines:textfield121."
                         original_name="textfield1"
                         size="7"
                         target_field=""
@@ -1548,8 +1611,8 @@
                         field_type="text"
                         field_weight="499"
                         findable="false"
-                        key="box1:textfield122."
-                        name="box1:textfield122."
+                        key="cajagrandeRBoletines:textfield122."
+                        name="cajagrandeRBoletines:textfield122."
                         original_name="textfield1"
                         size="7"
                         target_field=""
@@ -1573,8 +1636,8 @@
                         field_type="text"
                         field_weight="599"
                         findable="false"
-                        key="box1:textfield123."
-                        name="box1:textfield123."
+                        key="cajagrandeRBoletines:textfield123."
+                        name="cajagrandeRBoletines:textfield123."
                         original_name="textfield1"
                         size="13"
                         target_field=""
@@ -1598,8 +1661,8 @@
                         field_type="text"
                         field_weight="699"
                         findable="false"
-                        key="box1:textfield1231."
-                        name="box1:textfield1231."
+                        key="cajagrandeRBoletines:textfield1231."
+                        name="cajagrandeRBoletines:textfield1231."
                         original_name="textfield1"
                         size="13"
                         target_field=""
@@ -1623,8 +1686,8 @@
                         field_type="text"
                         field_weight="799"
                         findable="false"
-                        key="box1:textfield12311."
-                        name="box1:textfield12311."
+                        key="cajagrandeRBoletines:textfield12311."
+                        name="cajagrandeRBoletines:textfield12311."
                         original_name="textfield1"
                         size="13"
                         target_field=""
@@ -1648,8 +1711,8 @@
                         field_type="text"
                         field_weight="899"
                         findable="false"
-                        key="box1:textfield123111."
-                        name="box1:textfield123111."
+                        key="cajagrandeRBoletines:textfield123111."
+                        name="cajagrandeRBoletines:textfield123111."
                         original_name="textfield1"
                         size="25"
                         target_field=""
@@ -1673,8 +1736,8 @@
                         field_type="text"
                         field_weight="999"
                         findable="false"
-                        key="box1:textfield1231111."
-                        name="box1:textfield1231111."
+                        key="cajagrandeRBoletines:textfield1231111."
+                        name="cajagrandeRBoletines:textfield1231111."
                         original_name="textfield1"
                         size="25"
                         target_field=""
@@ -1698,8 +1761,8 @@
                         field_type="text"
                         field_weight="1299"
                         findable="false"
-                        key="box1:textfield12311111."
-                        name="box1:textfield12311111."
+                        key="cajagrandeRBoletines:textfield12311111."
+                        name="cajagrandeRBoletines:textfield12311111."
                         original_name="textfield1"
                         size="25"
                         target_field=""
@@ -1723,8 +1786,8 @@
                         field_type="text"
                         field_weight="1599"
                         findable="false"
-                        key="box1:textfield123111111."
-                        name="box1:textfield123111111."
+                        key="cajagrandeRBoletines:textfield123111111."
+                        name="cajagrandeRBoletines:textfield123111111."
                         original_name="textfield1"
                         size="25"
                         target_field=""
@@ -1748,8 +1811,8 @@
                         field_type="text"
                         field_weight="1399"
                         findable="false"
-                        key="box1:textfield12311112."
-                        name="box1:textfield12311112."
+                        key="cajagrandeRBoletines:textfield12311112."
+                        name="cajagrandeRBoletines:textfield12311112."
                         original_name="textfield1"
                         size="25"
                         target_field=""
@@ -1773,8 +1836,8 @@
                         field_type="text"
                         field_weight="3499"
                         findable="false"
-                        key="box1:textfield12312."
-                        name="box1:textfield12312."
+                        key="cajagrandeRBoletines:textfield12312."
+                        name="cajagrandeRBoletines:textfield12312."
                         original_name="textfield1"
                         size="15"
                         target_field=""
@@ -1798,8 +1861,8 @@
                         field_type="text"
                         field_weight="3699"
                         findable="false"
-                        key="box1:textfield123121."
-                        name="box1:textfield123121."
+                        key="cajagrandeRBoletines:textfield123121."
+                        name="cajagrandeRBoletines:textfield123121."
                         original_name="textfield1"
                         size="15"
                         target_field=""
@@ -1823,8 +1886,8 @@
                         field_type="text"
                         field_weight="3599"
                         findable="false"
-                        key="box1:textfield1231211."
-                        name="box1:textfield1231211."
+                        key="cajagrandeRBoletines:textfield1231211."
+                        name="cajagrandeRBoletines:textfield1231211."
                         original_name="textfield1"
                         size="40"
                         target_field=""
@@ -1848,8 +1911,8 @@
                         field_type="text"
                         field_weight="3799"
                         findable="false"
-                        key="box1:textfield12312111."
-                        name="box1:textfield12312111."
+                        key="cajagrandeRBoletines:textfield12312111."
+                        name="cajagrandeRBoletines:textfield12312111."
                         original_name="textfield1"
                         size="40"
                         target_field=""
@@ -1873,8 +1936,8 @@
                         field_type="text"
                         field_weight="3399"
                         findable="false"
-                        key="box1:textfield12312112."
-                        name="box1:textfield12312112."
+                        key="cajagrandeRBoletines:textfield12312112."
+                        name="cajagrandeRBoletines:textfield12312112."
                         original_name="textfield1"
                         size="40"
                         target_field=""
@@ -1898,8 +1961,8 @@
                         field_type="text"
                         field_weight="2699"
                         findable="false"
-                        key="box1:textfield123122."
-                        name="box1:textfield123122."
+                        key="cajagrandeRBoletines:textfield123122."
+                        name="cajagrandeRBoletines:textfield123122."
                         original_name="textfield1"
                         size="7"
                         target_field=""
@@ -1923,8 +1986,8 @@
                         field_type="text"
                         field_weight="3099"
                         findable="false"
-                        key="box1:textfield1231221."
-                        name="box1:textfield1231221."
+                        key="cajagrandeRBoletines:textfield1231221."
+                        name="cajagrandeRBoletines:textfield1231221."
                         original_name="textfield1"
                         size="7"
                         target_field=""
@@ -1948,8 +2011,8 @@
                         field_type="text"
                         field_weight="2799"
                         findable="false"
-                        key="box1:textfield1231222."
-                        name="box1:textfield1231222."
+                        key="cajagrandeRBoletines:textfield1231222."
+                        name="cajagrandeRBoletines:textfield1231222."
                         original_name="textfield1"
                         size="39"
                         target_field=""
@@ -1973,8 +2036,8 @@
                         field_type="text"
                         field_weight="3199"
                         findable="false"
-                        key="box1:textfield12312221."
-                        name="box1:textfield12312221."
+                        key="cajagrandeRBoletines:textfield12312221."
+                        name="cajagrandeRBoletines:textfield12312221."
                         original_name="textfield1"
                         size="39"
                         target_field=""
@@ -1998,8 +2061,8 @@
                         field_type="text"
                         field_weight="2399"
                         findable="false"
-                        key="box1:textfield12312222."
-                        name="box1:textfield12312222."
+                        key="cajagrandeRBoletines:textfield12312222."
+                        name="cajagrandeRBoletines:textfield12312222."
                         original_name="textfield1"
                         size="39"
                         target_field=""
@@ -2023,8 +2086,8 @@
                         field_type="text"
                         field_weight="2299"
                         findable="false"
-                        key="box1:textfield1231223."
-                        name="box1:textfield1231223."
+                        key="cajagrandeRBoletines:textfield1231223."
+                        name="cajagrandeRBoletines:textfield1231223."
                         original_name="textfield1"
                         size="7"
                         target_field=""
@@ -2048,13 +2111,46 @@
                         field_type="text"
                         field_weight="2499"
                         findable="false"
-                        key="box1:textfield1232."
-                        name="box1:textfield1232."
+                        key="cajagrandeRBoletines:textfield1232."
+                        name="cajagrandeRBoletines:textfield1232."
                         original_name="textfield1"
                         size="13"
                         target_field=""
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846019675"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 209px; left: 110px; width:45px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="2"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="110"
+                        displaytop="209"
+                        displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="text"
+                        field_weight="299"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_obra."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_obra."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="7"
+                        target_field="vmu_obra"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1371740682449"
+                        updateable="true"
                         view="text">
                 </div>
 
@@ -2067,27 +2163,25 @@
                         accell_type="String"
                         binary_variables=""
                         class="textfield"
-                        db_length="30"
-                        db_type="String"
                         displayheight="21"
                         displayleft="110"
                         displaytop="640"
                         displaywidth="240"
-                        field_length="30"
+                        explicit_search_mode="default"
+                        field_length="100"
                         field_type="SELECT"
                         field_weight="3299"
-                        findable="true"
-                        key="box1:vpp_direccion."
+                        findable="false"
+                        key="cajagrandeRBoletines:vpp_direccion."
                         multi_valued="true"
-                        name="box1:vpp_direccion."
+                        name="cajagrandeRBoletines:vpp_direccion."
                         original_name="vpp_direccion"
                         query="select xzo_nombre from xzo_zonas&#59;"
                         query_row_limit="300"
-                        retrieve_value="true"
+                        retrieve_value="false"
                         size="1"
-                        target_field="vpp_direccion"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369153592814"
-                        updateable="true"
+                        updateable="false"
                         view="select"
                         style="width:240px; height: 21px;
                             font-size: 12px;
@@ -2107,27 +2201,25 @@
                         binary_variables=""
                         case_conversion="Upper"
                         class="textfield"
-                        db_length="3"
-                        db_type="String"
                         displayheight="22"
                         displayleft="110"
                         displaytop="528"
                         displaywidth="45"
-                        field_length="3"
+                        explicit_search_mode="default"
+                        field_length="100"
                         field_type="text"
                         field_weight="2099"
-                        findable="true"
+                        findable="false"
                         immediate="true"
-                        key="box1:vpp_vendedor."
+                        key="cajagrandeRBoletines:vpp_vendedor."
                         multi_valued="true"
-                        name="box1:vpp_vendedor."
-                        retrieve_value="true"
+                        name="cajagrandeRBoletines:vpp_vendedor."
+                        retrieve_value="false"
                         return_values_into="vpp_vendedor"
                         size="7"
-                        target_field="vpp_vendedor"
                         type="text"
                         uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777426"
-                        updateable="true"
+                        updateable="false"
                         view="text"
                         zoom_active_mode="both"
                         zoom_form="Modulo/VendedoresFRM"
@@ -2151,8 +2243,8 @@
                         field_type="text"
                         field_weight="2199"
                         findable="false"
-                        key="box1:vve_nombre."
-                        name="box1:vve_nombre."
+                        key="cajagrandeRBoletines:vve_nombre."
+                        name="cajagrandeRBoletines:vve_nombre."
                         original_name="textfield1"
                         size="39"
                         stop_for_input="false"

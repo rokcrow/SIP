@@ -17,19 +17,19 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
+	widget.addAttribute("header","default");
+	widget.addAttribute("footer","none");
 	widget.addAttribute("localized","true");
 	widget.addAttribute("menu","default");
-	widget.addAttribute("footer","none");
-	widget.addAttribute("header","default");
-	widget.setClass("form");
 	widget.addAttribute("displaywidth","1227");
-	widget.addAttribute("stylesheets","default.css");
+	widget.addAttribute("title","RegistroProspectos");
 	widget.addAttribute("name","NXJForm");
+	widget.addAttribute("stylesheets","default.css");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","1493");
 	widget.addAttribute("fieldheight","1493");
 	widget.addAttribute("fieldwidth","1227");
-	widget.addAttribute("title","RegistroProspectos");
-	widget.addStyle("background-color","#999999");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -60,12 +60,12 @@ private void setAttrFor_view1__20(Widget widget)
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776395-labeltitle","Genero");
 	widget.addAttribute("desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656-labeltitle","DatosBasicos");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776855-labeltitle","Comodesearialadistribuciondesuhogar");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776705-labeltitle","Hacompradoconnosotrosantes");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776675-labeltitle","Ocupacion");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777296-labeltitle","TelefonoFijo");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777146-labeltitle","Comoseenterodenuestroproyecto");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368626980605-options","De Inmediato=A;En 3 Meses=B;En 6 Meses=C;Masde6Meses=D");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368627837100-options","Si=S;No=N");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368628032742-options","Si=S;No=N");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776795-labeltitle","Cuantoplaneapagarmensualmente");
@@ -172,9 +172,9 @@ private void setAttrFor_Label14__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","Pais");
 	widget.addAttribute("displayheight","16");
+	widget.addAttribute("fieldwidth","26");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)Label14.");
 	widget.addAttribute("id","view1:Label14.");
-	widget.addAttribute("fieldwidth","26");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("displaywidth","26");
 	widget.addStyle("overflow","hidden");
@@ -203,9 +203,9 @@ private void setAttrFor_Label16__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","TelefonoFijo");
 	widget.addAttribute("displayheight","16");
+	widget.addAttribute("fieldwidth","80");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)Label16.");
 	widget.addAttribute("id","view1:Label16.");
-	widget.addAttribute("fieldwidth","80");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("displaywidth","80");
 	widget.addStyle("overflow","hidden");
@@ -472,9 +472,9 @@ private void setAttrFor_Label33__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","HavisitadootroproyectoCual");
 	widget.addAttribute("displayheight","16");
+	widget.addAttribute("fieldwidth","219");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)Label33.");
 	widget.addAttribute("id","view1:Label33.");
-	widget.addAttribute("fieldwidth","219");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("displaywidth","219");
 	widget.addStyle("overflow","hidden");
@@ -835,9 +835,9 @@ private void setAttrFor_div_label11__30(Widget widget)
 private void setAttrFor_label11__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","DatosBasicos");
+	widget.addAttribute("fieldwidth","112");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)label11.");
 	widget.addAttribute("id","view1:label11.");
-	widget.addAttribute("fieldwidth","112");
 	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("displaywidth","112");
 	widget.addStyle("overflow","hidden");

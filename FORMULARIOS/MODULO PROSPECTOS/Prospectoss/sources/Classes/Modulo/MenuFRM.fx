@@ -1,7 +1,7 @@
 <form 
     background_color = "#999999"
     binary_variables = ""
-    bloom_filter = "00000000000400040000000008000040"
+    bloom_filter = "00000000000400040000000000000000"
     commands = ""
     connection = "Connection1"
     field_order = ""
@@ -62,6 +62,18 @@
         uid = "form1_1369150692325_b4877e7ab5bf49a95afbb9c0398f84351d607cdf_1369406376333"
         view = "text">
     </field>
+    <control 
+        binary_variables = ""
+        command = "Go To Form"
+        command_parameter = "ModuloCNegocios.RBoletinesFRM"
+        display_name = "button1"
+        field_type = "button"
+        key = "cajagrandeMenu:button1."
+        original_name = "button1"
+        style_class = "button"
+        uid = "modulo_form1_1369423869434_9e2fbad8bead24457759d32fb4301242bb3b1074_1374095727361"
+        view = "button">
+    </control>
     <control 
         background_color = "#e30000"
         binary_variables = ""

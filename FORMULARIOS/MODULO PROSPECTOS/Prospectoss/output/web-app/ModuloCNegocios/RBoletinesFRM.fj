@@ -2,9 +2,24 @@ package ModuloCNegocios;
 
 FORM RBoletinesFRM
 {
-    BOX box1
+    BEFORE FORM
     {
-    
+        cajagrandeRBoletines.tabset1.setCurrentPage("tab2");
+    }
+  
+  
+  
+    BEFORE ADD
+    {
+        /*
+            Acá se colocaran las variables que actuarán como guardianes.
+            Si el usuario ha pasado por los formularios requeridos, se le deja pasar, de lo contrario no.
+        */
+    }
+
+    BOX cajagrandeRBoletines
+    {
+   
         FIELD date1
         {
         }
@@ -118,7 +133,7 @@ FORM RBoletinesFRM
         {
         }
         
-        FIELD textfield12
+        FIELD vmu_obra
         {
         }
         
@@ -204,7 +219,14 @@ FORM RBoletinesFRM
         {
         }
         
+        TAB SET tabset1
+        {
+        
+        }
+
     }
+
+
 
 }
 /*----------------------------------------------------------------------*

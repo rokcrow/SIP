@@ -1,0 +1,60 @@
+package ModuloCNegocios;
+
+
+
+DATA VIEW ICompradoresDVW
+{
+    BOX box111
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield11
+        {
+        
+        }
+
+    }
+    BOX box11
+    {
+    }
+    
+    DATA VIEW PUBLIC_tcl_tipclien
+    {
+    
+        FIELD  tcl_nit
+        {
+
+        }
+
+        FIELD  tcl_clase
+        {
+
+        }
+
+        FIELD  tcl_tipo
+        {
+
+        }
+
+        FIELD  tcl_nombre
+        {
+
+        }
+
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

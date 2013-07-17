@@ -627,6 +627,7 @@ public class MenuFRM
 
 	public EMPRESA EMPRESA = new EMPRESA();
 	public NullableStringField NombreForma1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombreForma1", false, true, 100);
+	public NXJButtonControl button1 = new com.unify.nxj.mgr.datatypes.NXJButtonImpl(this, "button1", false);
 	public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
 	public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
 	public NXJMenuControl menuPri = new com.unify.nxj.mgr.datatypes.NXJMenuControlImpl(this, "menuPri", false);
@@ -738,6 +739,8 @@ public class MenuFRM
 	    NombreForma1.us$setView("text");
 	    NombreForma1.setFindable(false);
 	    NombreForma1.setStopForInput(true);
+	    button1.setStyleClass("button");
+	    button1.setCommandParameter("ModuloCNegocios.RBoletinesFRM");
 	    label1.setStyleClass("label");
 	    label1.setFontSize("12");
 	    label11.setStyleClass("label");

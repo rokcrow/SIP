@@ -106,8 +106,19 @@ import com.unify.pub.NameValuePair;
 public class RBoletinesFRM
     extends com.unify.nxj.mgr.NXJForm
 {
+
+    public void beforeForm()
+	throws Exception
+    {
+	cajagrandeRBoletines.tabset1.setCurrentPage("tab2");
+    } // beforeForm
+
+    public void beforeAdd()
+	throws Exception
+    {
+    } // beforeAdd
     private RBoletinesFRM RBoletinesFRM = this;
-    public class box1
+    public class cajagrandeRBoletines
 	extends com.unify.nxj.mgr.NXJBox
     {
 	public NullableStringField date1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "date1", false, true, 100);
@@ -155,7 +166,6 @@ public class RBoletinesFRM
 	public NullableStringField select21 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "select21", false, true, 100);
 	public NullableStringField select211 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "select211", false, true, 100);
 	public NullableStringField textarea1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textarea1", false, true, 0);
-	public NullableStringField textfield12 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield12", false, true, 100);
 	public NullableStringField textfield121 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield121", false, true, 100);
 	public NullableStringField textfield122 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield122", false, true, 100);
 	public NullableStringField textfield123 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield123", false, true, 100);
@@ -178,6 +188,7 @@ public class RBoletinesFRM
 	public NullableStringField textfield12312222 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield12312222", false, true, 100);
 	public NullableStringField textfield1231223 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1231223", false, true, 100);
 	public NullableStringField textfield1232 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1232", false, true, 100);
+	public /*multi_valued*/ NullableStringField vmu_obra = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_obra", true, true, 2);
 	public class vpp_direccion
 	    extends com.unify.nxj.mgr.datatypes.NXJStringField
 	{
@@ -249,22 +260,22 @@ public class RBoletinesFRM
 
 	    public vpp_direccion()
 	    {
-		super(ModuloCNegocios.RBoletinesFRM.box1.this, "vpp_direccion", true, true, 30);
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vpp_direccion", true, true, 100);
 		setStyleClass("textfield");
 		us$setMultiValued(true);
 		us$setView("select");
-		us$setFieldLength(30);
-		us$setCandidateTargetColumnName("vpp_direccion");
-		setValueRetrievedDuringFetch(true);
-		setFindable(true);
-		setUpdateable(true);
+		us$setFieldLength(100);
+		setValueRetrievedDuringFetch(false);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(false);
+		setUpdateable(false);
 		setForegroundColor("Black");
 		setFontSize("12");
 	    } // <init>
 	} // vpp_direccion
 
 	public /*multi_valued*/ vpp_direccion vpp_direccion = new vpp_direccion();
-	public /*multi_valued*/ NullableStringField vpp_vendedor = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_vendedor", true, true, 3);
+	public /*multi_valued*/ NullableStringField vpp_vendedor = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_vendedor", true, true, 100);
 	public NullableStringField vve_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vve_nombre", false, true, 100);
 	public class box11
 	    extends com.unify.nxj.mgr.NXJBox
@@ -275,7 +286,7 @@ public class RBoletinesFRM
 
 		public image1()
 		{
-		    super(ModuloCNegocios.RBoletinesFRM.box1.box11.this, "image1", false);
+		    super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.box11.this, "image1", false);
 		} // <init>
 	    } // image1
 
@@ -298,7 +309,7 @@ public class RBoletinesFRM
 
 		public label1()
 		{
-		    super(ModuloCNegocios.RBoletinesFRM.box1.box111.this, "label1", false);
+		    super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.box111.this, "label1", false);
 		} // <init>
 	    } // label1
 
@@ -329,10 +340,21 @@ public class RBoletinesFRM
 	} // box111
 
 	public final box111 box111 = new box111(this);
-
-	public box1(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	public class tabset1
+	    extends com.unify.nxj.mgr.NXJTabSet
 	{
-	    super("box1", enclosingContainer);
+
+	    public tabset1(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	    {
+		super("tabset1", enclosingContainer);
+	    } // <init>
+	} // tabset1
+
+	public final tabset1 tabset1 = new tabset1(this);
+
+	public cajagrandeRBoletines(com.unify.nxj.mgr.NXJContainer enclosingContainer)
+	{
+	    super("cajagrandeRBoletines", enclosingContainer);
 	    us$setBackgroundColor("#cccccc");
 	    vpp_vendedor.setZoomReturnValuesInto(new NXJZoomReturnValuesInto()
 	    {
@@ -345,13 +367,13 @@ public class RBoletinesFRM
 		    vpp_vendedor.us$assignZoomValue(values[0]);
 		} // assignValues
 	    });
-	    box1propertySetter_0();
-	    box1propertySetter_1();
-	    box1propertySetter_2();
-	    box1propertySetter_3();
+	    cajagrandeRBoletinespropertySetter_0();
+	    cajagrandeRBoletinespropertySetter_1();
+	    cajagrandeRBoletinespropertySetter_2();
+	    cajagrandeRBoletinespropertySetter_3();
 	} // <init>
 
-	private void box1propertySetter_0()
+	private void cajagrandeRBoletinespropertySetter_0()
 	{
 	    date1.setStyleClass("date_picker");
 	    date1.us$setView("date");
@@ -396,9 +418,9 @@ public class RBoletinesFRM
 	    label313.setFontSize("12");
 	    label3131.setStyleClass("label");
 	    label3131.setFontSize("12");
-	} // box1propertySetter_0
+	} // cajagrandeRBoletinespropertySetter_0
 
-	private void box1propertySetter_1()
+	private void cajagrandeRBoletinespropertySetter_1()
 	{
 	    label31311.setStyleClass("label");
 	    label31311.setFontSize("12");
@@ -442,9 +464,9 @@ public class RBoletinesFRM
 	    select11.setStyleClass("dropdown_list");
 	    select11.us$setView("select");
 	    select11.setFindable(false);
-	} // box1propertySetter_1
+	} // cajagrandeRBoletinespropertySetter_1
 
-	private void box1propertySetter_2()
+	private void cajagrandeRBoletinespropertySetter_2()
 	{
 	    select111.setStyleClass("dropdown_list");
 	    select111.us$setView("select");
@@ -463,9 +485,6 @@ public class RBoletinesFRM
 	    textarea1.us$setView("textarea");
 	    textarea1.us$setFieldLength(0);
 	    textarea1.setFindable(false);
-	    textfield12.setStyleClass("textfield");
-	    textfield12.us$setView("text");
-	    textfield12.setFindable(false);
 	    textfield121.setStyleClass("textfield");
 	    textfield121.us$setView("text");
 	    textfield121.setFindable(false);
@@ -508,13 +527,13 @@ public class RBoletinesFRM
 	    textfield12312111.setStyleClass("textfield");
 	    textfield12312111.us$setView("text");
 	    textfield12312111.setFindable(false);
-	} // box1propertySetter_2
-
-	private void box1propertySetter_3()
-	{
 	    textfield12312112.setStyleClass("textfield");
 	    textfield12312112.us$setView("text");
 	    textfield12312112.setFindable(false);
+	} // cajagrandeRBoletinespropertySetter_2
+
+	private void cajagrandeRBoletinespropertySetter_3()
+	{
 	    textfield123122.setStyleClass("textfield");
 	    textfield123122.us$setView("text");
 	    textfield123122.setFindable(false);
@@ -536,15 +555,24 @@ public class RBoletinesFRM
 	    textfield1232.setStyleClass("textfield");
 	    textfield1232.us$setView("text");
 	    textfield1232.setFindable(false);
+	    vmu_obra.setStyleClass("textfield");
+	    vmu_obra.us$setMultiValued(true);
+	    vmu_obra.us$setView("text");
+	    vmu_obra.us$setFieldLength(2);
+	    vmu_obra.us$setCandidateTargetColumnName("vmu_obra");
+	    vmu_obra.setValueRetrievedDuringFetch(true);
+	    vmu_obra.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_obra.setFindable(true);
+	    vmu_obra.setUpdateable(true);
 	    vpp_vendedor.setStyleClass("textfield");
 	    vpp_vendedor.us$setMultiValued(true);
 	    vpp_vendedor.us$setView("text");
-	    vpp_vendedor.us$setFieldLength(3);
+	    vpp_vendedor.us$setFieldLength(100);
 	    vpp_vendedor.setAutoAccept(true);
-	    vpp_vendedor.us$setCandidateTargetColumnName("vpp_vendedor");
-	    vpp_vendedor.setValueRetrievedDuringFetch(true);
-	    vpp_vendedor.setFindable(true);
-	    vpp_vendedor.setUpdateable(true);
+	    vpp_vendedor.setValueRetrievedDuringFetch(false);
+	    vpp_vendedor.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vpp_vendedor.setFindable(false);
+	    vpp_vendedor.setUpdateable(false);
 	    vpp_vendedor.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vpp_vendedor.setZoomFormName("Modulo/VendedoresFRM");
 	    vpp_vendedor.setZoomEnabled(true);
@@ -559,10 +587,10 @@ public class RBoletinesFRM
 	    vve_nombre.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vve_nombre.setForegroundColor("Black");
 	    vve_nombre.setFontSize("12");
-	} // box1propertySetter_3
-    } // box1
+	} // cajagrandeRBoletinespropertySetter_3
+    } // cajagrandeRBoletines
 
-    public final box1 box1 = new box1(this);
+    public final cajagrandeRBoletines cajagrandeRBoletines = new cajagrandeRBoletines(this);
 
     public RBoletinesFRM(NXJSession session, NXJForm prevForm)
     {
@@ -579,6 +607,9 @@ public class RBoletinesFRM
     private void us$initializeFormSpecificProperties()
     {
 	us$setConnectionName("Connection1");
+	us$setTargetTableName("PUBLIC.vmu_maestro");
+	setDeleteAllowed(true);
+	setStartInAddMode(false);
 	us$setBindingType("connection");
 	us$setBackgroundColor("#999999");
     } // us$initializeFormSpecificProperties

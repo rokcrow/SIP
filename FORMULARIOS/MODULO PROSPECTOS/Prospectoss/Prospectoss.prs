@@ -5,8 +5,8 @@
       timestamp="0"
       ctimestamp="0"
       scversion=""
-      component-chooser-selection="Modulo\ProspectosDVW"
-      component-chooser-expanded="[Components, Libraries, standard];[Components, Foundation];[Components, Libraries];[Components];[Components, ModuloCNegocios];[Components, Modulo]"
+      component-chooser-selection="ModuloCNegocios\ICompradoresDVW"
+      component-chooser-expanded="[Components];[Components, ModuloCNegocios];[Components, ItemsForm]"
  >
 
     <security
@@ -592,6 +592,13 @@
           base-class=""
           tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;LoginFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
+          target-type="0"
+          description=""
+          default-label="Modulo.LoginFRM"
+          add_to_menu="true"
+          override-entry-point-name="false"
+          expose-as-portlet="false"
+          hide-entry-point="false"
          >
     </file>
 
@@ -977,6 +984,39 @@
          >
     </file>
 
+    <file
+         path="Classes/ModuloCNegocios/ICompradoresDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1374005782699"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ICompradoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/ModuloCNegocios/Form1.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1374095694408"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
     <connection
          name="Connection1"
           path=""
@@ -990,6 +1030,11 @@
 
     <color
          rgb="transparent"
+         >
+    </color>
+
+    <color
+         rgb="#94aabd"
          >
     </color>
 

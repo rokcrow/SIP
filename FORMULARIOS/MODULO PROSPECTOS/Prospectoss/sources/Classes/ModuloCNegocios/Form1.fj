@@ -1,0 +1,19 @@
+package ModuloCNegocios;
+
+FORM Form1
+{
+    FIELD vpp_actividad
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
