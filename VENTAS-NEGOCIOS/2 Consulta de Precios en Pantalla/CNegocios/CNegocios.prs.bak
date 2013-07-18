@@ -611,18 +611,18 @@
     </file>
 
     <file
-         path="Classes/Modulo/Form1.fx"
+         path="Classes/Modulo/CPPantallaFRM.fx"
           type="form"
           state="4"
           flags="0"
-          timestamp="1372951273874"
+          timestamp="1370116094826"
           ctimestamp="0"
           scversion=""
           private="false"
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;p&gt;&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;CPPantallaFRM&lt;p&gt;&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>
@@ -639,7 +639,12 @@
     </connection>
 
     <color
-         rgb="#c79800"
+         rgb="transparent"
+         >
+    </color>
+
+    <color
+         rgb="Black"
          >
     </color>
 
@@ -700,11 +705,6 @@
 
     <color
          rgb="Gray"
-         >
-    </color>
-
-    <color
-         rgb="Black"
          >
     </color>
 

@@ -1,0 +1,32 @@
+package ModuloCNegocios;
+
+FORM Form1
+{  NullableString x;
+    
+    
+    BEFORE FORM
+    {
+        x = ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.number;
+        session.displayToMessageBox(x);
+        
+        if(x == "3")
+        {
+        session.displayToMessageBox("hola, es 3.");
+        }
+    }
+
+    FIELD textfield1
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

@@ -1,0 +1,62 @@
+package ModuloCNegocios;
+
+FORM ObrasFRM
+{
+    
+    multi_valued NullableStringVariable  xob_empresa;
+
+
+    BEFORE FORM
+    {
+            xob_empresa.clearFindExp =   Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+    }
+
+    BOX cajagrandeObrasFRM
+    {
+
+        BOX cajaarribaObrasFRM
+        {
+            FIELD actualempresa
+            {
+            }
+            FIELD actualusuario
+            {
+            }
+        }
+        BOX box11
+        {
+        }
+
+
+        DATA VIEW PUBLIC_xob_obras
+        {
+        
+            FIELD  xob_proyecto
+            {
+
+            }
+
+            FIELD  xob_obra
+            {
+
+            }
+
+            FIELD  xob_nombre
+            {
+
+            }
+
+        }
+
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

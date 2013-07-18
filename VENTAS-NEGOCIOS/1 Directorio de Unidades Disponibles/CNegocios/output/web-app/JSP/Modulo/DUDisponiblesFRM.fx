@@ -61,15 +61,28 @@
         field_weight = "99"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:RepeatingArea1."
         kind = "repeating_area"
-        list_columns = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.145:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.211:75;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.286:81;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.367:65;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.432:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.504:57;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.561:114;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.675:164"
+        list_columns = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana.0:72;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad.72:73;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo.145:66;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote.211:75;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const.286:83;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina.369:69;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1.438:76;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2.514:61;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque.575:114;cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni.689:150"
         occurrences = "12"
+        repeat_style = "View"
         selected_row_class = "selected_row"
         style_class = "repeating_area"
         uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629957"
         view = "repeating_area">
     </div>
+    <div 
+        display_name = "UnifyRepeatingArea"
+        field_type = "TEXTAREA"
+        font_family = "Courier New"
+        font_size = "8"
+        key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:UnifyRepeatingArea"
+        kind = "grid"
+        original_name = "UnifyRepeatingArea"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467322760"
+        view = "grid">
+    </div>
     <field 
-        accell_type = "Amount"
+        accell_type = "Float"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "9"
         db_type = "Amount"
@@ -81,15 +94,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_const."
         multi_valued = "true"
+        original_name = "vuu_area_const"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_area_const"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629980"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312871"
         updateable = "true"
         view = "text">
     </field>
     <field 
-        accell_type = "Amount"
+        accell_type = "Float"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "9"
         db_type = "Amount"
@@ -101,15 +116,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_area_lote."
         multi_valued = "true"
+        original_name = "vuu_area_lote"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_area_lote"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629975"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312856"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "String"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "1"
         db_type = "String"
@@ -120,15 +137,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_esquina."
         multi_valued = "true"
+        original_name = "vuu_esquina"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_esquina"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629985"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312887"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "String"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "3"
         db_type = "String"
@@ -139,15 +158,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_manzana."
         multi_valued = "true"
+        original_name = "vuu_manzana"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_manzana"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629963"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312756"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "String"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "3"
         db_type = "String"
@@ -158,15 +179,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_modelo."
         multi_valued = "true"
+        original_name = "vuu_modelo"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_modelo"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629971"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312840"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "String"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "1"
         db_type = "String"
@@ -177,15 +200,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro1."
         multi_valued = "true"
+        original_name = "vuu_muro1"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_muro1"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629990"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312901"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "String"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "1"
         db_type = "String"
@@ -196,15 +221,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_muro2."
         multi_valued = "true"
+        original_name = "vuu_muro2"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_muro2"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629995"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312913"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "String"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "1"
         db_type = "String"
@@ -215,15 +242,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_parque."
         multi_valued = "true"
+        original_name = "vuu_parque"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_parque"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296630000"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312925"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "Amount"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "15"
         db_type = "Amount"
@@ -235,15 +264,17 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_precio_uni."
         multi_valued = "true"
+        original_name = "vuu_precio_uni"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_precio_uni"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296630006"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312938"
         updateable = "true"
         view = "text">
     </field>
     <field 
         accell_type = "String"
+        background_color = "#999999"
         binary_variables = ""
         db_length = "4"
         db_type = "String"
@@ -254,10 +285,11 @@
         findable = "true"
         key = "cajagrandeDUDisponibles:PUBLIC_vuu_unidades:vuu_unidad."
         multi_valued = "true"
+        original_name = "vuu_unidad"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vuu_unidad"
-        uid = "modulo_form1_1372970373750_5d9cc06362763e2710595e24e8275a96a24247e3_1373296629967"
+        uid = "modulo_form1_1372970373750_bf4dcede5606128abd8337d42986c25c6566fc71_1373467312801"
         updateable = "true"
         view = "text">
     </field>
@@ -416,6 +448,7 @@
     <control 
         base_class = "Classes/ItemsForm/Boton.fx"
         binary_variables = ""
+        command = "Previous Form"
         display_base_class = "ItemsForm.Boton"
         display_name = "regresarbtn"
         field_type = "button"
@@ -535,11 +568,13 @@
         multi_valued = "true"
         original_name = "textfield1"
         retrieve_value = "true"
+        return_values_into = "xob_proyecto"
         style_class = "textfield"
         target_field = "xob_proyecto"
         uid = "itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1371740682449"
         updateable = "true"
-        view = "text">
+        view = "text"
+        zoom_form = "Modulo/ProyectosFRM">
     </field>
 
 </form>

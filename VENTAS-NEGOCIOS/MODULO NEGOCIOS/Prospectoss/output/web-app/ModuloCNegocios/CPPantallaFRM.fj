@@ -1,0 +1,156 @@
+package ModuloCNegocios;
+
+FORM CPPantallaFRM
+{
+    multi_valued NullableStringVariable  xob_empresa;
+    NullableString etapa_activa;
+
+
+
+    BEFORE FORM
+    {
+        xob_empresa.clearFindExp =   Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        cajagrandeCPPantalla.xxx = "31";
+    }
+
+    BOX cajagrandeCPPantalla
+    {
+    
+        BOX cajaarribaCPPantalla
+        {
+            FIELD textfield1
+            {
+            }
+            FIELD textfield11
+            {
+            }
+        }
+        
+        BOX box11
+        {
+        }
+        
+        FIELD vpy_nombre
+        {
+        }
+        
+        FIELD xob_nombre
+        {
+        }
+        
+        FIELD xob_proyecto
+        {
+           ON DATA ACCEPT
+           {
+                EXEC SQL
+                           SELECT vpy_nombre
+                           FROM vpy_proyectos
+                           WHERE vpy_codigo = :xob_proyecto
+                           AND vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                           ORDER BY vpy_codigo ASC INTO vpy_nombre ;
+                           
+                           if (session.status == StatusCode.SS_NOREC)
+                           {
+                               session.displayToMessageBox("No existe el proyecto seleccionado en el maestro de proyectos");
+                               xob_proyecto = " ";
+                               rejectOperation();
+                           }
+             }
+           WHEN VALUE CHANGES
+           {
+                   EXEC SQL
+                   SELECT vpy_nombre
+                   FROM vpy_proyectos
+                   WHERE vpy_codigo = :xob_proyecto
+                   AND vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                   INTO vpy_nombre;
+           }
+        }
+        
+         FIELD xob_obra
+        {
+            
+        
+            ON DATA ACCEPT
+            {
+                EXEC SQL
+                            SELECT vev_etapactu
+                            FROM vev_etapaven
+                            WHERE vev_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                            AND vev_obra = :xob_obra
+                            AND vev_estado = 'A' //ERROR 
+                            INTO etapa_activa;
+          
+                    if (session.status == StatusCode.SS_NOREC)
+                    {
+                        session.displayToMessageBox("No hay etapas de ventas activas para al obra.");
+                    }
+                }
+            
+                            
+            
+            WHEN VALUE CHANGES
+            {
+                EXEC SQL
+                                SELECT vev_etapactu
+                                FROM vev_etapaven
+                                WHERE vev_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                                AND vev_obra = :xob_obra
+                                AND vev_estado = 'A'
+                                INTO etapa_activa;
+              }
+
+        }
+        
+        DATA VIEW PUBLIC_vlp_listapre
+        {
+            multi_valued NullableStringVariable  vlp_empresa, vlp_obra;
+            
+            FIELD  vlp_manzana
+            {
+
+            }
+
+            FIELD  vlp_unidad
+            {
+
+            }
+
+            FIELD  vlp_f_inicial
+            {
+
+            }
+
+            FIELD  vlp_f_final
+            {
+
+            }
+
+            FIELD  vlp_precio_uni
+            {
+
+            }
+
+            FIELD  vlp_usuario
+            {
+
+            }
+
+        }
+
+        FIELD xxx
+        {	
+        }
+        
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

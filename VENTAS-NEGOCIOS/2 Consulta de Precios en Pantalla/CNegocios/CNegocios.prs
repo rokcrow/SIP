@@ -579,22 +579,6 @@
     </file>
 
     <file
-         path="Classes/Modulo/CPPantallaDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1371747616653"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;CPPantallaDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
          path="Classes/ItemsForm/Standar.fx"
           type="data_view"
           state="4"
@@ -615,7 +599,7 @@
           type="form"
           state="4"
           flags="0"
-          timestamp="1372951273874"
+          timestamp="1370116094826"
           ctimestamp="0"
           scversion=""
           private="false"
@@ -639,7 +623,12 @@
     </connection>
 
     <color
-         rgb="#c79800"
+         rgb="transparent"
+         >
+    </color>
+
+    <color
+         rgb="Black"
          >
     </color>
 
@@ -700,11 +689,6 @@
 
     <color
          rgb="Gray"
-         >
-    </color>
-
-    <color
-         rgb="Black"
          >
     </color>
 

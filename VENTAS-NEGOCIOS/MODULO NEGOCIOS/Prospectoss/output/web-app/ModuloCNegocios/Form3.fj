@@ -1,0 +1,31 @@
+package ModuloCNegocios;
+
+FORM Form3
+{
+    BEFORE FORM
+    {
+        box1.xxx = "3";
+     //  box1.xxx = ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.number;
+       session.displayToMessageBox(box1.xxx);
+       
+       ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.number = box1.xxx;
+    }
+
+    BOX box1
+    {
+    
+        FIELD xxx
+        {	
+        }
+        
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

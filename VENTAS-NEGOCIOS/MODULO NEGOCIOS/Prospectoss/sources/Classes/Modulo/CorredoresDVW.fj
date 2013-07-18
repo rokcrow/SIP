@@ -1,0 +1,67 @@
+package Modulo;
+
+
+
+DATA VIEW CorredoresDVW
+{
+    NullableString empresanombre;
+
+    INIT DATA VIEW
+    {
+        EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+      
+        cajaarribaCorredores.actualempresa  = empresanombre ;
+        cajaarribaCorredores.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+
+    BOX cajaarribaCorredores
+    {
+    
+        FIELD actualempresa
+        {
+        
+        }
+
+        FIELD actualusuario
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD vco_codigo
+    {
+    }
+    
+    FIELD vco_telefono1
+    {
+    }
+    
+    FIELD vco_telefono2
+    {
+    }
+    
+    FIELD vco_nombre
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

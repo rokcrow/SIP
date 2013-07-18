@@ -12,7 +12,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/TreeOpen.gif"
+        path="Static_Content/system/silver/menugradient.png"
         type="6"
     >
         <permission
@@ -23,7 +23,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/menugradient.png"
+        path="Static_Content/system/silver/TreeOpen.gif"
         type="6"
     >
         <permission
@@ -45,8 +45,8 @@
     </object>
     <object
         project=""
-        path="Static_Content/system"
-        type="16"
+        path="Static_Content/system/default/doclink.gif"
+        type="6"
     >
         <permission
             name="Access"
@@ -67,8 +67,8 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/doclink.gif"
-        type="6"
+        path="Static_Content/system"
+        type="16"
     >
         <permission
             name="Access"
@@ -100,7 +100,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/datepicker.png"
+        path="Static_Content/system/silver/datepicker.png"
         type="6"
     >
         <permission
@@ -111,7 +111,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/datepicker.png"
+        path="Static_Content/system/default/datepicker.png"
         type="6"
     >
         <permission
@@ -272,7 +272,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/tabactive.gif"
+        path="Static_Content/system/default/TreeOpen.gif"
         type="6"
     >
         <permission
@@ -283,7 +283,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/TreeOpen.gif"
+        path="Static_Content/system/default/tabactive.gif"
         type="6"
     >
         <permission
@@ -314,12 +314,12 @@
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
@@ -369,7 +369,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/tabactive.gif"
+        path="Static_Content/system/default/gridtop.png"
         type="6"
     >
         <permission
@@ -380,7 +380,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/gridtop.png"
+        path="Static_Content/system/silver/tabactive.gif"
         type="6"
     >
         <permission
@@ -395,12 +395,12 @@
         type="-1"
     >
         <permission
-            name="Update"
+            name="Find"
             value=""
             timestamp="0"
         />
         <permission
-            name="Find"
+            name="Update"
             value=""
             timestamp="0"
         />

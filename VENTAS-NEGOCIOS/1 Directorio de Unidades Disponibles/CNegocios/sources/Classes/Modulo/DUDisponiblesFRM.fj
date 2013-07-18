@@ -2,6 +2,10 @@ package Modulo;
 
 
 
+
+
+
+
 FORM DUDisponiblesFRM
 {     
     
@@ -114,6 +118,11 @@ FORM DUDisponiblesFRM
             FIELD  vuu_precio_uni
             {
             }
+            BOX Box
+            {
+            
+            }
+
         }
         
     }

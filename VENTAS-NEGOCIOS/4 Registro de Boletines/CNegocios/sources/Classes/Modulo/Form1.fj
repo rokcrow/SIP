@@ -1,0 +1,59 @@
+package Modulo;
+
+FORM Form1
+{
+    TAB SET tabset1
+    {
+    
+        FIELD textfield1
+        {
+        
+        }
+
+        FIELD textfield2
+        {
+        
+        }
+
+        DATA VIEW PUBLIC_cbg_maestro
+        {
+        
+            FIELD  cbg_cuenta
+            {
+
+            }
+
+            FIELD  cbg_empresa
+            {
+
+            }
+
+            FIELD  cbg_imprime
+            {
+
+            }
+
+            FIELD  cbg_nivel
+            {
+
+            }
+
+            FIELD  cbg_saldo_ante
+            {
+
+            }
+
+        }
+
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

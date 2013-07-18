@@ -595,22 +595,6 @@
     </file>
 
     <file
-         path="Classes/Modulo/RBoletinesDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1371908706520"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;RBoletinesDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
          path="Classes/Modulo/RBoletinesFRM.fx"
           type="form"
           state="4"
@@ -627,6 +611,23 @@
          >
     </file>
 
+    <file
+         path="Classes/Modulo/Form1.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1373898715943"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
     <connection
          name="Connection1"
           path=""
@@ -639,7 +640,12 @@
     </connection>
 
     <color
-         rgb="#c79800"
+         rgb="transparent"
+         >
+    </color>
+
+    <color
+         rgb="Black"
          >
     </color>
 
@@ -700,11 +706,6 @@
 
     <color
          rgb="Gray"
-         >
-    </color>
-
-    <color
-         rgb="Black"
          >
     </color>
 

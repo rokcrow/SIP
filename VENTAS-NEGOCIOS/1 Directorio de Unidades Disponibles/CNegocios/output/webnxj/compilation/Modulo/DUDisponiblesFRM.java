@@ -361,6 +361,8 @@ public class DUDisponiblesFRM
 		setFindable(true);
 		setUpdateable(true);
 		setCaseConversion(NullableField.CaseConversion_UPPER);
+		setZoomFormName("Modulo/ProyectosFRM");
+		setZoomEnabled(true);
 		us$executesDataAcceptValueChanges = true;
 	    } // <init>
 	} // xob_proyecto
@@ -371,8 +373,8 @@ public class DUDisponiblesFRM
 	{
 	    /*multi_valued*/ NullableStringVariable vuu_empresa = NullableFactory.createNullableStringVariable(this, "vuu_empresa", true, false);
 	    /*multi_valued*/ NullableStringVariable vuu_obra = NullableFactory.createNullableStringVariable(this, "vuu_obra", true, false);
-	    public /*multi_valued*/ NullableAmountField vuu_area_const = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vuu_area_const", true, true, 16);
-	    public /*multi_valued*/ NullableAmountField vuu_area_lote = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vuu_area_lote", true, true, 16);
+	    public /*multi_valued*/ NullableFloatField vuu_area_const = new com.unify.nxj.mgr.datatypes.NXJFloatField(this, "vuu_area_const", true, true, 16);
+	    public /*multi_valued*/ NullableFloatField vuu_area_lote = new com.unify.nxj.mgr.datatypes.NXJFloatField(this, "vuu_area_lote", true, true, 16);
 	    public /*multi_valued*/ NullableStringField vuu_esquina = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vuu_esquina", true, true, 2);
 	    public /*multi_valued*/ NullableStringField vuu_manzana = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vuu_manzana", true, true, 3);
 	    public /*multi_valued*/ NullableStringField vuu_modelo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vuu_modelo", true, true, 3);
@@ -400,6 +402,7 @@ public class DUDisponiblesFRM
 		vuu_area_const.setFindable(true);
 		vuu_area_const.setUpdateable(true);
 		vuu_area_const.setDisplayJustify(NullableField.DisplayJustify_LEFT);
+		vuu_area_const.setBackgroundColor("#999999");
 		vuu_area_lote.setStyleClass("textfield");
 		vuu_area_lote.us$setMultiValued(true);
 		vuu_area_lote.us$setView("text");
@@ -409,6 +412,7 @@ public class DUDisponiblesFRM
 		vuu_area_lote.setFindable(true);
 		vuu_area_lote.setUpdateable(true);
 		vuu_area_lote.setDisplayJustify(NullableField.DisplayJustify_LEFT);
+		vuu_area_lote.setBackgroundColor("#999999");
 		vuu_esquina.setStyleClass("textfield");
 		vuu_esquina.us$setMultiValued(true);
 		vuu_esquina.us$setView("text");
@@ -417,6 +421,7 @@ public class DUDisponiblesFRM
 		vuu_esquina.setValueRetrievedDuringFetch(true);
 		vuu_esquina.setFindable(true);
 		vuu_esquina.setUpdateable(true);
+		vuu_esquina.setBackgroundColor("#999999");
 		vuu_manzana.setStyleClass("textfield");
 		vuu_manzana.us$setMultiValued(true);
 		vuu_manzana.us$setView("text");
@@ -425,6 +430,7 @@ public class DUDisponiblesFRM
 		vuu_manzana.setValueRetrievedDuringFetch(true);
 		vuu_manzana.setFindable(true);
 		vuu_manzana.setUpdateable(true);
+		vuu_manzana.setBackgroundColor("#999999");
 		vuu_modelo.setStyleClass("textfield");
 		vuu_modelo.us$setMultiValued(true);
 		vuu_modelo.us$setView("text");
@@ -433,6 +439,7 @@ public class DUDisponiblesFRM
 		vuu_modelo.setValueRetrievedDuringFetch(true);
 		vuu_modelo.setFindable(true);
 		vuu_modelo.setUpdateable(true);
+		vuu_modelo.setBackgroundColor("#999999");
 		vuu_muro1.setStyleClass("textfield");
 		vuu_muro1.us$setMultiValued(true);
 		vuu_muro1.us$setView("text");
@@ -441,6 +448,7 @@ public class DUDisponiblesFRM
 		vuu_muro1.setValueRetrievedDuringFetch(true);
 		vuu_muro1.setFindable(true);
 		vuu_muro1.setUpdateable(true);
+		vuu_muro1.setBackgroundColor("#999999");
 		vuu_muro2.setStyleClass("textfield");
 		vuu_muro2.us$setMultiValued(true);
 		vuu_muro2.us$setView("text");
@@ -449,6 +457,7 @@ public class DUDisponiblesFRM
 		vuu_muro2.setValueRetrievedDuringFetch(true);
 		vuu_muro2.setFindable(true);
 		vuu_muro2.setUpdateable(true);
+		vuu_muro2.setBackgroundColor("#999999");
 		vuu_parque.setStyleClass("textfield");
 		vuu_parque.us$setMultiValued(true);
 		vuu_parque.us$setView("text");
@@ -457,6 +466,7 @@ public class DUDisponiblesFRM
 		vuu_parque.setValueRetrievedDuringFetch(true);
 		vuu_parque.setFindable(true);
 		vuu_parque.setUpdateable(true);
+		vuu_parque.setBackgroundColor("#999999");
 		vuu_precio_uni.setStyleClass("textfield");
 		vuu_precio_uni.us$setMultiValued(true);
 		vuu_precio_uni.us$setView("text");
@@ -466,6 +476,7 @@ public class DUDisponiblesFRM
 		vuu_precio_uni.setFindable(true);
 		vuu_precio_uni.setUpdateable(true);
 		vuu_precio_uni.setDisplayJustify(NullableField.DisplayJustify_LEFT);
+		vuu_precio_uni.setBackgroundColor("#999999");
 		vuu_unidad.setStyleClass("textfield");
 		vuu_unidad.us$setMultiValued(true);
 		vuu_unidad.us$setView("text");
@@ -474,6 +485,7 @@ public class DUDisponiblesFRM
 		vuu_unidad.setValueRetrievedDuringFetch(true);
 		vuu_unidad.setFindable(true);
 		vuu_unidad.setUpdateable(true);
+		vuu_unidad.setBackgroundColor("#999999");
 		us$addTargetMapping("vuu_empresa", "vuu_empresa");
 		us$addTargetMapping("vuu_obra", "vuu_obra");
 	    } // <init>
@@ -548,6 +560,17 @@ public class DUDisponiblesFRM
 	{
 	    super("cajagrandeDUDisponibles", enclosingContainer);
 	    us$setBackgroundColor("#cccccc");
+	    xob_proyecto.setZoomReturnValuesInto(new NXJZoomReturnValuesInto()
+	    {
+
+		public void assignValues(com.unify.nxj.mgr.datatypes.Register[] values)
+		    throws Exception
+		{
+		    if (values.length != 1)
+			throw new Exception("TODO: handle value array size mismatch");
+		    xob_proyecto.us$assignZoomValue(values[0]);
+		} // assignValues
+	    });
 	    cajagrandeDUDisponiblespropertySetter_0();
 	} // <init>
 

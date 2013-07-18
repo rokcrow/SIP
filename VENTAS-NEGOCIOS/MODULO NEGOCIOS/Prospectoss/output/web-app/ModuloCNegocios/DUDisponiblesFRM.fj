@@ -1,0 +1,189 @@
+package ModuloCNegocios;
+
+
+
+
+FORM DUDisponiblesFRM
+{     
+    
+    multi_valued NullableStringVariable  xob_empresa;
+    NullableAmount TPrecioVAR;
+    NullableNumeric TUnidadesVAR;
+
+
+    BEFORE FORM
+    {
+        xob_empresa.clearFindExp =   Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        cajagrandeDUDisponibles.PUBLIC_vuu_unidades.vuu_estado.clearFindExp = "D";
+            
+     
+        TPrecioVAR = 0.0;
+        TUnidadesVAR = 0;
+        
+        cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+        cajagrandeDUDisponibles.TUnidadesFLD = TUnidadesVAR;
+        
+    }
+
+    
+    ON CLEAR TO FIND
+    {
+        TPrecioVAR = 0.0;
+        TUnidadesVAR = 0;
+        
+        cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+        cajagrandeDUDisponibles.TUnidadesFLD = TUnidadesVAR;
+    }
+
+    BOX cajagrandeDUDisponibles
+    {
+        
+
+         FIELD xob_proyecto
+        {
+            
+            ON DATA ACCEPT
+            {
+                 EXEC SQL
+                            SELECT vpy_nombre
+                            FROM vpy_proyectos
+                            WHERE vpy_codigo = :xob_proyecto
+                            AND vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                            INTO vpy_nombre;
+                          
+                          
+                            
+                            if (session.status == StatusCode.SS_NOREC)
+                            {
+                                session.displayToMessageBox("No existe el proyecto seleccionado en el maestro de proyectos");
+                                xob_proyecto = " ";
+                                rejectOperation();
+                            }
+            
+              }
+            
+            WHEN VALUE CHANGES
+            {
+                    EXEC SQL
+                    SELECT vpy_nombre
+                    FROM vpy_proyectos
+                    WHERE vpy_codigo = :xob_proyecto
+                    AND vpy_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                    INTO vpy_nombre;
+                    
+            }
+
+        }
+        
+        FIELD xob_obra
+        {
+        }
+        
+        FIELD xob_nombre
+        {
+        } 
+        FIELD vpy_nombre
+        {
+        }
+        
+        FIELD TUnidadesFLD
+        {
+        }
+        
+        BOX cajaarribaDUDisponibles
+        {
+            FIELD actualempresa
+            {
+            }
+            FIELD actualusuario
+            {
+            }
+        }
+        
+        BOX box11
+        {
+        }
+        
+        
+        
+        
+        DATA VIEW PUBLIC_vuu_unidades
+        {
+    
+            multi_valued NullableStringVariable vuu_obra, vuu_empresa, vuu_estado;
+    
+            
+                ON FIND
+                {   
+                                 
+                    if (vuu_manzana == "ZZZ" || vuu_manzana == "UUU")
+                            rejectRecord();
+                    else 
+                        {
+                            TPrecioVAR = TPrecioVAR + vuu_precio_uni;
+                            TUnidadesVAR = TUnidadesVAR + 1;
+                        }
+              
+                }
+                      
+                     
+                                            
+            AFTER FIND
+            { 
+                cajagrandeDUDisponibles.TPrecioFLD = TPrecioVAR;
+                cajagrandeDUDisponibles.TUnidadesFLD = TUnidadesVAR;
+                
+                TPrecioVAR = 0.0;
+                TUnidadesVAR = 0;
+            }
+
+         
+
+            FIELD  vuu_manzana
+            {
+            }
+            FIELD  vuu_unidad
+            {
+            }
+            FIELD  vuu_modelo
+            {
+            }
+            FIELD  vuu_area_lote
+            {
+            }
+            FIELD  vuu_area_const
+            {
+            }
+            FIELD  vuu_esquina
+            {
+            }
+            FIELD  vuu_muro1
+            {
+            }
+            FIELD  vuu_muro2
+            {
+            }
+            FIELD  vuu_parque
+            {
+            }
+            FIELD  vuu_precio_uni
+            {
+            }
+        }
+        
+        FIELD TPrecioFLD
+        {
+        }
+        
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

@@ -1,0 +1,19 @@
+package ModuloCNegocios;
+
+FORM Form2
+{NullableNumeric xx= 2;
+    FIELD textfield1
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

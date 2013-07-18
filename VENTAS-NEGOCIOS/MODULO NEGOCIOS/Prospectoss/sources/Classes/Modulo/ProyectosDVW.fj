@@ -1,0 +1,66 @@
+package Modulo;
+
+
+
+DATA VIEW ProyectosDVW
+{ 
+    
+    NullableString empresanombre;
+    INIT DATA VIEW
+    {
+        vpy_empresa.clearFindExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        
+         EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+      
+        cajaarribaPVenta.actualempresa  = empresanombre ;
+        cajaarribaPVenta.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+
+    BOX cajaarribaPVenta
+    {
+    
+        FIELD actualempresa
+        {
+        
+        }
+
+        FIELD actualusuario
+        {
+        
+        }
+
+    }
+
+    BOX box11
+    {
+    
+    }
+    FIELD vpy_codigo
+    {}
+    
+    FIELD vpy_empresa
+    {}
+    
+    FIELD vpy_nombre
+    {}
+    
+    FIELD vpy_estado
+    {
+    }
+    
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
+

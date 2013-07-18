@@ -12,6 +12,17 @@
     </object>
     <object
         project=""
+        path="Static_Content/system/silver/menugradient.png"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
         path="Static_Content/system/silver/TreeOpen.gif"
         type="6"
     >
@@ -23,7 +34,18 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/menugradient.png"
+        path="Static_Content/ProviLogo.png"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/default/doclink.gif"
         type="6"
     >
         <permission
@@ -45,8 +67,8 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/doclink.gif"
-        type="6"
+        path="Static_Content/system"
+        type="16"
     >
         <permission
             name="Access"
@@ -57,17 +79,6 @@
     <object
         project=""
         path="Static_Content/system/silver/gridtop.png"
-        type="6"
-    >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
-        path="Static_Content/system/default/tabactive.gif"
         type="6"
     >
         <permission
@@ -89,7 +100,7 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/TreeOpen.gif"
+        path="Static_Content/system/default/datepicker.png"
         type="6"
     >
         <permission
@@ -111,28 +122,6 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/default/datepicker.png"
-        type="6"
-    >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
-        path="Static_Content/system/default/elevatorfillactive.png"
-        type="6"
-    >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
-    </object>
-    <object
-        project=""
         path="Static_Content/system/default/elevatorfillinactive.png"
         type="6"
     >
@@ -144,41 +133,26 @@
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/doclink.gif"
-        type="6"
+        path="Classes/Modulo/RBoletinesFRM/view1/box111"
+        type="35"
     >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/tabinactive.gif"
-        type="6"
+        path="Classes/ItemsForm/Standar/tabset1"
+        type="38"
     >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
     </object>
     <object
         project=""
-        path="Static_Content/system/silver/tabactive.gif"
-        type="6"
+        path="Classes/ItemsForm/Standar/box11"
+        type="35"
     >
-        <permission
-            name="Access"
-            value=""
-            timestamp="0"
-        />
     </object>
     <object
-        project=""
-        path="Static_Content/system/default/gridtop.png"
-        type="6"
+        project="standard"
+        path="Static_Content/toolbars"
+        type="16"
     >
         <permission
             name="Access"
@@ -210,8 +184,41 @@
     </object>
     <object
         project=""
+        path="Static_Content"
+        type="16"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
         path="Static_Content/system/silver/elevatorfillinactive.png"
         type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project="standard"
+        path="Static_Content/system"
+        type="16"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/silver"
+        type="16"
     >
         <permission
             name="Access"
@@ -230,6 +237,288 @@
             timestamp="0"
         />
     </object>
+    <object
+        project="standard"
+        path="Static_Content/system/silver"
+        type="16"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/RBoletinesFRM.fx"
+        type="0"
+    >
+        <permission
+            name="Form"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/default"
+        type="16"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/RBoletinesFRM/view1/box11"
+        type="35"
+    >
+    </object>
+    <object
+        project="standard"
+        path="Static_Content/system/default"
+        type="16"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/ItemsForm/Standar/box111"
+        type="35"
+    >
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/default/TreeOpen.gif"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/default/tabactive.gif"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/default/elevatorfillactive.png"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/Modulo/RBoletinesFRM/view1"
+        type="36"
+    >
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Classes/ItemsForm/Standar.fx"
+        type="36"
+    >
+        <permission
+            name="Form"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/silver/doclink.gif"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/silver/tabinactive.gif"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project="standard"
+        path="Static_Content"
+        type="16"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/silver/tabactive.gif"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path="Static_Content/system/default/gridtop.png"
+        type="6"
+    >
+        <permission
+            name="Access"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <object
+        project=""
+        path=""
+        type="-1"
+    >
+        <permission
+            name="Find"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Update"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Application"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Add"
+            value=""
+            timestamp="0"
+        />
+        <permission
+            name="Delete"
+            value=""
+            timestamp="0"
+        />
+    </object>
+    <filter
+        project=""
+        path="Classes/ItemsForm/Standar.fx"
+        value="00000000000400042000000000000000"
+    />
+    <filter
+        project=""
+        path="Classes/Modulo/RBoletinesFRM.fx"
+        value="00080000010000000800000000000000"
+    />
+    <filter
+        project=""
+        path="Classes/Modulo/RBoletinesDVW.fx"
+        value="00080000000000000800000000000000"
+    />
+    <base-class
+        project=""
+        path="classes/modulo/rboletinesfrm/view1/box111"
+        value="classes/modulo/rboletinesdvw.fx:box111"
+    />
+    <base-class
+        project=""
+        path="classes/modulo/rboletinesfrm/view1/box11"
+        value="classes/modulo/rboletinesdvw.fx:box11"
+    />
+    <base-class
+        project=""
+        path="classes/modulo/rboletinesfrm/view1"
+        value="classes/modulo/rboletinesdvw.fx"
+    />
 </database>
 <!--====================================================================*
 * BEGIN MODIFICATION HISTORY

@@ -1,0 +1,44 @@
+<html>
+<!--
+/*----------------------------------------------------------------------*
+ *	CLASS:	 	blankmenu.html
+ *
+ *	ORIGINATOR:	aig
+ *	CREATION DATE:	Thu Apr 29 11:09:53 PDT 1999
+ *
+ *----------------------------------------------------------------------*/
+
+/**
+ * This HTML page displays a hidden page for submitting commands
+ *
+ * @author	aig
+ * @author	$Author: meh $	$Exp: $
+ * @version	$Revision: 30370 $ $Date: 2004-08-11 08:00:59 -0700 (Wed, 11 Aug 2004) $
+ */
+-->
+  <head>
+    <title>command.html</title>
+	<script src="adjustMenuHeight.js"> </script>
+
+	<script language="JavaScript">
+
+    var		PREFERRED_HEIGHT		= "0";
+	var		PREFERRED_COLS			= "0,*";
+
+    function doOnLoad()
+    {
+	// adjust the menu frame height
+	adjustMenuHeight(PREFERRED_HEIGHT, PREFERRED_COLS);
+
+	}
+    </script>
+
+  </head>
+
+  <body onLoad=doOnLoad() >
+     <form name="CommandForm">
+     </form>
+
+  </body>
+</html>
+  	

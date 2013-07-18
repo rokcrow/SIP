@@ -1,0 +1,66 @@
+package Modulo;
+
+FORM SociedadesFRM
+{   
+    NullableString empresanombre;
+    
+    BEFORE FORM
+    {
+        EXEC SQL
+        SELECT xem_nombre
+        FROM xem_empresas
+        WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+        INTO  empresanombre;
+        
+      
+        cajagrandeSociedades.cajaarribaSociedades.actualempresa  = empresanombre ;
+        cajagrandeSociedades.cajaarribaSociedades.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+
+    BOX cajagrandeSociedades
+    {
+    
+        BOX cajaarribaSociedades
+        {
+            FIELD actualempresa
+            {
+            }
+            FIELD actualusuario
+            {
+            }
+        }
+        
+        BOX box11
+        {
+        }
+        
+        FIELD xem_codigo
+        {
+        }
+        
+        FIELD xem_nombre
+        {
+        }
+        
+        DATA VIEW PUBLIC_xel_emprelogo1
+        {
+            FIELD  xel_codigo
+            {
+            }
+            NXJ FILE CHOOSER chooser1
+            {
+            }
+        }
+        
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/
