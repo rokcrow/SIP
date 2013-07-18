@@ -901,119 +901,18 @@
     </file>
 
     <file
-         path="Classes/ModuloCNegocios"
-          type="folder"
+         path="Static_Content/salida.html"
+          type="html"
           state="4"
           flags="0"
-          timestamp="1373395553491"
+          timestamp="1374177183605"
           ctimestamp="0"
           scversion=""
           private="false"
           binary="false"
-          checked-in-path="Classes/Folder1"
+          checked-in-path=""
           base-class=""
           tooltip=""
-         >
-    </file>
-
-    <file
-         path="Classes/ModuloCNegocios/DUDisponiblesFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1373467611762"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;DUDisponiblesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
-         path="Classes/ModuloCNegocios/CPPantallaFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1373579856760"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;CPPantallaFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
-         path="Classes/ModuloCNegocios/ObrasFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1373643877529"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;ObrasFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
-         path="Classes/ModuloCNegocios/RBoletinesFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1373914428605"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;RBoletinesFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
-         path="Classes/ModuloCNegocios/ICompradoresDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1374005782699"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ICompradoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
-         path="Classes/ModuloCNegocios/Form1.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1374095694408"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
          >
     </file>
 

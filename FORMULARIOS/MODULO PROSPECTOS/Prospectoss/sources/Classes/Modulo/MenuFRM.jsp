@@ -112,30 +112,6 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 288px; left: 73px; width:111px; height:50px">
-
-                    <input
-                        binary_variables=""
-                        class="button"
-                        command="Go To Form"
-                        command_parameter="ModuloCNegocios.RBoletinesFRM"
-                        displayheight="50"
-                        displayleft="73"
-                        displaytop="288"
-                        displaywidth="111"
-                        field_type="button"
-                        key="cajagrandeMenu:button1."
-                        name="cajagrandeMenu:button1."
-                        original_name="button1"
-                        type="button"
-                        uid="modulo_form1_1369423869434_9e2fbad8bead24457759d32fb4301242bb3b1074_1374095727361"
-                        value="Press"
-                        view="button">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
                     style="position: absolute; top: 384px; left: 4px; width:996px; height:50px">
 
                     <fieldset

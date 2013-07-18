@@ -1005,7 +1005,7 @@
           type="form"
           state="4"
           flags="0"
-          timestamp="1374095694408"
+          timestamp="1374153200037"
           ctimestamp="0"
           scversion=""
           private="false"
@@ -1018,11 +1018,45 @@
     </file>
 
     <file
-         path="Connections/Connection2.cn"
-          type="connection"
+         path="Classes/ModuloCNegocios/Form2.fx"
+          type="form"
           state="4"
           flags="0"
-          timestamp="1374096032935"
+          timestamp="1374153203113"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form2&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Classes/ModuloCNegocios/Form3.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1374153206457"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form3&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Static_Content/salida.html"
+          type="html"
+          state="4"
+          flags="0"
+          timestamp="1374177183605"
           ctimestamp="0"
           scversion=""
           private="false"
@@ -1035,17 +1069,6 @@
 
     <connection
          name="Connection1"
-          path=""
-          db-jar="$UNIFY_HOME\lib\jdbcDrivers\SimbaJDBC.jar"
-          db-type="DataServer"
-          driver="simba.jdbc.SimbaDriver"
-          url="jdbc:simba:192.168.1.7:1583/DataServer_DSN"
-          datasource=""
-         >
-    </connection>
-
-    <connection
-         name="Connection2"
           path=""
           db-jar="$UNIFY_HOME\lib\jdbcDrivers\SimbaJDBC.jar"
           db-type="DataServer"

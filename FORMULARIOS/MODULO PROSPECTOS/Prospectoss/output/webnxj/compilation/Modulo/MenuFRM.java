@@ -312,52 +312,9 @@ public class MenuFRM
 		}
 	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
 		{
-		NXJMenuItem DUDisponiblesadd = new NXJMenuItem("Directorio de Unidades Disponibles");
-		DUDisponiblesadd.setTitle("Directorio de Unidades Disponibles");
-		DUDisponiblesadd.setCommand("Go To Form");
-		DUDisponiblesadd.setCommandParameter("ModuloCNegocios.DUDisponiblesFRM");
-		CNegociosMenu.add(DUDisponiblesadd);
-		VentasMenu.add(CNegociosMenu);
-		}
-	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
-		{
-		NXJMenuItem CPPantallaadd = new NXJMenuItem("Consulta Precios en Pantalla");
-		CPPantallaadd.setTitle("Consulta Precios en Pantalla");
-		CPPantallaadd.setCommand("Go To Form");
-		CPPantallaadd.setCommandParameter("ModuloCNegocios.CPPantallaFRM");
-		CNegociosMenu.add(CPPantallaadd);
-		}
-	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
-		{
-		NXJMenuItem RBoletinesadd = new NXJMenuItem("Registro de Boletines");
-		RBoletinesadd.setTitle("Registro de Boletines");
-		RBoletinesadd.setCommand("Go To Form");
-		RBoletinesadd.setCommandParameter("ModuloCNegocios.RBoletinesFRM");
-		CNegociosMenu.add(RBoletinesadd);
-		}
-	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
-		{
-		NXJMenuItem ROAdicionalesadd = new NXJMenuItem("Registro de Obras Adicionales");
-		ROAdicionalesadd.setTitle("Registro de Obras Adicionales");
-		ROAdicionalesadd.setCommand("Go To Form");
-		ROAdicionalesadd.setCommandParameter("ModuloCNegocios.ROAdicionalesFRM");
-		CNegociosMenu.add(ROAdicionalesadd);
-		}
-	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
-		{
-		NXJMenuItem ECContableadd = new NXJMenuItem("Estado de Cuenta Contable");
-		ECContableadd.setTitle("Estado de Cuenta Contable");
-		ECContableadd.setCommand("Go To Form");
-		ECContableadd.setCommandParameter("ModuloCNegocios.ECContableFRM");
-		CNegociosMenu.add(ECContableadd);
-		}
-	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
-		{
-		NXJMenuItem LPClientesadd = new NXJMenuItem("Lista de Precios para Clientes");
-		LPClientesadd.setTitle("Lista de Precios para Clientes");
-		LPClientesadd.setCommand("Go To Form");
-		LPClientesadd.setCommandParameter("ModuloCNegocios.LPClientesFRM");
-		CNegociosMenu.add(LPClientesadd);
+		NXJMenuItem DUDisponiblesadd = new NXJMenuItem("Creaci\u00F3n de Negocios");
+		DUDisponiblesadd.setTitle("Creaci\u00F3n de Negocios");
+		VentasMenu.add(DUDisponiblesadd);
 		}
 	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
 		{
@@ -627,7 +584,6 @@ public class MenuFRM
 
 	public EMPRESA EMPRESA = new EMPRESA();
 	public NullableStringField NombreForma1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombreForma1", false, true, 100);
-	public NXJButtonControl button1 = new com.unify.nxj.mgr.datatypes.NXJButtonImpl(this, "button1", false);
 	public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
 	public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
 	public NXJMenuControl menuPri = new com.unify.nxj.mgr.datatypes.NXJMenuControlImpl(this, "menuPri", false);
@@ -739,8 +695,6 @@ public class MenuFRM
 	    NombreForma1.us$setView("text");
 	    NombreForma1.setFindable(false);
 	    NombreForma1.setStopForInput(true);
-	    button1.setStyleClass("button");
-	    button1.setCommandParameter("ModuloCNegocios.RBoletinesFRM");
 	    label1.setStyleClass("label");
 	    label1.setFontSize("12");
 	    label11.setStyleClass("label");

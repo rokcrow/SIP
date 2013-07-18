@@ -6,6 +6,7 @@
 <body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
+        aud_on_entry="true"
         binary_variables=""
         bloom_filter="00000000000400040000000000000000"
         class="form"
@@ -387,6 +388,7 @@
                     style="position: absolute; top: 157px; left: 420px; width:122px; height:22px">
 
                     <input
+                        accell_type="String"
                         binary_variables=""
                         case_conversion="Lower"
                         class="textfield"

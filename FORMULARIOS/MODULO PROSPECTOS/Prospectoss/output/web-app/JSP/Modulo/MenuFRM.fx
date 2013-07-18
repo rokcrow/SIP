@@ -63,18 +63,6 @@
         view = "text">
     </field>
     <control 
-        binary_variables = ""
-        command = "Go To Form"
-        command_parameter = "ModuloCNegocios.RBoletinesFRM"
-        display_name = "button1"
-        field_type = "button"
-        key = "cajagrandeMenu:button1."
-        original_name = "button1"
-        style_class = "button"
-        uid = "modulo_form1_1369423869434_9e2fbad8bead24457759d32fb4301242bb3b1074_1374095727361"
-        view = "button">
-    </control>
-    <control 
         background_color = "#e30000"
         binary_variables = ""
         commands = ""

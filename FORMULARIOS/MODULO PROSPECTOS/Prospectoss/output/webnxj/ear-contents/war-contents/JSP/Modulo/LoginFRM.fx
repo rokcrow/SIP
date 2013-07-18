@@ -1,4 +1,5 @@
 <form 
+    aud_on_entry = "true"
     background_color = "#999999"
     binary_variables = ""
     bloom_filter = "00000000000400040000000000000000"
@@ -188,6 +189,7 @@
         view = "text">
     </field>
     <field 
+        accell_type = "String"
         binary_variables = ""
         case_conversion = "Lower"
         display_name = "xpr_usuario"

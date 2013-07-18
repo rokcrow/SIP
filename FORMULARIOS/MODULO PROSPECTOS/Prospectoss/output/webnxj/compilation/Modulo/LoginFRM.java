@@ -108,6 +108,7 @@ public class LoginFRM
 {
     NullableString xus_password = NullableFactory.createNullableString("xus_password");
     NullableDate xus_factualiza = NullableFactory.createNullableDate("xus_factualiza");
+    NullableNumeric APassword = NullableFactory.createNullableNumeric("APassword");
     NullableNumeric intentos = (NullableNumeric)NullableFactory.createNullableNumeric("intentos").assign(getSession().us$getRegisterPool().allocateRegister().load(0));
     private LoginFRM LoginFRM = this;
     public class cajagrandeLogin
@@ -119,7 +120,38 @@ public class LoginFRM
 	public NXJLabelControl label3 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3", false);
 	public NXJLabelControl label31 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label31", false);
 	public /*multi_valued*/ NullableStringField xpr_grupo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpr_grupo", true, true, 100);
-	public /*multi_valued*/ NullableStringField xpr_password = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpr_password", true, true, 100);
+	public class xpr_password
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void beforeField()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		APassword.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()).minusOp(us$registerPool.allocateRegister().load(xus_factualiza)));
+		if (us$registerPool.allocateRegister().load(APassword).gtOp(90).getBooleanValueNullOk())
+		    {
+		    getSession().displayToMessageBox("Su clave expir\u00F3. Proceda a cambiarla, por favor.");
+		    getSession().queueNextForm("Modulo.MenuFRM");
+		    }
+	    } // beforeField
+
+	    public xpr_password()
+	    {
+		super(Modulo.LoginFRM.cajagrandeLogin.this, "xpr_password", true, true, 100);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		setPassword(true);
+		setAutoAccept(false);
+		setRequired(true);
+		setFindable(false);
+		setFontFamily("Verdana");
+		us$executesCodeBeforeInput = true;
+	    } // <init>
+	} // xpr_password
+
+	public /*multi_valued*/ xpr_password xpr_password = new xpr_password();
 	public class xpr_usuario
 	    extends com.unify.nxj.mgr.datatypes.NXJStringField
 	{
@@ -347,14 +379,6 @@ public class LoginFRM
 	    xpr_grupo.setFindable(false);
 	    xpr_grupo.setStopForInput(false);
 	    xpr_grupo.setFontFamily("Verdana");
-	    xpr_password.setStyleClass("textfield");
-	    xpr_password.us$setMultiValued(true);
-	    xpr_password.us$setView("text");
-	    xpr_password.setPassword(true);
-	    xpr_password.setAutoAccept(false);
-	    xpr_password.setRequired(true);
-	    xpr_password.setFindable(false);
-	    xpr_password.setFontFamily("Verdana");
 	} // cajagrandeLoginpropertySetter_0
     } // cajagrandeLogin
 
@@ -376,29 +400,22 @@ public class LoginFRM
 	    if (us$registerPool.allocateRegister().load(cajagrandeLogin.xpr_password).neqOp(us$registerPool.allocateRegister().load(xus_password)).getBooleanValueNullOk())
 		{
 		intentos.assign(us$registerPool.allocateRegister().load(intentos).plusOp(1));
-		getSession().displayToMessageBox("Password Invalido");
-		if (us$registerPool.allocateRegister().load(intentos).ltOp(4).getBooleanValueNullOk())
+		getSession().displayToMessageBox("Contrase\u00F1a incorrecta.");
+		if (us$registerPool.allocateRegister().load(intentos).ltOp(3).getBooleanValueNullOk())
 		    {
 		    getSession().queueNextField(cajagrandeLogin.xpr_password);
 		    }
 		else
 		    {
 		    getSession().displayToMessageBox("Excedio el numero de intentos permitidos. Intente despues.");
-		    getSession().wait(10);
-		    getSession().queueCommand("exit");
+		    getSession().exitToURL("salida.html");
 		    }
 		}
 	    else
-		if (us$registerPool.allocateRegister().load(getSession().getCurrentDate()).minusOp(us$registerPool.allocateRegister().load(xus_factualiza)).gtOp(90).getBooleanValueNullOk())
+		if (us$registerPool.allocateRegister().load(cajagrandeLogin.xpr_password).eqOp(us$registerPool.allocateRegister().load(xus_password)).getBooleanValueNullOk())
 		    {
-		    getSession().displayToMessageBox("Su clave expiro. Proceda a cambiarla, por favor.");
 		    getSession().queueNextForm("Modulo.MenuFRM");
 		    }
-		else
-		    if (us$registerPool.allocateRegister().load(cajagrandeLogin.xpr_password).eqOp(us$registerPool.allocateRegister().load(xus_password)).getBooleanValueNullOk())
-			{
-			getSession().queueNextForm("Modulo.MenuFRM");
-			}
 	} // run
     } // logincmd
 
@@ -419,8 +436,10 @@ public class LoginFRM
     private void us$initializeFormSpecificProperties()
     {
 	us$setConnectionName("Connection1");
+	setStartInAddMode(true);
 	us$setBackgroundColor("#999999");
 	us$addProxyObject(Modulo.LoginFRM.class, "intentos", false);
+	us$addProxyObject(Modulo.LoginFRM.class, "APassword", false);
 	us$addProxyObject(Modulo.LoginFRM.class, "xus_factualiza", false);
 	us$addProxyObject(Modulo.LoginFRM.class, "xus_password", false);
     } // us$initializeFormSpecificProperties

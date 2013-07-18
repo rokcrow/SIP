@@ -4,11 +4,9 @@ FORM LoginFRM
 {
                     NullableString xus_password;
                     NullableDate xus_factualiza;
-                    NullableNumeric intentos = 0;
-                    
-                    
-            
- 
+                    NullableNumeric intentos = 0, APassword;
+                 
+                  
                 
             
                     COMMAND logincmd
@@ -16,23 +14,19 @@ FORM LoginFRM
                             if(cajagrandeLogin.xpr_password != xus_password)
                             {
                                 intentos = intentos + 1;
-                                session.displayToMessageBox("Password Invalido");
+                               session.displayToMessageBox("Contraseña incorrecta.");
                                     
-                                    if(intentos < 4)
-                                      {  session.queueNextField(cajagrandeLogin.xpr_password);}
+                                    if(intentos < 3)
+                                      {  
+                                            session.queueNextField(cajagrandeLogin.xpr_password);
+                                    }
                                     else
                                     {
                                         session.displayToMessageBox("Excedio el numero de intentos permitidos. Intente despues.");
-                                        session.wait(10);
-                                        session.queueCommand("exit");// NO FUNCIONA
+                                        session.exitToURL("salida.html");
                                     }
                                     
                             }     
-                            else if ((session.currentDate - xus_factualiza) > 90)
-                            {
-                                session.displayToMessageBox("Su clave expiro. Proceda a cambiarla, por favor.");
-                                session.queueNextForm("Modulo.MenuFRM");
-                            }    
                             else if (cajagrandeLogin.xpr_password == xus_password)
                             { 
                                 session.queueNextForm("Modulo.MenuFRM");
@@ -53,6 +47,7 @@ FORM LoginFRM
                         FROM xus_usuarios
                         WHERE xus_usuario = :xpr_usuario
                         INTO xus_password, xus_factualiza, xpr_grupo;
+                        
                             
                             if(session.status != StatusCode.SS_NORM) 
                             {
@@ -79,6 +74,21 @@ FORM LoginFRM
                     
                     FIELD xpr_password
                     {
+                    
+                    
+                        BEFORE FIELD
+                        {
+                            
+                            APassword = session.currentDate - xus_factualiza;
+                            
+                            if (APassword > 90)
+                            {   
+                                session.displayToMessageBox("Su clave expiró. Proceda a cambiarla, por favor.");
+                                session.queueNextForm("Modulo.MenuFRM");
+                            }    
+
+                        }
+
                     }
                     
                     

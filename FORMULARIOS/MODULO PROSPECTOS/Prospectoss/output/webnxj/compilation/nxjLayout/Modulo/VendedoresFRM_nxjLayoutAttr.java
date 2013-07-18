@@ -17,16 +17,16 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("footer","none");
+	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("displaywidth","1074");
-	widget.addAttribute("title","Vendedores");
 	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
-	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","501");
 	widget.addAttribute("fieldheight","501");
 	widget.addAttribute("fieldwidth","1074");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("title","Vendedores");
 	widget.setClass("form");
 }
 
@@ -42,8 +42,8 @@ private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displayheight","466");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displaytop","30");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
 }
@@ -65,11 +65,11 @@ private void setAttrFor_div_vvh_vendedora__50(Widget widget)
 
 private void setAttrFor_vvh_vendedora__60(Widget widget)
 {
-	widget.addAttribute("type","text");
-	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)vvh_vendedora.");
-	widget.addAttribute("name","view1:vvh_vendedora.");
 	widget.addAttribute("fieldwidth","118");
 	widget.addAttribute("headertitle","Codigo");
+	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)vvh_vendedora.");
+	widget.addAttribute("name","view1:vvh_vendedora.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -79,11 +79,11 @@ private void setAttrFor_div_NombVend__50(Widget widget)
 
 private void setAttrFor_NombVend__60(Widget widget)
 {
-	widget.addAttribute("type","text");
-	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)NombVend.");
-	widget.addAttribute("name","view1:NombVend.");
 	widget.addAttribute("fieldwidth","339");
 	widget.addAttribute("headertitle","Vendedor (a)");
+	widget.addAttribute("_name","view1:(Modulo.VendedoresDVW)NombVend.");
+	widget.addAttribute("name","view1:NombVend.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
