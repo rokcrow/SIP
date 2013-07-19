@@ -6,9 +6,16 @@ DATA VIEW VendedoresDVW
 {
 
     NullableString empresanombre;
+    multi_valued NullableStringVariable vvh_empresa, vvh_proyecto, vvh_roll, vve_vendedora;
+    multi_valued NullableDateVariable vvh_fret_obra;
 
     INIT DATA VIEW
     {
+        vvh_empresa.clearFindExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        vvh_proyecto.clearFindExp = Modulo.ProspectosFRM#view1.vpp_proyecto;
+        vvh_roll.clearFindExp = "VT";
+        
+    
         EXEC SQL
         SELECT xem_nombre
         FROM xem_empresas
@@ -20,6 +27,21 @@ DATA VIEW VendedoresDVW
         cajaarribaVendedores.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
     }
 
+
+    ON FIND
+    { 
+      NullableDate fecha1 = 01/01/2001;
+      NullableString fecha2 = "01/01/2001";
+      
+
+            if(  ! vvh_fret_obra.isNull() )//LO HACE
+            rejectRecord();
+            else if( vvh_fret_obra == fecha1)//ESTO NO LO HACE
+            rejectRecord();
+        
+       session.displayToMessageBox(fecha1.toString());
+        
+    }
 
     BOX cajaarribaVendedores
     {

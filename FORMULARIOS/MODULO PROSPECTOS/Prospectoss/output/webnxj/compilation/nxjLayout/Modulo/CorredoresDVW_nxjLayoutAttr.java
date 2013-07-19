@@ -23,18 +23,18 @@ dodiv_label11__10(div_label11__10);
 
 private void setAttrFor_this(Widget widget)
 {
+	widget.addStyle("background-color","#cccccc");
 	widget.addAttribute("displaywidth","1005");
-	widget.addAttribute("name",".top.");
+	widget.setClass("data_view");
 	widget.addStyle("border-width","1");
+	widget.addAttribute("id",".top.");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","solid");
+	widget.addAttribute("name",".top.");
 	widget.addAttribute("displaytop","25");
-	widget.addAttribute("id",".top.");
 	widget.addAttribute("displayheight","470");
 	widget.addAttribute("fieldheight","470");
 	widget.addAttribute("fieldwidth","1005");
-	widget.addStyle("background-color","#cccccc");
-	widget.setClass("data_view");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -48,21 +48,21 @@ private void setAttrFor_div_RepeatingArea1__10(Widget widget)
 
 private void setAttrFor_RepeatingArea1__20(Widget widget)
 {
-	widget.addAttribute("altRowClass","alternate_row");
-	widget.addAttribute("field_weight","199");
-	widget.addAttribute("occurrences","11");
 	widget.addAttribute("row_class","ROW");
-	widget.addAttribute("repeat_style","Grid");
 	widget.addAttribute("list_columns",".top:vco_codigo.0:85;.top:vco_nombre.85:251;.top:vco_telefono1.336:108;.top:vco_telefono2.444:108");
+	widget.addAttribute("occurrences","11");
+	widget.addAttribute("altRowClass","alternate_row");
+	widget.addAttribute("repeat_style","Grid");
+	widget.addAttribute("field_weight","199");
 	widget.addAttribute("selected_row_class","selected_row");
 	widget.addAttribute("displaywidth","571");
+	widget.setClass("repeating_area");
+	widget.addAttribute("id",".top:RepeatingArea1.");
 	widget.addAttribute("displayleft","262");
 	widget.addAttribute("displaytop","165");
-	widget.addAttribute("id",".top:RepeatingArea1.");
 	widget.addAttribute("displayheight","181");
 	widget.addAttribute("fieldheight","181");
 	widget.addAttribute("fieldwidth","571");
-	widget.setClass("repeating_area");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -73,21 +73,21 @@ private void setAttrFor_div_vco_codigo__30(Widget widget)
 
 private void setAttrFor_vco_codigo__40(Widget widget)
 {
+	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","85");
-	widget.addAttribute("name",".top:vco_codigo.");
 	widget.addAttribute("size","14");
+	widget.addAttribute("displaywidth","85");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","0");
+	widget.addAttribute("name",".top:vco_codigo.");
 	widget.addAttribute("headertitle","Codigo");
 	widget.addAttribute("displaytop","0");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","85");
+	widget.addAttribute("type","text");
 	widget.addAttribute("title","vco_codigo");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -98,21 +98,21 @@ private void setAttrFor_div_vco_nombre__30(Widget widget)
 
 private void setAttrFor_vco_nombre__40(Widget widget)
 {
+	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","251");
-	widget.addAttribute("name",".top:vco_nombre.");
 	widget.addAttribute("size","41");
+	widget.addAttribute("displaywidth","251");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","301");
+	widget.addAttribute("name",".top:vco_nombre.");
 	widget.addAttribute("headertitle","Nombre");
 	widget.addAttribute("displaytop","0");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","251");
+	widget.addAttribute("type","text");
 	widget.addAttribute("title","vco_nombre");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -123,21 +123,21 @@ private void setAttrFor_div_vco_telefono1__30(Widget widget)
 
 private void setAttrFor_vco_telefono1__40(Widget widget)
 {
+	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","108");
-	widget.addAttribute("name",".top:vco_telefono1.");
 	widget.addAttribute("size","18");
+	widget.addAttribute("displaywidth","108");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","85");
+	widget.addAttribute("name",".top:vco_telefono1.");
 	widget.addAttribute("headertitle","Telefono 1");
 	widget.addAttribute("displaytop","0");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","108");
+	widget.addAttribute("type","text");
 	widget.addAttribute("title","vco_telefono1");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -148,21 +148,21 @@ private void setAttrFor_div_vco_telefono2__30(Widget widget)
 
 private void setAttrFor_vco_telefono2__40(Widget widget)
 {
+	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","108");
-	widget.addAttribute("name",".top:vco_telefono2.");
 	widget.addAttribute("size","18");
+	widget.addAttribute("displaywidth","108");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","193");
+	widget.addAttribute("name",".top:vco_telefono2.");
 	widget.addAttribute("headertitle","Telefono 2");
 	widget.addAttribute("displaytop","0");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","108");
+	widget.addAttribute("type","text");
 	widget.addAttribute("title","vco_telefono2");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -177,18 +177,18 @@ private void setAttrFor_div_box11__10(Widget widget)
 private void setAttrFor_box11__20(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaywidth","996");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
+	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addAttribute("displaytop","415");
-	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -221,18 +221,18 @@ private void setAttrFor_div_cajaarribaCorredores__10(Widget widget)
 private void setAttrFor_cajaarribaCorredores__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaywidth","996");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
+	widget.addAttribute("id",".top:cajaarribaCorredores.");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id",".top:cajaarribaCorredores.");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -249,16 +249,16 @@ private void setAttrFor_actualempresa__40(Widget widget)
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("name",".top:cajaarribaCorredores:actualempresa.");
 	widget.addAttribute("size","32");
+	widget.addAttribute("displaywidth","197");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","16");
+	widget.addAttribute("name",".top:cajaarribaCorredores:actualempresa.");
 	widget.addAttribute("displaytop","14");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -275,16 +275,16 @@ private void setAttrFor_actualusuario__40(Widget widget)
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name",".top:cajaarribaCorredores:actualusuario.");
 	widget.addAttribute("size","18");
+	widget.addAttribute("displaywidth","110");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","800");
+	widget.addAttribute("name",".top:cajaarribaCorredores:actualusuario.");
 	widget.addAttribute("displaytop","14");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -300,9 +300,9 @@ private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","CORREDORES DE VENTA");
 	widget.addAttribute("displaywidth","254");
+	widget.addAttribute("id",".top:cajaarribaCorredores:label1.");
 	widget.addAttribute("displayleft","241");
 	widget.addAttribute("displaytop","14");
-	widget.addAttribute("id",".top:cajaarribaCorredores:label1.");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","254");
 	widget.addStyle("text-align","left");
@@ -322,14 +322,14 @@ private void setAttrFor_label211__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","top: 1024");
 	widget.addAttribute("displaywidth","55");
+	widget.setClass("label");
+	widget.addAttribute("id",".top:cajaarribaCorredores:label211.");
 	widget.addAttribute("displayleft","778");
 	widget.addAttribute("displaytop","65");
-	widget.addAttribute("id",".top:cajaarribaCorredores:label211.");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","14");
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
-	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -345,18 +345,18 @@ private void setAttrFor_label11__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Corredores de Venta");
 	widget.addAttribute("displaywidth","162");
-	widget.addAttribute("displayleft","20");
-	widget.addStyle("font-size","14");
-	widget.addAttribute("displaytop","96");
 	widget.addStyle("color","Black");
+	widget.setClass("label");
+	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("id",".top:label11.");
+	widget.addAttribute("displayleft","20");
+	widget.addStyle("font-weight","bold");
+	widget.addAttribute("displaytop","96");
+	widget.addStyle("font-size","14");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
-	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("fieldwidth","162");
 	widget.addStyle("text-align","left");
-	widget.setClass("label");
-	widget.addStyle("font-weight","bold");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_RepeatingArea1__10(Widget div_RepeatingArea1__10)

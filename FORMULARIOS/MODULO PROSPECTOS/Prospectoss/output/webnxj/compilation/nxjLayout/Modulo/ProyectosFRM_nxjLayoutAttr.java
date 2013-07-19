@@ -19,16 +19,16 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displaywidth","1058");
-	widget.addAttribute("name","NXJForm");
+	widget.setClass("form");
 	widget.addAttribute("select_on_click","false");
 	widget.addAttribute("stylesheets","");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displayheight","720");
 	widget.addAttribute("fieldheight","720");
 	widget.addAttribute("fieldwidth","1058");
-	widget.addStyle("background-color","#999999");
 	widget.addAttribute("title","Proyectos en Venta");
-	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -67,9 +67,9 @@ private void setAttrFor_vpy_empresa__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","158");
 	widget.addAttribute("headertitle","Codigo de Empresa");
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProyectosDVW)vpy_empresa.");
 	widget.addAttribute("name","view1:vpy_empresa.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -81,9 +81,9 @@ private void setAttrFor_vpy_codigo__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","172");
 	widget.addAttribute("headertitle","Codigo de Proyecto");
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProyectosDVW)vpy_codigo.");
 	widget.addAttribute("name","view1:vpy_codigo.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -95,9 +95,9 @@ private void setAttrFor_vpy_nombre__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","259");
 	widget.addAttribute("headertitle","Nombre de Proyecto");
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProyectosDVW)vpy_nombre.");
 	widget.addAttribute("name","view1:vpy_nombre.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -164,9 +164,9 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProyectosDVW)cajaarribaPVenta:(Modulo.ProyectosDVW)actualempresa.");
 	widget.addAttribute("name","view1:cajaarribaPVenta:actualempresa.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -176,9 +176,9 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProyectosDVW)cajaarribaPVenta:(Modulo.ProyectosDVW)actualusuario.");
 	widget.addAttribute("name","view1:cajaarribaPVenta:actualusuario.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 

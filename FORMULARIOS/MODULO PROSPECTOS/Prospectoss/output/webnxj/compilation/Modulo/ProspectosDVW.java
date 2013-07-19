@@ -2485,7 +2485,7 @@ public class ProspectosDVW
 	vpp_estado.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	vpp_estado.setFindable(true);
 	vpp_estado.setUpdateable(true);
-	vpp_estado.setStopForInput(true);
+	vpp_estado.setStopForInput(false);
 	vpp_estado.setForegroundColor("Black");
 	vpp_estado.setFontSize("12");
 	vpp_estado_civil.setStyleClass("dropdown_list");
@@ -2547,7 +2547,7 @@ public class ProspectosDVW
 	vpp_motivo.us$setMultiValued(true);
 	vpp_motivo.us$setView("select");
 	vpp_motivo.us$setFieldLength(2);
-	vpp_motivo.setAutoAccept(true);
+	vpp_motivo.setAutoAccept(false);
 	vpp_motivo.us$setCandidateTargetColumnName("vpp_motivo");
 	vpp_motivo.setValueRetrievedDuringFetch(true);
 	vpp_motivo.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);

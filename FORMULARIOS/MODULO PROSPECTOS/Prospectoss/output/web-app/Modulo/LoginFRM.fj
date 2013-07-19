@@ -10,7 +10,7 @@ FORM LoginFRM
                 
             
                     COMMAND logincmd
-                        {
+                        {/*
                             if(cajagrandeLogin.xpr_password != xus_password)
                             {
                                 intentos = intentos + 1;
@@ -28,10 +28,10 @@ FORM LoginFRM
                                     
                             }     
                             else if (cajagrandeLogin.xpr_password == xus_password)
-                            { 
+                            { */cajagrandeLogin.xpr_usuario="rbernal";
                                 session.queueNextForm("Modulo.MenuFRM");
                            
-                            }
+                       //     }
                         }
                     
   

@@ -16,20 +16,20 @@ setAttrFor_this(this);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("field_type","button");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaywidth","138");
-	widget.addAttribute("name",".top.");
+	widget.addStyle("color","White");
+	widget.setClass("button");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","None");
+	widget.addAttribute("name",".top.");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaytop","25");
-	widget.addStyle("color","White");
-	widget.addAttribute("type","button");
 	widget.addAttribute("displayheight","48");
 	widget.addAttribute("fieldheight","48");
 	widget.addAttribute("fieldwidth","138");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("type","button");
 	widget.addAttribute("value","PRESS");
-	widget.setClass("button");
-	widget.addStyle("font-weight","bold");
 	widget.addStyle("overflow","hidden");
 }
 }

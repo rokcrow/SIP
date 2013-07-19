@@ -17,19 +17,19 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("header","default");
 	widget.addAttribute("footer","none");
 	widget.addAttribute("menu","default");
+	widget.addAttribute("header","default");
 	widget.addAttribute("localized","true");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displaywidth","1227");
-	widget.addAttribute("name","NXJForm");
+	widget.setClass("form");
 	widget.addAttribute("stylesheets","default.css");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displayheight","1493");
 	widget.addAttribute("fieldheight","1493");
 	widget.addAttribute("fieldwidth","1227");
-	widget.addStyle("background-color","#999999");
 	widget.addAttribute("title","RegistroProspectos");
-	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -58,6 +58,7 @@ private void setAttrFor_view1__20(Widget widget)
 	widget.addAttribute("desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656-displaywidth","112");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368631297100-options","Ubicacion=U;Precio=P;Fecha de Entrega=F;Distribucion=D;AtencionalCliente=A;TamanoTerrenoArea=T;Otros proyectos (Competencia)=O");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776395-labeltitle","Genero");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656-labeltitle","DatosBasicos");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776855-labeltitle","Comodesearialadistribuciondesuhogar");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621776705-labeltitle","Hacompradoconnosotrosantes");
@@ -79,7 +80,6 @@ private void setAttrFor_view1__20(Widget widget)
 	widget.addAttribute("form1_1368621090006_8ad35a9aa758968d7c2dc123ca3faf48fe97e649_1368632901511-options","SiestaInteresado=S;Medianamente Interesado=M;NoestaInteresado=N");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368630026034-options","Si=S;No=N");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368627710293-options","B1ano=A;B2anos=B;B3anos=C");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368629381691-labeltitle","DescripciondelMedio");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368628141777-options","Si=S;No=N");
 	widget.addAttribute("form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368627577005-options","R2ecamaras=A;R3ecamaras=B;R4ecamaras=C");
@@ -173,9 +173,9 @@ private void setAttrFor_Label14__40(Widget widget)
 	widget.addAttribute("labeltitle","Pais");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldwidth","26");
-	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)Label14.");
 	widget.addAttribute("id","view1:Label14.");
+	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("displaywidth","26");
 	widget.addStyle("overflow","hidden");
 }
@@ -204,9 +204,9 @@ private void setAttrFor_Label16__40(Widget widget)
 	widget.addAttribute("labeltitle","TelefonoFijo");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldwidth","80");
-	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)Label16.");
 	widget.addAttribute("id","view1:Label16.");
+	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("displaywidth","80");
 	widget.addStyle("overflow","hidden");
 }
@@ -473,9 +473,9 @@ private void setAttrFor_Label33__40(Widget widget)
 	widget.addAttribute("labeltitle","HavisitadootroproyectoCual");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldwidth","219");
-	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)Label33.");
 	widget.addAttribute("id","view1:Label33.");
+	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("displaywidth","219");
 	widget.addStyle("overflow","hidden");
 }
@@ -795,9 +795,9 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)cajaarribaRProspectos:(Modulo.ProspectosDVW)actualempresa.");
 	widget.addAttribute("name","view1:cajaarribaRProspectos:actualempresa.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -807,9 +807,9 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)cajaarribaRProspectos:(Modulo.ProspectosDVW)actualusuario.");
 	widget.addAttribute("name","view1:cajaarribaRProspectos:actualusuario.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -836,9 +836,9 @@ private void setAttrFor_label11__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","DatosBasicos");
 	widget.addAttribute("fieldwidth","112");
-	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)label11.");
 	widget.addAttribute("id","view1:label11.");
+	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("displaywidth","112");
 	widget.addStyle("overflow","hidden");
 }
@@ -970,9 +970,9 @@ private void setAttrFor_div_vco_nombre__30(Widget widget)
 
 private void setAttrFor_vco_nombre__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vco_nombre.");
 	widget.addAttribute("name","view1:vco_nombre.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -982,9 +982,9 @@ private void setAttrFor_div_vmp_descripcion__30(Widget widget)
 
 private void setAttrFor_vmp_descripcion__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vmp_descripcion.");
 	widget.addAttribute("name","view1:vmp_descripcion.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1032,9 +1032,9 @@ private void setAttrFor_div_vpp_califica__30(Widget widget)
 
 private void setAttrFor_vpp_califica__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_califica.");
 	widget.addAttribute("name","view1:vpp_califica.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1055,9 +1055,9 @@ private void setAttrFor_div_vpp_corredor__30(Widget widget)
 
 private void setAttrFor_vpp_corredor__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_corredor.");
 	widget.addAttribute("name","view1:vpp_corredor.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1067,9 +1067,9 @@ private void setAttrFor_div_vpp_correo__30(Widget widget)
 
 private void setAttrFor_vpp_correo__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_correo.");
 	widget.addAttribute("name","view1:vpp_correo.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1079,9 +1079,9 @@ private void setAttrFor_div_vpp_cuanta_correo2__30(Widget widget)
 
 private void setAttrFor_vpp_cuanta_correo2__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_cuanta_correo2.");
 	widget.addAttribute("name","view1:vpp_cuanta_correo2.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1351,9 +1351,9 @@ private void setAttrFor_div_vpp_mediodes__30(Widget widget)
 
 private void setAttrFor_vpp_mediodes__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_mediodes.");
 	widget.addAttribute("name","view1:vpp_mediodes.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1363,16 +1363,16 @@ private void setAttrFor_div_vpp_mediopub__30(Widget widget)
 
 private void setAttrFor_vpp_mediopub__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_mediopub.");
 	widget.addAttribute("name","view1:vpp_mediopub.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
 private void setAttrFor_div_vpp_motivo__30(Widget widget)
 {
-	widget.addStyle("left","471px");
-	widget.addStyle("top","1275px");
+	widget.addStyle("left","721px");
+	widget.addStyle("top","1331px");
 	widget.addStyle("width","223px");
 	widget.addStyle("height","21px");
 }
@@ -1402,9 +1402,9 @@ private void setAttrFor_div_vpp_nombre__30(Widget widget)
 
 private void setAttrFor_vpp_nombre__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_nombre.");
 	widget.addAttribute("name","view1:vpp_nombre.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1414,9 +1414,9 @@ private void setAttrFor_div_vpp_nombre2__30(Widget widget)
 
 private void setAttrFor_vpp_nombre2__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_nombre2.");
 	widget.addAttribute("name","view1:vpp_nombre2.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1426,9 +1426,9 @@ private void setAttrFor_div_vpp_numero__30(Widget widget)
 
 private void setAttrFor_vpp_numero__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_numero.");
 	widget.addAttribute("name","view1:vpp_numero.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1438,9 +1438,9 @@ private void setAttrFor_div_vpp_otro_proyecto__30(Widget widget)
 
 private void setAttrFor_vpp_otro_proyecto__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_otro_proyecto.");
 	widget.addAttribute("name","view1:vpp_otro_proyecto.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1450,9 +1450,9 @@ private void setAttrFor_div_vpp_pagomes__30(Widget widget)
 
 private void setAttrFor_vpp_pagomes__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_pagomes.");
 	widget.addAttribute("name","view1:vpp_pagomes.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1478,9 +1478,9 @@ private void setAttrFor_div_vpp_proyecto__30(Widget widget)
 
 private void setAttrFor_vpp_proyecto__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_proyecto.");
 	widget.addAttribute("name","view1:vpp_proyecto.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1490,9 +1490,9 @@ private void setAttrFor_div_vpp_referido_celular__30(Widget widget)
 
 private void setAttrFor_vpp_referido_celular__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_referido_celular.");
 	widget.addAttribute("name","view1:vpp_referido_celular.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1502,9 +1502,9 @@ private void setAttrFor_div_vpp_referido_correo__30(Widget widget)
 
 private void setAttrFor_vpp_referido_correo__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_referido_correo.");
 	widget.addAttribute("name","view1:vpp_referido_correo.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1514,9 +1514,9 @@ private void setAttrFor_div_vpp_referido_nombre__30(Widget widget)
 
 private void setAttrFor_vpp_referido_nombre__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_referido_nombre.");
 	widget.addAttribute("name","view1:vpp_referido_nombre.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1542,9 +1542,9 @@ private void setAttrFor_div_vpp_referido_telefono__30(Widget widget)
 
 private void setAttrFor_vpp_referido_telefono__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_referido_telefono.");
 	widget.addAttribute("name","view1:vpp_referido_telefono.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1570,9 +1570,9 @@ private void setAttrFor_div_vpp_telofi__30(Widget widget)
 
 private void setAttrFor_vpp_telofi__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_telofi.");
 	widget.addAttribute("name","view1:vpp_telofi.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1582,9 +1582,9 @@ private void setAttrFor_div_vpp_telres__30(Widget widget)
 
 private void setAttrFor_vpp_telres__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_telres.");
 	widget.addAttribute("name","view1:vpp_telres.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1594,9 +1594,9 @@ private void setAttrFor_div_vpp_vendedor__30(Widget widget)
 
 private void setAttrFor_vpp_vendedor__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_vendedor.");
 	widget.addAttribute("name","view1:vpp_vendedor.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1622,9 +1622,9 @@ private void setAttrFor_div_vpy_nombre__30(Widget widget)
 
 private void setAttrFor_vpy_nombre__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpy_nombre.");
 	widget.addAttribute("name","view1:vpy_nombre.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1634,9 +1634,9 @@ private void setAttrFor_div_vve_nombre__30(Widget widget)
 
 private void setAttrFor_vve_nombre__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vve_nombre.");
 	widget.addAttribute("name","view1:vve_nombre.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1646,9 +1646,9 @@ private void setAttrFor_div_xpc_nombre__30(Widget widget)
 
 private void setAttrFor_xpc_nombre__40(Widget widget)
 {
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)xpc_nombre.");
 	widget.addAttribute("name","view1:xpc_nombre.");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_view1__10(Widget div_view1__10)

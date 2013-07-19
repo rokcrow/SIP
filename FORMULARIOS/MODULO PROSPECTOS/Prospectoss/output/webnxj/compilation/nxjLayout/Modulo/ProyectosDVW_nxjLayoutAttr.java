@@ -23,18 +23,18 @@ dodiv_label11__10(div_label11__10);
 
 private void setAttrFor_this(Widget widget)
 {
+	widget.addStyle("background-color","#cccccc");
 	widget.addAttribute("displaywidth","1005");
-	widget.addAttribute("name",".top.");
+	widget.setClass("data_view");
 	widget.addStyle("border-width","1");
+	widget.addAttribute("id",".top.");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","solid");
+	widget.addAttribute("name",".top.");
 	widget.addAttribute("displaytop","25");
-	widget.addAttribute("id",".top.");
 	widget.addAttribute("displayheight","566");
 	widget.addAttribute("fieldheight","566");
 	widget.addAttribute("fieldwidth","1005");
-	widget.addStyle("background-color","#cccccc");
-	widget.setClass("data_view");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -48,21 +48,21 @@ private void setAttrFor_div_RepeatingArea1__10(Widget widget)
 
 private void setAttrFor_RepeatingArea1__20(Widget widget)
 {
-	widget.addAttribute("altRowClass","alternate_row");
-	widget.addAttribute("field_weight","199");
-	widget.addAttribute("occurrences","11");
 	widget.addAttribute("row_class","ROW");
-	widget.addAttribute("repeat_style","Grid");
 	widget.addAttribute("list_columns",".top:vpy_empresa.0:158;.top:vpy_codigo.158:172;.top:vpy_nombre.330:259;.top:vpy_estado.589:110");
+	widget.addAttribute("occurrences","11");
+	widget.addAttribute("altRowClass","alternate_row");
+	widget.addAttribute("repeat_style","Grid");
+	widget.addAttribute("field_weight","199");
 	widget.addAttribute("selected_row_class","selected_row");
 	widget.addAttribute("displaywidth","718");
+	widget.setClass("repeating_area");
+	widget.addAttribute("id",".top:RepeatingArea1.");
 	widget.addAttribute("displayleft","112");
 	widget.addAttribute("displaytop","165");
-	widget.addAttribute("id",".top:RepeatingArea1.");
 	widget.addAttribute("displayheight","277");
 	widget.addAttribute("fieldheight","277");
 	widget.addAttribute("fieldwidth","718");
-	widget.setClass("repeating_area");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -73,21 +73,21 @@ private void setAttrFor_div_vpy_empresa__30(Widget widget)
 
 private void setAttrFor_vpy_empresa__40(Widget widget)
 {
+	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","158");
-	widget.addAttribute("name",".top:vpy_empresa.");
 	widget.addAttribute("size","26");
+	widget.addAttribute("displaywidth","158");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","0");
+	widget.addAttribute("name",".top:vpy_empresa.");
 	widget.addAttribute("headertitle","Codigo de Empresa");
 	widget.addAttribute("displaytop","0");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","158");
+	widget.addAttribute("type","text");
 	widget.addAttribute("title","vpy_empresa");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -98,21 +98,21 @@ private void setAttrFor_div_vpy_codigo__30(Widget widget)
 
 private void setAttrFor_vpy_codigo__40(Widget widget)
 {
+	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","172");
-	widget.addAttribute("name",".top:vpy_codigo.");
 	widget.addAttribute("size","28");
+	widget.addAttribute("displaywidth","172");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","104");
+	widget.addAttribute("name",".top:vpy_codigo.");
 	widget.addAttribute("headertitle","Codigo de Proyecto");
 	widget.addAttribute("displaytop","0");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","172");
+	widget.addAttribute("type","text");
 	widget.addAttribute("title","vpy_codigo");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -123,22 +123,22 @@ private void setAttrFor_div_vpy_nombre__30(Widget widget)
 
 private void setAttrFor_vpy_nombre__40(Widget widget)
 {
-	widget.addAttribute("auto_complete","true");
-	widget.addAttribute("field_weight","299");
-	widget.addAttribute("field_type","text");
 	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","259");
-	widget.addAttribute("name",".top:vpy_nombre.");
+	widget.addAttribute("field_weight","299");
+	widget.addAttribute("auto_complete","true");
+	widget.addAttribute("field_type","text");
 	widget.addAttribute("size","43");
+	widget.addAttribute("displaywidth","259");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","234");
+	widget.addAttribute("name",".top:vpy_nombre.");
 	widget.addAttribute("headertitle","Nombre de Proyecto");
 	widget.addAttribute("displaytop","0");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","259");
+	widget.addAttribute("type","text");
 	widget.addAttribute("title","vpy_nombre");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -150,19 +150,19 @@ private void setAttrFor_div_vpy_estado__30(Widget widget)
 private void setAttrFor_vpy_estado__40(Widget widget)
 {
 	widget.addAttribute("options","Temporal=T;Real=R");
+	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("field_type","SELECT");
-	widget.addAttribute("accell_type","String");
-	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name",".top:vpy_estado.");
 	widget.addAttribute("size","1");
+	widget.addAttribute("displaywidth","110");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","351");
+	widget.addAttribute("name",".top:vpy_estado.");
 	widget.addAttribute("headertitle","Estado");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
 	widget.addAttribute("fieldwidth","110");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -178,15 +178,15 @@ private void setAttrFor_div_navigationbar1__30(Widget widget)
 private void setAttrFor_navigationbar1__40(Widget widget)
 {
 	widget.addAttribute("displaywidth","340");
+	widget.setClass("navigation");
+	widget.addAttribute("id",".top:navigationbar1.");
 	widget.addAttribute("displayleft","20");
 	widget.addAttribute("navigationtype","pages");
 	widget.addAttribute("linkinrement","1");
 	widget.addAttribute("displaytop","243");
-	widget.addAttribute("id",".top:navigationbar1.");
 	widget.addAttribute("displayheight","25");
 	widget.addAttribute("fieldheight","25");
 	widget.addAttribute("fieldwidth","340");
-	widget.setClass("navigation");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -201,18 +201,18 @@ private void setAttrFor_div_box11__10(Widget widget)
 private void setAttrFor_box11__20(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaywidth","996");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
+	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addAttribute("displaytop","511");
-	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -245,18 +245,18 @@ private void setAttrFor_div_cajaarribaPVenta__10(Widget widget)
 private void setAttrFor_cajaarribaPVenta__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displaywidth","996");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
+	widget.addAttribute("id",".top:cajaarribaPVenta.");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id",".top:cajaarribaPVenta.");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -273,16 +273,16 @@ private void setAttrFor_actualempresa__40(Widget widget)
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("name",".top:cajaarribaPVenta:actualempresa.");
 	widget.addAttribute("size","32");
+	widget.addAttribute("displaywidth","197");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","16");
+	widget.addAttribute("name",".top:cajaarribaPVenta:actualempresa.");
 	widget.addAttribute("displaytop","14");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -299,16 +299,16 @@ private void setAttrFor_actualusuario__40(Widget widget)
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name",".top:cajaarribaPVenta:actualusuario.");
 	widget.addAttribute("size","18");
+	widget.addAttribute("displaywidth","110");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","800");
+	widget.addAttribute("name",".top:cajaarribaPVenta:actualusuario.");
 	widget.addAttribute("displaytop","14");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.setClass("textfield");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -324,9 +324,9 @@ private void setAttrFor_label1__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","PROYECTOS EN VENTA");
 	widget.addAttribute("displaywidth","248");
+	widget.addAttribute("id",".top:cajaarribaPVenta:label1.");
 	widget.addAttribute("displayleft","241");
 	widget.addAttribute("displaytop","14");
-	widget.addAttribute("id",".top:cajaarribaPVenta:label1.");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","248");
 	widget.addStyle("text-align","left");
@@ -346,18 +346,18 @@ private void setAttrFor_label11__20(Widget widget)
 {
 	widget.addAttribute("labeltitle","Proyectos en venta");
 	widget.addAttribute("displaywidth","149");
-	widget.addAttribute("displayleft","20");
-	widget.addStyle("font-size","14");
-	widget.addAttribute("displaytop","96");
 	widget.addStyle("color","Black");
+	widget.setClass("label");
+	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("id",".top:label11.");
+	widget.addAttribute("displayleft","20");
+	widget.addStyle("font-weight","bold");
+	widget.addAttribute("displaytop","96");
+	widget.addStyle("font-size","14");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
-	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("fieldwidth","149");
 	widget.addStyle("text-align","left");
-	widget.setClass("label");
-	widget.addStyle("font-weight","bold");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_RepeatingArea1__10(Widget div_RepeatingArea1__10)

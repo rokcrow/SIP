@@ -106,12 +106,13 @@
         key = "CajaSegui:PUBLIC_vps_prosigue:vps_califica."
         multi_valued = "true"
         retrieve_value = "true"
+        return_values_into = "vps_califica"
         style_class = "textfield"
         target_field = "vps_califica"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317475652"
         updateable = "true"
         view = "text"
-        zoom_form = "parametros/gradointe">
+        zoom_form = "Modulo/GradoInteresFRM">
     </field>
     <field 
         accell_type = "String"

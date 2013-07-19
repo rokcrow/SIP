@@ -1267,7 +1267,7 @@ public class SeguimientoFRM
 		    setValueRetrievedDuringFetch(true);
 		    setFindable(true);
 		    setUpdateable(true);
-		    setZoomFormName("parametros/gradointe");
+		    setZoomFormName("Modulo/GradoInteresFRM");
 		    setZoomEnabled(true);
 		    us$executesDataAcceptValueChanges = true;
 		} // <init>
@@ -1293,6 +1293,17 @@ public class SeguimientoFRM
 		setStartInAddMode(false);
 		setClearAfterAdd(false);
 		us$setBindingType("connection");
+		vps_califica.setZoomReturnValuesInto(new NXJZoomReturnValuesInto()
+		{
+
+		    public void assignValues(com.unify.nxj.mgr.datatypes.Register[] values)
+			throws Exception
+		    {
+			if (values.length != 1)
+			    throw new Exception("TODO: handle value array size mismatch");
+			vps_califica.us$assignZoomValue(values[0]);
+		    } // assignValues
+		});
 		label1.setStyleClass("label");
 		label1.setFontSize("12");
 		textfield1.setStyleClass("textfield");

@@ -1169,15 +1169,15 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 1249px; left: 471px; width:41px; height:16px">
+                    style="position: absolute; top: 1305px; left: 721px; width:41px; height:16px">
                     
                     
                     <label
                         binary_variables=""
                         class="label"
                         displayheight="16"
-                        displayleft="471"
-                        displaytop="1249"
+                        displayleft="721"
+                        displaytop="1305"
                         displaywidth="41"
                         id=".top:Label43."
                         key=".top:Label43."
@@ -1196,14 +1196,14 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 1249px; left: 721px; width:110px; height:16px">
+                    style="position: absolute; top: 1249px; left: 473px; width:110px; height:16px">
                     
                     
                     <label
                         binary_variables=""
                         class="label"
                         displayheight="16"
-                        displayleft="721"
+                        displayleft="473"
                         displaytop="1249"
                         displaywidth="110"
                         id=".top:Label44."
@@ -1932,23 +1932,23 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 1275px; left: 770px; width:198px; height:22px">
+                    style="position: absolute; top: 1275px; left: 523px; width:170px; height:22px">
 
                     <input
                         binary_variables=""
                         case_conversion="Upper"
                         class="textfield"
                         displayheight="22"
-                        displayleft="770"
+                        displayleft="523"
                         displaytop="1275"
-                        displaywidth="198"
+                        displaywidth="170"
                         field_type="text"
-                        field_weight="4899"
+                        field_weight="4799"
                         findable="false"
                         key=".top:vco_nombre."
                         name=".top:vco_nombre."
                         original_name="textfield1"
-                        size="33"
+                        size="28"
                         stop_for_input="false"
                         target_field=""
                         type="text"
@@ -2130,7 +2130,7 @@
                         displaywidth="45"
                         field_length="2"
                         field_type="text"
-                        field_weight="4999"
+                        field_weight="4899"
                         findable="true"
                         immediate="true"
                         key=".top:vpp_califica."
@@ -2190,7 +2190,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 1275px; left: 721px; width:45px; height:22px">
+                    style="position: absolute; top: 1275px; left: 473px; width:45px; height:22px">
 
                     <input
                         accell_type="String"
@@ -2201,12 +2201,12 @@
                         db_length="3"
                         db_type="String"
                         displayheight="22"
-                        displayleft="721"
+                        displayleft="473"
                         displaytop="1275"
                         displaywidth="45"
                         field_length="3"
                         field_type="text"
-                        field_weight="4799"
+                        field_weight="4699"
                         findable="true"
                         immediate="true"
                         key=".top:vpp_corredor."
@@ -2634,7 +2634,7 @@
                         explicit_search_mode="default"
                         field_length="2"
                         field_type="SELECT"
-                        field_weight="5199"
+                        field_weight="5099"
                         findable="true"
                         key=".top:vpp_estado."
                         multi_valued="true"
@@ -2643,7 +2643,7 @@
                         original_name="select1"
                         retrieve_value="true"
                         size="1"
-                        stop_for_input="true"
+                        stop_for_input="false"
                         target_field="vpp_estado"
                         uid="form1_1368621090006_8ad35a9aa758968d7c2dc123ca3faf48fe97e649_1368632901511"
                         updateable="true"
@@ -2765,7 +2765,7 @@
                         target_field="vpp_fecha"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2799,7 +2799,7 @@
                         target_field="vpp_fecha_nacio"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 
@@ -2836,7 +2836,7 @@
                         target_field="vpp_fecha_visita"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2870,7 +2870,7 @@
                         target_field="vpp_fechaestado"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -3031,24 +3031,24 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 1275px; left: 471px; width:223px; height:21px">
+                    style="position: absolute; top: 1331px; left: 721px; width:223px; height:21px">
 
                     <select
                         accell_type="String"
-                        auto_accept="true"
+                        auto_accept="false"
                         auto_resize_width="false"
                         binary_variables=""
                         class="dropdown_list"
                         db_length="1"
                         db_type="String"
                         displayheight="21"
-                        displayleft="471"
-                        displaytop="1275"
+                        displayleft="721"
+                        displaytop="1331"
                         displaywidth="223"
                         explicit_search_mode="default"
                         field_length="2"
                         field_type="SELECT"
-                        field_weight="4699"
+                        field_weight="5199"
                         findable="true"
                         key=".top:vpp_motivo."
                         multi_valued="true"
@@ -3793,7 +3793,7 @@
                         displaytop="1331"
                         displaywidth="288"
                         field_type="text"
-                        field_weight="5099"
+                        field_weight="4999"
                         findable="false"
                         key=".top:xpc_nombre."
                         name=".top:xpc_nombre."
