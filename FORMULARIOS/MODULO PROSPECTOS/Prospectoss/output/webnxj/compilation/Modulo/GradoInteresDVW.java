@@ -106,6 +106,7 @@ import com.unify.pub.NameValuePair;
 public class GradoInteresDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
+    /*multi_valued*/ NullableStringVariable xpc_clase2 = NullableFactory.createNullableStringVariable(this, "xpc_clase2", true, false);
     NullableString empresanombre = NullableFactory.createNullableString("empresanombre");
 
     public void initDataView()
@@ -166,11 +167,16 @@ public class GradoInteresDVW
 	cajaarribaGInteres.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
 	cajaarribaGInteres.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
     } // initDataView
+
+    public void onFind()
+	throws Exception
+    {
+    } // onFind
     private GradoInteresDVW GradoInteresDVW = this;
     public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
     public /*multi_valued*/ NullableStringField xpc_califica = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_califica", true, true, 2);
     public /*multi_valued*/ NullableStringField xpc_clase = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_clase", true, true, 2);
-    public /*multi_valued*/ NullableStringField xpc_codigo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_codigo", true, true, 2);
+    public /*multi_valued*/ NullableNumericField xpc_codigo = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "xpc_codigo", true, true, 2);
     public /*multi_valued*/ NullableNumericField xpc_dias_pac = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "xpc_dias_pac", true, true, 6);
     public /*multi_valued*/ NullableNumericField xpc_dias_pvt = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "xpc_dias_pvt", true, true, 6);
     public /*multi_valued*/ NullableStringField xpc_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_nombre", true, true, 100);

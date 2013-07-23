@@ -712,7 +712,10 @@ DATA VIEW ProspectosDVW
             SELECT xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt
             FROM   xpc_proscalif
             WHERE  xpc_codigo = :vpp_califica
+             AND  xpc_codigo < 22
             into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+            
+             
             
             if (session.status == StatusCode.SS_NOREC) {
                         session.displayToMessageBox("No existe la calificacion seleccionado en el maestro");
@@ -734,7 +737,11 @@ DATA VIEW ProspectosDVW
             FROM   xpc_proscalif
             WHERE  xpc_codigo = :vpp_califica
             into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+            
+        
         }
+        
+       
     }
 
     FIELD vco_nombre

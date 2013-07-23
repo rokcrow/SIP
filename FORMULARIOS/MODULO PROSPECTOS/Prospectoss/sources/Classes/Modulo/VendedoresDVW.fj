@@ -7,7 +7,7 @@ DATA VIEW VendedoresDVW
 
     NullableString empresanombre;
     multi_valued NullableStringVariable vvh_empresa, vvh_proyecto, vvh_roll, vve_vendedora;
-    multi_valued NullableDateVariable vvh_fret_obra;
+    multi_valued NullableDateVariable vvh_fret_obra, vve_ffinal;
 
     INIT DATA VIEW
     {
@@ -30,16 +30,22 @@ DATA VIEW VendedoresDVW
 
     ON FIND
     { 
-      NullableDate fecha1 = 01/01/2001;
-      NullableString fecha2 = "01/01/2001";
+  
       
+/*preguntar si es igual a 01/01/2001
+si lo es, hacer vvh_fre_obra null
+y luego, esto de abajo.*/
 
-            if(  ! vvh_fret_obra.isNull() )//LO HACE
+
+/*Se unifica todo; el vvh_fret_obra que contenga 01/01/2001, se vuelve nulo, de esta forma 
+todo el que no contenga 01/01/2001 será nulo y podrá visualizarce.*/
+            if( vvh_fret_obra.toString().contentEquals("01/01/2001") == true)
+            {
+                vvh_fret_obra.setNull();
+            }
+            
+            if( ! vvh_fret_obra.isNull() )
             rejectRecord();
-            else if( vvh_fret_obra == fecha1)//ESTO NO LO HACE
-            rejectRecord();
-        
-       session.displayToMessageBox(fecha1.toString());
         
     }
 
@@ -71,6 +77,7 @@ DATA VIEW VendedoresDVW
             SELECT vve_nombre FROM vve_vendedora
             WHERE vve_codigo = :vvh_vendedora
             INTO NombVend;
+           
         }
     }
     

@@ -647,7 +647,7 @@ public class ProspectosDVW
 		ResultSet us$rs9 = null;
 		try
 		    {
-		    us$stmt9 = us$conn9.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+		    us$stmt9 = us$conn9.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?  AND xpc_codigo < 22");
 		    vpp_califica.us$setSqlParameterValue(us$stmt9, 1);
 		    us$rs9 = us$stmt9.executeQuery();
 		    int us$rowsTouched9 = 0;

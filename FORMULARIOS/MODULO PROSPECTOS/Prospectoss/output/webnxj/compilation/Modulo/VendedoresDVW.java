@@ -111,6 +111,7 @@ public class VendedoresDVW
     /*multi_valued*/ NullableStringVariable vvh_roll = NullableFactory.createNullableStringVariable(this, "vvh_roll", true, false);
     /*multi_valued*/ NullableStringVariable vvh_proyecto = NullableFactory.createNullableStringVariable(this, "vvh_proyecto", true, false);
     /*multi_valued*/ NullableStringVariable vvh_empresa = NullableFactory.createNullableStringVariable(this, "vvh_empresa", true, false);
+    /*multi_valued*/ NullableDateVariable vve_ffinal = NullableFactory.createNullableDateVariable(this, "vve_ffinal", true, false);
     /*multi_valued*/ NullableDateVariable vvh_fret_obra = NullableFactory.createNullableDateVariable(this, "vvh_fret_obra", true, false);
 
     public void initDataView()
@@ -211,15 +212,12 @@ public class VendedoresDVW
     public void onFind()
 	throws Exception
     {
-	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	NullableDate fecha1 = (NullableDate)NullableFactory.createNullableDate("fecha1").assign(us$registerPool.allocateRegister().load(1 / 1 / 2001));
-	NullableString fecha2 = (NullableString)NullableFactory.createNullableString("fecha2").assign(us$registerPool.allocateRegister().load("01/01/2001"));
+	if (vvh_fret_obra.toString().contentEquals("01/01/2001") == true)
+	    {
+	    vvh_fret_obra.setNull();
+	    }
 	if (!vvh_fret_obra.isNull())
 	    rejectRecord();
-	else
-	    if (us$registerPool.allocateRegister().load(vvh_fret_obra).eqOp(us$registerPool.allocateRegister().load(fecha1)).getBooleanValueNullOk())
-		rejectRecord();
-	getSession().displayToMessageBox(fecha1.toString());
     } // onFind
     private VendedoresDVW VendedoresDVW = this;
     public /*multi_valued*/ NullableStringField NombVend = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombVend", true, true, 100);
@@ -293,6 +291,7 @@ public class VendedoresDVW
 	    us$setFieldLength(3);
 	    us$setCandidateTargetColumnName("vvh_vendedora");
 	    setValueRetrievedDuringFetch(true);
+	    setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    setFindable(true);
 	    setUpdateable(true);
 	    us$executesDataAcceptValueChanges = true;

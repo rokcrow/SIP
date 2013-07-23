@@ -18,17 +18,17 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("labeltitle","TITULO");
 	widget.addAttribute("displaywidth","522");
 	widget.addStyle("color","White");
-	widget.setClass("label");
-	widget.addAttribute("id",".top.");
 	widget.addAttribute("displayleft","25");
-	widget.addAttribute("name",".top.");
-	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaytop","25");
-	widget.addStyle("font-size","18");
+	widget.addAttribute("id",".top.");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldheight","23");
+	widget.addStyle("font-size","18");
 	widget.addAttribute("fieldwidth","522");
+	widget.addStyle("font-weight","bold");
+	widget.setClass("label");
 	widget.addStyle("text-align","left");
+	widget.addAttribute("name",".top.");
 	widget.addStyle("overflow","hidden");
 }
 }
