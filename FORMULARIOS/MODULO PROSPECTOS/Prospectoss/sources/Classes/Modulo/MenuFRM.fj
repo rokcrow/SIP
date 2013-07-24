@@ -294,6 +294,9 @@ FORM MenuFRM
                                             RegistroPadd.command = "Go To Form"; 
                                             RegistroPadd.commandParameter = ("Modulo.ProspectosFRM");
                                             
+                                      /*      cajagrandeMenu.MTraspasa = "1";
+                                            session.displayToMessageBox(cajagrandeMenu.MTraspasa);*/
+                                            
                                             ProspectosMenu.add(RegistroPadd);
                                             VentasMenu.add(ProspectosMenu);
                                         }
@@ -305,6 +308,9 @@ FORM MenuFRM
                                             SeguimientoPadd.title = "Seguimiento de Prospectos";
                                             SeguimientoPadd.command = "Go To Form"; 
                                             SeguimientoPadd.commandParameter = ("Modulo.SeguimientoFRM");
+                                            
+                                         /*   cajagrandeMenu.MTraspasa = "2";
+                                            session.displayToMessageBox(cajagrandeMenu.MTraspasa);*/
                                             
                                             ProspectosMenu.add(SeguimientoPadd);
                                         }
@@ -564,6 +570,11 @@ FORM MenuFRM
         }
         
         
+        FIELD MTraspasa
+        {
+        
+        }
+
     }
 
 

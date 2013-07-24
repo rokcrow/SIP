@@ -64,7 +64,7 @@
                         displaytop="169"
                         displaywidth="348"
                         field_type="SELECT"
-                        field_weight="199"
+                        field_weight="299"
                         findable="false"
                         immediate="true"
                         key="cajagrandeMenu:EMPRESA."
@@ -85,6 +85,32 @@
                 <div
                     binary_variables=""
                     view="div"
+                    style="position: absolute; top: 134px; left: 70px; width:41px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="70"
+                        displaytop="134"
+                        displaywidth="41"
+                        field_type="text"
+                        field_weight="199"
+                        findable="false"
+                        key="cajagrandeMenu:MTraspasa."
+                        name="cajagrandeMenu:MTraspasa."
+                        original_name="textfield1"
+                        size="6"
+                        target_field=""
+                        type="text"
+                        uid="modulo_form1_1369423869434_1e3d100accdeaaaafacf80bf1e96847e91d02ffa_1374678330196"
+                        view="text"
+                        style="visibility:hidden">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
                     style="position: absolute; top: 281px; left: 365px; width:348px; height:22px">
 
                     <input
@@ -95,7 +121,7 @@
                         displaytop="281"
                         displaywidth="348"
                         field_type="text"
-                        field_weight="299"
+                        field_weight="399"
                         findable="false"
                         immediate="false"
                         key="cajagrandeMenu:NombreForma1."
@@ -123,7 +149,7 @@
                         displayleft="4"
                         displaytop="384"
                         displaywidth="996"
-                        field_weight="399"
+                        field_weight="499"
                         id="cajagrandeMenu:cajaabajoMenu."
                         key="cajagrandeMenu:cajaabajoMenu."
                         original_name="box1"

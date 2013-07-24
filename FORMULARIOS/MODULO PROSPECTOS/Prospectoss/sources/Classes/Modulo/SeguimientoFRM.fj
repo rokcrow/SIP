@@ -13,18 +13,24 @@ FORM SeguimientoFRM
     
         BEFORE FORM
         {
-        CajaSegui.vpp_estadopro.clearFindExp = "A";
-        
-        EXEC SQL
-            SELECT xem_nombre
-            FROM xem_empresas
-            WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
-            INTO  empresanombre;
+            CajaSegui.vpp_estadopro.clearFindExp = "A";
             
-        
-            CajaSegui.cajaarribaSProspectos.actualempresa  = empresanombre ;
-            CajaSegui.cajaarribaSProspectos.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+            EXEC SQL
+                SELECT xem_nombre
+                FROM xem_empresas
+                WHERE xem_codigo = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                INTO  empresanombre;
+                
+            
+                CajaSegui.cajaarribaSProspectos.actualempresa  = empresanombre ;
+                CajaSegui.cajaarribaSProspectos.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+                
+                Modulo.MenuFRM#cajagrandeMenu.MTraspasa = "2";
+                
+          
         }
+  
+
     BOX CajaSegui
     {
         FIELD vpp_fechaestado
@@ -174,6 +180,12 @@ FORM SeguimientoFRM
             multi_valued NullableStringVariable  vps_proyecto;
             multi_valued NullableNumericVariable vps_prospecto;
             
+            AFTER FIND
+            {
+               session.queueNextField(vps_mediocon);
+            }
+            
+            
             ON CLEAR TO ADD
             {
               vps_fecha   = session.currentDate;
@@ -207,7 +219,7 @@ FORM SeguimientoFRM
                      else if (xpc_califica == "P") vps_estado = "N";
                
                  NullableDate f_pcontacto;
-               
+               /*
                 EXEC SQL
                             SELECT vps_f_pcontacto
                             FROM   vps_prosigue
@@ -216,13 +228,15 @@ FORM SeguimientoFRM
                             AND    vps_consecu = :vps_consecu -1
                             INTO   f_pcontacto;
                 
-                if ( session.status != StatusCode.SS_NORM )
+                if ( session.status != StatusCode.SS_NORM )*/
                     f_pcontacto = session.currentDate;
                 if (vpy_tipo == "A") 
                     vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
                 else
                     vps_f_pcontacto = f_pcontacto + xpc_dias_pvt;                
             }
+            
+
             FIELD textfield1
             {
             }
@@ -253,7 +267,8 @@ FORM SeguimientoFRM
                         FROM   xpc_proscalif
                         WHERE  xpc_codigo = :vps_califica
                         into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
-                        if (session.status == StatusCode.SS_NOREC) {
+                      
+                          if (session.status == StatusCode.SS_NOREC) {
                                     session.displayToMessageBox("No existe la calificacion seleccionado en el maestro");
                                     rejectOperation();
                                     }
@@ -262,7 +277,16 @@ FORM SeguimientoFRM
                         if (xpc_califica == "I") vps_estado = "S";
                         else if (xpc_califica == "M") vps_estado = "M";
                             else if (xpc_califica == "P") vps_estado = "N"; 	                                               
-                        }               
+                        }   
+                        
+                        if (vps_califica == "22" || vps_califica == "21"|| vps_califica == "20"|| vps_califica == "19"|| vps_califica == "18"|| vps_califica == "17"|| vps_califica == "16"
+                        || vps_califica == "15"|| vps_califica == "14"|| vps_califica == "13"|| vps_califica == "12"|| vps_califica == "11"|| vps_califica == "10"|| vps_califica == "09"
+                        || vps_califica == "08"|| vps_califica == "07"|| vps_califica == "06"|| vps_califica == "05"|| vps_califica == "04"|| vps_califica == "03"|| vps_califica == "02"
+                        || vps_califica == "01")
+                            {
+                                session.displayToMessageBox("No es una calificacion permitida.");
+                                rejectOperation();
+                            }          
                     }
                     WHEN VALUE CHANGES
                     {

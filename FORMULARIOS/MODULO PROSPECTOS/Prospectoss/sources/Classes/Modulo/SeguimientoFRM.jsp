@@ -16,7 +16,7 @@
         delete_allowed="false"
         displayheight="1025"
         displaywidth="1209"
-        field_order=""
+        field_order="CajaSegui.?CajaSegui:cajaarribaSProspectos.?CajaSegui:cajaarribaSProspectos:actualempresa.?CajaSegui:cajaarribaSProspectos:actualusuario.?CajaSegui:vpp_numero.?CajaSegui:vpp_estadopro.?CajaSegui:vpp_proyecto.?CajaSegui:vpy_nombre.?CajaSegui:vpp_fecha.?CajaSegui:vpp_nombre.?CajaSegui:vpp_direccion.?CajaSegui:vpp_fechaestado.?CajaSegui:vpp_correo.?CajaSegui:vpp_telofi.?CajaSegui:vpp_nacionalidad.?CajaSegui:vpp_cuanta_correo2.?CajaSegui:vpp_telres.?CajaSegui:vpp_ciudad.?CajaSegui:PUBLIC_vps_prosigue.?CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1.?CajaSegui:PUBLIC_vps_prosigue:vps_consecu.?CajaSegui:PUBLIC_vps_prosigue:vps_fecha.?CajaSegui:PUBLIC_vps_prosigue:vps_hora.?CajaSegui:PUBLIC_vps_prosigue:vps_usuario.?CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.?CajaSegui:PUBLIC_vps_prosigue:vps_califica.?CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.?CajaSegui:PUBLIC_vps_prosigue:vps_estado.?CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.?CajaSegui:PUBLIC_vps_prosigue:vps_comentario1.?CajaSegui:PUBLIC_vps_prosigue:textfield1.?CajaSegui:vpp_vendedor.?CajaSegui:vve_nombre.?CajaSegui:box11."
         footer="none"
         form_height="1025"
         form_width="1209"
@@ -111,12 +111,13 @@
                                 row_class="ROW"
                                 selected_row_class="selected_row"
                                 uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317475602"
-                                view="repeating_area">
+                                view="repeating_area"
+                                style="font-size: 10px">
 
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 0px; width:74px; height:22px">
+                                    style="position: absolute; top: 0px; left: 0px; width:78px; height:22px">
 
                                     <input
                                         accell_type="Numeric"
@@ -150,7 +151,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 74px; width:67px; height:22px">
+                                    style="position: absolute; top: 0px; left: 78px; width:67px; height:22px">
 
                                     <input
                                         accell_type="Date"
@@ -184,7 +185,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 141px; width:61px; height:22px">
+                                    style="position: absolute; top: 0px; left: 145px; width:53px; height:22px">
 
                                     <input
                                         accell_type="Time"
@@ -218,7 +219,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 202px; width:54px; height:22px">
+                                    style="position: absolute; top: 0px; left: 198px; width:54px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -252,7 +253,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 256px; width:93px; height:21px">
+                                    style="position: absolute; top: 0px; left: 252px; width:103px; height:21px">
 
                                     <select
                                         accell_type="String"
@@ -289,10 +290,11 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 349px; width:74px; height:22px">
+                                    style="position: absolute; top: 0px; left: 355px; width:85px; height:22px">
 
                                     <input
                                         accell_type="String"
+                                        auto_accept="true"
                                         binary_variables=""
                                         class="textfield"
                                         db_length="2"
@@ -306,6 +308,7 @@
                                         field_weight="599"
                                         findable="true"
                                         headertitle="Seguimiento"
+                                        immediate="true"
                                         key="CajaSegui:PUBLIC_vps_prosigue:vps_califica."
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_califica."
@@ -324,7 +327,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 423px; width:237px; height:22px">
+                                    style="position: absolute; top: 0px; left: 440px; width:221px; height:22px">
 
                                     <input
                                         binary_variables=""
@@ -352,7 +355,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 660px; width:94px; height:21px">
+                                    style="position: absolute; top: 0px; left: 661px; width:76px; height:21px">
 
                                     <select
                                         accell_type="String"
@@ -372,7 +375,7 @@
                                         key="CajaSegui:PUBLIC_vps_prosigue:vps_estado."
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_estado."
-                                        options="Si esta interesado=S&#59;Medianamente Interesado=M&#59;No esta interesado=N"
+                                        options="Siestainteresado=S&#59;MedianamenteInteresado=M&#59;Noestainteresado=N"
                                         original_name="vps_estado"
                                         retrieve_value="true"
                                         size="1"
@@ -390,10 +393,11 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 754px; width:93px; height:22px">
+                                    style="position: absolute; top: 0px; left: 737px; width:110px; height:22px">
 
                                     <input
                                         accell_type="Date"
+                                        auto_accept="false"
                                         binary_variables=""
                                         class="textfield"
                                         db_length="10"
@@ -407,6 +411,7 @@
                                         field_weight="899"
                                         findable="true"
                                         headertitle="Fecha Contacto"
+                                        immediate="false"
                                         key="CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto."
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto."

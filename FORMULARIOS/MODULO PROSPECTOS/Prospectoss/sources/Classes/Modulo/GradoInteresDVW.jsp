@@ -54,7 +54,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: -97px; left: 7px; width:823px; height:285px">
+                    style="position: absolute; top: -97px; left: -193px; width:823px; height:285px">
 
                     <div
                         alternate_row_class="alternate_row"
@@ -62,10 +62,10 @@
                         class="repeating_area"
                         disable_wrap="false"
                         displayheight="285"
-                        displayleft="350"
+                        displayleft="150"
                         displaytop="165"
                         displaywidth="823"
-                        field_weight="199"
+                        field_weight="99"
                         horizontal_scroll_width="100%"
                         id=".top:RepeatingArea1."
                         key=".top:RepeatingArea1."
@@ -84,7 +84,7 @@
                             style="position: absolute; top: 0px; left: 0px; width:55px; height:22px">
 
                             <input
-                                accell_type="Numeric"
+                                accell_type="String"
                                 binary_variables=""
                                 class="textfield"
                                 db_length="2"
@@ -357,7 +357,7 @@
                         displayleft="4"
                         displaytop="2"
                         displaywidth="996"
-                        field_weight="99"
+                        field_weight="199"
                         id=".top:cajaarribaGInteres."
                         key=".top:cajaarribaGInteres."
                         original_name="box1"

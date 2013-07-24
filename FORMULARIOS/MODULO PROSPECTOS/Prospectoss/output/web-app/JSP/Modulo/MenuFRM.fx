@@ -34,7 +34,7 @@
         binary_variables = ""
         display_name = "EMPRESA"
         field_type = "SELECT"
-        field_weight = "199"
+        field_weight = "299"
         findable = "false"
         immediate = "true"
         key = "cajagrandeMenu:EMPRESA."
@@ -49,9 +49,23 @@
     </field>
     <field 
         binary_variables = ""
+        display_name = "MTraspasa"
+        field_type = "text"
+        field_weight = "199"
+        findable = "false"
+        key = "cajagrandeMenu:MTraspasa."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "modulo_form1_1369423869434_1e3d100accdeaaaafacf80bf1e96847e91d02ffa_1374678330196"
+        view = "text"
+        visible = "false">
+    </field>
+    <field 
+        binary_variables = ""
         display_name = "NombreForma1"
         field_type = "text"
-        field_weight = "299"
+        field_weight = "399"
         findable = "false"
         immediate = "false"
         key = "cajagrandeMenu:NombreForma1."
@@ -67,7 +81,7 @@
         binary_variables = ""
         commands = ""
         display_name = "cajaabajoMenu"
-        field_weight = "399"
+        field_weight = "499"
         key = "cajagrandeMenu:cajaabajoMenu."
         original_name = "box1"
         style_class = "box"

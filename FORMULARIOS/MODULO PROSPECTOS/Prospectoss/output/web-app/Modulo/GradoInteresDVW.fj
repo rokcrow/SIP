@@ -5,13 +5,14 @@ package Modulo;
 DATA VIEW GradoInteresDVW
 {
     multi_valued NullableStringVariable xpc_clase2;
-   NullableString empresanombre;
+    NullableString empresanombre, GTraspasa1, GTraspasa2;
+
 
 
 
     INIT DATA VIEW
     {
-       // xpc_clase.clearFindExp = "Seguimiento";
+       
     
         EXEC SQL
         SELECT xem_nombre
@@ -28,28 +29,18 @@ DATA VIEW GradoInteresDVW
 
     ON FIND
     {
-      /*  if(xpc_codigo > 22 )
-        {//session.displayToMessageBox("segui");
-        
-            rejectRecord();
-        }
-           /* if(xpc_codigo == 1)
-            xpc_codigo.toString("01");
-            
-            if(xpc_codigo == 2)
-            xpc_codigo.toString("02");
-            
-         xpc_codigo = "01";
-            xpc_codigo = "02";
-            xpc_codigo = "03";
-            xpc_codigo = "04";
-            xpc_codigo = "05";
-            xpc_codigo = "06";
-            xpc_codigo = "07";
-            xpc_codigo = "08";
-            xpc_codigo = "09";
-        */
-    
+        if(Modulo.MenuFRM#cajagrandeMenu.MTraspasa == "1" )
+        {        
+                if (xpc_clase == "S")
+                rejectRecord();
+         } 
+         else if(Modulo.MenuFRM#cajagrandeMenu.MTraspasa == "2" )
+         {
+                if (xpc_clase == "P")
+                rejectRecord();
+
+         }    
+
     }
 
     BOX cajaarribaGInteres

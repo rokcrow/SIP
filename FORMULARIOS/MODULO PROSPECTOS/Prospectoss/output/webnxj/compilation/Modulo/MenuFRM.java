@@ -145,7 +145,7 @@ public class MenuFRM
 	    NXJMenu ContabilidadMenu = new NXJMenu("Contabilidad");
 	    NXJMenu PlanillaMenu = new NXJMenu("Planilla");
 	    Servicios.ServAdmin SrvTieneAcceso = new Servicios.ServAdmin();
-	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("mantenimie"))).getBooleanValueNullOk())
+	    if (us$registerPool.allocateRegister().load(SrvTieneAcceso.tieneacceso(new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo), new com.unify.nxj.mgr.datatypes.Register().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario), new com.unify.nxj.mgr.datatypes.Register().load("vendedor"))).getBooleanValueNullOk())
 		{
 		NXJMenuItem Sociedadesadd = new NXJMenuItem("Sociedades");
 		Sociedadesadd.setTitle("Sociedades");
@@ -583,6 +583,7 @@ public class MenuFRM
 	} // EMPRESA
 
 	public EMPRESA EMPRESA = new EMPRESA();
+	public NullableStringField MTraspasa = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "MTraspasa", false, true, 100);
 	public NullableStringField NombreForma1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombreForma1", false, true, 100);
 	public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
 	public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
@@ -691,6 +692,10 @@ public class MenuFRM
 
 	private void cajagrandeMenupropertySetter_0()
 	{
+	    MTraspasa.setVisible(false);
+	    MTraspasa.setStyleClass("textfield");
+	    MTraspasa.us$setView("text");
+	    MTraspasa.setFindable(false);
 	    NombreForma1.setStyleClass("textfield");
 	    NombreForma1.us$setView("text");
 	    NombreForma1.setFindable(false);

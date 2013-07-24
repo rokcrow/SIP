@@ -177,6 +177,7 @@ public class ProspectosDVW
 	    }
 	cajaarribaRProspectos.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
 	cajaarribaRProspectos.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
+	((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.MTraspasa.assign(us$registerPool.allocateRegister().load("1"));
     } // initDataView
 
     public void onClearToAdd()
@@ -638,6 +639,15 @@ public class ProspectosDVW
 	public void onDataAccept()
 	    throws Exception
 	{
+	    com.unify.nxj.mgr.datatypes.Register us$R18;
+	    com.unify.nxj.mgr.datatypes.Register us$R17;
+	    com.unify.nxj.mgr.datatypes.Register us$R16;
+	    com.unify.nxj.mgr.datatypes.Register us$R15;
+	    com.unify.nxj.mgr.datatypes.Register us$R14;
+	    com.unify.nxj.mgr.datatypes.Register us$R13;
+	    com.unify.nxj.mgr.datatypes.Register us$R12;
+	    com.unify.nxj.mgr.datatypes.Register us$R11;
+	    com.unify.nxj.mgr.datatypes.Register us$R10;
 	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 
 		{
@@ -647,7 +657,7 @@ public class ProspectosDVW
 		ResultSet us$rs9 = null;
 		try
 		    {
-		    us$stmt9 = us$conn9.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?  AND xpc_codigo < 22");
+		    us$stmt9 = us$conn9.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
 		    vpp_califica.us$setSqlParameterValue(us$stmt9, 1);
 		    us$rs9 = us$stmt9.executeQuery();
 		    int us$rowsTouched9 = 0;
@@ -709,6 +719,11 @@ public class ProspectosDVW
 			if (us$registerPool.allocateRegister().load(xpc_califica).eqOp("P").getBooleanValueNullOk())
 			    vpp_estado.assign(us$registerPool.allocateRegister().load("N"));
 		}
+	    if (((us$R18 = (us$R17 = (us$R16 = (us$R15 = (us$R14 = (us$R13 = (us$R12 = (us$R11 = (us$R10 = us$registerPool.allocateRegister().load(vpp_califica).eqOp("23")).isLogicalOrDecided() ? us$R10 : us$R10.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("24"))).isLogicalOrDecided() ? us$R11 : us$R11.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("25"))).isLogicalOrDecided() ? us$R12 : us$R12.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("26"))).isLogicalOrDecided() ? us$R13 : us$R13.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("27"))).isLogicalOrDecided() ? us$R14 : us$R14.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("28"))).isLogicalOrDecided() ? us$R15 : us$R15.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("29"))).isLogicalOrDecided() ? us$R16 : us$R16.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("30"))).isLogicalOrDecided() ? us$R17 : us$R17.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("31"))).isLogicalOrDecided() ? us$R18 : us$R18.logicalOrOp(us$registerPool.allocateRegister().load(vpp_califica).eqOp("32"))).getBooleanValueNullOk())
+		{
+		getSession().displayToMessageBox("No es una calificacion permitida.");
+		rejectOperation();
+		}
 	} // onDataAccept
 
 	public void whenValueChanges()
@@ -717,55 +732,55 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn10 = getConnection();
-		java.sql.PreparedStatement us$stmt10 = null;
-		ResultSet us$rs10 = null;
+		NXJDataConnection us$conn19 = getConnection();
+		java.sql.PreparedStatement us$stmt19 = null;
+		ResultSet us$rs19 = null;
 		try
 		    {
-		    us$stmt10 = us$conn10.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
-		    vpp_califica.us$setSqlParameterValue(us$stmt10, 1);
-		    us$rs10 = us$stmt10.executeQuery();
-		    int us$rowsTouched10 = 0;
+		    us$stmt19 = us$conn19.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+		    vpp_califica.us$setSqlParameterValue(us$stmt19, 1);
+		    us$rs19 = us$stmt19.executeQuery();
+		    int us$rowsTouched19 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd10 = us$rs10.getMetaData();
-			if (us$rsmd10.getColumnCount() != 4)
+			java.sql.ResultSetMetaData us$rsmd19 = us$rs19.getMetaData();
+			if (us$rsmd19.getColumnCount() != 4)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd10.getColumnCount()), "4"
+				Integer.toString(us$rsmd19.getColumnCount()), "4"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter10 = us$conn10.createDataIterator(us$rs10);
-			if (us$getter10.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter19 = us$conn19.createDataIterator(us$rs19);
+			if (us$getter19.next())
 			    {
-			    ++us$rowsTouched10;
-			    us$getter10.assignValueToVariable(xpc_nombre, 1);
-			    us$getter10.assignValueToVariable(xpc_califica, 2);
-			    us$getter10.assignValueToVariable(xpc_dias_pac, 3);
-			    us$getter10.assignValueToVariable(xpc_dias_pvt, 4);
+			    ++us$rowsTouched19;
+			    us$getter19.assignValueToVariable(xpc_nombre, 1);
+			    us$getter19.assignValueToVariable(xpc_califica, 2);
+			    us$getter19.assignValueToVariable(xpc_dias_pac, 3);
+			    us$getter19.assignValueToVariable(xpc_dias_pvt, 4);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched10 == 0)
+			if (us$rowsTouched19 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs10 != null)
-			    us$rs10.close();
+			if (us$rs19 != null)
+			    us$rs19.close();
 			}
 		    }
-		catch (SQLException us$ex10)
+		catch (SQLException us$ex19)
 		    {
-		    getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
-		    throw us$ex10;
+		    getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
+		    throw us$ex19;
 		    }
-		catch (NXJDataConnectionException us$ex10)
+		catch (NXJDataConnectionException us$ex19)
 		    {
-		    getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
-		    throw us$ex10;
+		    getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
+		    throw us$ex19;
 		    }
 		finally
 		    {
-		    if (us$stmt10 != null)
-			us$conn10.us$closeStatement(us$stmt10);
+		    if (us$stmt19 != null)
+			us$conn19.us$closeStatement(us$stmt19);
 		    }
 		}
 	} // whenValueChanges
@@ -805,27 +820,27 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn11 = getConnection();
-		java.sql.PreparedStatement us$stmt11 = null;
-		ResultSet us$rs11 = null;
+		NXJDataConnection us$conn20 = getConnection();
+		java.sql.PreparedStatement us$stmt20 = null;
+		ResultSet us$rs20 = null;
 		try
 		    {
-		    us$stmt11 = us$conn11.prepareStatement("select xpa_nombre from xpa_paises");
-		    us$rs11 = us$stmt11.executeQuery();
-		    int us$rowsTouched11 = 0;
+		    us$stmt20 = us$conn20.prepareStatement("select xpa_nombre from xpa_paises");
+		    us$rs20 = us$stmt20.executeQuery();
+		    int us$rowsTouched20 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd11 = us$rs11.getMetaData();
-			if (us$rsmd11.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd20 = us$rs20.getMetaData();
+			if (us$rsmd20.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd11.getColumnCount()), "1"
+				Integer.toString(us$rsmd20.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter11 = us$conn11.createDataIterator(us$rs11);
-			while (us$getter11.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter20 = us$conn20.createDataIterator(us$rs20);
+			while (us$getter20.next())
 			    {
-			    ++us$rowsTouched11;
-			    us$proj1 = us$getter11.getString(1);
+			    ++us$rowsTouched20;
+			    us$proj1 = us$getter20.getString(1);
 
 				{
 				if (us$rowCount++ == 300)
@@ -836,26 +851,26 @@ public class ProspectosDVW
 			}
 		    finally
 			{
-			if (us$rowsTouched11 == 0)
+			if (us$rowsTouched20 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs11 != null)
-			    us$rs11.close();
+			if (us$rs20 != null)
+			    us$rs20.close();
 			}
 		    }
-		catch (SQLException us$ex11)
+		catch (SQLException us$ex20)
 		    {
-		    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-		    throw us$ex11;
+		    getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
+		    throw us$ex20;
 		    }
-		catch (NXJDataConnectionException us$ex11)
+		catch (NXJDataConnectionException us$ex20)
 		    {
-		    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-		    throw us$ex11;
+		    getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
+		    throw us$ex20;
 		    }
 		finally
 		    {
-		    if (us$stmt11 != null)
-			us$conn11.us$closeStatement(us$stmt11);
+		    if (us$stmt20 != null)
+			us$conn20.us$closeStatement(us$stmt20);
 		    }
 		}
 	    return us$list;
@@ -888,52 +903,52 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn12 = getConnection();
-		java.sql.PreparedStatement us$stmt12 = null;
-		ResultSet us$rs12 = null;
+		NXJDataConnection us$conn21 = getConnection();
+		java.sql.PreparedStatement us$stmt21 = null;
+		ResultSet us$rs21 = null;
 		try
 		    {
-		    us$stmt12 = us$conn12.prepareStatement("SELECT vco_nombre FROM vco_corredores WHERE vco_codigo =  ?");
-		    vpp_corredor.us$setSqlParameterValue(us$stmt12, 1);
-		    us$rs12 = us$stmt12.executeQuery();
-		    int us$rowsTouched12 = 0;
+		    us$stmt21 = us$conn21.prepareStatement("SELECT vco_nombre FROM vco_corredores WHERE vco_codigo =  ?");
+		    vpp_corredor.us$setSqlParameterValue(us$stmt21, 1);
+		    us$rs21 = us$stmt21.executeQuery();
+		    int us$rowsTouched21 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd12 = us$rs12.getMetaData();
-			if (us$rsmd12.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd21 = us$rs21.getMetaData();
+			if (us$rsmd21.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd12.getColumnCount()), "1"
+				Integer.toString(us$rsmd21.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter12 = us$conn12.createDataIterator(us$rs12);
-			if (us$getter12.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter21 = us$conn21.createDataIterator(us$rs21);
+			if (us$getter21.next())
 			    {
-			    ++us$rowsTouched12;
-			    us$getter12.assignValueToVariable(vco_nombre, 1);
+			    ++us$rowsTouched21;
+			    us$getter21.assignValueToVariable(vco_nombre, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched12 == 0)
+			if (us$rowsTouched21 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs12 != null)
-			    us$rs12.close();
+			if (us$rs21 != null)
+			    us$rs21.close();
 			}
 		    }
-		catch (SQLException us$ex12)
+		catch (SQLException us$ex21)
 		    {
-		    getSession().us$setStatus(us$conn12.mapToStatusCode(us$ex12));
-		    throw us$ex12;
+		    getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
+		    throw us$ex21;
 		    }
-		catch (NXJDataConnectionException us$ex12)
+		catch (NXJDataConnectionException us$ex21)
 		    {
-		    getSession().us$setStatus(us$conn12.mapToStatusCode(us$ex12));
-		    throw us$ex12;
+		    getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
+		    throw us$ex21;
 		    }
 		finally
 		    {
-		    if (us$stmt12 != null)
-			us$conn12.us$closeStatement(us$stmt12);
+		    if (us$stmt21 != null)
+			us$conn21.us$closeStatement(us$stmt21);
 		    }
 		}
 	    if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -949,52 +964,52 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn13 = getConnection();
-		java.sql.PreparedStatement us$stmt13 = null;
-		ResultSet us$rs13 = null;
+		NXJDataConnection us$conn22 = getConnection();
+		java.sql.PreparedStatement us$stmt22 = null;
+		ResultSet us$rs22 = null;
 		try
 		    {
-		    us$stmt13 = us$conn13.prepareStatement("SELECT vco_nombre FROM vco_corredores WHERE vco_codigo =  ?");
-		    vpp_corredor.us$setSqlParameterValue(us$stmt13, 1);
-		    us$rs13 = us$stmt13.executeQuery();
-		    int us$rowsTouched13 = 0;
+		    us$stmt22 = us$conn22.prepareStatement("SELECT vco_nombre FROM vco_corredores WHERE vco_codigo =  ?");
+		    vpp_corredor.us$setSqlParameterValue(us$stmt22, 1);
+		    us$rs22 = us$stmt22.executeQuery();
+		    int us$rowsTouched22 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd13 = us$rs13.getMetaData();
-			if (us$rsmd13.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd22 = us$rs22.getMetaData();
+			if (us$rsmd22.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd13.getColumnCount()), "1"
+				Integer.toString(us$rsmd22.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter13 = us$conn13.createDataIterator(us$rs13);
-			if (us$getter13.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter22 = us$conn22.createDataIterator(us$rs22);
+			if (us$getter22.next())
 			    {
-			    ++us$rowsTouched13;
-			    us$getter13.assignValueToVariable(vco_nombre, 1);
+			    ++us$rowsTouched22;
+			    us$getter22.assignValueToVariable(vco_nombre, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched13 == 0)
+			if (us$rowsTouched22 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs13 != null)
-			    us$rs13.close();
+			if (us$rs22 != null)
+			    us$rs22.close();
 			}
 		    }
-		catch (SQLException us$ex13)
+		catch (SQLException us$ex22)
 		    {
-		    getSession().us$setStatus(us$conn13.mapToStatusCode(us$ex13));
-		    throw us$ex13;
+		    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+		    throw us$ex22;
 		    }
-		catch (NXJDataConnectionException us$ex13)
+		catch (NXJDataConnectionException us$ex22)
 		    {
-		    getSession().us$setStatus(us$conn13.mapToStatusCode(us$ex13));
-		    throw us$ex13;
+		    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+		    throw us$ex22;
 		    }
 		finally
 		    {
-		    if (us$stmt13 != null)
-			us$conn13.us$closeStatement(us$stmt13);
+		    if (us$stmt22 != null)
+			us$conn22.us$closeStatement(us$stmt22);
 		    }
 		}
 	} // whenValueChanges
@@ -1121,27 +1136,27 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn14 = getConnection();
-		java.sql.PreparedStatement us$stmt14 = null;
-		ResultSet us$rs14 = null;
+		NXJDataConnection us$conn23 = getConnection();
+		java.sql.PreparedStatement us$stmt23 = null;
+		ResultSet us$rs23 = null;
 		try
 		    {
-		    us$stmt14 = us$conn14.prepareStatement("select xzo_nombre from xzo_zonas");
-		    us$rs14 = us$stmt14.executeQuery();
-		    int us$rowsTouched14 = 0;
+		    us$stmt23 = us$conn23.prepareStatement("select xzo_nombre from xzo_zonas");
+		    us$rs23 = us$stmt23.executeQuery();
+		    int us$rowsTouched23 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd14 = us$rs14.getMetaData();
-			if (us$rsmd14.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd23 = us$rs23.getMetaData();
+			if (us$rsmd23.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd14.getColumnCount()), "1"
+				Integer.toString(us$rsmd23.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter14 = us$conn14.createDataIterator(us$rs14);
-			while (us$getter14.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter23 = us$conn23.createDataIterator(us$rs23);
+			while (us$getter23.next())
 			    {
-			    ++us$rowsTouched14;
-			    us$proj1 = us$getter14.getString(1);
+			    ++us$rowsTouched23;
+			    us$proj1 = us$getter23.getString(1);
 
 				{
 				if (us$rowCount++ == 300)
@@ -1152,26 +1167,26 @@ public class ProspectosDVW
 			}
 		    finally
 			{
-			if (us$rowsTouched14 == 0)
+			if (us$rowsTouched23 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs14 != null)
-			    us$rs14.close();
+			if (us$rs23 != null)
+			    us$rs23.close();
 			}
 		    }
-		catch (SQLException us$ex14)
+		catch (SQLException us$ex23)
 		    {
-		    getSession().us$setStatus(us$conn14.mapToStatusCode(us$ex14));
-		    throw us$ex14;
+		    getSession().us$setStatus(us$conn23.mapToStatusCode(us$ex23));
+		    throw us$ex23;
 		    }
-		catch (NXJDataConnectionException us$ex14)
+		catch (NXJDataConnectionException us$ex23)
 		    {
-		    getSession().us$setStatus(us$conn14.mapToStatusCode(us$ex14));
-		    throw us$ex14;
+		    getSession().us$setStatus(us$conn23.mapToStatusCode(us$ex23));
+		    throw us$ex23;
 		    }
 		finally
 		    {
-		    if (us$stmt14 != null)
-			us$conn14.us$closeStatement(us$stmt14);
+		    if (us$stmt23 != null)
+			us$conn23.us$closeStatement(us$stmt23);
 		    }
 		}
 	    return us$list;
@@ -1366,52 +1381,52 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn15 = getConnection();
-		java.sql.PreparedStatement us$stmt15 = null;
-		ResultSet us$rs15 = null;
+		NXJDataConnection us$conn24 = getConnection();
+		java.sql.PreparedStatement us$stmt24 = null;
+		ResultSet us$rs24 = null;
 		try
 		    {
-		    us$stmt15 = us$conn15.prepareStatement("SELECT vmp_descripcion FROM vmp_mediosp WHERE vmp_codigo =  ?");
-		    vpp_mediopub.us$setSqlParameterValue(us$stmt15, 1);
-		    us$rs15 = us$stmt15.executeQuery();
-		    int us$rowsTouched15 = 0;
+		    us$stmt24 = us$conn24.prepareStatement("SELECT vmp_descripcion FROM vmp_mediosp WHERE vmp_codigo =  ?");
+		    vpp_mediopub.us$setSqlParameterValue(us$stmt24, 1);
+		    us$rs24 = us$stmt24.executeQuery();
+		    int us$rowsTouched24 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd15 = us$rs15.getMetaData();
-			if (us$rsmd15.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd24 = us$rs24.getMetaData();
+			if (us$rsmd24.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd15.getColumnCount()), "1"
+				Integer.toString(us$rsmd24.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter15 = us$conn15.createDataIterator(us$rs15);
-			if (us$getter15.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter24 = us$conn24.createDataIterator(us$rs24);
+			if (us$getter24.next())
 			    {
-			    ++us$rowsTouched15;
-			    us$getter15.assignValueToVariable(vmp_descripcion, 1);
+			    ++us$rowsTouched24;
+			    us$getter24.assignValueToVariable(vmp_descripcion, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched15 == 0)
+			if (us$rowsTouched24 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs15 != null)
-			    us$rs15.close();
+			if (us$rs24 != null)
+			    us$rs24.close();
 			}
 		    }
-		catch (SQLException us$ex15)
+		catch (SQLException us$ex24)
 		    {
-		    getSession().us$setStatus(us$conn15.mapToStatusCode(us$ex15));
-		    throw us$ex15;
+		    getSession().us$setStatus(us$conn24.mapToStatusCode(us$ex24));
+		    throw us$ex24;
 		    }
-		catch (NXJDataConnectionException us$ex15)
+		catch (NXJDataConnectionException us$ex24)
 		    {
-		    getSession().us$setStatus(us$conn15.mapToStatusCode(us$ex15));
-		    throw us$ex15;
+		    getSession().us$setStatus(us$conn24.mapToStatusCode(us$ex24));
+		    throw us$ex24;
 		    }
 		finally
 		    {
-		    if (us$stmt15 != null)
-			us$conn15.us$closeStatement(us$stmt15);
+		    if (us$stmt24 != null)
+			us$conn24.us$closeStatement(us$stmt24);
 		    }
 		}
 	    if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -1431,52 +1446,52 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn16 = getConnection();
-		java.sql.PreparedStatement us$stmt16 = null;
-		ResultSet us$rs16 = null;
+		NXJDataConnection us$conn25 = getConnection();
+		java.sql.PreparedStatement us$stmt25 = null;
+		ResultSet us$rs25 = null;
 		try
 		    {
-		    us$stmt16 = us$conn16.prepareStatement("SELECT vmp_descripcion FROM vmp_mediosp WHERE vmp_codigo =  ?");
-		    vpp_mediopub.us$setSqlParameterValue(us$stmt16, 1);
-		    us$rs16 = us$stmt16.executeQuery();
-		    int us$rowsTouched16 = 0;
+		    us$stmt25 = us$conn25.prepareStatement("SELECT vmp_descripcion FROM vmp_mediosp WHERE vmp_codigo =  ?");
+		    vpp_mediopub.us$setSqlParameterValue(us$stmt25, 1);
+		    us$rs25 = us$stmt25.executeQuery();
+		    int us$rowsTouched25 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd16 = us$rs16.getMetaData();
-			if (us$rsmd16.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd25 = us$rs25.getMetaData();
+			if (us$rsmd25.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd16.getColumnCount()), "1"
+				Integer.toString(us$rsmd25.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter16 = us$conn16.createDataIterator(us$rs16);
-			if (us$getter16.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter25 = us$conn25.createDataIterator(us$rs25);
+			if (us$getter25.next())
 			    {
-			    ++us$rowsTouched16;
-			    us$getter16.assignValueToVariable(vmp_descripcion, 1);
+			    ++us$rowsTouched25;
+			    us$getter25.assignValueToVariable(vmp_descripcion, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched16 == 0)
+			if (us$rowsTouched25 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs16 != null)
-			    us$rs16.close();
+			if (us$rs25 != null)
+			    us$rs25.close();
 			}
 		    }
-		catch (SQLException us$ex16)
+		catch (SQLException us$ex25)
 		    {
-		    getSession().us$setStatus(us$conn16.mapToStatusCode(us$ex16));
-		    throw us$ex16;
+		    getSession().us$setStatus(us$conn25.mapToStatusCode(us$ex25));
+		    throw us$ex25;
 		    }
-		catch (NXJDataConnectionException us$ex16)
+		catch (NXJDataConnectionException us$ex25)
 		    {
-		    getSession().us$setStatus(us$conn16.mapToStatusCode(us$ex16));
-		    throw us$ex16;
+		    getSession().us$setStatus(us$conn25.mapToStatusCode(us$ex25));
+		    throw us$ex25;
 		    }
 		finally
 		    {
-		    if (us$stmt16 != null)
-			us$conn16.us$closeStatement(us$stmt16);
+		    if (us$stmt25 != null)
+			us$conn25.us$closeStatement(us$stmt25);
 		    }
 		}
 	} // whenValueChanges
@@ -1517,27 +1532,27 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn17 = getConnection();
-		java.sql.PreparedStatement us$stmt17 = null;
-		ResultSet us$rs17 = null;
+		NXJDataConnection us$conn26 = getConnection();
+		java.sql.PreparedStatement us$stmt26 = null;
+		ResultSet us$rs26 = null;
 		try
 		    {
-		    us$stmt17 = us$conn17.prepareStatement("select xpa_nombre from xpa_paises");
-		    us$rs17 = us$stmt17.executeQuery();
-		    int us$rowsTouched17 = 0;
+		    us$stmt26 = us$conn26.prepareStatement("select xpa_nombre from xpa_paises");
+		    us$rs26 = us$stmt26.executeQuery();
+		    int us$rowsTouched26 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd17 = us$rs17.getMetaData();
-			if (us$rsmd17.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd26 = us$rs26.getMetaData();
+			if (us$rsmd26.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd17.getColumnCount()), "1"
+				Integer.toString(us$rsmd26.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter17 = us$conn17.createDataIterator(us$rs17);
-			while (us$getter17.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter26 = us$conn26.createDataIterator(us$rs26);
+			while (us$getter26.next())
 			    {
-			    ++us$rowsTouched17;
-			    us$proj1 = us$getter17.getString(1);
+			    ++us$rowsTouched26;
+			    us$proj1 = us$getter26.getString(1);
 
 				{
 				if (us$rowCount++ == 300)
@@ -1548,26 +1563,26 @@ public class ProspectosDVW
 			}
 		    finally
 			{
-			if (us$rowsTouched17 == 0)
+			if (us$rowsTouched26 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs17 != null)
-			    us$rs17.close();
+			if (us$rs26 != null)
+			    us$rs26.close();
 			}
 		    }
-		catch (SQLException us$ex17)
+		catch (SQLException us$ex26)
 		    {
-		    getSession().us$setStatus(us$conn17.mapToStatusCode(us$ex17));
-		    throw us$ex17;
+		    getSession().us$setStatus(us$conn26.mapToStatusCode(us$ex26));
+		    throw us$ex26;
 		    }
-		catch (NXJDataConnectionException us$ex17)
+		catch (NXJDataConnectionException us$ex26)
 		    {
-		    getSession().us$setStatus(us$conn17.mapToStatusCode(us$ex17));
-		    throw us$ex17;
+		    getSession().us$setStatus(us$conn26.mapToStatusCode(us$ex26));
+		    throw us$ex26;
 		    }
 		finally
 		    {
-		    if (us$stmt17 != null)
-			us$conn17.us$closeStatement(us$stmt17);
+		    if (us$stmt26 != null)
+			us$conn26.us$closeStatement(us$stmt26);
 		    }
 		}
 	    return us$list;
@@ -1607,53 +1622,53 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn18 = getConnection();
-		java.sql.PreparedStatement us$stmt18 = null;
-		ResultSet us$rs18 = null;
+		NXJDataConnection us$conn27 = getConnection();
+		java.sql.PreparedStatement us$stmt27 = null;
+		ResultSet us$rs27 = null;
 		try
 		    {
-		    us$stmt18 = us$conn18.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
-		    vpp_proyecto.us$setSqlParameterValue(us$stmt18, 1);
-		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt18, 2);
-		    us$rs18 = us$stmt18.executeQuery();
-		    int us$rowsTouched18 = 0;
+		    us$stmt27 = us$conn27.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
+		    vpp_proyecto.us$setSqlParameterValue(us$stmt27, 1);
+		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt27, 2);
+		    us$rs27 = us$stmt27.executeQuery();
+		    int us$rowsTouched27 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd18 = us$rs18.getMetaData();
-			if (us$rsmd18.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd27 = us$rs27.getMetaData();
+			if (us$rsmd27.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd18.getColumnCount()), "1"
+				Integer.toString(us$rsmd27.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter18 = us$conn18.createDataIterator(us$rs18);
-			if (us$getter18.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter27 = us$conn27.createDataIterator(us$rs27);
+			if (us$getter27.next())
 			    {
-			    ++us$rowsTouched18;
-			    us$getter18.assignValueToVariable(vpy_nombre, 1);
+			    ++us$rowsTouched27;
+			    us$getter27.assignValueToVariable(vpy_nombre, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched18 == 0)
+			if (us$rowsTouched27 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs18 != null)
-			    us$rs18.close();
+			if (us$rs27 != null)
+			    us$rs27.close();
 			}
 		    }
-		catch (SQLException us$ex18)
+		catch (SQLException us$ex27)
 		    {
-		    getSession().us$setStatus(us$conn18.mapToStatusCode(us$ex18));
-		    throw us$ex18;
+		    getSession().us$setStatus(us$conn27.mapToStatusCode(us$ex27));
+		    throw us$ex27;
 		    }
-		catch (NXJDataConnectionException us$ex18)
+		catch (NXJDataConnectionException us$ex27)
 		    {
-		    getSession().us$setStatus(us$conn18.mapToStatusCode(us$ex18));
-		    throw us$ex18;
+		    getSession().us$setStatus(us$conn27.mapToStatusCode(us$ex27));
+		    throw us$ex27;
 		    }
 		finally
 		    {
-		    if (us$stmt18 != null)
-			us$conn18.us$closeStatement(us$stmt18);
+		    if (us$stmt27 != null)
+			us$conn27.us$closeStatement(us$stmt27);
 		    }
 		}
 	    if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -1670,53 +1685,53 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn19 = getConnection();
-		java.sql.PreparedStatement us$stmt19 = null;
-		ResultSet us$rs19 = null;
+		NXJDataConnection us$conn28 = getConnection();
+		java.sql.PreparedStatement us$stmt28 = null;
+		ResultSet us$rs28 = null;
 		try
 		    {
-		    us$stmt19 = us$conn19.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
-		    vpp_proyecto.us$setSqlParameterValue(us$stmt19, 1);
-		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt19, 2);
-		    us$rs19 = us$stmt19.executeQuery();
-		    int us$rowsTouched19 = 0;
+		    us$stmt28 = us$conn28.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
+		    vpp_proyecto.us$setSqlParameterValue(us$stmt28, 1);
+		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt28, 2);
+		    us$rs28 = us$stmt28.executeQuery();
+		    int us$rowsTouched28 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd19 = us$rs19.getMetaData();
-			if (us$rsmd19.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd28 = us$rs28.getMetaData();
+			if (us$rsmd28.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd19.getColumnCount()), "1"
+				Integer.toString(us$rsmd28.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter19 = us$conn19.createDataIterator(us$rs19);
-			if (us$getter19.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter28 = us$conn28.createDataIterator(us$rs28);
+			if (us$getter28.next())
 			    {
-			    ++us$rowsTouched19;
-			    us$getter19.assignValueToVariable(vpy_nombre, 1);
+			    ++us$rowsTouched28;
+			    us$getter28.assignValueToVariable(vpy_nombre, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched19 == 0)
+			if (us$rowsTouched28 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs19 != null)
-			    us$rs19.close();
+			if (us$rs28 != null)
+			    us$rs28.close();
 			}
 		    }
-		catch (SQLException us$ex19)
+		catch (SQLException us$ex28)
 		    {
-		    getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
-		    throw us$ex19;
+		    getSession().us$setStatus(us$conn28.mapToStatusCode(us$ex28));
+		    throw us$ex28;
 		    }
-		catch (NXJDataConnectionException us$ex19)
+		catch (NXJDataConnectionException us$ex28)
 		    {
-		    getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
-		    throw us$ex19;
+		    getSession().us$setStatus(us$conn28.mapToStatusCode(us$ex28));
+		    throw us$ex28;
 		    }
 		finally
 		    {
-		    if (us$stmt19 != null)
-			us$conn19.us$closeStatement(us$stmt19);
+		    if (us$stmt28 != null)
+			us$conn28.us$closeStatement(us$stmt28);
 		    }
 		}
 	} // whenValueChanges
@@ -1848,52 +1863,52 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn20 = getConnection();
-		java.sql.PreparedStatement us$stmt20 = null;
-		ResultSet us$rs20 = null;
+		NXJDataConnection us$conn29 = getConnection();
+		java.sql.PreparedStatement us$stmt29 = null;
+		ResultSet us$rs29 = null;
 		try
 		    {
-		    us$stmt20 = us$conn20.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
-		    vpp_vendedor.us$setSqlParameterValue(us$stmt20, 1);
-		    us$rs20 = us$stmt20.executeQuery();
-		    int us$rowsTouched20 = 0;
+		    us$stmt29 = us$conn29.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
+		    vpp_vendedor.us$setSqlParameterValue(us$stmt29, 1);
+		    us$rs29 = us$stmt29.executeQuery();
+		    int us$rowsTouched29 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd20 = us$rs20.getMetaData();
-			if (us$rsmd20.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd29 = us$rs29.getMetaData();
+			if (us$rsmd29.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd20.getColumnCount()), "1"
+				Integer.toString(us$rsmd29.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter20 = us$conn20.createDataIterator(us$rs20);
-			if (us$getter20.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter29 = us$conn29.createDataIterator(us$rs29);
+			if (us$getter29.next())
 			    {
-			    ++us$rowsTouched20;
-			    us$getter20.assignValueToVariable(vve_nombre, 1);
+			    ++us$rowsTouched29;
+			    us$getter29.assignValueToVariable(vve_nombre, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched20 == 0)
+			if (us$rowsTouched29 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs20 != null)
-			    us$rs20.close();
+			if (us$rs29 != null)
+			    us$rs29.close();
 			}
 		    }
-		catch (SQLException us$ex20)
+		catch (SQLException us$ex29)
 		    {
-		    getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
-		    throw us$ex20;
+		    getSession().us$setStatus(us$conn29.mapToStatusCode(us$ex29));
+		    throw us$ex29;
 		    }
-		catch (NXJDataConnectionException us$ex20)
+		catch (NXJDataConnectionException us$ex29)
 		    {
-		    getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
-		    throw us$ex20;
+		    getSession().us$setStatus(us$conn29.mapToStatusCode(us$ex29));
+		    throw us$ex29;
 		    }
 		finally
 		    {
-		    if (us$stmt20 != null)
-			us$conn20.us$closeStatement(us$stmt20);
+		    if (us$stmt29 != null)
+			us$conn29.us$closeStatement(us$stmt29);
 		    }
 		}
 	    if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -1904,56 +1919,56 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn21 = getConnection();
-		java.sql.PreparedStatement us$stmt21 = null;
-		ResultSet us$rs21 = null;
+		NXJDataConnection us$conn30 = getConnection();
+		java.sql.PreparedStatement us$stmt30 = null;
+		ResultSet us$rs30 = null;
 		try
 		    {
-		    us$stmt21 = us$conn21.prepareStatement("SELECT vvh_vendedora,vvh_fret_obra, vvh_fing_obra from vvh_venobras where vvh_empresa =  ?  and vvh_proyecto =  ?  and vvh_vendedora =  ?  order by vvh_fing_obra DESC");
-		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt21, 1);
-		    vpp_proyecto.us$setSqlParameterValue(us$stmt21, 2);
-		    vpp_vendedor.us$setSqlParameterValue(us$stmt21, 3);
-		    us$rs21 = us$stmt21.executeQuery();
-		    int us$rowsTouched21 = 0;
+		    us$stmt30 = us$conn30.prepareStatement("SELECT vvh_vendedora,vvh_fret_obra, vvh_fing_obra from vvh_venobras where vvh_empresa =  ?  and vvh_proyecto =  ?  and vvh_vendedora =  ?  order by vvh_fing_obra DESC");
+		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt30, 1);
+		    vpp_proyecto.us$setSqlParameterValue(us$stmt30, 2);
+		    vpp_vendedor.us$setSqlParameterValue(us$stmt30, 3);
+		    us$rs30 = us$stmt30.executeQuery();
+		    int us$rowsTouched30 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd21 = us$rs21.getMetaData();
-			if (us$rsmd21.getColumnCount() != 3)
+			java.sql.ResultSetMetaData us$rsmd30 = us$rs30.getMetaData();
+			if (us$rsmd30.getColumnCount() != 3)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd21.getColumnCount()), "3"
+				Integer.toString(us$rsmd30.getColumnCount()), "3"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter21 = us$conn21.createDataIterator(us$rs21);
-			if (us$getter21.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter30 = us$conn30.createDataIterator(us$rs30);
+			if (us$getter30.next())
 			    {
-			    ++us$rowsTouched21;
-			    us$getter21.assignValueToVariable(vendedora, 1);
-			    us$getter21.assignValueToVariable(fret_obra, 2);
-			    us$getter21.assignValueToVariable(fing_obra, 3);
+			    ++us$rowsTouched30;
+			    us$getter30.assignValueToVariable(vendedora, 1);
+			    us$getter30.assignValueToVariable(fret_obra, 2);
+			    us$getter30.assignValueToVariable(fing_obra, 3);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched21 == 0)
+			if (us$rowsTouched30 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs21 != null)
-			    us$rs21.close();
+			if (us$rs30 != null)
+			    us$rs30.close();
 			}
 		    }
-		catch (SQLException us$ex21)
+		catch (SQLException us$ex30)
 		    {
-		    getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
-		    throw us$ex21;
+		    getSession().us$setStatus(us$conn30.mapToStatusCode(us$ex30));
+		    throw us$ex30;
 		    }
-		catch (NXJDataConnectionException us$ex21)
+		catch (NXJDataConnectionException us$ex30)
 		    {
-		    getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
-		    throw us$ex21;
+		    getSession().us$setStatus(us$conn30.mapToStatusCode(us$ex30));
+		    throw us$ex30;
 		    }
 		finally
 		    {
-		    if (us$stmt21 != null)
-			us$conn21.us$closeStatement(us$stmt21);
+		    if (us$stmt30 != null)
+			us$conn30.us$closeStatement(us$stmt30);
 		    }
 		}
 	    if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -1969,52 +1984,52 @@ public class ProspectosDVW
 
 		{
 		getSession().us$setStatus(StatusCode.SS_NORM);
-		NXJDataConnection us$conn22 = getConnection();
-		java.sql.PreparedStatement us$stmt22 = null;
-		ResultSet us$rs22 = null;
+		NXJDataConnection us$conn31 = getConnection();
+		java.sql.PreparedStatement us$stmt31 = null;
+		ResultSet us$rs31 = null;
 		try
 		    {
-		    us$stmt22 = us$conn22.prepareStatement("SELECT vco_nombre FROM vco_corredores WHERE vco_codigo =  ?");
-		    vpp_corredor.us$setSqlParameterValue(us$stmt22, 1);
-		    us$rs22 = us$stmt22.executeQuery();
-		    int us$rowsTouched22 = 0;
+		    us$stmt31 = us$conn31.prepareStatement("SELECT vco_nombre FROM vco_corredores WHERE vco_codigo =  ?");
+		    vpp_corredor.us$setSqlParameterValue(us$stmt31, 1);
+		    us$rs31 = us$stmt31.executeQuery();
+		    int us$rowsTouched31 = 0;
 		    try
 			{
-			java.sql.ResultSetMetaData us$rsmd22 = us$rs22.getMetaData();
-			if (us$rsmd22.getColumnCount() != 1)
+			java.sql.ResultSetMetaData us$rsmd31 = us$rs31.getMetaData();
+			if (us$rsmd31.getColumnCount() != 1)
 			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				{
-				Integer.toString(us$rsmd22.getColumnCount()), "1"
+				Integer.toString(us$rsmd31.getColumnCount()), "1"
 				}));
-			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter22 = us$conn22.createDataIterator(us$rs22);
-			if (us$getter22.next())
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter31 = us$conn31.createDataIterator(us$rs31);
+			if (us$getter31.next())
 			    {
-			    ++us$rowsTouched22;
-			    us$getter22.assignValueToVariable(vco_nombre, 1);
+			    ++us$rowsTouched31;
+			    us$getter31.assignValueToVariable(vco_nombre, 1);
 			    }
 			}
 		    finally
 			{
-			if (us$rowsTouched22 == 0)
+			if (us$rowsTouched31 == 0)
 			    getSession().us$setStatus(StatusCode.SS_NOREC);
-			if (us$rs22 != null)
-			    us$rs22.close();
+			if (us$rs31 != null)
+			    us$rs31.close();
 			}
 		    }
-		catch (SQLException us$ex22)
+		catch (SQLException us$ex31)
 		    {
-		    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
-		    throw us$ex22;
+		    getSession().us$setStatus(us$conn31.mapToStatusCode(us$ex31));
+		    throw us$ex31;
 		    }
-		catch (NXJDataConnectionException us$ex22)
+		catch (NXJDataConnectionException us$ex31)
 		    {
-		    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
-		    throw us$ex22;
+		    getSession().us$setStatus(us$conn31.mapToStatusCode(us$ex31));
+		    throw us$ex31;
 		    }
 		finally
 		    {
-		    if (us$stmt22 != null)
-			us$conn22.us$closeStatement(us$stmt22);
+		    if (us$stmt31 != null)
+			us$conn31.us$closeStatement(us$stmt31);
 		    }
 		}
 	} // whenValueChanges

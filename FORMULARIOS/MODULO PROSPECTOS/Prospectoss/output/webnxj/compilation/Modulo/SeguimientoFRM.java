@@ -190,6 +190,7 @@ public class SeguimientoFRM
 	    }
 	CajaSegui.cajaarribaSProspectos.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
 	CajaSegui.cajaarribaSProspectos.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
+	((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.MTraspasa.assign(us$registerPool.allocateRegister().load("2"));
     } // beforeForm
 
     public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$getPUBLIC_vps_prosigue_1_FindExpressions()
@@ -969,6 +970,12 @@ public class SeguimientoFRM
 	    /*multi_valued*/ NullableStringVariable vps_proyecto = NullableFactory.createNullableStringVariable(this, "vps_proyecto", true, false);
 	    /*multi_valued*/ NullableNumericVariable vps_prospecto = NullableFactory.createNullableNumericVariable(this, "vps_prospecto", true, false);
 
+	    public void afterFind()
+		throws Exception
+	    {
+		getSession().queueNextField(vps_mediocon);
+	    } // afterFind
+
 	    public void onClearToAdd()
 		throws Exception
 	    {
@@ -1055,61 +1062,7 @@ public class SeguimientoFRM
 			if (us$registerPool.allocateRegister().load(xpc_califica).eqOp("P").getBooleanValueNullOk())
 			    vps_estado.assign(us$registerPool.allocateRegister().load("N"));
 		NullableDate f_pcontacto = NullableFactory.createNullableDate("f_pcontacto");
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn10 = getConnection();
-		    java.sql.PreparedStatement us$stmt10 = null;
-		    ResultSet us$rs10 = null;
-		    try
-			{
-			us$stmt10 = us$conn10.prepareStatement("SELECT vps_f_pcontacto FROM vps_prosigue WHERE vps_proyecto =  ?  AND vps_prospecto =  ?  AND vps_consecu =  ?  -1");
-			vps_proyecto.us$setSqlParameterValue(us$stmt10, 1);
-			vps_prospecto.us$setSqlParameterValue(us$stmt10, 2);
-			vps_consecu.us$setSqlParameterValue(us$stmt10, 3);
-			us$rs10 = us$stmt10.executeQuery();
-			int us$rowsTouched10 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd10 = us$rs10.getMetaData();
-			    if (us$rsmd10.getColumnCount() != 1)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd10.getColumnCount()), "1"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter10 = us$conn10.createDataIterator(us$rs10);
-			    if (us$getter10.next())
-				{
-				++us$rowsTouched10;
-				us$getter10.assignValueToVariable(f_pcontacto, 1);
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched10 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs10 != null)
-				us$rs10.close();
-			    }
-			}
-		    catch (SQLException us$ex10)
-			{
-			getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
-			throw us$ex10;
-			}
-		    catch (NXJDataConnectionException us$ex10)
-			{
-			getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
-			throw us$ex10;
-			}
-		    finally
-			{
-			if (us$stmt10 != null)
-			    us$conn10.us$closeStatement(us$stmt10);
-			}
-		    }
-		if (getSession().getStatus() != StatusCode.SS_NORM)
-		    f_pcontacto.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
+		f_pcontacto.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
 		if (us$registerPool.allocateRegister().load(vpy_tipo).eqOp("A").getBooleanValueNullOk())
 		    vps_f_pcontacto.assign(us$registerPool.allocateRegister().load(f_pcontacto).plusOp(us$registerPool.allocateRegister().load(xpc_dias_pac)));
 		else
@@ -1124,59 +1077,80 @@ public class SeguimientoFRM
 		public void onDataAccept()
 		    throws Exception
 		{
+		    com.unify.nxj.mgr.datatypes.Register us$R31;
+		    com.unify.nxj.mgr.datatypes.Register us$R30;
+		    com.unify.nxj.mgr.datatypes.Register us$R29;
+		    com.unify.nxj.mgr.datatypes.Register us$R28;
+		    com.unify.nxj.mgr.datatypes.Register us$R27;
+		    com.unify.nxj.mgr.datatypes.Register us$R26;
+		    com.unify.nxj.mgr.datatypes.Register us$R25;
+		    com.unify.nxj.mgr.datatypes.Register us$R24;
+		    com.unify.nxj.mgr.datatypes.Register us$R23;
+		    com.unify.nxj.mgr.datatypes.Register us$R22;
+		    com.unify.nxj.mgr.datatypes.Register us$R21;
+		    com.unify.nxj.mgr.datatypes.Register us$R20;
+		    com.unify.nxj.mgr.datatypes.Register us$R19;
+		    com.unify.nxj.mgr.datatypes.Register us$R18;
+		    com.unify.nxj.mgr.datatypes.Register us$R17;
+		    com.unify.nxj.mgr.datatypes.Register us$R16;
+		    com.unify.nxj.mgr.datatypes.Register us$R15;
+		    com.unify.nxj.mgr.datatypes.Register us$R14;
+		    com.unify.nxj.mgr.datatypes.Register us$R13;
+		    com.unify.nxj.mgr.datatypes.Register us$R12;
+		    com.unify.nxj.mgr.datatypes.Register us$R11;
 		    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 
 			{
 			getSession().us$setStatus(StatusCode.SS_NORM);
-			NXJDataConnection us$conn11 = getConnection();
-			java.sql.PreparedStatement us$stmt11 = null;
-			ResultSet us$rs11 = null;
+			NXJDataConnection us$conn10 = getConnection();
+			java.sql.PreparedStatement us$stmt10 = null;
+			ResultSet us$rs10 = null;
 			try
 			    {
-			    us$stmt11 = us$conn11.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
-			    vps_califica.us$setSqlParameterValue(us$stmt11, 1);
-			    us$rs11 = us$stmt11.executeQuery();
-			    int us$rowsTouched11 = 0;
+			    us$stmt10 = us$conn10.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+			    vps_califica.us$setSqlParameterValue(us$stmt10, 1);
+			    us$rs10 = us$stmt10.executeQuery();
+			    int us$rowsTouched10 = 0;
 			    try
 				{
-				java.sql.ResultSetMetaData us$rsmd11 = us$rs11.getMetaData();
-				if (us$rsmd11.getColumnCount() != 4)
+				java.sql.ResultSetMetaData us$rsmd10 = us$rs10.getMetaData();
+				if (us$rsmd10.getColumnCount() != 4)
 				    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 					{
-					Integer.toString(us$rsmd11.getColumnCount()), "4"
+					Integer.toString(us$rsmd10.getColumnCount()), "4"
 					}));
-				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter11 = us$conn11.createDataIterator(us$rs11);
-				if (us$getter11.next())
+				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter10 = us$conn10.createDataIterator(us$rs10);
+				if (us$getter10.next())
 				    {
-				    ++us$rowsTouched11;
-				    us$getter11.assignValueToVariable(xpc_nombre, 1);
-				    us$getter11.assignValueToVariable(xpc_califica, 2);
-				    us$getter11.assignValueToVariable(xpc_dias_pac, 3);
-				    us$getter11.assignValueToVariable(xpc_dias_pvt, 4);
+				    ++us$rowsTouched10;
+				    us$getter10.assignValueToVariable(xpc_nombre, 1);
+				    us$getter10.assignValueToVariable(xpc_califica, 2);
+				    us$getter10.assignValueToVariable(xpc_dias_pac, 3);
+				    us$getter10.assignValueToVariable(xpc_dias_pvt, 4);
 				    }
 				}
 			    finally
 				{
-				if (us$rowsTouched11 == 0)
+				if (us$rowsTouched10 == 0)
 				    getSession().us$setStatus(StatusCode.SS_NOREC);
-				if (us$rs11 != null)
-				    us$rs11.close();
+				if (us$rs10 != null)
+				    us$rs10.close();
 				}
 			    }
-			catch (SQLException us$ex11)
+			catch (SQLException us$ex10)
 			    {
-			    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-			    throw us$ex11;
+			    getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
+			    throw us$ex10;
 			    }
-			catch (NXJDataConnectionException us$ex11)
+			catch (NXJDataConnectionException us$ex10)
 			    {
-			    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-			    throw us$ex11;
+			    getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
+			    throw us$ex10;
 			    }
 			finally
 			    {
-			    if (us$stmt11 != null)
-				us$conn11.us$closeStatement(us$stmt11);
+			    if (us$stmt10 != null)
+				us$conn10.us$closeStatement(us$stmt10);
 			    }
 			}
 		    if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -1195,6 +1169,11 @@ public class SeguimientoFRM
 				if (us$registerPool.allocateRegister().load(xpc_califica).eqOp("P").getBooleanValueNullOk())
 				    vps_estado.assign(us$registerPool.allocateRegister().load("N"));
 			}
+		    if (((us$R31 = (us$R30 = (us$R29 = (us$R28 = (us$R27 = (us$R26 = (us$R25 = (us$R24 = (us$R23 = (us$R22 = (us$R21 = (us$R20 = (us$R19 = (us$R18 = (us$R17 = (us$R16 = (us$R15 = (us$R14 = (us$R13 = (us$R12 = (us$R11 = us$registerPool.allocateRegister().load(vps_califica).eqOp("22")).isLogicalOrDecided() ? us$R11 : us$R11.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("21"))).isLogicalOrDecided() ? us$R12 : us$R12.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("20"))).isLogicalOrDecided() ? us$R13 : us$R13.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("19"))).isLogicalOrDecided() ? us$R14 : us$R14.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("18"))).isLogicalOrDecided() ? us$R15 : us$R15.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("17"))).isLogicalOrDecided() ? us$R16 : us$R16.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("16"))).isLogicalOrDecided() ? us$R17 : us$R17.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("15"))).isLogicalOrDecided() ? us$R18 : us$R18.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("14"))).isLogicalOrDecided() ? us$R19 : us$R19.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("13"))).isLogicalOrDecided() ? us$R20 : us$R20.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("12"))).isLogicalOrDecided() ? us$R21 : us$R21.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("11"))).isLogicalOrDecided() ? us$R22 : us$R22.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("10"))).isLogicalOrDecided() ? us$R23 : us$R23.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("09"))).isLogicalOrDecided() ? us$R24 : us$R24.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("08"))).isLogicalOrDecided() ? us$R25 : us$R25.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("07"))).isLogicalOrDecided() ? us$R26 : us$R26.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("06"))).isLogicalOrDecided() ? us$R27 : us$R27.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("05"))).isLogicalOrDecided() ? us$R28 : us$R28.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("04"))).isLogicalOrDecided() ? us$R29 : us$R29.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("03"))).isLogicalOrDecided() ? us$R30 : us$R30.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("02"))).isLogicalOrDecided() ? us$R31 : us$R31.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("01"))).getBooleanValueNullOk())
+			{
+			getSession().displayToMessageBox("No es una calificacion permitida.");
+			rejectOperation();
+			}
 		} // onDataAccept
 
 		public void whenValueChanges()
@@ -1203,55 +1182,55 @@ public class SeguimientoFRM
 
 			{
 			getSession().us$setStatus(StatusCode.SS_NORM);
-			NXJDataConnection us$conn12 = getConnection();
-			java.sql.PreparedStatement us$stmt12 = null;
-			ResultSet us$rs12 = null;
+			NXJDataConnection us$conn32 = getConnection();
+			java.sql.PreparedStatement us$stmt32 = null;
+			ResultSet us$rs32 = null;
 			try
 			    {
-			    us$stmt12 = us$conn12.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
-			    vps_califica.us$setSqlParameterValue(us$stmt12, 1);
-			    us$rs12 = us$stmt12.executeQuery();
-			    int us$rowsTouched12 = 0;
+			    us$stmt32 = us$conn32.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+			    vps_califica.us$setSqlParameterValue(us$stmt32, 1);
+			    us$rs32 = us$stmt32.executeQuery();
+			    int us$rowsTouched32 = 0;
 			    try
 				{
-				java.sql.ResultSetMetaData us$rsmd12 = us$rs12.getMetaData();
-				if (us$rsmd12.getColumnCount() != 4)
+				java.sql.ResultSetMetaData us$rsmd32 = us$rs32.getMetaData();
+				if (us$rsmd32.getColumnCount() != 4)
 				    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 					{
-					Integer.toString(us$rsmd12.getColumnCount()), "4"
+					Integer.toString(us$rsmd32.getColumnCount()), "4"
 					}));
-				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter12 = us$conn12.createDataIterator(us$rs12);
-				if (us$getter12.next())
+				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter32 = us$conn32.createDataIterator(us$rs32);
+				if (us$getter32.next())
 				    {
-				    ++us$rowsTouched12;
-				    us$getter12.assignValueToVariable(xpc_nombre, 1);
-				    us$getter12.assignValueToVariable(xpc_califica, 2);
-				    us$getter12.assignValueToVariable(xpc_dias_pac, 3);
-				    us$getter12.assignValueToVariable(xpc_dias_pvt, 4);
+				    ++us$rowsTouched32;
+				    us$getter32.assignValueToVariable(xpc_nombre, 1);
+				    us$getter32.assignValueToVariable(xpc_califica, 2);
+				    us$getter32.assignValueToVariable(xpc_dias_pac, 3);
+				    us$getter32.assignValueToVariable(xpc_dias_pvt, 4);
 				    }
 				}
 			    finally
 				{
-				if (us$rowsTouched12 == 0)
+				if (us$rowsTouched32 == 0)
 				    getSession().us$setStatus(StatusCode.SS_NOREC);
-				if (us$rs12 != null)
-				    us$rs12.close();
+				if (us$rs32 != null)
+				    us$rs32.close();
 				}
 			    }
-			catch (SQLException us$ex12)
+			catch (SQLException us$ex32)
 			    {
-			    getSession().us$setStatus(us$conn12.mapToStatusCode(us$ex12));
-			    throw us$ex12;
+			    getSession().us$setStatus(us$conn32.mapToStatusCode(us$ex32));
+			    throw us$ex32;
 			    }
-			catch (NXJDataConnectionException us$ex12)
+			catch (NXJDataConnectionException us$ex32)
 			    {
-			    getSession().us$setStatus(us$conn12.mapToStatusCode(us$ex12));
-			    throw us$ex12;
+			    getSession().us$setStatus(us$conn32.mapToStatusCode(us$ex32));
+			    throw us$ex32;
 			    }
 			finally
 			    {
-			    if (us$stmt12 != null)
-				us$conn12.us$closeStatement(us$stmt12);
+			    if (us$stmt32 != null)
+				us$conn32.us$closeStatement(us$stmt32);
 			    }
 			}
 		} // whenValueChanges
@@ -1263,6 +1242,7 @@ public class SeguimientoFRM
 		    us$setMultiValued(true);
 		    us$setView("text");
 		    us$setFieldLength(2);
+		    setAutoAccept(true);
 		    us$setCandidateTargetColumnName("vps_califica");
 		    setValueRetrievedDuringFetch(true);
 		    setFindable(true);
@@ -1340,6 +1320,7 @@ public class SeguimientoFRM
 		vps_f_pcontacto.us$setMultiValued(true);
 		vps_f_pcontacto.us$setView("text");
 		vps_f_pcontacto.us$setFieldLength(10);
+		vps_f_pcontacto.setAutoAccept(false);
 		vps_f_pcontacto.us$setCandidateTargetColumnName("vps_f_pcontacto");
 		vps_f_pcontacto.setValueRetrievedDuringFetch(true);
 		vps_f_pcontacto.setFindable(true);
