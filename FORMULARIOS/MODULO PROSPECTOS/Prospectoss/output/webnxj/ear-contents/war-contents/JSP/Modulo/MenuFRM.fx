@@ -1,4 +1,5 @@
 <form 
+    aud_on_entry = "true"
     background_color = "#999999"
     binary_variables = ""
     bloom_filter = "00000000000400040000000000000000"
@@ -76,6 +77,20 @@
         uid = "form1_1369150692325_b4877e7ab5bf49a95afbb9c0398f84351d607cdf_1369406376333"
         view = "text">
     </field>
+    <control 
+        background_color = "#00cccc"
+        binary_variables = ""
+        command = "Go To Form"
+        command_parameter = "Form1"
+        display_name = "button1"
+        field_type = "button"
+        font_weight = "bold"
+        key = "cajagrandeMenu:button1."
+        original_name = "button1"
+        style_class = "button"
+        uid = "modulo_form1_1369423869434_3607ca0284c814dc0e56845b98fba66d41b5eaf8_1374850789130"
+        view = "button">
+    </control>
     <control 
         background_color = "#e30000"
         binary_variables = ""

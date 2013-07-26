@@ -34,6 +34,8 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.LoginFRM:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Form1:INTERACTIVE-UPDATE', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.CorredoresFRM:INTERACTIVE-ADD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MediospFRM:view1:INTERACTIVE-ADD', '', '0');
@@ -114,6 +116,8 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.CorredoresFRM:DELETE', '', '0'
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MediospFRM:view1:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Form1:DELETE', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.SeguimientoFRM:CajaSegui:PUBLIC_vps_prosigue:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.CorredoresFRM', '', '0');
@@ -121,6 +125,8 @@ INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleLis
 VALUES         ('Prospectoss', 'classes', 'Modulo.RepProspectosFRM:view1:DELETE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProspectosFRM', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Form1:INTERACTIVE-ADD', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:cajagrandeSociedades:PUBLIC_xel_emprelogo1:DELETE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
@@ -172,6 +178,8 @@ VALUES         ('Prospectoss', 'classes', 'Modulo.VendedoresFRM', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProspectosFRM:view1:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Form1', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:cajagrandeSociedades:PUBLIC_xel_emprelogo1:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.SociedadesFRM:cajagrandeSociedades:PUBLIC_xel_emprelogo1:INTERACTIVE-ADD', '', '0');
@@ -187,6 +195,8 @@ INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleLis
 VALUES         ('Prospectoss', 'classes', 'Modulo.ProspectosFRM:view1:INTERACTIVE-UPDATE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.LoginFRM:INTERACTIVE-UPDATE', '', '0');
+INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
+VALUES         ('Prospectoss', 'classes', 'Form1:FIND', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)
 VALUES         ('Prospectoss', 'classes', 'Modulo.MediospFRM:view1:DELETE', '', '0');
 INSERT INTO    nxjSecurityMap (appPackageName, moduleName, resourceName, roleList, lastUpdate)

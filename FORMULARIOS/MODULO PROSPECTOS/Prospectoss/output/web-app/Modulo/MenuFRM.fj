@@ -21,7 +21,7 @@ FORM MenuFRM
                            NXJMenu myMenu = new NXJMenu("myMenu");
                             
                             
-                            NXJMenu ParametrosMenu = new NXJMenu("Parámetros");
+                          NXJMenu ParametrosMenu = new NXJMenu("Parámetros");
                             NXJMenu ObrasMenu = new NXJMenu("Obras");
                                             NXJMenu TablasComunesMenu = new NXJMenu("Tablas Comunes -->");
                                                         NXJMenu TablasMenu = new NXJMenu("Tablas -->");
@@ -46,20 +46,20 @@ FORM MenuFRM
                 
                         Servicios.ServAdmin SrvTieneAcceso = new Servicios.ServAdmin();
                        
-                         
+                          
                           
                         /***************************************************************************************************/
                         /********* PARÁMETROS*/
                       
                         /**  Menu: Parámetros: Sociedades**/
-                          if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"vendedor"))
+                          if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"SociedadesFRM"))
                          {
                             NXJMenuItem Sociedadesadd = new NXJMenuItem("Sociedades");
                             Sociedadesadd.title = "Sociedades";
-                            Sociedadesadd.command = "Go To Form"; 
+                            Sociedadesadd.command = "cmdSig"; 
                             Sociedadesadd.commandParameter = ("Modulo.SociedadesFRM");
                             
-                            ParametrosMenu.add(Sociedadesadd);
+                            ParametrosMenu.add(Sociedadesadd); 
                             
                          }
                           
@@ -73,7 +73,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem ActividadPadd = new NXJMenuItem("Actividades de Presupuesto");                          
                             ActividadPadd.title = "Actividades de Presupuesto"; 
-                            ActividadPadd.command = "Exit";                       
+                           // ActividadPadd.command = "Exit";                       
                             
                             TablasMenu.add(ActividadPadd);
                            
@@ -89,7 +89,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem InsumosPadd = new NXJMenuItem("Insumos de Presupuesto");                          
                             InsumosPadd.title = "Insumos de Presupuesto"; 
-                            InsumosPadd.command = "Exit";                       
+                            //InsumosPadd.command = "Exit";                       
                             
                             TablasMenu.add(InsumosPadd);
                             
@@ -100,7 +100,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem ProveedoresIadd = new NXJMenuItem("Proveedores de Insumos");                          
                             ProveedoresIadd.title = "Proveedores de Insumos"; 
-                            ProveedoresIadd.command = "Exit";                       
+                            //ProveedoresIadd.command = "Exit";                       
                             
                             TablasMenu.add(ProveedoresIadd);
                             
@@ -111,7 +111,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem CategoriasPadd = new NXJMenuItem("Categorias de Proyectos");                          
                             CategoriasPadd.title = "Categorías de Proyectos"; 
-                            CategoriasPadd.command = "Exit";                       
+                            //CategoriasPadd.command = "Exit";                       
                             
                             TablasMenu.add(CategoriasPadd);
                             
@@ -122,7 +122,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem OrdenesDadd = new NXJMenuItem("Ordenes de Diseño");                          
                             OrdenesDadd.title = "Órdenes de Diseño"; 
-                            OrdenesDadd.command = "Exit";                       
+                            //OrdenesDadd.command = "Exit";                       
                             
                             TablasMenu.add(OrdenesDadd);
                             
@@ -133,7 +133,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem CreacionUOadd = new NXJMenuItem("Creacion de Unidad por Obra");                          
                             CreacionUOadd.title = "Creación de Unidad por Obra"; 
-                            CreacionUOadd.command = "Exit";                       
+                            //CreacionUOadd.command = "Exit";                       
                             
                             TablasMenu.add(CreacionUOadd);
                             
@@ -144,7 +144,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem ListaPadd = new NXJMenuItem(" Lista de Proveedores");                          
                             ListaPadd.title = " Lista de Proveedores"; 
-                            ListaPadd.command = "Exit";                       
+                            //ListaPadd.command = "Exit";                       
                             
                             TablasMenu.add(ListaPadd);
                             
@@ -155,7 +155,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem PreciosUIadd = new NXJMenuItem("Precios Unitarios por Insumo");                          
                             PreciosUIadd.title = "Precios Unitarios por Insumo"; 
-                            PreciosUIadd.command = "Exit";                       
+                            //PreciosUIadd.command = "Exit";                       
                             
                             PreciosUMenu.add(PreciosUIadd);
                             TablasComunesMenu.add(PreciosUMenu);
@@ -167,7 +167,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem PreciosUPadd = new NXJMenuItem("Precios Unitarios por Proveedor");                          
                             PreciosUPadd.title = "Precios Unitarios por Proveedor"; 
-                            PreciosUPadd.command = "Exit";                       
+                            //PreciosUPadd.command = "Exit";                       
                             
                             PreciosUMenu.add(PreciosUPadd);
                          }
@@ -177,7 +177,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem CopiaPUadd = new NXJMenuItem("Copia de Precios Unitarios");                          
                             CopiaPUadd.title = "Copia de Precios Unitarios"; 
-                            CopiaPUadd.command = "Exit";                       
+                            //CopiaPUadd.command = "Exit";                       
                             
                             PreciosUMenu.add(CopiaPUadd);
                           
@@ -188,7 +188,7 @@ FORM MenuFRM
                          {                        
                             NXJMenuItem CalculoTDadd = new NXJMenuItem("Calculo de Tiempos de Despacho");                          
                             CalculoTDadd.title = "Cálculo de Tiempos de Despacho"; 
-                            CalculoTDadd.command = "Exit";                       
+                            //CalculoTDadd.command = "Exit";                       
                             
                             PreciosUMenu.add(CalculoTDadd);
                          }
@@ -287,30 +287,28 @@ FORM MenuFRM
                             /************************  MENU - VENTAS - PROSPECTOS ********************/ 
                          
                                         /**  Menu: Ventas: Prospectos: Registro de Prospectos **/ 
-                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"ProspectosFRM"))
                                         {
                                             NXJMenuItem RegistroPadd = new NXJMenuItem("Registro de Prospectos");
                                             RegistroPadd.title = "Registro de Prospectos";
                                             RegistroPadd.command = "Go To Form"; 
                                             RegistroPadd.commandParameter = ("Modulo.ProspectosFRM");
                                             
-                                      /*      cajagrandeMenu.MTraspasa = "1";
-                                            session.displayToMessageBox(cajagrandeMenu.MTraspasa);*/
+                                     
                                             
                                             ProspectosMenu.add(RegistroPadd);
                                             VentasMenu.add(ProspectosMenu);
                                         }
                                         
                                         /**  Menu: Ventas: Prospectos: Seguimiento de Prospectos **/ 
-                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                                        if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"SeguimientoFRM"))
                                         {
                                             NXJMenuItem SeguimientoPadd = new NXJMenuItem("Seguimiento de Prospectos");
                                             SeguimientoPadd.title = "Seguimiento de Prospectos";
                                             SeguimientoPadd.command = "Go To Form"; 
                                             SeguimientoPadd.commandParameter = ("Modulo.SeguimientoFRM");
                                             
-                                         /*   cajagrandeMenu.MTraspasa = "2";
-                                            session.displayToMessageBox(cajagrandeMenu.MTraspasa);*/
+                                        
                                             
                                             ProspectosMenu.add(SeguimientoPadd);
                                         }
@@ -349,7 +347,7 @@ FORM MenuFRM
                          }
                          
                             /**  Menu: Ventas: Reportes: Reportes Ventas**/ 
-                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"mantenimie"))
+                         if (SrvTieneAcceso.tieneacceso(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo, Modulo.LoginFRM#cajagrandeLogin.xpr_usuario,"RepProspectosFRM"))
                          {
                             NXJMenuItem ReportesVentasadd = new NXJMenuItem("Reportes Ventas");
                             ReportesVentasadd.title = "Reportes Ventas";

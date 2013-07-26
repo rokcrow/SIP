@@ -6,6 +6,7 @@
 <body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
+        aud_on_entry="true"
         binary_variables=""
         bloom_filter="00000000000400040000000000000000"
         class="form"
@@ -133,6 +134,32 @@
                         type="text"
                         uid="form1_1369150692325_b4877e7ab5bf49a95afbb9c0398f84351d607cdf_1369406376333"
                         view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 256px; left: 63px; width:127px; height:68px">
+
+                    <input
+                        binary_variables=""
+                        class="button"
+                        command="Go To Form"
+                        command_parameter="Form1"
+                        displayheight="68"
+                        displayleft="63"
+                        displaytop="256"
+                        displaywidth="127"
+                        field_type="button"
+                        key="cajagrandeMenu:button1."
+                        name="cajagrandeMenu:button1."
+                        original_name="button1"
+                        type="button"
+                        uid="modulo_form1_1369423869434_3607ca0284c814dc0e56845b98fba66d41b5eaf8_1374850789130"
+                        value="Press"
+                        view="button"
+                        style="font-weight: bold;
+                            background-color: #00cccc">
                 </div>
 
                 <div

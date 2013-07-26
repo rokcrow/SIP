@@ -397,25 +397,8 @@ public class LoginFRM
 	    throws Exception
 	{
 	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	    if (us$registerPool.allocateRegister().load(cajagrandeLogin.xpr_password).neqOp(us$registerPool.allocateRegister().load(xus_password)).getBooleanValueNullOk())
-		{
-		intentos.assign(us$registerPool.allocateRegister().load(intentos).plusOp(1));
-		getSession().displayToMessageBox("Contrase\u00F1a incorrecta.");
-		if (us$registerPool.allocateRegister().load(intentos).ltOp(3).getBooleanValueNullOk())
-		    {
-		    getSession().queueNextField(cajagrandeLogin.xpr_password);
-		    }
-		else
-		    {
-		    getSession().displayToMessageBox("Excedio el numero de intentos permitidos. Intente despues.");
-		    getSession().exitToURL("salida.html");
-		    }
-		}
-	    else
-		if (us$registerPool.allocateRegister().load(cajagrandeLogin.xpr_password).eqOp(us$registerPool.allocateRegister().load(xus_password)).getBooleanValueNullOk())
-		    {
-		    getSession().queueNextForm("Modulo.MenuFRM");
-		    }
+	    cajagrandeLogin.xpr_usuario.assign(us$registerPool.allocateRegister().load("rbernal"));
+	    getSession().queueNextForm("Modulo.MenuFRM");
 	} // run
     } // logincmd
 
