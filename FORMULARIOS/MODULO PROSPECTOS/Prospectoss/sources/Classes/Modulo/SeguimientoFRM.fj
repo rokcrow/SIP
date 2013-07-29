@@ -229,11 +229,17 @@ FORM SeguimientoFRM
                             INTO   f_pcontacto;
                 
                 if ( session.status != StatusCode.SS_NORM )*/
-                    f_pcontacto = session.currentDate;
+                    f_pcontacto = session.currentDate + 7;
+                    
+                 
+                     f_pcontacto = session.currentDate;
                 if (vpy_tipo == "A") 
-                    vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
+                   { vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
+                   }
                 else
-                    vps_f_pcontacto = f_pcontacto + xpc_dias_pvt;                
+                    vps_f_pcontacto = f_pcontacto + xpc_dias_pvt;            
+                    
+                         session.displayToMessageBox(vps_f_pcontacto);    
             }
             
 
@@ -242,6 +248,7 @@ FORM SeguimientoFRM
             }
             FIELD vps_comentario1
             {
+
             }
             FIELD vps_consecu
             {

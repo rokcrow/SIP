@@ -8,15 +8,15 @@
     <form
         aud_on_entry="true"
         binary_variables=""
-        bloom_filter="00000000000400040000000000000000"
+        bloom_filter="00000000000400042000000000000000"
         class="form"
-        commands=""
+        commands="BackMenu"
         connection="Connection1"
-        displayheight="470"
+        displayheight="525"
         displaywidth="1202"
         field_order=""
         footer="none"
-        form_height="470"
+        form_height="528"
         form_width="1202"
         foundation_type="Classes/Foundation/Form"
         header="none"
@@ -30,14 +30,14 @@
         <div
             binary_variables=""
             view="div"
-            style="position: absolute; top: 30px; left: 190px; width:1004px; height:434px">
+            style="position: absolute; top: 30px; left: 190px; width:1004px; height:493px">
 
             <fieldset
                 binary_variables=""
                 border-width="0"
                 class="box"
                 commands="cmdSig"
-                displayheight="434"
+                displayheight="493"
                 displayleft="190"
                 displaytop="30"
                 displaywidth="1004"
@@ -71,7 +71,6 @@
                         key="cajagrandeMenu:EMPRESA."
                         name="cajagrandeMenu:EMPRESA."
                         original_name="EMPRESA"
-                        query="SELECT xem_nombre, xem_codigo FROM xem_empresas ORDER BY xem_nombre ASC&#59;"
                         required="false"
                         size="1"
                         stop_for_input="true"
@@ -139,33 +138,35 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 256px; left: 63px; width:127px; height:68px">
+                    style="position: absolute; top: 325px; left: 17px; width:168px; height:48px">
 
-                    <input
+                    <div
+                        base_class="Classes/ItemsForm/Boton.fx"
                         binary_variables=""
-                        class="button"
-                        command="Go To Form"
-                        command_parameter="Form1"
-                        displayheight="68"
-                        displayleft="63"
-                        displaytop="256"
-                        displaywidth="127"
+                        command="BackMenu"
+                        displayleft="17"
+                        displaytop="325"
+                        displaywidth="168"
                         field_type="button"
+                        foundation_type="Classes/Foundation/Button"
+                        id="cajagrandeMenu:button1."
+                        instancewidth="168"
                         key="cajagrandeMenu:button1."
-                        name="cajagrandeMenu:button1."
+                        kind="instance"
                         original_name="button1"
-                        type="button"
-                        uid="modulo_form1_1369423869434_3607ca0284c814dc0e56845b98fba66d41b5eaf8_1374850789130"
-                        value="Press"
-                        view="button"
-                        style="font-weight: bold;
-                            background-color: #00cccc">
+                        uid="modulo_form1_1369423869434_5eae505bab5e10e9c5fd8f2e02bd6c75cdc52d25_1375131894739"
+                        uid_to_name=""
+                        value="backlogin"
+                        view="button">
+
+                    </div>
+
                 </div>
 
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 384px; left: 4px; width:996px; height:50px">
+                    style="position: absolute; top: 442px; left: 4px; width:996px; height:50px">
 
                     <fieldset
                         binary_variables=""
@@ -174,7 +175,7 @@
                         commands=""
                         displayheight="50"
                         displayleft="4"
-                        displaytop="384"
+                        displaytop="442"
                         displaywidth="996"
                         field_weight="499"
                         id="cajagrandeMenu:cajaabajoMenu."

@@ -1290,7 +1290,7 @@ public class ProspectosDVW
 	    super(Modulo.ProspectosDVW.this, "vpp_fecha", true, true, 100);
 	    setStyleClass("textfield");
 	    us$setMultiValued(true);
-	    us$setView("date");
+	    us$setView("text");
 	    us$setCandidateTargetColumnName("vpp_fecha");
 	    setValueRetrievedDuringFetch(true);
 	    setRequired(true);
@@ -1322,7 +1322,7 @@ public class ProspectosDVW
 	    super(Modulo.ProspectosDVW.this, "vpp_fecha_nacio", true, true, 100);
 	    setStyleClass("textfield");
 	    us$setMultiValued(true);
-	    us$setView("date");
+	    us$setView("text");
 	    us$setCandidateTargetColumnName("vpp_fecha_nacio");
 	    setValueRetrievedDuringFetch(true);
 	    setFindable(true);
@@ -1355,7 +1355,7 @@ public class ProspectosDVW
 	    super(Modulo.ProspectosDVW.this, "vpp_fecha_visita", true, true, 100);
 	    setStyleClass("textfield");
 	    us$setMultiValued(true);
-	    us$setView("date");
+	    us$setView("text");
 	    us$setCandidateTargetColumnName("vpp_fecha_visita");
 	    setValueRetrievedDuringFetch(true);
 	    setRequired(true);
@@ -2517,7 +2517,7 @@ public class ProspectosDVW
 	vpp_estado_civil.setFontSize("12");
 	vpp_fechaestado.setStyleClass("textfield");
 	vpp_fechaestado.us$setMultiValued(true);
-	vpp_fechaestado.us$setView("date");
+	vpp_fechaestado.us$setView("text");
 	vpp_fechaestado.us$setCandidateTargetColumnName("vpp_fechaestado");
 	vpp_fechaestado.setValueRetrievedDuringFetch(true);
 	vpp_fechaestado.setRequired(true);

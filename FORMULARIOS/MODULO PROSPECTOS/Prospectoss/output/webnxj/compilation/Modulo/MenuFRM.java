@@ -120,6 +120,82 @@ public class MenuFRM
 	extends com.unify.nxj.mgr.NXJBox
     {
 
+	public void EmpresaList()
+	    throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
+	{
+	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	    java.util.ArrayList LMenu = new java.util.ArrayList();
+	    NullableString ENombre = NullableFactory.createNullableString("ENombre");
+	    NullableString ENombreT = NullableFactory.createNullableString("ENombreT");
+	    NullableString ECodigo = NullableFactory.createNullableString("ECodigo");
+	    NullableNumeric counter = (NullableNumeric)NullableFactory.createNullableNumeric("counter").assign(us$registerPool.allocateRegister().load(0));
+	    try
+		{
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn1 = getConnection();
+		    java.sql.PreparedStatement us$stmt1 = null;
+		    ResultSet us$rs1 = null;
+		    try
+			{
+			us$stmt1 = us$conn1.prepareStatement("SELECT xem_nombre, xsu_empresa FROM xsu_socieusu, xem_empresas WHERE xsu_empresa = xem_codigo AND xsu_usuario =  ?  ORDER BY xem_nombre ASC");
+			((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario.us$setSqlParameterValue(us$stmt1, 1);
+			us$rs1 = us$stmt1.executeQuery();
+			int us$rowsTouched1 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd1 = us$rs1.getMetaData();
+			    if (us$rsmd1.getColumnCount() != 2)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd1.getColumnCount()), "2"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter1 = us$conn1.createDataIterator(us$rs1);
+			    while (us$getter1.next())
+				{
+				++us$rowsTouched1;
+				us$getter1.assignValueToVariable(ENombre, 1);
+				us$getter1.assignValueToVariable(ECodigo, 2);
+
+				    {
+				    NameValuePair nomcod = new NameValuePair(us$registerPool.allocateRegister().load(ENombre).getStringValue(), us$registerPool.allocateRegister().load(ECodigo).getStringValue());
+				    LMenu.add(nomcod);
+				    }
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched1 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs1 != null)
+				us$rs1.close();
+			    }
+			}
+		    catch (SQLException us$ex1)
+			{
+			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+			throw us$ex1;
+			}
+		    catch (NXJDataConnectionException us$ex1)
+			{
+			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+			throw us$ex1;
+			}
+		    finally
+			{
+			if (us$stmt1 != null)
+			    us$conn1.us$closeStatement(us$stmt1);
+			}
+		    }
+		}
+	    catch (SQLException sqlExcp)
+		{
+		getSession().displayToMessageBox("No existen productos...");
+		}
+	    EMPRESA.setOptions(LMenu);
+	} // EmpresaList
+
 	public void menu()
 	    throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
 	{
@@ -432,6 +508,12 @@ public class MenuFRM
 	    extends com.unify.nxj.mgr.datatypes.NXJStringField
 	{
 
+	    public void initField()
+		throws Exception
+	    {
+		EmpresaList();
+	    } // initField
+
 	    public void onDataAccept()
 		throws Exception
 	    {
@@ -440,95 +522,28 @@ public class MenuFRM
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn1 = getConnection();
-		    java.sql.PreparedStatement us$stmt1 = null;
-		    ResultSet us$rs1 = null;
-		    try
-			{
-			us$stmt1 = us$conn1.prepareStatement("SELECT xem_nombre FROM xem_empresas WHERE xem_codigo =  ?");
-			((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt1, 1);
-			us$rs1 = us$stmt1.executeQuery();
-			int us$rowsTouched1 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd1 = us$rs1.getMetaData();
-			    if (us$rsmd1.getColumnCount() != 1)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd1.getColumnCount()), "1"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter1 = us$conn1.createDataIterator(us$rs1);
-			    if (us$getter1.next())
-				{
-				++us$rowsTouched1;
-				us$getter1.assignValueToVariable(empresanombre, 1);
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched1 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs1 != null)
-				us$rs1.close();
-			    }
-			}
-		    catch (SQLException us$ex1)
-			{
-			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
-			throw us$ex1;
-			}
-		    catch (NXJDataConnectionException us$ex1)
-			{
-			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
-			throw us$ex1;
-			}
-		    finally
-			{
-			if (us$stmt1 != null)
-			    us$conn1.us$closeStatement(us$stmt1);
-			}
-		    }
-		cajaarribaMenu.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
-	    } // onDataAccept
-
-	    public java.util.List us$evaluateListboxQuery()
-		throws java.sql.SQLException, com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
-	    {
-		int us$rowCount = 0;
-		java.util.List us$list = new java.util.ArrayList();
-		String us$proj1;
-		String us$proj2;
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
 		    NXJDataConnection us$conn2 = getConnection();
 		    java.sql.PreparedStatement us$stmt2 = null;
 		    ResultSet us$rs2 = null;
 		    try
 			{
-			us$stmt2 = us$conn2.prepareStatement("SELECT xem_nombre, xem_codigo FROM xem_empresas ORDER BY xem_nombre ASC");
+			us$stmt2 = us$conn2.prepareStatement("SELECT xem_nombre FROM xem_empresas WHERE xem_codigo =  ?");
+			((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt2, 1);
 			us$rs2 = us$stmt2.executeQuery();
 			int us$rowsTouched2 = 0;
 			try
 			    {
 			    java.sql.ResultSetMetaData us$rsmd2 = us$rs2.getMetaData();
-			    if (us$rsmd2.getColumnCount() != 2)
+			    if (us$rsmd2.getColumnCount() != 1)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd2.getColumnCount()), "2"
+				    Integer.toString(us$rsmd2.getColumnCount()), "1"
 				    }));
 			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter2 = us$conn2.createDataIterator(us$rs2);
-			    while (us$getter2.next())
+			    if (us$getter2.next())
 				{
 				++us$rowsTouched2;
-				us$proj1 = us$getter2.getString(1);
-				us$proj2 = us$getter2.getString(2);
-
-				    {
-				    if (us$rowCount++ == 200)
-					break;
-				    us$list.add(new com.unify.pub.NameValuePair(us$proj1, us$proj2));
-				    }
+				us$getter2.assignValueToVariable(empresanombre, 1);
 				}
 			    }
 			finally
@@ -555,8 +570,8 @@ public class MenuFRM
 			    us$conn2.us$closeStatement(us$stmt2);
 			}
 		    }
-		return us$list;
-	    } // us$evaluateListboxQuery
+		cajaarribaMenu.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
+	    } // onDataAccept
 
 	    public EMPRESA()
 	    {
@@ -574,7 +589,17 @@ public class MenuFRM
 	public EMPRESA EMPRESA = new EMPRESA();
 	public NullableStringField MTraspasa = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "MTraspasa", false, true, 100);
 	public NullableStringField NombreForma1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombreForma1", false, true, 100);
-	public NXJButtonControl button1 = new com.unify.nxj.mgr.datatypes.NXJButtonImpl(this, "button1", false);
+	public class button1
+	    extends ItemsForm.Boton
+	{
+
+	    public button1()
+	    {
+		super(Modulo.MenuFRM.cajagrandeMenu.this, "button1", false);
+	    } // <init>
+	} // button1
+
+	public button1 button1 = new button1();
 	public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
 	public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
 	public NXJMenuControl menuPri = new com.unify.nxj.mgr.datatypes.NXJMenuControlImpl(this, "menuPri", false);
@@ -690,10 +715,6 @@ public class MenuFRM
 	    NombreForma1.us$setView("text");
 	    NombreForma1.setFindable(false);
 	    NombreForma1.setStopForInput(true);
-	    button1.setStyleClass("button");
-	    button1.setBackgroundColor("#00cccc");
-	    button1.us$setFontWeight("bold");
-	    button1.setCommandParameter("Form1");
 	    label1.setStyleClass("label");
 	    label1.setFontSize("12");
 	    label11.setStyleClass("label");
@@ -707,6 +728,28 @@ public class MenuFRM
     } // cajagrandeMenu
 
     public final cajagrandeMenu cajagrandeMenu = new cajagrandeMenu(this);
+    public final class BackMenu
+	extends NXJCommand
+    {
+
+	public BackMenu()
+	{
+	    super("BackMenu", Modulo.MenuFRM.this, 3, true, 1);
+	    us$addCommand(this);
+	} // <init>
+
+	public void run()
+	    throws Exception
+	{
+	    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	    ((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario.assign(us$registerPool.allocateRegister().load(" "));
+	    ((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_password.assign(us$registerPool.allocateRegister().load(" "));
+	    ((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_grupo.assign(us$registerPool.allocateRegister().load(" "));
+	    getSession().queueNextForm("Modulo.LoginFRM");
+	} // run
+    } // BackMenu
+
+    public final BackMenu BackMenu = new BackMenu();
 
     public MenuFRM(NXJSession session, NXJForm prevForm)
     {

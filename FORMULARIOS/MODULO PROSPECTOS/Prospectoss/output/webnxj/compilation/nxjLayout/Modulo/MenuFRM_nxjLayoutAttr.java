@@ -24,8 +24,8 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("title","Menu");
 	widget.addAttribute("displaywidth","1202");
 	widget.addAttribute("stylesheets","");
-	widget.addAttribute("displayheight","470");
-	widget.addAttribute("fieldheight","470");
+	widget.addAttribute("displayheight","528");
+	widget.addAttribute("fieldheight","528");
 	widget.addAttribute("fieldwidth","1202");
 	widget.addStyle("background-color","#999999");
 	widget.setClass("form");
@@ -37,7 +37,7 @@ private void setAttrFor_div_cajagrandeMenu__10(Widget widget)
 	widget.addStyle("left","190px");
 	widget.addStyle("top","30px");
 	widget.addStyle("width","1004px");
-	widget.addStyle("height","434px");
+	widget.addStyle("height","493px");
 }
 
 private void setAttrFor_cajagrandeMenu__20(Widget widget)
@@ -48,8 +48,8 @@ private void setAttrFor_cajagrandeMenu__20(Widget widget)
 	widget.addAttribute("displayleft","190");
 	widget.addAttribute("id","cajagrandeMenu.");
 	widget.addAttribute("displaytop","30");
-	widget.addAttribute("displayheight","434");
-	widget.addAttribute("fieldheight","434");
+	widget.addAttribute("displayheight","493");
+	widget.addAttribute("fieldheight","493");
 	widget.addAttribute("fieldwidth","1004");
 	widget.addStyle("background-color","#cccccc");
 	widget.setClass("box");
@@ -98,8 +98,8 @@ private void setAttrFor_MTraspasa__40(Widget widget)
 	widget.addAttribute("displaywidth","41");
 	widget.addAttribute("displayleft","70");
 	widget.addAttribute("displaytop","134");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","41");
 	widget.addAttribute("size","6");
@@ -124,8 +124,8 @@ private void setAttrFor_NombreForma1__40(Widget widget)
 	widget.addAttribute("displaywidth","348");
 	widget.addAttribute("displayleft","365");
 	widget.addAttribute("displaytop","281");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","348");
 	widget.addAttribute("size","58");
@@ -136,27 +136,23 @@ private void setAttrFor_NombreForma1__40(Widget widget)
 
 private void setAttrFor_div_button1__30(Widget widget)
 {
-	widget.addStyle("left","63px");
-	widget.addStyle("top","256px");
-	widget.addStyle("width","127px");
-	widget.addStyle("height","68px");
+	widget.addStyle("left","17px");
+	widget.addStyle("top","325px");
+	widget.addStyle("width","168px");
+	widget.addStyle("height","48px");
 }
 
 private void setAttrFor_button1__40(Widget widget)
 {
-	widget.addAttribute("command","Go To Form");
+	widget.addAttribute("command","BackMenu");
 	widget.addAttribute("field_type","button");
-	widget.addAttribute("displaywidth","127");
-	widget.addAttribute("displayleft","63");
-	widget.addStyle("font-weight","bold");
-	widget.addAttribute("value","Press");
-	widget.addAttribute("displaytop","256");
-	widget.addAttribute("displayheight","68");
+	widget.addAttribute("displaywidth","168");
+	widget.addAttribute("displayleft","17");
+	widget.addAttribute("value","backlogin");
+	widget.addAttribute("displaytop","325");
 	widget.addAttribute("type","button");
-	widget.addAttribute("fieldheight","68");
-	widget.addAttribute("fieldwidth","127");
-	widget.addStyle("background-color","#00cccc");
-	widget.setClass("button");
+	widget.addAttribute("fieldwidth","168");
+	widget.addAttribute("instancewidth","168");
 	widget.addAttribute("name","cajagrandeMenu:button1.");
 	widget.addStyle("overflow","hidden");
 }
@@ -164,7 +160,7 @@ private void setAttrFor_button1__40(Widget widget)
 private void setAttrFor_div_cajaabajoMenu__30(Widget widget)
 {
 	widget.addStyle("left","4px");
-	widget.addStyle("top","384px");
+	widget.addStyle("top","442px");
 	widget.addStyle("width","996px");
 	widget.addStyle("height","50px");
 }
@@ -177,13 +173,13 @@ private void setAttrFor_cajaabajoMenu__40(Widget widget)
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addAttribute("id","cajagrandeMenu:cajaabajoMenu.");
-	widget.addAttribute("displaytop","384");
+	widget.addAttribute("displaytop","442");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("background-color","#e30000");
-	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
+	widget.addStyle("border-color","transparent");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -226,8 +222,8 @@ private void setAttrFor_cajaarribaMenu__40(Widget widget)
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("background-color","#e30000");
-	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
+	widget.addStyle("border-color","transparent");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -447,7 +443,7 @@ private void dodiv_cajagrandeMenu__10(Widget div_cajagrandeMenu__10)
             {
             ((ContainerWidget)cajagrandeMenu__20).addComponent(div_button1__30,"div_button1_");
             setAttrFor_div_button1__30(div_button1__30);
-            ButtonWidget button1__40 = new ButtonWidget();
+            nxjLayout.ItemsForm.Boton_nxjLayoutAttr button1__40 = new nxjLayout.ItemsForm.Boton_nxjLayoutAttr();
                 {
                 ((ContainerWidget)div_button1__30).addComponent(button1__40,"button1_");
                 setAttrFor_button1__40(button1__40);

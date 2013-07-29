@@ -1550,7 +1550,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:277px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -1558,7 +1558,7 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="522"
+                                displaywidth="277"
                                 foundation_type="Classes/Foundation/Label"
                                 id=".top:cajaarribaRProspectos:label1."
                                 key=".top:cajaarribaRProspectos:label1."

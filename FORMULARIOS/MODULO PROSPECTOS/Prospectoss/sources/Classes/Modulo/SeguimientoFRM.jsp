@@ -105,7 +105,7 @@
                                 id="CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1."
                                 key="CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1."
                                 kind="repeating_area"
-                                list_columns="CajaSegui:PUBLIC_vps_prosigue:vps_consecu.0:74;CajaSegui:PUBLIC_vps_prosigue:vps_fecha.74:67;CajaSegui:PUBLIC_vps_prosigue:vps_hora.141:61;CajaSegui:PUBLIC_vps_prosigue:vps_usuario.202:54;CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.256:93;CajaSegui:PUBLIC_vps_prosigue:vps_califica.349:74;CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.423:237;CajaSegui:PUBLIC_vps_prosigue:vps_estado.660:94;CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.754:93"
+                                list_columns="CajaSegui:PUBLIC_vps_prosigue:vps_consecu.0:78;CajaSegui:PUBLIC_vps_prosigue:vps_fecha.78:67;CajaSegui:PUBLIC_vps_prosigue:vps_hora.145:53;CajaSegui:PUBLIC_vps_prosigue:vps_usuario.198:54;CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.252:103;CajaSegui:PUBLIC_vps_prosigue:vps_califica.355:85;CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.440:221;CajaSegui:PUBLIC_vps_prosigue:vps_estado.661:76;CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.737:110"
                                 occurrences="9"
                                 repeat_style="Grid"
                                 row_class="ROW"
@@ -128,7 +128,7 @@
                                         displayheight="22"
                                         displayleft="0"
                                         displaytop="0"
-                                        displaywidth="74"
+                                        displaywidth="78"
                                         field_length="6"
                                         field_type="text"
                                         field_weight="99"
@@ -138,7 +138,7 @@
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_consecu."
                                         retrieve_value="true"
-                                        size="12"
+                                        size="13"
                                         stop_for_input="false"
                                         target_field="vps_consecu"
                                         title="vps_consecu"
@@ -196,7 +196,7 @@
                                         displayheight="22"
                                         displayleft="174"
                                         displaytop="0"
-                                        displaywidth="61"
+                                        displaywidth="53"
                                         field_length="8"
                                         field_type="text"
                                         field_weight="299"
@@ -206,7 +206,7 @@
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_hora."
                                         retrieve_value="true"
-                                        size="10"
+                                        size="8"
                                         stop_for_input="false"
                                         target_field="vps_hora"
                                         title="vps_hora"
@@ -264,7 +264,7 @@
                                         displayheight="21"
                                         displayleft="424"
                                         displaytop="0"
-                                        displaywidth="93"
+                                        displaywidth="103"
                                         field_length="2"
                                         field_type="SELECT"
                                         field_weight="499"
@@ -282,7 +282,7 @@
                                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317808977"
                                         updateable="true"
                                         view="select"
-                                        style="width:93px; height: 21px">
+                                        style="width:103px; height: 21px">
                                     </select>
 
                                 </div>
@@ -302,7 +302,7 @@
                                         displayheight="22"
                                         displayleft="445"
                                         displaytop="0"
-                                        displaywidth="74"
+                                        displaywidth="85"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="599"
@@ -314,7 +314,7 @@
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_califica."
                                         retrieve_value="true"
                                         return_values_into="vps_califica"
-                                        size="12"
+                                        size="14"
                                         target_field="vps_califica"
                                         title="vps_califica"
                                         type="text"
@@ -335,7 +335,7 @@
                                         displayheight="22"
                                         displayleft="658"
                                         displaytop="0"
-                                        displaywidth="237"
+                                        displaywidth="221"
                                         field_type="text"
                                         field_weight="699"
                                         findable="false"
@@ -344,7 +344,7 @@
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:xpc_nombre."
                                         original_name="textfield1"
-                                        size="39"
+                                        size="36"
                                         stop_for_input="false"
                                         target_field=""
                                         type="text"
@@ -366,7 +366,7 @@
                                         displayheight="21"
                                         displayleft="658"
                                         displaytop="0"
-                                        displaywidth="94"
+                                        displaywidth="76"
                                         field_length="2"
                                         field_type="SELECT"
                                         field_weight="799"
@@ -385,7 +385,7 @@
                                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369318201710"
                                         updateable="true"
                                         view="select"
-                                        style="width:94px; height: 21px">
+                                        style="width:76px; height: 21px">
                                     </select>
 
                                 </div>
@@ -405,18 +405,18 @@
                                         displayheight="22"
                                         displayleft="621"
                                         displaytop="0"
-                                        displaywidth="93"
+                                        displaywidth="110"
                                         field_length="10"
                                         field_type="text"
                                         field_weight="899"
                                         findable="true"
                                         headertitle="Fecha Contacto"
-                                        immediate="false"
+                                        immediate="true"
                                         key="CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto."
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto."
                                         retrieve_value="true"
-                                        size="15"
+                                        size="18"
                                         stop_for_input="false"
                                         target_field="vps_f_pcontacto"
                                         title="vps_f_pcontacto"
@@ -1308,22 +1308,25 @@
                         accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="40"
+                        db_type="String"
                         displayheight="22"
                         displayleft="110"
                         displaytop="321"
                         displaywidth="250"
                         explicit_search_mode="default"
-                        field_length="100"
+                        field_length="40"
                         field_type="text"
                         field_weight="1299"
-                        findable="false"
+                        findable="true"
                         immediate="true"
                         key="CajaSegui:vpp_cuanta_correo2."
                         multi_valued="true"
                         name="CajaSegui:vpp_cuanta_correo2."
                         original_name="textfield1"
-                        retrieve_value="false"
+                        retrieve_value="true"
                         size="41"
+                        target_field="vpp_cuanta_correo2"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316069934"
                         updateable="true"
@@ -1335,37 +1338,39 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 209px; left: 452px; width:250px; height:22px">
+                    style="position: absolute; top: 209px; left: 452px; width:250px; height:21px">
 
-                    <input
+                    <select
                         accell_type="String"
                         binary_variables=""
-                        case_conversion="Upper"
                         class="textfield"
                         db_length="30"
                         db_type="String"
-                        displayheight="22"
+                        displayheight="21"
                         displayleft="452"
                         displaytop="209"
                         displaywidth="250"
                         explicit_search_mode="default"
                         field_length="30"
-                        field_type="text"
+                        field_type="SELECT"
                         field_weight="799"
                         findable="true"
                         key="CajaSegui:vpp_direccion."
                         multi_valued="true"
                         name="CajaSegui:vpp_direccion."
-                        original_name="textfield1"
+                        original_name="vpp_direccion"
+                        query="select xzo_nombre from xzo_zonas&#59;"
                         retrieve_value="true"
-                        size="41"
+                        size="1"
                         target_field="vpp_direccion"
-                        type="text"
-                        uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315708203"
+                        uid="form1_1371588526491_5eae505bab5e10e9c5fd8f2e02bd6c75cdc52d25_1375132684167"
                         updateable="true"
-                        view="text"
-                        style="font-size: 12px;
+                        view="select"
+                        style="width:250px; height: 21px;
+                            font-size: 12px;
                             color: Black">
+                    </select>
+
                 </div>
 
                 <div
@@ -1434,7 +1439,7 @@
                         target_field="vpp_fecha"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 
@@ -1470,7 +1475,7 @@
                         target_field="vpp_fechaestado"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 

@@ -41,7 +41,7 @@ private void setAttrFor_this(Widget widget)
 private void setAttrFor_div_RepeatingArea1__10(Widget widget)
 {
 	widget.addStyle("left","150px");
-	widget.addStyle("top","165px");
+	widget.addStyle("top","365px");
 	widget.addStyle("width","823px");
 	widget.addStyle("height","285px");
 }
@@ -50,7 +50,7 @@ private void setAttrFor_RepeatingArea1__20(Widget widget)
 {
 	widget.addAttribute("list_columns",".top:xpc_codigo.0:55;.top:xpc_clase.55:129;.top:xpc_nombre.184:260;.top:xpc_califica.444:154;.top:xpc_dias_pac.598:103;.top:xpc_dias_pvt.701:103");
 	widget.addAttribute("altRowClass","alternate_row");
-	widget.addAttribute("field_weight","99");
+	widget.addAttribute("field_weight","199");
 	widget.addAttribute("row_class","ROW");
 	widget.addAttribute("selected_row_class","selected_row");
 	widget.addAttribute("repeat_style","Grid");
@@ -59,7 +59,7 @@ private void setAttrFor_RepeatingArea1__20(Widget widget)
 	widget.addAttribute("displayleft","150");
 	widget.addAttribute("horizontal_scroll_width","100%");
 	widget.addAttribute("id",".top:RepeatingArea1.");
-	widget.addAttribute("displaytop","165");
+	widget.addAttribute("displaytop","365");
 	widget.addAttribute("disable_wrap","false");
 	widget.addAttribute("displayheight","285");
 	widget.addAttribute("fieldheight","285");
@@ -272,7 +272,7 @@ private void setAttrFor_div_cajaarribaGInteres__10(Widget widget)
 
 private void setAttrFor_cajaarribaGInteres__20(Widget widget)
 {
-	widget.addAttribute("field_weight","199");
+	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
@@ -490,7 +490,7 @@ private void dodiv_RepeatingArea1__10(Widget div_RepeatingArea1__10)
             div_FXGRID_30.addStyle("overflow-y","hidden");
             div_FXGRID_30.addAttribute("jsinclude","NXJGrid.js");
             div_FXGRID_30.addAttribute("jslinks","NXJGrid.css");
-            div_FXGRID_30.addAttribute("jsinit","var combo1 = ['Primer Contacto', 'Seguimiento']; var combo3 = ['Interesado', 'Medianamente Interesado', 'Poco Interesado'];    var _top_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Codigo', 	'1', 	'1', 	'55', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_codigo', '.top:xpc_codigo.', '', ''), new NXJGridColumn( 	'Clase', 	'3', 	'1', 	'129', 	'', 	combo1, 	'Primer Contacto', 	'textfield', 	true, 	true, 	'xpc_clase', '.top:xpc_clase.', '', ''), new NXJGridColumn( 	'Nombre', 	'1', 	'1', 	'260', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_nombre', '.top:xpc_nombre.', '', ''), new NXJGridColumn( 	'Calificacion', 	'3', 	'1', 	'154', 	'', 	combo3, 	'Interesado', 	'textfield', 	true, 	true, 	'xpc_califica', '.top:xpc_califica.', '', ''), new NXJGridColumn( 	'DiasAltoCosto', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pac', '.top:xpc_dias_pac.', '', ''), new NXJGridColumn( 	'DiasVTradicional', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pvt', '.top:xpc_dias_pvt.', '', '') ]; ; if (!window.namesToComponents['GradoInteresDVW_FXGRID'])     {     window.namesToComponents['GradoInteresDVW_FXGRID'] = new NXJGrid('GradoInteresDVW_FXGRID', _top_RepeatingArea1__FXColumns, 22, null, null, '__NXJ_CONTEXT_PATH__/unify', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/');     } ");
+            div_FXGRID_30.addAttribute("jsinit","var combo1 = ['Primer Contacto', 'Seguimiento']; var combo3 = ['Interesado', 'Medianamente Interesado', 'Poco Interesado'];    var _top_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Codigo', 	'1', 	'1', 	'55', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_codigo', '.top:xpc_codigo.', '', ''), new NXJGridColumn( 	'Clase', 	'3', 	'1', 	'129', 	'', 	combo1, 	'Primer Contacto', 	'textfield', 	true, 	true, 	'xpc_clase', '.top:xpc_clase.', '', ''), new NXJGridColumn( 	'Nombre', 	'1', 	'1', 	'260', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_nombre', '.top:xpc_nombre.', '', ''), new NXJGridColumn( 	'Calificacion', 	'3', 	'1', 	'154', 	'', 	combo3, 	'Interesado', 	'textfield', 	true, 	true, 	'xpc_califica', '.top:xpc_califica.', '', ''), new NXJGridColumn( 	'DiasAltoCosto', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pac', '.top:xpc_dias_pac.', '', ''), new NXJGridColumn( 	'DiasVTradicional', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pvt', '.top:xpc_dias_pvt.', '', '') ]; ; if (!window.namesToComponents['GradoInteresDVW_FXGRID'])     {     window.namesToComponents['GradoInteresDVW_FXGRID'] = new NXJGrid('GradoInteresDVW_FXGRID', _top_RepeatingArea1__FXColumns, 22, null, null, '__NXJ_CONTEXT_PATH__/unify', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/');     } ");
             }
         }
     }

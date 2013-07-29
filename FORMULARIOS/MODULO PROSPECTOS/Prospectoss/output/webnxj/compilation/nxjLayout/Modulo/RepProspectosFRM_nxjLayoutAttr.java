@@ -164,7 +164,7 @@ private void setAttrFor_fecha1__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha1.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha1.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
+	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha1.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha1.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","140");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -182,7 +182,7 @@ private void setAttrFor_fecha2__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha2.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha2.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'S,M,T,W,T,F,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
+	widget.addAttribute("jsinit","window.namesToComponents['view1:Modulo.RepProspectosDVW;fecha2.'] = new NXJDatePicker('view1:Modulo.RepProspectosDVW;fecha2.', 'textfield', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/', '', '', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","140");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");

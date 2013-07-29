@@ -11,6 +11,16 @@ public ProspectosDVW_nxjLayoutAttr()
 {
 this.isLocalized = false;
 setAttrFor_this(this);
+DivPanelWidget div_vpy_nombre__10 = new DivPanelWidget();
+dodiv_vpy_nombre__10(div_vpy_nombre__10);
+DivPanelWidget div_vpp_corredor__10 = new DivPanelWidget();
+dodiv_vpp_corredor__10(div_vpp_corredor__10);
+DivPanelWidget div_vpp_vendedor__10 = new DivPanelWidget();
+dodiv_vpp_vendedor__10(div_vpp_vendedor__10);
+DivPanelWidget div_vve_nombre__10 = new DivPanelWidget();
+dodiv_vve_nombre__10(div_vve_nombre__10);
+DivPanelWidget div_xpc_nombre__10 = new DivPanelWidget();
+dodiv_xpc_nombre__10(div_xpc_nombre__10);
 DivPanelWidget div_Label1__10 = new DivPanelWidget();
 dodiv_Label1__10(div_Label1__10);
 DivPanelWidget div_Label10__10 = new DivPanelWidget();
@@ -153,8 +163,6 @@ DivPanelWidget div_vpp_califica__10 = new DivPanelWidget();
 dodiv_vpp_califica__10(div_vpp_califica__10);
 DivPanelWidget div_vpp_ciudad__10 = new DivPanelWidget();
 dodiv_vpp_ciudad__10(div_vpp_ciudad__10);
-DivPanelWidget div_vpp_corredor__10 = new DivPanelWidget();
-dodiv_vpp_corredor__10(div_vpp_corredor__10);
 DivPanelWidget div_vpp_correo__10 = new DivPanelWidget();
 dodiv_vpp_correo__10(div_vpp_correo__10);
 DivPanelWidget div_vpp_cuanta_correo2__10 = new DivPanelWidget();
@@ -231,16 +239,8 @@ DivPanelWidget div_vpp_telofi__10 = new DivPanelWidget();
 dodiv_vpp_telofi__10(div_vpp_telofi__10);
 DivPanelWidget div_vpp_telres__10 = new DivPanelWidget();
 dodiv_vpp_telres__10(div_vpp_telres__10);
-DivPanelWidget div_vpp_vendedor__10 = new DivPanelWidget();
-dodiv_vpp_vendedor__10(div_vpp_vendedor__10);
 DivPanelWidget div_vpp_viviactual__10 = new DivPanelWidget();
 dodiv_vpp_viviactual__10(div_vpp_viviactual__10);
-DivPanelWidget div_vpy_nombre__10 = new DivPanelWidget();
-dodiv_vpy_nombre__10(div_vpy_nombre__10);
-DivPanelWidget div_vve_nombre__10 = new DivPanelWidget();
-dodiv_vve_nombre__10(div_vve_nombre__10);
-DivPanelWidget div_xpc_nombre__10 = new DivPanelWidget();
-dodiv_xpc_nombre__10(div_xpc_nombre__10);
 }
 
 private void setAttrFor_this(Widget widget)
@@ -257,6 +257,143 @@ private void setAttrFor_this(Widget widget)
 	widget.addStyle("background-color","#cccccc");
 	widget.setClass("data_view");
 	widget.addAttribute("name",".top.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vpy_nombre__10(Widget widget)
+{
+	widget.addStyle("left","160px");
+	widget.addStyle("top","265px");
+	widget.addStyle("width","194px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vpy_nombre__20(Widget widget)
+{
+	widget.addAttribute("field_weight","899");
+	widget.addAttribute("field_type","text");
+	widget.addStyle("font-size","12");
+	widget.addAttribute("displaywidth","194");
+	widget.addAttribute("displayleft","160");
+	widget.addStyle("color","Black");
+	widget.addAttribute("displaytop","265");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","194");
+	widget.addAttribute("size","32");
+	widget.setClass("textfield");
+	widget.addAttribute("name",".top:vpy_nombre.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vpp_corredor__10(Widget widget)
+{
+	widget.addStyle("left","473px");
+	widget.addStyle("top","1275px");
+	widget.addStyle("width","45px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vpp_corredor__20(Widget widget)
+{
+	widget.addAttribute("immediate","true");
+	widget.addAttribute("field_weight","4699");
+	widget.addAttribute("field_type","text");
+	widget.addStyle("font-size","12");
+	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("displayleft","473");
+	widget.addStyle("color","Black");
+	widget.addAttribute("displaytop","1275");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.addAttribute("size","7");
+	widget.setClass("textfield");
+	widget.addAttribute("name",".top:vpp_corredor.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vpp_vendedor__10(Widget widget)
+{
+	widget.addStyle("left","112px");
+	widget.addStyle("top","1275px");
+	widget.addStyle("width","45px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vpp_vendedor__20(Widget widget)
+{
+	widget.addAttribute("immediate","true");
+	widget.addAttribute("field_weight","4499");
+	widget.addAttribute("field_type","text");
+	widget.addStyle("font-size","12");
+	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("displayleft","112");
+	widget.addStyle("color","Black");
+	widget.addAttribute("displaytop","1275");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.addAttribute("size","7");
+	widget.setClass("textfield");
+	widget.addAttribute("name",".top:vpp_vendedor.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vve_nombre__10(Widget widget)
+{
+	widget.addStyle("left","160px");
+	widget.addStyle("top","1275px");
+	widget.addStyle("width","288px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vve_nombre__20(Widget widget)
+{
+	widget.addAttribute("field_weight","4599");
+	widget.addAttribute("field_type","text");
+	widget.addStyle("font-size","12");
+	widget.addAttribute("displaywidth","288");
+	widget.addAttribute("displayleft","160");
+	widget.addStyle("color","Black");
+	widget.addAttribute("displaytop","1275");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","288");
+	widget.addAttribute("size","48");
+	widget.setClass("textfield");
+	widget.addAttribute("name",".top:vve_nombre.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_xpc_nombre__10(Widget widget)
+{
+	widget.addStyle("left","160px");
+	widget.addStyle("top","1331px");
+	widget.addStyle("width","288px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_xpc_nombre__20(Widget widget)
+{
+	widget.addAttribute("field_weight","4999");
+	widget.addAttribute("field_type","text");
+	widget.addStyle("font-size","12");
+	widget.addAttribute("displaywidth","288");
+	widget.addAttribute("displayleft","160");
+	widget.addStyle("color","Black");
+	widget.addAttribute("displaytop","1331");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","288");
+	widget.addAttribute("size","48");
+	widget.setClass("textfield");
+	widget.addAttribute("name",".top:xpc_nombre.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1636,19 +1773,20 @@ private void setAttrFor_div_label1__30(Widget widget)
 {
 	widget.addStyle("left","241px");
 	widget.addStyle("top","14px");
-	widget.addStyle("width","522px");
+	widget.addStyle("width","277px");
 	widget.addStyle("height","23px");
 }
 
 private void setAttrFor_label1__40(Widget widget)
 {
-	widget.addAttribute("id",".top:cajaarribaRProspectos:label1.");
 	widget.addAttribute("labeltitle","REGISTRO DE PROSPECTOS");
-	widget.addAttribute("displayheight","23");
-	widget.addAttribute("displaytop","14");
-	widget.addStyle("text-align","left");
-	widget.addAttribute("displaywidth","522");
+	widget.addAttribute("displaywidth","277");
 	widget.addAttribute("displayleft","241");
+	widget.addAttribute("id",".top:cajaarribaRProspectos:label1.");
+	widget.addAttribute("displaytop","14");
+	widget.addAttribute("displayheight","23");
+	widget.addAttribute("fieldwidth","277");
+	widget.addStyle("text-align","left");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -2138,34 +2276,6 @@ private void setAttrFor_vpp_ciudad__20(Widget widget)
 	widget.addAttribute("size","1");
 	widget.setClass("textfield");
 	widget.addAttribute("name",".top:vpp_ciudad.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vpp_corredor__10(Widget widget)
-{
-	widget.addStyle("left","473px");
-	widget.addStyle("top","1275px");
-	widget.addStyle("width","45px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vpp_corredor__20(Widget widget)
-{
-	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_weight","4699");
-	widget.addAttribute("field_type","text");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("displayleft","473");
-	widget.addStyle("color","Black");
-	widget.addAttribute("displaytop","1275");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("size","7");
-	widget.setClass("textfield");
-	widget.addAttribute("name",".top:vpp_corredor.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -3234,34 +3344,6 @@ private void setAttrFor_vpp_telres__20(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vpp_vendedor__10(Widget widget)
-{
-	widget.addStyle("left","112px");
-	widget.addStyle("top","1275px");
-	widget.addStyle("width","45px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vpp_vendedor__20(Widget widget)
-{
-	widget.addAttribute("immediate","true");
-	widget.addAttribute("field_weight","4499");
-	widget.addAttribute("field_type","text");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("displayleft","112");
-	widget.addStyle("color","Black");
-	widget.addAttribute("displaytop","1275");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("size","7");
-	widget.setClass("textfield");
-	widget.addAttribute("name",".top:vpp_vendedor.");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_vpp_viviactual__10(Widget widget)
 {
 	widget.addStyle("left","634px");
@@ -3289,87 +3371,56 @@ private void setAttrFor_vpp_viviactual__20(Widget widget)
 	widget.addAttribute("name",".top:vpp_viviactual.");
 	widget.addStyle("overflow","hidden");
 }
-
-private void setAttrFor_div_vpy_nombre__10(Widget widget)
-{
-	widget.addStyle("left","160px");
-	widget.addStyle("top","265px");
-	widget.addStyle("width","194px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vpy_nombre__20(Widget widget)
-{
-	widget.addAttribute("field_weight","899");
-	widget.addAttribute("field_type","text");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("displaywidth","194");
-	widget.addAttribute("displayleft","160");
-	widget.addStyle("color","Black");
-	widget.addAttribute("displaytop","265");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","194");
-	widget.addAttribute("size","32");
-	widget.setClass("textfield");
-	widget.addAttribute("name",".top:vpy_nombre.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vve_nombre__10(Widget widget)
-{
-	widget.addStyle("left","160px");
-	widget.addStyle("top","1275px");
-	widget.addStyle("width","288px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vve_nombre__20(Widget widget)
-{
-	widget.addAttribute("field_weight","4599");
-	widget.addAttribute("field_type","text");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("displaywidth","288");
-	widget.addAttribute("displayleft","160");
-	widget.addStyle("color","Black");
-	widget.addAttribute("displaytop","1275");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","288");
-	widget.addAttribute("size","48");
-	widget.setClass("textfield");
-	widget.addAttribute("name",".top:vve_nombre.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_xpc_nombre__10(Widget widget)
-{
-	widget.addStyle("left","160px");
-	widget.addStyle("top","1331px");
-	widget.addStyle("width","288px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_xpc_nombre__20(Widget widget)
-{
-	widget.addAttribute("field_weight","4999");
-	widget.addAttribute("field_type","text");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("displaywidth","288");
-	widget.addAttribute("displayleft","160");
-	widget.addStyle("color","Black");
-	widget.addAttribute("displaytop","1331");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("fieldwidth","288");
-	widget.addAttribute("size","48");
-	widget.setClass("textfield");
-	widget.addAttribute("name",".top:xpc_nombre.");
-	widget.addStyle("overflow","hidden");
-}
+private void dodiv_vpy_nombre__10(Widget div_vpy_nombre__10)
+    {
+    ((ContainerWidget)this).addComponent(div_vpy_nombre__10,"div_vpy_nombre_");
+    setAttrFor_div_vpy_nombre__10(div_vpy_nombre__10);
+    TextWidget vpy_nombre__20 = new TextWidget();
+        {
+        ((ContainerWidget)div_vpy_nombre__10).addComponent(vpy_nombre__20,"vpy_nombre_");
+        setAttrFor_vpy_nombre__20(vpy_nombre__20);
+        }
+    }
+private void dodiv_vpp_corredor__10(Widget div_vpp_corredor__10)
+    {
+    ((ContainerWidget)this).addComponent(div_vpp_corredor__10,"div_vpp_corredor_");
+    setAttrFor_div_vpp_corredor__10(div_vpp_corredor__10);
+    TextWidget vpp_corredor__20 = new TextWidget();
+        {
+        ((ContainerWidget)div_vpp_corredor__10).addComponent(vpp_corredor__20,"vpp_corredor_");
+        setAttrFor_vpp_corredor__20(vpp_corredor__20);
+        }
+    }
+private void dodiv_vpp_vendedor__10(Widget div_vpp_vendedor__10)
+    {
+    ((ContainerWidget)this).addComponent(div_vpp_vendedor__10,"div_vpp_vendedor_");
+    setAttrFor_div_vpp_vendedor__10(div_vpp_vendedor__10);
+    TextWidget vpp_vendedor__20 = new TextWidget();
+        {
+        ((ContainerWidget)div_vpp_vendedor__10).addComponent(vpp_vendedor__20,"vpp_vendedor_");
+        setAttrFor_vpp_vendedor__20(vpp_vendedor__20);
+        }
+    }
+private void dodiv_vve_nombre__10(Widget div_vve_nombre__10)
+    {
+    ((ContainerWidget)this).addComponent(div_vve_nombre__10,"div_vve_nombre_");
+    setAttrFor_div_vve_nombre__10(div_vve_nombre__10);
+    TextWidget vve_nombre__20 = new TextWidget();
+        {
+        ((ContainerWidget)div_vve_nombre__10).addComponent(vve_nombre__20,"vve_nombre_");
+        setAttrFor_vve_nombre__20(vve_nombre__20);
+        }
+    }
+private void dodiv_xpc_nombre__10(Widget div_xpc_nombre__10)
+    {
+    ((ContainerWidget)this).addComponent(div_xpc_nombre__10,"div_xpc_nombre_");
+    setAttrFor_div_xpc_nombre__10(div_xpc_nombre__10);
+    TextWidget xpc_nombre__20 = new TextWidget();
+        {
+        ((ContainerWidget)div_xpc_nombre__10).addComponent(xpc_nombre__20,"xpc_nombre_");
+        setAttrFor_xpc_nombre__20(xpc_nombre__20);
+        }
+    }
 private void dodiv_Label1__10(Widget div_Label1__10)
     {
     ((ContainerWidget)this).addComponent(div_Label1__10,"div_Label1_");
@@ -4120,16 +4171,6 @@ private void dodiv_vpp_ciudad__10(Widget div_vpp_ciudad__10)
         setAttrFor_vpp_ciudad__20(vpp_ciudad__20);
         }
     }
-private void dodiv_vpp_corredor__10(Widget div_vpp_corredor__10)
-    {
-    ((ContainerWidget)this).addComponent(div_vpp_corredor__10,"div_vpp_corredor_");
-    setAttrFor_div_vpp_corredor__10(div_vpp_corredor__10);
-    TextWidget vpp_corredor__20 = new TextWidget();
-        {
-        ((ContainerWidget)div_vpp_corredor__10).addComponent(vpp_corredor__20,"vpp_corredor_");
-        setAttrFor_vpp_corredor__20(vpp_corredor__20);
-        }
-    }
 private void dodiv_vpp_correo__10(Widget div_vpp_correo__10)
     {
     ((ContainerWidget)this).addComponent(div_vpp_correo__10,"div_vpp_correo_");
@@ -4510,16 +4551,6 @@ private void dodiv_vpp_telres__10(Widget div_vpp_telres__10)
         setAttrFor_vpp_telres__20(vpp_telres__20);
         }
     }
-private void dodiv_vpp_vendedor__10(Widget div_vpp_vendedor__10)
-    {
-    ((ContainerWidget)this).addComponent(div_vpp_vendedor__10,"div_vpp_vendedor_");
-    setAttrFor_div_vpp_vendedor__10(div_vpp_vendedor__10);
-    TextWidget vpp_vendedor__20 = new TextWidget();
-        {
-        ((ContainerWidget)div_vpp_vendedor__10).addComponent(vpp_vendedor__20,"vpp_vendedor_");
-        setAttrFor_vpp_vendedor__20(vpp_vendedor__20);
-        }
-    }
 private void dodiv_vpp_viviactual__10(Widget div_vpp_viviactual__10)
     {
     ((ContainerWidget)this).addComponent(div_vpp_viviactual__10,"div_vpp_viviactual_");
@@ -4528,36 +4559,6 @@ private void dodiv_vpp_viviactual__10(Widget div_vpp_viviactual__10)
         {
         ((ContainerWidget)div_vpp_viviactual__10).addComponent(vpp_viviactual__20,"vpp_viviactual_");
         setAttrFor_vpp_viviactual__20(vpp_viviactual__20);
-        }
-    }
-private void dodiv_vpy_nombre__10(Widget div_vpy_nombre__10)
-    {
-    ((ContainerWidget)this).addComponent(div_vpy_nombre__10,"div_vpy_nombre_");
-    setAttrFor_div_vpy_nombre__10(div_vpy_nombre__10);
-    TextWidget vpy_nombre__20 = new TextWidget();
-        {
-        ((ContainerWidget)div_vpy_nombre__10).addComponent(vpy_nombre__20,"vpy_nombre_");
-        setAttrFor_vpy_nombre__20(vpy_nombre__20);
-        }
-    }
-private void dodiv_vve_nombre__10(Widget div_vve_nombre__10)
-    {
-    ((ContainerWidget)this).addComponent(div_vve_nombre__10,"div_vve_nombre_");
-    setAttrFor_div_vve_nombre__10(div_vve_nombre__10);
-    TextWidget vve_nombre__20 = new TextWidget();
-        {
-        ((ContainerWidget)div_vve_nombre__10).addComponent(vve_nombre__20,"vve_nombre_");
-        setAttrFor_vve_nombre__20(vve_nombre__20);
-        }
-    }
-private void dodiv_xpc_nombre__10(Widget div_xpc_nombre__10)
-    {
-    ((ContainerWidget)this).addComponent(div_xpc_nombre__10,"div_xpc_nombre_");
-    setAttrFor_div_xpc_nombre__10(div_xpc_nombre__10);
-    TextWidget xpc_nombre__20 = new TextWidget();
-        {
-        ((ContainerWidget)div_xpc_nombre__10).addComponent(xpc_nombre__20,"xpc_nombre_");
-        setAttrFor_xpc_nombre__20(xpc_nombre__20);
         }
     }
 }

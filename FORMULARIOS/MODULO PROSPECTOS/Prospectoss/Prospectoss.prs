@@ -916,30 +916,13 @@
          >
     </file>
 
-    <file
-         path="Classes/Form1.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1374850798081"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
     <connection
          name="Connection1"
           path=""
           db-jar="$UNIFY_HOME\lib\jdbcDrivers\SimbaJDBC.jar"
           db-type="DataServer"
           driver="simba.jdbc.SimbaDriver"
-          url="jdbc:simba:192.168.1.7:1583/DataServer_DSN"
+          url="jdbc:simba:192.168.1.7:1583/DataServer2_DSN"
           datasource=""
          >
     </connection>

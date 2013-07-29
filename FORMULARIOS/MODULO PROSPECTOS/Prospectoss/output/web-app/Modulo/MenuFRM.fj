@@ -10,10 +10,63 @@ FORM MenuFRM
         cajagrandeMenu.cajaarribaMenu.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
     }
 
-
+    COMMAND BackMenu
+        {
+            Modulo.LoginFRM#cajagrandeLogin.xpr_usuario = " ";
+            Modulo.LoginFRM#cajagrandeLogin.xpr_password = " ";
+            Modulo.LoginFRM#cajagrandeLogin.xpr_grupo = " ";
+            session.queueNextForm("Modulo.LoginFRM");
+        }
 
     BOX cajagrandeMenu
     {
+        
+      
+        
+        
+        
+             public void EmpresaList () throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
+                            {   // Inicio de la funcion
+                                
+                                //Declara una lista como NameValuePairs
+                                java.util.ArrayList  LMenu = new  java.util.ArrayList();
+                                
+                                //Variables temporales para el select
+                                NullableString ENombre, ENombreT;
+                                NullableString ECodigo;
+                                NullableNumeric counter = 0;
+                                
+                               
+                                
+                                try 
+                                {   
+                                   
+                                 
+                                      EXEC SQL
+                                        
+                                                           SELECT xem_nombre, xsu_empresa
+                                                            FROM xsu_socieusu, xem_empresas
+                                                            WHERE xsu_empresa = xem_codigo
+                                                            AND xsu_usuario = :Modulo.LoginFRM#cajagrandeLogin.xpr_usuario
+                                                            ORDER BY xem_nombre ASC
+                                                            INTO ENombre, ECodigo    
+                                                            EXECUTING
+                                                            {
+                                                                NameValuePair nomcod = new NameValuePair ( ENombre, ECodigo );
+                                                                 LMenu.add(nomcod);
+                                                            }    
+
+                                  
+                                }
+                                catch (SQLException sqlExcp) {
+                                    session.displayToMessageBox("No existen productos...");
+                                }
+                            
+                            EMPRESA.setOptions(LMenu);
+                            } // Final de la función
+        
+        
+        
         
         
             public  void menu() throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
@@ -542,7 +595,12 @@ FORM MenuFRM
         
         FIELD EMPRESA
         {
-        
+            
+             INIT FIELD
+            {
+                EmpresaList();
+            }
+            
             ON DATA ACCEPT
             {
                 menu();
