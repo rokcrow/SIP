@@ -1,8 +1,8 @@
 <form 
     binary_variables = ""
     field_order = ""
-    form_height = "516"
-    form_width = "1055"
+    form_height = "661"
+    form_width = "1056"
     object_type = "data_view"
     style_class = "form"
     view = "form"

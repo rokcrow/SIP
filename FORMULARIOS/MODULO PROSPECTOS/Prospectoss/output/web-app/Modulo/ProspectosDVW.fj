@@ -105,7 +105,7 @@ DATA VIEW ProspectosDVW
        
          if ( (Var1.isNull() ) || (Var1 == "" ) || (Var1 == " ") )
         {
-            session.displayToMessageBox("Debe indicar el Proyecto");
+            session.displayToMessageBox("Debe indicar el Proyecto.");
             rejectOperation();
         }
     }
@@ -171,6 +171,7 @@ DATA VIEW ProspectosDVW
                                             }                                        
 	    
 	    session.commitTransaction();
+                             
 	                                                  
 	   }
 	  else
@@ -434,15 +435,31 @@ DATA VIEW ProspectosDVW
 
     FIELD vpp_fecha_nacio
     {
+       // NullableDate fechaedad =01/01/1995, fechaactual = session.currentDate;
+        NullableNumeric mayoredad = 6575;
+    
          ON DATA ACCEPT
         {
-	 if (vpp_fecha_nacio > session.currentDate)
+	 if (vpp_fecha_nacio > (session.currentDate - mayoredad))
 	   {
-	    session.displayToMessageBox("La fecha de Nacimiento NO puede ser mayor a la fecha del dia verifique...!");
-	    vpp_fecha_nacio = session.currentDate;
+	    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
+	    vpp_fecha_nacio = (session.currentDate - mayoredad);
+	    rejectOperation();
+	   }
+           
+                           
+        }
+        
+        WHEN VALUE CHANGES
+        {
+                            if (vpp_fecha_nacio > (session.currentDate - mayoredad))
+	   {
+	    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
+	   vpp_fecha_nacio = (session.currentDate - mayoredad);
 	    rejectOperation();
 	   }
         }
+
     }
 
     FIELD vpy_nombre
@@ -730,8 +747,9 @@ DATA VIEW ProspectosDVW
 	    }               
                                           
        
-           if (vpp_califica == "23" || vpp_califica == "24" || vpp_califica == "25"|| vpp_califica == "26"|| vpp_califica == "27"|| vpp_califica == "28"|| vpp_califica == "29"|| vpp_califica == "30"
-           || vpp_califica == "31"|| vpp_califica == "32")
+         /**/  if (vpp_califica == "23" || vpp_califica == "24" || vpp_califica == "25"|| vpp_califica == "26"|| vpp_califica == "27"|| vpp_califica == "28"|| vpp_califica == "29"|| vpp_califica == "30"
+           || vpp_califica == "31"|| vpp_califica == "32"|| vpp_califica == "33")
+                       // if(Modulo.GradoInteresFRM#view1.xpc_clase == "S")
                             {
                                 session.displayToMessageBox("No es una calificacion permitida.");
                                 rejectOperation();

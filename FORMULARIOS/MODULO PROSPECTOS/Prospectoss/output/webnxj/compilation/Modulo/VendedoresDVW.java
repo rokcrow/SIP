@@ -212,12 +212,10 @@ public class VendedoresDVW
     public void onFind()
 	throws Exception
     {
-	if (vvh_fret_obra.toString().contentEquals("01/01/2001") == true)
-	    {
-	    vvh_fret_obra.setNull();
-	    }
 	if (!vvh_fret_obra.isNull())
+	    {
 	    rejectRecord();
+	    }
     } // onFind
     private VendedoresDVW VendedoresDVW = this;
     public /*multi_valued*/ NullableStringField NombVend = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombVend", true, true, 100);

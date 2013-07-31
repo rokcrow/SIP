@@ -17,18 +17,18 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("localized","true");
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.addAttribute("title","MediosPublicitarios");
+	widget.addAttribute("localized","true");
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1140");
+	widget.addAttribute("title","MediosPublicitarios");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displayheight","722");
 	widget.addAttribute("fieldheight","722");
 	widget.addAttribute("fieldwidth","1140");
 	widget.addStyle("background-color","#999999");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)

@@ -29,7 +29,7 @@ DATA VIEW RepProspectosDVW
         
         vFecha1 = vFecha1.substring(3,5) + "/" + vFecha1.substring(0,2) + "/" + vFecha1.substring(6,10);
         vFecha2 = vFecha2.substring(3,5) + "/" + vFecha2.substring(0,2) + "/" + vFecha2.substring(6,10);
-        strReporte = "http://192.168.1.6:8080/birt/frameset?__report=informe_visitas.rptdesign&PROYECTO=" + proyecto + "&USUARIO=" + Modulo.LoginFRM#cajagrandeLogin.xpr_usuario   + "&EMPRESA=" + Modulo.MenuFRM#cajagrandeMenu.EMPRESA + "&FECHAI=" + vFecha1 + "&FECHAF=" + vFecha2;
+        strReporte = "http://192.168.1.6:8080/birt/frameset?__report=informe_visitas.rptdesign&PROYECTO=" + proyecto + "&USUARIO=" + Modulo.LoginFRM#cajagrandeLogin.xpr_usuario   + "&EMPRESA=" + Modulo.MenuFRM#cajagrandeMenu.EMPRESA + "&FECHAI=" + vFecha1 + "&FECHAF=" + vFecha2 + "&VENDEDOR=" + vendedor;
         
         //strReporte = "http://localhost:8080/birt/preview?__report=informe_visitas.rptdesign&format=pdf&PROYECTO=" + proyecto + "&USUARIO=" + Modulo.LoginFRM#cajagrandeLogin.xpr_usuario   + "&EMPRESA=" + Modulo.MenuFRM#cajagrandeMenu.EMPRESA + "&FECHAI=" + vFecha1 + "&FECHAF=" + vFecha2;
         

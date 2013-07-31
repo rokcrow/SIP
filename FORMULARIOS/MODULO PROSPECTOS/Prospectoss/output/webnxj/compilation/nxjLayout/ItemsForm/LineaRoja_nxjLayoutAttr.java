@@ -16,19 +16,19 @@ setAttrFor_this(this);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("command",".top.");
+	widget.setClass("horizontal_line");
+	widget.addAttribute("name",".top.");
 	widget.addAttribute("displaywidth","988");
 	widget.addAttribute("displayleft","25");
-	widget.addAttribute("width","988");
-	widget.addStyle("color","Red");
-	widget.addAttribute("id",".top.");
 	widget.addAttribute("displaytop","25");
 	widget.addAttribute("displayheight","1");
 	widget.addAttribute("fieldheight","1");
 	widget.addAttribute("fieldwidth","988");
 	widget.addStyle("background-color","Red");
+	widget.addStyle("color","Red");
 	widget.addStyle("border-color","Red");
-	widget.setClass("horizontal_line");
-	widget.addAttribute("name",".top.");
+	widget.addAttribute("width","988");
+	widget.addAttribute("id",".top.");
 	widget.addStyle("overflow","hidden");
 }
 }

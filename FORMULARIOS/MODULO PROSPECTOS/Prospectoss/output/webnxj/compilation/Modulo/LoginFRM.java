@@ -132,7 +132,7 @@ public class LoginFRM
 		if (us$registerPool.allocateRegister().load(APassword).gtOp(90).getBooleanValueNullOk())
 		    {
 		    getSession().displayToMessageBox("Su clave expir\u00F3. Proceda a cambiarla, por favor.");
-		    getSession().queueNextForm("Modulo.MenuFRM");
+		    getSession().queueNextForm("Modulo.CClaveFRM");
 		    }
 	    } // beforeField
 

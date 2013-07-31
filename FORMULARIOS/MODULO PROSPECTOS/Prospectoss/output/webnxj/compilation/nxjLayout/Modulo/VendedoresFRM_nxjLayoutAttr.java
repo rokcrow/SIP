@@ -19,15 +19,15 @@ private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.addAttribute("title","Vendedores");
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1074");
+	widget.addAttribute("title","Vendedores");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displayheight","501");
 	widget.addAttribute("fieldheight","501");
 	widget.addAttribute("fieldwidth","1074");
 	widget.addStyle("background-color","#999999");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)

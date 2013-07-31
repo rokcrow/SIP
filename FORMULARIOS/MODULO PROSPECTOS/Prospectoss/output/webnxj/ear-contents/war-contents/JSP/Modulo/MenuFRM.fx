@@ -87,7 +87,6 @@
         key = "cajagrandeMenu:button1."
         kind = "instance"
         original_name = "button1"
-        script = ""
         uid = "modulo_form1_1369423869434_5eae505bab5e10e9c5fd8f2e02bd6c75cdc52d25_1375131894739"
         uid_to_name = ""
         view = "button">

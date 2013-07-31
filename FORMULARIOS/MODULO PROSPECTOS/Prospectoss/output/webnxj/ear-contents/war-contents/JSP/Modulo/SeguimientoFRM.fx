@@ -8,14 +8,17 @@
     connection = "Connection1"
     delete_allowed = "false"
     field_order = "CajaSegui.?CajaSegui:cajaarribaSProspectos.?CajaSegui:cajaarribaSProspectos:actualempresa.?CajaSegui:cajaarribaSProspectos:actualusuario.?CajaSegui:vpp_numero.?CajaSegui:vpp_estadopro.?CajaSegui:vpp_proyecto.?CajaSegui:vpy_nombre.?CajaSegui:vpp_fecha.?CajaSegui:vpp_nombre.?CajaSegui:vpp_direccion.?CajaSegui:vpp_fechaestado.?CajaSegui:vpp_correo.?CajaSegui:vpp_telofi.?CajaSegui:vpp_nacionalidad.?CajaSegui:vpp_cuanta_correo2.?CajaSegui:vpp_telres.?CajaSegui:vpp_ciudad.?CajaSegui:PUBLIC_vps_prosigue.?CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1.?CajaSegui:PUBLIC_vps_prosigue:vps_consecu.?CajaSegui:PUBLIC_vps_prosigue:vps_fecha.?CajaSegui:PUBLIC_vps_prosigue:vps_hora.?CajaSegui:PUBLIC_vps_prosigue:vps_usuario.?CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.?CajaSegui:PUBLIC_vps_prosigue:vps_califica.?CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.?CajaSegui:PUBLIC_vps_prosigue:vps_estado.?CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.?CajaSegui:PUBLIC_vps_prosigue:vps_comentario1.?CajaSegui:PUBLIC_vps_prosigue:textfield1.?CajaSegui:vpp_vendedor.?CajaSegui:vve_nombre.?CajaSegui:box11."
+    find_count = "10"
     footer = "none"
     form_height = "1025"
     form_width = "1209"
     foundation_type = "Classes/Foundation/Form"
     localized = "true"
+    records_in_memory = "20"
     style_class = "form"
     target_table = "PUBLIC.vpp_prospectos"
     uid_prefix = "form1_1371588526491"
+    update_allowed = "false"
     view = "form"
     reuse="true">
 
@@ -352,6 +355,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+        updateable = "false"
         view = "text">
     </field>
     <field 
@@ -367,6 +371,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+        updateable = "false"
         view = "text">
     </field>
     <control 
@@ -653,7 +658,6 @@
         db_length = "40"
         db_type = "String"
         display_name = "vpp_cuanta_correo2"
-        explicit_search_mode = "default"
         field_length = "40"
         field_type = "text"
         field_weight = "1299"
@@ -929,10 +933,11 @@
         multi_valued = "true"
         original_name = "textfield1"
         retrieve_value = "true"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = "vpp_vendedor"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316180037"
-        updateable = "true"
+        updateable = "false"
         view = "text">
     </field>
     <field 
@@ -964,9 +969,11 @@
         foreground_color = "Black"
         key = "CajaSegui:vve_nombre."
         original_name = "textfield1"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316251827"
+        updateable = "false"
         view = "text">
     </field>
 

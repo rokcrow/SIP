@@ -653,22 +653,6 @@
     </file>
 
     <file
-         path="Classes/Modulo/VendedoresDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1370899221511"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;VendedoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
          path="Classes/Modulo/VendedoresFRM.fx"
           type="form"
           state="4"
@@ -917,18 +901,34 @@
     </file>
 
     <file
-         path="Classes/Form1.fx"
-          type="form"
+         path="Classes/Modulo/VendedoresDVW.fx"
+          type="data_view"
           state="4"
           flags="0"
-          timestamp="1374850798081"
+          timestamp="1370116935604"
           ctimestamp="0"
           scversion=""
           private="false"
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;VendedoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/Form1.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1375276647632"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;p&gt;&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>

@@ -17,6 +17,11 @@ FORM SociedadesFRM
         cajagrandeSociedades.cajaarribaSociedades.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
     }
 
+    AFTER ADD
+    {
+            session.commitTransaction();
+    }
+
     BOX cajagrandeSociedades
     {
     

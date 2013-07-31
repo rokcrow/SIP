@@ -653,22 +653,6 @@
     </file>
 
     <file
-         path="Classes/Modulo/VendedoresDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1370899221511"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;VendedoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
          path="Classes/Modulo/VendedoresFRM.fx"
           type="form"
           state="4"
@@ -916,6 +900,39 @@
          >
     </file>
 
+    <file
+         path="Classes/Modulo/VendedoresDVW.fx"
+          type="data_view"
+          state="4"
+          flags="0"
+          timestamp="1370116935604"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;VendedoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
+         >
+    </file>
+
+    <file
+         path="Classes/Modulo/CClaveFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1375276647632"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;CClaveFRM&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
     <connection
          name="Connection1"
           path=""
@@ -928,7 +945,12 @@
     </connection>
 
     <color
-         rgb="#00cccc"
+         rgb="transparent"
+         >
+    </color>
+
+    <color
+         rgb="Black"
          >
     </color>
 
@@ -964,11 +986,6 @@
 
     <color
          rgb="#cccccc"
-         >
-    </color>
-
-    <color
-         rgb="Black"
          >
     </color>
 

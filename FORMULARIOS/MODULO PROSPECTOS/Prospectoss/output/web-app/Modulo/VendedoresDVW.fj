@@ -30,23 +30,11 @@ DATA VIEW VendedoresDVW
 
     ON FIND
     { 
-  
-      
-/*preguntar si es igual a 01/01/2001
-si lo es, hacer vvh_fre_obra null
-y luego, esto de abajo.*/
-
-
-/*Se unifica todo; el vvh_fret_obra que contenga 01/01/2001, se vuelve nulo, de esta forma 
-todo el que no contenga 01/01/2001 será nulo y podrá visualizarce.*/
-            if( vvh_fret_obra.toString().contentEquals("01/01/2001") == true)
+         if( ! vvh_fret_obra.isNull())
             {
-                vvh_fret_obra.setNull();
-            }
-            
-            if( ! vvh_fret_obra.isNull() )
             rejectRecord();
         
+            }
     }
 
     BOX cajaarribaVendedores

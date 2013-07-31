@@ -17,18 +17,18 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("localized","true");
 	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
-	widget.addAttribute("title","GradoInteres");
+	widget.addAttribute("localized","true");
+	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1165");
+	widget.addAttribute("title","GradoInteres");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displayheight","611");
 	widget.addAttribute("fieldheight","611");
 	widget.addAttribute("fieldwidth","1165");
 	widget.addStyle("background-color","#999999");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -42,13 +42,13 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("id","view1.");
+	widget.addAttribute("displayheight","574");
 	widget.addAttribute("desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656-labeltitle","GradodeInteres");
+	widget.addAttribute("form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157-labeltitle","GRADODEINTERES");
+	widget.addAttribute("displaytop","32");
 	widget.addAttribute("displaywidth","1005");
 	widget.addAttribute("displayleft","50");
-	widget.addAttribute("id","view1.");
-	widget.addAttribute("displaytop","32");
-	widget.addAttribute("displayheight","574");
-	widget.addAttribute("form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157-labeltitle","GRADODEINTERES");
 	widget.addStyle("overflow","hidden");
 }
 

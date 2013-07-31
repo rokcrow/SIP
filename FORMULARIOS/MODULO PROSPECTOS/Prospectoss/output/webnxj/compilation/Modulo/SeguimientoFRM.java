@@ -453,7 +453,6 @@ public class SeguimientoFRM
 		us$setFieldLength(40);
 		us$setCandidateTargetColumnName("vpp_cuanta_correo2");
 		setValueRetrievedDuringFetch(true);
-		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 		setFindable(true);
 		setUpdateable(true);
 		setForegroundColor("Black");
@@ -706,7 +705,7 @@ public class SeguimientoFRM
 		    ResultSet us$rs5 = null;
 		    try
 			{
-			us$stmt5 = us$conn5.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
+			us$stmt5 = us$conn5.prepareStatement("SELECT vpy_nombre, vpy_tipo FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
 			vpp_proyecto.us$setSqlParameterValue(us$stmt5, 1);
 			((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt5, 2);
 			us$rs5 = us$stmt5.executeQuery();
@@ -714,16 +713,17 @@ public class SeguimientoFRM
 			try
 			    {
 			    java.sql.ResultSetMetaData us$rsmd5 = us$rs5.getMetaData();
-			    if (us$rsmd5.getColumnCount() != 1)
+			    if (us$rsmd5.getColumnCount() != 2)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd5.getColumnCount()), "1"
+				    Integer.toString(us$rsmd5.getColumnCount()), "2"
 				    }));
 			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter5 = us$conn5.createDataIterator(us$rs5);
 			    if (us$getter5.next())
 				{
 				++us$rowsTouched5;
 				us$getter5.assignValueToVariable(vpy_nombre, 1);
+				us$getter5.assignValueToVariable(vpy_tipo, 2);
 				}
 			    }
 			finally
@@ -769,7 +769,7 @@ public class SeguimientoFRM
 		    ResultSet us$rs6 = null;
 		    try
 			{
-			us$stmt6 = us$conn6.prepareStatement("SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
+			us$stmt6 = us$conn6.prepareStatement("SELECT vpy_nombre, vpy_tipo FROM vpy_proyectos WHERE vpy_codigo =  ?  AND vpy_empresa =  ?");
 			vpp_proyecto.us$setSqlParameterValue(us$stmt6, 1);
 			((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt6, 2);
 			us$rs6 = us$stmt6.executeQuery();
@@ -777,16 +777,17 @@ public class SeguimientoFRM
 			try
 			    {
 			    java.sql.ResultSetMetaData us$rsmd6 = us$rs6.getMetaData();
-			    if (us$rsmd6.getColumnCount() != 1)
+			    if (us$rsmd6.getColumnCount() != 2)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd6.getColumnCount()), "1"
+				    Integer.toString(us$rsmd6.getColumnCount()), "2"
 				    }));
 			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter6 = us$conn6.createDataIterator(us$rs6);
 			    if (us$getter6.next())
 				{
 				++us$rowsTouched6;
 				us$getter6.assignValueToVariable(vpy_nombre, 1);
+				us$getter6.assignValueToVariable(vpy_tipo, 2);
 				}
 			    }
 			finally
@@ -1041,7 +1042,8 @@ public class SeguimientoFRM
 		setValueRetrievedDuringFetch(true);
 		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 		setFindable(true);
-		setUpdateable(true);
+		setUpdateable(false);
+		setStopForInput(false);
 		setForegroundColor("Black");
 		setFontSize("12");
 		us$executesDataAcceptValueChanges = true;
@@ -1060,7 +1062,6 @@ public class SeguimientoFRM
 	    public void afterFind()
 		throws Exception
 	    {
-		getSession().queueNextField(vps_mediocon);
 	    } // afterFind
 
 	    public void onClearToAdd()
@@ -1149,7 +1150,6 @@ public class SeguimientoFRM
 			if (us$registerPool.allocateRegister().load(xpc_califica).eqOp("P").getBooleanValueNullOk())
 			    vps_estado.assign(us$registerPool.allocateRegister().load("N"));
 		NullableDate f_pcontacto = NullableFactory.createNullableDate("f_pcontacto");
-		f_pcontacto.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()).plusOp(7));
 		f_pcontacto.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
 		if (us$registerPool.allocateRegister().load(vpy_tipo).eqOp("A").getBooleanValueNullOk())
 		    {
@@ -1157,8 +1157,13 @@ public class SeguimientoFRM
 		    }
 		else
 		    vps_f_pcontacto.assign(us$registerPool.allocateRegister().load(f_pcontacto).plusOp(us$registerPool.allocateRegister().load(xpc_dias_pvt)));
-		getSession().displayToMessageBox(us$registerPool.allocateRegister().load(vps_f_pcontacto).getStringValue());
 	    } // beforeAdd
+
+	    public void afterAdd()
+		throws Exception
+	    {
+		getSession().commitTransaction();
+	    } // afterAdd
 	    public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
 	    public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
 	    public class vps_califica
@@ -1518,10 +1523,12 @@ public class SeguimientoFRM
 		actualempresa.setStyleClass("textfield");
 		actualempresa.us$setView("text");
 		actualempresa.setFindable(false);
+		actualempresa.setUpdateable(false);
 		actualempresa.setStopForInput(false);
 		actualusuario.setStyleClass("textfield");
 		actualusuario.us$setView("text");
 		actualusuario.setFindable(false);
+		actualusuario.setUpdateable(false);
 		actualusuario.setStopForInput(false);
 		label211.setStyleClass("label");
 	    } // cajaarribaSProspectospropertySetter_0
@@ -1687,6 +1694,8 @@ public class SeguimientoFRM
 	    vve_nombre.setStyleClass("textfield");
 	    vve_nombre.us$setView("text");
 	    vve_nombre.setFindable(false);
+	    vve_nombre.setUpdateable(false);
+	    vve_nombre.setStopForInput(false);
 	    vve_nombre.setForegroundColor("Black");
 	    vve_nombre.setFontSize("12");
 	} // CajaSeguipropertySetter_1
@@ -1712,7 +1721,10 @@ public class SeguimientoFRM
 	us$setTargetTableName("PUBLIC.vpp_prospectos");
 	setAddAllowed(true);
 	setDeleteAllowed(false);
+	setUpdateAllowed(false);
 	setStartInAddMode(true);
+	setFindCount(10);
+	setRecordsInMemory(20);
 	Modulo.SeguimientoFRM.this.CajaSegui.PUBLIC_vps_prosigue.us$setMasterDataView(Modulo.SeguimientoFRM.this);
 	Modulo.SeguimientoFRM.this.CajaSegui.PUBLIC_vps_prosigue.us$setMasterRelationshipCriteria(Modulo.SeguimientoFRM.this.us$getPUBLIC_vps_prosigue_1_FindExpressions());
 	Modulo.SeguimientoFRM.this.CajaSegui.PUBLIC_vps_prosigue.us$setMasterRelationshipAddExpr(Modulo.SeguimientoFRM.this.us$getPUBLIC_vps_prosigue_1_AddExpressions());

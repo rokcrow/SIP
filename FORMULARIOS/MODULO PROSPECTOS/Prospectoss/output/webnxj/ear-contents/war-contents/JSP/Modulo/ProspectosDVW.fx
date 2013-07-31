@@ -829,7 +829,7 @@
         key = ".top:vpp_actilugar."
         multi_valued = "true"
         original_name = "vpp_actilugar"
-        query = "select vpy_nombre from vpy_proyectos order by vpy_nombre;"
+        query = "SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_tipo = 'A' OR vpy_tipo = 'V' ORDER BY vpy_nombre;"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vpp_actilugar"
@@ -910,6 +910,7 @@
         immediate = "true"
         key = ".top:vpp_califica."
         multi_valued = "true"
+        required = "true"
         retrieve_value = "true"
         return_values_into = "vpp_califica"
         style_class = "textfield"
@@ -1322,7 +1323,7 @@
         target_field = "vpp_fecha"
         uid = "form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1345,7 +1346,7 @@
         target_field = "vpp_fecha_nacio"
         uid = "form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1367,7 +1368,7 @@
         target_field = "vpp_fecha_visita"
         uid = "form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1388,7 +1389,7 @@
         target_field = "vpp_fechaestado"
         uid = "form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "String"
@@ -1481,6 +1482,7 @@
         immediate = "true"
         key = ".top:vpp_mediopub."
         multi_valued = "true"
+        required = "true"
         retrieve_value = "true"
         return_values_into = "vpp_mediopub"
         style_class = "textfield"
@@ -1903,6 +1905,7 @@
         immediate = "true"
         key = ".top:vpp_vendedor."
         multi_valued = "true"
+        required = "true"
         retrieve_value = "true"
         return_values_into = "vpp_vendedor"
         style_class = "textfield"

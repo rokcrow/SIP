@@ -1550,7 +1550,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:277px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -1558,7 +1558,7 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="277"
+                                displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
                                 id=".top:cajaarribaRProspectos:label1."
                                 key=".top:cajaarribaRProspectos:label1."
@@ -1992,7 +1992,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 489px; left: 414px; width:238px; height:21px">
+                    style="position: absolute; top: 489px; left: 409px; width:238px; height:21px">
 
                     <select
                         accell_type="String"
@@ -2001,7 +2001,7 @@
                         db_length="60"
                         db_type="String"
                         displayheight="21"
-                        displayleft="414"
+                        displayleft="409"
                         displaytop="489"
                         displaywidth="238"
                         field_length="60"
@@ -2013,7 +2013,7 @@
                         multi_valued="true"
                         name=".top:vpp_actilugar."
                         original_name="vpp_actilugar"
-                        query="select vpy_nombre from vpy_proyectos order by vpy_nombre&#59;"
+                        query="SELECT vpy_nombre FROM vpy_proyectos WHERE vpy_tipo = 'A' OR vpy_tipo = 'V' ORDER BY vpy_nombre&#59;"
                         retrieve_value="true"
                         size="1"
                         target_field="vpp_actilugar"
@@ -2136,6 +2136,7 @@
                         key=".top:vpp_califica."
                         multi_valued="true"
                         name=".top:vpp_califica."
+                        required="true"
                         retrieve_value="true"
                         return_values_into="vpp_califica"
                         size="7"
@@ -2765,7 +2766,7 @@
                         target_field="vpp_fecha"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2799,7 +2800,7 @@
                         target_field="vpp_fecha_nacio"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 
@@ -2836,7 +2837,7 @@
                         target_field="vpp_fecha_visita"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2870,7 +2871,7 @@
                         target_field="vpp_fechaestado"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -3015,6 +3016,7 @@
                         key=".top:vpp_mediopub."
                         multi_valued="true"
                         name=".top:vpp_mediopub."
+                        required="true"
                         retrieve_value="true"
                         return_values_into="vpp_mediopub"
                         size="7"
@@ -3663,6 +3665,7 @@
                         key=".top:vpp_vendedor."
                         multi_valued="true"
                         name=".top:vpp_vendedor."
+                        required="true"
                         retrieve_value="true"
                         return_values_into="vpp_vendedor"
                         size="7"
