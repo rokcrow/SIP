@@ -18,12 +18,12 @@ dodiv_textfield1__10(div_textfield1__10);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("displaywidth","700");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displayheight","600");
 	widget.addAttribute("fieldheight","600");
 	widget.addAttribute("fieldwidth","700");
 	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_textfield1__10(Widget widget)
@@ -38,16 +38,16 @@ private void setAttrFor_textfield1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","194");
-	widget.addAttribute("name","textfield1.");
 	widget.addAttribute("displayleft","169");
-	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","71");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","194");
+	widget.addAttribute("size","32");
 	widget.setClass("textfield");
+	widget.addAttribute("name","textfield1.");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_textfield1__10(Widget div_textfield1__10)

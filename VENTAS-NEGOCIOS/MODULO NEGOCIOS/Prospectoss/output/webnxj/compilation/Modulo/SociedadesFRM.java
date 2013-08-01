@@ -167,6 +167,12 @@ public class SociedadesFRM
 	cajagrandeSociedades.cajaarribaSociedades.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
     } // beforeForm
 
+    public void afterAdd()
+	throws Exception
+    {
+	getSession().commitTransaction();
+    } // afterAdd
+
     public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$getPUBLIC_xel_emprelogo1_1_FindExpressions()
     {
 	return new com.unify.nxj.mgr.NXJMasterRelationshipExpression[]

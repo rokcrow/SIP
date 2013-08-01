@@ -167,6 +167,7 @@
         db_length = "3"
         db_type = "String"
         display_name = "vvh_vendedora"
+        explicit_search_mode = "default"
         field_length = "3"
         field_type = "text"
         field_weight = "99"

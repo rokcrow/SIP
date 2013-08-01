@@ -2,7 +2,7 @@
     aud_on_entry = "true"
     background_color = "#999999"
     binary_variables = ""
-    bloom_filter = "00080000000000000800000000000000"
+    bloom_filter = "00000000000400040000000000000000"
     commands = "logincmd"
     connection = "Connection1"
     field_order = ""
@@ -121,17 +121,6 @@
         style_class = "label"
         target_field = ""
         uid = "desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
-        display_name = "label2"
-        font_size = "14"
-        font_weight = "bold"
-        key = "cajagrandeLogin:label2."
-        original_name = "label2"
-        style_class = "label"
-        uid = "modulo_form1_1369425069332_b88339d5875d46815e12e0d51ea2bbf5ac6577ef_1374178540252"
         view = "label">
     </control>
     <control 

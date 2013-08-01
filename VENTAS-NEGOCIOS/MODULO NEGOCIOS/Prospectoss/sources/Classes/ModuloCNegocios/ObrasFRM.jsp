@@ -3,14 +3,14 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
+<body onLoad="initPreview(true, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
         aud_on_entry="false"
         auto_find="true"
         binary_variables=""
         binding_type="connection"
-        bloom_filter="00000000000400040000000000000000"
+        bloom_filter="00080000000000000800000000000000"
         class="form"
         clear_after_au="false"
         commands=""
@@ -23,6 +23,7 @@
         form_width="1199"
         foundation_type="Classes/Foundation/Form"
         name="NXJForm"
+        resize_browser="true"
         target_table="PUBLIC.xob_obras"
         uid_prefix="modulocnegocios_form1_1373643877543"
         view="form"

@@ -173,8 +173,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id="cajaarribaRProspectos."
-                        key="cajaarribaRProspectos."
+                        id=".top:cajaarribaRProspectos."
+                        key=".top:cajaarribaRProspectos."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -200,8 +200,8 @@
                                 field_weight="99"
                                 findable="false"
                                 immediate="false"
-                                key="cajaarribaRProspectos:actualempresa."
-                                name="cajaarribaRProspectos:actualempresa."
+                                key=".top:cajaarribaRProspectos:actualempresa."
+                                name=".top:cajaarribaRProspectos:actualempresa."
                                 original_name="textfield1"
                                 size="32"
                                 stop_for_input="false"
@@ -227,8 +227,8 @@
                                 field_weight="199"
                                 findable="false"
                                 immediate="false"
-                                key="cajaarribaRProspectos:actualusuario."
-                                name="cajaarribaRProspectos:actualusuario."
+                                key=".top:cajaarribaRProspectos:actualusuario."
+                                name=".top:cajaarribaRProspectos:actualusuario."
                                 original_name="textfield1"
                                 size="18"
                                 stop_for_input="false"
@@ -252,9 +252,9 @@
                                 displaytop="14"
                                 displaywidth="109"
                                 foundation_type="Classes/Foundation/Label"
-                                id="cajaarribaRProspectos:label1."
+                                id=".top:cajaarribaRProspectos:label1."
                                 instancewidth="109"
-                                key="cajaarribaRProspectos:label1."
+                                key=".top:cajaarribaRProspectos:label1."
                                 kind="instance"
                                 labelalign="left"
                                 labeltitle="Reportes"
@@ -319,7 +319,7 @@
                         original_name="textfield11"
                         target_field=""
                         uid="parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767427541"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -347,7 +347,7 @@
                         original_name="textfield12"
                         target_field=""
                         uid="parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767428554"
-                        view="text">
+                        view="date">
 
                     </div>
 

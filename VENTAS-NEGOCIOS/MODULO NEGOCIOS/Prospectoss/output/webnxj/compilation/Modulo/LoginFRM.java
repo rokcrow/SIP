@@ -117,7 +117,6 @@ public class LoginFRM
 	public NXJButtonControl button1 = new com.unify.nxj.mgr.datatypes.NXJButtonImpl(this, "button1", false);
 	public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
 	public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
-	public NXJLabelControl label2 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label2", false);
 	public NXJLabelControl label3 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3", false);
 	public NXJLabelControl label31 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label31", false);
 	public /*multi_valued*/ NullableStringField xpr_grupo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpr_grupo", true, true, 100);
@@ -133,7 +132,7 @@ public class LoginFRM
 		if (us$registerPool.allocateRegister().load(APassword).gtOp(90).getBooleanValueNullOk())
 		    {
 		    getSession().displayToMessageBox("Su clave expir\u00F3. Proceda a cambiarla, por favor.");
-		    getSession().queueNextForm("Modulo.MenuFRM");
+		    getSession().queueNextForm("Modulo.CClaveFRM");
 		    }
 	    } // beforeField
 
@@ -363,9 +362,6 @@ public class LoginFRM
 	    label11.setFontFamily("Verdana");
 	    label11.setFontSize("14");
 	    label11.us$setFontWeight("bold");
-	    label2.setStyleClass("label");
-	    label2.setFontSize("14");
-	    label2.us$setFontWeight("bold");
 	    label3.setStyleClass("label");
 	    label3.setForegroundColor("Black");
 	    label3.setFontFamily("Verdana");

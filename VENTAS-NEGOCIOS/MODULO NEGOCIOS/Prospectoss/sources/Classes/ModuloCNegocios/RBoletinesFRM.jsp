@@ -54,6 +54,59 @@
                 <div
                     binary_variables=""
                     view="div"
+                    style="position: absolute; top: 265px; left: 306px; width:80px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="306"
+                        displaytop="265"
+                        displaywidth="80"
+                        field_type="text"
+                        field_weight="799"
+                        findable="true"
+                        key="cajagrandeRBoletines:area_const."
+                        name="cajagrandeRBoletines:area_const."
+                        original_name="textfield1"
+                        size="13"
+                        target_field=""
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844692595"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 265px; left: 110px; width:80px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="110"
+                        displaytop="265"
+                        displaywidth="80"
+                        field_type="text"
+                        field_weight="699"
+                        findable="true"
+                        key="cajagrandeRBoletines:area_lote."
+                        multi_valued="false"
+                        name="cajagrandeRBoletines:area_lote."
+                        original_name="textfield1"
+                        size="13"
+                        stop_for_input="true"
+                        target_field=""
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844682532"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
                     style="position: absolute; top: 1082px; left: 4px; width:996px; height:50px">
 
                     <fieldset
@@ -65,7 +118,7 @@
                         displayleft="4"
                         displaytop="1082"
                         displaywidth="996"
-                        field_weight="4199"
+                        field_weight="4299"
                         id="cajagrandeRBoletines:box11."
                         key="cajagrandeRBoletines:box11."
                         original_name="box1"
@@ -121,8 +174,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="99"
-                        id="cajagrandeRBoletines:box111."
-                        key="cajagrandeRBoletines:box111."
+                        id="cajagrandeRBoletines:cajaarribaRBoletines."
+                        key="cajagrandeRBoletines:cajaarribaRBoletines."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -131,62 +184,6 @@
                             border-style:None;
                             border-color:transparent;
                             background-color: #e30000">
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
-
-                            <div
-                                base_class="Classes/ItemsForm/TituloLBL.fx"
-                                binary_variables=""
-                                displayheight="23"
-                                displayleft="241"
-                                displaytop="14"
-                                displaywidth="522"
-                                foundation_type="Classes/Foundation/Label"
-                                id="cajagrandeRBoletines:box111:label1."
-                                instancewidth="522"
-                                key="cajagrandeRBoletines:box111:label1."
-                                kind="instance"
-                                labelalign="left"
-                                labeltitle="REGISTRODEBOLETINES"
-                                original_name="label1"
-                                uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
-                                uid_to_name=""
-                                view="label">
-
-                            </div>
-
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            align="left" 
-                            style="position: absolute; top: 65px; left: 778px; width:55px; height:14px">
-                            
-                            
-                            <label
-                                binary_variables=""
-                                class="label"
-                                displayheight="21"
-                                displayleft="778"
-                                displaytop="65"
-                                displaywidth="55"
-                                id="cajagrandeRBoletines:box111:label211."
-                                key="cajagrandeRBoletines:box111:label211."
-                                labelalign="left"
-                                labeltitle="top1024"
-                                original_name="label2"
-                                target_field=""
-                                uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
-                                view="label">
-                                <nobr>top1024</nobr>
-                            </label>
-
-                        </div>
 
                         <div
                             binary_variables=""
@@ -204,8 +201,8 @@
                                 field_weight="99"
                                 findable="false"
                                 immediate="true"
-                                key="cajagrandeRBoletines:box111:textfield1."
-                                name="cajagrandeRBoletines:box111:textfield1."
+                                key="cajagrandeRBoletines:cajaarribaRBoletines:actualempresa."
+                                name="cajagrandeRBoletines:cajaarribaRBoletines:actualempresa."
                                 original_name="textfield1"
                                 size="32"
                                 stop_for_input="false"
@@ -231,8 +228,9 @@
                                 field_weight="199"
                                 findable="false"
                                 immediate="true"
-                                key="cajagrandeRBoletines:box111:textfield11."
-                                name="cajagrandeRBoletines:box111:textfield11."
+                                key="cajagrandeRBoletines:cajaarribaRBoletines:actualusuario."
+                                multi_valued="false"
+                                name="cajagrandeRBoletines:cajaarribaRBoletines:actualusuario."
                                 original_name="textfield1"
                                 size="18"
                                 stop_for_input="false"
@@ -242,135 +240,63 @@
                                 view="text">
                         </div>
 
+                        <div
+                            binary_variables=""
+                            view="div"
+                            align="left" 
+                            style="position: absolute; top: 65px; left: 778px; width:55px; height:14px">
+                            
+                            
+                            <label
+                                binary_variables=""
+                                class="label"
+                                displayheight="21"
+                                displayleft="778"
+                                displaytop="65"
+                                displaywidth="55"
+                                id="cajagrandeRBoletines:cajaarribaRBoletines:label211."
+                                key="cajagrandeRBoletines:cajaarribaRBoletines:label211."
+                                labelalign="left"
+                                labeltitle="top1024"
+                                original_name="label2"
+                                target_field=""
+                                uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
+                                view="label">
+                                <nobr>top1024</nobr>
+                            </label>
+
+                        </div>
+
+                        <div
+                            binary_variables=""
+                            view="div"
+                            align="left" 
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
+
+                            <div
+                                base_class="Classes/ItemsForm/TituloLBL.fx"
+                                binary_variables=""
+                                displayheight="23"
+                                displayleft="241"
+                                displaytop="14"
+                                displaywidth="522"
+                                foundation_type="Classes/Foundation/Label"
+                                id="cajagrandeRBoletines:cajaarribaRBoletines:rboletinestxtex."
+                                instancewidth="522"
+                                key="cajagrandeRBoletines:cajaarribaRBoletines:rboletinestxtex."
+                                kind="instance"
+                                labelalign="left"
+                                labeltitle="REGISTRODEBOLETINES"
+                                original_name="label1"
+                                uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
+                                uid_to_name=""
+                                view="label">
+
+                            </div>
+
+                        </div>
+
                     </fieldset>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 153px; left: 110px; width:165px; height:22px">
-
-                    <div
-                        binary_variables=""
-                        class="date_picker"
-                        displayheight="22"
-                        displayleft="110"
-                        displaytop="153"
-                        displaywidth="165"
-                        field_type="TEXT"
-                        field_weight="199"
-                        id="cajagrandeRBoletines:date1."
-                        key="cajagrandeRBoletines:date1."
-                        kind="date"
-                        original_name="date1"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845174491"
-                        view="date">
-
-                    </div>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 472px; left: 110px; width:165px; height:22px">
-
-                    <div
-                        binary_variables=""
-                        class="date_picker"
-                        displayheight="22"
-                        displayleft="110"
-                        displaytop="472"
-                        displaywidth="165"
-                        field_type="TEXT"
-                        field_weight="1699"
-                        id="cajagrandeRBoletines:date11."
-                        key="cajagrandeRBoletines:date11."
-                        kind="date"
-                        original_name="date1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845184559"
-                        view="date">
-
-                    </div>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 472px; left: 306px; width:165px; height:22px">
-
-                    <div
-                        binary_variables=""
-                        class="date_picker"
-                        displayheight="22"
-                        displayleft="306"
-                        displaytop="472"
-                        displaywidth="165"
-                        field_type="TEXT"
-                        field_weight="1799"
-                        id="cajagrandeRBoletines:date111."
-                        key="cajagrandeRBoletines:date111."
-                        kind="date"
-                        original_name="date1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845215639"
-                        view="date">
-
-                    </div>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 472px; left: 511px; width:165px; height:22px">
-
-                    <div
-                        binary_variables=""
-                        class="date_picker"
-                        displayheight="22"
-                        displayleft="511"
-                        displaytop="472"
-                        displaywidth="165"
-                        field_type="TEXT"
-                        field_weight="1899"
-                        id="cajagrandeRBoletines:date2."
-                        key="cajagrandeRBoletines:date2."
-                        kind="date"
-                        original_name="date2"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845261753"
-                        view="date">
-
-                    </div>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 472px; left: 729px; width:165px; height:22px">
-
-                    <div
-                        binary_variables=""
-                        class="date_picker"
-                        displayheight="22"
-                        displayleft="729"
-                        displaytop="472"
-                        displaywidth="165"
-                        field_type="TEXT"
-                        field_weight="1999"
-                        id="cajagrandeRBoletines:date21."
-                        key="cajagrandeRBoletines:date21."
-                        kind="date"
-                        original_name="date2"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
-                        view="date">
-
-                    </div>
 
                 </div>
 
@@ -1303,6 +1229,31 @@
                 <div
                     binary_variables=""
                     view="div"
+                    style="position: absolute; top: 528px; left: 465px; width:235px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="465"
+                        displaytop="528"
+                        displaywidth="235"
+                        field_type="text"
+                        field_weight="2399"
+                        findable="false"
+                        key="cajagrandeRBoletines:nombre_banco."
+                        name="cajagrandeRBoletines:nombre_banco."
+                        original_name="textfield1"
+                        size="39"
+                        target_field=""
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847089166"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
                     style="position: absolute; top: 970px; left: 140px; width:39px; height:22px">
 
                     <input
@@ -1313,7 +1264,7 @@
                         displaytop="970"
                         displaywidth="39"
                         field_type="text"
-                        field_weight="3999"
+                        field_weight="4099"
                         findable="false"
                         key="cajagrandeRBoletines:number."
                         name="cajagrandeRBoletines:number."
@@ -1328,170 +1279,7 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 321px; left: 110px; width:115px; height:21px">
-
-                    <select
-                        binary_variables=""
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="110"
-                        displaytop="321"
-                        displaywidth="115"
-                        field_type="SELECT"
-                        field_weight="1099"
-                        findable="false"
-                        key="cajagrandeRBoletines:select1."
-                        name="cajagrandeRBoletines:select1."
-                        original_name="select1"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844988381"
-                        view="select"
-                        style="width:115px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 321px; left: 306px; width:115px; height:21px">
-
-                    <select
-                        binary_variables=""
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="306"
-                        displaytop="321"
-                        displaywidth="115"
-                        field_type="SELECT"
-                        field_weight="1199"
-                        findable="false"
-                        key="cajagrandeRBoletines:select11."
-                        name="cajagrandeRBoletines:select11."
-                        original_name="select1"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845113776"
-                        view="select"
-                        style="width:115px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 377px; left: 110px; width:115px; height:21px">
-
-                    <select
-                        binary_variables=""
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="110"
-                        displaytop="377"
-                        displaywidth="115"
-                        field_type="SELECT"
-                        field_weight="1499"
-                        findable="false"
-                        key="cajagrandeRBoletines:select111."
-                        name="cajagrandeRBoletines:select111."
-                        original_name="select1"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845120465"
-                        view="select"
-                        style="width:115px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 584px; left: 465px; width:42px; height:21px">
-
-                    <select
-                        binary_variables=""
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="465"
-                        displaytop="584"
-                        displaywidth="42"
-                        field_type="SELECT"
-                        field_weight="2899"
-                        findable="false"
-                        key="cajagrandeRBoletines:select2."
-                        name="cajagrandeRBoletines:select2."
-                        original_name="select2"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846271051"
-                        view="select"
-                        style="width:42px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 584px; left: 110px; width:45px; height:21px">
-
-                    <select
-                        binary_variables=""
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="110"
-                        displaytop="584"
-                        displaywidth="45"
-                        field_type="SELECT"
-                        field_weight="2599"
-                        findable="false"
-                        key="cajagrandeRBoletines:select21."
-                        name="cajagrandeRBoletines:select21."
-                        original_name="select2"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847117198"
-                        view="select"
-                        style="visibility:visible;
-                            width:45px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 584px; left: 566px; width:42px; height:21px">
-
-                    <select
-                        binary_variables=""
-                        class="dropdown_list"
-                        displayheight="21"
-                        displayleft="566"
-                        displaytop="584"
-                        displaywidth="42"
-                        field_type="SELECT"
-                        field_weight="2999"
-                        findable="false"
-                        key="cajagrandeRBoletines:select211."
-                        name="cajagrandeRBoletines:select211."
-                        original_name="select2"
-                        size="1"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847121063"
-                        view="select"
-                        style="width:42px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 928px; left: 376px; width:262px; height:85px">
+                    style="position: absolute; top: 938px; left: 376px; width:262px; height:85px">
 
                     <div
                         binary_variables=""
@@ -1499,10 +1287,10 @@
                         commands=""
                         displayheight="85"
                         displayleft="376"
-                        displaytop="928"
+                        displaytop="938"
                         displaywidth="262"
                         elevator="true"
-                        field_weight="4099"
+                        field_weight="4199"
                         id="cajagrandeRBoletines:tabset1."
                         key="cajagrandeRBoletines:tabset1."
                         kind="notebook"
@@ -1578,452 +1366,33 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 808px; left: 110px; width:783px; height:76px">
-
-                    <textarea
-                        binary_variables=""
-                        class="textarea"
-                        cols="71"
-                        displayheight="76"
-                        displayleft="110"
-                        displaytop="808"
-                        displaywidth="783"
-                        field_length="0"
-                        field_type="TEXTAREA"
-                        field_weight="3899"
-                        findable="false"
-                        key="cajagrandeRBoletines:textarea1."
-                        name="cajagrandeRBoletines:textarea1."
-                        original_name="textarea1"
-                        rows="4"
-                        target_field=""
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846980137"
-                        view="textarea">                    </textarea>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 209px; left: 306px; width:45px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="306"
-                        displaytop="209"
-                        displaywidth="45"
-                        field_type="text"
-                        field_weight="399"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield121."
-                        name="cajagrandeRBoletines:textfield121."
-                        original_name="textfield1"
-                        size="7"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843766016"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 209px; left: 511px; width:45px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="511"
-                        displaytop="209"
-                        displaywidth="45"
-                        field_type="text"
-                        field_weight="499"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield122."
-                        name="cajagrandeRBoletines:textfield122."
-                        original_name="textfield1"
-                        size="7"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843766351"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 209px; left: 729px; width:80px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="729"
-                        displaytop="209"
-                        displaywidth="80"
-                        field_type="text"
-                        field_weight="599"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield123."
-                        name="cajagrandeRBoletines:textfield123."
-                        original_name="textfield1"
-                        size="13"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843769374"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 265px; left: 110px; width:80px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="110"
-                        displaytop="265"
-                        displaywidth="80"
-                        field_type="text"
-                        field_weight="699"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield1231."
-                        name="cajagrandeRBoletines:textfield1231."
-                        original_name="textfield1"
-                        size="13"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844682532"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 265px; left: 306px; width:80px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="306"
-                        displaytop="265"
-                        displaywidth="80"
-                        field_type="text"
-                        field_weight="799"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12311."
-                        name="cajagrandeRBoletines:textfield12311."
-                        original_name="textfield1"
-                        size="13"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844692595"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 265px; left: 511px; width:150px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="511"
-                        displaytop="265"
-                        displaywidth="150"
-                        field_type="text"
-                        field_weight="899"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield123111."
-                        name="cajagrandeRBoletines:textfield123111."
-                        original_name="textfield1"
-                        size="25"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844707651"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 265px; left: 729px; width:150px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="729"
-                        displaytop="265"
-                        displaywidth="150"
-                        field_type="text"
-                        field_weight="999"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield1231111."
-                        name="cajagrandeRBoletines:textfield1231111."
-                        original_name="textfield1"
-                        size="25"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844789242"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 320px; left: 511px; width:150px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="511"
-                        displaytop="320"
-                        displaywidth="150"
-                        field_type="text"
-                        field_weight="1299"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12311111."
-                        name="cajagrandeRBoletines:textfield12311111."
-                        original_name="textfield1"
-                        size="25"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844814386"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 376px; left: 729px; width:150px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="729"
-                        displaytop="376"
-                        displaywidth="150"
-                        field_type="text"
-                        field_weight="1599"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield123111111."
-                        name="cajagrandeRBoletines:textfield123111111."
-                        original_name="textfield1"
-                        size="25"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844818546"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 320px; left: 729px; width:150px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="729"
-                        displaytop="320"
-                        displaywidth="150"
-                        field_type="text"
-                        field_weight="1399"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12311112."
-                        name="cajagrandeRBoletines:textfield12311112."
-                        original_name="textfield1"
-                        size="25"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844890061"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 696px; left: 110px; width:90px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="110"
-                        displaytop="696"
-                        displaywidth="90"
-                        field_type="text"
-                        field_weight="3499"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12312."
-                        name="cajagrandeRBoletines:textfield12312."
-                        original_name="textfield1"
-                        size="15"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846863224"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 752px; left: 110px; width:90px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="110"
-                        displaytop="752"
-                        displaywidth="90"
-                        field_type="text"
-                        field_weight="3699"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield123121."
-                        name="cajagrandeRBoletines:textfield123121."
-                        original_name="textfield1"
-                        size="15"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846872912"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 696px; left: 465px; width:240px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="465"
-                        displaytop="696"
-                        displaywidth="240"
-                        field_type="text"
-                        field_weight="3599"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield1231211."
-                        name="cajagrandeRBoletines:textfield1231211."
-                        original_name="textfield1"
-                        size="40"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846877046"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 752px; left: 465px; width:240px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="465"
-                        displaytop="752"
-                        displaywidth="240"
-                        field_type="text"
-                        field_weight="3799"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12312111."
-                        name="cajagrandeRBoletines:textfield12312111."
-                        original_name="textfield1"
-                        size="40"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846892176"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 639px; left: 465px; width:240px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="465"
-                        displaytop="639"
-                        displaywidth="240"
-                        field_type="text"
-                        field_weight="3399"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12312112."
-                        name="cajagrandeRBoletines:textfield12312112."
-                        original_name="textfield1"
-                        size="40"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846906159"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
                     style="position: absolute; top: 583px; left: 160px; width:45px; height:22px">
 
                     <input
+                        accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="18"
+                        db_type="String"
                         displayheight="22"
                         displayleft="160"
                         displaytop="583"
                         displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="18"
                         field_type="text"
                         field_weight="2699"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield123122."
-                        name="cajagrandeRBoletines:textfield123122."
+                        findable="true"
+                        key="cajagrandeRBoletines:vau_apode_nit."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vau_apode_nit."
                         original_name="textfield1"
+                        retrieve_value="true"
                         size="7"
-                        target_field=""
+                        target_field="vau_apode_nit"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847040022"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 583px; left: 613px; width:45px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="613"
-                        displaytop="583"
-                        displaywidth="45"
-                        field_type="text"
-                        field_weight="3099"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield1231221."
-                        name="cajagrandeRBoletines:textfield1231221."
-                        original_name="textfield1"
-                        size="7"
-                        target_field=""
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847050638"
+                        updateable="true"
                         view="text">
                 </div>
 
@@ -2033,22 +1402,174 @@
                     style="position: absolute; top: 583px; left: 211px; width:235px; height:22px">
 
                     <input
+                        accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="40"
+                        db_type="String"
                         displayheight="22"
                         displayleft="211"
                         displaytop="583"
                         displaywidth="235"
+                        explicit_search_mode="default"
+                        field_length="40"
                         field_type="text"
                         field_weight="2799"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield1231222."
-                        name="cajagrandeRBoletines:textfield1231222."
+                        findable="true"
+                        key="cajagrandeRBoletines:vau_apode_nom."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vau_apode_nom."
                         original_name="textfield1"
+                        retrieve_value="true"
                         size="39"
-                        target_field=""
+                        target_field="vau_apode_nom"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847055486"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 584px; left: 110px; width:45px; height:21px">
+
+                    <select
+                        accell_type="String"
+                        binary_variables=""
+                        class="dropdown_list"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="110"
+                        displaytop="584"
+                        displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="2599"
+                        findable="true"
+                        key="cajagrandeRBoletines:vau_apoderado."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vau_apoderado."
+                        original_name="select2"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vau_apoderado"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847117198"
+                        updateable="true"
+                        view="select"
+                        style="visibility:visible;
+                            width:45px; height: 21px">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 528px; left: 110px; width:45px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        auto_accept="true"
+                        binary_variables=""
+                        case_conversion="Upper"
+                        class="textfield"
+                        db_length="3"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="110"
+                        displaytop="528"
+                        displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="3"
+                        field_type="text"
+                        field_weight="2099"
+                        findable="true"
+                        immediate="true"
+                        key="cajagrandeRBoletines:vma_ven_responsa."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vma_ven_responsa."
+                        retrieve_value="true"
+                        return_values_into="vma_ven_responsa"
+                        size="7"
+                        target_field="vma_ven_responsa"
+                        type="text"
+                        uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777426"
+                        updateable="true"
+                        view="text"
+                        zoom_active_mode="both"
+                        zoom_form="Modulo/VendedoresFRM"
+                        style="font-size: 12px;
+                            color: Black">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 472px; left: 729px; width:165px; height:22px">
+
+                    <div
+                        accell_type="Date"
+                        binary_variables=""
+                        class="date_picker"
+                        db_length="10"
+                        db_type="Date"
+                        displayheight="22"
+                        displayleft="729"
+                        displaytop="472"
+                        displaywidth="165"
+                        explicit_search_mode="default"
+                        field_length="10"
+                        field_type="TEXT"
+                        field_weight="1999"
+                        findable="true"
+                        id="cajagrandeRBoletines:vmu__f_entprog."
+                        key="cajagrandeRBoletines:vmu__f_entprog."
+                        kind="date"
+                        multi_valued="true"
+                        original_name="date2"
+                        retrieve_value="true"
+                        target_field="vmu_f_entprog"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
+                        updateable="true"
+                        view="text">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 639px; left: 465px; width:240px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="30"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="465"
+                        displaytop="639"
+                        displaywidth="240"
+                        explicit_search_mode="default"
+                        field_length="30"
+                        field_type="text"
+                        field_weight="3399"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_cli_ciudad."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_cli_ciudad."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="40"
+                        target_field="vmu_cli_ciudad"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846906159"
+                        updateable="true"
                         view="text">
                 </div>
 
@@ -2058,47 +1579,207 @@
                     style="position: absolute; top: 583px; left: 663px; width:235px; height:22px">
 
                     <input
+                        accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="20"
+                        db_type="String"
                         displayheight="22"
                         displayleft="663"
                         displaytop="583"
                         displaywidth="235"
+                        explicit_search_mode="default"
+                        field_length="20"
                         field_type="text"
                         field_weight="3199"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12312221."
-                        name="cajagrandeRBoletines:textfield12312221."
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_cli_ciunit."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_cli_ciunit."
                         original_name="textfield1"
+                        retrieve_value="true"
                         size="39"
-                        target_field=""
+                        target_field="vmu_cli_ciunit"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847067909"
+                        updateable="true"
                         view="text">
                 </div>
 
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 528px; left: 465px; width:235px; height:22px">
+                    style="position: absolute; top: 321px; left: 110px; width:115px; height:21px">
 
-                    <input
+                    <select
+                        accell_type="String"
+                        auto_resize_width="true"
+                        binary_variables=""
+                        class="dropdown_list"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="110"
+                        displaytop="321"
+                        displaywidth="115"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="1099"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_cli_clase."
+                        multi_valued="true"
+                        multi_valued_options="false"
+                        name="cajagrandeRBoletines:vmu_cli_clase."
+                        options="PagaelCliente=C&#59;NoLiquidar=N&#59;Promocion=P"
+                        original_name="select1"
+                        required="true"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vmu_cli_clase"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844988381"
+                        updateable="true"
+                        view="select"
+                        style="width:115px; height: 21px">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 640px; left: 110px; width:240px; height:21px">
+
+                    <select
+                        accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="50"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="110"
+                        displaytop="640"
+                        displaywidth="240"
+                        explicit_search_mode="default"
+                        field_length="50"
+                        field_type="SELECT"
+                        field_weight="3299"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_cli_corres."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_cli_corres."
+                        original_name="vpp_direccion"
+                        query="select xzo_nombre from xzo_zonas&#59;"
+                        query_row_limit="300"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vmu_cli_corres"
+                        uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369153592814"
+                        updateable="true"
+                        view="select"
+                        style="width:240px; height: 21px;
+                            font-size: 12px;
+                            color: Black">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 583px; left: 613px; width:45px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="15"
+                        db_type="String"
                         displayheight="22"
-                        displayleft="465"
-                        displaytop="528"
-                        displaywidth="235"
+                        displayleft="613"
+                        displaytop="583"
+                        displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="15"
                         field_type="text"
-                        field_weight="2399"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield12312222."
-                        name="cajagrandeRBoletines:textfield12312222."
+                        field_weight="3099"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_cli_registro."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_cli_registro."
                         original_name="textfield1"
-                        size="39"
-                        target_field=""
+                        retrieve_value="true"
+                        size="7"
+                        target_field="vmu_cli_registro"
                         type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847089166"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847050638"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 696px; left: 110px; width:90px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="30"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="110"
+                        displaytop="696"
+                        displaywidth="90"
+                        explicit_search_mode="default"
+                        field_length="30"
+                        field_type="text"
+                        field_weight="3499"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_cli_telof."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_cli_telof."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="15"
+                        target_field="vmu_cli_telof"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846863224"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 752px; left: 110px; width:90px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="30"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="110"
+                        displaytop="752"
+                        displaywidth="90"
+                        explicit_search_mode="default"
+                        field_length="30"
+                        field_type="text"
+                        field_weight="3699"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_cli_telre."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_cli_telre."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="15"
+                        target_field="vmu_cli_telre"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846872912"
+                        updateable="true"
                         view="text">
                 </div>
 
@@ -2108,47 +1789,446 @@
                     style="position: absolute; top: 528px; left: 414px; width:45px; height:22px">
 
                     <input
+                        accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="2"
+                        db_type="String"
                         displayheight="22"
                         displayleft="414"
                         displaytop="528"
                         displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="2"
                         field_type="text"
                         field_weight="2299"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield1231223."
-                        name="cajagrandeRBoletines:textfield1231223."
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_corporacion."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_corporacion."
                         original_name="textfield1"
+                        retrieve_value="true"
                         size="7"
-                        target_field=""
+                        target_field="vmu_corporacion"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847089132"
+                        updateable="true"
                         view="text">
                 </div>
 
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 528px; left: 732px; width:80px; height:22px">
+                    style="position: absolute; top: 696px; left: 465px; width:240px; height:22px">
 
                     <input
+                        accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="40"
+                        db_type="String"
                         displayheight="22"
-                        displayleft="732"
-                        displaytop="528"
-                        displaywidth="80"
+                        displayleft="465"
+                        displaytop="696"
+                        displaywidth="240"
+                        explicit_search_mode="default"
+                        field_length="40"
                         field_type="text"
-                        field_weight="2499"
-                        findable="false"
-                        key="cajagrandeRBoletines:textfield1232."
-                        name="cajagrandeRBoletines:textfield1232."
+                        field_weight="3599"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_correo."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_correo."
                         original_name="textfield1"
-                        size="13"
-                        target_field=""
+                        retrieve_value="true"
+                        size="40"
+                        target_field="vmu_correo"
                         type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846019675"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846877046"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 752px; left: 465px; width:240px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="40"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="465"
+                        displaytop="752"
+                        displaywidth="240"
+                        explicit_search_mode="default"
+                        field_length="40"
+                        field_type="text"
+                        field_weight="3799"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_correo2."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_correo2."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="40"
+                        target_field="vmu_correo2"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846892176"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 320px; left: 511px; width:150px; height:22px">
+
+                    <input
+                        accell_type="Amount"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="15"
+                        db_type="Amount"
+                        displayheight="22"
+                        displayleft="511"
+                        displaytop="320"
+                        displaywidth="150"
+                        explicit_search_mode="default"
+                        field_length="25"
+                        field_type="text"
+                        field_weight="1299"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_descuentos."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_descuentos."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="25"
+                        target_field="vmu_descuentos"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844814386"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 584px; left: 566px; width:42px; height:21px">
+
+                    <select
+                        accell_type="String"
+                        binary_variables=""
+                        class="dropdown_list"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="566"
+                        displaytop="584"
+                        displaywidth="42"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="2999"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_est_hipote."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_est_hipote."
+                        original_name="select2"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vmu_est_hipote"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847121063"
+                        updateable="true"
+                        view="select"
+                        style="width:42px; height: 21px">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 584px; left: 465px; width:42px; height:21px">
+
+                    <select
+                        accell_type="String"
+                        binary_variables=""
+                        class="dropdown_list"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="465"
+                        displaytop="584"
+                        displaywidth="42"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="2899"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_est_unidad."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_est_unidad."
+                        original_name="select2"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vmu_est_unidad"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846271051"
+                        updateable="true"
+                        view="select"
+                        style="width:42px; height: 21px">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 472px; left: 511px; width:165px; height:22px">
+
+                    <div
+                        accell_type="Date"
+                        binary_variables=""
+                        class="date_picker"
+                        db_length="10"
+                        db_type="Date"
+                        displayheight="22"
+                        displayleft="511"
+                        displaytop="472"
+                        displaywidth="165"
+                        explicit_search_mode="default"
+                        field_length="10"
+                        field_type="TEXT"
+                        field_weight="1899"
+                        findable="true"
+                        id="cajagrandeRBoletines:vmu_f_ent_pacta."
+                        key="cajagrandeRBoletines:vmu_f_ent_pacta."
+                        kind="date"
+                        multi_valued="true"
+                        original_name="date2"
+                        retrieve_value="true"
+                        target_field="vmu_f_ent_pacta"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845261753"
+                        updateable="true"
+                        view="text">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 472px; left: 306px; width:165px; height:22px">
+
+                    <div
+                        accell_type="Date"
+                        binary_variables=""
+                        class="date_picker"
+                        db_length="10"
+                        db_type="Date"
+                        displayheight="22"
+                        displayleft="306"
+                        displaytop="472"
+                        displaywidth="165"
+                        explicit_search_mode="default"
+                        field_length="10"
+                        field_type="TEXT"
+                        field_weight="1799"
+                        findable="true"
+                        id="cajagrandeRBoletines:vmu_f_escritura."
+                        key="cajagrandeRBoletines:vmu_f_escritura."
+                        kind="date"
+                        multi_valued="true"
+                        original_name="date1"
+                        retrieve_value="true"
+                        target_field="vmu_f_escritura"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845215639"
+                        updateable="true"
+                        view="text">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 153px; left: 110px; width:165px; height:22px">
+
+                    <div
+                        accell_type="Date"
+                        binary_variables=""
+                        class="date_picker"
+                        db_length="10"
+                        db_type="Date"
+                        displayheight="22"
+                        displayleft="110"
+                        displaytop="153"
+                        displaywidth="165"
+                        explicit_search_mode="default"
+                        field_length="10"
+                        field_type="TEXT"
+                        field_weight="199"
+                        findable="true"
+                        id="cajagrandeRBoletines:vmu_f_gravacion."
+                        key="cajagrandeRBoletines:vmu_f_gravacion."
+                        kind="date"
+                        multi_valued="true"
+                        original_name="date1"
+                        retrieve_value="true"
+                        target_field="vmu_f_gravacion"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845174491"
+                        updateable="true"
+                        view="text">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 472px; left: 110px; width:165px; height:22px">
+
+                    <div
+                        accell_type="Date"
+                        binary_variables=""
+                        class="date_picker"
+                        db_length="10"
+                        db_type="Date"
+                        displayheight="22"
+                        displayleft="110"
+                        displaytop="472"
+                        displaywidth="165"
+                        explicit_search_mode="default"
+                        field_length="10"
+                        field_type="TEXT"
+                        field_weight="1699"
+                        findable="true"
+                        id="cajagrandeRBoletines:vmu_f_separacion."
+                        key="cajagrandeRBoletines:vmu_f_separacion."
+                        kind="date"
+                        multi_valued="true"
+                        original_name="date1"
+                        retrieve_value="true"
+                        target_field="vmu_f_separacion"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845184559"
+                        updateable="true"
+                        view="text">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 377px; left: 110px; width:115px; height:21px">
+
+                    <select
+                        accell_type="String"
+                        auto_accept="true"
+                        binary_variables=""
+                        class="dropdown_list"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="110"
+                        displaytop="377"
+                        displaywidth="115"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="1499"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_forma_pago."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_forma_pago."
+                        options="Contado=C&#59;Credito=D"
+                        original_name="select1"
+                        required="true"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vmu_forma_pago"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845120465"
+                        updateable="true"
+                        view="select"
+                        style="width:115px; height: 21px">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 209px; left: 306px; width:45px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        case_conversion="Upper"
+                        class="textfield"
+                        db_length="3"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="306"
+                        displaytop="209"
+                        displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="3"
+                        field_type="text"
+                        field_weight="399"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_manzana."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_manzana."
+                        original_name="textfield1"
+                        required="true"
+                        retrieve_value="true"
+                        size="7"
+                        target_field="vmu_manzana"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843766016"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 209px; left: 729px; width:80px; height:22px">
+
+                    <input
+                        accell_type="Numeric"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="9"
+                        db_type="Numeric"
+                        displayheight="22"
+                        displayleft="729"
+                        displaytop="209"
+                        displaywidth="80"
+                        explicit_search_mode="default"
+                        field_length="11"
+                        field_type="text"
+                        field_weight="599"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_ngarage."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_ngarage."
+                        original_name="textfield1"
+                        required="true"
+                        retrieve_value="true"
+                        size="13"
+                        target_field="vmu_ngarage"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843769374"
+                        updateable="true"
                         view="text">
                 </div>
 
@@ -2160,6 +2240,7 @@
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="2"
                         db_type="String"
@@ -2176,6 +2257,7 @@
                         multi_valued="true"
                         name="cajagrandeRBoletines:vmu_obra."
                         original_name="textfield1"
+                        required="true"
                         retrieve_value="true"
                         size="7"
                         target_field="vmu_obra"
@@ -2188,35 +2270,173 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 640px; left: 110px; width:240px; height:21px">
+                    style="position: absolute; top: 265px; left: 511px; width:150px; height:22px">
 
-                    <select
+                    <input
+                        accell_type="Amount"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="15"
+                        db_type="Amount"
+                        displayheight="22"
+                        displayleft="511"
+                        displaytop="265"
+                        displaywidth="150"
+                        explicit_search_mode="default"
+                        field_length="25"
+                        field_type="text"
+                        field_weight="899"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_precio_uni."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_precio_uni."
+                        original_name="textfield1"
+                        required="true"
+                        retrieve_value="true"
+                        size="25"
+                        target_field="vmu_precio_uni"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844707651"
+                        updateable="false"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 320px; left: 729px; width:150px; height:22px">
+
+                    <input
+                        accell_type="Amount"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="15"
+                        db_type="Amount"
+                        displayheight="22"
+                        displayleft="729"
+                        displaytop="320"
+                        displaywidth="150"
+                        explicit_search_mode="default"
+                        field_length="25"
+                        field_type="text"
+                        field_weight="1399"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_preciotot."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_preciotot."
+                        original_name="textfield1"
+                        required="true"
+                        retrieve_value="true"
+                        size="25"
+                        target_field="vmu_preciotot"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844890061"
+                        updateable="false"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 804px; left: 110px; width:789px; height:74px">
+
+                    <textarea
+                        accell_type="String"
+                        auto_select="true"
+                        binary_variables=""
+                        class="textarea"
+                        cols="71"
+                        db_length="80"
+                        db_type="String"
+                        displayheight="74"
+                        displayleft="110"
+                        displaytop="804"
+                        displaywidth="789"
+                        explicit_search_mode="default"
+                        field_length="80"
+                        field_type="TEXTAREA"
+                        field_weight="3899"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_promocion1."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_promocion1."
+                        original_name="textarea1"
+                        retrieve_value="true"
+                        rows="4"
+                        target_field="vmu_promocion1"
+                        uid="modulo_form1_1372953290702_0c1d5875e893971d1e25e301884c9ddb4d2dbcdd_1375375380885"
+                        updateable="true"
+                        view="textarea">                    </textarea>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 890px; left: 110px; width:789px; height:22px">
+
+                    <input
                         accell_type="String"
                         binary_variables=""
                         class="textfield"
-                        displayheight="21"
+                        db_length="80"
+                        db_type="String"
+                        displayheight="22"
                         displayleft="110"
-                        displaytop="640"
-                        displaywidth="240"
+                        displaytop="890"
+                        displaywidth="789"
                         explicit_search_mode="default"
-                        field_length="100"
-                        field_type="SELECT"
-                        field_weight="3299"
-                        findable="false"
-                        key="cajagrandeRBoletines:vpp_direccion."
+                        field_length="80"
+                        field_type="text"
+                        field_weight="3999"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_promocion2."
                         multi_valued="true"
-                        name="cajagrandeRBoletines:vpp_direccion."
-                        original_name="vpp_direccion"
-                        query="select xzo_nombre from xzo_zonas&#59;"
-                        query_row_limit="300"
-                        retrieve_value="false"
+                        name="cajagrandeRBoletines:vmu_promocion2."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="131"
+                        target_field="vmu_promocion2"
+                        type="text"
+                        uid="modulo_form1_1372953290702_0c1d5875e893971d1e25e301884c9ddb4d2dbcdd_1375374450473"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 321px; left: 306px; width:115px; height:21px">
+
+                    <select
+                        accell_type="String"
+                        auto_resize_width="true"
+                        binary_variables=""
+                        class="dropdown_list"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="306"
+                        displaytop="321"
+                        displaywidth="115"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="1199"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_tipoinmueb."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_tipoinmueb."
+                        options="Apartamento=A&#59;Casa&#59;Local=L"
+                        original_name="select1"
+                        required="true"
+                        retrieve_value="true"
                         size="1"
-                        uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369153592814"
-                        updateable="false"
+                        target_field="vmu_tipoinmueb"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845113776"
+                        updateable="true"
                         view="select"
-                        style="width:240px; height: 21px;
-                            font-size: 12px;
-                            color: Black">
+                        style="width:115px; height: 21px">
                     </select>
 
                 </div>
@@ -2224,38 +2444,135 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 528px; left: 110px; width:45px; height:22px">
+                    style="position: absolute; top: 528px; left: 732px; width:80px; height:22px">
 
                     <input
                         accell_type="String"
-                        auto_accept="true"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="13"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="732"
+                        displaytop="528"
+                        displaywidth="80"
+                        explicit_search_mode="default"
+                        field_length="13"
+                        field_type="text"
+                        field_weight="2499"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_tramite."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_tramite."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="13"
+                        target_field="vmu_password"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846019675"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 209px; left: 511px; width:45px; height:22px">
+
+                    <input
+                        accell_type="String"
                         binary_variables=""
                         case_conversion="Upper"
                         class="textfield"
+                        db_length="4"
+                        db_type="String"
                         displayheight="22"
-                        displayleft="110"
-                        displaytop="528"
+                        displayleft="511"
+                        displaytop="209"
                         displaywidth="45"
                         explicit_search_mode="default"
-                        field_length="100"
+                        field_length="4"
                         field_type="text"
-                        field_weight="2099"
-                        findable="false"
-                        immediate="true"
-                        key="cajagrandeRBoletines:vpp_vendedor."
+                        field_weight="499"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_unidad."
                         multi_valued="true"
-                        name="cajagrandeRBoletines:vpp_vendedor."
-                        retrieve_value="false"
-                        return_values_into="vpp_vendedor"
+                        name="cajagrandeRBoletines:vmu_unidad."
+                        original_name="textfield1"
+                        required="true"
+                        retrieve_value="true"
                         size="7"
+                        target_field="vmu_unidad"
                         type="text"
-                        uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777426"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843766351"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 376px; left: 729px; width:150px; height:22px">
+
+                    <input
+                        accell_type="Amount"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="15"
+                        db_type="Amount"
+                        displayheight="22"
+                        displayleft="729"
+                        displaytop="376"
+                        displaywidth="150"
+                        explicit_search_mode="default"
+                        field_length="25"
+                        field_type="text"
+                        field_weight="1599"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_vdeposito."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_vdeposito."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="25"
+                        target_field="vmu_vdeposito"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844818546"
                         updateable="false"
-                        view="text"
-                        zoom_active_mode="both"
-                        zoom_form="Modulo/VendedoresFRM"
-                        style="font-size: 12px;
-                            color: Black">
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 265px; left: 729px; width:150px; height:22px">
+
+                    <input
+                        accell_type="Amount"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="15"
+                        db_type="Amount"
+                        displayheight="22"
+                        displayleft="729"
+                        displaytop="265"
+                        displaywidth="150"
+                        explicit_search_mode="default"
+                        field_length="25"
+                        field_type="text"
+                        field_weight="999"
+                        findable="true"
+                        key="cajagrandeRBoletines:vmu_vgarage."
+                        multi_valued="true"
+                        name="cajagrandeRBoletines:vmu_vgarage."
+                        original_name="textfield1"
+                        retrieve_value="true"
+                        size="25"
+                        target_field="vmu_vgarage"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844789242"
+                        updateable="false"
+                        view="text">
                 </div>
 
                 <div

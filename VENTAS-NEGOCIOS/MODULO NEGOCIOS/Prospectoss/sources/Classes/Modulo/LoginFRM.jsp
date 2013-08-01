@@ -3,12 +3,12 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
         aud_on_entry="true"
         binary_variables=""
-        bloom_filter="00080000000000000800000000000000"
+        bloom_filter="00000000000400040000000000000000"
         class="form"
         commands="logincmd"
         connection="Connection1"
@@ -253,32 +253,6 @@
                             font-size: 14px;
                             color: Black">
                         <nobr>IniciarSesion</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    view="div"
-                    align="left" 
-                    style="position: absolute; top: 163px; left: 50px; width:300px; height:18px">
-                    
-                    
-                    <label
-                        class="label"
-                        displayheight="18"
-                        displayleft="50"
-                        displaytop="163"
-                        displaywidth="300"
-                        id="cajagrandeLogin:label2."
-                        key="cajagrandeLogin:label2."
-                        labelalign="left"
-                        labeltitle="NewLabel"
-                        original_name="label2"
-                        uid="modulo_form1_1369425069332_b88339d5875d46815e12e0d51ea2bbf5ac6577ef_1374178540252"
-                        view="label"
-                        style="font-weight: bold;
-                            font-size: 14px">
-                        <nobr>NewLabel</nobr>
                     </label>
 
                 </div>

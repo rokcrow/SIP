@@ -2,13 +2,35 @@ package ModuloCNegocios;
 
 FORM RBoletinesFRM
 {
+    multi_valued NullableStringVariable vmu_empresa, vmu_est_hipote;
+    multi_valued NullableAmountVariable  vmu_precio_uni, vmu_vgarage, vmu_descuentos;
+    NullableAmount cero, cien, preciotot;
+    NullableString numero, formasig;
+    NullableNumeric adicionando;
     
-    NullableString numero;
+    
     BEFORE FORM
     {   
          cajagrandeRBoletines.tabset1.setCurrentPage("tab2");
          cajagrandeRBoletines.number = "23";
-
+        
+        
+        vmu_empresa.clearAddExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        vmu_empresa.clearFindExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        cero = 0;
+        cien = 100;
+        preciotot = cero;
+        vmu_precio_uni = cero;
+        vmu_vgarage = cero;
+        vmu_descuentos = cero;
+        /*vlr_gar = cero
+            vlr_dep = cero
+            acum = cero
+            */
+        formasig  = "A";
+        /*retorno = cero*/
+        vmu_est_hipote.clearAddExp = "N";
+        
     }
   
   
@@ -19,6 +41,13 @@ FORM RBoletinesFRM
             Acá se colocaran las variables que actuarán como guardianes.
             Si el usuario ha pasado por los formularios requeridos, se le deja pasar, de lo contrario no.
         */
+        
+        if(cajagrandeRBoletines.number != "3")
+        {
+            session.displayToMessageBox("Debe ir a Compromisos del Negocio antes de agregar un registro.");
+            rejectOperation();
+        }
+        
     }
 
     ON PREVIOUS FORM
@@ -30,19 +59,21 @@ FORM RBoletinesFRM
     
     ON CLEAR TO FIND
     {	
-      cajagrandeRBoletines.number = numero;
+      /*cajagrandeRBoletines.number = numero;
           session.displayToMessageBox("hola");
-             session.displayToMessageBox(numero);
+             session.displayToMessageBox(numero);*/
+             
+             adicionando = 0;
     }
 
     BOX cajagrandeRBoletines
     {
    
-        FIELD date1
+        FIELD vmu_f_gravacion
         {
         }
         
-        FIELD vpp_vendedor
+        FIELD vma_ven_responsa
         {
          /*   ON DATA ACCEPT
             {
@@ -79,19 +110,15 @@ FORM RBoletinesFRM
             }*/
         }
         
-        FIELD textfield1231223
+        FIELD vmu_corporacion
         {
         }
         
-        FIELD textfield1231211
+        FIELD vmu_correo
         {
         }
         
-        FIELD date21
-        {
-        }
-        
-        FIELD textarea1
+        FIELD vmu__f_entprog
         {
         }
         
@@ -99,55 +126,55 @@ FORM RBoletinesFRM
         {
         }
         
-        FIELD textfield123111111
+        FIELD vmu_vdeposito
         {
         }
         
-        FIELD textfield123122
+        FIELD vau_apode_nit
         {
         }
         
-        FIELD textfield1231111
+        FIELD vmu_vgarage
         {
         }
         
-        FIELD select11
+        FIELD vmu_tipoinmueb
         {
         }
         
-        FIELD textfield1232
+        FIELD vmu_tramite
         {
         }
         
-        FIELD textfield12311111
+        FIELD vmu_descuentos
         {
         }
         
-        FIELD textfield12312
+        FIELD vmu_cli_telof
         {
         }
         
-        FIELD textfield12312111
+        FIELD vmu_correo2
         {
         }
         
-        FIELD select211
+        FIELD vmu_est_hipote
         {
         }
         
-        FIELD select1
+        FIELD vmu_cli_clase
         {
         }
         
-        FIELD textfield12312221
+        FIELD vmu_cli_ciunit
         {
         }
         
-        FIELD select2
+        FIELD vmu_est_unidad
         {
         }
         
-        FIELD vpp_direccion
+        FIELD vmu_cli_corres
         {
         }
         
@@ -155,49 +182,49 @@ FORM RBoletinesFRM
         {
         }
         
-        BOX box111
+        BOX cajaarribaRBoletines
         {
-            FIELD textfield1
+            FIELD actualempresa
             {
             }
-            FIELD textfield11
+            FIELD actualusuario
             {
             }
         }
         
-        FIELD textfield12312222
+        FIELD nombre_banco
         {
         }
         
-        FIELD textfield1231
+        FIELD area_lote
         {
         }
         
-        FIELD textfield1231221
+        FIELD vmu_cli_registro
         {
         }
         
-        FIELD textfield123
+        FIELD vmu_ngarage
         {
         }
         
-        FIELD date111
+        FIELD vmu_f_escritura
         {
         }
         
-        FIELD date2
+        FIELD vmu_f_ent_pacta
         {
         }
         
-        FIELD textfield123111
+        FIELD vmu_precio_uni
         {
         }
         
-        FIELD textfield1231222
+        FIELD vau_apode_nom
         {
         }
         
-        FIELD textfield12311
+        FIELD area_const
         {
         }
         
@@ -205,35 +232,35 @@ FORM RBoletinesFRM
         {
         }
         
-        FIELD select21
+        FIELD vau_apoderado
         {
         }
         
-        FIELD textfield12312112
+        FIELD vmu_cli_ciudad
         {
         }
         
-        FIELD textfield122
+        FIELD vmu_unidad
         {
         }
         
-        FIELD date11
+        FIELD vmu_f_separacion
         {
         }
         
-        FIELD select111
+        FIELD vmu_forma_pago
         {
         }
         
-        FIELD textfield12311112
+        FIELD vmu_preciotot
         {
         }
         
-        FIELD textfield123121
+        FIELD vmu_cli_telre
         {
         }
         
-        FIELD textfield121
+        FIELD vmu_manzana
         {
         }
         
@@ -243,6 +270,15 @@ FORM RBoletinesFRM
         }
 
         FIELD number
+        {
+        
+        }
+
+        FIELD vmu_promocion2
+        {
+        }
+        
+        FIELD vmu_promocion1
         {
         
         }

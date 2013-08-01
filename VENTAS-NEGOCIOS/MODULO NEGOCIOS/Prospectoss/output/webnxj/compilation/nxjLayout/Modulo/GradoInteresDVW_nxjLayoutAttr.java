@@ -9,7 +9,7 @@ public class
 
 public GradoInteresDVW_nxjLayoutAttr()
 {
-this.isLocalized = false;
+this.isLocalized = true;
 setAttrFor_this(this);
 DivPanelWidget div_RepeatingArea1__10 = new DivPanelWidget();
 dodiv_RepeatingArea1__10(div_RepeatingArea1__10);
@@ -24,17 +24,17 @@ dodiv_label11__10(div_label11__10);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("displaywidth","1005");
-	widget.addAttribute("id",".top.");
-	widget.addAttribute("name",".top.");
 	widget.addStyle("border-width","1");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","solid");
-	widget.addStyle("background-color","#cccccc");
+	widget.addAttribute("id",".top.");
 	widget.addAttribute("displaytop","25");
 	widget.addAttribute("displayheight","574");
 	widget.addAttribute("fieldheight","574");
 	widget.addAttribute("fieldwidth","1005");
+	widget.addStyle("background-color","#cccccc");
 	widget.setClass("data_view");
+	widget.addAttribute("name",".top.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -48,17 +48,17 @@ private void setAttrFor_div_RepeatingArea1__10(Widget widget)
 
 private void setAttrFor_RepeatingArea1__20(Widget widget)
 {
-	widget.addAttribute("list_columns",".top:xpc_codigo.0:49;.top:xpc_clase.49:87;.top:xpc_nombre.136:209;.top:xpc_califica.345:184;.top:xpc_dias_pac.529:85;.top:xpc_dias_pvt.614:190");
-	widget.addAttribute("occurrences","12");
-	widget.addAttribute("selected_row_class","selected_row");
+	widget.addAttribute("list_columns",".top:xpc_codigo.0:55;.top:xpc_clase.55:129;.top:xpc_nombre.184:260;.top:xpc_califica.444:154;.top:xpc_dias_pac.598:103;.top:xpc_dias_pvt.701:103");
+	widget.addAttribute("altRowClass","alternate_row");
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("row_class","ROW");
+	widget.addAttribute("selected_row_class","selected_row");
 	widget.addAttribute("repeat_style","Grid");
-	widget.addAttribute("altRowClass","alternate_row");
+	widget.addAttribute("occurrences","12");
 	widget.addAttribute("displaywidth","823");
-	widget.addAttribute("id",".top:RepeatingArea1.");
 	widget.addAttribute("displayleft","150");
-	widget.addAttribute("horizontal_scroll_width","82%");
+	widget.addAttribute("horizontal_scroll_width","100%");
+	widget.addAttribute("id",".top:RepeatingArea1.");
 	widget.addAttribute("displaytop","165");
 	widget.addAttribute("disable_wrap","false");
 	widget.addAttribute("displayheight","285");
@@ -78,18 +78,18 @@ private void setAttrFor_xpc_codigo__40(Widget widget)
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","49");
-	widget.addAttribute("name",".top:xpc_codigo.");
+	widget.addAttribute("title","xpc_codigo");
+	widget.addAttribute("displaywidth","55");
 	widget.addAttribute("displayleft","162");
-	widget.addAttribute("size","8");
 	widget.addAttribute("headertitle","Codigo");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xpc_codigo");
-	widget.addAttribute("fieldwidth","49");
+	widget.addAttribute("fieldwidth","55");
+	widget.addAttribute("size","9");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:xpc_codigo.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -104,17 +104,17 @@ private void setAttrFor_xpc_clase__40(Widget widget)
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("options","Primer Contacto=P;Seguimiento=S");
-	widget.addAttribute("displaywidth","87");
-	widget.addAttribute("name",".top:xpc_clase.");
+	widget.addAttribute("title","xpc_clase");
+	widget.addAttribute("displaywidth","129");
 	widget.addAttribute("displayleft","137");
-	widget.addAttribute("size","1");
 	widget.addAttribute("headertitle","Clase");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("title","xpc_clase");
-	widget.addAttribute("fieldwidth","87");
+	widget.addAttribute("fieldwidth","129");
+	widget.addAttribute("size","1");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:xpc_clase.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -128,18 +128,18 @@ private void setAttrFor_xpc_nombre__40(Widget widget)
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","209");
-	widget.addAttribute("name",".top:xpc_nombre.");
+	widget.addAttribute("title","xpc_nombre");
+	widget.addAttribute("displaywidth","260");
 	widget.addAttribute("displayleft","450");
-	widget.addAttribute("size","34");
 	widget.addAttribute("headertitle","Nombre");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xpc_nombre");
-	widget.addAttribute("fieldwidth","209");
+	widget.addAttribute("fieldwidth","260");
+	widget.addAttribute("size","43");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:xpc_nombre.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -154,17 +154,17 @@ private void setAttrFor_xpc_califica__40(Widget widget)
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("options","Interesado=I;Medianamente Interesado=M;Poco Interesado=P");
-	widget.addAttribute("displaywidth","184");
-	widget.addAttribute("name",".top:xpc_califica.");
+	widget.addAttribute("title","xpc_califica");
+	widget.addAttribute("displaywidth","154");
 	widget.addAttribute("displayleft","411");
-	widget.addAttribute("size","1");
 	widget.addAttribute("headertitle","Calificacion");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("title","xpc_califica");
-	widget.addAttribute("fieldwidth","184");
+	widget.addAttribute("fieldwidth","154");
+	widget.addAttribute("size","1");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:xpc_califica.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -178,18 +178,18 @@ private void setAttrFor_xpc_dias_pac__40(Widget widget)
 	widget.addAttribute("field_weight","499");
 	widget.addAttribute("accell_type","Numeric");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","85");
-	widget.addAttribute("name",".top:xpc_dias_pac.");
+	widget.addAttribute("title","xpc_dias_pac");
+	widget.addAttribute("displaywidth","103");
 	widget.addAttribute("displayleft","247");
-	widget.addAttribute("size","14");
-	widget.addAttribute("headertitle","Dias Alto Costo");
+	widget.addAttribute("headertitle","DiasAltoCosto");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xpc_dias_pac");
-	widget.addAttribute("fieldwidth","85");
+	widget.addAttribute("fieldwidth","103");
+	widget.addAttribute("size","17");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:xpc_dias_pac.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -203,18 +203,18 @@ private void setAttrFor_xpc_dias_pvt__40(Widget widget)
 	widget.addAttribute("field_weight","599");
 	widget.addAttribute("accell_type","Numeric");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
-	widget.addAttribute("displaywidth","190");
-	widget.addAttribute("name",".top:xpc_dias_pvt.");
+	widget.addAttribute("title","xpc_dias_pvt");
+	widget.addAttribute("displaywidth","103");
 	widget.addAttribute("displayleft","349");
-	widget.addAttribute("size","31");
-	widget.addAttribute("headertitle","Dias VTradicional");
+	widget.addAttribute("headertitle","DiasVTradicional");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xpc_dias_pvt");
-	widget.addAttribute("fieldwidth","190");
+	widget.addAttribute("fieldwidth","103");
+	widget.addAttribute("size","17");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:xpc_dias_pvt.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -230,15 +230,15 @@ private void setAttrFor_box11__20(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id",".top:box11.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displaytop","519");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
@@ -254,9 +254,9 @@ private void setAttrFor_div_image1__30(Widget widget)
 
 private void setAttrFor_image1__40(Widget widget)
 {
+	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displayheight","46");
 	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -274,15 +274,15 @@ private void setAttrFor_cajaarribaGInteres__20(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id",".top:cajaarribaGInteres.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id",".top:cajaarribaGInteres.");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
@@ -301,16 +301,16 @@ private void setAttrFor_actualempresa__40(Widget widget)
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","false");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("name",".top:cajaarribaGInteres:actualempresa.");
 	widget.addAttribute("displayleft","16");
-	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
+	widget.addAttribute("size","32");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:cajaarribaGInteres:actualempresa.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -327,16 +327,16 @@ private void setAttrFor_actualusuario__40(Widget widget)
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","false");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name",".top:cajaarribaGInteres:actualusuario.");
 	widget.addAttribute("displayleft","800");
-	widget.addAttribute("size","18");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
+	widget.addAttribute("size","18");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:cajaarribaGInteres:actualusuario.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -350,13 +350,13 @@ private void setAttrFor_div_label1__30(Widget widget)
 
 private void setAttrFor_label1__40(Widget widget)
 {
-	widget.addAttribute("labeltitle","GRADO DE INTERES");
-	widget.addAttribute("displaywidth","522");
 	widget.addAttribute("id",".top:cajaarribaGInteres:label1.");
-	widget.addAttribute("displayleft","241");
-	widget.addAttribute("displaytop","14");
+	widget.addAttribute("labeltitle","GRADODEINTERES1");
 	widget.addAttribute("displayheight","23");
+	widget.addAttribute("displaytop","14");
 	widget.addStyle("text-align","left");
+	widget.addAttribute("displaywidth","522");
+	widget.addAttribute("displayleft","241");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -370,10 +370,10 @@ private void setAttrFor_div_label211__30(Widget widget)
 
 private void setAttrFor_label211__40(Widget widget)
 {
-	widget.addAttribute("labeltitle","top: 1024");
+	widget.addAttribute("labeltitle","top1024");
 	widget.addAttribute("displaywidth","55");
-	widget.addAttribute("id",".top:cajaarribaGInteres:label211.");
 	widget.addAttribute("displayleft","778");
+	widget.addAttribute("id",".top:cajaarribaGInteres:label211.");
 	widget.addAttribute("displaytop","65");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","14");
@@ -393,20 +393,20 @@ private void setAttrFor_div_label11__10(Widget widget)
 
 private void setAttrFor_label11__20(Widget widget)
 {
-	widget.addAttribute("labeltitle","Grado de Interes");
-	widget.addStyle("font-weight","bold");
+	widget.addStyle("font-size","14");
+	widget.addAttribute("labeltitle","GradodeInteres2");
 	widget.addAttribute("displaywidth","162");
-	widget.addAttribute("id",".top:label11.");
-	widget.addAttribute("displayleft","20");
-	widget.addAttribute("headertitle","Column1");
 	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("displayleft","20");
+	widget.addStyle("color","Black");
+	widget.addAttribute("id",".top:label11.");
+	widget.addAttribute("headertitle","Column1");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaytop","96");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("fieldwidth","162");
-	widget.addStyle("font-size","14");
 	widget.addStyle("text-align","left");
-	widget.addStyle("color","Black");
 	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
@@ -490,7 +490,7 @@ private void dodiv_RepeatingArea1__10(Widget div_RepeatingArea1__10)
             div_FXGRID_30.addStyle("overflow-y","hidden");
             div_FXGRID_30.addAttribute("jsinclude","NXJGrid.js");
             div_FXGRID_30.addAttribute("jslinks","NXJGrid.css");
-            div_FXGRID_30.addAttribute("jsinit","var combo1 = ['Primer Contacto', 'Seguimiento']; var combo3 = ['Interesado', 'Medianamente Interesado', 'Poco Interesado'];    var _top_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Codigo', 	'1', 	'1', 	'49', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_codigo', '.top:xpc_codigo.', '', ''), new NXJGridColumn( 	'Clase', 	'3', 	'1', 	'87', 	'', 	combo1, 	'Primer Contacto', 	'textfield', 	true, 	true, 	'xpc_clase', '.top:xpc_clase.', '', ''), new NXJGridColumn( 	'Nombre', 	'1', 	'1', 	'209', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_nombre', '.top:xpc_nombre.', '', ''), new NXJGridColumn( 	'Calificacion', 	'3', 	'1', 	'184', 	'', 	combo3, 	'Interesado', 	'textfield', 	true, 	true, 	'xpc_califica', '.top:xpc_califica.', '', ''), new NXJGridColumn( 	'Dias Alto Costo', 	'1', 	'0', 	'85', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pac', '.top:xpc_dias_pac.', '', ''), new NXJGridColumn( 	'Dias VTradicional', 	'1', 	'0', 	'190', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pvt', '.top:xpc_dias_pvt.', '', '') ]; ; if (!window.namesToComponents['GradoInteresDVW_FXGRID'])     {     window.namesToComponents['GradoInteresDVW_FXGRID'] = new NXJGrid('GradoInteresDVW_FXGRID', _top_RepeatingArea1__FXColumns, 22, null, null, '__NXJ_CONTEXT_PATH__/unify', '', '', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content/');     } ");
+            div_FXGRID_30.addAttribute("jsinit","var combo1 = ['Primer Contacto', 'Seguimiento']; var combo3 = ['Interesado', 'Medianamente Interesado', 'Poco Interesado'];    var _top_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Codigo', 	'1', 	'1', 	'55', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_codigo', '.top:xpc_codigo.', '', ''), new NXJGridColumn( 	'Clase', 	'3', 	'1', 	'129', 	'', 	combo1, 	'Primer Contacto', 	'textfield', 	true, 	true, 	'xpc_clase', '.top:xpc_clase.', '', ''), new NXJGridColumn( 	'Nombre', 	'1', 	'1', 	'260', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_nombre', '.top:xpc_nombre.', '', ''), new NXJGridColumn( 	'Calificacion', 	'3', 	'1', 	'154', 	'', 	combo3, 	'Interesado', 	'textfield', 	true, 	true, 	'xpc_califica', '.top:xpc_califica.', '', ''), new NXJGridColumn( 	'DiasAltoCosto', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pac', '.top:xpc_dias_pac.', '', ''), new NXJGridColumn( 	'DiasVTradicional', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pvt', '.top:xpc_dias_pvt.', '', '') ]; ; if (!window.namesToComponents['GradoInteresDVW_FXGRID'])     {     window.namesToComponents['GradoInteresDVW_FXGRID'] = new NXJGrid('GradoInteresDVW_FXGRID', _top_RepeatingArea1__FXColumns, 22, null, null, '__NXJ_CONTEXT_PATH__/unify', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content/');     } ");
             }
         }
     }

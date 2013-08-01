@@ -1,12 +1,13 @@
 <form 
+    aud_on_entry = "true"
     background_color = "#999999"
     binary_variables = ""
-    bloom_filter = "00000000000400040000000000000000"
-    commands = ""
+    bloom_filter = "00080000000000000800000000000040"
+    commands = "BackMenu"
     connection = "Connection1"
     field_order = ""
     footer = "none"
-    form_height = "470"
+    form_height = "528"
     form_width = "1202"
     foundation_type = "Classes/Foundation/Form"
     header = "none"
@@ -34,12 +35,11 @@
         binary_variables = ""
         display_name = "EMPRESA"
         field_type = "SELECT"
-        field_weight = "199"
+        field_weight = "299"
         findable = "false"
         immediate = "true"
         key = "cajagrandeMenu:EMPRESA."
         original_name = "EMPRESA"
-        query = "SELECT xem_nombre, xem_codigo FROM xem_empresas ORDER BY xem_nombre ASC;"
         required = "false"
         stop_for_input = "true"
         style_class = "listbox"
@@ -49,9 +49,23 @@
     </field>
     <field 
         binary_variables = ""
+        display_name = "MTraspasa"
+        field_type = "text"
+        field_weight = "199"
+        findable = "false"
+        key = "cajagrandeMenu:MTraspasa."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "modulo_form1_1369423869434_1e3d100accdeaaaafacf80bf1e96847e91d02ffa_1374678330196"
+        view = "text"
+        visible = "false">
+    </field>
+    <field 
+        binary_variables = ""
         display_name = "NombreForma1"
         field_type = "text"
-        field_weight = "299"
+        field_weight = "399"
         findable = "false"
         immediate = "false"
         key = "cajagrandeMenu:NombreForma1."
@@ -63,11 +77,26 @@
         view = "text">
     </field>
     <control 
+        base_class = "Classes/ItemsForm/Boton.fx"
+        binary_variables = ""
+        command = "BackMenu"
+        display_base_class = "ItemsForm.Boton"
+        display_name = "button1"
+        field_type = "button"
+        foundation_type = "Classes/Foundation/Button"
+        key = "cajagrandeMenu:button1."
+        kind = "instance"
+        original_name = "button1"
+        uid = "modulo_form1_1369423869434_5eae505bab5e10e9c5fd8f2e02bd6c75cdc52d25_1375131894739"
+        uid_to_name = ""
+        view = "button">
+    </control>
+    <control 
         background_color = "#e30000"
         binary_variables = ""
         commands = ""
         display_name = "cajaabajoMenu"
-        field_weight = "399"
+        field_weight = "499"
         key = "cajagrandeMenu:cajaabajoMenu."
         original_name = "box1"
         style_class = "box"

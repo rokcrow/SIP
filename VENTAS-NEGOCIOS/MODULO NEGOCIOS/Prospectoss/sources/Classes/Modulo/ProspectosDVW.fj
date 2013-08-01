@@ -22,6 +22,8 @@ DATA VIEW ProspectosDVW
             
                 cajaarribaRProspectos.actualempresa  = empresanombre ;
                 cajaarribaRProspectos.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+                
+                Modulo.MenuFRM#cajagrandeMenu.MTraspasa = "1";
         }
  
 
@@ -103,7 +105,7 @@ DATA VIEW ProspectosDVW
        
          if ( (Var1.isNull() ) || (Var1 == "" ) || (Var1 == " ") )
         {
-            session.displayToMessageBox("Debe indicar el Proyecto");
+            session.displayToMessageBox("Debe indicar el Proyecto.");
             rejectOperation();
         }
     }
@@ -169,6 +171,7 @@ DATA VIEW ProspectosDVW
                                             }                                        
 	    
 	    session.commitTransaction();
+                             
 	                                                  
 	   }
 	  else
@@ -432,15 +435,31 @@ DATA VIEW ProspectosDVW
 
     FIELD vpp_fecha_nacio
     {
+       // NullableDate fechaedad =01/01/1995, fechaactual = session.currentDate;
+        NullableNumeric mayoredad = 6575;
+    
          ON DATA ACCEPT
         {
-	 if (vpp_fecha_nacio > session.currentDate)
+	 if (vpp_fecha_nacio > (session.currentDate - mayoredad))
 	   {
-	    session.displayToMessageBox("La fecha de Nacimiento NO puede ser mayor a la fecha del dia verifique...!");
-	    vpp_fecha_nacio = session.currentDate;
+	    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
+	    vpp_fecha_nacio = (session.currentDate - mayoredad);
+	    rejectOperation();
+	   }
+           
+                           
+        }
+        
+        WHEN VALUE CHANGES
+        {
+                            if (vpp_fecha_nacio > (session.currentDate - mayoredad))
+	   {
+	    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
+	   vpp_fecha_nacio = (session.currentDate - mayoredad);
 	    rejectOperation();
 	   }
         }
+
     }
 
     FIELD vpy_nombre
@@ -714,6 +733,8 @@ DATA VIEW ProspectosDVW
             WHERE  xpc_codigo = :vpp_califica
             into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
             
+             
+            
             if (session.status == StatusCode.SS_NOREC) {
                         session.displayToMessageBox("No existe la calificacion seleccionado en el maestro");
                         rejectOperation();
@@ -725,6 +746,14 @@ DATA VIEW ProspectosDVW
 	         else if (xpc_califica == "P") vpp_estado = "N"; 	                                               
 	    }               
                                           
+       
+         /**/  if (vpp_califica == "23" || vpp_califica == "24" || vpp_califica == "25"|| vpp_califica == "26"|| vpp_califica == "27"|| vpp_califica == "28"|| vpp_califica == "29"|| vpp_califica == "30"
+           || vpp_califica == "31"|| vpp_califica == "32"|| vpp_califica == "33")
+                       // if(Modulo.GradoInteresFRM#view1.xpc_clase == "S")
+                            {
+                                session.displayToMessageBox("No es una calificacion permitida.");
+                                rejectOperation();
+                            }  
         }
         
         WHEN VALUE CHANGES
@@ -734,7 +763,11 @@ DATA VIEW ProspectosDVW
             FROM   xpc_proscalif
             WHERE  xpc_codigo = :vpp_califica
             into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
+            
+        
         }
+        
+       
     }
 
     FIELD vco_nombre
@@ -756,7 +789,6 @@ DATA VIEW ProspectosDVW
     {
     
     }
-
 }
 /*----------------------------------------------------------------------*
 * BEGIN MODIFICATION HISTORY

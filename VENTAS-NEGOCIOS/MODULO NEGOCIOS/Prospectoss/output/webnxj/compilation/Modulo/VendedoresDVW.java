@@ -107,11 +107,53 @@ public class VendedoresDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
     NullableString empresanombre = NullableFactory.createNullableString("empresanombre");
+    /*multi_valued*/ NullableStringVariable vve_vendedora = NullableFactory.createNullableStringVariable(this, "vve_vendedora", true, false);
+    /*multi_valued*/ NullableStringVariable vvh_roll = NullableFactory.createNullableStringVariable(this, "vvh_roll", true, false);
+    /*multi_valued*/ NullableStringVariable vvh_proyecto = NullableFactory.createNullableStringVariable(this, "vvh_proyecto", true, false);
+    /*multi_valued*/ NullableStringVariable vvh_empresa = NullableFactory.createNullableStringVariable(this, "vvh_empresa", true, false);
+    /*multi_valued*/ NullableDateVariable vve_ffinal = NullableFactory.createNullableDateVariable(this, "vve_ffinal", true, false);
+    /*multi_valued*/ NullableDateVariable vvh_fret_obra = NullableFactory.createNullableDateVariable(this, "vvh_fret_obra", true, false);
 
     public void initDataView()
 	throws Exception
     {
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	vvh_empresa.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA, null)
+		    };
+	    } // evaluate
+	});
+	vvh_proyecto.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((Modulo.ProspectosFRM)us$findForm(Modulo.ProspectosFRM.class)).view1.vpp_proyecto, null)
+		    };
+	    } // evaluate
+	});
+	vvh_roll.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, new com.unify.nxj.mgr.datatypes.Register().load("VT"), null)
+		    };
+	    } // evaluate
+	});
 
 	    {
 	    getSession().us$setStatus(StatusCode.SS_NORM);
@@ -166,6 +208,15 @@ public class VendedoresDVW
 	cajaarribaVendedores.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
 	cajaarribaVendedores.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
     } // initDataView
+
+    public void onFind()
+	throws Exception
+    {
+	if (!vvh_fret_obra.isNull())
+	    {
+	    rejectRecord();
+	    }
+    } // onFind
     private VendedoresDVW VendedoresDVW = this;
     public /*multi_valued*/ NullableStringField NombVend = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "NombVend", true, true, 100);
     public NXJLabelControl label111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label111", false);
@@ -238,6 +289,7 @@ public class VendedoresDVW
 	    us$setFieldLength(3);
 	    us$setCandidateTargetColumnName("vvh_vendedora");
 	    setValueRetrievedDuringFetch(true);
+	    setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    setFindable(true);
 	    setUpdateable(true);
 	    us$executesDataAcceptValueChanges = true;
@@ -327,6 +379,10 @@ public class VendedoresDVW
 	label111.setFontFamily("Verdana");
 	label111.setFontSize("14");
 	label111.us$setFontWeight("bold");
+	us$addTargetMapping("vvh_empresa", "vvh_empresa");
+	us$addTargetMapping("vvh_proyecto", "vvh_proyecto");
+	us$addTargetMapping("vvh_fret_obra", "vvh_fret_obra");
+	us$addTargetMapping("vvh_roll", "vvh_roll");
 	us$addProxyObject(Modulo.VendedoresDVW.class, "empresanombre", false);
     } // <init>
 

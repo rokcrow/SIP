@@ -9,10 +9,11 @@
         binary_variables=""
         class="form"
         displayheight="624"
-        displaywidth="1160"
+        displaywidth="1055"
         field_order=""
         form_height="624"
-        form_width="1161"
+        form_width="1055"
+        localized="true"
         name="NXJForm"
         object_type="data_view"
         view="form">
@@ -65,11 +66,11 @@
                         displaytop="165"
                         displaywidth="823"
                         field_weight="99"
-                        horizontal_scroll_width="82%"
+                        horizontal_scroll_width="100%"
                         id=".top:RepeatingArea1."
                         key=".top:RepeatingArea1."
                         kind="repeating_area"
-                        list_columns=".top:xpc_codigo.0:49;.top:xpc_clase.49:87;.top:xpc_nombre.136:209;.top:xpc_califica.345:184;.top:xpc_dias_pac.529:85;.top:xpc_dias_pvt.614:190"
+                        list_columns=".top:xpc_codigo.0:55;.top:xpc_clase.55:129;.top:xpc_nombre.184:260;.top:xpc_califica.444:154;.top:xpc_dias_pac.598:103;.top:xpc_dias_pvt.701:103"
                         occurrences="12"
                         repeat_style="Grid"
                         row_class="ROW"
@@ -80,7 +81,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 0px; width:49px; height:22px">
+                            style="position: absolute; top: 0px; left: 0px; width:55px; height:22px">
 
                             <input
                                 accell_type="String"
@@ -91,7 +92,7 @@
                                 displayheight="22"
                                 displayleft="162"
                                 displaytop="0"
-                                displaywidth="49"
+                                displaywidth="55"
                                 field_length="2"
                                 field_type="text"
                                 field_weight="99"
@@ -101,7 +102,7 @@
                                 multi_valued="true"
                                 name=".top:xpc_codigo."
                                 retrieve_value="true"
-                                size="8"
+                                size="9"
                                 target_field="xpc_codigo"
                                 title="xpc_codigo"
                                 type="text"
@@ -113,7 +114,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 49px; width:87px; height:21px">
+                            style="position: absolute; top: 0px; left: 55px; width:129px; height:21px">
 
                             <select
                                 accell_type="String"
@@ -124,7 +125,7 @@
                                 displayheight="21"
                                 displayleft="137"
                                 displaytop="0"
-                                displaywidth="87"
+                                displaywidth="129"
                                 field_length="2"
                                 field_type="SELECT"
                                 field_weight="199"
@@ -142,7 +143,7 @@
                                 uid="parametros_form1_1369156385845_213d57eca34f40d2c96700d0aab5cea0e79da9f6_1369156672374"
                                 updateable="true"
                                 view="select"
-                                style="width:87px; height: 21px">
+                                style="width:129px; height: 21px">
                             </select>
 
                         </div>
@@ -150,7 +151,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 136px; width:209px; height:22px">
+                            style="position: absolute; top: 0px; left: 184px; width:260px; height:22px">
 
                             <input
                                 accell_type="String"
@@ -161,7 +162,7 @@
                                 displayheight="22"
                                 displayleft="450"
                                 displaytop="0"
-                                displaywidth="209"
+                                displaywidth="260"
                                 field_length="100"
                                 field_type="text"
                                 field_weight="299"
@@ -171,7 +172,7 @@
                                 multi_valued="true"
                                 name=".top:xpc_nombre."
                                 retrieve_value="true"
-                                size="34"
+                                size="43"
                                 target_field="xpc_nombre"
                                 title="xpc_nombre"
                                 type="text"
@@ -183,7 +184,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 345px; width:184px; height:21px">
+                            style="position: absolute; top: 0px; left: 444px; width:154px; height:21px">
 
                             <select
                                 accell_type="String"
@@ -194,7 +195,7 @@
                                 displayheight="21"
                                 displayleft="411"
                                 displaytop="0"
-                                displaywidth="184"
+                                displaywidth="154"
                                 field_length="2"
                                 field_type="SELECT"
                                 field_weight="399"
@@ -212,7 +213,7 @@
                                 uid="parametros_form1_1369156385845_213d57eca34f40d2c96700d0aab5cea0e79da9f6_1369156677036"
                                 updateable="true"
                                 view="select"
-                                style="width:184px; height: 21px">
+                                style="width:154px; height: 21px">
                             </select>
 
                         </div>
@@ -220,7 +221,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 529px; width:85px; height:22px">
+                            style="position: absolute; top: 0px; left: 598px; width:103px; height:22px">
 
                             <input
                                 accell_type="Numeric"
@@ -231,17 +232,17 @@
                                 displayheight="22"
                                 displayleft="247"
                                 displaytop="0"
-                                displaywidth="85"
+                                displaywidth="103"
                                 field_length="6"
                                 field_type="text"
                                 field_weight="499"
                                 findable="true"
-                                headertitle="Dias Alto Costo"
+                                headertitle="DiasAltoCosto"
                                 key=".top:xpc_dias_pac."
                                 multi_valued="true"
                                 name=".top:xpc_dias_pac."
                                 retrieve_value="true"
-                                size="14"
+                                size="17"
                                 target_field="xpc_dias_pac"
                                 title="xpc_dias_pac"
                                 type="text"
@@ -253,7 +254,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 614px; width:190px; height:22px">
+                            style="position: absolute; top: 0px; left: 701px; width:103px; height:22px">
 
                             <input
                                 accell_type="Numeric"
@@ -264,17 +265,17 @@
                                 displayheight="22"
                                 displayleft="349"
                                 displaytop="0"
-                                displaywidth="190"
+                                displaywidth="103"
                                 field_length="6"
                                 field_type="text"
                                 field_weight="599"
                                 findable="true"
-                                headertitle="Dias VTradicional"
+                                headertitle="DiasVTradicional"
                                 key=".top:xpc_dias_pvt."
                                 multi_valued="true"
                                 name=".top:xpc_dias_pvt."
                                 retrieve_value="true"
-                                size="31"
+                                size="17"
                                 target_field="xpc_dias_pvt"
                                 title="xpc_dias_pvt"
                                 type="text"
@@ -357,8 +358,8 @@
                         displaytop="2"
                         displaywidth="996"
                         field_weight="199"
-                        id="cajaarribaGInteres."
-                        key="cajaarribaGInteres."
+                        id=".top:cajaarribaGInteres."
+                        key=".top:cajaarribaGInteres."
                         original_name="box1"
                         target_field=""
                         uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928873884"
@@ -384,8 +385,8 @@
                                 field_weight="99"
                                 findable="false"
                                 immediate="false"
-                                key="cajaarribaGInteres:actualempresa."
-                                name="cajaarribaGInteres:actualempresa."
+                                key=".top:cajaarribaGInteres:actualempresa."
+                                name=".top:cajaarribaGInteres:actualempresa."
                                 original_name="textfield1"
                                 size="32"
                                 stop_for_input="false"
@@ -411,8 +412,8 @@
                                 field_weight="199"
                                 findable="false"
                                 immediate="false"
-                                key="cajaarribaGInteres:actualusuario."
-                                name="cajaarribaGInteres:actualusuario."
+                                key=".top:cajaarribaGInteres:actualusuario."
+                                name=".top:cajaarribaGInteres:actualusuario."
                                 original_name="textfield1"
                                 size="18"
                                 stop_for_input="false"
@@ -426,7 +427,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:200px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -434,13 +435,13 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="200"
+                                displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
-                                id="cajaarribaGInteres:label1."
-                                key="cajaarribaGInteres:label1."
+                                id=".top:cajaarribaGInteres:label1."
+                                key=".top:cajaarribaGInteres:label1."
                                 kind="instance"
                                 labelalign="left"
-                                labeltitle="GRADO DE INTERES"
+                                labeltitle="GRADODEINTERES1"
                                 original_name="label1"
                                 uid="form1_1368027451429_8629d4ae9fc6123c2d53fffd3417127658a7059f_1368038107157"
                                 uid_to_name=""
@@ -464,15 +465,15 @@
                                 displayleft="778"
                                 displaytop="65"
                                 displaywidth="55"
-                                id="cajaarribaGInteres:label211."
-                                key="cajaarribaGInteres:label211."
+                                id=".top:cajaarribaGInteres:label211."
+                                key=".top:cajaarribaGInteres:label211."
                                 labelalign="left"
-                                labeltitle="top: 1024"
+                                labeltitle="top1024"
                                 original_name="label2"
                                 target_field=""
                                 uid="desing_form1_1369342922091_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369928874041"
                                 view="label">
-                                <nobr>top: 1024</nobr>
+                                <nobr>top1024</nobr>
                             </label>
 
                         </div>
@@ -499,7 +500,7 @@
                         id=".top:label11."
                         key=".top:label11."
                         labelalign="left"
-                        labeltitle="Grado de Interes"
+                        labeltitle="GradodeInteres2"
                         original_name="label1"
                         target_field=""
                         uid="desing_form1_1369342922091_cc686538039687f3fe174c6a9b0b99bb9936753e_1369345220656"
@@ -508,7 +509,7 @@
                             font-family: Verdana;
                             font-size: 14px;
                             color: Black">
-                        <nobr>Grado de Interes</nobr>
+                        <nobr>GradodeInteres2</nobr>
                     </label>
 
                 </div>

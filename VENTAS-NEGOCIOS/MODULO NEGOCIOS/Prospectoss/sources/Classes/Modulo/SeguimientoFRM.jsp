@@ -16,15 +16,18 @@
         delete_allowed="false"
         displayheight="1025"
         displaywidth="1209"
-        field_order=""
+        field_order="CajaSegui.?CajaSegui:cajaarribaSProspectos.?CajaSegui:cajaarribaSProspectos:actualempresa.?CajaSegui:cajaarribaSProspectos:actualusuario.?CajaSegui:vpp_numero.?CajaSegui:vpp_estadopro.?CajaSegui:vpp_proyecto.?CajaSegui:vpy_nombre.?CajaSegui:vpp_fecha.?CajaSegui:vpp_nombre.?CajaSegui:vpp_direccion.?CajaSegui:vpp_fechaestado.?CajaSegui:vpp_correo.?CajaSegui:vpp_telofi.?CajaSegui:vpp_nacionalidad.?CajaSegui:vpp_cuanta_correo2.?CajaSegui:vpp_telres.?CajaSegui:vpp_ciudad.?CajaSegui:PUBLIC_vps_prosigue.?CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1.?CajaSegui:PUBLIC_vps_prosigue:vps_consecu.?CajaSegui:PUBLIC_vps_prosigue:vps_fecha.?CajaSegui:PUBLIC_vps_prosigue:vps_hora.?CajaSegui:PUBLIC_vps_prosigue:vps_usuario.?CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.?CajaSegui:PUBLIC_vps_prosigue:vps_califica.?CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.?CajaSegui:PUBLIC_vps_prosigue:vps_estado.?CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.?CajaSegui:PUBLIC_vps_prosigue:vps_comentario1.?CajaSegui:PUBLIC_vps_prosigue:textfield1.?CajaSegui:vpp_vendedor.?CajaSegui:vve_nombre.?CajaSegui:box11."
+        find_count="10"
         footer="none"
         form_height="1025"
         form_width="1209"
         foundation_type="Classes/Foundation/Form"
         localized="true"
         name="NXJForm"
+        records_in_memory="20"
         target_table="PUBLIC.vpp_prospectos"
         uid_prefix="form1_1371588526491"
+        update_allowed="false"
         view="form"
         style="background-color: #999999">
 
@@ -105,18 +108,19 @@
                                 id="CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1."
                                 key="CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1."
                                 kind="repeating_area"
-                                list_columns="CajaSegui:PUBLIC_vps_prosigue:vps_consecu.0:74;CajaSegui:PUBLIC_vps_prosigue:vps_fecha.74:67;CajaSegui:PUBLIC_vps_prosigue:vps_hora.141:61;CajaSegui:PUBLIC_vps_prosigue:vps_usuario.202:54;CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.256:93;CajaSegui:PUBLIC_vps_prosigue:vps_califica.349:74;CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.423:237;CajaSegui:PUBLIC_vps_prosigue:vps_estado.660:94;CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.754:93"
+                                list_columns="CajaSegui:PUBLIC_vps_prosigue:vps_consecu.0:78;CajaSegui:PUBLIC_vps_prosigue:vps_fecha.78:67;CajaSegui:PUBLIC_vps_prosigue:vps_hora.145:53;CajaSegui:PUBLIC_vps_prosigue:vps_usuario.198:54;CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.252:103;CajaSegui:PUBLIC_vps_prosigue:vps_califica.355:85;CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.440:221;CajaSegui:PUBLIC_vps_prosigue:vps_estado.661:76;CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.737:110"
                                 occurrences="9"
                                 repeat_style="Grid"
                                 row_class="ROW"
                                 selected_row_class="selected_row"
                                 uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317475602"
-                                view="repeating_area">
+                                view="repeating_area"
+                                style="font-size: 10px">
 
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 0px; width:74px; height:22px">
+                                    style="position: absolute; top: 0px; left: 0px; width:78px; height:22px">
 
                                     <input
                                         accell_type="Numeric"
@@ -127,7 +131,7 @@
                                         displayheight="22"
                                         displayleft="0"
                                         displaytop="0"
-                                        displaywidth="74"
+                                        displaywidth="78"
                                         field_length="6"
                                         field_type="text"
                                         field_weight="99"
@@ -137,7 +141,7 @@
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_consecu."
                                         retrieve_value="true"
-                                        size="12"
+                                        size="13"
                                         stop_for_input="false"
                                         target_field="vps_consecu"
                                         title="vps_consecu"
@@ -150,7 +154,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 74px; width:67px; height:22px">
+                                    style="position: absolute; top: 0px; left: 78px; width:67px; height:22px">
 
                                     <input
                                         accell_type="Date"
@@ -184,7 +188,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 141px; width:61px; height:22px">
+                                    style="position: absolute; top: 0px; left: 145px; width:53px; height:22px">
 
                                     <input
                                         accell_type="Time"
@@ -195,7 +199,7 @@
                                         displayheight="22"
                                         displayleft="174"
                                         displaytop="0"
-                                        displaywidth="61"
+                                        displaywidth="53"
                                         field_length="8"
                                         field_type="text"
                                         field_weight="299"
@@ -205,7 +209,7 @@
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_hora."
                                         retrieve_value="true"
-                                        size="10"
+                                        size="8"
                                         stop_for_input="false"
                                         target_field="vps_hora"
                                         title="vps_hora"
@@ -218,7 +222,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 202px; width:54px; height:22px">
+                                    style="position: absolute; top: 0px; left: 198px; width:54px; height:22px">
 
                                     <input
                                         accell_type="String"
@@ -252,7 +256,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 256px; width:93px; height:21px">
+                                    style="position: absolute; top: 0px; left: 252px; width:103px; height:21px">
 
                                     <select
                                         accell_type="String"
@@ -263,7 +267,7 @@
                                         displayheight="21"
                                         displayleft="424"
                                         displaytop="0"
-                                        displaywidth="93"
+                                        displaywidth="103"
                                         field_length="2"
                                         field_type="SELECT"
                                         field_weight="499"
@@ -281,7 +285,7 @@
                                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317808977"
                                         updateable="true"
                                         view="select"
-                                        style="width:93px; height: 21px">
+                                        style="width:103px; height: 21px">
                                     </select>
 
                                 </div>
@@ -289,10 +293,11 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 349px; width:74px; height:22px">
+                                    style="position: absolute; top: 0px; left: 355px; width:85px; height:22px">
 
                                     <input
                                         accell_type="String"
+                                        auto_accept="true"
                                         binary_variables=""
                                         class="textfield"
                                         db_length="2"
@@ -300,30 +305,32 @@
                                         displayheight="22"
                                         displayleft="445"
                                         displaytop="0"
-                                        displaywidth="74"
+                                        displaywidth="85"
                                         field_length="2"
                                         field_type="text"
                                         field_weight="599"
                                         findable="true"
                                         headertitle="Seguimiento"
+                                        immediate="true"
                                         key="CajaSegui:PUBLIC_vps_prosigue:vps_califica."
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_califica."
                                         retrieve_value="true"
-                                        size="12"
+                                        return_values_into="vps_califica"
+                                        size="14"
                                         target_field="vps_califica"
                                         title="vps_califica"
                                         type="text"
                                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317475652"
                                         updateable="true"
                                         view="text"
-                                        zoom_form="parametros/gradointe">
+                                        zoom_form="Modulo/GradoInteresFRM">
                                 </div>
 
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 423px; width:237px; height:22px">
+                                    style="position: absolute; top: 0px; left: 440px; width:221px; height:22px">
 
                                     <input
                                         binary_variables=""
@@ -331,7 +338,7 @@
                                         displayheight="22"
                                         displayleft="658"
                                         displaytop="0"
-                                        displaywidth="237"
+                                        displaywidth="221"
                                         field_type="text"
                                         field_weight="699"
                                         findable="false"
@@ -340,7 +347,7 @@
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:xpc_nombre."
                                         original_name="textfield1"
-                                        size="39"
+                                        size="36"
                                         stop_for_input="false"
                                         target_field=""
                                         type="text"
@@ -351,7 +358,7 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 660px; width:94px; height:21px">
+                                    style="position: absolute; top: 0px; left: 661px; width:76px; height:21px">
 
                                     <select
                                         accell_type="String"
@@ -362,7 +369,7 @@
                                         displayheight="21"
                                         displayleft="658"
                                         displaytop="0"
-                                        displaywidth="94"
+                                        displaywidth="76"
                                         field_length="2"
                                         field_type="SELECT"
                                         field_weight="799"
@@ -371,7 +378,7 @@
                                         key="CajaSegui:PUBLIC_vps_prosigue:vps_estado."
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_estado."
-                                        options="Si esta interesado=S&#59;Medianamente Interesado=M&#59;No esta interesado=N"
+                                        options="Siestainteresado=S&#59;MedianamenteInteresado=M&#59;Noestainteresado=N"
                                         original_name="vps_estado"
                                         retrieve_value="true"
                                         size="1"
@@ -381,7 +388,7 @@
                                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369318201710"
                                         updateable="true"
                                         view="select"
-                                        style="width:94px; height: 21px">
+                                        style="width:76px; height: 21px">
                                     </select>
 
                                 </div>
@@ -389,10 +396,11 @@
                                 <div
                                     binary_variables=""
                                     view="div"
-                                    style="position: absolute; top: 0px; left: 754px; width:93px; height:22px">
+                                    style="position: absolute; top: 0px; left: 737px; width:110px; height:22px">
 
                                     <input
                                         accell_type="Date"
+                                        auto_accept="false"
                                         binary_variables=""
                                         class="textfield"
                                         db_length="10"
@@ -400,17 +408,18 @@
                                         displayheight="22"
                                         displayleft="621"
                                         displaytop="0"
-                                        displaywidth="93"
+                                        displaywidth="110"
                                         field_length="10"
                                         field_type="text"
                                         field_weight="899"
                                         findable="true"
                                         headertitle="Fecha Contacto"
+                                        immediate="true"
                                         key="CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto."
                                         multi_valued="true"
                                         name="CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto."
                                         retrieve_value="true"
-                                        size="15"
+                                        size="18"
                                         stop_for_input="false"
                                         target_field="vps_f_pcontacto"
                                         title="vps_f_pcontacto"
@@ -620,6 +629,7 @@
                                 target_field=""
                                 type="text"
                                 uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+                                updateable="false"
                                 view="text">
                         </div>
 
@@ -647,6 +657,7 @@
                                 target_field=""
                                 type="text"
                                 uid="desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+                                updateable="false"
                                 view="text">
                         </div>
 
@@ -1302,22 +1313,24 @@
                         accell_type="String"
                         binary_variables=""
                         class="textfield"
+                        db_length="40"
+                        db_type="String"
                         displayheight="22"
                         displayleft="110"
                         displaytop="321"
                         displaywidth="250"
-                        explicit_search_mode="default"
-                        field_length="100"
+                        field_length="40"
                         field_type="text"
                         field_weight="1299"
-                        findable="false"
+                        findable="true"
                         immediate="true"
                         key="CajaSegui:vpp_cuanta_correo2."
                         multi_valued="true"
                         name="CajaSegui:vpp_cuanta_correo2."
                         original_name="textfield1"
-                        retrieve_value="false"
+                        retrieve_value="true"
                         size="41"
+                        target_field="vpp_cuanta_correo2"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316069934"
                         updateable="true"
@@ -1329,37 +1342,39 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 209px; left: 452px; width:250px; height:22px">
+                    style="position: absolute; top: 209px; left: 452px; width:250px; height:21px">
 
-                    <input
+                    <select
                         accell_type="String"
                         binary_variables=""
-                        case_conversion="Upper"
                         class="textfield"
                         db_length="30"
                         db_type="String"
-                        displayheight="22"
+                        displayheight="21"
                         displayleft="452"
                         displaytop="209"
                         displaywidth="250"
                         explicit_search_mode="default"
                         field_length="30"
-                        field_type="text"
+                        field_type="SELECT"
                         field_weight="799"
                         findable="true"
                         key="CajaSegui:vpp_direccion."
                         multi_valued="true"
                         name="CajaSegui:vpp_direccion."
-                        original_name="textfield1"
+                        original_name="vpp_direccion"
+                        query="select xzo_nombre from xzo_zonas&#59;"
                         retrieve_value="true"
-                        size="41"
+                        size="1"
                         target_field="vpp_direccion"
-                        type="text"
-                        uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315708203"
+                        uid="form1_1371588526491_5eae505bab5e10e9c5fd8f2e02bd6c75cdc52d25_1375132684167"
                         updateable="true"
-                        view="text"
-                        style="font-size: 12px;
+                        view="select"
+                        style="width:250px; height: 21px;
+                            font-size: 12px;
                             color: Black">
+                    </select>
+
                 </div>
 
                 <div
@@ -1719,10 +1734,11 @@
                         original_name="textfield1"
                         retrieve_value="true"
                         size="7"
+                        stop_for_input="false"
                         target_field="vpp_vendedor"
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316180037"
-                        updateable="true"
+                        updateable="false"
                         view="text"
                         style="font-size: 12px;
                             color: Black">
@@ -1778,9 +1794,11 @@
                         name="CajaSegui:vve_nombre."
                         original_name="textfield1"
                         size="41"
+                        stop_for_input="false"
                         target_field=""
                         type="text"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316251827"
+                        updateable="false"
                         view="text"
                         style="font-size: 12px;
                             color: Black">

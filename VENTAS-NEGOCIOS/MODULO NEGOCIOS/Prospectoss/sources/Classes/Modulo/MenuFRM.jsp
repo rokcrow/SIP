@@ -3,19 +3,20 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" style="background-color: #999999" >
 
     <form
+        aud_on_entry="true"
         binary_variables=""
-        bloom_filter="00000000000400040000000000000000"
+        bloom_filter="00080000000000000800000000000040"
         class="form"
-        commands=""
+        commands="BackMenu"
         connection="Connection1"
-        displayheight="470"
+        displayheight="528"
         displaywidth="1202"
         field_order=""
         footer="none"
-        form_height="470"
+        form_height="528"
         form_width="1202"
         foundation_type="Classes/Foundation/Form"
         header="none"
@@ -29,14 +30,14 @@
         <div
             binary_variables=""
             view="div"
-            style="position: absolute; top: 30px; left: 190px; width:1004px; height:434px">
+            style="position: absolute; top: 30px; left: 190px; width:1004px; height:493px">
 
             <fieldset
                 binary_variables=""
                 border-width="0"
                 class="box"
                 commands="cmdSig"
-                displayheight="434"
+                displayheight="493"
                 displayleft="190"
                 displaytop="30"
                 displaywidth="1004"
@@ -64,13 +65,12 @@
                         displaytop="169"
                         displaywidth="348"
                         field_type="SELECT"
-                        field_weight="199"
+                        field_weight="299"
                         findable="false"
                         immediate="true"
                         key="cajagrandeMenu:EMPRESA."
                         name="cajagrandeMenu:EMPRESA."
                         original_name="EMPRESA"
-                        query="SELECT xem_nombre, xem_codigo FROM xem_empresas ORDER BY xem_nombre ASC&#59;"
                         required="false"
                         size="1"
                         stop_for_input="true"
@@ -80,6 +80,32 @@
                         style="width:348px; height: 21px">
                     </select>
 
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 134px; left: 70px; width:41px; height:22px">
+
+                    <input
+                        binary_variables=""
+                        class="textfield"
+                        displayheight="22"
+                        displayleft="70"
+                        displaytop="134"
+                        displaywidth="41"
+                        field_type="text"
+                        field_weight="199"
+                        findable="false"
+                        key="cajagrandeMenu:MTraspasa."
+                        name="cajagrandeMenu:MTraspasa."
+                        original_name="textfield1"
+                        size="6"
+                        target_field=""
+                        type="text"
+                        uid="modulo_form1_1369423869434_1e3d100accdeaaaafacf80bf1e96847e91d02ffa_1374678330196"
+                        view="text"
+                        style="visibility:hidden">
                 </div>
 
                 <div
@@ -95,7 +121,7 @@
                         displaytop="281"
                         displaywidth="348"
                         field_type="text"
-                        field_weight="299"
+                        field_weight="399"
                         findable="false"
                         immediate="false"
                         key="cajagrandeMenu:NombreForma1."
@@ -112,7 +138,35 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 384px; left: 4px; width:996px; height:50px">
+                    style="position: absolute; top: 325px; left: 17px; width:168px; height:48px">
+
+                    <div
+                        base_class="Classes/ItemsForm/Boton.fx"
+                        binary_variables=""
+                        command="BackMenu"
+                        displayleft="17"
+                        displaytop="325"
+                        displaywidth="168"
+                        field_type="button"
+                        foundation_type="Classes/Foundation/Button"
+                        id="cajagrandeMenu:button1."
+                        instancewidth="168"
+                        key="cajagrandeMenu:button1."
+                        kind="instance"
+                        original_name="button1"
+                        uid="modulo_form1_1369423869434_5eae505bab5e10e9c5fd8f2e02bd6c75cdc52d25_1375131894739"
+                        uid_to_name=""
+                        value="backlogin"
+                        view="button">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 442px; left: 4px; width:996px; height:50px">
 
                     <fieldset
                         binary_variables=""
@@ -121,9 +175,9 @@
                         commands=""
                         displayheight="50"
                         displayleft="4"
-                        displaytop="384"
+                        displaytop="442"
                         displaywidth="996"
-                        field_weight="399"
+                        field_weight="499"
                         id="cajagrandeMenu:cajaabajoMenu."
                         key="cajagrandeMenu:cajaabajoMenu."
                         original_name="box1"

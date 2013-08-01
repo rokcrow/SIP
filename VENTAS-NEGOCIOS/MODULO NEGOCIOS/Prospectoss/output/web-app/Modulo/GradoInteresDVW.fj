@@ -4,11 +4,16 @@ package Modulo;
 
 DATA VIEW GradoInteresDVW
 {
+    multi_valued NullableStringVariable xpc_clase2;
+    NullableString empresanombre, GTraspasa1, GTraspasa2;
 
-   NullableString empresanombre;
+
+
 
     INIT DATA VIEW
     {
+       
+    
         EXEC SQL
         SELECT xem_nombre
         FROM xem_empresas
@@ -18,6 +23,24 @@ DATA VIEW GradoInteresDVW
       
         cajaarribaGInteres.actualempresa  = empresanombre ;
         cajaarribaGInteres.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    }
+
+
+
+    ON FIND
+    {
+        if(Modulo.MenuFRM#cajagrandeMenu.MTraspasa == "1" )
+        {        
+                if (xpc_clase == "S")
+                rejectRecord();
+         } 
+         else if(Modulo.MenuFRM#cajagrandeMenu.MTraspasa == "2" )
+         {
+                if (xpc_clase == "P")
+                rejectRecord();
+
+         }    
+
     }
 
     BOX cajaarribaGInteres

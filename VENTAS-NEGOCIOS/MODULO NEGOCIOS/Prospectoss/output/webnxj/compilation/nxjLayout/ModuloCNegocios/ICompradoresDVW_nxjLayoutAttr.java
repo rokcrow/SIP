@@ -24,17 +24,17 @@ dodiv_label11__10(div_label11__10);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("displaywidth","1005");
-	widget.addAttribute("id",".top.");
-	widget.addAttribute("name",".top.");
 	widget.addStyle("border-width","1");
 	widget.addAttribute("displayleft","25");
 	widget.addStyle("border-style","solid");
-	widget.addStyle("background-color","#cccccc");
+	widget.addAttribute("id",".top.");
 	widget.addAttribute("displaytop","25");
 	widget.addAttribute("displayheight","375");
 	widget.addAttribute("fieldheight","375");
 	widget.addAttribute("fieldwidth","1005");
+	widget.addStyle("background-color","#cccccc");
 	widget.setClass("data_view");
+	widget.addAttribute("name",".top.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -50,10 +50,10 @@ private void setAttrFor_PUBLIC_tcl_tipclien__20(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("displaywidth","783");
-	widget.addAttribute("id",".top:PUBLIC_tcl_tipclien.");
 	widget.addStyle("border-width","1");
 	widget.addAttribute("displayleft","120");
 	widget.addStyle("border-style","solid");
+	widget.addAttribute("id",".top:PUBLIC_tcl_tipclien.");
 	widget.addAttribute("displaytop","146");
 	widget.addAttribute("displayheight","127");
 	widget.addAttribute("fieldheight","127");
@@ -73,15 +73,15 @@ private void setAttrFor_div_RepeatingArea1__30(Widget widget)
 private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
 	widget.addAttribute("list_columns",".top:PUBLIC_tcl_tipclien:tcl_nit.0:159;.top:PUBLIC_tcl_tipclien:tcl_clase.159:122;.top:PUBLIC_tcl_tipclien:tcl_tipo.281:121;.top:PUBLIC_tcl_tipclien:tcl_nombre.402:328");
-	widget.addAttribute("occurrences","4");
-	widget.addAttribute("selected_row_class","selected_row");
+	widget.addAttribute("altRowClass","alternate_row");
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("row_class","ROW");
+	widget.addAttribute("selected_row_class","selected_row");
 	widget.addAttribute("repeat_style","Grid");
-	widget.addAttribute("altRowClass","alternate_row");
+	widget.addAttribute("occurrences","4");
 	widget.addAttribute("displaywidth","749");
-	widget.addAttribute("id",".top:PUBLIC_tcl_tipclien:RepeatingArea1.");
 	widget.addAttribute("displayleft","10");
+	widget.addAttribute("id",".top:PUBLIC_tcl_tipclien:RepeatingArea1.");
 	widget.addAttribute("displaytop","10");
 	widget.addAttribute("displayheight","109");
 	widget.addAttribute("fieldheight","109");
@@ -100,18 +100,18 @@ private void setAttrFor_tcl_nit__60(Widget widget)
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
+	widget.addAttribute("title","tcl_nit");
 	widget.addAttribute("displaywidth","159");
-	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_nit.");
 	widget.addAttribute("displayleft","0");
-	widget.addAttribute("size","26");
 	widget.addAttribute("headertitle","tcl_nit");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","tcl_nit");
 	widget.addAttribute("fieldwidth","159");
+	widget.addAttribute("size","26");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_nit.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -125,17 +125,17 @@ private void setAttrFor_tcl_clase__60(Widget widget)
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","SELECT");
+	widget.addAttribute("title","tcl_clase");
 	widget.addAttribute("displaywidth","122");
-	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_clase.");
 	widget.addAttribute("displayleft","183");
-	widget.addAttribute("size","1");
 	widget.addAttribute("headertitle","tcl_clase");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("title","tcl_clase");
 	widget.addAttribute("fieldwidth","122");
+	widget.addAttribute("size","1");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_clase.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -149,17 +149,17 @@ private void setAttrFor_tcl_tipo__60(Widget widget)
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","SELECT");
+	widget.addAttribute("title","tcl_tipo");
 	widget.addAttribute("displaywidth","121");
-	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_tipo.");
 	widget.addAttribute("displayleft","365");
-	widget.addAttribute("size","1");
 	widget.addAttribute("headertitle","tcl_tipo");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("title","tcl_tipo");
 	widget.addAttribute("fieldwidth","121");
+	widget.addAttribute("size","1");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_tipo.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -173,18 +173,18 @@ private void setAttrFor_tcl_nombre__60(Widget widget)
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
-	widget.addAttribute("type","text");
+	widget.addAttribute("title","tcl_nombre");
 	widget.addAttribute("displaywidth","328");
-	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_nombre.");
 	widget.addAttribute("displayleft","231");
-	widget.addAttribute("size","54");
 	widget.addAttribute("headertitle","tcl_nombre");
 	widget.addAttribute("displaytop","0");
 	widget.addAttribute("displayheight","22");
+	widget.addAttribute("type","text");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","tcl_nombre");
 	widget.addAttribute("fieldwidth","328");
+	widget.addAttribute("size","54");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:PUBLIC_tcl_tipclien:tcl_nombre.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -200,15 +200,15 @@ private void setAttrFor_box11__20(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id",".top:box11.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id",".top:box11.");
 	widget.addAttribute("displaytop","320");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
@@ -224,9 +224,9 @@ private void setAttrFor_div_image1__30(Widget widget)
 
 private void setAttrFor_image1__40(Widget widget)
 {
+	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displayheight","46");
 	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id",".top:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -244,15 +244,15 @@ private void setAttrFor_box111__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id",".top:box111.");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id",".top:box111.");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
+	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
 	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
@@ -268,11 +268,11 @@ private void setAttrFor_div_label1__30(Widget widget)
 
 private void setAttrFor_label1__40(Widget widget)
 {
+	widget.addAttribute("id",".top:box111:label1.");
 	widget.addAttribute("labeltitle","IDENTIFICACIÓN DE COMPRADORES");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("displaytop","14");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id",".top:box111:label1.");
 	widget.addAttribute("displaywidth","522");
 	widget.addAttribute("displayleft","241");
 	widget.addStyle("overflow","hidden");
@@ -290,8 +290,8 @@ private void setAttrFor_label211__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","top: 1024");
 	widget.addAttribute("displaywidth","55");
-	widget.addAttribute("id",".top:box111:label211.");
 	widget.addAttribute("displayleft","778");
+	widget.addAttribute("id",".top:box111:label211.");
 	widget.addAttribute("displaytop","65");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","14");
@@ -314,16 +314,16 @@ private void setAttrFor_textfield1__40(Widget widget)
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("name",".top:box111:textfield1.");
 	widget.addAttribute("displayleft","16");
-	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
+	widget.addAttribute("size","32");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:box111:textfield1.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -340,16 +340,16 @@ private void setAttrFor_textfield11__40(Widget widget)
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
-	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name",".top:box111:textfield11.");
 	widget.addAttribute("displayleft","800");
-	widget.addAttribute("size","18");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("type","text");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
+	widget.addAttribute("size","18");
 	widget.setClass("textfield");
+	widget.addAttribute("name",".top:box111:textfield11.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -363,19 +363,19 @@ private void setAttrFor_div_label11__10(Widget widget)
 
 private void setAttrFor_label11__20(Widget widget)
 {
+	widget.addStyle("font-size","14");
 	widget.addAttribute("labeltitle","Identificación de Compradores");
-	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaywidth","240");
-	widget.addAttribute("id",".top:label11.");
-	widget.addAttribute("displayleft","20");
 	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("displayleft","20");
+	widget.addStyle("color","Black");
+	widget.addStyle("font-weight","bold");
+	widget.addAttribute("id",".top:label11.");
 	widget.addAttribute("displaytop","96");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("fieldwidth","240");
-	widget.addStyle("font-size","14");
 	widget.addStyle("text-align","left");
-	widget.addStyle("color","Black");
 	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }

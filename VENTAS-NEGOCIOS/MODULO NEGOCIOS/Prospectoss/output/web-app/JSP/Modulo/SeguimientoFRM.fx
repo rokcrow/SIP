@@ -7,15 +7,18 @@
     commands = ""
     connection = "Connection1"
     delete_allowed = "false"
-    field_order = ""
+    field_order = "CajaSegui.?CajaSegui:cajaarribaSProspectos.?CajaSegui:cajaarribaSProspectos:actualempresa.?CajaSegui:cajaarribaSProspectos:actualusuario.?CajaSegui:vpp_numero.?CajaSegui:vpp_estadopro.?CajaSegui:vpp_proyecto.?CajaSegui:vpy_nombre.?CajaSegui:vpp_fecha.?CajaSegui:vpp_nombre.?CajaSegui:vpp_direccion.?CajaSegui:vpp_fechaestado.?CajaSegui:vpp_correo.?CajaSegui:vpp_telofi.?CajaSegui:vpp_nacionalidad.?CajaSegui:vpp_cuanta_correo2.?CajaSegui:vpp_telres.?CajaSegui:vpp_ciudad.?CajaSegui:PUBLIC_vps_prosigue.?CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1.?CajaSegui:PUBLIC_vps_prosigue:vps_consecu.?CajaSegui:PUBLIC_vps_prosigue:vps_fecha.?CajaSegui:PUBLIC_vps_prosigue:vps_hora.?CajaSegui:PUBLIC_vps_prosigue:vps_usuario.?CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.?CajaSegui:PUBLIC_vps_prosigue:vps_califica.?CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.?CajaSegui:PUBLIC_vps_prosigue:vps_estado.?CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.?CajaSegui:PUBLIC_vps_prosigue:vps_comentario1.?CajaSegui:PUBLIC_vps_prosigue:textfield1.?CajaSegui:vpp_vendedor.?CajaSegui:vve_nombre.?CajaSegui:box11."
+    find_count = "10"
     footer = "none"
     form_height = "1025"
     form_width = "1209"
     foundation_type = "Classes/Foundation/Form"
     localized = "true"
+    records_in_memory = "20"
     style_class = "form"
     target_table = "PUBLIC.vpp_prospectos"
     uid_prefix = "form1_1371588526491"
+    update_allowed = "false"
     view = "form"
     reuse="true">
 
@@ -60,9 +63,10 @@
         binary_variables = ""
         display_name = "RepeatingArea1"
         field_weight = "99"
+        font_size = "10"
         key = "CajaSegui:PUBLIC_vps_prosigue:RepeatingArea1."
         kind = "repeating_area"
-        list_columns = "CajaSegui:PUBLIC_vps_prosigue:vps_consecu.0:74;CajaSegui:PUBLIC_vps_prosigue:vps_fecha.74:67;CajaSegui:PUBLIC_vps_prosigue:vps_hora.141:61;CajaSegui:PUBLIC_vps_prosigue:vps_usuario.202:54;CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.256:93;CajaSegui:PUBLIC_vps_prosigue:vps_califica.349:74;CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.423:237;CajaSegui:PUBLIC_vps_prosigue:vps_estado.660:94;CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.754:93"
+        list_columns = "CajaSegui:PUBLIC_vps_prosigue:vps_consecu.0:78;CajaSegui:PUBLIC_vps_prosigue:vps_fecha.78:67;CajaSegui:PUBLIC_vps_prosigue:vps_hora.145:53;CajaSegui:PUBLIC_vps_prosigue:vps_usuario.198:54;CajaSegui:PUBLIC_vps_prosigue:vps_mediocon.252:103;CajaSegui:PUBLIC_vps_prosigue:vps_califica.355:85;CajaSegui:PUBLIC_vps_prosigue:xpc_nombre.440:221;CajaSegui:PUBLIC_vps_prosigue:vps_estado.661:76;CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto.737:110"
         occurrences = "9"
         row_class = "ROW"
         selected_row_class = "selected_row"
@@ -95,6 +99,7 @@
     </field>
     <field 
         accell_type = "String"
+        auto_accept = "true"
         binary_variables = ""
         db_length = "2"
         db_type = "String"
@@ -103,15 +108,17 @@
         field_type = "text"
         field_weight = "599"
         findable = "true"
+        immediate = "true"
         key = "CajaSegui:PUBLIC_vps_prosigue:vps_califica."
         multi_valued = "true"
         retrieve_value = "true"
+        return_values_into = "vps_califica"
         style_class = "textfield"
         target_field = "vps_califica"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369317475652"
         updateable = "true"
         view = "text"
-        zoom_form = "parametros/gradointe">
+        zoom_form = "Modulo/GradoInteresFRM">
     </field>
     <field 
         accell_type = "String"
@@ -166,7 +173,7 @@
         findable = "true"
         key = "CajaSegui:PUBLIC_vps_prosigue:vps_estado."
         multi_valued = "true"
-        options = "Si esta interesado=S;Medianamente Interesado=M;No esta interesado=N"
+        options = "Siestainteresado=S;MedianamenteInteresado=M;Noestainteresado=N"
         original_name = "vps_estado"
         retrieve_value = "true"
         stop_for_input = "false"
@@ -178,6 +185,7 @@
     </field>
     <field 
         accell_type = "Date"
+        auto_accept = "false"
         binary_variables = ""
         db_length = "10"
         db_type = "Date"
@@ -186,6 +194,7 @@
         field_type = "text"
         field_weight = "899"
         findable = "true"
+        immediate = "true"
         key = "CajaSegui:PUBLIC_vps_prosigue:vps_f_pcontacto."
         multi_valued = "true"
         retrieve_value = "true"
@@ -346,6 +355,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929860573"
+        updateable = "false"
         view = "text">
     </field>
     <field 
@@ -361,6 +371,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "desing_dataview1_1369927531049_9f88a2785a5cdfa515e6420db6f725558bb0dafc_1369929929174"
+        updateable = "false"
         view = "text">
     </field>
     <control 
@@ -644,20 +655,22 @@
     <field 
         accell_type = "String"
         binary_variables = ""
+        db_length = "40"
+        db_type = "String"
         display_name = "vpp_cuanta_correo2"
-        explicit_search_mode = "default"
-        field_length = "100"
+        field_length = "40"
         field_type = "text"
         field_weight = "1299"
-        findable = "false"
+        findable = "true"
         font_size = "12"
         foreground_color = "Black"
         immediate = "true"
         key = "CajaSegui:vpp_cuanta_correo2."
         multi_valued = "true"
         original_name = "textfield1"
-        retrieve_value = "false"
+        retrieve_value = "true"
         style_class = "textfield"
+        target_field = "vpp_cuanta_correo2"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316069934"
         updateable = "true"
         view = "text">
@@ -665,26 +678,26 @@
     <field 
         accell_type = "String"
         binary_variables = ""
-        case_conversion = "Upper"
         db_length = "30"
         db_type = "String"
         display_name = "vpp_direccion"
         explicit_search_mode = "default"
         field_length = "30"
-        field_type = "text"
+        field_type = "SELECT"
         field_weight = "799"
         findable = "true"
         font_size = "12"
         foreground_color = "Black"
         key = "CajaSegui:vpp_direccion."
         multi_valued = "true"
-        original_name = "textfield1"
+        original_name = "vpp_direccion"
+        query = "select xzo_nombre from xzo_zonas;"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vpp_direccion"
-        uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315708203"
+        uid = "form1_1371588526491_5eae505bab5e10e9c5fd8f2e02bd6c75cdc52d25_1375132684167"
         updateable = "true"
-        view = "text">
+        view = "select">
     </field>
     <field 
         accell_type = "String"
@@ -920,10 +933,11 @@
         multi_valued = "true"
         original_name = "textfield1"
         retrieve_value = "true"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = "vpp_vendedor"
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316180037"
-        updateable = "true"
+        updateable = "false"
         view = "text">
     </field>
     <field 
@@ -955,9 +969,11 @@
         foreground_color = "Black"
         key = "CajaSegui:vve_nombre."
         original_name = "textfield1"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
         uid = "prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369316251827"
+        updateable = "false"
         view = "text">
     </field>
 

@@ -106,6 +106,9 @@ import com.unify.pub.NameValuePair;
 public class GradoInteresDVW
     extends com.unify.nxj.mgr.NXJDataView
 {
+    /*multi_valued*/ NullableStringVariable xpc_clase2 = NullableFactory.createNullableStringVariable(this, "xpc_clase2", true, false);
+    NullableString GTraspasa2 = NullableFactory.createNullableString("GTraspasa2");
+    NullableString GTraspasa1 = NullableFactory.createNullableString("GTraspasa1");
     NullableString empresanombre = NullableFactory.createNullableString("empresanombre");
 
     public void initDataView()
@@ -166,6 +169,23 @@ public class GradoInteresDVW
 	cajaarribaGInteres.actualempresa.assign(us$registerPool.allocateRegister().load(empresanombre));
 	cajaarribaGInteres.actualusuario.assign(us$registerPool.allocateRegister().load(((Modulo.LoginFRM)us$findForm(Modulo.LoginFRM.class)).cajagrandeLogin.xpr_usuario));
     } // initDataView
+
+    public void onFind()
+	throws Exception
+    {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	if (us$registerPool.allocateRegister().load(((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.MTraspasa).eqOp("1").getBooleanValueNullOk())
+	    {
+	    if (us$registerPool.allocateRegister().load(xpc_clase).eqOp("S").getBooleanValueNullOk())
+		rejectRecord();
+	    }
+	else
+	    if (us$registerPool.allocateRegister().load(((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.MTraspasa).eqOp("2").getBooleanValueNullOk())
+		{
+		if (us$registerPool.allocateRegister().load(xpc_clase).eqOp("P").getBooleanValueNullOk())
+		    rejectRecord();
+		}
+    } // onFind
     private GradoInteresDVW GradoInteresDVW = this;
     public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
     public /*multi_valued*/ NullableStringField xpc_califica = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_califica", true, true, 2);
@@ -301,6 +321,8 @@ public class GradoInteresDVW
 	xpc_nombre.setFindable(true);
 	xpc_nombre.setUpdateable(true);
 	us$addProxyObject(Modulo.GradoInteresDVW.class, "empresanombre", false);
+	us$addProxyObject(Modulo.GradoInteresDVW.class, "GTraspasa1", false);
+	us$addProxyObject(Modulo.GradoInteresDVW.class, "GTraspasa2", false);
     } // <init>
 
     protected com.unify.nxj.mgr.NXJProxyNullable us$createProxyNullable(java.lang.reflect.Field targetField, boolean multiValued)

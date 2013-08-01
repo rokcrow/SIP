@@ -1,0 +1,146 @@
+package Modulo;
+
+FORM CClaveFRM
+{
+
+                    NullableString xus_password, empresanombre;
+                    NullableDate fechaactual = session.currentDate;
+                    NullableNumeric intentos = 0, APassword;
+
+
+    BEFORE FORM
+    {
+        cajagrandeCClaveFRM.cajaarribaCClave.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+    
+    
+    
+        cajagrandeCClaveFRM.usuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
+        
+        EXEC SQL
+                        SELECT xus_password
+                        FROM xus_usuarios
+                        WHERE xus_usuario = :Modulo.LoginFRM#cajagrandeLogin.xpr_usuario
+                        INTO xus_password;
+    }
+    
+    
+
+    COMMAND cambiarclave
+    {
+        if (cajagrandeCClaveFRM.nuevaclave == cajagrandeCClaveFRM.confirmarclave)
+        {
+             EXEC SQL
+                                        UPDATE xus_usuarios
+                                        SET    xus_password = :cajagrandeCClaveFRM.nuevaclave,  xus_factualiza = :fechaactual
+                                        WHERE  xus_usuario  = :cajagrandeCClaveFRM.usuario;
+                                        
+                                     
+                                             
+                            if (session.status != StatusCode.SS_NORM)
+                                {
+                                    session.displayToMessageBox("No se pudo actualizar la clave.");
+                                    session.rollbackTransaction(); 
+                                    session.exitToURL("salida.html"); 
+                                }
+                                
+                                
+                                session.commitTransaction();
+                                session.displayToMessageBox("Clave cambiada con éxito.");
+                                session.queueNextForm("Modulo.LoginFRM");
+        }
+        else
+        {
+            session.displayToMessageBox("Las claves no coinciden. Verifique por favor."); 
+            session.queueNextField(cajagrandeCClaveFRM.confirmarclave);      
+        }
+                        
+    }
+
+    BOX cajagrandeCClaveFRM
+    {
+    
+        BOX cajaarribaCClave
+        {
+            FIELD actualempresa
+            {
+            }
+            FIELD actualusuario
+            {
+            }
+        }
+        
+        BOX cajaabajoCClave
+        {
+        
+        }
+
+        FIELD usuario
+        {
+        }
+        
+        FIELD claveactual
+        {
+        
+        
+           ON DATA ACCEPT
+            {
+                if(claveactual != xus_password)
+                {
+                               intentos = intentos + 1;
+                               session.displayToMessageBox("Clave actual incorrecta.");
+                                    
+                                if(intentos < 3)
+                                    {  
+                                            session.queueNextField(claveactual);
+                                    }
+                                    else
+                                    {
+                                        session.displayToMessageBox("Excedió el número de intentos permitidos. Intente después.");
+                                        session.exitToURL("salida.html");
+                                    }
+                                    
+                    } 
+                    else 
+                    session.queueNextField(nuevaclave);  
+            }
+
+        }
+        
+        FIELD nuevaclave
+        {
+            
+            ON DATA ACCEPT
+            {
+                    if(nuevaclave == claveactual)
+                    {
+                        session.displayToMessageBox("La nueva clave debe ser distinta a la anterior. Verifique por favor.");
+                        session.queueNextField(nuevaclave);
+                    }
+            }
+
+        }
+        
+        FIELD confirmarclave
+        {
+            
+            ON DATA ACCEPT
+            {
+                if(confirmarclave != nuevaclave)
+                {
+                      session.displayToMessageBox("Las claves no coinciden. Verifique por favor."); 
+                       session.queueNextField(confirmarclave);             
+                }
+            }
+        
+        }
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

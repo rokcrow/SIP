@@ -6,9 +6,16 @@ DATA VIEW VendedoresDVW
 {
 
     NullableString empresanombre;
+    multi_valued NullableStringVariable vvh_empresa, vvh_proyecto, vvh_roll, vve_vendedora;
+    multi_valued NullableDateVariable vvh_fret_obra, vve_ffinal;
 
     INIT DATA VIEW
     {
+        vvh_empresa.clearFindExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
+        vvh_proyecto.clearFindExp = Modulo.ProspectosFRM#view1.vpp_proyecto;
+        vvh_roll.clearFindExp = "VT";
+        
+    
         EXEC SQL
         SELECT xem_nombre
         FROM xem_empresas
@@ -20,6 +27,15 @@ DATA VIEW VendedoresDVW
         cajaarribaVendedores.actualusuario = Modulo.LoginFRM#cajagrandeLogin.xpr_usuario;
     }
 
+
+    ON FIND
+    { 
+         if( ! vvh_fret_obra.isNull())
+            {
+            rejectRecord();
+        
+            }
+    }
 
     BOX cajaarribaVendedores
     {
@@ -49,6 +65,7 @@ DATA VIEW VendedoresDVW
             SELECT vve_nombre FROM vve_vendedora
             WHERE vve_codigo = :vvh_vendedora
             INTO NombVend;
+           
         }
     }
     
