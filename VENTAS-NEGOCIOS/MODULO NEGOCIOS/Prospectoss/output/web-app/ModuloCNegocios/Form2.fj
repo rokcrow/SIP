@@ -2,6 +2,11 @@ package ModuloCNegocios;
 
 FORM Form2
 {NullableNumeric xx= 2;
+    FIELD vev_etapactu
+    {
+    
+    }
+
     FIELD textfield1
     {
     

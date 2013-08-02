@@ -106,6 +106,8 @@ import com.unify.pub.NameValuePair;
 public class RBoletinesFRM
     extends com.unify.nxj.mgr.NXJForm
 {
+    /*multi_valued*/ NullableStringVariable vmu_cli_clase = NullableFactory.createNullableStringVariable(this, "vmu_cli_clase", true, false);
+    /*multi_valued*/ NullableStringVariable vmu_obra = NullableFactory.createNullableStringVariable(this, "vmu_obra", true, false);
     /*multi_valued*/ NullableStringVariable vmu_est_hipote = NullableFactory.createNullableStringVariable(this, "vmu_est_hipote", true, false);
     /*multi_valued*/ NullableStringVariable vmu_empresa = NullableFactory.createNullableStringVariable(this, "vmu_empresa", true, false);
     /*multi_valued*/ NullableAmountVariable vmu_descuentos = NullableFactory.createNullableAmountVariable(this, "vmu_descuentos", true, false);
@@ -114,6 +116,10 @@ public class RBoletinesFRM
     NullableAmount preciotot = NullableFactory.createNullableAmount("preciotot");
     NullableAmount cien = NullableFactory.createNullableAmount("cien");
     NullableAmount cero = NullableFactory.createNullableAmount("cero");
+    NullableString etapa_act = NullableFactory.createNullableString("etapa_act");
+    NullableString est = NullableFactory.createNullableString("est");
+    NullableString etapa_activa = NullableFactory.createNullableString("etapa_activa");
+    NullableString xob_proyecto = NullableFactory.createNullableString("xob_proyecto");
     NullableString formasig = NullableFactory.createNullableString("formasig");
     NullableString numero = NullableFactory.createNullableString("numero");
     NullableNumeric adicionando = NullableFactory.createNullableNumeric("adicionando");
@@ -187,6 +193,7 @@ public class RBoletinesFRM
     {
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 	adicionando.assign(us$registerPool.allocateRegister().load(0));
+	cajagrandeRBoletines.vmu_cli_clase.setStopForInput(true);
     } // onClearToFind
     private RBoletinesFRM RBoletinesFRM = this;
     public class cajagrandeRBoletines
@@ -237,16 +244,37 @@ public class RBoletinesFRM
 	public /*multi_valued*/ NullableStringField vmu_cli_ciudad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_ciudad", true, true, 30);
 	public /*multi_valued*/ NullableStringField vmu_cli_ciunit = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_ciunit", true, true, 20);
 	public /*multi_valued*/ NullableStringField vmu_cli_clase = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_clase", true, true, 2);
-	public class vmu_cli_corres
+	public /*multi_valued*/ NullableStringField vmu_cli_corres = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_corres", true, true, 50);
+	public /*multi_valued*/ NullableStringField vmu_cli_registro = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_registro", true, true, 15);
+	public /*multi_valued*/ NullableStringField vmu_cli_telof = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_telof", true, true, 30);
+	public /*multi_valued*/ NullableStringField vmu_cli_telre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_telre", true, true, 30);
+	public /*multi_valued*/ NullableStringField vmu_corporacion = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_corporacion", true, true, 2);
+	public /*multi_valued*/ NullableStringField vmu_correo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_correo", true, true, 40);
+	public /*multi_valued*/ NullableStringField vmu_correo2 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_correo2", true, true, 40);
+	public /*multi_valued*/ NullableAmountField vmu_descuentos = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vmu_descuentos", true, true, 25);
+	public /*multi_valued*/ NullableStringField vmu_est_hipote = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_est_hipote", true, true, 2);
+	public /*multi_valued*/ NullableStringField vmu_est_unidad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_est_unidad", true, true, 2);
+	public /*multi_valued*/ NullableDateField vmu_f_ent_pacta = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_ent_pacta", true, true, 10);
+	public /*multi_valued*/ NullableDateField vmu_f_escritura = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_escritura", true, true, 10);
+	public /*multi_valued*/ NullableDateField vmu_f_gravacion = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_gravacion", true, true, 10);
+	public /*multi_valued*/ NullableDateField vmu_f_separacion = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_separacion", true, true, 10);
+	public /*multi_valued*/ NullableStringField vmu_forma_pago = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_forma_pago", true, true, 2);
+	public /*multi_valued*/ NullableStringField vmu_manzana = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_manzana", true, true, 3);
+	public /*multi_valued*/ NullableNumericField vmu_ngarage = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "vmu_ngarage", true, true, 11);
+	public class vmu_obra
 	    extends com.unify.nxj.mgr.datatypes.NXJStringField
 	{
+	    NullableNumeric ii = NullableFactory.createNullableNumeric("ii");
 
-	    public java.util.List us$evaluateListboxQuery()
-		throws java.sql.SQLException, com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
+	    public void beforeField()
+		throws Exception
 	    {
-		int us$rowCount = 0;
-		java.util.List us$list = new java.util.ArrayList();
-		String us$proj1;
+	    } // beforeField
+
+	    public void initField()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
@@ -255,7 +283,9 @@ public class RBoletinesFRM
 		    ResultSet us$rs1 = null;
 		    try
 			{
-			us$stmt1 = us$conn1.prepareStatement("select xzo_nombre from xzo_zonas");
+			us$stmt1 = us$conn1.prepareStatement("SELECT xob_proyecto FROM xob_obras WHERE xob_empresa =  ?  AND xob_obra =  ?");
+			vmu_empresa.us$setSqlParameterValue(us$stmt1, 1);
+			vmu_obra.us$setSqlParameterValue(us$stmt1, 2);
 			us$rs1 = us$stmt1.executeQuery();
 			int us$rowsTouched1 = 0;
 			try
@@ -267,16 +297,10 @@ public class RBoletinesFRM
 				    Integer.toString(us$rsmd1.getColumnCount()), "1"
 				    }));
 			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter1 = us$conn1.createDataIterator(us$rs1);
-			    while (us$getter1.next())
+			    if (us$getter1.next())
 				{
 				++us$rowsTouched1;
-				us$proj1 = us$getter1.getString(1);
-
-				    {
-				    if (us$rowCount++ == 300)
-					break;
-				    us$list.add(new com.unify.pub.NameValuePair(us$proj1, us$proj1));
-				    }
+				us$getter1.assignValueToVariable(xob_proyecto, 1);
 				}
 			    }
 			finally
@@ -303,44 +327,154 @@ public class RBoletinesFRM
 			    us$conn1.us$closeStatement(us$stmt1);
 			}
 		    }
-		return us$list;
-	    } // us$evaluateListboxQuery
+		if (getSession().getStatus() == StatusCode.SS_NOREC)
+		    {
+		    getSession().displayToMessageBox("La obra no corresponde.");
+		    vmu_obra.assign(us$registerPool.allocateRegister().load(" "));
+		    rejectOperation();
+		    }
+		ii.assign(us$registerPool.allocateRegister().load(0));
 
-	    public vmu_cli_corres()
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn2 = getConnection();
+		    java.sql.PreparedStatement us$stmt2 = null;
+		    ResultSet us$rs2 = null;
+		    try
+			{
+			us$stmt2 = us$conn2.prepareStatement("SELECT vev_etapactu, vev_estado FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
+			vmu_empresa.us$setSqlParameterValue(us$stmt2, 1);
+			vmu_obra.us$setSqlParameterValue(us$stmt2, 2);
+			us$rs2 = us$stmt2.executeQuery();
+			int us$rowsTouched2 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd2 = us$rs2.getMetaData();
+			    if (us$rsmd2.getColumnCount() != 2)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd2.getColumnCount()), "2"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter2 = us$conn2.createDataIterator(us$rs2);
+			    while (us$getter2.next())
+				{
+				++us$rowsTouched2;
+				us$getter2.assignValueToVariable(etapa_activa, 1);
+				us$getter2.assignValueToVariable(est, 2);
+
+				    {
+				    ii.assign(us$registerPool.allocateRegister().load(ii).plusOp(1));
+				    }
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched2 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs2 != null)
+				us$rs2.close();
+			    }
+			}
+		    catch (SQLException us$ex2)
+			{
+			getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+			throw us$ex2;
+			}
+		    catch (NXJDataConnectionException us$ex2)
+			{
+			getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+			throw us$ex2;
+			}
+		    finally
+			{
+			if (us$stmt2 != null)
+			    us$conn2.us$closeStatement(us$stmt2);
+			}
+		    }
+		if (us$registerPool.allocateRegister().load(ii).gtOp(1).getBooleanValueNullOk())
+		    {
+		    getSession().displayToMessageBox("Hay m\u00E1s de una etapa activa. Verifique.");
+		    getSession().queueCommand("PREVIOUS_FORM");
+		    }
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn3 = getConnection();
+		    java.sql.PreparedStatement us$stmt3 = null;
+		    ResultSet us$rs3 = null;
+		    try
+			{
+			us$stmt3 = us$conn3.prepareStatement("SELECT vev_etapactu FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
+			vmu_empresa.us$setSqlParameterValue(us$stmt3, 1);
+			vmu_obra.us$setSqlParameterValue(us$stmt3, 2);
+			us$rs3 = us$stmt3.executeQuery();
+			int us$rowsTouched3 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd3 = us$rs3.getMetaData();
+			    if (us$rsmd3.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd3.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter3 = us$conn3.createDataIterator(us$rs3);
+			    if (us$getter3.next())
+				{
+				++us$rowsTouched3;
+				us$getter3.assignValueToVariable(etapa_act, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched3 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs3 != null)
+				us$rs3.close();
+			    }
+			}
+		    catch (SQLException us$ex3)
+			{
+			getSession().us$setStatus(us$conn3.mapToStatusCode(us$ex3));
+			throw us$ex3;
+			}
+		    catch (NXJDataConnectionException us$ex3)
+			{
+			getSession().us$setStatus(us$conn3.mapToStatusCode(us$ex3));
+			throw us$ex3;
+			}
+		    finally
+			{
+			if (us$stmt3 != null)
+			    us$conn3.us$closeStatement(us$stmt3);
+			}
+		    }
+		if (getSession().getStatus() == StatusCode.SS_NOREC)
+		    {
+		    getSession().displayToMessageBox("No hay etapa ACTIVA en ventas.");
+		    getSession().queueCommand("PREVIOUS_FORM");
+		    rejectOperation();
+		    }
+	    } // initField
+
+	    public vmu_obra()
 	    {
-		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_cli_corres", true, true, 50);
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_obra", true, true, 2);
 		setStyleClass("textfield");
 		us$setMultiValued(true);
-		us$setView("select");
-		us$setFieldLength(50);
-		us$setCandidateTargetColumnName("vmu_cli_corres");
+		us$setView("text");
+		us$setFieldLength(2);
+		us$setCandidateTargetColumnName("vmu_obra");
 		setValueRetrievedDuringFetch(true);
 		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setRequired(true);
 		setFindable(true);
 		setUpdateable(true);
-		setForegroundColor("Black");
-		setFontSize("12");
+		setCaseConversion(NullableField.CaseConversion_UPPER);
+		us$executesCodeBeforeInput = true;
 	    } // <init>
-	} // vmu_cli_corres
+	} // vmu_obra
 
-	public /*multi_valued*/ vmu_cli_corres vmu_cli_corres = new vmu_cli_corres();
-	public /*multi_valued*/ NullableStringField vmu_cli_registro = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_registro", true, true, 15);
-	public /*multi_valued*/ NullableStringField vmu_cli_telof = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_telof", true, true, 30);
-	public /*multi_valued*/ NullableStringField vmu_cli_telre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_telre", true, true, 30);
-	public /*multi_valued*/ NullableStringField vmu_corporacion = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_corporacion", true, true, 2);
-	public /*multi_valued*/ NullableStringField vmu_correo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_correo", true, true, 40);
-	public /*multi_valued*/ NullableStringField vmu_correo2 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_correo2", true, true, 40);
-	public /*multi_valued*/ NullableAmountField vmu_descuentos = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vmu_descuentos", true, true, 25);
-	public /*multi_valued*/ NullableStringField vmu_est_hipote = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_est_hipote", true, true, 2);
-	public /*multi_valued*/ NullableStringField vmu_est_unidad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_est_unidad", true, true, 2);
-	public /*multi_valued*/ NullableDateField vmu_f_ent_pacta = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_ent_pacta", true, true, 10);
-	public /*multi_valued*/ NullableDateField vmu_f_escritura = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_escritura", true, true, 10);
-	public /*multi_valued*/ NullableDateField vmu_f_gravacion = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_gravacion", true, true, 10);
-	public /*multi_valued*/ NullableDateField vmu_f_separacion = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_separacion", true, true, 10);
-	public /*multi_valued*/ NullableStringField vmu_forma_pago = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_forma_pago", true, true, 2);
-	public /*multi_valued*/ NullableStringField vmu_manzana = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_manzana", true, true, 3);
-	public /*multi_valued*/ NullableNumericField vmu_ngarage = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "vmu_ngarage", true, true, 11);
-	public /*multi_valued*/ NullableStringField vmu_obra = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_obra", true, true, 2);
+	public /*multi_valued*/ vmu_obra vmu_obra = new vmu_obra();
 	public /*multi_valued*/ NullableAmountField vmu_precio_uni = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vmu_precio_uni", true, true, 25);
 	public /*multi_valued*/ NullableAmountField vmu_preciotot = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vmu_preciotot", true, true, 25);
 	public /*multi_valued*/ NullableStringField vmu_promocion1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_promocion1", true, true, 80);
@@ -534,7 +668,9 @@ public class RBoletinesFRM
 	    label313111111112111211.setFontSize("12");
 	    nombre_banco.setStyleClass("textfield");
 	    nombre_banco.us$setView("text");
-	    nombre_banco.setFindable(false);
+	    nombre_banco.setFindable(true);
+	    nombre_banco.setUpdateable(true);
+	    nombre_banco.setStopForInput(false);
 	    number.setStyleClass("textfield");
 	    number.us$setView("text");
 	    number.setFindable(false);
@@ -547,6 +683,7 @@ public class RBoletinesFRM
 	    vau_apode_nit.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vau_apode_nit.setFindable(true);
 	    vau_apode_nit.setUpdateable(true);
+	    vau_apode_nit.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vau_apode_nom.setStyleClass("textfield");
 	    vau_apode_nom.us$setMultiValued(true);
 	    vau_apode_nom.us$setView("text");
@@ -556,11 +693,14 @@ public class RBoletinesFRM
 	    vau_apode_nom.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vau_apode_nom.setFindable(true);
 	    vau_apode_nom.setUpdateable(true);
+	    vau_apode_nom.setStopForInput(false);
+	    vau_apode_nom.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vau_apoderado.setVisible(true);
 	    vau_apoderado.setStyleClass("dropdown_list");
 	    vau_apoderado.us$setMultiValued(true);
 	    vau_apoderado.us$setView("select");
 	    vau_apoderado.us$setFieldLength(2);
+	    vau_apoderado.setAutoAccept(true);
 	    vau_apoderado.us$setCandidateTargetColumnName("vau_apoderado");
 	    vau_apoderado.setValueRetrievedDuringFetch(true);
 	    vau_apoderado.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
@@ -578,6 +718,7 @@ public class RBoletinesFRM
 	    vma_ven_responsa.us$setCandidateTargetColumnName("vma_ven_responsa");
 	    vma_ven_responsa.setValueRetrievedDuringFetch(true);
 	    vma_ven_responsa.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vma_ven_responsa.setRequired(true);
 	    vma_ven_responsa.setFindable(true);
 	    vma_ven_responsa.setUpdateable(true);
 	    vma_ven_responsa.setCaseConversion(NullableField.CaseConversion_UPPER);
@@ -588,7 +729,7 @@ public class RBoletinesFRM
 	    vma_ven_responsa.setFontSize("12");
 	    vmu__f_entprog.setStyleClass("date_picker");
 	    vmu__f_entprog.us$setMultiValued(true);
-	    vmu__f_entprog.us$setView("text");
+	    vmu__f_entprog.us$setView("date");
 	    vmu__f_entprog.us$setFieldLength(10);
 	    vmu__f_entprog.us$setCandidateTargetColumnName("vmu_f_entprog");
 	    vmu__f_entprog.setValueRetrievedDuringFetch(true);
@@ -597,11 +738,12 @@ public class RBoletinesFRM
 	    vmu__f_entprog.setUpdateable(true);
 	    vmu_cli_ciudad.setStyleClass("textfield");
 	    vmu_cli_ciudad.us$setMultiValued(true);
-	    vmu_cli_ciudad.us$setView("text");
+	    vmu_cli_ciudad.us$setView("select");
 	    vmu_cli_ciudad.us$setFieldLength(30);
 	    vmu_cli_ciudad.us$setCandidateTargetColumnName("vmu_cli_ciudad");
 	    vmu_cli_ciudad.setValueRetrievedDuringFetch(true);
 	    vmu_cli_ciudad.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_cli_ciudad.setRequired(true);
 	    vmu_cli_ciudad.setFindable(true);
 	    vmu_cli_ciudad.setUpdateable(true);
 	    vmu_cli_ciunit.setStyleClass("textfield");
@@ -613,10 +755,13 @@ public class RBoletinesFRM
 	    vmu_cli_ciunit.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vmu_cli_ciunit.setFindable(true);
 	    vmu_cli_ciunit.setUpdateable(true);
+	    vmu_cli_ciunit.setStopForInput(false);
+	    vmu_cli_ciunit.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vmu_cli_clase.setStyleClass("dropdown_list");
 	    vmu_cli_clase.us$setMultiValued(true);
 	    vmu_cli_clase.us$setView("select");
 	    vmu_cli_clase.us$setFieldLength(2);
+	    vmu_cli_clase.setAutoAccept(true);
 	    vmu_cli_clase.us$setCandidateTargetColumnName("vmu_cli_clase");
 	    vmu_cli_clase.setValueRetrievedDuringFetch(true);
 	    vmu_cli_clase.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
@@ -624,6 +769,19 @@ public class RBoletinesFRM
 	    vmu_cli_clase.setFindable(true);
 	    vmu_cli_clase.setUpdateable(true);
 	    vmu_cli_clase.us$setMultiValuedOptions(false);
+	    vmu_cli_corres.setStyleClass("textfield");
+	    vmu_cli_corres.us$setMultiValued(true);
+	    vmu_cli_corres.us$setView("select");
+	    vmu_cli_corres.us$setFieldLength(50);
+	    vmu_cli_corres.setAutoAccept(true);
+	    vmu_cli_corres.us$setCandidateTargetColumnName("vmu_cli_corres");
+	    vmu_cli_corres.setValueRetrievedDuringFetch(true);
+	    vmu_cli_corres.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_cli_corres.setRequired(true);
+	    vmu_cli_corres.setFindable(true);
+	    vmu_cli_corres.setUpdateable(true);
+	    vmu_cli_corres.setForegroundColor("Black");
+	    vmu_cli_corres.setFontSize("12");
 	    vmu_cli_registro.setStyleClass("textfield");
 	    vmu_cli_registro.us$setMultiValued(true);
 	    vmu_cli_registro.us$setView("text");
@@ -633,6 +791,7 @@ public class RBoletinesFRM
 	    vmu_cli_registro.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vmu_cli_registro.setFindable(true);
 	    vmu_cli_registro.setUpdateable(true);
+	    vmu_cli_registro.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vmu_cli_telof.setStyleClass("textfield");
 	    vmu_cli_telof.us$setMultiValued(true);
 	    vmu_cli_telof.us$setView("text");
@@ -640,8 +799,10 @@ public class RBoletinesFRM
 	    vmu_cli_telof.us$setCandidateTargetColumnName("vmu_cli_telof");
 	    vmu_cli_telof.setValueRetrievedDuringFetch(true);
 	    vmu_cli_telof.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_cli_telof.setRequired(true);
 	    vmu_cli_telof.setFindable(true);
 	    vmu_cli_telof.setUpdateable(true);
+	    vmu_cli_telof.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vmu_cli_telre.setStyleClass("textfield");
 	    vmu_cli_telre.us$setMultiValued(true);
 	    vmu_cli_telre.us$setView("text");
@@ -649,8 +810,10 @@ public class RBoletinesFRM
 	    vmu_cli_telre.us$setCandidateTargetColumnName("vmu_cli_telre");
 	    vmu_cli_telre.setValueRetrievedDuringFetch(true);
 	    vmu_cli_telre.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_cli_telre.setRequired(true);
 	    vmu_cli_telre.setFindable(true);
 	    vmu_cli_telre.setUpdateable(true);
+	    vmu_cli_telre.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vmu_corporacion.setStyleClass("textfield");
 	    vmu_corporacion.us$setMultiValued(true);
 	    vmu_corporacion.us$setView("text");
@@ -691,6 +854,7 @@ public class RBoletinesFRM
 	    vmu_est_hipote.us$setMultiValued(true);
 	    vmu_est_hipote.us$setView("select");
 	    vmu_est_hipote.us$setFieldLength(2);
+	    vmu_est_hipote.setAutoAccept(true);
 	    vmu_est_hipote.us$setCandidateTargetColumnName("vmu_est_hipote");
 	    vmu_est_hipote.setValueRetrievedDuringFetch(true);
 	    vmu_est_hipote.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
@@ -700,6 +864,7 @@ public class RBoletinesFRM
 	    vmu_est_unidad.us$setMultiValued(true);
 	    vmu_est_unidad.us$setView("select");
 	    vmu_est_unidad.us$setFieldLength(2);
+	    vmu_est_unidad.setAutoAccept(true);
 	    vmu_est_unidad.us$setCandidateTargetColumnName("vmu_est_unidad");
 	    vmu_est_unidad.setValueRetrievedDuringFetch(true);
 	    vmu_est_unidad.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
@@ -707,25 +872,27 @@ public class RBoletinesFRM
 	    vmu_est_unidad.setUpdateable(true);
 	    vmu_f_ent_pacta.setStyleClass("date_picker");
 	    vmu_f_ent_pacta.us$setMultiValued(true);
-	    vmu_f_ent_pacta.us$setView("text");
+	    vmu_f_ent_pacta.us$setView("date");
 	    vmu_f_ent_pacta.us$setFieldLength(10);
 	    vmu_f_ent_pacta.us$setCandidateTargetColumnName("vmu_f_ent_pacta");
 	    vmu_f_ent_pacta.setValueRetrievedDuringFetch(true);
 	    vmu_f_ent_pacta.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_f_ent_pacta.setRequired(true);
 	    vmu_f_ent_pacta.setFindable(true);
 	    vmu_f_ent_pacta.setUpdateable(true);
 	    vmu_f_escritura.setStyleClass("date_picker");
 	    vmu_f_escritura.us$setMultiValued(true);
-	    vmu_f_escritura.us$setView("text");
+	    vmu_f_escritura.us$setView("date");
 	    vmu_f_escritura.us$setFieldLength(10);
 	    vmu_f_escritura.us$setCandidateTargetColumnName("vmu_f_escritura");
 	    vmu_f_escritura.setValueRetrievedDuringFetch(true);
 	    vmu_f_escritura.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_f_escritura.setRequired(true);
 	    vmu_f_escritura.setFindable(true);
 	    vmu_f_escritura.setUpdateable(true);
 	    vmu_f_gravacion.setStyleClass("date_picker");
 	    vmu_f_gravacion.us$setMultiValued(true);
-	    vmu_f_gravacion.us$setView("text");
+	    vmu_f_gravacion.us$setView("date");
 	    vmu_f_gravacion.us$setFieldLength(10);
 	    vmu_f_gravacion.us$setCandidateTargetColumnName("vmu_f_gravacion");
 	    vmu_f_gravacion.setValueRetrievedDuringFetch(true);
@@ -734,11 +901,12 @@ public class RBoletinesFRM
 	    vmu_f_gravacion.setUpdateable(true);
 	    vmu_f_separacion.setStyleClass("date_picker");
 	    vmu_f_separacion.us$setMultiValued(true);
-	    vmu_f_separacion.us$setView("text");
+	    vmu_f_separacion.us$setView("date");
 	    vmu_f_separacion.us$setFieldLength(10);
 	    vmu_f_separacion.us$setCandidateTargetColumnName("vmu_f_separacion");
 	    vmu_f_separacion.setValueRetrievedDuringFetch(true);
 	    vmu_f_separacion.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vmu_f_separacion.setRequired(true);
 	    vmu_f_separacion.setFindable(true);
 	    vmu_f_separacion.setUpdateable(true);
 	    vmu_forma_pago.setStyleClass("dropdown_list");
@@ -752,6 +920,10 @@ public class RBoletinesFRM
 	    vmu_forma_pago.setRequired(true);
 	    vmu_forma_pago.setFindable(true);
 	    vmu_forma_pago.setUpdateable(true);
+	} // cajagrandeRBoletinespropertySetter_2
+
+	private void cajagrandeRBoletinespropertySetter_3()
+	{
 	    vmu_manzana.setStyleClass("textfield");
 	    vmu_manzana.us$setMultiValued(true);
 	    vmu_manzana.us$setView("text");
@@ -763,10 +935,6 @@ public class RBoletinesFRM
 	    vmu_manzana.setFindable(true);
 	    vmu_manzana.setUpdateable(true);
 	    vmu_manzana.setCaseConversion(NullableField.CaseConversion_UPPER);
-	} // cajagrandeRBoletinespropertySetter_2
-
-	private void cajagrandeRBoletinespropertySetter_3()
-	{
 	    vmu_ngarage.setStyleClass("textfield");
 	    vmu_ngarage.us$setMultiValued(true);
 	    vmu_ngarage.us$setView("text");
@@ -777,17 +945,6 @@ public class RBoletinesFRM
 	    vmu_ngarage.setRequired(true);
 	    vmu_ngarage.setFindable(true);
 	    vmu_ngarage.setUpdateable(true);
-	    vmu_obra.setStyleClass("textfield");
-	    vmu_obra.us$setMultiValued(true);
-	    vmu_obra.us$setView("text");
-	    vmu_obra.us$setFieldLength(2);
-	    vmu_obra.us$setCandidateTargetColumnName("vmu_obra");
-	    vmu_obra.setValueRetrievedDuringFetch(true);
-	    vmu_obra.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_obra.setRequired(true);
-	    vmu_obra.setFindable(true);
-	    vmu_obra.setUpdateable(true);
-	    vmu_obra.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vmu_precio_uni.setStyleClass("textfield");
 	    vmu_precio_uni.us$setMultiValued(true);
 	    vmu_precio_uni.us$setView("text");
@@ -845,6 +1002,7 @@ public class RBoletinesFRM
 	    vmu_tramite.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vmu_tramite.setFindable(true);
 	    vmu_tramite.setUpdateable(true);
+	    vmu_tramite.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vmu_unidad.setStyleClass("textfield");
 	    vmu_unidad.us$setMultiValued(true);
 	    vmu_unidad.us$setView("text");
@@ -877,7 +1035,7 @@ public class RBoletinesFRM
 	    vve_nombre.setStyleClass("textfield");
 	    vve_nombre.us$setView("text");
 	    vve_nombre.setFindable(false);
-	    vve_nombre.setUpdateable(false);
+	    vve_nombre.setUpdateable(true);
 	    vve_nombre.setStopForInput(false);
 	    vve_nombre.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vve_nombre.setForegroundColor("Black");
@@ -907,10 +1065,13 @@ public class RBoletinesFRM
 	setStartInAddMode(true);
 	us$setBindingType("connection");
 	us$setBackgroundColor("#999999");
-	us$addTargetMapping("vmu_empresa", "vmu_empresa");
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "adicionando", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "numero", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "formasig", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "xob_proyecto", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "etapa_activa", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "est", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "etapa_act", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "cero", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "cien", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "preciotot", false);

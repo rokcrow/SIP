@@ -1075,13 +1075,13 @@
                         id="cajagrandeRBoletines:label3131111111121111."
                         key="cajagrandeRBoletines:label3131111111121111."
                         labelalign="left"
-                        labeltitle="Ciudad"
+                        labeltitle="Pais"
                         original_name="label3"
                         target_field=""
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843531170"
                         view="label"
                         style="font-size: 12px">
-                        <nobr>Ciudad</nobr>
+                        <nobr>Pais</nobr>
                     </label>
 
                 </div>
@@ -1240,14 +1240,16 @@
                         displaywidth="235"
                         field_type="text"
                         field_weight="2399"
-                        findable="false"
+                        findable="true"
                         key="cajagrandeRBoletines:nombre_banco."
                         name="cajagrandeRBoletines:nombre_banco."
                         original_name="textfield1"
                         size="39"
+                        stop_for_input="false"
                         target_field=""
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847089166"
+                        updateable="true"
                         view="text">
                 </div>
 
@@ -1366,16 +1368,17 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 583px; left: 160px; width:45px; height:22px">
+                    style="position: absolute; top: 583px; left: 162px; width:45px; height:22px">
 
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="18"
                         db_type="String"
                         displayheight="22"
-                        displayleft="160"
+                        displayleft="162"
                         displaytop="583"
                         displaywidth="45"
                         explicit_search_mode="default"
@@ -1404,6 +1407,7 @@
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="40"
                         db_type="String"
@@ -1422,6 +1426,7 @@
                         original_name="textfield1"
                         retrieve_value="true"
                         size="39"
+                        stop_for_input="false"
                         target_field="vau_apode_nom"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847055486"
@@ -1436,6 +1441,7 @@
 
                     <select
                         accell_type="String"
+                        auto_accept="true"
                         binary_variables=""
                         class="dropdown_list"
                         db_length="1"
@@ -1449,9 +1455,11 @@
                         field_type="SELECT"
                         field_weight="2599"
                         findable="true"
+                        immediate="false"
                         key="cajagrandeRBoletines:vau_apoderado."
                         multi_valued="true"
                         name="cajagrandeRBoletines:vau_apoderado."
+                        options="SI=S&#59;No=N"
                         original_name="select2"
                         retrieve_value="true"
                         size="1"
@@ -1491,6 +1499,7 @@
                         key="cajagrandeRBoletines:vma_ven_responsa."
                         multi_valued="true"
                         name="cajagrandeRBoletines:vma_ven_responsa."
+                        required="true"
                         retrieve_value="true"
                         return_values_into="vma_ven_responsa"
                         size="7"
@@ -1534,7 +1543,7 @@
                         target_field="vmu_f_entprog"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -1543,34 +1552,37 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 639px; left: 465px; width:240px; height:22px">
+                    style="position: absolute; top: 639px; left: 465px; width:240px; height:21px">
 
-                    <input
+                    <select
                         accell_type="String"
                         binary_variables=""
                         class="textfield"
                         db_length="30"
                         db_type="String"
-                        displayheight="22"
+                        displayheight="21"
                         displayleft="465"
                         displaytop="639"
                         displaywidth="240"
                         explicit_search_mode="default"
                         field_length="30"
-                        field_type="text"
+                        field_type="SELECT"
                         field_weight="3399"
                         findable="true"
                         key="cajagrandeRBoletines:vmu_cli_ciudad."
                         multi_valued="true"
                         name="cajagrandeRBoletines:vmu_cli_ciudad."
-                        original_name="textfield1"
+                        original_name="vmu_cli_ciudad"
+                        required="true"
                         retrieve_value="true"
-                        size="40"
+                        size="1"
                         target_field="vmu_cli_ciudad"
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846906159"
+                        uid="modulo_form1_1372953290702_819e3f00d03b348105d34088bce4b61d5970a86e_1375451806447"
                         updateable="true"
-                        view="text">
+                        view="select"
+                        style="width:240px; height: 21px">
+                    </select>
+
                 </div>
 
                 <div
@@ -1581,6 +1593,7 @@
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="20"
                         db_type="String"
@@ -1599,6 +1612,7 @@
                         original_name="textfield1"
                         retrieve_value="true"
                         size="39"
+                        stop_for_input="false"
                         target_field="vmu_cli_ciunit"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847067909"
@@ -1613,6 +1627,7 @@
 
                     <select
                         accell_type="String"
+                        auto_accept="true"
                         auto_resize_width="true"
                         binary_variables=""
                         class="dropdown_list"
@@ -1652,6 +1667,7 @@
 
                     <select
                         accell_type="String"
+                        auto_accept="true"
                         binary_variables=""
                         class="textfield"
                         db_length="50"
@@ -1671,6 +1687,7 @@
                         original_name="vpp_direccion"
                         query="select xzo_nombre from xzo_zonas&#59;"
                         query_row_limit="300"
+                        required="true"
                         retrieve_value="true"
                         size="1"
                         target_field="vmu_cli_corres"
@@ -1692,6 +1709,7 @@
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="15"
                         db_type="String"
@@ -1725,6 +1743,7 @@
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="30"
                         db_type="String"
@@ -1741,6 +1760,7 @@
                         multi_valued="true"
                         name="cajagrandeRBoletines:vmu_cli_telof."
                         original_name="textfield1"
+                        required="true"
                         retrieve_value="true"
                         size="15"
                         target_field="vmu_cli_telof"
@@ -1758,6 +1778,7 @@
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="30"
                         db_type="String"
@@ -1774,6 +1795,7 @@
                         multi_valued="true"
                         name="cajagrandeRBoletines:vmu_cli_telre."
                         original_name="textfield1"
+                        required="true"
                         retrieve_value="true"
                         size="15"
                         target_field="vmu_cli_telre"
@@ -1922,6 +1944,7 @@
 
                     <select
                         accell_type="String"
+                        auto_accept="true"
                         binary_variables=""
                         class="dropdown_list"
                         db_length="1"
@@ -1938,6 +1961,7 @@
                         key="cajagrandeRBoletines:vmu_est_hipote."
                         multi_valued="true"
                         name="cajagrandeRBoletines:vmu_est_hipote."
+                        options="SI=S&#59;No=N"
                         original_name="select2"
                         retrieve_value="true"
                         size="1"
@@ -1957,6 +1981,7 @@
 
                     <select
                         accell_type="String"
+                        auto_accept="true"
                         binary_variables=""
                         class="dropdown_list"
                         db_length="1"
@@ -1973,6 +1998,7 @@
                         key="cajagrandeRBoletines:vmu_est_unidad."
                         multi_valued="true"
                         name="cajagrandeRBoletines:vmu_est_unidad."
+                        options="SI=S&#59;No=N"
                         original_name="select2"
                         retrieve_value="true"
                         size="1"
@@ -2010,11 +2036,12 @@
                         kind="date"
                         multi_valued="true"
                         original_name="date2"
+                        required="true"
                         retrieve_value="true"
                         target_field="vmu_f_ent_pacta"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845261753"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2045,11 +2072,12 @@
                         kind="date"
                         multi_valued="true"
                         original_name="date1"
+                        required="true"
                         retrieve_value="true"
                         target_field="vmu_f_escritura"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845215639"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2084,7 +2112,7 @@
                         target_field="vmu_f_gravacion"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845174491"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2115,11 +2143,12 @@
                         kind="date"
                         multi_valued="true"
                         original_name="date1"
+                        required="true"
                         retrieve_value="true"
                         target_field="vmu_f_separacion"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845184559"
                         updateable="true"
-                        view="text">
+                        view="date">
 
                     </div>
 
@@ -2449,6 +2478,7 @@
                     <input
                         accell_type="String"
                         binary_variables=""
+                        case_conversion="Upper"
                         class="textfield"
                         db_length="13"
                         db_type="String"
@@ -2599,7 +2629,7 @@
                         target_field=""
                         type="text"
                         uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368631155520"
-                        updateable="false"
+                        updateable="true"
                         view="text"
                         style="font-size: 12px;
                             color: Black">

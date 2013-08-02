@@ -523,12 +523,14 @@
         display_name = "nombre_banco"
         field_type = "text"
         field_weight = "2399"
-        findable = "false"
+        findable = "true"
         key = "cajagrandeRBoletines:nombre_banco."
         original_name = "textfield1"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847089166"
+        updateable = "true"
         view = "text">
     </field>
     <field 
@@ -603,6 +605,7 @@
     <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "18"
         db_type = "String"
         display_name = "vau_apode_nit"
@@ -624,6 +627,7 @@
     <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "40"
         db_type = "String"
         display_name = "vau_apode_nom"
@@ -636,6 +640,7 @@
         multi_valued = "true"
         original_name = "textfield1"
         retrieve_value = "true"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = "vau_apode_nom"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847055486"
@@ -644,6 +649,7 @@
     </field>
     <field 
         accell_type = "String"
+        auto_accept = "true"
         binary_variables = ""
         db_length = "1"
         db_type = "String"
@@ -653,8 +659,10 @@
         field_type = "SELECT"
         field_weight = "2599"
         findable = "true"
+        immediate = "false"
         key = "cajagrandeRBoletines:vau_apoderado."
         multi_valued = "true"
+        options = "SI=S;No=N"
         original_name = "select2"
         retrieve_value = "true"
         style_class = "dropdown_list"
@@ -682,6 +690,7 @@
         immediate = "true"
         key = "cajagrandeRBoletines:vma_ven_responsa."
         multi_valued = "true"
+        required = "true"
         retrieve_value = "true"
         return_values_into = "vma_ven_responsa"
         style_class = "textfield"
@@ -712,7 +721,7 @@
         target_field = "vmu_f_entprog"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "String"
@@ -722,22 +731,24 @@
         display_name = "vmu_cli_ciudad"
         explicit_search_mode = "default"
         field_length = "30"
-        field_type = "text"
+        field_type = "SELECT"
         field_weight = "3399"
         findable = "true"
         key = "cajagrandeRBoletines:vmu_cli_ciudad."
         multi_valued = "true"
-        original_name = "textfield1"
+        original_name = "vmu_cli_ciudad"
+        required = "true"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmu_cli_ciudad"
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371846906159"
+        uid = "modulo_form1_1372953290702_819e3f00d03b348105d34088bce4b61d5970a86e_1375451806447"
         updateable = "true"
-        view = "text">
+        view = "select">
     </field>
     <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "20"
         db_type = "String"
         display_name = "vmu_cli_ciunit"
@@ -750,6 +761,7 @@
         multi_valued = "true"
         original_name = "textfield1"
         retrieve_value = "true"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = "vmu_cli_ciunit"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371847067909"
@@ -758,6 +770,7 @@
     </field>
     <field 
         accell_type = "String"
+        auto_accept = "true"
         auto_resize_width = "true"
         binary_variables = ""
         db_length = "1"
@@ -783,6 +796,7 @@
     </field>
     <field 
         accell_type = "String"
+        auto_accept = "true"
         binary_variables = ""
         db_length = "50"
         db_type = "String"
@@ -799,6 +813,7 @@
         original_name = "vpp_direccion"
         query = "select xzo_nombre from xzo_zonas;"
         query_row_limit = "300"
+        required = "true"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmu_cli_corres"
@@ -809,6 +824,7 @@
     <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "15"
         db_type = "String"
         display_name = "vmu_cli_registro"
@@ -830,6 +846,7 @@
     <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "30"
         db_type = "String"
         display_name = "vmu_cli_telof"
@@ -841,6 +858,7 @@
         key = "cajagrandeRBoletines:vmu_cli_telof."
         multi_valued = "true"
         original_name = "textfield1"
+        required = "true"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmu_cli_telof"
@@ -851,6 +869,7 @@
     <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "30"
         db_type = "String"
         display_name = "vmu_cli_telre"
@@ -862,6 +881,7 @@
         key = "cajagrandeRBoletines:vmu_cli_telre."
         multi_valued = "true"
         original_name = "textfield1"
+        required = "true"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vmu_cli_telre"
@@ -955,6 +975,7 @@
     </field>
     <field 
         accell_type = "String"
+        auto_accept = "true"
         binary_variables = ""
         db_length = "1"
         db_type = "String"
@@ -966,6 +987,7 @@
         findable = "true"
         key = "cajagrandeRBoletines:vmu_est_hipote."
         multi_valued = "true"
+        options = "SI=S;No=N"
         original_name = "select2"
         retrieve_value = "true"
         style_class = "dropdown_list"
@@ -976,6 +998,7 @@
     </field>
     <field 
         accell_type = "String"
+        auto_accept = "true"
         binary_variables = ""
         db_length = "1"
         db_type = "String"
@@ -987,6 +1010,7 @@
         findable = "true"
         key = "cajagrandeRBoletines:vmu_est_unidad."
         multi_valued = "true"
+        options = "SI=S;No=N"
         original_name = "select2"
         retrieve_value = "true"
         style_class = "dropdown_list"
@@ -1010,12 +1034,13 @@
         kind = "date"
         multi_valued = "true"
         original_name = "date2"
+        required = "true"
         retrieve_value = "true"
         style_class = "date_picker"
         target_field = "vmu_f_ent_pacta"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845261753"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1032,12 +1057,13 @@
         kind = "date"
         multi_valued = "true"
         original_name = "date1"
+        required = "true"
         retrieve_value = "true"
         style_class = "date_picker"
         target_field = "vmu_f_escritura"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845215639"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1059,7 +1085,7 @@
         target_field = "vmu_f_gravacion"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845174491"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "Date"
@@ -1076,12 +1102,13 @@
         kind = "date"
         multi_valued = "true"
         original_name = "date1"
+        required = "true"
         retrieve_value = "true"
         style_class = "date_picker"
         target_field = "vmu_f_separacion"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845184559"
         updateable = "true"
-        view = "text">
+        view = "date">
     </field>
     <field 
         accell_type = "String"
@@ -1289,6 +1316,7 @@
     <field 
         accell_type = "String"
         binary_variables = ""
+        case_conversion = "Upper"
         db_length = "13"
         db_type = "String"
         display_name = "vmu_tramite"
@@ -1387,7 +1415,7 @@
         style_class = "textfield"
         target_field = ""
         uid = "form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368631155520"
-        updateable = "false"
+        updateable = "true"
         view = "text">
     </field>
 

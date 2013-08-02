@@ -109,6 +109,7 @@ public class Form2
     NullableNumeric xx = (NullableNumeric)NullableFactory.createNullableNumeric("xx").assign(getSession().us$getRegisterPool().allocateRegister().load(2));
     private Form2 Form2 = this;
     public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
+    public /*multi_valued*/ NullableStringField vev_etapactu = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vev_etapactu", true, true, 2);
 
     public Form2(NXJSession session, NXJForm prevForm)
     {
@@ -124,9 +125,21 @@ public class Form2
 
     private void us$initializeFormSpecificProperties()
     {
+	us$setConnectionName("Connection1");
+	us$setTargetTableName("PUBLIC.vev_etapaven");
+	setStartInAddMode(false);
 	textfield1.setStyleClass("textfield");
 	textfield1.us$setView("text");
 	textfield1.setFindable(false);
+	vev_etapactu.setStyleClass("textfield");
+	vev_etapactu.us$setMultiValued(true);
+	vev_etapactu.us$setView("text");
+	vev_etapactu.us$setFieldLength(2);
+	vev_etapactu.us$setCandidateTargetColumnName("vev_estado");
+	vev_etapactu.setValueRetrievedDuringFetch(true);
+	vev_etapactu.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	vev_etapactu.setFindable(true);
+	vev_etapactu.setUpdateable(true);
 	us$addProxyObject(ModuloCNegocios.Form2.class, "xx", false);
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "Form2";

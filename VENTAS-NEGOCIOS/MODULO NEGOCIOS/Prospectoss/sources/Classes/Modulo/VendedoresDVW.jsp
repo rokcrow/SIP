@@ -3,16 +3,16 @@
 
 </head>
 <%=com.unify.nxj.awebServlet.Runtime.generateOnLoad(request, response, application)%>
-<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
+<body onLoad="initPreview(false, -1, -1, 'file:///C:\Unify\NXJ/web-app/unify/images', 'file:///C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content');window.initInternalJavaScriptComponents();" class="form" >
 
     <form
         binary_variables=""
         class="form"
-        displayheight="871"
+        displayheight="516"
         displaywidth="1055"
         field_order=""
-        form_height="661"
-        form_width="1056"
+        form_height="516"
+        form_width="1055"
         name="NXJForm"
         object_type="data_view"
         view="form">
@@ -27,7 +27,7 @@
                 auto_find="true"
                 binary_variables=""
                 binding_type="connection"
-                bloom_filter="00000000000400040000000000000000"
+                bloom_filter="00080000000000000800000000000000"
                 border-width="1"
                 class="data_view"
                 commands=""

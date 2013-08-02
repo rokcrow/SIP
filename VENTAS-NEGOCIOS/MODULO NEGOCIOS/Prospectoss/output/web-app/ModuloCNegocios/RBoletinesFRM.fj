@@ -2,10 +2,11 @@ package ModuloCNegocios;
 
 FORM RBoletinesFRM
 {
-    multi_valued NullableStringVariable vmu_empresa, vmu_est_hipote;
+    multi_valued NullableStringVariable vmu_empresa, vmu_est_hipote, vmu_obra, vmu_cli_clase;
     multi_valued NullableAmountVariable  vmu_precio_uni, vmu_vgarage, vmu_descuentos;
+   
     NullableAmount cero, cien, preciotot;
-    NullableString numero, formasig;
+    NullableString numero, formasig, xob_proyecto, etapa_activa, est, etapa_act;
     NullableNumeric adicionando;
     
     
@@ -64,6 +65,7 @@ FORM RBoletinesFRM
              session.displayToMessageBox(numero);*/
              
              adicionando = 0;
+             cajagrandeRBoletines.vmu_cli_clase.stopForInput = true;
     }
 
     BOX cajagrandeRBoletines
@@ -180,6 +182,65 @@ FORM RBoletinesFRM
         
         FIELD vmu_obra
         {
+            NullableNumeric ii;
+        
+            BEFORE FIELD
+            {
+                // x_obra = vmu_obra;
+            }
+            
+            INIT FIELD
+            {
+                    EXEC SQL
+                                    SELECT xob_proyecto
+                                    FROM xob_obras
+                                    WHERE xob_empresa = :vmu_empresa
+                                    AND xob_obra = :vmu_obra
+                                    INTO xob_proyecto;
+                                    
+                    if (session.status == StatusCode.SS_NOREC)
+                     {
+                                session.displayToMessageBox("La obra no corresponde.");
+                                vmu_obra = " ";
+                                rejectOperation();
+                      }
+                      
+                      ii = 0;
+                      
+                      EXEC SQL
+                                    SELECT vev_etapactu, vev_estado
+                                    FROM vev_etapaven
+                                    WHERE vev_estado = 'A'
+                                    AND vev_empresa = :vmu_empresa
+                                    AND vev_obra = :vmu_obra
+                                    INTO etapa_activa, est
+                                    EXECUTING
+                                    {
+                                        ii = ii +1;
+                                    }
+                                    
+                        if(ii > 1)
+                        {
+                            session.displayToMessageBox("Hay más de una etapa activa. Verifique.");
+                            session.queueCommand("PREVIOUS_FORM");
+                        }
+                        
+                        EXEC SQL
+                                        SELECT vev_etapactu
+                                        FROM vev_etapaven
+                                        WHERE vev_estado = 'A'
+                                        AND vev_empresa = :vmu_empresa
+                                        AND vev_obra = :vmu_obra
+                                        INTO etapa_act;
+                                        
+                        if (session.status == StatusCode.SS_NOREC)
+                        {
+                                session.displayToMessageBox("No hay etapa ACTIVA en ventas.");
+                                session.queueCommand("PREVIOUS_FORM");
+                                rejectOperation();
+                        }
+            }
+
         }
         
         BOX cajaarribaRBoletines
