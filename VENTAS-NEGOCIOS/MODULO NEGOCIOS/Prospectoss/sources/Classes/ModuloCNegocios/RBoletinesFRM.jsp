@@ -1517,41 +1517,6 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 472px; left: 729px; width:165px; height:22px">
-
-                    <div
-                        accell_type="Date"
-                        binary_variables=""
-                        class="date_picker"
-                        db_length="10"
-                        db_type="Date"
-                        displayheight="22"
-                        displayleft="729"
-                        displaytop="472"
-                        displaywidth="165"
-                        explicit_search_mode="default"
-                        field_length="10"
-                        field_type="TEXT"
-                        field_weight="1999"
-                        findable="true"
-                        id="cajagrandeRBoletines:vmu__f_entprog."
-                        key="cajagrandeRBoletines:vmu__f_entprog."
-                        kind="date"
-                        multi_valued="true"
-                        original_name="date2"
-                        retrieve_value="true"
-                        target_field="vmu_f_entprog"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
-                        updateable="true"
-                        view="date">
-
-                    </div>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
                     style="position: absolute; top: 639px; left: 465px; width:240px; height:21px">
 
                     <select
@@ -2040,6 +2005,41 @@
                         retrieve_value="true"
                         target_field="vmu_f_ent_pacta"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845261753"
+                        updateable="true"
+                        view="date">
+
+                    </div>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 472px; left: 729px; width:165px; height:22px">
+
+                    <div
+                        accell_type="Date"
+                        binary_variables=""
+                        class="date_picker"
+                        db_length="10"
+                        db_type="Date"
+                        displayheight="22"
+                        displayleft="729"
+                        displaytop="472"
+                        displaywidth="165"
+                        explicit_search_mode="default"
+                        field_length="10"
+                        field_type="TEXT"
+                        field_weight="1999"
+                        findable="true"
+                        id="cajagrandeRBoletines:vmu_f_entprog."
+                        key="cajagrandeRBoletines:vmu_f_entprog."
+                        kind="date"
+                        multi_valued="true"
+                        original_name="date2"
+                        retrieve_value="true"
+                        target_field="vmu_f_entprog"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
                         updateable="true"
                         view="date">
 

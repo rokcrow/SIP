@@ -5,9 +5,12 @@ FORM RBoletinesFRM
     multi_valued NullableStringVariable vmu_empresa, vmu_est_hipote, vmu_obra, vmu_cli_clase;
     multi_valued NullableAmountVariable  vmu_precio_uni, vmu_vgarage, vmu_descuentos;
    
-    NullableAmount cero, cien, preciotot;
+    NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev;
     NullableString numero, formasig, xob_proyecto, etapa_activa, est, etapa_act;
-    NullableNumeric adicionando;
+    NullableString  garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago; 
+    NullableString tipounidad;
+    NullableNumeric adicionando, adiciona;
+    NullableDate f_separacion;
     
     
     BEFORE FORM
@@ -49,7 +52,77 @@ FORM RBoletinesFRM
             rejectOperation();
         }
         
+        /**************************************************************/
+        
+        adiciona = 1;
+        cajagrandeRBoletines.vmu_preciotot  = cajagrandeRBoletines.vmu_precio_uni + cajagrandeRBoletines.vmu_vgarage;
+        cajagrandeRBoletines.vmu_preciotot  = cajagrandeRBoletines.vmu_preciotot  - cajagrandeRBoletines.vmu_descuentos;
+        cajagrandeRBoletines.vmu_vdeposito = 0;
+        
+        session.displayToMessageBox("Actualizando unidad y/o garajes.");
+        
+          if(cajagrandeRBoletines.vmu_tipoinmueb == "C" || cajagrandeRBoletines.vmu_tipoinmueb == "A")
+        {
+           tipounidad = "V"; 
+        }
+        else
+            tipounidad = "C";
+    
+    
+        EXEC SQL
+                        SELECT vir_tasa
+                        FROM vir_imporenta
+                        WHERE vir_tipounidad = :tipounidad
+                        AND vir_precio_min <= :cajagrandeRBoletines.vmu_preciotot
+                        AND vir_precio_max >= :cajagrandeRBoletines.vmu_preciotot
+                        INTO tasa;
+                        
+                    if (session.status != StatusCode.SS_NORM) 
+                    {
+                        session.displayToMessageBox("No se puede seleccionar la tasa para el precio de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ".");
+                        tasa = cero;
+                    }  
+                    
+                    imporenta = ( cajagrandeRBoletines.vmu_preciotot * tasa) / cien;
+    
+        EXEC SQL
+                        UPDATE vuu_unidades
+                        SET vuu_estado = 'V', vuu_imporenta = :imporenta
+                        WHERE vuu_empresa = :vmu_empresa
+                        AND vuu_obra = :cajagrandeRBoletines.vmu_obra
+                        AND vuu_manzana = :cajagrandeRBoletines.vmu_manzana
+                        AND vuu_unidad = :cajagrandeRBoletines.vmu_unidad;
+                        
+                       if (session.status != StatusCode.SS_NORM) 
+                        {
+                            session.displayToMessageBox("La unidad NO pudo ser actualizada como  vendida.");
+                            adiciona = 0;
+                        }
+                        
+                        session.displayToMessageBox("Actualizando estadísticas de obra.");
+                        
+                        if(cajagrandeRBoletines.vmu_forma_pago == "C")
+                        {
+                            EXEC SQL
+                                            UPDATE ves_estadisticas
+                                            SET ves_univenco = ves_univenco + 1,
+                                                   ves_unidispo = ves_unidispo - 1
+                                             WHERE ves_empresa = :vmu_empresa
+                                             AND ves_obra = :cajagrandeRBoletines.vmu_obra;
+                                             
+                                             if (session.status != StatusCode.SS_NORM) 
+                                            {
+                                                session.displayToMessageBox("No pudo actualizar estadísticas de obra.");
+                                                adiciona = 0;
+                                            }
+                        }
+                        
+                        if(adiciona == 0)
+                            rejectOperation();
     }
+    
+    
+    
 
     ON PREVIOUS FORM
     {
@@ -73,14 +146,186 @@ FORM RBoletinesFRM
         if(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo != "ADVEN" || Modulo.LoginFRM#cajagrandeLogin.xpr_grupo != "CUSEZAR")
         {
             cajagrandeRBoletines.vmu_cli_clase.stopForInput = false;
-            cajagrandeRBoletines.vmu_apoderado.stopForInput = false;
-            cajagrandeRBoletines.vmu_apode_nit.stopForInput = false;
+            cajagrandeRBoletines.vau_apoderado.stopForInput = false;
+            cajagrandeRBoletines.vau_apode_nit.stopForInput = false;
         }
         else
         {
             cajagrandeRBoletines.vmu_cli_clase.stopForInput = true;
-            cajagrandeRBoletines.vmu_apoderado.stopForInput = true;
-            cajagrandeRBoletines.vmu_apode_nit.stopForInput = true;
+            cajagrandeRBoletines.vau_apoderado.stopForInput = true;
+            cajagrandeRBoletines.vau_apode_nit.stopForInput = true;
+        }
+    }
+    
+    BEFORE UPDATE
+    {
+        EXEC SQL
+                        SELECT vmu_f_separacion, vmu_garage1, vmu_garage2,
+                                    vmu_garage3, vmu_deposito1, vmu_deposito2,
+                                    vmu_corporacion, vmu_forma_pago, vmu_cli_clase
+                        FROM vmu_maestro
+                        WHERE vmu_empresa = :vmu_empresa
+                        AND vmu_obra = :cajagrandeRBoletines.vmu_obra
+                        AND vmu_manzana = :cajagrandeRBoletines.vmu_manzana
+                        AND vmu_unidad = :cajagrandeRBoletines.vmu_unidad
+                        INTO f_separacion, garage1, garage2,
+                                  garage3, deposito1, deposito2, 
+                                  corporacion, forma_pago, cli_clase;
+                                  
+        cajagrandeRBoletines.vmu_preciotot = cajagrandeRBoletines.vmu_precio_uni + cajagrandeRBoletines.vmu_vgarage - cajagrandeRBoletines.vmu_descuentos;
+        
+        if(cajagrandeRBoletines.vmu_tipoinmueb == "C" || cajagrandeRBoletines.vmu_tipoinmueb == "A")
+        {
+           tipounidad = "V"; 
+        }
+        else
+            tipounidad = "C";
+    
+    
+        EXEC SQL
+                        SELECT vir_tasa
+                        FROM vir_imporenta
+                        WHERE vir_tipounidad = :tipounidad
+                        AND vir_precio_min <= :cajagrandeRBoletines.vmu_preciotot
+                        AND vir_precio_max >= :cajagrandeRBoletines.vmu_preciotot
+                        INTO tasa;
+                        
+                    if (session.status != StatusCode.SS_NORM) 
+                    {
+                        session.displayToMessageBox("No se puede seleccionar la tasa para el precio de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ".");
+                        tasa = cero;
+                    }  
+                    
+                    imporenta = ( cajagrandeRBoletines.vmu_preciotot * tasa) / cien;
+    
+        EXEC SQL
+                        UPDATE vuu_unidades
+                        SET vuu_imporenta = :imporenta
+                        WHERE vuu_empresa = :vmu_empresa
+                        AND vuu_obra = :cajagrandeRBoletines.vmu_obra
+                        AND vuu_manzana = :cajagrandeRBoletines.vmu_manzana
+                        AND vuu_unidad = :cajagrandeRBoletines.vmu_unidad;
+                        
+                       if (session.status != StatusCode.SS_NORM) 
+                        {
+                            session.displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ".");
+                        }
+                        else 
+                            session.commitTransaction();
+        
+    }
+    
+    AFTER UPDATE
+    {
+        zero = 0;
+        vlr_ev = cajagrandeRBoletines.vmu_preciotot *  -1;
+        
+        EXEC SQL
+                        UPDATE vcn_comproneg
+                        SET vcn_vlr_compro = :vlr_ev,
+                                vcn_vlr_saldo = (:vlr_ev - vcn_vlr_pago),
+                                vcn_fec_comp = :cajagrandeRBoletines.vmu_f_escritura
+                        WHERE vcn_empresa = :vmu_empresa
+                        AND vcn_obra = :cajagrandeRBoletines.vmu_obra
+                        AND vcn_manzana = :cajagrandeRBoletines.vmu_manzana
+                        AND vcn_unidad = :cajagrandeRBoletines.vmu_unidad
+                        AND vcn_cptopago = 'EV';
+                        
+                         if (session.status != StatusCode.SS_NORM)
+                        {
+                            session.displayToMessageBox("No se puede actualizar el compromiso de EV.");
+                            session.rollbackTransaction();
+                            session.queueCommand("PREVIOUS_FORM");
+                        }
+                        
+                        session.displayToMessageBox("Actualizando el compromiso SB o EC y AE, según el caso.");
+          
+                        if(cajagrandeRBoletines.vmu_forma_pago == "C" )
+                        {
+                                EXEC SQL
+                                                UPDATE vcn_comproneg
+                                                SET vcn_fec_comp = :cajagrandeRBoletines.vmu_f_escritura
+                                                WHERE vcn_empresa = :vmu_empresa
+                                                AND vcn_obra = :cajagrandeRBoletines.vmu_obra
+                                                AND vcn_manzana = :cajagrandeRBoletines.vmu_manzana
+                                                AND vcn_unidad = :cajagrandeRBoletines.vmu_unidad
+                                                AND vcn_cptopago = 'EC';
+                                                
+                                                if (session.status != StatusCode.SS_NORM)
+                                                {
+                                                    session.displayToMessageBox("No se puede actualizar el compromiso de EC.");
+                                                    session.rollbackTransaction();
+                                                    session.queueCommand("PREVIOUS_FORM");
+                                                }
+                                            
+                        }  
+                        else
+                        {
+                                EXEC SQL
+                                                UPDATE vcn_comproneg
+                                                SET vcn_fec_comp = :cajagrandeRBoletines.vmu_f_ent_pacta
+                                                WHERE vcn_empresa = :vmu_empresa
+                                                AND vcn_obra = :cajagrandeRBoletines.vmu_obra
+                                                AND vcn_manzana = :cajagrandeRBoletines.vmu_manzana
+                                                AND vcn_unidad = :cajagrandeRBoletines.vmu_unidad
+                                                AND vcn_cptopago = 'SB';
+                                                
+                                                 if (session.status != StatusCode.SS_NORM)
+                                                {
+                                                    session.displayToMessageBox("No se puede actualizar el compromiso de SB.");
+                                                    session.rollbackTransaction();
+                                                    session.queueCommand("PREVIOUS_FORM");
+                                                }
+                                  
+                                   
+                                     EXEC SQL
+                                                UPDATE vcn_comproneg
+                                                SET vcn_fec_comp = :cajagrandeRBoletines.vmu_f_escritura
+                                                WHERE vcn_empresa = :vmu_empresa
+                                                AND vcn_obra = :cajagrandeRBoletines.vmu_obra
+                                                AND vcn_manzana = :cajagrandeRBoletines.vmu_manzana
+                                                AND vcn_unidad = :cajagrandeRBoletines.vmu_unidad
+                                                AND vcn_cptopago = 'AE';
+                                                
+                                                if(session.status != StatusCode.SS_NORM && session.status != StatusCode.SS_NOREC)
+                                                {
+                                                     session.displayToMessageBox("No se puede actualizar el compromiso de EC.");
+                                                     session.rollbackTransaction();
+                                                     session.queueCommand("PREVIOUS_FORM");
+                                                
+                                                }            
+                                    
+                        }
+                                                    
+            EXEC SQL
+                            UPDATE vuu_unidades
+                            SET vuu_imporenta = :imporenta
+                            WHERE vuu_empresa = :vmu_empresa
+                            AND vuu_obra = :cajagrandeRBoletines.vmu_obra
+                            AND vuu_manzana = :cajagrandeRBoletines.vmu_manzana
+                            AND vuu_unidad = :cajagrandeRBoletines.vmu_unidad;
+                            
+                            if(session.status != StatusCode.SS_NORM)
+                            {
+                                session.displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ".");
+                                session.rollbackTransaction();
+                                session.queueCommand("PREVIOUS_FORM");
+                            } 
+                            else
+                                session.commitTransaction();            
+    }
+
+    AFTER ADD
+    {
+        if(isCurrentRecordStored() == false)
+        {
+            session.displayToMessageBox("El registro no puede ser adicionado. Falta información.");
+            session.rollbackTransaction();
+            session.queueCommand("PREVIOUS_FORM");
+        }
+        else
+        {
+            /**************** CREACIÓN DE TRÁMITES DE NEGOCIO ****************/
         }
     }
 
@@ -136,7 +381,7 @@ FORM RBoletinesFRM
         {
         }
         
-        FIELD vmu__f_entprog
+        FIELD vmu_f_entprog
         {
         }
         

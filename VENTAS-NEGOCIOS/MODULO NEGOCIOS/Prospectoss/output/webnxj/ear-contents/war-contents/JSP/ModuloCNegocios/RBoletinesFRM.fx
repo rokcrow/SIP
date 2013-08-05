@@ -702,28 +702,6 @@
         zoom_form = "Modulo/VendedoresFRM">
     </field>
     <field 
-        accell_type = "Date"
-        binary_variables = ""
-        db_length = "10"
-        db_type = "Date"
-        display_name = "vmu__f_entprog"
-        explicit_search_mode = "default"
-        field_length = "10"
-        field_type = "TEXT"
-        field_weight = "1999"
-        findable = "true"
-        key = "cajagrandeRBoletines:vmu__f_entprog."
-        kind = "date"
-        multi_valued = "true"
-        original_name = "date2"
-        retrieve_value = "true"
-        style_class = "date_picker"
-        target_field = "vmu_f_entprog"
-        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
-        updateable = "true"
-        view = "date">
-    </field>
-    <field 
         accell_type = "String"
         binary_variables = ""
         db_length = "30"
@@ -1039,6 +1017,28 @@
         style_class = "date_picker"
         target_field = "vmu_f_ent_pacta"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845261753"
+        updateable = "true"
+        view = "date">
+    </field>
+    <field 
+        accell_type = "Date"
+        binary_variables = ""
+        db_length = "10"
+        db_type = "Date"
+        display_name = "vmu_f_entprog"
+        explicit_search_mode = "default"
+        field_length = "10"
+        field_type = "TEXT"
+        field_weight = "1999"
+        findable = "true"
+        key = "cajagrandeRBoletines:vmu_f_entprog."
+        kind = "date"
+        multi_valued = "true"
+        original_name = "date2"
+        retrieve_value = "true"
+        style_class = "date_picker"
+        target_field = "vmu_f_entprog"
+        uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371845278478"
         updateable = "true"
         view = "date">
     </field>

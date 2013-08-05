@@ -21,12 +21,12 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("localized","true");
 	widget.addAttribute("fieldheight","1167");
 	widget.addAttribute("displayheight","1167");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("fieldwidth","1199");
-	widget.addStyle("background-color","#999999");
 	widget.addAttribute("stylesheets","");
-	widget.setClass("form");
+	widget.addStyle("background-color","#999999");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","1199");
+	widget.setClass("form");
 	widget.addAttribute("auto_fill","false");
 }
 
@@ -45,12 +45,62 @@ private void setAttrFor_cajagrandeRBoletines__20(Widget widget)
 	widget.addAttribute("displaywidth","1004");
 	widget.addAttribute("displayleft","190");
 	widget.addAttribute("displaytop","30");
+	widget.addAttribute("id","cajagrandeRBoletines.");
+	widget.addStyle("background-color","#cccccc");
 	widget.addAttribute("displayheight","1132");
 	widget.addAttribute("fieldheight","1132");
 	widget.addAttribute("fieldwidth","1004");
-	widget.addStyle("background-color","#cccccc");
 	widget.addStyle("border-color","transparent");
-	widget.addAttribute("id","cajagrandeRBoletines.");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vau_apode_nit__30(Widget widget)
+{
+	widget.addStyle("left","162px");
+	widget.addStyle("top","583px");
+	widget.addStyle("width","45px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vau_apode_nit__40(Widget widget)
+{
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","2699");
+	widget.addAttribute("type","text");
+	widget.setClass("textfield");
+	widget.addAttribute("name","cajagrandeRBoletines:vau_apode_nit.");
+	widget.addAttribute("displaywidth","45");
+	widget.addAttribute("displayleft","162");
+	widget.addAttribute("size","7");
+	widget.addAttribute("displaytop","583");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","45");
+	widget.addStyle("overflow","hidden");
+}
+
+private void setAttrFor_div_vau_apode_nom__30(Widget widget)
+{
+	widget.addStyle("left","211px");
+	widget.addStyle("top","583px");
+	widget.addStyle("width","235px");
+	widget.addStyle("height","22px");
+}
+
+private void setAttrFor_vau_apode_nom__40(Widget widget)
+{
+	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","2799");
+	widget.addAttribute("type","text");
+	widget.setClass("textfield");
+	widget.addAttribute("name","cajagrandeRBoletines:vau_apode_nom.");
+	widget.addAttribute("displaywidth","235");
+	widget.addAttribute("displayleft","211");
+	widget.addAttribute("size","39");
+	widget.addAttribute("displaytop","583");
+	widget.addAttribute("displayheight","22");
+	widget.addAttribute("fieldheight","22");
+	widget.addAttribute("fieldwidth","235");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -66,16 +116,16 @@ private void setAttrFor_area_const__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","799");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:area_const.");
 	widget.addAttribute("displaywidth","80");
 	widget.addAttribute("displayleft","306");
+	widget.addAttribute("size","13");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","13");
 	widget.addAttribute("fieldwidth","80");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -91,16 +141,16 @@ private void setAttrFor_area_lote__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","699");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:area_lote.");
 	widget.addAttribute("displaywidth","80");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","13");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","13");
 	widget.addAttribute("fieldwidth","80");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -121,12 +171,12 @@ private void setAttrFor_box11__40(Widget widget)
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addAttribute("displaytop","1082");
+	widget.addAttribute("id","cajagrandeRBoletines:box11.");
 	widget.addAttribute("displayheight","50");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
-	widget.addAttribute("id","cajagrandeRBoletines:box11.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -140,8 +190,8 @@ private void setAttrFor_div_image1__50(Widget widget)
 
 private void setAttrFor_image1__60(Widget widget)
 {
-	widget.addAttribute("id","cajagrandeRBoletines:box11:image1.");
 	widget.addAttribute("displayheight","46");
+	widget.addAttribute("id","cajagrandeRBoletines:box11:image1.");
 	widget.addAttribute("displaytop","2");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
@@ -165,12 +215,12 @@ private void setAttrFor_cajaarribaRBoletines__40(Widget widget)
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
 	widget.addAttribute("displaytop","2");
+	widget.addAttribute("id","cajagrandeRBoletines:cajaarribaRBoletines.");
 	widget.addAttribute("displayheight","50");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
-	widget.addStyle("background-color","#e30000");
 	widget.addStyle("border-color","transparent");
-	widget.addAttribute("id","cajagrandeRBoletines:cajaarribaRBoletines.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -187,16 +237,16 @@ private void setAttrFor_actualempresa__60(Widget widget)
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:cajaarribaRBoletines:actualempresa.");
 	widget.addAttribute("displaywidth","197");
 	widget.addAttribute("displayleft","16");
+	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","32");
 	widget.addAttribute("fieldwidth","197");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -213,16 +263,16 @@ private void setAttrFor_actualusuario__60(Widget widget)
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_weight","199");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:cajaarribaRBoletines:actualusuario.");
 	widget.addAttribute("displaywidth","110");
 	widget.addAttribute("displayleft","800");
+	widget.addAttribute("size","18");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","18");
 	widget.addAttribute("fieldwidth","110");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -241,11 +291,11 @@ private void setAttrFor_label211__60(Widget widget)
 	widget.addAttribute("displaywidth","55");
 	widget.addAttribute("displayleft","778");
 	widget.addAttribute("displaytop","65");
+	widget.addAttribute("id","cajagrandeRBoletines:cajaarribaRBoletines:label211.");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","14");
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:cajaarribaRBoletines:label211.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -263,11 +313,11 @@ private void setAttrFor_rboletinestxtex__60(Widget widget)
 	widget.addAttribute("displaywidth","522");
 	widget.addAttribute("displayleft","241");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("id","cajagrandeRBoletines:cajaarribaRBoletines:rboletinestxtex.");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","522");
 	widget.addStyle("text-align","left");
 	widget.addAttribute("instancewidth","522");
-	widget.addAttribute("id","cajagrandeRBoletines:cajaarribaRBoletines:rboletinestxtex.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -281,20 +331,20 @@ private void setAttrFor_div_label11__30(Widget widget)
 
 private void setAttrFor_label11__40(Widget widget)
 {
-	widget.addStyle("font-family","Verdana");
 	widget.setClass("label");
 	widget.addAttribute("labeltitle","RegistrodeBoletines");
 	widget.addAttribute("displaywidth","165");
+	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("displayleft","19");
+	widget.addStyle("color","Black");
 	widget.addStyle("font-size","14");
 	widget.addAttribute("displaytop","96");
+	widget.addAttribute("id","cajagrandeRBoletines:label11.");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
-	widget.addAttribute("fieldwidth","165");
 	widget.addStyle("font-weight","bold");
+	widget.addAttribute("fieldwidth","165");
 	widget.addStyle("text-align","left");
-	widget.addStyle("color","Black");
-	widget.addAttribute("id","cajagrandeRBoletines:label11.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -314,11 +364,11 @@ private void setAttrFor_label3__40(Widget widget)
 	widget.addAttribute("displayleft","112");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","127");
+	widget.addAttribute("id","cajagrandeRBoletines:label3.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","63");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -338,11 +388,11 @@ private void setAttrFor_label31__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","183");
+	widget.addAttribute("id","cajagrandeRBoletines:label31.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","31");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -362,11 +412,11 @@ private void setAttrFor_label311__40(Widget widget)
 	widget.addAttribute("displayleft","306");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","183");
+	widget.addAttribute("id","cajagrandeRBoletines:label311.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","57");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label311.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -386,11 +436,11 @@ private void setAttrFor_label3111__40(Widget widget)
 	widget.addAttribute("displayleft","511");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","183");
+	widget.addAttribute("id","cajagrandeRBoletines:label3111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","44");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -410,11 +460,11 @@ private void setAttrFor_label31111__40(Widget widget)
 	widget.addAttribute("displayleft","729");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","183");
+	widget.addAttribute("id","cajagrandeRBoletines:label31111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","63");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -434,11 +484,11 @@ private void setAttrFor_label311111__40(Widget widget)
 	widget.addAttribute("displayleft","511");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","239");
+	widget.addAttribute("id","cajagrandeRBoletines:label311111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","84");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label311111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -458,11 +508,11 @@ private void setAttrFor_label3111111__40(Widget widget)
 	widget.addAttribute("displayleft","729");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","239");
+	widget.addAttribute("id","cajagrandeRBoletines:label3111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","82");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -482,11 +532,11 @@ private void setAttrFor_label31111111__40(Widget widget)
 	widget.addAttribute("displayleft","511");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","295");
+	widget.addAttribute("id","cajagrandeRBoletines:label31111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","78");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -506,11 +556,11 @@ private void setAttrFor_label311111111__40(Widget widget)
 	widget.addAttribute("displayleft","729");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","351");
+	widget.addAttribute("id","cajagrandeRBoletines:label311111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","84");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label311111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -530,11 +580,11 @@ private void setAttrFor_label31111112__40(Widget widget)
 	widget.addAttribute("displayleft","729");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","295");
+	widget.addAttribute("id","cajagrandeRBoletines:label31111112.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","77");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31111112.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -554,11 +604,11 @@ private void setAttrFor_label312__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","239");
+	widget.addAttribute("id","cajagrandeRBoletines:label312.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","61");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label312.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -578,11 +628,11 @@ private void setAttrFor_label3121__40(Widget widget)
 	widget.addAttribute("displayleft","306");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","239");
+	widget.addAttribute("id","cajagrandeRBoletines:label3121.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","102");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3121.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -602,11 +652,11 @@ private void setAttrFor_label313__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","295");
+	widget.addAttribute("id","cajagrandeRBoletines:label313.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","44");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -626,11 +676,11 @@ private void setAttrFor_label3131__40(Widget widget)
 	widget.addAttribute("displayleft","306");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","295");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","59");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3131.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -650,11 +700,11 @@ private void setAttrFor_label31311__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","351");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","75");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31311.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -674,11 +724,11 @@ private void setAttrFor_label313111__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","446");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","70");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -698,11 +748,11 @@ private void setAttrFor_label3131111__40(Widget widget)
 	widget.addAttribute("displayleft","306");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","446");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","55");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3131111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -722,11 +772,11 @@ private void setAttrFor_label313111111__40(Widget widget)
 	widget.addAttribute("displayleft","511");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","446");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","105");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -746,11 +796,11 @@ private void setAttrFor_label3131111111__40(Widget widget)
 	widget.addAttribute("displayleft","729");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","446");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","131");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3131111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -770,11 +820,11 @@ private void setAttrFor_label31311111111__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","502");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","79");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31311111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -794,11 +844,11 @@ private void setAttrFor_label313111111111__40(Widget widget)
 	widget.addAttribute("displayleft","414");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","502");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","38");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313111111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -818,11 +868,11 @@ private void setAttrFor_label3131111111111__40(Widget widget)
 	widget.addAttribute("displayleft","732");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","502");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","68");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3131111111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -842,11 +892,11 @@ private void setAttrFor_label313111111112__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","558");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","56");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313111111112.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -866,11 +916,11 @@ private void setAttrFor_label3131111111121__40(Widget widget)
 	widget.addAttribute("displayleft","566");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","558");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","76");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -890,11 +940,11 @@ private void setAttrFor_label31311111111211__40(Widget widget)
 	widget.addAttribute("displayleft","465");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","558");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","53");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -914,11 +964,11 @@ private void setAttrFor_label313111111112111__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","614");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","56");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -938,11 +988,11 @@ private void setAttrFor_label3131111111121111__40(Widget widget)
 	widget.addAttribute("displayleft","465");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","614");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","44");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -962,11 +1012,11 @@ private void setAttrFor_label31311111111211111__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","670");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","100");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -986,11 +1036,11 @@ private void setAttrFor_label313111111112111111__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","726");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111111.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","128");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111111.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1010,11 +1060,11 @@ private void setAttrFor_label3131111111121112__40(Widget widget)
 	widget.addAttribute("displayleft","465");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","670");
+	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121112.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","45");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label3131111111121112.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1034,11 +1084,11 @@ private void setAttrFor_label31311111111211121__40(Widget widget)
 	widget.addAttribute("displayleft","465");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","726");
+	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211121.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","45");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label31311111111211121.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1058,11 +1108,11 @@ private void setAttrFor_label313111111112111211__40(Widget widget)
 	widget.addAttribute("displayleft","110");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","782");
+	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111211.");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","78");
 	widget.addStyle("text-align","left");
-	widget.addAttribute("id","cajagrandeRBoletines:label313111111112111211.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1078,16 +1128,16 @@ private void setAttrFor_nombre_banco__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","2399");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:nombre_banco.");
 	widget.addAttribute("displaywidth","235");
 	widget.addAttribute("displayleft","465");
+	widget.addAttribute("size","39");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","39");
 	widget.addAttribute("fieldwidth","235");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1103,16 +1153,16 @@ private void setAttrFor_number__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","4099");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:number.");
 	widget.addAttribute("displaywidth","39");
 	widget.addAttribute("displayleft","140");
+	widget.addAttribute("size","6");
 	widget.addAttribute("displaytop","970");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","6");
 	widget.addAttribute("fieldwidth","39");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1126,17 +1176,17 @@ private void setAttrFor_div_tabset1__30(Widget widget)
 
 private void setAttrFor_tabset1__40(Widget widget)
 {
-	widget.addAttribute("field_weight","4199");
 	widget.addAttribute("elevator","true");
-	widget.addStyle("font-family","Calibri");
+	widget.addAttribute("field_weight","4199");
 	widget.setClass("tab_set");
 	widget.addAttribute("displaywidth","262");
+	widget.addStyle("font-family","Calibri");
 	widget.addAttribute("displayleft","376");
 	widget.addAttribute("displaytop","938");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1.");
 	widget.addAttribute("displayheight","85");
 	widget.addAttribute("fieldheight","85");
 	widget.addAttribute("fieldwidth","262");
-	widget.addAttribute("id","cajagrandeRBoletines:tabset1.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJNotebook.js");
@@ -1145,93 +1195,43 @@ private void setAttrFor_tabset1__40(Widget widget)
 
 private void setAttrFor_tab1__50(Widget widget)
 {
-	widget.addAttribute("tabselect_parameter","ModuloCNegocios.Form1");
-	widget.addAttribute("field_weight","99");
 	widget.addAttribute("notebook_title","IdentificaciondeCompradores");
-	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab1.");
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("tabselect_parameter","ModuloCNegocios.Form1");
 	widget.addAttribute("displayheight","250");
-	widget.addAttribute("nxj_tabselect","Go To Form");
-	widget.addAttribute("displaywidth","250");
 	widget.addStyle("background-color","transparent");
+	widget.addAttribute("nxj_tabselect","Go To Form");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab1.");
 	widget.setClass("selected_tab");
+	widget.addAttribute("displaywidth","250");
 	widget.addStyle("overflow","hidden");
 }
 
 private void setAttrFor_tab2__50(Widget widget)
 {
-	widget.addAttribute("tabselect_parameter","ModuloCNegocios.Form2");
-	widget.addAttribute("field_weight","199");
 	widget.addAttribute("notebook_title","InformacionAdicionaldeClientes");
-	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab2.");
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("tabselect_parameter","ModuloCNegocios.Form2");
 	widget.addAttribute("displayheight","250");
-	widget.addAttribute("nxj_tabselect","Go To Form");
-	widget.addAttribute("displaywidth","250");
 	widget.addStyle("background-color","transparent");
+	widget.addAttribute("nxj_tabselect","Go To Form");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab2.");
 	widget.setClass("selected_tab");
+	widget.addAttribute("displaywidth","250");
 	widget.addStyle("overflow","hidden");
 }
 
 private void setAttrFor_tab3__50(Widget widget)
 {
-	widget.addAttribute("tabselect_parameter","ModuloCNegocios.Form3");
-	widget.addAttribute("field_weight","299");
 	widget.addAttribute("notebook_title","CompromisosdelNegocio");
-	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab3.");
+	widget.addAttribute("field_weight","299");
+	widget.addAttribute("tabselect_parameter","ModuloCNegocios.Form3");
 	widget.addAttribute("displayheight","250");
-	widget.addAttribute("nxj_tabselect","Go To Form");
-	widget.addAttribute("displaywidth","250");
 	widget.addStyle("background-color","transparent");
+	widget.addAttribute("nxj_tabselect","Go To Form");
+	widget.addAttribute("id","cajagrandeRBoletines:tabset1:tab3.");
 	widget.setClass("selected_tab");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vau_apode_nit__30(Widget widget)
-{
-	widget.addStyle("left","162px");
-	widget.addStyle("top","583px");
-	widget.addStyle("width","45px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vau_apode_nit__40(Widget widget)
-{
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("field_weight","2699");
-	widget.setClass("textfield");
-	widget.addAttribute("name","cajagrandeRBoletines:vau_apode_nit.");
-	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("displayleft","162");
-	widget.addAttribute("displaytop","583");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","7");
-	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("type","text");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_vau_apode_nom__30(Widget widget)
-{
-	widget.addStyle("left","211px");
-	widget.addStyle("top","583px");
-	widget.addStyle("width","235px");
-	widget.addStyle("height","22px");
-}
-
-private void setAttrFor_vau_apode_nom__40(Widget widget)
-{
-	widget.addAttribute("field_type","text");
-	widget.addAttribute("field_weight","2799");
-	widget.setClass("textfield");
-	widget.addAttribute("name","cajagrandeRBoletines:vau_apode_nom.");
-	widget.addAttribute("displaywidth","235");
-	widget.addAttribute("displayleft","211");
-	widget.addAttribute("displaytop","583");
-	widget.addAttribute("displayheight","22");
-	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","39");
-	widget.addAttribute("fieldwidth","235");
-	widget.addAttribute("type","text");
+	widget.addAttribute("displaywidth","250");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1245,19 +1245,19 @@ private void setAttrFor_div_vau_apoderado__30(Widget widget)
 
 private void setAttrFor_vau_apoderado__40(Widget widget)
 {
-	widget.addAttribute("field_type","SELECT");
-	widget.addAttribute("field_weight","2599");
-	widget.addAttribute("options","SI=S;No=N");
-	widget.addStyle("visibility","visible");
 	widget.addAttribute("immediate","false");
+	widget.addAttribute("field_type","SELECT");
+	widget.addStyle("visibility","visible");
+	widget.addAttribute("options","SI=S;No=N");
+	widget.addAttribute("field_weight","2599");
 	widget.setClass("dropdown_list");
 	widget.addAttribute("name","cajagrandeRBoletines:vau_apoderado.");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","584");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","45");
 	widget.addStyle("overflow","hidden");
 }
@@ -1272,25 +1272,25 @@ private void setAttrFor_div_vma_ven_responsa__30(Widget widget)
 
 private void setAttrFor_vma_ven_responsa__40(Widget widget)
 {
+	widget.addAttribute("immediate","true");
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","2099");
-	widget.addAttribute("immediate","true");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vma_ven_responsa.");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","7");
+	widget.addStyle("color","Black");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","7");
 	widget.addAttribute("fieldwidth","45");
-	widget.addStyle("color","Black");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vmu__f_entprog__30(Widget widget)
+private void setAttrFor_div_vmu_f_entprog__30(Widget widget)
 {
 	widget.addStyle("left","729px");
 	widget.addStyle("top","472px");
@@ -1298,7 +1298,7 @@ private void setAttrFor_div_vmu__f_entprog__30(Widget widget)
 	widget.addStyle("height","22px");
 }
 
-private void setAttrFor_vmu__f_entprog__40(Widget widget)
+private void setAttrFor_vmu_f_entprog__40(Widget widget)
 {
 	widget.addAttribute("field_type","TEXT");
 	widget.addAttribute("field_weight","1999");
@@ -1306,14 +1306,14 @@ private void setAttrFor_vmu__f_entprog__40(Widget widget)
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","729");
 	widget.addAttribute("displaytop","472");
+	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_entprog.");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","cajagrandeRBoletines:vmu__f_entprog.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
-	widget.addAttribute("jsinit","window.namesToComponents['cajagrandeRBoletines:vmu__f_entprog.'] = new NXJDatePicker('cajagrandeRBoletines:vmu__f_entprog.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content/', '', '', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
+	widget.addAttribute("jsinit","window.namesToComponents['cajagrandeRBoletines:vmu_f_entprog.'] = new NXJDatePicker('cajagrandeRBoletines:vmu_f_entprog.', 'date_picker', ' ime-mode: disabled', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS-NEGOCIOS/MODULO NEGOCIOS/Prospectoss/sources/Static_Content/', '', '', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'dd/MM/yyyy');");
 	widget.addStyle("width","165");
 	widget.addStyle("height","22");
 	widget.addStyle("background-color","#cccccc");
@@ -1336,10 +1336,10 @@ private void setAttrFor_vmu_cli_ciudad__40(Widget widget)
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_cli_ciudad.");
 	widget.addAttribute("displaywidth","240");
 	widget.addAttribute("displayleft","465");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","639");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","240");
 	widget.addStyle("overflow","hidden");
 }
@@ -1356,16 +1356,16 @@ private void setAttrFor_vmu_cli_ciunit__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","3199");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_cli_ciunit.");
 	widget.addAttribute("displaywidth","235");
 	widget.addAttribute("displayleft","663");
+	widget.addAttribute("size","39");
 	widget.addAttribute("displaytop","583");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","39");
 	widget.addAttribute("fieldwidth","235");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1379,18 +1379,18 @@ private void setAttrFor_div_vmu_cli_clase__30(Widget widget)
 
 private void setAttrFor_vmu_cli_clase__40(Widget widget)
 {
-	widget.addAttribute("auto_resize_width","true");
 	widget.addAttribute("field_type","SELECT");
-	widget.addAttribute("field_weight","1099");
 	widget.addAttribute("options","PagaelCliente=C;NoLiquidar=N;Promocion=P");
+	widget.addAttribute("field_weight","1099");
+	widget.addAttribute("auto_resize_width","true");
 	widget.setClass("dropdown_list");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_cli_clase.");
 	widget.addAttribute("displaywidth","115");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","321");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","115");
 	widget.addStyle("overflow","hidden");
 }
@@ -1411,13 +1411,13 @@ private void setAttrFor_vmu_cli_corres__40(Widget widget)
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_cli_corres.");
 	widget.addAttribute("displaywidth","240");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","1");
+	widget.addStyle("color","Black");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","640");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","240");
-	widget.addStyle("color","Black");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1433,16 +1433,16 @@ private void setAttrFor_vmu_cli_registro__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","3099");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_cli_registro.");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","613");
+	widget.addAttribute("size","7");
 	widget.addAttribute("displaytop","583");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","7");
 	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1458,16 +1458,16 @@ private void setAttrFor_vmu_cli_telof__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","3499");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_cli_telof.");
 	widget.addAttribute("displaywidth","90");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","15");
 	widget.addAttribute("displaytop","696");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","15");
 	widget.addAttribute("fieldwidth","90");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1483,16 +1483,16 @@ private void setAttrFor_vmu_cli_telre__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","3699");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_cli_telre.");
 	widget.addAttribute("displaywidth","90");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","15");
 	widget.addAttribute("displaytop","752");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","15");
 	widget.addAttribute("fieldwidth","90");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1508,16 +1508,16 @@ private void setAttrFor_vmu_corporacion__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","2299");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_corporacion.");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","414");
+	widget.addAttribute("size","7");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","7");
 	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1533,16 +1533,16 @@ private void setAttrFor_vmu_correo__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","3599");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_correo.");
 	widget.addAttribute("displaywidth","240");
 	widget.addAttribute("displayleft","465");
+	widget.addAttribute("size","40");
 	widget.addAttribute("displaytop","696");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","40");
 	widget.addAttribute("fieldwidth","240");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1558,16 +1558,16 @@ private void setAttrFor_vmu_correo2__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","3799");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_correo2.");
 	widget.addAttribute("displaywidth","240");
 	widget.addAttribute("displayleft","465");
+	widget.addAttribute("size","40");
 	widget.addAttribute("displaytop","752");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","40");
 	widget.addAttribute("fieldwidth","240");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1583,16 +1583,16 @@ private void setAttrFor_vmu_descuentos__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","1299");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_descuentos.");
 	widget.addAttribute("displaywidth","150");
 	widget.addAttribute("displayleft","511");
+	widget.addAttribute("size","25");
 	widget.addAttribute("displaytop","320");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","25");
 	widget.addAttribute("fieldwidth","150");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1606,17 +1606,17 @@ private void setAttrFor_div_vmu_est_hipote__30(Widget widget)
 
 private void setAttrFor_vmu_est_hipote__40(Widget widget)
 {
-	widget.addAttribute("options","SI=S;No=N");
 	widget.addAttribute("field_type","SELECT");
+	widget.addAttribute("options","SI=S;No=N");
 	widget.addAttribute("field_weight","2999");
 	widget.setClass("dropdown_list");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_est_hipote.");
 	widget.addAttribute("displaywidth","42");
 	widget.addAttribute("displayleft","566");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","584");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","42");
 	widget.addStyle("overflow","hidden");
 }
@@ -1631,17 +1631,17 @@ private void setAttrFor_div_vmu_est_unidad__30(Widget widget)
 
 private void setAttrFor_vmu_est_unidad__40(Widget widget)
 {
-	widget.addAttribute("options","SI=S;No=N");
 	widget.addAttribute("field_type","SELECT");
+	widget.addAttribute("options","SI=S;No=N");
 	widget.addAttribute("field_weight","2899");
 	widget.setClass("dropdown_list");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_est_unidad.");
 	widget.addAttribute("displaywidth","42");
 	widget.addAttribute("displayleft","465");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","584");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","42");
 	widget.addStyle("overflow","hidden");
 }
@@ -1662,10 +1662,10 @@ private void setAttrFor_vmu_f_ent_pacta__40(Widget widget)
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","511");
 	widget.addAttribute("displaytop","472");
+	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_ent_pacta.");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_ent_pacta.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -1692,10 +1692,10 @@ private void setAttrFor_vmu_f_escritura__40(Widget widget)
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","306");
 	widget.addAttribute("displaytop","472");
+	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_escritura.");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_escritura.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -1722,10 +1722,10 @@ private void setAttrFor_vmu_f_gravacion__40(Widget widget)
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","153");
+	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_gravacion.");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_gravacion.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -1752,10 +1752,10 @@ private void setAttrFor_vmu_f_separacion__40(Widget widget)
 	widget.addAttribute("displaywidth","165");
 	widget.addAttribute("displayleft","110");
 	widget.addAttribute("displaytop","472");
+	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_separacion.");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","165");
-	widget.addAttribute("id","cajagrandeRBoletines:vmu_f_separacion.");
 	widget.addStyle("overflow","hidden");
 	widget.suppressAttribute("name");
 	widget.addAttribute("jsinclude","NXJDatePicker.js");
@@ -1776,17 +1776,17 @@ private void setAttrFor_div_vmu_forma_pago__30(Widget widget)
 
 private void setAttrFor_vmu_forma_pago__40(Widget widget)
 {
-	widget.addAttribute("options","Contado=C;Credito=D");
 	widget.addAttribute("field_type","SELECT");
+	widget.addAttribute("options","Contado=C;Credito=D");
 	widget.addAttribute("field_weight","1499");
 	widget.setClass("dropdown_list");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_forma_pago.");
 	widget.addAttribute("displaywidth","115");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","377");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","115");
 	widget.addStyle("overflow","hidden");
 }
@@ -1803,16 +1803,16 @@ private void setAttrFor_vmu_manzana__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","399");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_manzana.");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","306");
+	widget.addAttribute("size","7");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","7");
 	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1828,16 +1828,16 @@ private void setAttrFor_vmu_ngarage__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","599");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_ngarage.");
 	widget.addAttribute("displaywidth","80");
 	widget.addAttribute("displayleft","729");
+	widget.addAttribute("size","13");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","13");
 	widget.addAttribute("fieldwidth","80");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1853,16 +1853,16 @@ private void setAttrFor_vmu_obra__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","299");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_obra.");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","7");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","7");
 	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1878,16 +1878,16 @@ private void setAttrFor_vmu_precio_uni__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","899");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_precio_uni.");
 	widget.addAttribute("displaywidth","150");
 	widget.addAttribute("displayleft","511");
+	widget.addAttribute("size","25");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","25");
 	widget.addAttribute("fieldwidth","150");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1903,16 +1903,16 @@ private void setAttrFor_vmu_preciotot__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","1399");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_preciotot.");
 	widget.addAttribute("displaywidth","150");
 	widget.addAttribute("displayleft","729");
+	widget.addAttribute("size","25");
 	widget.addAttribute("displaytop","320");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","25");
 	widget.addAttribute("fieldwidth","150");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1927,15 +1927,15 @@ private void setAttrFor_div_vmu_promocion1__30(Widget widget)
 private void setAttrFor_vmu_promocion1__40(Widget widget)
 {
 	widget.addAttribute("field_type","TEXTAREA");
-	widget.addAttribute("field_weight","3899");
 	widget.addAttribute("auto_select","true");
+	widget.addAttribute("field_weight","3899");
 	widget.setClass("textarea");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_promocion1.");
 	widget.addAttribute("displaywidth","789");
 	widget.addAttribute("displayleft","110");
-	widget.addAttribute("cols","71");
-	widget.addAttribute("displaytop","804");
 	widget.addAttribute("rows","4");
+	widget.addAttribute("displaytop","804");
+	widget.addAttribute("cols","71");
 	widget.addAttribute("displayheight","74");
 	widget.addAttribute("fieldheight","74");
 	widget.addAttribute("fieldwidth","789");
@@ -1954,16 +1954,16 @@ private void setAttrFor_vmu_promocion2__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","3999");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_promocion2.");
 	widget.addAttribute("displaywidth","789");
 	widget.addAttribute("displayleft","110");
+	widget.addAttribute("size","131");
 	widget.addAttribute("displaytop","890");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","131");
 	widget.addAttribute("fieldwidth","789");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -1977,18 +1977,18 @@ private void setAttrFor_div_vmu_tipoinmueb__30(Widget widget)
 
 private void setAttrFor_vmu_tipoinmueb__40(Widget widget)
 {
-	widget.addAttribute("options","Apartamento=A;Casa;Local=L");
 	widget.addAttribute("field_type","SELECT");
 	widget.addAttribute("auto_resize_width","true");
+	widget.addAttribute("options","Apartamento=A;Casa;Local=L");
 	widget.addAttribute("field_weight","1199");
 	widget.setClass("dropdown_list");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_tipoinmueb.");
 	widget.addAttribute("displaywidth","115");
 	widget.addAttribute("displayleft","306");
+	widget.addAttribute("size","1");
 	widget.addAttribute("displaytop","321");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
 	widget.addAttribute("fieldwidth","115");
 	widget.addStyle("overflow","hidden");
 }
@@ -2005,16 +2005,16 @@ private void setAttrFor_vmu_tramite__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","2499");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_tramite.");
 	widget.addAttribute("displaywidth","80");
 	widget.addAttribute("displayleft","732");
+	widget.addAttribute("size","13");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","13");
 	widget.addAttribute("fieldwidth","80");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -2030,16 +2030,16 @@ private void setAttrFor_vmu_unidad__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","499");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_unidad.");
 	widget.addAttribute("displaywidth","45");
 	widget.addAttribute("displayleft","511");
+	widget.addAttribute("size","7");
 	widget.addAttribute("displaytop","209");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","7");
 	widget.addAttribute("fieldwidth","45");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -2055,16 +2055,16 @@ private void setAttrFor_vmu_vdeposito__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","1599");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_vdeposito.");
 	widget.addAttribute("displaywidth","150");
 	widget.addAttribute("displayleft","729");
+	widget.addAttribute("size","25");
 	widget.addAttribute("displaytop","376");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","25");
 	widget.addAttribute("fieldwidth","150");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -2080,16 +2080,16 @@ private void setAttrFor_vmu_vgarage__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","999");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vmu_vgarage.");
 	widget.addAttribute("displaywidth","150");
 	widget.addAttribute("displayleft","729");
+	widget.addAttribute("size","25");
 	widget.addAttribute("displaytop","265");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","25");
 	widget.addAttribute("fieldwidth","150");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -2105,18 +2105,18 @@ private void setAttrFor_vve_nombre__40(Widget widget)
 {
 	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","2199");
+	widget.addAttribute("type","text");
 	widget.setClass("textfield");
 	widget.addAttribute("name","cajagrandeRBoletines:vve_nombre.");
 	widget.addAttribute("displaywidth","235");
 	widget.addAttribute("displayleft","160");
+	widget.addAttribute("size","39");
+	widget.addStyle("color","Black");
 	widget.addStyle("font-size","12");
 	widget.addAttribute("displaytop","528");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("size","39");
 	widget.addAttribute("fieldwidth","235");
-	widget.addStyle("color","Black");
-	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_cajagrandeRBoletines__10(Widget div_cajagrandeRBoletines__10)
@@ -2127,6 +2127,26 @@ private void dodiv_cajagrandeRBoletines__10(Widget div_cajagrandeRBoletines__10)
         {
         ((ContainerWidget)div_cajagrandeRBoletines__10).addComponent(cajagrandeRBoletines__20,"cajagrandeRBoletines_");
         setAttrFor_cajagrandeRBoletines__20(cajagrandeRBoletines__20);
+        DivPanelWidget div_vau_apode_nit__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vau_apode_nit__30,"div_vau_apode_nit_");
+            setAttrFor_div_vau_apode_nit__30(div_vau_apode_nit__30);
+            TextWidget vau_apode_nit__40 = new TextWidget();
+                {
+                ((ContainerWidget)div_vau_apode_nit__30).addComponent(vau_apode_nit__40,"vau_apode_nit_");
+                setAttrFor_vau_apode_nit__40(vau_apode_nit__40);
+                }
+            }
+        DivPanelWidget div_vau_apode_nom__30 = new DivPanelWidget();
+            {
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vau_apode_nom__30,"div_vau_apode_nom_");
+            setAttrFor_div_vau_apode_nom__30(div_vau_apode_nom__30);
+            TextWidget vau_apode_nom__40 = new TextWidget();
+                {
+                ((ContainerWidget)div_vau_apode_nom__30).addComponent(vau_apode_nom__40,"vau_apode_nom_");
+                setAttrFor_vau_apode_nom__40(vau_apode_nom__40);
+                }
+            }
         DivPanelWidget div_area_const__30 = new DivPanelWidget();
             {
             ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_area_const__30,"div_area_const_");
@@ -2592,26 +2612,6 @@ private void dodiv_cajagrandeRBoletines__10(Widget div_cajagrandeRBoletines__10)
                     }
                 }
             }
-        DivPanelWidget div_vau_apode_nit__30 = new DivPanelWidget();
-            {
-            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vau_apode_nit__30,"div_vau_apode_nit_");
-            setAttrFor_div_vau_apode_nit__30(div_vau_apode_nit__30);
-            TextWidget vau_apode_nit__40 = new TextWidget();
-                {
-                ((ContainerWidget)div_vau_apode_nit__30).addComponent(vau_apode_nit__40,"vau_apode_nit_");
-                setAttrFor_vau_apode_nit__40(vau_apode_nit__40);
-                }
-            }
-        DivPanelWidget div_vau_apode_nom__30 = new DivPanelWidget();
-            {
-            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vau_apode_nom__30,"div_vau_apode_nom_");
-            setAttrFor_div_vau_apode_nom__30(div_vau_apode_nom__30);
-            TextWidget vau_apode_nom__40 = new TextWidget();
-                {
-                ((ContainerWidget)div_vau_apode_nom__30).addComponent(vau_apode_nom__40,"vau_apode_nom_");
-                setAttrFor_vau_apode_nom__40(vau_apode_nom__40);
-                }
-            }
         DivPanelWidget div_vau_apoderado__30 = new DivPanelWidget();
             {
             ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vau_apoderado__30,"div_vau_apoderado_");
@@ -2632,14 +2632,14 @@ private void dodiv_cajagrandeRBoletines__10(Widget div_cajagrandeRBoletines__10)
                 setAttrFor_vma_ven_responsa__40(vma_ven_responsa__40);
                 }
             }
-        DivPanelWidget div_vmu__f_entprog__30 = new DivPanelWidget();
+        DivPanelWidget div_vmu_f_entprog__30 = new DivPanelWidget();
             {
-            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vmu__f_entprog__30,"div_vmu__f_entprog_");
-            setAttrFor_div_vmu__f_entprog__30(div_vmu__f_entprog__30);
-            DatePickerWidget vmu__f_entprog__40 = new DatePickerWidget();
+            ((ContainerWidget)cajagrandeRBoletines__20).addComponent(div_vmu_f_entprog__30,"div_vmu_f_entprog_");
+            setAttrFor_div_vmu_f_entprog__30(div_vmu_f_entprog__30);
+            DatePickerWidget vmu_f_entprog__40 = new DatePickerWidget();
                 {
-                ((ContainerWidget)div_vmu__f_entprog__30).addComponent(vmu__f_entprog__40,"vmu__f_entprog_");
-                setAttrFor_vmu__f_entprog__40(vmu__f_entprog__40);
+                ((ContainerWidget)div_vmu_f_entprog__30).addComponent(vmu_f_entprog__40,"vmu_f_entprog_");
+                setAttrFor_vmu_f_entprog__40(vmu_f_entprog__40);
                 }
             }
         DivPanelWidget div_vmu_cli_ciudad__30 = new DivPanelWidget();
