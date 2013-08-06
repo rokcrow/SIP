@@ -19,13 +19,13 @@ dodiv_vmu_garage1__10(div_vmu_garage1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displaywidth","700");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displayheight","600");
 	widget.addAttribute("fieldheight","600");
 	widget.addAttribute("fieldwidth","700");
+	widget.setClass("form");
 }
 
 private void setAttrFor_div_textfield1__10(Widget widget)
@@ -38,18 +38,18 @@ private void setAttrFor_div_textfield1__10(Widget widget)
 
 private void setAttrFor_textfield1__20(Widget widget)
 {
-	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("field_type","text");
 	widget.addAttribute("type","text");
-	widget.setClass("textfield");
-	widget.addAttribute("name","textfield1.");
 	widget.addAttribute("displaywidth","194");
+	widget.addAttribute("name","textfield1.");
 	widget.addAttribute("displayleft","169");
 	widget.addAttribute("size","32");
 	widget.addAttribute("displaytop","71");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","194");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -63,18 +63,18 @@ private void setAttrFor_div_vmu_garage1__10(Widget widget)
 
 private void setAttrFor_vmu_garage1__20(Widget widget)
 {
-	widget.addAttribute("field_type","text");
 	widget.addAttribute("field_weight","199");
+	widget.addAttribute("field_type","text");
 	widget.addAttribute("type","text");
-	widget.setClass("textfield");
-	widget.addAttribute("name","vmu_garage1.");
 	widget.addAttribute("displaywidth","199");
+	widget.addAttribute("name","vmu_garage1.");
 	widget.addAttribute("displayleft","50");
 	widget.addAttribute("size","33");
 	widget.addAttribute("displaytop","248");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","199");
+	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_textfield1__10(Widget div_textfield1__10)

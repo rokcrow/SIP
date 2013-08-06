@@ -1,5 +1,6 @@
 package ModuloCNegocios;
 
+import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import com.unify.nxj.mgr.LotusMigration;
@@ -134,9 +135,12 @@ public class RBoletinesFRM
     NullableString garage3 = NullableFactory.createNullableString("garage3");
     NullableString garage2 = NullableFactory.createNullableString("garage2");
     NullableString garage1 = NullableFactory.createNullableString("garage1");
+    NullableString vut_tramite = NullableFactory.createNullableString("vut_tramite");
+    NullableString vut_etapa = NullableFactory.createNullableString("vut_etapa");
     NullableString tipounidad = NullableFactory.createNullableString("tipounidad");
     NullableNumeric adiciona = NullableFactory.createNullableNumeric("adiciona");
     NullableNumeric adicionando = NullableFactory.createNullableNumeric("adicionando");
+    NullableDate vut_f_real = NullableFactory.createNullableDate("vut_f_real");
     NullableDate f_separacion = NullableFactory.createNullableDate("f_separacion");
 
     public void beforeForm()
@@ -509,7 +513,7 @@ public class RBoletinesFRM
 	    }
 	if (getSession().getStatus() != StatusCode.SS_NORM)
 	    {
-	    getSession().displayToMessageBox("No se puede seleccionar la tasa para el precio de la unidad, " + cajagrandeRBoletines.vmu_obra.toString() + ", " + cajagrandeRBoletines.vmu_manzana.toString() + ", " + cajagrandeRBoletines.vmu_unidad.toString() + ".");
+	    getSession().displayToMessageBox("No se puede seleccionar la tasa para el precio de la unidad, " + cajagrandeRBoletines.vmu_obra.toString() + ", " + cajagrandeRBoletines.vmu_manzana.toString() + ", " + cajagrandeRBoletines.vmu_unidad.toString() + ", " + getSession().getStatus() + ".");
 	    tasa.assign(us$registerPool.allocateRegister().load(cero));
 	    }
 	imporenta.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_preciotot).mulOp(us$registerPool.allocateRegister().load(tasa)).divOp(us$registerPool.allocateRegister().load(cien)));
@@ -548,7 +552,7 @@ public class RBoletinesFRM
 	    }
 	if (getSession().getStatus() != StatusCode.SS_NORM)
 	    {
-	    getSession().displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, " + cajagrandeRBoletines.vmu_obra.toString() + ", " + cajagrandeRBoletines.vmu_manzana.toString() + ", " + cajagrandeRBoletines.vmu_unidad.toString() + ".");
+	    getSession().displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, " + cajagrandeRBoletines.vmu_obra.toString() + ", " + cajagrandeRBoletines.vmu_manzana.toString() + ", " + cajagrandeRBoletines.vmu_unidad.toString() + ", " + getSession().getStatus() + ".");
 	    }
 	else
 	    getSession().commitTransaction();
@@ -760,7 +764,7 @@ public class RBoletinesFRM
 	    }
 	if (getSession().getStatus() != StatusCode.SS_NORM)
 	    {
-	    getSession().displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, " + cajagrandeRBoletines.vmu_obra.toString() + ", " + cajagrandeRBoletines.vmu_manzana.toString() + ", " + cajagrandeRBoletines.vmu_unidad.toString() + ".");
+	    getSession().displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, " + cajagrandeRBoletines.vmu_obra.toString() + ", " + cajagrandeRBoletines.vmu_manzana.toString() + ", " + cajagrandeRBoletines.vmu_unidad.toString() + ", " + getSession().getStatus() + ".");
 	    getSession().rollbackTransaction();
 	    getSession().queueCommand("PREVIOUS_FORM");
 	    }
@@ -771,11 +775,206 @@ public class RBoletinesFRM
     public void afterAdd()
 	throws Exception
     {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 	if (isCurrentRecordStored() == false)
 	    {
 	    getSession().displayToMessageBox("El registro no puede ser adicionado. Falta informaci\u00F3n.");
 	    getSession().rollbackTransaction();
 	    getSession().queueCommand("PREVIOUS_FORM");
+	    }
+	else
+	    {
+	    if (1 == 1)
+		{
+		getSession().displayToMessageBox("No se pudo generar los TR\u00C1MITES del Negocio");
+		getSession().rollbackTransaction();
+		getSession().queueCommand("PREVIOUS_FORM");
+		}
+
+		{
+		getSession().us$setStatus(StatusCode.SS_NORM);
+		NXJDataConnection us$conn15 = getConnection();
+		java.sql.PreparedStatement us$stmt15 = null;
+		ResultSet us$rs15 = null;
+		try
+		    {
+		    us$stmt15 = us$conn15.prepareStatement("SELECT vut_etapa, vut_tramite, vut_f_real FROM vut_tramites WHERE vut_empresa =  ?  AND vut_obra =  ?  AND vut_manzana =  ?  AND vut_unidad =  ?  AND vut_f_real is not NULL");
+		    vmu_empresa.us$setSqlParameterValue(us$stmt15, 1);
+		    cajagrandeRBoletines.vmu_obra.us$setSqlParameterValue(us$stmt15, 2);
+		    cajagrandeRBoletines.vmu_manzana.us$setSqlParameterValue(us$stmt15, 3);
+		    cajagrandeRBoletines.vmu_unidad.us$setSqlParameterValue(us$stmt15, 4);
+		    us$rs15 = us$stmt15.executeQuery();
+		    int us$rowsTouched15 = 0;
+		    try
+			{
+			java.sql.ResultSetMetaData us$rsmd15 = us$rs15.getMetaData();
+			if (us$rsmd15.getColumnCount() != 3)
+			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				{
+				Integer.toString(us$rsmd15.getColumnCount()), "3"
+				}));
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter15 = us$conn15.createDataIterator(us$rs15);
+			while (us$getter15.next())
+			    {
+			    ++us$rowsTouched15;
+			    us$getter15.assignValueToVariable(vut_etapa, 1);
+			    us$getter15.assignValueToVariable(vut_tramite, 2);
+			    us$getter15.assignValueToVariable(vut_f_real, 3);
+
+				{
+
+				    {
+				    getSession().us$setStatus(StatusCode.SS_NORM);
+				    NXJDataConnection us$conn16 = getConnection();
+				    java.sql.PreparedStatement us$stmt16 = null;
+				    ResultSet us$rs16 = null;
+				    try
+					{
+					us$stmt16 = us$conn16.prepareStatement("UPDATE vtu_tramiuni SET vtu_f_real =  ?  WHERE vtu_empresa =  ?  AND vtu_obra =  ?  AND vtu_manzana =  ?  AND vtu_unidad =  ?  AND vtu_etapa =  ?  AND vtu_tramite =  ?");
+					vut_f_real.us$setSqlParameterValue(us$stmt16, 1);
+					vmu_empresa.us$setSqlParameterValue(us$stmt16, 2);
+					cajagrandeRBoletines.vmu_obra.us$setSqlParameterValue(us$stmt16, 3);
+					cajagrandeRBoletines.vmu_manzana.us$setSqlParameterValue(us$stmt16, 4);
+					cajagrandeRBoletines.vmu_unidad.us$setSqlParameterValue(us$stmt16, 5);
+					vut_etapa.us$setSqlParameterValue(us$stmt16, 6);
+					vut_tramite.us$setSqlParameterValue(us$stmt16, 7);
+					if (us$stmt16.executeUpdate() == 0)
+					    getSession().us$setStatus(StatusCode.SS_NOREC);
+					}
+				    catch (SQLException us$ex16)
+					{
+					getSession().us$setStatus(us$conn16.mapToStatusCode(us$ex16));
+					throw us$ex16;
+					}
+				    catch (NXJDataConnectionException us$ex16)
+					{
+					getSession().us$setStatus(us$conn16.mapToStatusCode(us$ex16));
+					throw us$ex16;
+					}
+				    finally
+					{
+					if (us$stmt16 != null)
+					    us$conn16.us$closeStatement(us$stmt16);
+					}
+				    }
+				if (getSession().getStatus() != StatusCode.SS_NORM && getSession().getStatus() != StatusCode.SS_NOREC)
+				    {
+				    getSession().displayToMessageBox("No se puede actualizar los tr\u00E1mites de permisos." + getSession().getStatus());
+				    getSession().rollbackTransaction();
+				    getSession().queueCommand("PREVIOUS_FORM");
+				    }
+				}
+			    }
+			}
+		    finally
+			{
+			if (us$rowsTouched15 == 0)
+			    getSession().us$setStatus(StatusCode.SS_NOREC);
+			if (us$rs15 != null)
+			    us$rs15.close();
+			}
+		    }
+		catch (SQLException us$ex15)
+		    {
+		    getSession().us$setStatus(us$conn15.mapToStatusCode(us$ex15));
+		    throw us$ex15;
+		    }
+		catch (NXJDataConnectionException us$ex15)
+		    {
+		    getSession().us$setStatus(us$conn15.mapToStatusCode(us$ex15));
+		    throw us$ex15;
+		    }
+		finally
+		    {
+		    if (us$stmt15 != null)
+			us$conn15.us$closeStatement(us$stmt15);
+		    }
+		}
+	    getSession().displayToMessageBox("Generando Compromiso de EV al negocio.");
+	    zero.assign(us$registerPool.allocateRegister().load(0));
+	    vlr_ev.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_preciotot).mulOp(-1));
+
+		{
+		getSession().us$setStatus(StatusCode.SS_NORM);
+		NXJDataConnection us$conn17 = getConnection();
+		java.sql.PreparedStatement us$stmt17 = null;
+		ResultSet us$rs17 = null;
+		try
+		    {
+		    us$stmt17 = us$conn17.prepareStatement("INSERT INTO vcn_comproneg ( vcn_empresa, vcn_obra, vcn_manzana, vcn_unidad, vcn_fec_comp, vcn_cptopago, vcn_vlr_compro, vcn_vlr_pago, vcn_vlr_saldo ) VALUES (  ? ,  ? ,  ? ,  ? ,  ? , \'EV\',  ? ,  ? ,  ?  )");
+		    vmu_empresa.us$setSqlParameterValue(us$stmt17, 1);
+		    cajagrandeRBoletines.vmu_obra.us$setSqlParameterValue(us$stmt17, 2);
+		    cajagrandeRBoletines.vmu_manzana.us$setSqlParameterValue(us$stmt17, 3);
+		    cajagrandeRBoletines.vmu_unidad.us$setSqlParameterValue(us$stmt17, 4);
+		    cajagrandeRBoletines.vmu_f_escritura.us$setSqlParameterValue(us$stmt17, 5);
+		    vlr_ev.us$setSqlParameterValue(us$stmt17, 6);
+		    zero.us$setSqlParameterValue(us$stmt17, 7);
+		    vlr_ev.us$setSqlParameterValue(us$stmt17, 8);
+		    if (us$stmt17.executeUpdate() == 0)
+			getSession().us$setStatus(StatusCode.SS_NOREC);
+		    }
+		catch (SQLException us$ex17)
+		    {
+		    getSession().us$setStatus(us$conn17.mapToStatusCode(us$ex17));
+		    throw us$ex17;
+		    }
+		catch (NXJDataConnectionException us$ex17)
+		    {
+		    getSession().us$setStatus(us$conn17.mapToStatusCode(us$ex17));
+		    throw us$ex17;
+		    }
+		finally
+		    {
+		    if (us$stmt17 != null)
+			us$conn17.us$closeStatement(us$stmt17);
+		    }
+		}
+	    if (getSession().getStatus() != StatusCode.SS_NORM)
+		{
+		getSession().displayToMessageBox("No se puede insertar el compromiso de EV.");
+		getSession().rollbackTransaction();
+		getSession().queueCommand("PREVIOUS_FORM");
+		}
+	    getSession().displayToMessageBox("Elimina unidad de la Lista de Precios.");
+
+		{
+		getSession().us$setStatus(StatusCode.SS_NORM);
+		NXJDataConnection us$conn18 = getConnection();
+		java.sql.PreparedStatement us$stmt18 = null;
+		ResultSet us$rs18 = null;
+		try
+		    {
+		    us$stmt18 = us$conn18.prepareStatement("DELETE vlp_listapre WHERE vlp_empresa =  ?  AND vlp_obra =  ?  AND vlp_manzana =  ?  AND vlp_unidad =  ?  AND vlp_f_final is NULL");
+		    vmu_empresa.us$setSqlParameterValue(us$stmt18, 1);
+		    cajagrandeRBoletines.vmu_obra.us$setSqlParameterValue(us$stmt18, 2);
+		    cajagrandeRBoletines.vmu_manzana.us$setSqlParameterValue(us$stmt18, 3);
+		    cajagrandeRBoletines.vmu_unidad.us$setSqlParameterValue(us$stmt18, 4);
+		    if (us$stmt18.executeUpdate() == 0)
+			getSession().us$setStatus(StatusCode.SS_NOREC);
+		    }
+		catch (SQLException us$ex18)
+		    {
+		    getSession().us$setStatus(us$conn18.mapToStatusCode(us$ex18));
+		    throw us$ex18;
+		    }
+		catch (NXJDataConnectionException us$ex18)
+		    {
+		    getSession().us$setStatus(us$conn18.mapToStatusCode(us$ex18));
+		    throw us$ex18;
+		    }
+		finally
+		    {
+		    if (us$stmt18 != null)
+			us$conn18.us$closeStatement(us$stmt18);
+		    }
+		}
+	    if (getSession().getStatus() != StatusCode.SS_NORM && getSession().getStatus() != StatusCode.SS_NOREC)
+		{
+		getSession().displayToMessageBox("No se puede eliminar la unidad de la lista de precios.");
+		getSession().rollbackTransaction();
+		getSession().queueCommand("PREVIOUS_FORM");
+		}
+	    getSession().queueCommand("NEXT_FORM");
 	    }
     } // afterAdd
     private RBoletinesFRM RBoletinesFRM = this;
@@ -839,27 +1038,27 @@ public class RBoletinesFRM
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn15 = getConnection();
-		    java.sql.PreparedStatement us$stmt15 = null;
-		    ResultSet us$rs15 = null;
+		    NXJDataConnection us$conn19 = getConnection();
+		    java.sql.PreparedStatement us$stmt19 = null;
+		    ResultSet us$rs19 = null;
 		    try
 			{
-			us$stmt15 = us$conn15.prepareStatement("select xzo_nombre from xzo_zonas");
-			us$rs15 = us$stmt15.executeQuery();
-			int us$rowsTouched15 = 0;
+			us$stmt19 = us$conn19.prepareStatement("select xzo_nombre from xzo_zonas");
+			us$rs19 = us$stmt19.executeQuery();
+			int us$rowsTouched19 = 0;
 			try
 			    {
-			    java.sql.ResultSetMetaData us$rsmd15 = us$rs15.getMetaData();
-			    if (us$rsmd15.getColumnCount() != 1)
+			    java.sql.ResultSetMetaData us$rsmd19 = us$rs19.getMetaData();
+			    if (us$rsmd19.getColumnCount() != 1)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd15.getColumnCount()), "1"
+				    Integer.toString(us$rsmd19.getColumnCount()), "1"
 				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter15 = us$conn15.createDataIterator(us$rs15);
-			    while (us$getter15.next())
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter19 = us$conn19.createDataIterator(us$rs19);
+			    while (us$getter19.next())
 				{
-				++us$rowsTouched15;
-				us$proj1 = us$getter15.getString(1);
+				++us$rowsTouched19;
+				us$proj1 = us$getter19.getString(1);
 
 				    {
 				    if (us$rowCount++ == 300)
@@ -870,26 +1069,26 @@ public class RBoletinesFRM
 			    }
 			finally
 			    {
-			    if (us$rowsTouched15 == 0)
+			    if (us$rowsTouched19 == 0)
 				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs15 != null)
-				us$rs15.close();
+			    if (us$rs19 != null)
+				us$rs19.close();
 			    }
 			}
-		    catch (SQLException us$ex15)
+		    catch (SQLException us$ex19)
 			{
-			getSession().us$setStatus(us$conn15.mapToStatusCode(us$ex15));
-			throw us$ex15;
+			getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
+			throw us$ex19;
 			}
-		    catch (NXJDataConnectionException us$ex15)
+		    catch (NXJDataConnectionException us$ex19)
 			{
-			getSession().us$setStatus(us$conn15.mapToStatusCode(us$ex15));
-			throw us$ex15;
+			getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
+			throw us$ex19;
 			}
 		    finally
 			{
-			if (us$stmt15 != null)
-			    us$conn15.us$closeStatement(us$stmt15);
+			if (us$stmt19 != null)
+			    us$conn19.us$closeStatement(us$stmt19);
 			}
 		    }
 		return us$list;
@@ -949,53 +1148,53 @@ public class RBoletinesFRM
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn16 = getConnection();
-		    java.sql.PreparedStatement us$stmt16 = null;
-		    ResultSet us$rs16 = null;
+		    NXJDataConnection us$conn20 = getConnection();
+		    java.sql.PreparedStatement us$stmt20 = null;
+		    ResultSet us$rs20 = null;
 		    try
 			{
-			us$stmt16 = us$conn16.prepareStatement("SELECT xob_proyecto FROM xob_obras WHERE xob_empresa =  ?  AND xob_obra =  ?");
-			vmu_empresa.us$setSqlParameterValue(us$stmt16, 1);
-			vmu_obra.us$setSqlParameterValue(us$stmt16, 2);
-			us$rs16 = us$stmt16.executeQuery();
-			int us$rowsTouched16 = 0;
+			us$stmt20 = us$conn20.prepareStatement("SELECT xob_proyecto FROM xob_obras WHERE xob_empresa =  ?  AND xob_obra =  ?");
+			vmu_empresa.us$setSqlParameterValue(us$stmt20, 1);
+			vmu_obra.us$setSqlParameterValue(us$stmt20, 2);
+			us$rs20 = us$stmt20.executeQuery();
+			int us$rowsTouched20 = 0;
 			try
 			    {
-			    java.sql.ResultSetMetaData us$rsmd16 = us$rs16.getMetaData();
-			    if (us$rsmd16.getColumnCount() != 1)
+			    java.sql.ResultSetMetaData us$rsmd20 = us$rs20.getMetaData();
+			    if (us$rsmd20.getColumnCount() != 1)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd16.getColumnCount()), "1"
+				    Integer.toString(us$rsmd20.getColumnCount()), "1"
 				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter16 = us$conn16.createDataIterator(us$rs16);
-			    if (us$getter16.next())
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter20 = us$conn20.createDataIterator(us$rs20);
+			    if (us$getter20.next())
 				{
-				++us$rowsTouched16;
-				us$getter16.assignValueToVariable(xob_proyecto, 1);
+				++us$rowsTouched20;
+				us$getter20.assignValueToVariable(xob_proyecto, 1);
 				}
 			    }
 			finally
 			    {
-			    if (us$rowsTouched16 == 0)
+			    if (us$rowsTouched20 == 0)
 				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs16 != null)
-				us$rs16.close();
+			    if (us$rs20 != null)
+				us$rs20.close();
 			    }
 			}
-		    catch (SQLException us$ex16)
+		    catch (SQLException us$ex20)
 			{
-			getSession().us$setStatus(us$conn16.mapToStatusCode(us$ex16));
-			throw us$ex16;
+			getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
+			throw us$ex20;
 			}
-		    catch (NXJDataConnectionException us$ex16)
+		    catch (NXJDataConnectionException us$ex20)
 			{
-			getSession().us$setStatus(us$conn16.mapToStatusCode(us$ex16));
-			throw us$ex16;
+			getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
+			throw us$ex20;
 			}
 		    finally
 			{
-			if (us$stmt16 != null)
-			    us$conn16.us$closeStatement(us$stmt16);
+			if (us$stmt20 != null)
+			    us$conn20.us$closeStatement(us$stmt20);
 			}
 		    }
 		if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -1008,30 +1207,30 @@ public class RBoletinesFRM
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn17 = getConnection();
-		    java.sql.PreparedStatement us$stmt17 = null;
-		    ResultSet us$rs17 = null;
+		    NXJDataConnection us$conn21 = getConnection();
+		    java.sql.PreparedStatement us$stmt21 = null;
+		    ResultSet us$rs21 = null;
 		    try
 			{
-			us$stmt17 = us$conn17.prepareStatement("SELECT vev_etapactu, vev_estado FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
-			vmu_empresa.us$setSqlParameterValue(us$stmt17, 1);
-			vmu_obra.us$setSqlParameterValue(us$stmt17, 2);
-			us$rs17 = us$stmt17.executeQuery();
-			int us$rowsTouched17 = 0;
+			us$stmt21 = us$conn21.prepareStatement("SELECT vev_etapactu, vev_estado FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
+			vmu_empresa.us$setSqlParameterValue(us$stmt21, 1);
+			vmu_obra.us$setSqlParameterValue(us$stmt21, 2);
+			us$rs21 = us$stmt21.executeQuery();
+			int us$rowsTouched21 = 0;
 			try
 			    {
-			    java.sql.ResultSetMetaData us$rsmd17 = us$rs17.getMetaData();
-			    if (us$rsmd17.getColumnCount() != 2)
+			    java.sql.ResultSetMetaData us$rsmd21 = us$rs21.getMetaData();
+			    if (us$rsmd21.getColumnCount() != 2)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd17.getColumnCount()), "2"
+				    Integer.toString(us$rsmd21.getColumnCount()), "2"
 				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter17 = us$conn17.createDataIterator(us$rs17);
-			    while (us$getter17.next())
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter21 = us$conn21.createDataIterator(us$rs21);
+			    while (us$getter21.next())
 				{
-				++us$rowsTouched17;
-				us$getter17.assignValueToVariable(etapa_activa, 1);
-				us$getter17.assignValueToVariable(est, 2);
+				++us$rowsTouched21;
+				us$getter21.assignValueToVariable(etapa_activa, 1);
+				us$getter21.assignValueToVariable(est, 2);
 
 				    {
 				    ii.assign(us$registerPool.allocateRegister().load(ii).plusOp(1));
@@ -1040,26 +1239,26 @@ public class RBoletinesFRM
 			    }
 			finally
 			    {
-			    if (us$rowsTouched17 == 0)
+			    if (us$rowsTouched21 == 0)
 				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs17 != null)
-				us$rs17.close();
+			    if (us$rs21 != null)
+				us$rs21.close();
 			    }
 			}
-		    catch (SQLException us$ex17)
+		    catch (SQLException us$ex21)
 			{
-			getSession().us$setStatus(us$conn17.mapToStatusCode(us$ex17));
-			throw us$ex17;
+			getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
+			throw us$ex21;
 			}
-		    catch (NXJDataConnectionException us$ex17)
+		    catch (NXJDataConnectionException us$ex21)
 			{
-			getSession().us$setStatus(us$conn17.mapToStatusCode(us$ex17));
-			throw us$ex17;
+			getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
+			throw us$ex21;
 			}
 		    finally
 			{
-			if (us$stmt17 != null)
-			    us$conn17.us$closeStatement(us$stmt17);
+			if (us$stmt21 != null)
+			    us$conn21.us$closeStatement(us$stmt21);
 			}
 		    }
 		if (us$registerPool.allocateRegister().load(ii).gtOp(1).getBooleanValueNullOk())
@@ -1070,53 +1269,53 @@ public class RBoletinesFRM
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn18 = getConnection();
-		    java.sql.PreparedStatement us$stmt18 = null;
-		    ResultSet us$rs18 = null;
+		    NXJDataConnection us$conn22 = getConnection();
+		    java.sql.PreparedStatement us$stmt22 = null;
+		    ResultSet us$rs22 = null;
 		    try
 			{
-			us$stmt18 = us$conn18.prepareStatement("SELECT vev_etapactu FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
-			vmu_empresa.us$setSqlParameterValue(us$stmt18, 1);
-			vmu_obra.us$setSqlParameterValue(us$stmt18, 2);
-			us$rs18 = us$stmt18.executeQuery();
-			int us$rowsTouched18 = 0;
+			us$stmt22 = us$conn22.prepareStatement("SELECT vev_etapactu FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
+			vmu_empresa.us$setSqlParameterValue(us$stmt22, 1);
+			vmu_obra.us$setSqlParameterValue(us$stmt22, 2);
+			us$rs22 = us$stmt22.executeQuery();
+			int us$rowsTouched22 = 0;
 			try
 			    {
-			    java.sql.ResultSetMetaData us$rsmd18 = us$rs18.getMetaData();
-			    if (us$rsmd18.getColumnCount() != 1)
+			    java.sql.ResultSetMetaData us$rsmd22 = us$rs22.getMetaData();
+			    if (us$rsmd22.getColumnCount() != 1)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd18.getColumnCount()), "1"
+				    Integer.toString(us$rsmd22.getColumnCount()), "1"
 				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter18 = us$conn18.createDataIterator(us$rs18);
-			    if (us$getter18.next())
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter22 = us$conn22.createDataIterator(us$rs22);
+			    if (us$getter22.next())
 				{
-				++us$rowsTouched18;
-				us$getter18.assignValueToVariable(etapa_act, 1);
+				++us$rowsTouched22;
+				us$getter22.assignValueToVariable(etapa_act, 1);
 				}
 			    }
 			finally
 			    {
-			    if (us$rowsTouched18 == 0)
+			    if (us$rowsTouched22 == 0)
 				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs18 != null)
-				us$rs18.close();
+			    if (us$rs22 != null)
+				us$rs22.close();
 			    }
 			}
-		    catch (SQLException us$ex18)
+		    catch (SQLException us$ex22)
 			{
-			getSession().us$setStatus(us$conn18.mapToStatusCode(us$ex18));
-			throw us$ex18;
+			getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+			throw us$ex22;
 			}
-		    catch (NXJDataConnectionException us$ex18)
+		    catch (NXJDataConnectionException us$ex22)
 			{
-			getSession().us$setStatus(us$conn18.mapToStatusCode(us$ex18));
-			throw us$ex18;
+			getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+			throw us$ex22;
 			}
 		    finally
 			{
-			if (us$stmt18 != null)
-			    us$conn18.us$closeStatement(us$stmt18);
+			if (us$stmt22 != null)
+			    us$conn22.us$closeStatement(us$stmt22);
 			}
 		    }
 		if (getSession().getStatus() == StatusCode.SS_NOREC)
@@ -1725,9 +1924,12 @@ public class RBoletinesFRM
 	us$setBackgroundColor("#999999");
 	us$addTargetMapping("vmu_empresa", "vmu_empresa");
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "f_separacion", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vut_f_real", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "adicionando", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "adiciona", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "tipounidad", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vut_etapa", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vut_tramite", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "garage1", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "garage2", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "garage3", false);

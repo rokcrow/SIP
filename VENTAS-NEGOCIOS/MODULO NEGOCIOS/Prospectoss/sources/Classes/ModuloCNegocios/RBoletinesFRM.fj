@@ -1,4 +1,5 @@
 package ModuloCNegocios;
+import java.sql.SQLException;
 
 FORM RBoletinesFRM
 {
@@ -8,9 +9,9 @@ FORM RBoletinesFRM
     NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev;
     NullableString numero, formasig, xob_proyecto, etapa_activa, est, etapa_act;
     NullableString  garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago; 
-    NullableString tipounidad;
+    NullableString tipounidad, vut_etapa, vut_tramite;
     NullableNumeric adicionando, adiciona;
-    NullableDate f_separacion;
+    NullableDate f_separacion, vut_f_real;
     
     
     BEFORE FORM
@@ -192,7 +193,7 @@ FORM RBoletinesFRM
                         
                     if (session.status != StatusCode.SS_NORM) 
                     {
-                        session.displayToMessageBox("No se puede seleccionar la tasa para el precio de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ".");
+                        session.displayToMessageBox("No se puede seleccionar la tasa para el precio de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad +", "+ session.status+".");
                         tasa = cero;
                     }  
                     
@@ -208,7 +209,7 @@ FORM RBoletinesFRM
                         
                        if (session.status != StatusCode.SS_NORM) 
                         {
-                            session.displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ".");
+                            session.displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ", "+ session.status+".");
                         }
                         else 
                             session.commitTransaction();
@@ -307,7 +308,7 @@ FORM RBoletinesFRM
                             
                             if(session.status != StatusCode.SS_NORM)
                             {
-                                session.displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ".");
+                                session.displayToMessageBox("No se puede actualizar el impuesto de renta de la unidad, "+ cajagrandeRBoletines.vmu_obra + ", "+ cajagrandeRBoletines.vmu_manzana + ", "+ cajagrandeRBoletines.vmu_unidad + ", "+ session.status+".");
                                 session.rollbackTransaction();
                                 session.queueCommand("PREVIOUS_FORM");
                             } 
@@ -326,7 +327,96 @@ FORM RBoletinesFRM
         else
         {
             /**************** CREACIÓN DE TRÁMITES DE NEGOCIO ****************/
-        }
+           //refresh screen
+             if(1==1)//gra_tramis(cajagrandeRBoletines.vmu_obra, cajagrandeRBoletines.vmu_manzana, cajagrandeRBoletines.vmu_unidad, cajagrandeRBoletines.vmu_f_separacion, cajagrandeRBoletines.vmu_forma_pago))
+            {
+                session.displayToMessageBox("No se pudo generar los TRÁMITES del Negocio");
+                session.rollbackTransaction();
+                session.queueCommand("PREVIOUS_FORM");
+            }
+        
+        EXEC SQL
+                        SELECT vut_etapa, vut_tramite, vut_f_real
+                        FROM vut_tramites
+                        WHERE vut_empresa = :vmu_empresa
+                        AND vut_obra = :cajagrandeRBoletines.vmu_obra
+                        AND vut_manzana = :cajagrandeRBoletines.vmu_manzana
+                        AND vut_unidad = :cajagrandeRBoletines.vmu_unidad
+                        AND vut_f_real is not NULL
+                        INTO vut_etapa, vut_tramite, vut_f_real
+                        EXECUTING
+                        {
+                            EXEC SQL
+                                            UPDATE vtu_tramiuni
+                                            SET vtu_f_real = :vut_f_real
+                                            WHERE vtu_empresa = :vmu_empresa
+                                            AND vtu_obra = :cajagrandeRBoletines.vmu_obra
+                                            AND vtu_manzana = :cajagrandeRBoletines.vmu_manzana
+                                            AND vtu_unidad = :cajagrandeRBoletines.vmu_unidad
+                                            AND vtu_etapa = :vut_etapa
+                                            AND vtu_tramite = :vut_tramite;
+                                            
+                                            if(session.status != StatusCode.SS_NORM && session.status != StatusCode.SS_NOREC)
+                                            {
+                                                     session.displayToMessageBox("No se puede actualizar los trámites de permisos." + session.status);
+                                                     session.rollbackTransaction();
+                                                     session.queueCommand("PREVIOUS_FORM");
+                                                
+                                            }//IF    
+                        }//EXECUTING
+                        
+                        /************* CREACIÓN DEL COMPROMISO DE EV PARA EL NEGOCIO ************/
+        
+                        session.displayToMessageBox("Generando Compromiso de EV al negocio.");
+                        
+                        zero = 0;
+                        vlr_ev = cajagrandeRBoletines.vmu_preciotot * -1;
+                        
+                        EXEC SQL
+                                        INSERT INTO vcn_comproneg
+                                        (
+                                            vcn_empresa, vcn_obra, vcn_manzana,
+                                            vcn_unidad, vcn_fec_comp, vcn_cptopago,
+                                            vcn_vlr_compro, vcn_vlr_pago, vcn_vlr_saldo
+                                        )
+                                        VALUES
+                                        (
+                                            :vmu_empresa,
+                                            :cajagrandeRBoletines.vmu_obra,
+                                            :cajagrandeRBoletines.vmu_manzana,
+                                            :cajagrandeRBoletines.vmu_unidad,
+                                            :cajagrandeRBoletines.vmu_f_escritura,
+                                            'EV', :vlr_ev, :zero, :vlr_ev
+                                        );
+                                        
+                                         if (session.status != StatusCode.SS_NORM) 
+                                        {
+                                            session.displayToMessageBox("No se puede insertar el compromiso de EV.");
+                                            session.rollbackTransaction();
+                                            session.queueCommand("PREVIOUS_FORM");
+                                        }//IF
+                                        
+                                        /**************** ELIMINA LA UNIDAD DE LA LISTA DE PRECIOS ******************/
+                                        session.displayToMessageBox("Elimina unidad de la Lista de Precios.");
+                                        
+                                        EXEC SQL
+                                                        DELETE vlp_listapre
+                                                        WHERE vlp_empresa = :vmu_empresa
+                                                        AND vlp_obra = :cajagrandeRBoletines.vmu_obra
+                                                        AND vlp_manzana =  :cajagrandeRBoletines.vmu_manzana
+                                                        AND vlp_unidad = :cajagrandeRBoletines.vmu_unidad
+                                                        AND vlp_f_final is NULL;
+                                                        
+                                            if(session.status != StatusCode.SS_NORM && session.status != StatusCode.SS_NOREC)
+                                            {
+                                                     session.displayToMessageBox("No se puede eliminar la unidad de la lista de precios.");
+                                                     session.rollbackTransaction();
+                                                     session.queueCommand("PREVIOUS_FORM");
+                                                
+                                            }//IF    
+                                            
+                                            session.queueCommand("NEXT_FORM");/****** VERIFICAR, ESTO HACE QUE VAYA HACIA EL SIGUIENTE FORMULARIO*****/
+        }//ELSE
     }
 
     BOX cajagrandeRBoletines
@@ -607,9 +697,332 @@ FORM RBoletinesFRM
 
     }
 
+/************** FUNCIONES **************************/
+/*
+public  boolean gra_tramis(NullableString obra, NullableString manzana, NullableString unidad, NullableDate fechasep, NullableString formapago) throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
+    {
+            NullableDate vtu_f_teorica, vtu_f_real, x_campo;
+            NullableNumeric vdt_duracion, vdt_consec, sw_f_real, index, x_c;
+            NullableString vdt_etapa, vdt_tramite, vtn_formapago;
+            NullableBoolean varRetorno = true;
+            
+            session.displayToMessageBox("Generando los Trámites del Negocio.");
+            
+            vtu_f_teorica = fechasep;
+            
+            try
+            {
+            
+            EXEC SQL
+                            SELECT vdt_etapa, vdt_tramite, vdt_dura_teori, vdt_consec
+                            FROM vdt_tramiobra
+                            WHERE vdt_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                            AND vdt_obra = :obra
+                            ORDER BY vdt_consec ASC
+                            INTO vdt_etapa, vdt_tramite, vdt_duracion, vdt_consec
+                            EXECUTING
+                            {
+                                EXEC SQL
+                                                SELECT vtn_formapago
+                                                FROM vtn_traminego
+                                                WHERE vtn_etapa  = :vdt_etapa
+                                                AND vtn_tramite = :vdt_tramite
+                                                INTO vtn_formapago;
+                                                
+                                                 if(session.status != StatusCode.SS_NORM)
+                                                 {
+                                                    //session.displayToMessageBox(session.status);
+                                                    session.displayToMessageBox("El trámite de obra NO existe en trámites generales.");
+                                                    session.displayToMessageBox(vdt_etapa.toString());
+                                                    session.displayToMessageBox(vdt_tramite.toString());
+                                                    return true;
+                                                 }
+                                                 
+                                                 EXEC SQL
+                                                                SELECT vut_f_real
+                                                                FROM vut_tramites
+                                                                WHERE vut_empresa = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
+                                                                AND vut_obra = :obra
+                                                                AND vut_manzana = :manzana
+                                                                AND vut_unidad = :unidad
+                                                                AND vut_etapa = :vdt_etapa
+                                                                AND vut_tramite = :vdt_tramite
+                                                                INTO vtu_f_real;
+                                                                
+                                                if(session.status != StatusCode.SS_NORM)
+                                                {
+                                                    if(session.status == StatusCode.SS_NOREC)
+                                                    {
+                                                        sw_f_real = 0;
+                                                    }
+                                                    else
+                                                    {
+                                                        session.displayToMessageBox("No se puede leer el permiso, verifique.");
+                                                        session.displayToMessageBox(vdt_etapa.toString());
+                                                        session.displayToMessageBox(vdt_tramite.toString());
+                                                        return true;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    sw_f_real = 1;
+                                                }
+                                                
+                                                if(formapago == "C")
+                                                {
+                                                    if(vtn_formapago != "CR")
+                                                    {
+                                                        session.displayToMessageBox(vtu_f_teorica.toString());
+                                                        session.displayToMessageBox(vdt_duracion.toString());
+                                                        
+                                                        for(index = 1; index <= vdt_duracion; index = index +1)
+                                                        {
+                                                            vtu_f_teorica = vtu_f_teorica + 1;
+                                                            x_c = 0;
+                                                            
+                                                            
+                                                                //repeat 
+                                                                do
+                                                                {
+                                                                    EXEC SQL
+                                                                                    SELECT vfd_festivo
+                                                                                    FROM vfd_festidomi
+                                                                                    WHERE vfd_festivo = :vtu_f_teorica
+                                                                                    INTO x_campo;
+                                                                
+                                                                    if(session.status == StatusCode.SS_NORM)
+                                                                    {
+                                                                        vtu_f_teorica = vtu_f_teorica + 1; 
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        x_c = 1;
+                                                                    }
+                                                                } while(x_c != 1);  //UNTIL
+                                                           
+                                                        }//FOR
+                                                        
+                                                        if(vdt_etapa == "SP" && vdt_tramite == "SE")
+                                                        {
+                                                            EXEC SQL
+                                                                            INSERT INTO vtu_tramiuni
+                                                                            (
+                                                                            vtu_empresa, vtu_obra,
+                                                                            vtu_manzana, vtu_unidad,
+                                                                            vtu_etapa, vtu_tramite,
+                                                                            vtu_consec, vtu_f_teorica,
+                                                                            vtu_aplica, vtu_estado,
+                                                                            vtu_dura_teor, vtu_f_real
+                                                                            )
+                                                                            VALUES
+                                                                            (
+                                                                            :Modulo.MenuFRM#cajagrandeMenu.EMPRESA,
+                                                                            :obra, :manzana, :unidad,
+                                                                            :vdt_etapa, :vdt_tramite,
+                                                                            :vdt_consec, :vtu_f_teorica,
+                                                                            'S', 0, :vdt_duracion, :fechasep
+                                                                            );
+                                                                            
+                                                                             if(session.status != StatusCode.SS_NORM)
+                                                                             {
+                                                                                //session.displayToMessageBox(session.status);
+                                                                                session.displayToMessageBox("No se puede insertar el trámite: "+vdt_tramite);
+                                                                                return true;
+                                                                             }//if
+                                                        }//IF
+                                                        else
+                                                        {
+                                                            if(sw_f_real == 1)
+                                                            {
+                                                                EXEC SQL
+                                                                            INSERT INTO vtu_tramiuni
+                                                                            (
+                                                                            vtu_empresa, vtu_obra,
+                                                                            vtu_manzana, vtu_unidad,
+                                                                            vtu_etapa, vtu_tramite,
+                                                                            vtu_consec, vtu_f_teorica,
+                                                                            vtu_aplica, vtu_estado,
+                                                                            vtu_dura_teor, vtu_f_real
+                                                                            )
+                                                                            VALUES
+                                                                            (
+                                                                            :Modulo.MenuFRM#cajagrandeMenu.EMPRESA,
+                                                                            :obra, :manzana, :unidad,
+                                                                            :vdt_etapa, :vdt_tramite,
+                                                                            :vdt_consec, :vtu_f_teorica,
+                                                                            'S', 0, :vdt_duracion, :vtu_f_real
+                                                                            );
+                                                                            
+                                                                            if(session.status != StatusCode.SS_NORM)
+                                                                             {
+                                                                                //session.displayToMessageBox(session.status);
+                                                                                session.displayToMessageBox("No se puede insertar el trámite: "+vdt_tramite);
+                                                                                return true;
+                                                                             }//if
+                                                            }//IF
+                                                            else
+                                                            {
+                                                                EXEC SQL
+                                                                            INSERT INTO vtu_tramiuni
+                                                                            (
+                                                                            vtu_empresa, vtu_obra,
+                                                                            vtu_manzana, vtu_unidad,
+                                                                            vtu_etapa, vtu_tramite,
+                                                                            vtu_consec, vtu_f_teorica,
+                                                                            vtu_aplica, vtu_estado,
+                                                                            vtu_dura_teor
+                                                                            )
+                                                                            VALUES
+                                                                            (
+                                                                            :Modulo.MenuFRM#cajagrandeMenu.EMPRESA,
+                                                                            :obra, :manzana, :unidad,
+                                                                            :vdt_etapa, :vdt_tramite,
+                                                                            :vdt_consec, :vtu_f_teorica,
+                                                                            'S', 0, :vdt_duracion
+                                                                            );
+                                                                            
+                                                                            if(session.status != StatusCode.SS_NORM)
+                                                                             {
+                                                                                //session.displayToMessageBox(session.status);
+                                                                                session.displayToMessageBox("No se puede insertar el trámite: "+vdt_tramite);
+                                                                                return true;
+                                                                             }//if
+                                                            }//else
+                                                        }//else
+                                                        
+                                                    }//IF
+                                                }//IF
+                                                
+                                if(formapago == "D")
+                                {
+                                    session.displayToMessageBox(vtu_f_teorica.toString());
+                                    session.displayToMessageBox(vdt_duracion.toString());
+                                    
+                                    for(index = 1; index <= vdt_duracion; index = index + 1)
+                                    {
+                                        vtu_f_teorica = vtu_f_teorica + 1;
+                                        x_c = 0;
+                                        
+                                        do
+                                         {
+                                              EXEC SQL
+                                                                 SELECT vfd_festivo
+                                                                 FROM vfd_festidomi
+                                                                 WHERE vfd_festivo = :vtu_f_teorica
+                                                                 INTO x_campo;
+                                                                
+                                                 if(session.status == StatusCode.SS_NORM)
+                                                  {
+                                                     vtu_f_teorica = vtu_f_teorica + 1; 
+                                                  }
+                                                    else
+                                                    {
+                                                        x_c = 1;
+                                                     }
+                                              } while(x_c != 1);
+                                    }//for
+                                    
+                                    if(vdt_etapa == "SP" && vdt_tramite == "SE")
+                                    {
+                                                            EXEC SQL
+                                                                            INSERT INTO vtu_tramiuni
+                                                                            (
+                                                                            vtu_empresa, vtu_obra,
+                                                                            vtu_manzana, vtu_unidad,
+                                                                            vtu_etapa, vtu_tramite,
+                                                                            vtu_consec, vtu_f_teorica,
+                                                                            vtu_aplica, vtu_estado,
+                                                                            vtu_dura_teor, vtu_f_real
+                                                                            )
+                                                                            VALUES
+                                                                            (
+                                                                            :Modulo.MenuFRM#cajagrandeMenu.EMPRESA,
+                                                                            :obra, :manzana, :unidad,
+                                                                            :vdt_etapa, :vdt_tramite,
+                                                                            :vdt_consec, :vtu_f_teorica,
+                                                                            'S', 0, :vdt_duracion, :fechasep
+                                                                            );
+                                                                            
+                                                                             if(session.status != StatusCode.SS_NORM)
+                                                                             {
+                                                                                //session.displayToMessageBox(session.status);
+                                                                                session.displayToMessageBox("No se puede insertar el trámite: "+vdt_tramite);
+                                                                                return true;
+                                                                             }//if
+                                        }//IF
+                                        
+                                        else
+                                        {
+                                            if(sw_f_real == 1)
+                                            {
+                                                                EXEC SQL
+                                                                            INSERT INTO vtu_tramiuni
+                                                                            (
+                                                                            vtu_empresa, vtu_obra,
+                                                                            vtu_manzana, vtu_unidad,
+                                                                            vtu_etapa, vtu_tramite,
+                                                                            vtu_consec, vtu_f_teorica,
+                                                                            vtu_aplica, vtu_estado,
+                                                                            vtu_dura_teor, vtu_f_real
+                                                                            )
+                                                                            VALUES
+                                                                            (
+                                                                            :Modulo.MenuFRM#cajagrandeMenu.EMPRESA,
+                                                                            :obra, :manzana, :unidad,
+                                                                            :vdt_etapa, :vdt_tramite,
+                                                                            :vdt_consec, :vtu_f_teorica,
+                                                                            'S', 0, :vdt_duracion, :vtu_f_real
+                                                                            );
+                                                                            
+                                                                            if(session.status != StatusCode.SS_NORM)
+                                                                             {
+                                                                                //session.displayToMessageBox(session.status);
+                                                                                session.displayToMessageBox("No se puede insertar el trámite: "+vdt_tramite);
+                                                                                return true;
+                                                                             }//if
+                                            }//IF
+                                            
+                                            else
+                                            {
+                                                EXEC SQL
+                                                                            INSERT INTO vtu_tramiuni
+                                                                            (
+                                                                            vtu_empresa, vtu_obra,
+                                                                            vtu_manzana, vtu_unidad,
+                                                                            vtu_etapa, vtu_tramite,
+                                                                            vtu_consec, vtu_f_teorica,
+                                                                            vtu_aplica, vtu_estado,
+                                                                            vtu_dura_teor
+                                                                            )
+                                                                            VALUES
+                                                                            (
+                                                                            :Modulo.MenuFRM#cajagrandeMenu.EMPRESA,
+                                                                            :obra, :manzana, :unidad,
+                                                                            :vdt_etapa, :vdt_tramite,
+                                                                            :vdt_consec, :vtu_f_teorica,
+                                                                            'S', 0, :vdt_duracion
+                                                                            );
+                                                                            
+                                                                            if(session.status != StatusCode.SS_NORM)
+                                                                             {
+                                                                                //session.displayToMessageBox(session.status);
+                                                                                session.displayToMessageBox("No se puede insertar el trámite: "+vdt_tramite);
+                                                                                return true;
+                                                                             }//if
+                                            }//else
+                                        }//else
+                                    
+                                }//if
+                            }//EXECUTING
+                            
+                                }
+                                catch (SQLException sqlExcp) {
+                                    session.displayToMessageBox("No existen productos...");
+                                }
+                            
+    }//FUNCION*/
 
-
-}
+}  
 /*----------------------------------------------------------------------*
 * BEGIN MODIFICATION HISTORY
 *

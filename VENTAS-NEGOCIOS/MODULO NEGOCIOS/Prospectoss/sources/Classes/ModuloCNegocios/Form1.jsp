@@ -20,7 +20,7 @@
         form_width="700"
         foundation_type="Classes/Foundation/Form"
         name="NXJForm"
-        target_table="PUBLIC.vuu_unidades"
+        target_table="PUBLIC.vfd_festidomi"
         uid_prefix="modulocnegocios_form1_1374153200053"
         view="form">
 
@@ -55,11 +55,11 @@
             style="position: absolute; top: 248px; left: 50px; width:199px; height:22px">
 
             <input
-                accell_type="String"
+                accell_type="Date"
                 binary_variables=""
                 class="textfield"
-                db_length="4"
-                db_type="String"
+                db_length="10"
+                db_type="Date"
                 displayheight="22"
                 displayleft="50"
                 displaytop="248"
@@ -75,7 +75,7 @@
                 original_name="textfield2"
                 retrieve_value="true"
                 size="33"
-                target_field="vuu_unidad"
+                target_field="vfd_festivo"
                 type="text"
                 uid="modulocnegocios_form1_1374153200053_6546af96706303913107b41a1c6783362f76e870_1375713690994"
                 updateable="true"

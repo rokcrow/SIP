@@ -121,7 +121,7 @@ public class Form1
     } // beforeForm
     private Form1 Form1 = this;
     public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
-    public /*multi_valued*/ NullableStringField vmu_garage1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_garage1", true, true, 3);
+    public /*multi_valued*/ NullableDateField vmu_garage1 = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_garage1", true, true, 3);
 
     public Form1(NXJSession session, NXJForm prevForm)
     {
@@ -138,7 +138,7 @@ public class Form1
     private void us$initializeFormSpecificProperties()
     {
 	us$setConnectionName("Connection1");
-	us$setTargetTableName("PUBLIC.vuu_unidades");
+	us$setTargetTableName("PUBLIC.vfd_festidomi");
 	setStartInAddMode(false);
 	us$setBindingType("connection");
 	textfield1.setStyleClass("textfield");
@@ -148,7 +148,7 @@ public class Form1
 	vmu_garage1.us$setMultiValued(true);
 	vmu_garage1.us$setView("text");
 	vmu_garage1.us$setFieldLength(3);
-	vmu_garage1.us$setCandidateTargetColumnName("vuu_unidad");
+	vmu_garage1.us$setCandidateTargetColumnName("vfd_festivo");
 	vmu_garage1.setValueRetrievedDuringFetch(true);
 	vmu_garage1.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	vmu_garage1.setFindable(true);

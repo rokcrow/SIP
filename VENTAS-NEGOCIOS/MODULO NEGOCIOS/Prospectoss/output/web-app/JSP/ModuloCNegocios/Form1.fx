@@ -10,7 +10,7 @@
     form_width = "700"
     foundation_type = "Classes/Foundation/Form"
     style_class = "form"
-    target_table = "PUBLIC.vuu_unidades"
+    target_table = "PUBLIC.vfd_festidomi"
     uid_prefix = "modulocnegocios_form1_1374153200053"
     view = "form"
     reuse="true">
@@ -29,10 +29,10 @@
         view = "text">
     </field>
     <field 
-        accell_type = "String"
+        accell_type = "Date"
         binary_variables = ""
-        db_length = "4"
-        db_type = "String"
+        db_length = "10"
+        db_type = "Date"
         display_name = "vmu_garage1"
         explicit_search_mode = "default"
         field_length = "3"
@@ -44,7 +44,7 @@
         original_name = "textfield2"
         retrieve_value = "true"
         style_class = "textfield"
-        target_field = "vuu_unidad"
+        target_field = "vfd_festivo"
         uid = "modulocnegocios_form1_1374153200053_6546af96706303913107b41a1c6783362f76e870_1375713690994"
         updateable = "true"
         view = "text">
