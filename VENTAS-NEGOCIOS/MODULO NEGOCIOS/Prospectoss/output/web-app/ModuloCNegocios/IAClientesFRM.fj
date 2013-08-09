@@ -1,0 +1,31 @@
+package ModuloCNegocios;
+
+FORM IAClientesFRM
+{
+
+
+    BEFORE FORM
+    {
+            ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass2 = "2";
+    }
+
+    FIELD vev_etapactu
+    {
+    
+    }
+
+    FIELD textfield1
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

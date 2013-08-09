@@ -1,0 +1,31 @@
+package ModuloCNegocios;
+
+FORM ICompradoresFRM
+{ 
+    
+    
+    BEFORE FORM
+    {
+         ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass1 = "1";
+    }
+
+    FIELD vmu_garage1
+    {
+    
+    }
+
+    FIELD textfield1
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

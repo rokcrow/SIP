@@ -695,7 +695,7 @@
     </file>
 
     <file
-         path="Classes/ModuloCNegocios/Form1.fx"
+         path="Classes/ModuloCNegocios/ICompradoresFRM.fx"
           type="form"
           state="4"
           flags="0"
@@ -706,13 +706,13 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form1&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;ICompradoresFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>
 
     <file
-         path="Classes/ModuloCNegocios/Form2.fx"
+         path="Classes/ModuloCNegocios/IAClientesFRM.fx"
           type="form"
           state="4"
           flags="0"
@@ -723,7 +723,7 @@
           binary="false"
           checked-in-path=""
           base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;Form2&lt;/FONT&gt;&lt;/HTML&gt;"
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;IACFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>
@@ -1084,22 +1084,6 @@
          >
     </file>
 
-    <file
-         path="Classes/Servicios/Java1.java"
-          type="java"
-          state="4"
-          flags="40"
-          timestamp="1375737073535"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip=""
-         >
-    </file>
-
     <connection
          name="Connection1"
           path=""
@@ -1112,7 +1096,12 @@
     </connection>
 
     <color
-         rgb="transparent"
+         rgb="Black"
+         >
+    </color>
+
+    <color
+         rgb="#cc0000"
          >
     </color>
 
@@ -1133,11 +1122,6 @@
 
     <color
          rgb="#cccccc"
-         >
-    </color>
-
-    <color
-         rgb="Black"
          >
     </color>
 

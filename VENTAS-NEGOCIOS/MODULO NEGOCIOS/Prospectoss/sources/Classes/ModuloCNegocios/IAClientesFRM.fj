@@ -1,0 +1,41 @@
+package ModuloCNegocios;
+
+FORM IAClientesFRM
+{
+
+
+    BEFORE FORM
+    {
+            if( ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass1 == "1")
+            {
+                ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass2 = "2";
+            }
+            else
+            {
+                session.displayToMessageBox("Antes debe ir a COMPROMISOS DEL NEGOCIO.");
+                session.queueCommand("PREVIOUS_FORM");
+            }
+            
+            
+    }
+
+    FIELD vev_etapactu
+    {
+    
+    }
+
+    FIELD textfield1
+    {
+    
+    }
+
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

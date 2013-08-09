@@ -65,7 +65,7 @@
         binary_variables = ""
         commands = ""
         display_name = "box11"
-        field_weight = "4299"
+        field_weight = "4499"
         key = "cajagrandeRBoletines:box11."
         original_name = "box1"
         style_class = "box"
@@ -533,25 +533,12 @@
         updateable = "true"
         view = "text">
     </field>
-    <field 
-        binary_variables = ""
-        display_name = "number"
-        field_type = "text"
-        field_weight = "4099"
-        findable = "false"
-        key = "cajagrandeRBoletines:number."
-        original_name = "textfield1"
-        style_class = "textfield"
-        target_field = ""
-        uid = "modulo_form1_1372953290702_b79797a5bf49a1c367bc34a6d4970cb3ca617368_1374157461300"
-        view = "text">
-    </field>
     <div 
         binary_variables = ""
         commands = ""
         display_name = "tabset1"
         elevator = "true"
-        field_weight = "4199"
+        field_weight = "4399"
         font_family = "Calibri"
         key = "cajagrandeRBoletines:tabset1."
         kind = "notebook"
@@ -570,7 +557,7 @@
         notebook_title = "IdentificaciondeCompradores"
         original_name = "tab1"
         style_class = "selected_tab"
-        tabselect_parameter = "ModuloCNegocios.Form1"
+        tabselect_parameter = "ModuloCNegocios.ICompradoresFRM"
         uid = "modulo_form1_1372953290702_9e2fbad8bead24457759d32fb4301242bb3b1074_1374080548023"
         view = "notebook_page">
     </div>
@@ -584,7 +571,7 @@
         notebook_title = "InformacionAdicionaldeClientes"
         original_name = "tab2"
         style_class = "selected_tab"
-        tabselect_parameter = "ModuloCNegocios.Form2"
+        tabselect_parameter = "ModuloCNegocios.IAClientesFRM"
         uid = "modulo_form1_1372953290702_9e2fbad8bead24457759d32fb4301242bb3b1074_1374080554343"
         view = "notebook_page">
     </div>
@@ -593,15 +580,56 @@
         binary_variables = ""
         display_name = "tab3"
         field_weight = "299"
+        font_family = "Calibri"
+        foreground_color = "Black"
         key = "cajagrandeRBoletines:tabset1:tab3."
         kind = "notebook_page"
         notebook_title = "CompromisosdelNegocio"
         original_name = "tab3"
         style_class = "selected_tab"
-        tabselect_parameter = "ModuloCNegocios.Form3"
+        tabselect_parameter = "ModuloCNegocios.CNegocioFRM"
         uid = "modulo_form1_1372953290702_9e2fbad8bead24457759d32fb4301242bb3b1074_1374080559407"
         view = "notebook_page">
     </div>
+    <field 
+        binary_variables = ""
+        display_name = "varpass1"
+        field_type = "text"
+        field_weight = "4099"
+        findable = "false"
+        key = "cajagrandeRBoletines:varpass1."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "modulo_form1_1372953290702_b79797a5bf49a1c367bc34a6d4970cb3ca617368_1374157461300"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "varpass2"
+        field_type = "text"
+        field_weight = "4299"
+        findable = "false"
+        key = "cajagrandeRBoletines:varpass2."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "modulo_form1_1372953290702_bd4de95d8fe385b8f4a1e7b107918873e42209a1_1376075746523"
+        view = "text">
+    </field>
+    <field 
+        binary_variables = ""
+        display_name = "varpass3"
+        field_type = "text"
+        field_weight = "4199"
+        findable = "false"
+        key = "cajagrandeRBoletines:varpass3."
+        original_name = "textfield1"
+        style_class = "textfield"
+        target_field = ""
+        uid = "modulo_form1_1372953290702_bd4de95d8fe385b8f4a1e7b107918873e42209a1_1376075747368"
+        view = "text">
+    </field>
     <field 
         accell_type = "String"
         binary_variables = ""
@@ -1218,6 +1246,7 @@
         original_name = "textfield1"
         required = "true"
         retrieve_value = "true"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = "vmu_precio_uni"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844707651"
@@ -1240,6 +1269,7 @@
         original_name = "textfield1"
         required = "true"
         retrieve_value = "true"
+        stop_for_input = "false"
         style_class = "textfield"
         target_field = "vmu_preciotot"
         uid = "itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371844890061"
@@ -1303,7 +1333,7 @@
         findable = "true"
         key = "cajagrandeRBoletines:vmu_tipoinmueb."
         multi_valued = "true"
-        options = "Apartamento=A;Casa;Local=L"
+        options = "Apartamento=A;Casa=C;Local=L"
         original_name = "select1"
         required = "true"
         retrieve_value = "true"

@@ -1,0 +1,28 @@
+package ModuloCNegocios;
+
+FORM CNegocioFRM
+{
+    BEFORE FORM
+    {
+       
+       ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass3= "3";
+    }
+
+    BOX box1
+    {
+    
+        FIELD xxx
+        {	
+        }
+        
+    }
+
+}
+/*----------------------------------------------------------------------*
+* BEGIN MODIFICATION HISTORY
+*
+* Revision #      Date      Time    Changes By
+* ------------  --------  --------  ----------
+* $Log$*
+* END MODIFICATION HISTORY
+*----------------------------------------------------------------------*/

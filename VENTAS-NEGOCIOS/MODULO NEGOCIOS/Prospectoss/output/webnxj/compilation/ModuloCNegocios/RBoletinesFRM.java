@@ -126,7 +126,9 @@ public class RBoletinesFRM
     NullableString etapa_activa = NullableFactory.createNullableString("etapa_activa");
     NullableString xob_proyecto = NullableFactory.createNullableString("xob_proyecto");
     NullableString formasig = NullableFactory.createNullableString("formasig");
-    NullableString numero = NullableFactory.createNullableString("numero");
+    NullableString varCN = NullableFactory.createNullableString("varCN");
+    NullableString varIAC = NullableFactory.createNullableString("varIAC");
+    NullableString varIC = NullableFactory.createNullableString("varIC");
     NullableString forma_pago = NullableFactory.createNullableString("forma_pago");
     NullableString cli_clase = NullableFactory.createNullableString("cli_clase");
     NullableString corporacion = NullableFactory.createNullableString("corporacion");
@@ -147,8 +149,13 @@ public class RBoletinesFRM
 	throws Exception
     {
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	cajagrandeRBoletines.tabset1.setCurrentPage("tab2");
-	cajagrandeRBoletines.number.assign(us$registerPool.allocateRegister().load("23"));
+	cajagrandeRBoletines.tabset1.setCurrentPage("tab3");
+	cajagrandeRBoletines.varpass1.assign(us$registerPool.allocateRegister().load("25"));
+	cajagrandeRBoletines.varpass2.assign(us$registerPool.allocateRegister().load("45"));
+	cajagrandeRBoletines.varpass3.assign(us$registerPool.allocateRegister().load("35"));
+	varIC.assign(us$registerPool.allocateRegister().load("7"));
+	varIAC.assign(us$registerPool.allocateRegister().load("8"));
+	varCN.assign(us$registerPool.allocateRegister().load("9"));
 	vmu_empresa.setClearAddExp(new NXJClearToAddExpression()
 	{
 
@@ -194,11 +201,6 @@ public class RBoletinesFRM
     {
 	com.unify.nxj.mgr.datatypes.Register us$R1;
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	if (us$registerPool.allocateRegister().load(cajagrandeRBoletines.number).neqOp("3").getBooleanValueNullOk())
-	    {
-	    getSession().displayToMessageBox("Debe ir a Compromisos del Negocio antes de agregar un registro.");
-	    rejectOperation();
-	    }
 	adiciona.assign(us$registerPool.allocateRegister().load(1));
 	cajagrandeRBoletines.vmu_preciotot.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_precio_uni).plusOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_vgarage)));
 	cajagrandeRBoletines.vmu_preciotot.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_preciotot).minusOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_descuentos)));
@@ -350,19 +352,40 @@ public class RBoletinesFRM
 	    rejectOperation();
     } // beforeAdd
 
-    public void onPreviousForm()
-	throws Exception
-    {
-	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	numero.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.number));
-    } // onPreviousForm
-
     public void onClearToFind()
 	throws Exception
     {
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 	adicionando.assign(us$registerPool.allocateRegister().load(0));
 	cajagrandeRBoletines.vmu_cli_clase.setStopForInput(true);
+	varIC.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.varpass1));
+	varIAC.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.varpass2));
+	varCN.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.varpass3));
+	if (us$registerPool.allocateRegister().load(varIC).eqOp("1").getBooleanValueNullOk())
+	    {
+	    if (us$registerPool.allocateRegister().load(varIAC).eqOp("2").getBooleanValueNullOk())
+		{
+		if (us$registerPool.allocateRegister().load(varCN).eqOp("3").getBooleanValueNullOk())
+		    {
+		    getSession().displayToMessageBox("ACABA DE INSERTAR O ACTUALIZAR.");
+		    }
+		else
+		    {
+		    getSession().displayToMessageBox("Antes debe ir a COMPROMISOS DEL NEGOCIO.");
+		    rejectOperation();
+		    }
+		}
+	    else
+		{
+		getSession().displayToMessageBox("Antes debe ir a INFORMACI\u00D3N ADICIONAL DE CLIENTES.");
+		rejectOperation();
+		}
+	    }
+	else
+	    {
+	    getSession().displayToMessageBox("Antes debe ir a IDENTIFICACI\u00D3N DE COMPRADORES.");
+	    rejectOperation();
+	    }
     } // onClearToFind
 
     public void afterFind()
@@ -974,7 +997,6 @@ public class RBoletinesFRM
 		getSession().rollbackTransaction();
 		getSession().queueCommand("PREVIOUS_FORM");
 		}
-	    getSession().queueCommand("NEXT_FORM");
 	    }
     } // afterAdd
     private RBoletinesFRM RBoletinesFRM = this;
@@ -1017,7 +1039,9 @@ public class RBoletinesFRM
 	public NXJLabelControl label31311111111211121 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label31311111111211121", false);
 	public NXJLabelControl label313111111112111211 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label313111111112111211", false);
 	public NullableStringField nombre_banco = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "nombre_banco", false, true, 100);
-	public NullableStringField number = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "number", false, true, 100);
+	public NullableStringField varpass1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "varpass1", false, true, 100);
+	public NullableStringField varpass2 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "varpass2", false, true, 100);
+	public NullableStringField varpass3 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "varpass3", false, true, 100);
 	public /*multi_valued*/ NullableStringField vau_apode_nit = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_apode_nit", true, true, 18);
 	public /*multi_valued*/ NullableStringField vau_apode_nom = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_apode_nom", true, true, 40);
 	public /*multi_valued*/ NullableStringField vau_apoderado = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_apoderado", true, true, 2);
@@ -1140,191 +1164,6 @@ public class RBoletinesFRM
 		throws Exception
 	    {
 	    } // beforeField
-
-	    public void initField()
-		throws Exception
-	    {
-		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn20 = getConnection();
-		    java.sql.PreparedStatement us$stmt20 = null;
-		    ResultSet us$rs20 = null;
-		    try
-			{
-			us$stmt20 = us$conn20.prepareStatement("SELECT xob_proyecto FROM xob_obras WHERE xob_empresa =  ?  AND xob_obra =  ?");
-			vmu_empresa.us$setSqlParameterValue(us$stmt20, 1);
-			vmu_obra.us$setSqlParameterValue(us$stmt20, 2);
-			us$rs20 = us$stmt20.executeQuery();
-			int us$rowsTouched20 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd20 = us$rs20.getMetaData();
-			    if (us$rsmd20.getColumnCount() != 1)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd20.getColumnCount()), "1"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter20 = us$conn20.createDataIterator(us$rs20);
-			    if (us$getter20.next())
-				{
-				++us$rowsTouched20;
-				us$getter20.assignValueToVariable(xob_proyecto, 1);
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched20 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs20 != null)
-				us$rs20.close();
-			    }
-			}
-		    catch (SQLException us$ex20)
-			{
-			getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
-			throw us$ex20;
-			}
-		    catch (NXJDataConnectionException us$ex20)
-			{
-			getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
-			throw us$ex20;
-			}
-		    finally
-			{
-			if (us$stmt20 != null)
-			    us$conn20.us$closeStatement(us$stmt20);
-			}
-		    }
-		if (getSession().getStatus() == StatusCode.SS_NOREC)
-		    {
-		    getSession().displayToMessageBox("La obra no corresponde.");
-		    vmu_obra.assign(us$registerPool.allocateRegister().load(" "));
-		    rejectOperation();
-		    }
-		ii.assign(us$registerPool.allocateRegister().load(0));
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn21 = getConnection();
-		    java.sql.PreparedStatement us$stmt21 = null;
-		    ResultSet us$rs21 = null;
-		    try
-			{
-			us$stmt21 = us$conn21.prepareStatement("SELECT vev_etapactu, vev_estado FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
-			vmu_empresa.us$setSqlParameterValue(us$stmt21, 1);
-			vmu_obra.us$setSqlParameterValue(us$stmt21, 2);
-			us$rs21 = us$stmt21.executeQuery();
-			int us$rowsTouched21 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd21 = us$rs21.getMetaData();
-			    if (us$rsmd21.getColumnCount() != 2)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd21.getColumnCount()), "2"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter21 = us$conn21.createDataIterator(us$rs21);
-			    while (us$getter21.next())
-				{
-				++us$rowsTouched21;
-				us$getter21.assignValueToVariable(etapa_activa, 1);
-				us$getter21.assignValueToVariable(est, 2);
-
-				    {
-				    ii.assign(us$registerPool.allocateRegister().load(ii).plusOp(1));
-				    }
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched21 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs21 != null)
-				us$rs21.close();
-			    }
-			}
-		    catch (SQLException us$ex21)
-			{
-			getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
-			throw us$ex21;
-			}
-		    catch (NXJDataConnectionException us$ex21)
-			{
-			getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
-			throw us$ex21;
-			}
-		    finally
-			{
-			if (us$stmt21 != null)
-			    us$conn21.us$closeStatement(us$stmt21);
-			}
-		    }
-		if (us$registerPool.allocateRegister().load(ii).gtOp(1).getBooleanValueNullOk())
-		    {
-		    getSession().displayToMessageBox("Hay m\u00E1s de una etapa activa. Verifique.");
-		    getSession().queueCommand("PREVIOUS_FORM");
-		    }
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn22 = getConnection();
-		    java.sql.PreparedStatement us$stmt22 = null;
-		    ResultSet us$rs22 = null;
-		    try
-			{
-			us$stmt22 = us$conn22.prepareStatement("SELECT vev_etapactu FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
-			vmu_empresa.us$setSqlParameterValue(us$stmt22, 1);
-			vmu_obra.us$setSqlParameterValue(us$stmt22, 2);
-			us$rs22 = us$stmt22.executeQuery();
-			int us$rowsTouched22 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd22 = us$rs22.getMetaData();
-			    if (us$rsmd22.getColumnCount() != 1)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd22.getColumnCount()), "1"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter22 = us$conn22.createDataIterator(us$rs22);
-			    if (us$getter22.next())
-				{
-				++us$rowsTouched22;
-				us$getter22.assignValueToVariable(etapa_act, 1);
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched22 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs22 != null)
-				us$rs22.close();
-			    }
-			}
-		    catch (SQLException us$ex22)
-			{
-			getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
-			throw us$ex22;
-			}
-		    catch (NXJDataConnectionException us$ex22)
-			{
-			getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
-			throw us$ex22;
-			}
-		    finally
-			{
-			if (us$stmt22 != null)
-			    us$conn22.us$closeStatement(us$stmt22);
-			}
-		    }
-		if (getSession().getStatus() == StatusCode.SS_NOREC)
-		    {
-		    getSession().displayToMessageBox("No hay etapa ACTIVA en ventas.");
-		    getSession().queueCommand("PREVIOUS_FORM");
-		    rejectOperation();
-		    }
-	    } // initField
 
 	    public vmu_obra()
 	    {
@@ -1541,9 +1380,15 @@ public class RBoletinesFRM
 	    nombre_banco.setFindable(true);
 	    nombre_banco.setUpdateable(true);
 	    nombre_banco.setStopForInput(false);
-	    number.setStyleClass("textfield");
-	    number.us$setView("text");
-	    number.setFindable(false);
+	    varpass1.setStyleClass("textfield");
+	    varpass1.us$setView("text");
+	    varpass1.setFindable(false);
+	    varpass2.setStyleClass("textfield");
+	    varpass2.us$setView("text");
+	    varpass2.setFindable(false);
+	    varpass3.setStyleClass("textfield");
+	    varpass3.us$setView("text");
+	    varpass3.setFindable(false);
 	    vau_apode_nit.setStyleClass("textfield");
 	    vau_apode_nit.us$setMultiValued(true);
 	    vau_apode_nit.us$setView("text");
@@ -1554,6 +1399,10 @@ public class RBoletinesFRM
 	    vau_apode_nit.setFindable(true);
 	    vau_apode_nit.setUpdateable(true);
 	    vau_apode_nit.setCaseConversion(NullableField.CaseConversion_UPPER);
+	} // cajagrandeRBoletinespropertySetter_1
+
+	private void cajagrandeRBoletinespropertySetter_2()
+	{
 	    vau_apode_nom.setStyleClass("textfield");
 	    vau_apode_nom.us$setMultiValued(true);
 	    vau_apode_nom.us$setView("text");
@@ -1576,10 +1425,6 @@ public class RBoletinesFRM
 	    vau_apoderado.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vau_apoderado.setFindable(true);
 	    vau_apoderado.setUpdateable(true);
-	} // cajagrandeRBoletinespropertySetter_1
-
-	private void cajagrandeRBoletinespropertySetter_2()
-	{
 	    vma_ven_responsa.setStyleClass("textfield");
 	    vma_ven_responsa.us$setMultiValued(true);
 	    vma_ven_responsa.us$setView("text");
@@ -1766,6 +1611,10 @@ public class RBoletinesFRM
 	    vmu_f_separacion.setRequired(true);
 	    vmu_f_separacion.setFindable(true);
 	    vmu_f_separacion.setUpdateable(true);
+	} // cajagrandeRBoletinespropertySetter_2
+
+	private void cajagrandeRBoletinespropertySetter_3()
+	{
 	    vmu_forma_pago.setStyleClass("dropdown_list");
 	    vmu_forma_pago.us$setMultiValued(true);
 	    vmu_forma_pago.us$setView("select");
@@ -1788,10 +1637,6 @@ public class RBoletinesFRM
 	    vmu_manzana.setFindable(true);
 	    vmu_manzana.setUpdateable(true);
 	    vmu_manzana.setCaseConversion(NullableField.CaseConversion_UPPER);
-	} // cajagrandeRBoletinespropertySetter_2
-
-	private void cajagrandeRBoletinespropertySetter_3()
-	{
 	    vmu_ngarage.setStyleClass("textfield");
 	    vmu_ngarage.us$setMultiValued(true);
 	    vmu_ngarage.us$setView("text");
@@ -1812,6 +1657,7 @@ public class RBoletinesFRM
 	    vmu_precio_uni.setRequired(true);
 	    vmu_precio_uni.setFindable(true);
 	    vmu_precio_uni.setUpdateable(false);
+	    vmu_precio_uni.setStopForInput(false);
 	    vmu_preciotot.setStyleClass("textfield");
 	    vmu_preciotot.us$setMultiValued(true);
 	    vmu_preciotot.us$setView("text");
@@ -1822,6 +1668,7 @@ public class RBoletinesFRM
 	    vmu_preciotot.setRequired(true);
 	    vmu_preciotot.setFindable(true);
 	    vmu_preciotot.setUpdateable(false);
+	    vmu_preciotot.setStopForInput(false);
 	    vmu_promocion1.setStyleClass("textarea");
 	    vmu_promocion1.us$setMultiValued(true);
 	    vmu_promocion1.us$setView("textarea");
@@ -1938,7 +1785,9 @@ public class RBoletinesFRM
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "corporacion", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "cli_clase", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "forma_pago", false);
-	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "numero", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "varIC", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "varIAC", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "varCN", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "formasig", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "xob_proyecto", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "etapa_activa", false);

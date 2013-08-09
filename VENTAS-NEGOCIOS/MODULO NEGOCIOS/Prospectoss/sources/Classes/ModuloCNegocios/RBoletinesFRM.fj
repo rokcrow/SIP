@@ -7,7 +7,7 @@ FORM RBoletinesFRM
     multi_valued NullableAmountVariable  vmu_precio_uni, vmu_vgarage, vmu_descuentos;
    
     NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev;
-    NullableString numero, formasig, xob_proyecto, etapa_activa, est, etapa_act;
+    NullableString varIC, varIAC, varCN, formasig, xob_proyecto, etapa_activa, est, etapa_act;
     NullableString  garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago; 
     NullableString tipounidad, vut_etapa, vut_tramite;
     NullableNumeric adicionando, adiciona;
@@ -16,9 +16,13 @@ FORM RBoletinesFRM
     
     BEFORE FORM
     {   
-         cajagrandeRBoletines.tabset1.setCurrentPage("tab2");
-         cajagrandeRBoletines.number = "23";
-        
+         cajagrandeRBoletines.tabset1.setCurrentPage("tab3");
+         cajagrandeRBoletines.varpass1 = "25";//valor random
+         cajagrandeRBoletines.varpass2 = "45";//valor random
+         cajagrandeRBoletines.varpass3 = "35";//valor random
+         varIC = "7";
+         varIAC = "8";
+         varCN = "9";
         
         vmu_empresa.clearAddExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
         vmu_empresa.clearFindExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
@@ -38,22 +42,39 @@ FORM RBoletinesFRM
         
     }
   
-  
+  ON CLEAR TO ADD
+  {
+        adicionando = 1;
+        cajagrandeRBoletines.vmu_f_gravacion = session.currentDate;
+        
+        // date_to_mdy(vmu_f_gravacion, mesg, diag, anog);
+        
+        preciotot = cero;
+        cajagrandeRBoletines.vmu_precio_uni = cero;
+        cajagrandeRBoletines.vmu_vgarage = cero;
+        cajagrandeRBoletines.vmu_descuentos = cero;
+        /*vlr_gar = cero;
+        vlr_dep = cero;
+        acum = cero;
+        vuu_promocion1 = " ";
+        vuu_promocion2 = " ";*/
+        cajagrandeRBoletines.vmu_cli_clase.stopForInput = true;
+        cajagrandeRBoletines.vau_apoderado.stopForInput = true;
+        cajagrandeRBoletines.vau_apode_nit.stopForInput = true;
+  }
   
     BEFORE ADD
     {
         /*
             Acá se colocaran las variables que actuarán como guardianes.
             Si el usuario ha pasado por los formularios requeridos, se le deja pasar, de lo contrario no.
+            
+              session.displayToMessageBox("Debe ir a Identificación de Compradores antes de agregar un registro.");
+            rejectOperation();
         */
         
-        if(cajagrandeRBoletines.number != "3")
-        {
-            session.displayToMessageBox("Debe ir a Compromisos del Negocio antes de agregar un registro.");
-            rejectOperation();
-        }
         
-        /**************************************************************/
+        
         
         adiciona = 1;
         cajagrandeRBoletines.vmu_preciotot  = cajagrandeRBoletines.vmu_precio_uni + cajagrandeRBoletines.vmu_vgarage;
@@ -125,21 +146,47 @@ FORM RBoletinesFRM
     
     
 
-    ON PREVIOUS FORM
-    {
-          
-            numero = cajagrandeRBoletines.number;
-                   
-    }
     
     ON CLEAR TO FIND
-    {	
-      /*cajagrandeRBoletines.number = numero;
-          session.displayToMessageBox("hola");
-             session.displayToMessageBox(numero);*/
-             
+    {
+            
              adicionando = 0;
              cajagrandeRBoletines.vmu_cli_clase.stopForInput = true;
+             
+             
+          /***************************** COLOCAR EN EL BEFORE ADD: ESTO PARA PASAR DE FORMULARIOS... ******************************************/   
+             varIC = cajagrandeRBoletines.varpass1;
+             varIAC = cajagrandeRBoletines.varpass2;
+             varCN = cajagrandeRBoletines.varpass3;
+             
+            
+            if(varIC == "1")
+            {
+                if(varIAC == "2")
+                {
+                    if(varCN == "3")
+                    {
+                            session.displayToMessageBox("ACABA DE INSERTAR O ACTUALIZAR.");
+                    }
+                    else
+                             { 
+                                session.displayToMessageBox("Antes debe acceder a COMPROMISOS DEL NEGOCIO.");
+                                 rejectOperation();
+                             }
+                }
+                else
+                        {
+                            session.displayToMessageBox("Antes debe acceder a INFORMACIÓN ADICIONAL DE CLIENTES.");
+                             rejectOperation();
+                        }
+            }
+            else
+                    {
+                        session.displayToMessageBox("Antes debe acceder a IDENTIFICACIÓN DE COMPRADORES.");
+                        rejectOperation();
+                    }
+            
+          /********************************************************************/
     }
 
     AFTER FIND
@@ -279,7 +326,7 @@ FORM RBoletinesFRM
                                                 }
                                   
                                    
-                                     EXEC SQL
+                                EXEC SQL
                                                 UPDATE vcn_comproneg
                                                 SET vcn_fec_comp = :cajagrandeRBoletines.vmu_f_escritura
                                                 WHERE vcn_empresa = :vmu_empresa
@@ -415,7 +462,9 @@ FORM RBoletinesFRM
                                                 
                                             }//IF    
                                             
-                                            session.queueCommand("NEXT_FORM");/****** VERIFICAR, ESTO HACE QUE VAYA HACIA EL SIGUIENTE FORMULARIO*****/
+                                     /******       session.queueCommand("NEXT_FORM"); VERIFICAR, ESTO HACE QUE VAYA HACIA EL SIGUIENTE FORMULARIO
+                                     AQUÍ NO DEBERÍA IR A NINGÚN LADO....
+                                     *****/
         }//ELSE
     }
 
@@ -539,7 +588,7 @@ FORM RBoletinesFRM
             {
                 // x_obra = vmu_obra;
             }
-            
+          /*  
             INIT FIELD
             {
                     EXEC SQL
@@ -549,7 +598,7 @@ FORM RBoletinesFRM
                                     AND xob_obra = :vmu_obra
                                     INTO xob_proyecto;
                                     
-                    if (session.status == StatusCode.SS_NOREC)
+                    if (session.status != StatusCode.SS_NORM)
                      {
                                 session.displayToMessageBox("La obra no corresponde.");
                                 vmu_obra = " ";
@@ -584,14 +633,14 @@ FORM RBoletinesFRM
                                         AND vev_obra = :vmu_obra
                                         INTO etapa_act;
                                         
-                        if (session.status == StatusCode.SS_NOREC)
+                        if (session.status != StatusCode.SS_NORM)
                         {
                                 session.displayToMessageBox("No hay etapa ACTIVA en ventas.");
                                 session.queueCommand("PREVIOUS_FORM");
                                 rejectOperation();
                         }
             }
-
+*/
         }
         
         BOX cajaarribaRBoletines
@@ -681,7 +730,7 @@ FORM RBoletinesFRM
         
         }
 
-        FIELD number
+        FIELD varpass1
         {
         
         }
@@ -695,6 +744,14 @@ FORM RBoletinesFRM
         
         }
 
+          FIELD varpass2
+        {
+        }
+        
+        FIELD varpass3
+        {
+        }
+        
     }
 
 /************** FUNCIONES **************************/
