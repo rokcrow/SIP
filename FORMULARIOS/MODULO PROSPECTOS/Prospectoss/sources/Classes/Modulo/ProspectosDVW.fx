@@ -445,16 +445,6 @@
     </control>
     <control 
         binary_variables = ""
-        display_name = "Label43"
-        font_size = "12"
-        foreground_color = "Black"
-        key = ".top:Label43."
-        style_class = "label"
-        uid = "form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777446"
-        view = "label">
-    </control>
-    <control 
-        binary_variables = ""
         display_name = "Label44"
         font_size = "12"
         foreground_color = "Black"
@@ -538,7 +528,7 @@
         binary_variables = ""
         commands = ""
         display_name = "cajaabajoRegistroP"
-        field_weight = "5299"
+        field_weight = "5199"
         key = ".top:cajaabajoRegistroP."
         original_name = "box1"
         style_class = "box"
@@ -1458,6 +1448,7 @@
         foreground_color = "Black"
         key = ".top:vpp_mediodes."
         multi_valued = "true"
+        required = "true"
         retrieve_value = "true"
         style_class = "textfield"
         target_field = "vpp_mediodes"
@@ -1491,32 +1482,6 @@
         updateable = "true"
         view = "text"
         zoom_form = "Modulo/MediospFRM">
-    </field>
-    <field 
-        accell_type = "String"
-        auto_accept = "false"
-        auto_resize_width = "false"
-        binary_variables = ""
-        db_length = "1"
-        db_type = "String"
-        display_name = "vpp_motivo"
-        explicit_search_mode = "default"
-        field_length = "2"
-        field_type = "SELECT"
-        field_weight = "5199"
-        findable = "true"
-        font_size = "12"
-        foreground_color = "Black"
-        key = ".top:vpp_motivo."
-        multi_valued = "true"
-        options = "Ubicacion=U;Precio=P;Fecha de Entrega=F;Distribucion=D;Atencion al Cliente=A;Tamaño Terreno (Area)=T;Otros proyectos (Competencia)=O"
-        original_name = "select1"
-        retrieve_value = "true"
-        style_class = "dropdown_list"
-        target_field = "vpp_motivo"
-        uid = "form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368631297100"
-        updateable = "true"
-        view = "select">
     </field>
     <field 
         accell_type = "String"

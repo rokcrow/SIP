@@ -637,17 +637,6 @@ private void setAttrFor_Label42__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_Label43__30(Widget widget)
-{
-}
-
-private void setAttrFor_Label43__40(Widget widget)
-{
-	widget.addAttribute("_id","view1:(Modulo.ProspectosDVW)Label43.");
-	widget.addAttribute("id","view1:Label43.");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_Label44__30(Widget widget)
 {
 }
@@ -1369,22 +1358,6 @@ private void setAttrFor_vpp_mediopub__40(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vpp_motivo__30(Widget widget)
-{
-	widget.addStyle("left","721px");
-	widget.addStyle("top","1331px");
-	widget.addStyle("width","223px");
-	widget.addStyle("height","21px");
-}
-
-private void setAttrFor_vpp_motivo__40(Widget widget)
-{
-	widget.addAttribute("options","Ubicacion=U;Precio=P;Fecha de Entrega=F;Distribucion=D;AtencionalCliente=A;TamanoTerrenoArea=T;Otros proyectos (Competencia)=O");
-	widget.addAttribute("_name","view1:(Modulo.ProspectosDVW)vpp_motivo.");
-	widget.addAttribute("name","view1:vpp_motivo.");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_vpp_nacionalidad__30(Widget widget)
 {
 }
@@ -2069,16 +2042,6 @@ private void dodiv_view1__10(Widget div_view1__10)
                 setAttrFor_Label42__40(Label42__40);
                 }
             }
-        Widget div_Label43__30 = ((ContainerWidget)view1__20).getComponent("div_Label43_");
-        if (div_Label43__30 != null)
-            {
-            setAttrFor_div_Label43__30(div_Label43__30);
-            Widget Label43__40 = ((ContainerWidget)div_Label43__30).getComponent("Label43_");
-            if (Label43__40 != null)
-                {
-                setAttrFor_Label43__40(Label43__40);
-                }
-            }
         Widget div_Label44__30 = ((ContainerWidget)view1__20).getComponent("div_Label44_");
         if (div_Label44__30 != null)
             {
@@ -2627,16 +2590,6 @@ private void dodiv_view1__10(Widget div_view1__10)
             if (vpp_mediopub__40 != null)
                 {
                 setAttrFor_vpp_mediopub__40(vpp_mediopub__40);
-                }
-            }
-        Widget div_vpp_motivo__30 = ((ContainerWidget)view1__20).getComponent("div_vpp_motivo_");
-        if (div_vpp_motivo__30 != null)
-            {
-            setAttrFor_div_vpp_motivo__30(div_vpp_motivo__30);
-            Widget vpp_motivo__40 = ((ContainerWidget)div_vpp_motivo__30).getComponent("vpp_motivo_");
-            if (vpp_motivo__40 != null)
-                {
-                setAttrFor_vpp_motivo__40(vpp_motivo__40);
                 }
             }
         Widget div_vpp_nacionalidad__30 = ((ContainerWidget)view1__20).getComponent("div_vpp_nacionalidad_");

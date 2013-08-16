@@ -249,11 +249,18 @@ FORM SeguimientoFRM
                     
                 if (vpy_tipo == "A") 
                    { 
-                    vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
+                             vps_f_pcontacto = f_pcontacto + xpc_dias_pac;
+                             
+                              if(vps_f_pcontacto == session.currentDate)
+                                vps_f_pcontacto = "01/01/2001";
                    }
                 else
-                    vps_f_pcontacto = f_pcontacto + xpc_dias_pvt;            
-                    
+                    {
+                            vps_f_pcontacto = f_pcontacto + xpc_dias_pvt; 
+                            
+                            if(vps_f_pcontacto == session.currentDate)
+                                vps_f_pcontacto = "01/01/2001";          
+                    }
                           
             }
             

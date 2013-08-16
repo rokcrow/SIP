@@ -65,7 +65,6 @@ DATA VIEW GradoInteresDVW
     FIELD xpc_codigo
     {
     }
-    
     FIELD xpc_clase
     {
     }
@@ -74,19 +73,6 @@ DATA VIEW GradoInteresDVW
     {
     }
     
-    FIELD xpc_califica
-    {
-    }
-    
-    FIELD xpc_dias_pac
-    {
-    }
-    
-    FIELD xpc_dias_pvt
-    {
-    }
-    
-
 }
 /*----------------------------------------------------------------------*
 * BEGIN MODIFICATION HISTORY

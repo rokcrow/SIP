@@ -97,51 +97,10 @@ private void setAttrFor_div_xpc_nombre__50(Widget widget)
 private void setAttrFor_xpc_nombre__60(Widget widget)
 {
 	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","260");
+	widget.addAttribute("fieldwidth","620");
 	widget.addAttribute("headertitle","Nombre");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_nombre.");
 	widget.addAttribute("name","view1:xpc_nombre.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_xpc_califica__50(Widget widget)
-{
-}
-
-private void setAttrFor_xpc_califica__60(Widget widget)
-{
-	widget.addAttribute("fieldwidth","154");
-	widget.addAttribute("headertitle","Calificacion");
-	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_califica.");
-	widget.addAttribute("name","view1:xpc_califica.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_xpc_dias_pac__50(Widget widget)
-{
-}
-
-private void setAttrFor_xpc_dias_pac__60(Widget widget)
-{
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","103");
-	widget.addAttribute("headertitle","DiasAltoCosto");
-	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_dias_pac.");
-	widget.addAttribute("name","view1:xpc_dias_pac.");
-	widget.addStyle("overflow","hidden");
-}
-
-private void setAttrFor_div_xpc_dias_pvt__50(Widget widget)
-{
-}
-
-private void setAttrFor_xpc_dias_pvt__60(Widget widget)
-{
-	widget.addAttribute("type","text");
-	widget.addAttribute("fieldwidth","103");
-	widget.addAttribute("headertitle","DiasVTradicional");
-	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_dias_pvt.");
-	widget.addAttribute("name","view1:xpc_dias_pvt.");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -301,38 +260,8 @@ private void dodiv_view1__10(Widget div_view1__10)
                         setAttrFor_xpc_nombre__60(xpc_nombre__60);
                         }
                     }
-                Widget div_xpc_califica__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_xpc_califica_");
-                if (div_xpc_califica__50 != null)
-                    {
-                    setAttrFor_div_xpc_califica__50(div_xpc_califica__50);
-                    Widget xpc_califica__60 = ((ContainerWidget)div_xpc_califica__50).getComponent("xpc_califica_");
-                    if (xpc_califica__60 != null)
-                        {
-                        setAttrFor_xpc_califica__60(xpc_califica__60);
-                        }
-                    }
-                Widget div_xpc_dias_pac__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_xpc_dias_pac_");
-                if (div_xpc_dias_pac__50 != null)
-                    {
-                    setAttrFor_div_xpc_dias_pac__50(div_xpc_dias_pac__50);
-                    Widget xpc_dias_pac__60 = ((ContainerWidget)div_xpc_dias_pac__50).getComponent("xpc_dias_pac_");
-                    if (xpc_dias_pac__60 != null)
-                        {
-                        setAttrFor_xpc_dias_pac__60(xpc_dias_pac__60);
-                        }
-                    }
-                Widget div_xpc_dias_pvt__50 = ((ContainerWidget)RepeatingArea1__40).getComponent("div_xpc_dias_pvt_");
-                if (div_xpc_dias_pvt__50 != null)
-                    {
-                    setAttrFor_div_xpc_dias_pvt__50(div_xpc_dias_pvt__50);
-                    Widget xpc_dias_pvt__60 = ((ContainerWidget)div_xpc_dias_pvt__50).getComponent("xpc_dias_pvt_");
-                    if (xpc_dias_pvt__60 != null)
-                        {
-                        setAttrFor_xpc_dias_pvt__60(xpc_dias_pvt__60);
-                        }
-                    }
                     div_FXGRID_50.addAttribute("id","view1_FXGRID");
-                    div_FXGRID_50.addAttribute("jsinit","var combo1 = ['Primer Contacto', 'Seguimiento']; var combo3 = ['Interesado', 'Medianamente Interesado', 'Poco Interesado'];    var view1_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Codigo', 	'1', 	'1', 	'55', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_codigo', 'view1:xpc_codigo.', '', ''), new NXJGridColumn( 	'Clase', 	'3', 	'1', 	'129', 	'', 	combo1, 	'Primer Contacto', 	'textfield', 	true, 	true, 	'xpc_clase', 'view1:xpc_clase.', '', ''), new NXJGridColumn( 	'Nombre', 	'1', 	'1', 	'260', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_nombre', 'view1:xpc_nombre.', '', ''), new NXJGridColumn( 	'Calificacion', 	'3', 	'1', 	'154', 	'', 	combo3, 	'Interesado', 	'textfield', 	true, 	true, 	'xpc_califica', 'view1:xpc_califica.', '', ''), new NXJGridColumn( 	'DiasAltoCosto', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pac', 'view1:xpc_dias_pac.', '', ''), new NXJGridColumn( 	'DiasVTradicional', 	'1', 	'0', 	'103', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_dias_pvt', 'view1:xpc_dias_pvt.', '', '') ]; ; if (!window.namesToComponents['view1_FXGRID'])     {     window.namesToComponents['view1_FXGRID'] = new NXJGrid('view1_FXGRID', view1_RepeatingArea1__FXColumns, 22, null, null, '__NXJ_CONTEXT_PATH__/unify', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/');     } ");
+                    div_FXGRID_50.addAttribute("jsinit","var combo1 = ['Primer Contacto', 'Seguimiento'];    var view1_RepeatingArea1__FXColumns = [new NXJGridColumn( 	'Codigo', 	'1', 	'1', 	'55', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_codigo', 'view1:xpc_codigo.', '', ''), new NXJGridColumn( 	'Clase', 	'3', 	'1', 	'129', 	'', 	combo1, 	'Primer Contacto', 	'textfield', 	true, 	true, 	'xpc_clase', 'view1:xpc_clase.', '', ''), new NXJGridColumn( 	'Nombre', 	'1', 	'1', 	'620', 	' text-align: Left', 	new Array(), 	null, 	'textfield', 	true, 	true, 	'xpc_nombre', 'view1:xpc_nombre.', '', '') ]; ; if (!window.namesToComponents['view1_FXGRID'])     {     window.namesToComponents['view1_FXGRID'] = new NXJGrid('view1_FXGRID', view1_RepeatingArea1__FXColumns, 22, null, null, '__NXJ_CONTEXT_PATH__/unify', 'D,L,M,M,J,V,S', 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre', 'file:///C:/Unify/NXJ/web-app/unify', 'file:/C:/Users/TI3-Provivienda/Desktop/VENTAS- PROSPECTOS/MODULO PROSPECTOS/Prospectoss/sources/Static_Content/');     } ");
                     }
                 }
             }

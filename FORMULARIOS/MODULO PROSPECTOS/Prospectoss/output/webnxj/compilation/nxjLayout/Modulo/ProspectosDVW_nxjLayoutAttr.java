@@ -93,8 +93,6 @@ DivPanelWidget div_Label41__10 = new DivPanelWidget();
 dodiv_Label41__10(div_Label41__10);
 DivPanelWidget div_Label42__10 = new DivPanelWidget();
 dodiv_Label42__10(div_Label42__10);
-DivPanelWidget div_Label43__10 = new DivPanelWidget();
-dodiv_Label43__10(div_Label43__10);
 DivPanelWidget div_Label44__10 = new DivPanelWidget();
 dodiv_Label44__10(div_Label44__10);
 DivPanelWidget div_Label45__10 = new DivPanelWidget();
@@ -197,8 +195,6 @@ DivPanelWidget div_vpp_mediodes__10 = new DivPanelWidget();
 dodiv_vpp_mediodes__10(div_vpp_mediodes__10);
 DivPanelWidget div_vpp_mediopub__10 = new DivPanelWidget();
 dodiv_vpp_mediopub__10(div_vpp_mediopub__10);
-DivPanelWidget div_vpp_motivo__10 = new DivPanelWidget();
-dodiv_vpp_motivo__10(div_vpp_motivo__10);
 DivPanelWidget div_vpp_nacionalidad__10 = new DivPanelWidget();
 dodiv_vpp_nacionalidad__10(div_vpp_nacionalidad__10);
 DivPanelWidget div_vpp_nombre__10 = new DivPanelWidget();
@@ -1285,31 +1281,6 @@ private void setAttrFor_Label42__20(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_Label43__10(Widget widget)
-{
-	widget.addStyle("left","721px");
-	widget.addStyle("top","1305px");
-	widget.addStyle("width","41px");
-	widget.addStyle("height","16px");
-}
-
-private void setAttrFor_Label43__20(Widget widget)
-{
-	widget.setClass("label");
-	widget.addAttribute("labeltitle","Motivo");
-	widget.addAttribute("displaywidth","41");
-	widget.addAttribute("displayleft","721");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("displaytop","1305");
-	widget.addAttribute("displayheight","16");
-	widget.addAttribute("fieldheight","16");
-	widget.addAttribute("fieldwidth","41");
-	widget.addStyle("text-align","left");
-	widget.addStyle("color","Black");
-	widget.addAttribute("id",".top:Label43.");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_Label44__10(Widget widget)
 {
 	widget.addStyle("left","473px");
@@ -1520,7 +1491,7 @@ private void setAttrFor_div_cajaabajoRegistroP__10(Widget widget)
 
 private void setAttrFor_cajaabajoRegistroP__20(Widget widget)
 {
-	widget.addAttribute("field_weight","5299");
+	widget.addAttribute("field_weight","5199");
 	widget.setClass("box");
 	widget.addAttribute("displaywidth","996");
 	widget.addStyle("border-width","0");
@@ -2768,34 +2739,6 @@ private void setAttrFor_vpp_mediopub__20(Widget widget)
 	widget.addStyle("overflow","hidden");
 }
 
-private void setAttrFor_div_vpp_motivo__10(Widget widget)
-{
-	widget.addStyle("left","721px");
-	widget.addStyle("top","1331px");
-	widget.addStyle("width","223px");
-	widget.addStyle("height","21px");
-}
-
-private void setAttrFor_vpp_motivo__20(Widget widget)
-{
-	widget.addAttribute("auto_resize_width","false");
-	widget.addAttribute("field_type","SELECT");
-	widget.addAttribute("field_weight","5199");
-	widget.addAttribute("options","Ubicacion=U;Precio=P;Fecha de Entrega=F;Distribucion=D;Atencion al Cliente=A;Tamaño Terreno (Area)=T;Otros proyectos (Competencia)=O");
-	widget.setClass("dropdown_list");
-	widget.addAttribute("name",".top:vpp_motivo.");
-	widget.addAttribute("displaywidth","223");
-	widget.addAttribute("displayleft","721");
-	widget.addStyle("font-size","12");
-	widget.addAttribute("displaytop","1331");
-	widget.addAttribute("displayheight","21");
-	widget.addAttribute("fieldheight","21");
-	widget.addAttribute("size","1");
-	widget.addAttribute("fieldwidth","223");
-	widget.addStyle("color","Black");
-	widget.addStyle("overflow","hidden");
-}
-
 private void setAttrFor_div_vpp_nacionalidad__10(Widget widget)
 {
 	widget.addStyle("left","724px");
@@ -3780,16 +3723,6 @@ private void dodiv_Label42__10(Widget div_Label42__10)
         setAttrFor_Label42__20(Label42__20);
         }
     }
-private void dodiv_Label43__10(Widget div_Label43__10)
-    {
-    ((ContainerWidget)this).addComponent(div_Label43__10,"div_Label43_");
-    setAttrFor_div_Label43__10(div_Label43__10);
-    LabelWidget Label43__20 = new LabelWidget();
-        {
-        ((ContainerWidget)div_Label43__10).addComponent(Label43__20,"Label43_");
-        setAttrFor_Label43__20(Label43__20);
-        }
-    }
 private void dodiv_Label44__10(Widget div_Label44__10)
     {
     ((ContainerWidget)this).addComponent(div_Label44__10,"div_Label44_");
@@ -4338,16 +4271,6 @@ private void dodiv_vpp_mediopub__10(Widget div_vpp_mediopub__10)
         {
         ((ContainerWidget)div_vpp_mediopub__10).addComponent(vpp_mediopub__20,"vpp_mediopub_");
         setAttrFor_vpp_mediopub__20(vpp_mediopub__20);
-        }
-    }
-private void dodiv_vpp_motivo__10(Widget div_vpp_motivo__10)
-    {
-    ((ContainerWidget)this).addComponent(div_vpp_motivo__10,"div_vpp_motivo_");
-    setAttrFor_div_vpp_motivo__10(div_vpp_motivo__10);
-    ListWidget vpp_motivo__20 = new ListWidget();
-        {
-        ((ContainerWidget)div_vpp_motivo__10).addComponent(vpp_motivo__20,"vpp_motivo_");
-        setAttrFor_vpp_motivo__20(vpp_motivo__20);
         }
     }
 private void dodiv_vpp_nacionalidad__10(Widget div_vpp_nacionalidad__10)

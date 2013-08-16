@@ -1154,9 +1154,15 @@ public class SeguimientoFRM
 		if (us$registerPool.allocateRegister().load(vpy_tipo).eqOp("A").getBooleanValueNullOk())
 		    {
 		    vps_f_pcontacto.assign(us$registerPool.allocateRegister().load(f_pcontacto).plusOp(us$registerPool.allocateRegister().load(xpc_dias_pac)));
+		    if (us$registerPool.allocateRegister().load(vps_f_pcontacto).eqOp(us$registerPool.allocateRegister().load(getSession().getCurrentDate())).getBooleanValueNullOk())
+			vps_f_pcontacto.assign(us$registerPool.allocateRegister().load("01/01/2001"));
 		    }
 		else
+		    {
 		    vps_f_pcontacto.assign(us$registerPool.allocateRegister().load(f_pcontacto).plusOp(us$registerPool.allocateRegister().load(xpc_dias_pvt)));
+		    if (us$registerPool.allocateRegister().load(vps_f_pcontacto).eqOp(us$registerPool.allocateRegister().load(getSession().getCurrentDate())).getBooleanValueNullOk())
+			vps_f_pcontacto.assign(us$registerPool.allocateRegister().load("01/01/2001"));
+		    }
 	    } // beforeAdd
 
 	    public void afterAdd()

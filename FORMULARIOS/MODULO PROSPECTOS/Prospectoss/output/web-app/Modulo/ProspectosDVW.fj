@@ -780,11 +780,6 @@ DATA VIEW ProspectosDVW
     
     }
 
-    FIELD vpp_motivo
-    {
-    
-    }
-
     FIELD vpp_estado
     {
     

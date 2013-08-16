@@ -451,7 +451,6 @@ public class ProspectosDVW
     public NXJLabelControl Label40 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label40", false);
     public NXJLabelControl Label41 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label41", false);
     public NXJLabelControl Label42 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label42", false);
-    public NXJLabelControl Label43 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label43", false);
     public NXJLabelControl Label44 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label44", false);
     public NXJLabelControl Label45 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label45", false);
     public NXJLabelControl Label46 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label46", false);
@@ -1534,7 +1533,6 @@ public class ProspectosDVW
     } // vpp_mediopub
 
     public /*multi_valued*/ vpp_mediopub vpp_mediopub = new vpp_mediopub();
-    public /*multi_valued*/ NullableStringField vpp_motivo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_motivo", true, true, 2);
     public class vpp_nacionalidad
 	extends com.unify.nxj.mgr.datatypes.NXJStringField
     {
@@ -2330,9 +2328,6 @@ public class ProspectosDVW
 	Label42.setStyleClass("label");
 	Label42.setForegroundColor("Black");
 	Label42.setFontSize("12");
-	Label43.setStyleClass("label");
-	Label43.setForegroundColor("Black");
-	Label43.setFontSize("12");
 	Label44.setStyleClass("label");
 	Label44.setForegroundColor("Black");
 	Label44.setFontSize("12");
@@ -2570,23 +2565,12 @@ public class ProspectosDVW
 	vpp_mediodes.us$setFieldLength(30);
 	vpp_mediodes.us$setCandidateTargetColumnName("vpp_mediodes");
 	vpp_mediodes.setValueRetrievedDuringFetch(true);
+	vpp_mediodes.setRequired(true);
 	vpp_mediodes.setFindable(true);
 	vpp_mediodes.setUpdateable(true);
 	vpp_mediodes.setCaseConversion(NullableField.CaseConversion_UPPER);
 	vpp_mediodes.setForegroundColor("Black");
 	vpp_mediodes.setFontSize("12");
-	vpp_motivo.setStyleClass("dropdown_list");
-	vpp_motivo.us$setMultiValued(true);
-	vpp_motivo.us$setView("select");
-	vpp_motivo.us$setFieldLength(2);
-	vpp_motivo.setAutoAccept(false);
-	vpp_motivo.us$setCandidateTargetColumnName("vpp_motivo");
-	vpp_motivo.setValueRetrievedDuringFetch(true);
-	vpp_motivo.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	vpp_motivo.setFindable(true);
-	vpp_motivo.setUpdateable(true);
-	vpp_motivo.setForegroundColor("Black");
-	vpp_motivo.setFontSize("12");
 	vpp_nombre.setStyleClass("textfield");
 	vpp_nombre.us$setMultiValued(true);
 	vpp_nombre.us$setView("text");

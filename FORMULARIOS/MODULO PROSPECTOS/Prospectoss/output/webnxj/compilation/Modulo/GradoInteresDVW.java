@@ -188,11 +188,8 @@ public class GradoInteresDVW
     } // onFind
     private GradoInteresDVW GradoInteresDVW = this;
     public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
-    public /*multi_valued*/ NullableStringField xpc_califica = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_califica", true, true, 2);
     public /*multi_valued*/ NullableStringField xpc_clase = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_clase", true, true, 2);
     public /*multi_valued*/ NullableStringField xpc_codigo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_codigo", true, true, 2);
-    public /*multi_valued*/ NullableNumericField xpc_dias_pac = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "xpc_dias_pac", true, true, 6);
-    public /*multi_valued*/ NullableNumericField xpc_dias_pvt = new com.unify.nxj.mgr.datatypes.NXJNumericField(this, "xpc_dias_pvt", true, true, 6);
     public /*multi_valued*/ NullableStringField xpc_nombre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "xpc_nombre", true, true, 100);
     public class box11
 	extends com.unify.nxj.mgr.NXJBox
@@ -272,14 +269,6 @@ public class GradoInteresDVW
 	label11.setFontFamily("Verdana");
 	label11.setFontSize("14");
 	label11.us$setFontWeight("bold");
-	xpc_califica.setStyleClass("textfield");
-	xpc_califica.us$setMultiValued(true);
-	xpc_califica.us$setView("select");
-	xpc_califica.us$setFieldLength(2);
-	xpc_califica.us$setCandidateTargetColumnName("xpc_califica");
-	xpc_califica.setValueRetrievedDuringFetch(true);
-	xpc_califica.setFindable(true);
-	xpc_califica.setUpdateable(true);
 	xpc_clase.setStyleClass("textfield");
 	xpc_clase.us$setMultiValued(true);
 	xpc_clase.us$setView("select");
@@ -296,22 +285,6 @@ public class GradoInteresDVW
 	xpc_codigo.setValueRetrievedDuringFetch(true);
 	xpc_codigo.setFindable(true);
 	xpc_codigo.setUpdateable(true);
-	xpc_dias_pac.setStyleClass("textfield");
-	xpc_dias_pac.us$setMultiValued(true);
-	xpc_dias_pac.us$setView("text");
-	xpc_dias_pac.us$setFieldLength(6);
-	xpc_dias_pac.us$setCandidateTargetColumnName("xpc_dias_pac");
-	xpc_dias_pac.setValueRetrievedDuringFetch(true);
-	xpc_dias_pac.setFindable(true);
-	xpc_dias_pac.setUpdateable(true);
-	xpc_dias_pvt.setStyleClass("textfield");
-	xpc_dias_pvt.us$setMultiValued(true);
-	xpc_dias_pvt.us$setView("text");
-	xpc_dias_pvt.us$setFieldLength(6);
-	xpc_dias_pvt.us$setCandidateTargetColumnName("xpc_dias_pvt");
-	xpc_dias_pvt.setValueRetrievedDuringFetch(true);
-	xpc_dias_pvt.setFindable(true);
-	xpc_dias_pvt.setUpdateable(true);
 	xpc_nombre.setStyleClass("textfield");
 	xpc_nombre.us$setMultiValued(true);
 	xpc_nombre.us$setView("text");

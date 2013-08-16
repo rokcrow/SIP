@@ -70,7 +70,7 @@
                         id=".top:RepeatingArea1."
                         key=".top:RepeatingArea1."
                         kind="repeating_area"
-                        list_columns=".top:xpc_codigo.0:55;.top:xpc_clase.55:129;.top:xpc_nombre.184:260;.top:xpc_califica.444:154;.top:xpc_dias_pac.598:103;.top:xpc_dias_pvt.701:103"
+                        list_columns=".top:xpc_codigo.0:55;.top:xpc_clase.55:129;.top:xpc_nombre.184:267"
                         occurrences="12"
                         repeat_style="Grid"
                         row_class="ROW"
@@ -151,7 +151,7 @@
                         <div
                             binary_variables=""
                             view="div"
-                            style="position: absolute; top: 0px; left: 184px; width:260px; height:22px">
+                            style="position: absolute; top: 0px; left: 184px; width:620px; height:22px">
 
                             <input
                                 accell_type="String"
@@ -162,7 +162,7 @@
                                 displayheight="22"
                                 displayleft="450"
                                 displaytop="0"
-                                displaywidth="260"
+                                displaywidth="267"
                                 field_length="100"
                                 field_type="text"
                                 field_weight="299"
@@ -172,114 +172,11 @@
                                 multi_valued="true"
                                 name=".top:xpc_nombre."
                                 retrieve_value="true"
-                                size="43"
+                                size="44"
                                 target_field="xpc_nombre"
                                 title="xpc_nombre"
                                 type="text"
                                 uid="parametros_form1_1369156385845_213d57eca34f40d2c96700d0aab5cea0e79da9f6_1369156585031"
-                                updateable="true"
-                                view="text">
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 0px; left: 444px; width:154px; height:21px">
-
-                            <select
-                                accell_type="String"
-                                binary_variables=""
-                                class="textfield"
-                                db_length="1"
-                                db_type="String"
-                                displayheight="21"
-                                displayleft="411"
-                                displaytop="0"
-                                displaywidth="154"
-                                field_length="2"
-                                field_type="SELECT"
-                                field_weight="399"
-                                findable="true"
-                                headertitle="Calificacion"
-                                key=".top:xpc_califica."
-                                multi_valued="true"
-                                name=".top:xpc_califica."
-                                options="Interesado=I&#59;Medianamente Interesado=M&#59;Poco Interesado=P"
-                                original_name="xpc_califica"
-                                retrieve_value="true"
-                                size="1"
-                                target_field="xpc_califica"
-                                title="xpc_califica"
-                                uid="parametros_form1_1369156385845_213d57eca34f40d2c96700d0aab5cea0e79da9f6_1369156677036"
-                                updateable="true"
-                                view="select"
-                                style="width:154px; height: 21px">
-                            </select>
-
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 0px; left: 598px; width:103px; height:22px">
-
-                            <input
-                                accell_type="Numeric"
-                                binary_variables=""
-                                class="textfield"
-                                db_length="4"
-                                db_type="Numeric"
-                                displayheight="22"
-                                displayleft="247"
-                                displaytop="0"
-                                displaywidth="103"
-                                field_length="6"
-                                field_type="text"
-                                field_weight="499"
-                                findable="true"
-                                headertitle="DiasAltoCosto"
-                                key=".top:xpc_dias_pac."
-                                multi_valued="true"
-                                name=".top:xpc_dias_pac."
-                                retrieve_value="true"
-                                size="17"
-                                target_field="xpc_dias_pac"
-                                title="xpc_dias_pac"
-                                type="text"
-                                uid="parametros_form1_1369156385845_213d57eca34f40d2c96700d0aab5cea0e79da9f6_1369156585005"
-                                updateable="true"
-                                view="text">
-                        </div>
-
-                        <div
-                            binary_variables=""
-                            view="div"
-                            style="position: absolute; top: 0px; left: 701px; width:103px; height:22px">
-
-                            <input
-                                accell_type="Numeric"
-                                binary_variables=""
-                                class="textfield"
-                                db_length="4"
-                                db_type="Numeric"
-                                displayheight="22"
-                                displayleft="349"
-                                displaytop="0"
-                                displaywidth="103"
-                                field_length="6"
-                                field_type="text"
-                                field_weight="599"
-                                findable="true"
-                                headertitle="DiasVTradicional"
-                                key=".top:xpc_dias_pvt."
-                                multi_valued="true"
-                                name=".top:xpc_dias_pvt."
-                                retrieve_value="true"
-                                size="17"
-                                target_field="xpc_dias_pvt"
-                                title="xpc_dias_pvt"
-                                type="text"
-                                uid="parametros_form1_1369156385845_213d57eca34f40d2c96700d0aab5cea0e79da9f6_1369156585018"
                                 updateable="true"
                                 view="text">
                         </div>

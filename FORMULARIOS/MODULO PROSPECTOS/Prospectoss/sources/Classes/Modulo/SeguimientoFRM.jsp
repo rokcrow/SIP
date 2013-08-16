@@ -1443,7 +1443,7 @@
                         target_field="vpp_fecha"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315561473"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 
@@ -1479,7 +1479,7 @@
                         target_field="vpp_fechaestado"
                         uid="prospectos_form1_1369314491392_5e6557a2d5dba53f8e9baf11133a067ac7dcdece_1369315375818"
                         updateable="true"
-                        view="text"
+                        view="date"
                         style="font-size: 12px;
                             color: Black">
 

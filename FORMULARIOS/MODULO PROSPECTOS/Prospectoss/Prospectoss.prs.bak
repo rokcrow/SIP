@@ -6,7 +6,7 @@
       ctimestamp="0"
       scversion=""
       component-chooser-selection="ModuloCNegocios\ICompradoresDVW"
-      component-chooser-expanded="[Components];[Components, ModuloCNegocios];[Components, ItemsForm]"
+      component-chooser-expanded="[Components, ItemsForm];[Components]"
  >
 
     <security
@@ -917,11 +917,28 @@
     </file>
 
     <file
-         path="Classes/Modulo/Form1.fx"
+         path="Classes/Modulo/CClaveFRM.fx"
           type="form"
           state="4"
           flags="0"
           timestamp="1375276647632"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;CClaveFRM&lt;/FONT&gt;&lt;/HTML&gt;"
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Classes/Form1.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1376685110278"
           ctimestamp="0"
           scversion=""
           private="false"
@@ -939,13 +956,18 @@
           db-jar="$UNIFY_HOME\lib\jdbcDrivers\SimbaJDBC.jar"
           db-type="DataServer"
           driver="simba.jdbc.SimbaDriver"
-          url="jdbc:simba:192.168.1.7:1583/DataServer2_DSN"
+          url="jdbc:simba:192.168.1.7:1583/DataServer_DSN"
           datasource=""
          >
     </connection>
 
     <color
-         rgb="#00cccc"
+         rgb="transparent"
+         >
+    </color>
+
+    <color
+         rgb="Black"
          >
     </color>
 
@@ -981,11 +1003,6 @@
 
     <color
          rgb="#cccccc"
-         >
-    </color>
-
-    <color
-         rgb="Black"
          >
     </color>
 

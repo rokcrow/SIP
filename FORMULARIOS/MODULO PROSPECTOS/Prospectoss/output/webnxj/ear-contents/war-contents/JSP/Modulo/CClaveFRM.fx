@@ -90,8 +90,6 @@
         immediate = "false"
         key = "cajagrandeCClaveFRM:cajaarribaCClave:actualempresa."
         original_name = "textfield1"
-        script = "{
-}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
@@ -107,8 +105,6 @@
         immediate = "false"
         key = "cajagrandeCClaveFRM:cajaarribaCClave:actualusuario."
         original_name = "textfield1"
-        script = "{
-}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = ""

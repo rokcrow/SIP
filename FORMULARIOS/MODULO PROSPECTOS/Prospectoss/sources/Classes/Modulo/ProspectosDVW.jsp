@@ -1169,33 +1169,6 @@
                     binary_variables=""
                     view="div"
                     align="left" 
-                    style="position: absolute; top: 1305px; left: 721px; width:41px; height:16px">
-                    
-                    
-                    <label
-                        binary_variables=""
-                        class="label"
-                        displayheight="16"
-                        displayleft="721"
-                        displaytop="1305"
-                        displaywidth="41"
-                        id=".top:Label43."
-                        key=".top:Label43."
-                        labelalign="left"
-                        labeltitle="Motivo"
-                        uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368621777446"
-                        view="label"
-                        style="font-size: 12px;
-                            color: Black">
-                        <nobr>Motivo</nobr>
-                    </label>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    align="left" 
                     style="position: absolute; top: 1249px; left: 473px; width:110px; height:16px">
                     
                     
@@ -1422,7 +1395,7 @@
                         displayleft="4"
                         displaytop="1400"
                         displaywidth="996"
-                        field_weight="5299"
+                        field_weight="5199"
                         id=".top:cajaabajoRegistroP."
                         key=".top:cajaabajoRegistroP."
                         original_name="box1"
@@ -2766,7 +2739,7 @@
                         target_field="vpp_fecha"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146442643"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
@@ -2800,7 +2773,7 @@
                         target_field="vpp_fecha_nacio"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249872516"
                         updateable="true"
-                        view="date"
+                        view="text"
                         style="font-size: 12px;
                             color: Black">
 
@@ -2837,7 +2810,7 @@
                         target_field="vpp_fecha_visita"
                         uid="form1_1368621090006_768aba1f182bca5ffa8113b8767a193dd3c6fd0d_1369146344849"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
@@ -2871,7 +2844,7 @@
                         target_field="vpp_fechaestado"
                         uid="form1_1368621090006_4ebd02193dab88975266c5657a845ed123c9f800_1369249670190"
                         updateable="true"
-                        view="date">
+                        view="text">
 
                     </div>
 
@@ -2980,6 +2953,7 @@
                         key=".top:vpp_mediodes."
                         multi_valued="true"
                         name=".top:vpp_mediodes."
+                        required="true"
                         retrieve_value="true"
                         size="50"
                         target_field="vpp_mediodes"
@@ -3028,46 +3002,6 @@
                         zoom_form="Modulo/MediospFRM"
                         style="font-size: 12px;
                             color: Black">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 1331px; left: 721px; width:223px; height:21px">
-
-                    <select
-                        accell_type="String"
-                        auto_accept="false"
-                        auto_resize_width="false"
-                        binary_variables=""
-                        class="dropdown_list"
-                        db_length="1"
-                        db_type="String"
-                        displayheight="21"
-                        displayleft="721"
-                        displaytop="1331"
-                        displaywidth="223"
-                        explicit_search_mode="default"
-                        field_length="2"
-                        field_type="SELECT"
-                        field_weight="5199"
-                        findable="true"
-                        key=".top:vpp_motivo."
-                        multi_valued="true"
-                        name=".top:vpp_motivo."
-                        options="Ubicacion=U&#59;Precio=P&#59;Fecha de Entrega=F&#59;Distribucion=D&#59;Atencion al Cliente=A&#59;Tamaño Terreno (Area)=T&#59;Otros proyectos (Competencia)=O"
-                        original_name="select1"
-                        retrieve_value="true"
-                        size="1"
-                        target_field="vpp_motivo"
-                        uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368631297100"
-                        updateable="true"
-                        view="select"
-                        style="width:223px; height: 21px;
-                            font-size: 12px;
-                            color: Black">
-                    </select>
-
                 </div>
 
                 <div
