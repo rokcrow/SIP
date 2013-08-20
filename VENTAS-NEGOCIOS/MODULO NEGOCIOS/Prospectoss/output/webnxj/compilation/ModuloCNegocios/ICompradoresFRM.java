@@ -115,7 +115,7 @@ public class ICompradoresFRM
     } // beforeForm
     private ICompradoresFRM ICompradoresFRM = this;
     public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
-    public /*multi_valued*/ NullableDateField vmu_garage1 = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_garage1", true, true, 3);
+    public /*multi_valued*/ NullableAmountField vmu_garage1 = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vmu_garage1", true, true, 3);
 
     public ICompradoresFRM(NXJSession session, NXJForm prevForm)
     {
@@ -132,7 +132,7 @@ public class ICompradoresFRM
     private void us$initializeFormSpecificProperties()
     {
 	us$setConnectionName("Connection1");
-	us$setTargetTableName("PUBLIC.vfd_festidomi");
+	us$setTargetTableName("PUBLIC.vpc_proycorre");
 	setStartInAddMode(false);
 	us$setBindingType("connection");
 	textfield1.setStyleClass("textfield");
@@ -142,7 +142,7 @@ public class ICompradoresFRM
 	vmu_garage1.us$setMultiValued(true);
 	vmu_garage1.us$setView("text");
 	vmu_garage1.us$setFieldLength(3);
-	vmu_garage1.us$setCandidateTargetColumnName("vfd_festivo");
+	vmu_garage1.us$setCandidateTargetColumnName("vpc_porcentaje");
 	vmu_garage1.setValueRetrievedDuringFetch(true);
 	vmu_garage1.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	vmu_garage1.setFindable(true);

@@ -6,7 +6,17 @@ FORM IAClientesFRM
 
     BEFORE FORM
     {
-            ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass2 = "2";
+            if( ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass1 == "1")
+            {
+                ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass2 = "2";
+            }
+            else
+            {
+                session.displayToMessageBox("Antes debe acceder a COMPROMISOS DEL NEGOCIO.");
+                session.queueCommand("PREVIOUS_FORM");
+            }
+            
+            
     }
 
     FIELD vev_etapactu

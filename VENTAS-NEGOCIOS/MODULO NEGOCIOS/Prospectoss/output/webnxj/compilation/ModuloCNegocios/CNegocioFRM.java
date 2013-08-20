@@ -110,8 +110,17 @@ public class CNegocioFRM
     public void beforeForm()
 	throws Exception
     {
+	com.unify.nxj.mgr.datatypes.Register us$R1;
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.varpass3.assign(us$registerPool.allocateRegister().load("3"));
+	if (((us$R1 = us$registerPool.allocateRegister().load(((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.varpass1).eqOp("1")).isLogicalAndDecided() ? us$R1 : us$R1.logicalAndOp(us$registerPool.allocateRegister().load(((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.varpass2).eqOp("2"))).getBooleanValueNullOk())
+	    {
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.varpass3.assign(us$registerPool.allocateRegister().load("3"));
+	    }
+	else
+	    {
+	    getSession().displayToMessageBox("Debe acceder a los formularios en orden.");
+	    getSession().queueCommand("PREVIOUS_FORM");
+	    }
     } // beforeForm
     private CNegocioFRM CNegocioFRM = this;
     public class box1

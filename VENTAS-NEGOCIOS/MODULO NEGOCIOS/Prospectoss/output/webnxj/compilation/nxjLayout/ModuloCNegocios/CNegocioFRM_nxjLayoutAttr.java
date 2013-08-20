@@ -18,12 +18,12 @@ dodiv_box1__10(div_box1__10);
 private void setAttrFor_this(Widget widget)
 {
 	widget.addAttribute("displaywidth","700");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displayheight","600");
 	widget.addAttribute("fieldheight","600");
 	widget.addAttribute("fieldwidth","700");
 	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_box1__10(Widget widget)
@@ -38,9 +38,9 @@ private void setAttrFor_box1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","63");
+	widget.addAttribute("id","box1.");
 	widget.addStyle("border-width","1");
 	widget.addAttribute("displayleft","203");
-	widget.addAttribute("id","box1.");
 	widget.addAttribute("displaytop","75");
 	widget.addAttribute("displayheight","113");
 	widget.addAttribute("fieldheight","113");
@@ -63,16 +63,16 @@ private void setAttrFor_xxx__40(Widget widget)
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
 	widget.addStyle("visibility","hidden");
-	widget.addAttribute("displaywidth","38");
-	widget.addAttribute("displayleft","11");
-	widget.addAttribute("displaytop","39");
 	widget.addAttribute("type","text");
+	widget.addAttribute("displaywidth","38");
+	widget.addAttribute("name","box1:xxx.");
+	widget.addAttribute("displayleft","11");
+	widget.addAttribute("size","6");
+	widget.addAttribute("displaytop","39");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","38");
-	widget.addAttribute("size","6");
 	widget.setClass("textfield");
-	widget.addAttribute("name","box1:xxx.");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_box1__10(Widget div_box1__10)

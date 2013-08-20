@@ -13,7 +13,7 @@
         auto_find = "false"
         background_color = "#cccccc"
         binary_variables = ""
-        bloom_filter = "00000000000400040040000000000000"
+        bloom_filter = "00080000000000100800000000000000"
         cascade_deletes = "false"
         cascade_updates = "false"
         commands = ""

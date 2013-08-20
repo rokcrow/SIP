@@ -114,6 +114,7 @@ public class RBoletinesFRM
     /*multi_valued*/ NullableAmountVariable vmu_descuentos = NullableFactory.createNullableAmountVariable(this, "vmu_descuentos", true, false);
     /*multi_valued*/ NullableAmountVariable vmu_vgarage = NullableFactory.createNullableAmountVariable(this, "vmu_vgarage", true, false);
     /*multi_valued*/ NullableAmountVariable vmu_precio_uni = NullableFactory.createNullableAmountVariable(this, "vmu_precio_uni", true, false);
+    NullableAmount vpc_porcentaje = NullableFactory.createNullableAmount("vpc_porcentaje");
     NullableAmount vlr_ev = NullableFactory.createNullableAmount("vlr_ev");
     NullableAmount zero = NullableFactory.createNullableAmount("zero");
     NullableAmount imporenta = NullableFactory.createNullableAmount("imporenta");
@@ -137,11 +138,17 @@ public class RBoletinesFRM
     NullableString garage3 = NullableFactory.createNullableString("garage3");
     NullableString garage2 = NullableFactory.createNullableString("garage2");
     NullableString garage1 = NullableFactory.createNullableString("garage1");
+    NullableString x_corporacion = NullableFactory.createNullableString("x_corporacion");
+    NullableString gasto_escritura = NullableFactory.createNullableString("gasto_escritura");
+    NullableString vendedora = NullableFactory.createNullableString("vendedora");
+    NullableString vve_nombre = NullableFactory.createNullableString("vve_nombre");
     NullableString vut_tramite = NullableFactory.createNullableString("vut_tramite");
     NullableString vut_etapa = NullableFactory.createNullableString("vut_etapa");
     NullableString tipounidad = NullableFactory.createNullableString("tipounidad");
     NullableNumeric adiciona = NullableFactory.createNullableNumeric("adiciona");
     NullableNumeric adicionando = NullableFactory.createNullableNumeric("adicionando");
+    NullableDate x = NullableFactory.createNullableDate("x");
+    NullableDate fret_obra = NullableFactory.createNullableDate("fret_obra");
     NullableDate vut_f_real = NullableFactory.createNullableDate("vut_f_real");
     NullableDate f_separacion = NullableFactory.createNullableDate("f_separacion");
 
@@ -196,6 +203,21 @@ public class RBoletinesFRM
 	});
     } // beforeForm
 
+    public void onClearToAdd()
+	throws Exception
+    {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	adicionando.assign(us$registerPool.allocateRegister().load(1));
+	cajagrandeRBoletines.vmu_f_gravacion.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()));
+	preciotot.assign(us$registerPool.allocateRegister().load(cero));
+	cajagrandeRBoletines.vmu_precio_uni.assign(us$registerPool.allocateRegister().load(cero));
+	cajagrandeRBoletines.vmu_vgarage.assign(us$registerPool.allocateRegister().load(cero));
+	cajagrandeRBoletines.vmu_descuentos.assign(us$registerPool.allocateRegister().load(cero));
+	cajagrandeRBoletines.vmu_cli_clase.setStopForInput(true);
+	cajagrandeRBoletines.vau_apoderado.setStopForInput(true);
+	cajagrandeRBoletines.vau_apode_nit.setStopForInput(true);
+    } // onClearToAdd
+
     public void beforeAdd()
 	throws Exception
     {
@@ -203,7 +225,7 @@ public class RBoletinesFRM
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 	adiciona.assign(us$registerPool.allocateRegister().load(1));
 	cajagrandeRBoletines.vmu_preciotot.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_precio_uni).plusOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_vgarage)));
-	cajagrandeRBoletines.vmu_preciotot.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_preciotot).minusOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_descuentos)));
+	cajagrandeRBoletines.vmu_preciotot.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_preciotot).minusOp(cajagrandeRBoletines.vmu_descuentos));
 	cajagrandeRBoletines.vmu_vdeposito.assign(us$registerPool.allocateRegister().load(0));
 	getSession().displayToMessageBox("Actualizando unidad y/o garajes.");
 	if (((us$R1 = us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_tipoinmueb).eqOp("C")).isLogicalOrDecided() ? us$R1 : us$R1.logicalOrOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_tipoinmueb).eqOp("A"))).getBooleanValueNullOk())
@@ -371,19 +393,19 @@ public class RBoletinesFRM
 		    }
 		else
 		    {
-		    getSession().displayToMessageBox("Antes debe ir a COMPROMISOS DEL NEGOCIO.");
+		    getSession().displayToMessageBox("Antes debe acceder a COMPROMISOS DEL NEGOCIO.");
 		    rejectOperation();
 		    }
 		}
 	    else
 		{
-		getSession().displayToMessageBox("Antes debe ir a INFORMACI\u00D3N ADICIONAL DE CLIENTES.");
+		getSession().displayToMessageBox("Antes debe acceder a INFORMACI\u00D3N ADICIONAL DE CLIENTES.");
 		rejectOperation();
 		}
 	    }
 	else
 	    {
-	    getSession().displayToMessageBox("Antes debe ir a IDENTIFICACI\u00D3N DE COMPRADORES.");
+	    getSession().displayToMessageBox("Antes debe acceder a IDENTIFICACI\u00D3N DE COMPRADORES.");
 	    rejectOperation();
 	    }
     } // onClearToFind
@@ -474,7 +496,7 @@ public class RBoletinesFRM
 		    us$conn6.us$closeStatement(us$stmt6);
 		}
 	    }
-	cajagrandeRBoletines.vmu_preciotot.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_precio_uni).plusOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_vgarage)).minusOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_descuentos)));
+	cajagrandeRBoletines.vmu_preciotot.assign(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_precio_uni).plusOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_vgarage)).minusOp(cajagrandeRBoletines.vmu_descuentos));
 	if (((us$R7 = us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_tipoinmueb).eqOp("C")).isLogicalOrDecided() ? us$R7 : us$R7.logicalOrOp(us$registerPool.allocateRegister().load(cajagrandeRBoletines.vmu_tipoinmueb).eqOp("A"))).getBooleanValueNullOk())
 	    {
 	    tipounidad.assign(us$registerPool.allocateRegister().load("V"));
@@ -807,7 +829,7 @@ public class RBoletinesFRM
 	    }
 	else
 	    {
-	    if (1 == 1)
+	    if (gra_tramis(new com.unify.nxj.mgr.datatypes.Register().load(cajagrandeRBoletines.vmu_obra), new com.unify.nxj.mgr.datatypes.Register().load(cajagrandeRBoletines.vmu_manzana), new com.unify.nxj.mgr.datatypes.Register().load(cajagrandeRBoletines.vmu_unidad), new com.unify.nxj.mgr.datatypes.Register().load(cajagrandeRBoletines.vmu_f_separacion), new com.unify.nxj.mgr.datatypes.Register().load(cajagrandeRBoletines.vmu_forma_pago)))
 		{
 		getSession().displayToMessageBox("No se pudo generar los TR\u00C1MITES del Negocio");
 		getSession().rollbackTransaction();
@@ -999,6 +1021,667 @@ public class RBoletinesFRM
 		}
 	    }
     } // afterAdd
+
+    public boolean gra_tramis(NullableString obra, NullableString manzana, NullableString unidad, NullableDate fechasep, NullableString formapago)
+	throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
+    {
+	com.unify.nxj.mgr.datatypes.Register us$R28;
+	com.unify.nxj.mgr.datatypes.Register us$R23;
+	((com.unify.nxj.mgr.datatypes.Register)formapago).freezeType();
+	((com.unify.nxj.mgr.datatypes.Register)fechasep).freezeType();
+	((com.unify.nxj.mgr.datatypes.Register)unidad).freezeType();
+	((com.unify.nxj.mgr.datatypes.Register)manzana).freezeType();
+	((com.unify.nxj.mgr.datatypes.Register)obra).freezeType();
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	NullableDate vtu_f_teorica = NullableFactory.createNullableDate("vtu_f_teorica");
+	NullableDate vtu_f_real = NullableFactory.createNullableDate("vtu_f_real");
+	NullableDate x_campo = NullableFactory.createNullableDate("x_campo");
+	NullableNumeric vdt_duracion = NullableFactory.createNullableNumeric("vdt_duracion");
+	NullableNumeric vdt_consec = NullableFactory.createNullableNumeric("vdt_consec");
+	NullableNumeric sw_f_real = NullableFactory.createNullableNumeric("sw_f_real");
+	NullableNumeric index = NullableFactory.createNullableNumeric("index");
+	NullableNumeric x_c = NullableFactory.createNullableNumeric("x_c");
+	NullableString vdt_etapa = NullableFactory.createNullableString("vdt_etapa");
+	NullableString vdt_tramite = NullableFactory.createNullableString("vdt_tramite");
+	NullableString vtn_formapago = NullableFactory.createNullableString("vtn_formapago");
+	NullableBoolean varRetorno = (NullableBoolean)NullableFactory.createNullableBoolean("varRetorno").assign(us$registerPool.allocateRegister().load(true));
+	getSession().displayToMessageBox("Generando los Tr\u00E1mites del Negocio.");
+	vtu_f_teorica.assign(us$registerPool.allocateRegister().load(fechasep));
+	try
+	    {
+
+		{
+		getSession().us$setStatus(StatusCode.SS_NORM);
+		NXJDataConnection us$conn19 = getConnection();
+		java.sql.PreparedStatement us$stmt19 = null;
+		ResultSet us$rs19 = null;
+		try
+		    {
+		    us$stmt19 = us$conn19.prepareStatement("SELECT vdt_etapa, vdt_tramite, vdt_dura_teori, vdt_consec FROM vdt_tramiobra WHERE vdt_empresa =  ?  AND vdt_obra =  ?  ORDER BY vdt_consec ASC");
+		    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt19, 1);
+		    obra.us$setSqlParameterValue(us$stmt19, 2);
+		    us$rs19 = us$stmt19.executeQuery();
+		    int us$rowsTouched19 = 0;
+		    try
+			{
+			java.sql.ResultSetMetaData us$rsmd19 = us$rs19.getMetaData();
+			if (us$rsmd19.getColumnCount() != 4)
+			    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				{
+				Integer.toString(us$rsmd19.getColumnCount()), "4"
+				}));
+			com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter19 = us$conn19.createDataIterator(us$rs19);
+			while (us$getter19.next())
+			    {
+			    ++us$rowsTouched19;
+			    us$getter19.assignValueToVariable(vdt_etapa, 1);
+			    us$getter19.assignValueToVariable(vdt_tramite, 2);
+			    us$getter19.assignValueToVariable(vdt_duracion, 3);
+			    us$getter19.assignValueToVariable(vdt_consec, 4);
+
+				{
+
+				    {
+				    getSession().us$setStatus(StatusCode.SS_NORM);
+				    NXJDataConnection us$conn20 = getConnection();
+				    java.sql.PreparedStatement us$stmt20 = null;
+				    ResultSet us$rs20 = null;
+				    try
+					{
+					us$stmt20 = us$conn20.prepareStatement("SELECT vtn_formapago FROM vtn_traminego WHERE vtn_etapa =  ?  AND vtn_tramite =  ?");
+					vdt_etapa.us$setSqlParameterValue(us$stmt20, 1);
+					vdt_tramite.us$setSqlParameterValue(us$stmt20, 2);
+					us$rs20 = us$stmt20.executeQuery();
+					int us$rowsTouched20 = 0;
+					try
+					    {
+					    java.sql.ResultSetMetaData us$rsmd20 = us$rs20.getMetaData();
+					    if (us$rsmd20.getColumnCount() != 1)
+						throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+						    {
+						    Integer.toString(us$rsmd20.getColumnCount()), "1"
+						    }));
+					    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter20 = us$conn20.createDataIterator(us$rs20);
+					    if (us$getter20.next())
+						{
+						++us$rowsTouched20;
+						us$getter20.assignValueToVariable(vtn_formapago, 1);
+						}
+					    }
+					finally
+					    {
+					    if (us$rowsTouched20 == 0)
+						getSession().us$setStatus(StatusCode.SS_NOREC);
+					    if (us$rs20 != null)
+						us$rs20.close();
+					    }
+					}
+				    catch (SQLException us$ex20)
+					{
+					getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
+					throw us$ex20;
+					}
+				    catch (NXJDataConnectionException us$ex20)
+					{
+					getSession().us$setStatus(us$conn20.mapToStatusCode(us$ex20));
+					throw us$ex20;
+					}
+				    finally
+					{
+					if (us$stmt20 != null)
+					    us$conn20.us$closeStatement(us$stmt20);
+					}
+				    }
+				if (getSession().getStatus() != StatusCode.SS_NORM)
+				    {
+				    getSession().displayToMessageBox("El tr\u00E1mite de obra NO existe en tr\u00E1mites generales.");
+				    getSession().displayToMessageBox(vdt_etapa.toString());
+				    getSession().displayToMessageBox(vdt_tramite.toString());
+				    return true;
+				    }
+
+				    {
+				    getSession().us$setStatus(StatusCode.SS_NORM);
+				    NXJDataConnection us$conn21 = getConnection();
+				    java.sql.PreparedStatement us$stmt21 = null;
+				    ResultSet us$rs21 = null;
+				    try
+					{
+					us$stmt21 = us$conn21.prepareStatement("SELECT vut_f_real FROM vut_tramites WHERE vut_empresa =  ?  AND vut_obra =  ?  AND vut_manzana =  ?  AND vut_unidad =  ?  AND vut_etapa =  ?  AND vut_tramite =  ?");
+					((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt21, 1);
+					obra.us$setSqlParameterValue(us$stmt21, 2);
+					manzana.us$setSqlParameterValue(us$stmt21, 3);
+					unidad.us$setSqlParameterValue(us$stmt21, 4);
+					vdt_etapa.us$setSqlParameterValue(us$stmt21, 5);
+					vdt_tramite.us$setSqlParameterValue(us$stmt21, 6);
+					us$rs21 = us$stmt21.executeQuery();
+					int us$rowsTouched21 = 0;
+					try
+					    {
+					    java.sql.ResultSetMetaData us$rsmd21 = us$rs21.getMetaData();
+					    if (us$rsmd21.getColumnCount() != 1)
+						throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+						    {
+						    Integer.toString(us$rsmd21.getColumnCount()), "1"
+						    }));
+					    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter21 = us$conn21.createDataIterator(us$rs21);
+					    if (us$getter21.next())
+						{
+						++us$rowsTouched21;
+						us$getter21.assignValueToVariable(vtu_f_real, 1);
+						}
+					    }
+					finally
+					    {
+					    if (us$rowsTouched21 == 0)
+						getSession().us$setStatus(StatusCode.SS_NOREC);
+					    if (us$rs21 != null)
+						us$rs21.close();
+					    }
+					}
+				    catch (SQLException us$ex21)
+					{
+					getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
+					throw us$ex21;
+					}
+				    catch (NXJDataConnectionException us$ex21)
+					{
+					getSession().us$setStatus(us$conn21.mapToStatusCode(us$ex21));
+					throw us$ex21;
+					}
+				    finally
+					{
+					if (us$stmt21 != null)
+					    us$conn21.us$closeStatement(us$stmt21);
+					}
+				    }
+				if (getSession().getStatus() != StatusCode.SS_NORM)
+				    {
+				    if (getSession().getStatus() == StatusCode.SS_NOREC)
+					{
+					sw_f_real.assign(us$registerPool.allocateRegister().load(0));
+					}
+				    else
+					{
+					getSession().displayToMessageBox("No se puede leer el permiso, verifique.");
+					getSession().displayToMessageBox(vdt_etapa.toString());
+					getSession().displayToMessageBox(vdt_tramite.toString());
+					return true;
+					}
+				    }
+				else
+				    {
+				    sw_f_real.assign(us$registerPool.allocateRegister().load(1));
+				    }
+				if (us$registerPool.allocateRegister().load(formapago).eqOp("C").getBooleanValueNullOk())
+				    {
+				    if (us$registerPool.allocateRegister().load(vtn_formapago).neqOp("CR").getBooleanValueNullOk())
+					{
+					getSession().displayToMessageBox(vtu_f_teorica.toString());
+					getSession().displayToMessageBox(vdt_duracion.toString());
+					for (index.assign(us$registerPool.allocateRegister().load(1));
+						us$registerPool.allocateRegister().load(index).leOp(us$registerPool.allocateRegister().load(vdt_duracion)).getBooleanValueNullOk();
+						index.assign(us$registerPool.allocateRegister().load(index).plusOp(1)))
+					    {
+					    vtu_f_teorica.assign(us$registerPool.allocateRegister().load(vtu_f_teorica).plusOp(1));
+					    x_c.assign(us$registerPool.allocateRegister().load(0));
+					    do
+
+						    {
+
+							{
+							getSession().us$setStatus(StatusCode.SS_NORM);
+							NXJDataConnection us$conn22 = getConnection();
+							java.sql.PreparedStatement us$stmt22 = null;
+							ResultSet us$rs22 = null;
+							try
+							    {
+							    us$stmt22 = us$conn22.prepareStatement("SELECT vfd_festivo FROM vfd_festidomi WHERE vfd_festivo =  ?");
+							    vtu_f_teorica.us$setSqlParameterValue(us$stmt22, 1);
+							    us$rs22 = us$stmt22.executeQuery();
+							    int us$rowsTouched22 = 0;
+							    try
+								{
+								java.sql.ResultSetMetaData us$rsmd22 = us$rs22.getMetaData();
+								if (us$rsmd22.getColumnCount() != 1)
+								    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+									{
+									Integer.toString(us$rsmd22.getColumnCount()), "1"
+									}));
+								com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter22 = us$conn22.createDataIterator(us$rs22);
+								if (us$getter22.next())
+								    {
+								    ++us$rowsTouched22;
+								    us$getter22.assignValueToVariable(x_campo, 1);
+								    }
+								}
+							    finally
+								{
+								if (us$rowsTouched22 == 0)
+								    getSession().us$setStatus(StatusCode.SS_NOREC);
+								if (us$rs22 != null)
+								    us$rs22.close();
+								}
+							    }
+							catch (SQLException us$ex22)
+							    {
+							    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+							    throw us$ex22;
+							    }
+							catch (NXJDataConnectionException us$ex22)
+							    {
+							    getSession().us$setStatus(us$conn22.mapToStatusCode(us$ex22));
+							    throw us$ex22;
+							    }
+							finally
+							    {
+							    if (us$stmt22 != null)
+								us$conn22.us$closeStatement(us$stmt22);
+							    }
+							}
+						    if (getSession().getStatus() == StatusCode.SS_NORM)
+							{
+							vtu_f_teorica.assign(us$registerPool.allocateRegister().load(vtu_f_teorica).plusOp(1));
+							}
+						    else
+							{
+							x_c.assign(us$registerPool.allocateRegister().load(1));
+							}
+						    }
+					    while (us$registerPool.allocateRegister().load(x_c).neqOp(1).getBooleanValueNullOk());
+					    }
+					if (((us$R23 = us$registerPool.allocateRegister().load(vdt_etapa).eqOp("SP")).isLogicalAndDecided() ? us$R23 : us$R23.logicalAndOp(us$registerPool.allocateRegister().load(vdt_tramite).eqOp("SE"))).getBooleanValueNullOk())
+					    {
+
+						{
+						getSession().us$setStatus(StatusCode.SS_NORM);
+						NXJDataConnection us$conn24 = getConnection();
+						java.sql.PreparedStatement us$stmt24 = null;
+						ResultSet us$rs24 = null;
+						try
+						    {
+						    us$stmt24 = us$conn24.prepareStatement("INSERT INTO vtu_tramiuni ( vtu_empresa, vtu_obra, vtu_manzana, vtu_unidad, vtu_etapa, vtu_tramite, vtu_consec, vtu_f_teorica, vtu_aplica, vtu_estado, vtu_dura_teor, vtu_f_real ) VALUES (  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? , \'S\', 0,  ? ,  ?  )");
+						    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt24, 1);
+						    obra.us$setSqlParameterValue(us$stmt24, 2);
+						    manzana.us$setSqlParameterValue(us$stmt24, 3);
+						    unidad.us$setSqlParameterValue(us$stmt24, 4);
+						    vdt_etapa.us$setSqlParameterValue(us$stmt24, 5);
+						    vdt_tramite.us$setSqlParameterValue(us$stmt24, 6);
+						    vdt_consec.us$setSqlParameterValue(us$stmt24, 7);
+						    vtu_f_teorica.us$setSqlParameterValue(us$stmt24, 8);
+						    vdt_duracion.us$setSqlParameterValue(us$stmt24, 9);
+						    fechasep.us$setSqlParameterValue(us$stmt24, 10);
+						    if (us$stmt24.executeUpdate() == 0)
+							getSession().us$setStatus(StatusCode.SS_NOREC);
+						    }
+						catch (SQLException us$ex24)
+						    {
+						    getSession().us$setStatus(us$conn24.mapToStatusCode(us$ex24));
+						    throw us$ex24;
+						    }
+						catch (NXJDataConnectionException us$ex24)
+						    {
+						    getSession().us$setStatus(us$conn24.mapToStatusCode(us$ex24));
+						    throw us$ex24;
+						    }
+						finally
+						    {
+						    if (us$stmt24 != null)
+							us$conn24.us$closeStatement(us$stmt24);
+						    }
+						}
+					    if (getSession().getStatus() != StatusCode.SS_NORM)
+						{
+						getSession().displayToMessageBox("No se puede insertar el tr\u00E1mite: " + vdt_tramite.toString());
+						return true;
+						}
+					    }
+					else
+					    {
+					    if (us$registerPool.allocateRegister().load(sw_f_real).eqOp(1).getBooleanValueNullOk())
+						{
+
+						    {
+						    getSession().us$setStatus(StatusCode.SS_NORM);
+						    NXJDataConnection us$conn25 = getConnection();
+						    java.sql.PreparedStatement us$stmt25 = null;
+						    ResultSet us$rs25 = null;
+						    try
+							{
+							us$stmt25 = us$conn25.prepareStatement("INSERT INTO vtu_tramiuni ( vtu_empresa, vtu_obra, vtu_manzana, vtu_unidad, vtu_etapa, vtu_tramite, vtu_consec, vtu_f_teorica, vtu_aplica, vtu_estado, vtu_dura_teor, vtu_f_real ) VALUES (  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? , \'S\', 0,  ? ,  ?  )");
+							((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt25, 1);
+							obra.us$setSqlParameterValue(us$stmt25, 2);
+							manzana.us$setSqlParameterValue(us$stmt25, 3);
+							unidad.us$setSqlParameterValue(us$stmt25, 4);
+							vdt_etapa.us$setSqlParameterValue(us$stmt25, 5);
+							vdt_tramite.us$setSqlParameterValue(us$stmt25, 6);
+							vdt_consec.us$setSqlParameterValue(us$stmt25, 7);
+							vtu_f_teorica.us$setSqlParameterValue(us$stmt25, 8);
+							vdt_duracion.us$setSqlParameterValue(us$stmt25, 9);
+							vtu_f_real.us$setSqlParameterValue(us$stmt25, 10);
+							if (us$stmt25.executeUpdate() == 0)
+							    getSession().us$setStatus(StatusCode.SS_NOREC);
+							}
+						    catch (SQLException us$ex25)
+							{
+							getSession().us$setStatus(us$conn25.mapToStatusCode(us$ex25));
+							throw us$ex25;
+							}
+						    catch (NXJDataConnectionException us$ex25)
+							{
+							getSession().us$setStatus(us$conn25.mapToStatusCode(us$ex25));
+							throw us$ex25;
+							}
+						    finally
+							{
+							if (us$stmt25 != null)
+							    us$conn25.us$closeStatement(us$stmt25);
+							}
+						    }
+						if (getSession().getStatus() != StatusCode.SS_NORM)
+						    {
+						    getSession().displayToMessageBox("No se puede insertar el tr\u00E1mite: " + vdt_tramite.toString());
+						    return true;
+						    }
+						}
+					    else
+						{
+
+						    {
+						    getSession().us$setStatus(StatusCode.SS_NORM);
+						    NXJDataConnection us$conn26 = getConnection();
+						    java.sql.PreparedStatement us$stmt26 = null;
+						    ResultSet us$rs26 = null;
+						    try
+							{
+							us$stmt26 = us$conn26.prepareStatement("INSERT INTO vtu_tramiuni ( vtu_empresa, vtu_obra, vtu_manzana, vtu_unidad, vtu_etapa, vtu_tramite, vtu_consec, vtu_f_teorica, vtu_aplica, vtu_estado, vtu_dura_teor ) VALUES (  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? , \'S\', 0,  ?  )");
+							((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt26, 1);
+							obra.us$setSqlParameterValue(us$stmt26, 2);
+							manzana.us$setSqlParameterValue(us$stmt26, 3);
+							unidad.us$setSqlParameterValue(us$stmt26, 4);
+							vdt_etapa.us$setSqlParameterValue(us$stmt26, 5);
+							vdt_tramite.us$setSqlParameterValue(us$stmt26, 6);
+							vdt_consec.us$setSqlParameterValue(us$stmt26, 7);
+							vtu_f_teorica.us$setSqlParameterValue(us$stmt26, 8);
+							vdt_duracion.us$setSqlParameterValue(us$stmt26, 9);
+							if (us$stmt26.executeUpdate() == 0)
+							    getSession().us$setStatus(StatusCode.SS_NOREC);
+							}
+						    catch (SQLException us$ex26)
+							{
+							getSession().us$setStatus(us$conn26.mapToStatusCode(us$ex26));
+							throw us$ex26;
+							}
+						    catch (NXJDataConnectionException us$ex26)
+							{
+							getSession().us$setStatus(us$conn26.mapToStatusCode(us$ex26));
+							throw us$ex26;
+							}
+						    finally
+							{
+							if (us$stmt26 != null)
+							    us$conn26.us$closeStatement(us$stmt26);
+							}
+						    }
+						if (getSession().getStatus() != StatusCode.SS_NORM)
+						    {
+						    getSession().displayToMessageBox("No se puede insertar el tr\u00E1mite: " + vdt_tramite.toString());
+						    return true;
+						    }
+						}
+					    }
+					}
+				    }
+				if (us$registerPool.allocateRegister().load(formapago).eqOp("D").getBooleanValueNullOk())
+				    {
+				    getSession().displayToMessageBox(vtu_f_teorica.toString());
+				    getSession().displayToMessageBox(vdt_duracion.toString());
+				    for (index.assign(us$registerPool.allocateRegister().load(1));
+					    us$registerPool.allocateRegister().load(index).leOp(us$registerPool.allocateRegister().load(vdt_duracion)).getBooleanValueNullOk();
+					    index.assign(us$registerPool.allocateRegister().load(index).plusOp(1)))
+					{
+					vtu_f_teorica.assign(us$registerPool.allocateRegister().load(vtu_f_teorica).plusOp(1));
+					x_c.assign(us$registerPool.allocateRegister().load(0));
+					do
+
+						{
+
+						    {
+						    getSession().us$setStatus(StatusCode.SS_NORM);
+						    NXJDataConnection us$conn27 = getConnection();
+						    java.sql.PreparedStatement us$stmt27 = null;
+						    ResultSet us$rs27 = null;
+						    try
+							{
+							us$stmt27 = us$conn27.prepareStatement("SELECT vfd_festivo FROM vfd_festidomi WHERE vfd_festivo =  ?");
+							vtu_f_teorica.us$setSqlParameterValue(us$stmt27, 1);
+							us$rs27 = us$stmt27.executeQuery();
+							int us$rowsTouched27 = 0;
+							try
+							    {
+							    java.sql.ResultSetMetaData us$rsmd27 = us$rs27.getMetaData();
+							    if (us$rsmd27.getColumnCount() != 1)
+								throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+								    {
+								    Integer.toString(us$rsmd27.getColumnCount()), "1"
+								    }));
+							    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter27 = us$conn27.createDataIterator(us$rs27);
+							    if (us$getter27.next())
+								{
+								++us$rowsTouched27;
+								us$getter27.assignValueToVariable(x_campo, 1);
+								}
+							    }
+							finally
+							    {
+							    if (us$rowsTouched27 == 0)
+								getSession().us$setStatus(StatusCode.SS_NOREC);
+							    if (us$rs27 != null)
+								us$rs27.close();
+							    }
+							}
+						    catch (SQLException us$ex27)
+							{
+							getSession().us$setStatus(us$conn27.mapToStatusCode(us$ex27));
+							throw us$ex27;
+							}
+						    catch (NXJDataConnectionException us$ex27)
+							{
+							getSession().us$setStatus(us$conn27.mapToStatusCode(us$ex27));
+							throw us$ex27;
+							}
+						    finally
+							{
+							if (us$stmt27 != null)
+							    us$conn27.us$closeStatement(us$stmt27);
+							}
+						    }
+						if (getSession().getStatus() == StatusCode.SS_NORM)
+						    {
+						    vtu_f_teorica.assign(us$registerPool.allocateRegister().load(vtu_f_teorica).plusOp(1));
+						    }
+						else
+						    {
+						    x_c.assign(us$registerPool.allocateRegister().load(1));
+						    }
+						}
+					while (us$registerPool.allocateRegister().load(x_c).neqOp(1).getBooleanValueNullOk());
+					}
+				    if (((us$R28 = us$registerPool.allocateRegister().load(vdt_etapa).eqOp("SP")).isLogicalAndDecided() ? us$R28 : us$R28.logicalAndOp(us$registerPool.allocateRegister().load(vdt_tramite).eqOp("SE"))).getBooleanValueNullOk())
+					{
+
+					    {
+					    getSession().us$setStatus(StatusCode.SS_NORM);
+					    NXJDataConnection us$conn29 = getConnection();
+					    java.sql.PreparedStatement us$stmt29 = null;
+					    ResultSet us$rs29 = null;
+					    try
+						{
+						us$stmt29 = us$conn29.prepareStatement("INSERT INTO vtu_tramiuni ( vtu_empresa, vtu_obra, vtu_manzana, vtu_unidad, vtu_etapa, vtu_tramite, vtu_consec, vtu_f_teorica, vtu_aplica, vtu_estado, vtu_dura_teor, vtu_f_real ) VALUES (  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? , \'S\', 0,  ? ,  ?  )");
+						((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt29, 1);
+						obra.us$setSqlParameterValue(us$stmt29, 2);
+						manzana.us$setSqlParameterValue(us$stmt29, 3);
+						unidad.us$setSqlParameterValue(us$stmt29, 4);
+						vdt_etapa.us$setSqlParameterValue(us$stmt29, 5);
+						vdt_tramite.us$setSqlParameterValue(us$stmt29, 6);
+						vdt_consec.us$setSqlParameterValue(us$stmt29, 7);
+						vtu_f_teorica.us$setSqlParameterValue(us$stmt29, 8);
+						vdt_duracion.us$setSqlParameterValue(us$stmt29, 9);
+						fechasep.us$setSqlParameterValue(us$stmt29, 10);
+						if (us$stmt29.executeUpdate() == 0)
+						    getSession().us$setStatus(StatusCode.SS_NOREC);
+						}
+					    catch (SQLException us$ex29)
+						{
+						getSession().us$setStatus(us$conn29.mapToStatusCode(us$ex29));
+						throw us$ex29;
+						}
+					    catch (NXJDataConnectionException us$ex29)
+						{
+						getSession().us$setStatus(us$conn29.mapToStatusCode(us$ex29));
+						throw us$ex29;
+						}
+					    finally
+						{
+						if (us$stmt29 != null)
+						    us$conn29.us$closeStatement(us$stmt29);
+						}
+					    }
+					if (getSession().getStatus() != StatusCode.SS_NORM)
+					    {
+					    getSession().displayToMessageBox("No se puede insertar el tr\u00E1mite: " + vdt_tramite.toString());
+					    return true;
+					    }
+					}
+				    else
+					{
+					if (us$registerPool.allocateRegister().load(sw_f_real).eqOp(1).getBooleanValueNullOk())
+					    {
+
+						{
+						getSession().us$setStatus(StatusCode.SS_NORM);
+						NXJDataConnection us$conn30 = getConnection();
+						java.sql.PreparedStatement us$stmt30 = null;
+						ResultSet us$rs30 = null;
+						try
+						    {
+						    us$stmt30 = us$conn30.prepareStatement("INSERT INTO vtu_tramiuni ( vtu_empresa, vtu_obra, vtu_manzana, vtu_unidad, vtu_etapa, vtu_tramite, vtu_consec, vtu_f_teorica, vtu_aplica, vtu_estado, vtu_dura_teor, vtu_f_real ) VALUES (  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? , \'S\', 0,  ? ,  ?  )");
+						    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt30, 1);
+						    obra.us$setSqlParameterValue(us$stmt30, 2);
+						    manzana.us$setSqlParameterValue(us$stmt30, 3);
+						    unidad.us$setSqlParameterValue(us$stmt30, 4);
+						    vdt_etapa.us$setSqlParameterValue(us$stmt30, 5);
+						    vdt_tramite.us$setSqlParameterValue(us$stmt30, 6);
+						    vdt_consec.us$setSqlParameterValue(us$stmt30, 7);
+						    vtu_f_teorica.us$setSqlParameterValue(us$stmt30, 8);
+						    vdt_duracion.us$setSqlParameterValue(us$stmt30, 9);
+						    vtu_f_real.us$setSqlParameterValue(us$stmt30, 10);
+						    if (us$stmt30.executeUpdate() == 0)
+							getSession().us$setStatus(StatusCode.SS_NOREC);
+						    }
+						catch (SQLException us$ex30)
+						    {
+						    getSession().us$setStatus(us$conn30.mapToStatusCode(us$ex30));
+						    throw us$ex30;
+						    }
+						catch (NXJDataConnectionException us$ex30)
+						    {
+						    getSession().us$setStatus(us$conn30.mapToStatusCode(us$ex30));
+						    throw us$ex30;
+						    }
+						finally
+						    {
+						    if (us$stmt30 != null)
+							us$conn30.us$closeStatement(us$stmt30);
+						    }
+						}
+					    if (getSession().getStatus() != StatusCode.SS_NORM)
+						{
+						getSession().displayToMessageBox("No se puede insertar el tr\u00E1mite: " + vdt_tramite.toString());
+						return true;
+						}
+					    }
+					else
+					    {
+
+						{
+						getSession().us$setStatus(StatusCode.SS_NORM);
+						NXJDataConnection us$conn31 = getConnection();
+						java.sql.PreparedStatement us$stmt31 = null;
+						ResultSet us$rs31 = null;
+						try
+						    {
+						    us$stmt31 = us$conn31.prepareStatement("INSERT INTO vtu_tramiuni ( vtu_empresa, vtu_obra, vtu_manzana, vtu_unidad, vtu_etapa, vtu_tramite, vtu_consec, vtu_f_teorica, vtu_aplica, vtu_estado, vtu_dura_teor ) VALUES (  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? , \'S\', 0,  ?  )");
+						    ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA.us$setSqlParameterValue(us$stmt31, 1);
+						    obra.us$setSqlParameterValue(us$stmt31, 2);
+						    manzana.us$setSqlParameterValue(us$stmt31, 3);
+						    unidad.us$setSqlParameterValue(us$stmt31, 4);
+						    vdt_etapa.us$setSqlParameterValue(us$stmt31, 5);
+						    vdt_tramite.us$setSqlParameterValue(us$stmt31, 6);
+						    vdt_consec.us$setSqlParameterValue(us$stmt31, 7);
+						    vtu_f_teorica.us$setSqlParameterValue(us$stmt31, 8);
+						    vdt_duracion.us$setSqlParameterValue(us$stmt31, 9);
+						    if (us$stmt31.executeUpdate() == 0)
+							getSession().us$setStatus(StatusCode.SS_NOREC);
+						    }
+						catch (SQLException us$ex31)
+						    {
+						    getSession().us$setStatus(us$conn31.mapToStatusCode(us$ex31));
+						    throw us$ex31;
+						    }
+						catch (NXJDataConnectionException us$ex31)
+						    {
+						    getSession().us$setStatus(us$conn31.mapToStatusCode(us$ex31));
+						    throw us$ex31;
+						    }
+						finally
+						    {
+						    if (us$stmt31 != null)
+							us$conn31.us$closeStatement(us$stmt31);
+						    }
+						}
+					    if (getSession().getStatus() != StatusCode.SS_NORM)
+						{
+						getSession().displayToMessageBox("No se puede insertar el tr\u00E1mite: " + vdt_tramite.toString());
+						return true;
+						}
+					    }
+					}
+				    }
+				}
+			    }
+			}
+		    finally
+			{
+			if (us$rowsTouched19 == 0)
+			    getSession().us$setStatus(StatusCode.SS_NOREC);
+			if (us$rs19 != null)
+			    us$rs19.close();
+			}
+		    }
+		catch (SQLException us$ex19)
+		    {
+		    getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
+		    throw us$ex19;
+		    }
+		catch (NXJDataConnectionException us$ex19)
+		    {
+		    getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
+		    throw us$ex19;
+		    }
+		finally
+		    {
+		    if (us$stmt19 != null)
+			us$conn19.us$closeStatement(us$stmt19);
+		    }
+		}
+	    }
+	catch (SQLException sqlExcp)
+	    {
+	    getSession().displayToMessageBox("No existen productos...");
+	    }
+	return false;
+    } // gra_tramis
     private RBoletinesFRM RBoletinesFRM = this;
     public class cajagrandeRBoletines
 	extends com.unify.nxj.mgr.NXJBox
@@ -1042,13 +1725,489 @@ public class RBoletinesFRM
 	public NullableStringField varpass1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "varpass1", false, true, 100);
 	public NullableStringField varpass2 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "varpass2", false, true, 100);
 	public NullableStringField varpass3 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "varpass3", false, true, 100);
-	public /*multi_valued*/ NullableStringField vau_apode_nit = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_apode_nit", true, true, 18);
+	public class vau_apode_nit
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void beforeField()
+		throws Exception
+	    {
+	    } // beforeField
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn32 = getConnection();
+		    java.sql.PreparedStatement us$stmt32 = null;
+		    ResultSet us$rs32 = null;
+		    try
+			{
+			us$stmt32 = us$conn32.prepareStatement("SELECT vco_nombre FROM vco_corredores WHERE vco_codigo =  ?");
+			vau_apode_nit.us$setSqlParameterValue(us$stmt32, 1);
+			us$rs32 = us$stmt32.executeQuery();
+			int us$rowsTouched32 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd32 = us$rs32.getMetaData();
+			    if (us$rsmd32.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd32.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter32 = us$conn32.createDataIterator(us$rs32);
+			    if (us$getter32.next())
+				{
+				++us$rowsTouched32;
+				us$getter32.assignValueToVariable(vau_apode_nom, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched32 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs32 != null)
+				us$rs32.close();
+			    }
+			}
+		    catch (SQLException us$ex32)
+			{
+			getSession().us$setStatus(us$conn32.mapToStatusCode(us$ex32));
+			throw us$ex32;
+			}
+		    catch (NXJDataConnectionException us$ex32)
+			{
+			getSession().us$setStatus(us$conn32.mapToStatusCode(us$ex32));
+			throw us$ex32;
+			}
+		    finally
+			{
+			if (us$stmt32 != null)
+			    us$conn32.us$closeStatement(us$stmt32);
+			}
+		    }
+		if (getSession().getStatus() != StatusCode.SS_NORM)
+		    {
+		    if (getSession().getStatus() == StatusCode.SS_NOREC)
+			{
+			getSession().displayToMessageBox("El corredor no est\u00E1 en la talba de corredores. Verique.");
+			vau_apoderado.assign(us$registerPool.allocateRegister().load("N"));
+			vau_apode_nit.assign(null);
+			vau_apode_nom.assign(null);
+			vau_apode_nit.setNextField("vau_apoderado");
+			}
+		    else
+			{
+			getSession().displayToMessageBox("No se puede acceder a la tabla de corredores.");
+			vau_apoderado.assign(us$registerPool.allocateRegister().load("N"));
+			vau_apode_nit.assign(null);
+			vau_apode_nom.assign(null);
+			vau_apode_nit.setNextField("vau_apoderado");
+			}
+		    }
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn33 = getConnection();
+		    java.sql.PreparedStatement us$stmt33 = null;
+		    ResultSet us$rs33 = null;
+		    try
+			{
+			us$stmt33 = us$conn33.prepareStatement("SELECT vpc_porcentaje FROM vpc_proycorre WHERE vpc_codigo =  ?  AND vpc_finicio <=  ?  AND (vpc_ffinal >=  ?  OR vpc_ffinal = null)");
+			vau_apode_nit.us$setSqlParameterValue(us$stmt33, 1);
+			vmu_f_separacion.us$setSqlParameterValue(us$stmt33, 2);
+			vmu_f_separacion.us$setSqlParameterValue(us$stmt33, 3);
+			us$rs33 = us$stmt33.executeQuery();
+			int us$rowsTouched33 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd33 = us$rs33.getMetaData();
+			    if (us$rsmd33.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd33.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter33 = us$conn33.createDataIterator(us$rs33);
+			    if (us$getter33.next())
+				{
+				++us$rowsTouched33;
+				us$getter33.assignValueToVariable(vpc_porcentaje, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched33 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs33 != null)
+				us$rs33.close();
+			    }
+			}
+		    catch (SQLException us$ex33)
+			{
+			getSession().us$setStatus(us$conn33.mapToStatusCode(us$ex33));
+			throw us$ex33;
+			}
+		    catch (NXJDataConnectionException us$ex33)
+			{
+			getSession().us$setStatus(us$conn33.mapToStatusCode(us$ex33));
+			throw us$ex33;
+			}
+		    finally
+			{
+			if (us$stmt33 != null)
+			    us$conn33.us$closeStatement(us$stmt33);
+			}
+		    }
+		if (getSession().getStatus() != StatusCode.SS_NORM)
+		    {
+		    if (getSession().getStatus() == StatusCode.SS_NOREC)
+			{
+			getSession().displayToMessageBox("El corredor no puede ser asignado. Ya expir\u00F3 su convenio. Verifique.");
+			vau_apoderado.assign(us$registerPool.allocateRegister().load("N"));
+			vau_apode_nit.assign(null);
+			vau_apode_nom.assign(null);
+			vau_apode_nit.setNextField("vau_apoderado");
+			}
+		    else
+			{
+			getSession().displayToMessageBox("No se puede acceder a la tabla de corredores.");
+			vau_apoderado.assign(us$registerPool.allocateRegister().load("N"));
+			vau_apode_nit.assign(null);
+			vau_apode_nom.assign(null);
+			vau_apode_nit.setNextField("vau_apoderado");
+			}
+		    }
+	    } // onDataAccept
+
+	    public void afterField()
+		throws Exception
+	    {
+	    } // afterField
+
+	    public vau_apode_nit()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vau_apode_nit", true, true, 18);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(18);
+		us$setCandidateTargetColumnName("vau_apode_nit");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		setCaseConversion(NullableField.CaseConversion_UPPER);
+		us$executesCodeBeforeInput = true;
+		us$executesCodeAfterInput = true;
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vau_apode_nit
+
+	public /*multi_valued*/ vau_apode_nit vau_apode_nit = new vau_apode_nit();
 	public /*multi_valued*/ NullableStringField vau_apode_nom = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_apode_nom", true, true, 40);
-	public /*multi_valued*/ NullableStringField vau_apoderado = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_apoderado", true, true, 2);
-	public /*multi_valued*/ NullableStringField vma_ven_responsa = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vma_ven_responsa", true, true, 3);
+	public class vau_apoderado
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (us$registerPool.allocateRegister().load(vau_apoderado).eqOp("S").getBooleanValueNullOk())
+		    {
+		    vau_apoderado.setNextField("vau_apode_nit");
+		    }
+		else
+		    {
+		    vau_apode_nit.assign(null);
+		    vau_apode_nom.assign(null);
+		    vau_apoderado.setNextField("vau_apode_nit");
+		    }
+	    } // onDataAccept
+
+	    public vau_apoderado()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vau_apoderado", true, true, 2);
+		setVisible(true);
+		setStyleClass("dropdown_list");
+		us$setMultiValued(true);
+		us$setView("select");
+		us$setFieldLength(2);
+		setAutoAccept(true);
+		us$setCandidateTargetColumnName("vau_apoderado");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vau_apoderado
+
+	public /*multi_valued*/ vau_apoderado vau_apoderado = new vau_apoderado();
+	public class vma_ven_responsa
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void beforeField()
+		throws Exception
+	    {
+	    } // beforeField
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		com.unify.nxj.mgr.datatypes.Register us$R36;
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (vma_ven_responsa.isUndefined() == true)
+		    {
+		    getSession().displayToMessageBox("Digite el c\u00F3digo de la vendedres responsable, por favor.");
+		    getSession().queueNextField(vma_ven_responsa);
+		    }
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn34 = getConnection();
+		    java.sql.PreparedStatement us$stmt34 = null;
+		    ResultSet us$rs34 = null;
+		    try
+			{
+			us$stmt34 = us$conn34.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
+			vma_ven_responsa.us$setSqlParameterValue(us$stmt34, 1);
+			us$rs34 = us$stmt34.executeQuery();
+			int us$rowsTouched34 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd34 = us$rs34.getMetaData();
+			    if (us$rsmd34.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd34.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter34 = us$conn34.createDataIterator(us$rs34);
+			    if (us$getter34.next())
+				{
+				++us$rowsTouched34;
+				us$getter34.assignValueToVariable(vve_nombre, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched34 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs34 != null)
+				us$rs34.close();
+			    }
+			}
+		    catch (SQLException us$ex34)
+			{
+			getSession().us$setStatus(us$conn34.mapToStatusCode(us$ex34));
+			throw us$ex34;
+			}
+		    catch (NXJDataConnectionException us$ex34)
+			{
+			getSession().us$setStatus(us$conn34.mapToStatusCode(us$ex34));
+			throw us$ex34;
+			}
+		    finally
+			{
+			if (us$stmt34 != null)
+			    us$conn34.us$closeStatement(us$stmt34);
+			}
+		    }
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn35 = getConnection();
+		    java.sql.PreparedStatement us$stmt35 = null;
+		    ResultSet us$rs35 = null;
+		    try
+			{
+			us$stmt35 = us$conn35.prepareStatement("SELECT vvh_vendedora, vvh_fret_obra, vvh_fing_obra FROM vvh_venobras WHERE vvh_empresa =  ?  AND vvh_proyecto =  ?  AND vvh_vendedora =  ?  ORDER BY vvh_fing_obra DESC");
+			vmu_empresa.us$setSqlParameterValue(us$stmt35, 1);
+			xob_proyecto.us$setSqlParameterValue(us$stmt35, 2);
+			vma_ven_responsa.us$setSqlParameterValue(us$stmt35, 3);
+			us$rs35 = us$stmt35.executeQuery();
+			int us$rowsTouched35 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd35 = us$rs35.getMetaData();
+			    if (us$rsmd35.getColumnCount() != 3)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd35.getColumnCount()), "3"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter35 = us$conn35.createDataIterator(us$rs35);
+			    if (us$getter35.next())
+				{
+				++us$rowsTouched35;
+				us$getter35.assignValueToVariable(vendedora, 1);
+				us$getter35.assignValueToVariable(fret_obra, 2);
+				us$getter35.assignValueToVariable(x, 3);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched35 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs35 != null)
+				us$rs35.close();
+			    }
+			}
+		    catch (SQLException us$ex35)
+			{
+			getSession().us$setStatus(us$conn35.mapToStatusCode(us$ex35));
+			throw us$ex35;
+			}
+		    catch (NXJDataConnectionException us$ex35)
+			{
+			getSession().us$setStatus(us$conn35.mapToStatusCode(us$ex35));
+			throw us$ex35;
+			}
+		    finally
+			{
+			if (us$stmt35 != null)
+			    us$conn35.us$closeStatement(us$stmt35);
+			}
+		    }
+		if (getSession().getStatus() != StatusCode.SS_NORM)
+		    {
+		    getSession().displayToMessageBox("La vendedora no pertenece al proyecto en cuesti\u00F3n.");
+		    getSession().queueNextField(vma_ven_responsa);
+		    }
+		if (((us$R36 = us$registerPool.allocateRegister().load(fret_obra.isUndefined() != true && !fret_obra.isNull())).isLogicalAndDecided() ? us$R36 : us$R36.logicalAndOp(us$registerPool.allocateRegister().load(fret_obra).neqOp("01/01/2001"))).getBooleanValueNullOk())
+		    {
+		    if (us$registerPool.allocateRegister().load(fret_obra).ltOp(us$registerPool.allocateRegister().load(vmu_f_separacion)).getBooleanValueNullOk())
+			{
+			getSession().displayToMessageBox("La/El vendedor/a ya fue retirada del proyecto");
+			getSession().queueNextField(vma_ven_responsa);
+			}
+		    }
+	    } // onDataAccept
+
+	    public void whenValueChanges()
+		throws Exception
+	    {
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn37 = getConnection();
+		    java.sql.PreparedStatement us$stmt37 = null;
+		    ResultSet us$rs37 = null;
+		    try
+			{
+			us$stmt37 = us$conn37.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
+			vma_ven_responsa.us$setSqlParameterValue(us$stmt37, 1);
+			us$rs37 = us$stmt37.executeQuery();
+			int us$rowsTouched37 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd37 = us$rs37.getMetaData();
+			    if (us$rsmd37.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd37.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter37 = us$conn37.createDataIterator(us$rs37);
+			    if (us$getter37.next())
+				{
+				++us$rowsTouched37;
+				us$getter37.assignValueToVariable(vve_nombre, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched37 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs37 != null)
+				us$rs37.close();
+			    }
+			}
+		    catch (SQLException us$ex37)
+			{
+			getSession().us$setStatus(us$conn37.mapToStatusCode(us$ex37));
+			throw us$ex37;
+			}
+		    catch (NXJDataConnectionException us$ex37)
+			{
+			getSession().us$setStatus(us$conn37.mapToStatusCode(us$ex37));
+			throw us$ex37;
+			}
+		    finally
+			{
+			if (us$stmt37 != null)
+			    us$conn37.us$closeStatement(us$stmt37);
+			}
+		    }
+	    } // whenValueChanges
+
+	    public vma_ven_responsa()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vma_ven_responsa", true, true, 3);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(3);
+		setAutoAccept(true);
+		us$setCandidateTargetColumnName("vma_ven_responsa");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setRequired(true);
+		setFindable(true);
+		setUpdateable(true);
+		setCaseConversion(NullableField.CaseConversion_UPPER);
+		setZoomFormName("Modulo/VendedoresFRM");
+		setZoomEnabled(true);
+		setZoomActiveMode(NXJCommand.ActiveMode_BOTH);
+		setForegroundColor("Black");
+		setFontSize("12");
+		us$executesCodeBeforeInput = true;
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vma_ven_responsa
+
+	public /*multi_valued*/ vma_ven_responsa vma_ven_responsa = new vma_ven_responsa();
 	public /*multi_valued*/ NullableStringField vmu_cli_ciudad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_ciudad", true, true, 30);
 	public /*multi_valued*/ NullableStringField vmu_cli_ciunit = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_ciunit", true, true, 20);
-	public /*multi_valued*/ NullableStringField vmu_cli_clase = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_clase", true, true, 2);
+	public class vmu_cli_clase
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		com.unify.nxj.mgr.datatypes.Register us$R38;
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (((us$R38 = us$registerPool.allocateRegister().load(gasto_escritura).neqOp("S")).isLogicalAndDecided() ? us$R38 : us$R38.logicalAndOp(us$registerPool.allocateRegister().load(vmu_cli_clase).eqOp("P"))).getBooleanValueNullOk())
+		    {
+		    getSession().displayToMessageBox("Los gastos de PROMOCI\u00D3N NO est\u00E1n autorizados para esta unidad. Verifique por favor.");
+		    vmu_cli_clase.assign(us$registerPool.allocateRegister().load("C"));
+		    vmu_cli_clase.setNextField("vmu_cli_clase");
+		    }
+	    } // onDataAccept
+
+	    public vmu_cli_clase()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_cli_clase", true, true, 2);
+		setStyleClass("dropdown_list");
+		us$setMultiValued(true);
+		us$setView("select");
+		us$setFieldLength(2);
+		setAutoAccept(true);
+		us$setCandidateTargetColumnName("vmu_cli_clase");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setRequired(true);
+		setFindable(true);
+		setUpdateable(true);
+		us$setMultiValuedOptions(false);
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vmu_cli_clase
+
+	public /*multi_valued*/ vmu_cli_clase vmu_cli_clase = new vmu_cli_clase();
 	public class vmu_cli_corres
 	    extends com.unify.nxj.mgr.datatypes.NXJStringField
 	{
@@ -1062,27 +2221,27 @@ public class RBoletinesFRM
 
 		    {
 		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn19 = getConnection();
-		    java.sql.PreparedStatement us$stmt19 = null;
-		    ResultSet us$rs19 = null;
+		    NXJDataConnection us$conn39 = getConnection();
+		    java.sql.PreparedStatement us$stmt39 = null;
+		    ResultSet us$rs39 = null;
 		    try
 			{
-			us$stmt19 = us$conn19.prepareStatement("select xzo_nombre from xzo_zonas");
-			us$rs19 = us$stmt19.executeQuery();
-			int us$rowsTouched19 = 0;
+			us$stmt39 = us$conn39.prepareStatement("select xzo_nombre from xzo_zonas");
+			us$rs39 = us$stmt39.executeQuery();
+			int us$rowsTouched39 = 0;
 			try
 			    {
-			    java.sql.ResultSetMetaData us$rsmd19 = us$rs19.getMetaData();
-			    if (us$rsmd19.getColumnCount() != 1)
+			    java.sql.ResultSetMetaData us$rsmd39 = us$rs39.getMetaData();
+			    if (us$rsmd39.getColumnCount() != 1)
 				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 				    {
-				    Integer.toString(us$rsmd19.getColumnCount()), "1"
+				    Integer.toString(us$rsmd39.getColumnCount()), "1"
 				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter19 = us$conn19.createDataIterator(us$rs19);
-			    while (us$getter19.next())
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter39 = us$conn39.createDataIterator(us$rs39);
+			    while (us$getter39.next())
 				{
-				++us$rowsTouched19;
-				us$proj1 = us$getter19.getString(1);
+				++us$rowsTouched39;
+				us$proj1 = us$getter39.getString(1);
 
 				    {
 				    if (us$rowCount++ == 300)
@@ -1093,26 +2252,26 @@ public class RBoletinesFRM
 			    }
 			finally
 			    {
-			    if (us$rowsTouched19 == 0)
+			    if (us$rowsTouched39 == 0)
 				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs19 != null)
-				us$rs19.close();
+			    if (us$rs39 != null)
+				us$rs39.close();
 			    }
 			}
-		    catch (SQLException us$ex19)
+		    catch (SQLException us$ex39)
 			{
-			getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
-			throw us$ex19;
+			getSession().us$setStatus(us$conn39.mapToStatusCode(us$ex39));
+			throw us$ex39;
 			}
-		    catch (NXJDataConnectionException us$ex19)
+		    catch (NXJDataConnectionException us$ex39)
 			{
-			getSession().us$setStatus(us$conn19.mapToStatusCode(us$ex19));
-			throw us$ex19;
+			getSession().us$setStatus(us$conn39.mapToStatusCode(us$ex39));
+			throw us$ex39;
 			}
 		    finally
 			{
-			if (us$stmt19 != null)
-			    us$conn19.us$closeStatement(us$stmt19);
+			if (us$stmt39 != null)
+			    us$conn39.us$closeStatement(us$stmt39);
 			}
 		    }
 		return us$list;
@@ -1138,16 +2297,390 @@ public class RBoletinesFRM
 	} // vmu_cli_corres
 
 	public /*multi_valued*/ vmu_cli_corres vmu_cli_corres = new vmu_cli_corres();
-	public /*multi_valued*/ NullableStringField vmu_cli_registro = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_registro", true, true, 15);
+	public class vmu_cli_registro
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void beforeField()
+		throws Exception
+	    {
+	    } // beforeField
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn40 = getConnection();
+		    java.sql.PreparedStatement us$stmt40 = null;
+		    ResultSet us$rs40 = null;
+		    try
+			{
+			us$stmt40 = us$conn40.prepareStatement("SELECT vve_nombre FROM vve_vendedora WHERE vve_codigo =  ?");
+			vmu_cli_registro.us$setSqlParameterValue(us$stmt40, 1);
+			us$rs40 = us$stmt40.executeQuery();
+			int us$rowsTouched40 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd40 = us$rs40.getMetaData();
+			    if (us$rsmd40.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd40.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter40 = us$conn40.createDataIterator(us$rs40);
+			    if (us$getter40.next())
+				{
+				++us$rowsTouched40;
+				us$getter40.assignValueToVariable(vmu_cli_ciunit, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched40 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs40 != null)
+				us$rs40.close();
+			    }
+			}
+		    catch (SQLException us$ex40)
+			{
+			getSession().us$setStatus(us$conn40.mapToStatusCode(us$ex40));
+			throw us$ex40;
+			}
+		    catch (NXJDataConnectionException us$ex40)
+			{
+			getSession().us$setStatus(us$conn40.mapToStatusCode(us$ex40));
+			throw us$ex40;
+			}
+		    finally
+			{
+			if (us$stmt40 != null)
+			    us$conn40.us$closeStatement(us$stmt40);
+			}
+		    }
+		if (getSession().getStatus() != StatusCode.SS_NORM)
+		    {
+		    if (getSession().getStatus() == StatusCode.SS_NOREC)
+			{
+			getSession().displayToMessageBox("La tramitadora no estpa en la tabla base, verifique por favor.");
+			vmu_est_hipote.assign(us$registerPool.allocateRegister().load("N"));
+			vmu_cli_registro.assign(null);
+			vmu_cli_ciunit.assign(null);
+			vmu_cli_registro.setNextField("vmu_est_hipote");
+			}
+		    else
+			{
+			getSession().displayToMessageBox("No se puede acceder a la tabla de tramitadoras.");
+			vmu_est_hipote.assign(us$registerPool.allocateRegister().load("N"));
+			vmu_cli_registro.assign(null);
+			vmu_cli_ciunit.assign(null);
+			vmu_cli_registro.setNextField("vmu_est_hipote");
+			}
+		    }
+	    } // onDataAccept
+
+	    public void afterField()
+		throws Exception
+	    {
+	    } // afterField
+
+	    public vmu_cli_registro()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_cli_registro", true, true, 15);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(15);
+		us$setCandidateTargetColumnName("vmu_cli_registro");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		setCaseConversion(NullableField.CaseConversion_UPPER);
+		us$executesCodeBeforeInput = true;
+		us$executesCodeAfterInput = true;
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vmu_cli_registro
+
+	public /*multi_valued*/ vmu_cli_registro vmu_cli_registro = new vmu_cli_registro();
 	public /*multi_valued*/ NullableStringField vmu_cli_telof = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_telof", true, true, 30);
 	public /*multi_valued*/ NullableStringField vmu_cli_telre = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_telre", true, true, 30);
-	public /*multi_valued*/ NullableStringField vmu_corporacion = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_corporacion", true, true, 2);
+	public class vmu_corporacion
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void beforeField()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		x_corporacion.assign(us$registerPool.allocateRegister().load(vmu_corporacion));
+	    } // beforeField
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		com.unify.nxj.mgr.datatypes.Register us$R41;
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (((us$R41 = us$registerPool.allocateRegister().load(vmu_forma_pago).eqOp("D")).isLogicalAndDecided() ? us$R41 : us$R41.logicalAndOp(us$registerPool.allocateRegister().load(vmu_corporacion).eqOp("01"))).getBooleanValueNullOk())
+		    {
+		    getSession().displayToMessageBox("Debe registrar un c\u00F3digo de Banco v\u00E1lido, verifique por favor.");
+		    vmu_corporacion.assign(us$registerPool.allocateRegister().load(" "));
+		    vmu_corporacion.setNextField("vmu_corporacion");
+		    }
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn42 = getConnection();
+		    java.sql.PreparedStatement us$stmt42 = null;
+		    ResultSet us$rs42 = null;
+		    try
+			{
+			us$stmt42 = us$conn42.prepareStatement("SELECT xcp_nombre FROM xcp_corporacion WHERE xcp_codigo =  ?");
+			vmu_corporacion.us$setSqlParameterValue(us$stmt42, 1);
+			us$rs42 = us$stmt42.executeQuery();
+			int us$rowsTouched42 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd42 = us$rs42.getMetaData();
+			    if (us$rsmd42.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd42.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter42 = us$conn42.createDataIterator(us$rs42);
+			    if (us$getter42.next())
+				{
+				++us$rowsTouched42;
+				us$getter42.assignValueToVariable(nombre_banco, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched42 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs42 != null)
+				us$rs42.close();
+			    }
+			}
+		    catch (SQLException us$ex42)
+			{
+			getSession().us$setStatus(us$conn42.mapToStatusCode(us$ex42));
+			throw us$ex42;
+			}
+		    catch (NXJDataConnectionException us$ex42)
+			{
+			getSession().us$setStatus(us$conn42.mapToStatusCode(us$ex42));
+			throw us$ex42;
+			}
+		    finally
+			{
+			if (us$stmt42 != null)
+			    us$conn42.us$closeStatement(us$stmt42);
+			}
+		    }
+		if (getSession().getStatus() != StatusCode.SS_NORM)
+		    {
+		    getSession().displayToMessageBox("C\u00F3digo de banco errado, verifique por favor.");
+		    vmu_corporacion.assign(us$registerPool.allocateRegister().load(x_corporacion));
+		    vmu_corporacion.setNextField("vmu_corporacion");
+		    }
+	    } // onDataAccept
+
+	    public void whenValueChanges()
+		throws Exception
+	    {
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn43 = getConnection();
+		    java.sql.PreparedStatement us$stmt43 = null;
+		    ResultSet us$rs43 = null;
+		    try
+			{
+			us$stmt43 = us$conn43.prepareStatement("SELECT xcp_nombre FROM xcp_corporacion WHERE xcp_codigo =  ?");
+			vmu_corporacion.us$setSqlParameterValue(us$stmt43, 1);
+			us$rs43 = us$stmt43.executeQuery();
+			int us$rowsTouched43 = 0;
+			try
+			    {
+			    java.sql.ResultSetMetaData us$rsmd43 = us$rs43.getMetaData();
+			    if (us$rsmd43.getColumnCount() != 1)
+				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
+				    {
+				    Integer.toString(us$rsmd43.getColumnCount()), "1"
+				    }));
+			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter43 = us$conn43.createDataIterator(us$rs43);
+			    if (us$getter43.next())
+				{
+				++us$rowsTouched43;
+				us$getter43.assignValueToVariable(nombre_banco, 1);
+				}
+			    }
+			finally
+			    {
+			    if (us$rowsTouched43 == 0)
+				getSession().us$setStatus(StatusCode.SS_NOREC);
+			    if (us$rs43 != null)
+				us$rs43.close();
+			    }
+			}
+		    catch (SQLException us$ex43)
+			{
+			getSession().us$setStatus(us$conn43.mapToStatusCode(us$ex43));
+			throw us$ex43;
+			}
+		    catch (NXJDataConnectionException us$ex43)
+			{
+			getSession().us$setStatus(us$conn43.mapToStatusCode(us$ex43));
+			throw us$ex43;
+			}
+		    finally
+			{
+			if (us$stmt43 != null)
+			    us$conn43.us$closeStatement(us$stmt43);
+			}
+		    }
+	    } // whenValueChanges
+
+	    public void afterField()
+		throws Exception
+	    {
+	    } // afterField
+
+	    public vmu_corporacion()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_corporacion", true, true, 2);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(2);
+		us$setCandidateTargetColumnName("vmu_corporacion");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		us$executesCodeBeforeInput = true;
+		us$executesCodeAfterInput = true;
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vmu_corporacion
+
+	public /*multi_valued*/ vmu_corporacion vmu_corporacion = new vmu_corporacion();
 	public /*multi_valued*/ NullableStringField vmu_correo = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_correo", true, true, 40);
 	public /*multi_valued*/ NullableStringField vmu_correo2 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_correo2", true, true, 40);
-	public /*multi_valued*/ NullableAmountField vmu_descuentos = new com.unify.nxj.mgr.datatypes.NXJAmountField(this, "vmu_descuentos", true, true, 25);
-	public /*multi_valued*/ NullableStringField vmu_est_hipote = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_est_hipote", true, true, 2);
+	public class vmu_descuentos
+	    extends com.unify.nxj.mgr.datatypes.NXJAmountField
+	{
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (us$registerPool.allocateRegister().load(vmu_descuentos).gtOp(us$registerPool.allocateRegister().load(vmu_precio_uni)).getBooleanValueNullOk())
+		    {
+		    getSession().displayToMessageBox("El descuento no puede ser mayor al precio de la unidad");
+		    vmu_descuentos.assign(us$registerPool.allocateRegister().load(0.0));
+		    vmu_descuentos.setNextField("vmu_descuentos");
+		    }
+		if (vmu_descuentos.isUndefined() == true)
+		    {
+		    vmu_descuentos.assign(us$registerPool.allocateRegister().load(0.0));
+		    }
+	    } // onDataAccept
+
+	    public vmu_descuentos()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_descuentos", true, true, 25);
+		setStyleClass("textfield");
+		us$setMultiValued(true);
+		us$setView("text");
+		us$setFieldLength(25);
+		us$setCandidateTargetColumnName("vmu_descuentos");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vmu_descuentos
+
+	public /*multi_valued*/ vmu_descuentos vmu_descuentos = new vmu_descuentos();
+	public class vmu_est_hipote
+	    extends com.unify.nxj.mgr.datatypes.NXJStringField
+	{
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (us$registerPool.allocateRegister().load(vmu_est_hipote).eqOp("S").getBooleanValueNullOk())
+		    {
+		    vmu_est_hipote.setNextField("vmu_cli_registro");
+		    }
+		else
+		    {
+		    vmu_cli_registro.assign(null);
+		    vmu_cli_ciunit.assign(null);
+		    vmu_est_hipote.setNextField("vmu_cli_registro");
+		    }
+	    } // onDataAccept
+
+	    public vmu_est_hipote()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_est_hipote", true, true, 2);
+		setStyleClass("dropdown_list");
+		us$setMultiValued(true);
+		us$setView("select");
+		us$setFieldLength(2);
+		setAutoAccept(true);
+		us$setCandidateTargetColumnName("vmu_est_hipote");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setFindable(true);
+		setUpdateable(true);
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vmu_est_hipote
+
+	public /*multi_valued*/ vmu_est_hipote vmu_est_hipote = new vmu_est_hipote();
 	public /*multi_valued*/ NullableStringField vmu_est_unidad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_est_unidad", true, true, 2);
-	public /*multi_valued*/ NullableDateField vmu_f_ent_pacta = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_ent_pacta", true, true, 10);
+	public class vmu_f_ent_pacta
+	    extends com.unify.nxj.mgr.datatypes.NXJDateField
+	{
+
+	    public void onDataAccept()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		if (us$registerPool.allocateRegister().load(vmu_f_ent_pacta.isUndefined()).ltOp(us$registerPool.allocateRegister().load(vmu_f_escritura)).getBooleanValueNullOk())
+		    {
+		    getSession().displayToMessageBox("La fecha de entrega debe ser mayor o igual a la de la escritura. Verifique por favor.");
+		    vmu_f_ent_pacta.setNextField("vmu_f_ent_pacta");
+		    }
+	    } // onDataAccept
+
+	    public vmu_f_ent_pacta()
+	    {
+		super(ModuloCNegocios.RBoletinesFRM.cajagrandeRBoletines.this, "vmu_f_ent_pacta", true, true, 10);
+		setStyleClass("date_picker");
+		us$setMultiValued(true);
+		us$setView("date");
+		us$setFieldLength(10);
+		us$setCandidateTargetColumnName("vmu_f_ent_pacta");
+		setValueRetrievedDuringFetch(true);
+		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+		setRequired(true);
+		setFindable(true);
+		setUpdateable(true);
+		us$executesDataAcceptValueChanges = true;
+	    } // <init>
+	} // vmu_f_ent_pacta
+
+	public /*multi_valued*/ vmu_f_ent_pacta vmu_f_ent_pacta = new vmu_f_ent_pacta();
 	public /*multi_valued*/ NullableDateField vmu_f_entprog = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_entprog", true, true, 10);
 	public /*multi_valued*/ NullableDateField vmu_f_escritura = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_escritura", true, true, 10);
 	public /*multi_valued*/ NullableDateField vmu_f_gravacion = new com.unify.nxj.mgr.datatypes.NXJDateField(this, "vmu_f_gravacion", true, true, 10);
@@ -1389,20 +2922,6 @@ public class RBoletinesFRM
 	    varpass3.setStyleClass("textfield");
 	    varpass3.us$setView("text");
 	    varpass3.setFindable(false);
-	    vau_apode_nit.setStyleClass("textfield");
-	    vau_apode_nit.us$setMultiValued(true);
-	    vau_apode_nit.us$setView("text");
-	    vau_apode_nit.us$setFieldLength(18);
-	    vau_apode_nit.us$setCandidateTargetColumnName("vau_apode_nit");
-	    vau_apode_nit.setValueRetrievedDuringFetch(true);
-	    vau_apode_nit.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vau_apode_nit.setFindable(true);
-	    vau_apode_nit.setUpdateable(true);
-	    vau_apode_nit.setCaseConversion(NullableField.CaseConversion_UPPER);
-	} // cajagrandeRBoletinespropertySetter_1
-
-	private void cajagrandeRBoletinespropertySetter_2()
-	{
 	    vau_apode_nom.setStyleClass("textfield");
 	    vau_apode_nom.us$setMultiValued(true);
 	    vau_apode_nom.us$setView("text");
@@ -1414,34 +2933,10 @@ public class RBoletinesFRM
 	    vau_apode_nom.setUpdateable(true);
 	    vau_apode_nom.setStopForInput(false);
 	    vau_apode_nom.setCaseConversion(NullableField.CaseConversion_UPPER);
-	    vau_apoderado.setVisible(true);
-	    vau_apoderado.setStyleClass("dropdown_list");
-	    vau_apoderado.us$setMultiValued(true);
-	    vau_apoderado.us$setView("select");
-	    vau_apoderado.us$setFieldLength(2);
-	    vau_apoderado.setAutoAccept(true);
-	    vau_apoderado.us$setCandidateTargetColumnName("vau_apoderado");
-	    vau_apoderado.setValueRetrievedDuringFetch(true);
-	    vau_apoderado.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vau_apoderado.setFindable(true);
-	    vau_apoderado.setUpdateable(true);
-	    vma_ven_responsa.setStyleClass("textfield");
-	    vma_ven_responsa.us$setMultiValued(true);
-	    vma_ven_responsa.us$setView("text");
-	    vma_ven_responsa.us$setFieldLength(3);
-	    vma_ven_responsa.setAutoAccept(true);
-	    vma_ven_responsa.us$setCandidateTargetColumnName("vma_ven_responsa");
-	    vma_ven_responsa.setValueRetrievedDuringFetch(true);
-	    vma_ven_responsa.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vma_ven_responsa.setRequired(true);
-	    vma_ven_responsa.setFindable(true);
-	    vma_ven_responsa.setUpdateable(true);
-	    vma_ven_responsa.setCaseConversion(NullableField.CaseConversion_UPPER);
-	    vma_ven_responsa.setZoomFormName("Modulo/VendedoresFRM");
-	    vma_ven_responsa.setZoomEnabled(true);
-	    vma_ven_responsa.setZoomActiveMode(NXJCommand.ActiveMode_BOTH);
-	    vma_ven_responsa.setForegroundColor("Black");
-	    vma_ven_responsa.setFontSize("12");
+	} // cajagrandeRBoletinespropertySetter_1
+
+	private void cajagrandeRBoletinespropertySetter_2()
+	{
 	    vmu_cli_ciudad.setStyleClass("textfield");
 	    vmu_cli_ciudad.us$setMultiValued(true);
 	    vmu_cli_ciudad.us$setView("select");
@@ -1463,28 +2958,6 @@ public class RBoletinesFRM
 	    vmu_cli_ciunit.setUpdateable(true);
 	    vmu_cli_ciunit.setStopForInput(false);
 	    vmu_cli_ciunit.setCaseConversion(NullableField.CaseConversion_UPPER);
-	    vmu_cli_clase.setStyleClass("dropdown_list");
-	    vmu_cli_clase.us$setMultiValued(true);
-	    vmu_cli_clase.us$setView("select");
-	    vmu_cli_clase.us$setFieldLength(2);
-	    vmu_cli_clase.setAutoAccept(true);
-	    vmu_cli_clase.us$setCandidateTargetColumnName("vmu_cli_clase");
-	    vmu_cli_clase.setValueRetrievedDuringFetch(true);
-	    vmu_cli_clase.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_cli_clase.setRequired(true);
-	    vmu_cli_clase.setFindable(true);
-	    vmu_cli_clase.setUpdateable(true);
-	    vmu_cli_clase.us$setMultiValuedOptions(false);
-	    vmu_cli_registro.setStyleClass("textfield");
-	    vmu_cli_registro.us$setMultiValued(true);
-	    vmu_cli_registro.us$setView("text");
-	    vmu_cli_registro.us$setFieldLength(15);
-	    vmu_cli_registro.us$setCandidateTargetColumnName("vmu_cli_registro");
-	    vmu_cli_registro.setValueRetrievedDuringFetch(true);
-	    vmu_cli_registro.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_cli_registro.setFindable(true);
-	    vmu_cli_registro.setUpdateable(true);
-	    vmu_cli_registro.setCaseConversion(NullableField.CaseConversion_UPPER);
 	    vmu_cli_telof.setStyleClass("textfield");
 	    vmu_cli_telof.us$setMultiValued(true);
 	    vmu_cli_telof.us$setView("text");
@@ -1507,15 +2980,6 @@ public class RBoletinesFRM
 	    vmu_cli_telre.setFindable(true);
 	    vmu_cli_telre.setUpdateable(true);
 	    vmu_cli_telre.setCaseConversion(NullableField.CaseConversion_UPPER);
-	    vmu_corporacion.setStyleClass("textfield");
-	    vmu_corporacion.us$setMultiValued(true);
-	    vmu_corporacion.us$setView("text");
-	    vmu_corporacion.us$setFieldLength(2);
-	    vmu_corporacion.us$setCandidateTargetColumnName("vmu_corporacion");
-	    vmu_corporacion.setValueRetrievedDuringFetch(true);
-	    vmu_corporacion.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_corporacion.setFindable(true);
-	    vmu_corporacion.setUpdateable(true);
 	    vmu_correo.setStyleClass("textfield");
 	    vmu_correo.us$setMultiValued(true);
 	    vmu_correo.us$setView("text");
@@ -1534,25 +2998,6 @@ public class RBoletinesFRM
 	    vmu_correo2.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vmu_correo2.setFindable(true);
 	    vmu_correo2.setUpdateable(true);
-	    vmu_descuentos.setStyleClass("textfield");
-	    vmu_descuentos.us$setMultiValued(true);
-	    vmu_descuentos.us$setView("text");
-	    vmu_descuentos.us$setFieldLength(25);
-	    vmu_descuentos.us$setCandidateTargetColumnName("vmu_descuentos");
-	    vmu_descuentos.setValueRetrievedDuringFetch(true);
-	    vmu_descuentos.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_descuentos.setFindable(true);
-	    vmu_descuentos.setUpdateable(true);
-	    vmu_est_hipote.setStyleClass("dropdown_list");
-	    vmu_est_hipote.us$setMultiValued(true);
-	    vmu_est_hipote.us$setView("select");
-	    vmu_est_hipote.us$setFieldLength(2);
-	    vmu_est_hipote.setAutoAccept(true);
-	    vmu_est_hipote.us$setCandidateTargetColumnName("vmu_est_hipote");
-	    vmu_est_hipote.setValueRetrievedDuringFetch(true);
-	    vmu_est_hipote.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_est_hipote.setFindable(true);
-	    vmu_est_hipote.setUpdateable(true);
 	    vmu_est_unidad.setStyleClass("dropdown_list");
 	    vmu_est_unidad.us$setMultiValued(true);
 	    vmu_est_unidad.us$setView("select");
@@ -1563,16 +3008,6 @@ public class RBoletinesFRM
 	    vmu_est_unidad.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
 	    vmu_est_unidad.setFindable(true);
 	    vmu_est_unidad.setUpdateable(true);
-	    vmu_f_ent_pacta.setStyleClass("date_picker");
-	    vmu_f_ent_pacta.us$setMultiValued(true);
-	    vmu_f_ent_pacta.us$setView("date");
-	    vmu_f_ent_pacta.us$setFieldLength(10);
-	    vmu_f_ent_pacta.us$setCandidateTargetColumnName("vmu_f_ent_pacta");
-	    vmu_f_ent_pacta.setValueRetrievedDuringFetch(true);
-	    vmu_f_ent_pacta.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_f_ent_pacta.setRequired(true);
-	    vmu_f_ent_pacta.setFindable(true);
-	    vmu_f_ent_pacta.setUpdateable(true);
 	    vmu_f_entprog.setStyleClass("date_picker");
 	    vmu_f_entprog.us$setMultiValued(true);
 	    vmu_f_entprog.us$setView("date");
@@ -1611,10 +3046,6 @@ public class RBoletinesFRM
 	    vmu_f_separacion.setRequired(true);
 	    vmu_f_separacion.setFindable(true);
 	    vmu_f_separacion.setUpdateable(true);
-	} // cajagrandeRBoletinespropertySetter_2
-
-	private void cajagrandeRBoletinespropertySetter_3()
-	{
 	    vmu_forma_pago.setStyleClass("dropdown_list");
 	    vmu_forma_pago.us$setMultiValued(true);
 	    vmu_forma_pago.us$setView("select");
@@ -1707,6 +3138,10 @@ public class RBoletinesFRM
 	    vmu_tramite.setFindable(true);
 	    vmu_tramite.setUpdateable(true);
 	    vmu_tramite.setCaseConversion(NullableField.CaseConversion_UPPER);
+	} // cajagrandeRBoletinespropertySetter_2
+
+	private void cajagrandeRBoletinespropertySetter_3()
+	{
 	    vmu_unidad.setStyleClass("textfield");
 	    vmu_unidad.us$setMultiValued(true);
 	    vmu_unidad.us$setView("text");
@@ -1772,11 +3207,17 @@ public class RBoletinesFRM
 	us$addTargetMapping("vmu_empresa", "vmu_empresa");
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "f_separacion", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vut_f_real", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "fret_obra", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "x", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "adicionando", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "adiciona", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "tipounidad", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vut_etapa", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vut_tramite", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vve_nombre", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vendedora", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "gasto_escritura", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "x_corporacion", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "garage1", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "garage2", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "garage3", false);
@@ -1800,6 +3241,7 @@ public class RBoletinesFRM
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "imporenta", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "zero", false);
 	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vlr_ev", false);
+	us$addProxyObject(ModuloCNegocios.RBoletinesFRM.class, "vpc_porcentaje", false);
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "RBoletinesFRM";
 

@@ -5,7 +5,18 @@ FORM CNegocioFRM
     BEFORE FORM
     {
        
-       ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass3= "3";
+       
+       
+       
+            if( ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass1 == "1" && ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass2 == "2")
+            {
+                ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass3= "3";
+            }
+            else
+            {
+                session.displayToMessageBox("Debe acceder a los formularios en orden.");
+                session.queueCommand("PREVIOUS_FORM");
+            }
     }
 
     BOX box1

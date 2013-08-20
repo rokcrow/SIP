@@ -111,7 +111,15 @@ public class IAClientesFRM
 	throws Exception
     {
 	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-	((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.varpass2.assign(us$registerPool.allocateRegister().load("2"));
+	if (us$registerPool.allocateRegister().load(((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.varpass1).eqOp("1").getBooleanValueNullOk())
+	    {
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.varpass2.assign(us$registerPool.allocateRegister().load("2"));
+	    }
+	else
+	    {
+	    getSession().displayToMessageBox("Antes debe acceder a COMPROMISOS DEL NEGOCIO.");
+	    getSession().queueCommand("PREVIOUS_FORM");
+	    }
     } // beforeForm
     private IAClientesFRM IAClientesFRM = this;
     public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);

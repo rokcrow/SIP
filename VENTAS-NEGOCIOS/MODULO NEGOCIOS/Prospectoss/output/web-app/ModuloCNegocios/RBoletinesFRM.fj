@@ -6,12 +6,13 @@ FORM RBoletinesFRM
     multi_valued NullableStringVariable vmu_empresa, vmu_est_hipote, vmu_obra, vmu_cli_clase;
     multi_valued NullableAmountVariable  vmu_precio_uni, vmu_vgarage, vmu_descuentos;
    
-    NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev;
+    NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev, vpc_porcentaje;
     NullableString varIC, varIAC, varCN, formasig, xob_proyecto, etapa_activa, est, etapa_act;
     NullableString  garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago; 
-    NullableString tipounidad, vut_etapa, vut_tramite;
+    NullableString tipounidad, vut_etapa, vut_tramite, vve_nombre, vendedora, gasto_escritura, x_corporacion;
+    //NullableString nombre_banco;
     NullableNumeric adicionando, adiciona;
-    NullableDate f_separacion, vut_f_real;
+    NullableDate f_separacion, vut_f_real, fret_obra, x;
     
     
     BEFORE FORM
@@ -42,7 +43,26 @@ FORM RBoletinesFRM
         
     }
   
-  
+  ON CLEAR TO ADD
+  {
+        adicionando = 1;
+        cajagrandeRBoletines.vmu_f_gravacion = session.currentDate;
+        
+        // date_to_mdy(vmu_f_gravacion, mesg, diag, anog);
+        
+        preciotot = cero;
+        cajagrandeRBoletines.vmu_precio_uni = cero;
+        cajagrandeRBoletines.vmu_vgarage = cero;
+        cajagrandeRBoletines.vmu_descuentos = cero;
+        /*vlr_gar = cero;
+        vlr_dep = cero;
+        acum = cero;
+        vuu_promocion1 = " ";
+        vuu_promocion2 = " ";*/
+        cajagrandeRBoletines.vmu_cli_clase.stopForInput = true;
+        cajagrandeRBoletines.vau_apoderado.stopForInput = true;
+        cajagrandeRBoletines.vau_apode_nit.stopForInput = true;
+  }
   
     BEFORE ADD
     {
@@ -55,28 +75,6 @@ FORM RBoletinesFRM
         */
         
         
-        
-        
-        
-        /************* ¿YA FUE A IDENTIFICACIÓN DE COMPRADORES? ******************
-        
-        if(varIC == "1" && varIAC == "2" && varCN == "3")
-        {
-             session.displayToMessageBox("INSERTA O ACTUALIZA.");
-        }
-        else if(varIC != "1" && varIAC == "2" && varCN == "3")
-        {
-        
-        }
-        else if(varIC == "1" && varIAC == "2" && varCN == "3")
-        {
-        
-        }
-        else if(varIC == "1" && varIAC == "2" && varCN == "3")
-        {
-        
-        }
-        **************************************************************/
         
         
         adiciona = 1;
@@ -151,19 +149,13 @@ FORM RBoletinesFRM
 
     
     ON CLEAR TO FIND
-    {	
-      /*cajagrandeRBoletines.varIC = numero;
-          session.displayToMessageBox("hola");
-             session.displayToMessageBox(numero);
-    
-       */   
-       
-            
-                
+    {
             
              adicionando = 0;
              cajagrandeRBoletines.vmu_cli_clase.stopForInput = true;
              
+             
+          /***************************** COLOCAR EN EL BEFORE ADD: ESTO PARA PASAR DE FORMULARIOS... ******************************************/   
              varIC = cajagrandeRBoletines.varpass1;
              varIAC = cajagrandeRBoletines.varpass2;
              varCN = cajagrandeRBoletines.varpass3;
@@ -179,23 +171,23 @@ FORM RBoletinesFRM
                     }
                     else
                              { 
-                                session.displayToMessageBox("Antes debe ir a COMPROMISOS DEL NEGOCIO.");
+                                session.displayToMessageBox("Antes debe acceder a COMPROMISOS DEL NEGOCIO.");
                                  rejectOperation();
                              }
                 }
                 else
                         {
-                            session.displayToMessageBox("Antes debe ir a INFORMACIÓN ADICIONAL DE CLIENTES.");
+                            session.displayToMessageBox("Antes debe acceder a INFORMACIÓN ADICIONAL DE CLIENTES.");
                              rejectOperation();
                         }
             }
             else
                     {
-                        session.displayToMessageBox("Antes debe ir a IDENTIFICACIÓN DE COMPRADORES.");
+                        session.displayToMessageBox("Antes debe acceder a IDENTIFICACIÓN DE COMPRADORES.");
                         rejectOperation();
                     }
             
-          
+          /********************************************************************/
     }
 
     AFTER FIND
@@ -384,7 +376,7 @@ FORM RBoletinesFRM
         {
             /**************** CREACIÓN DE TRÁMITES DE NEGOCIO ****************/
            //refresh screen
-             if(1==1)//gra_tramis(cajagrandeRBoletines.vmu_obra, cajagrandeRBoletines.vmu_manzana, cajagrandeRBoletines.vmu_unidad, cajagrandeRBoletines.vmu_f_separacion, cajagrandeRBoletines.vmu_forma_pago))
+             if(gra_tramis(cajagrandeRBoletines.vmu_obra, cajagrandeRBoletines.vmu_manzana, cajagrandeRBoletines.vmu_unidad, cajagrandeRBoletines.vmu_f_separacion, cajagrandeRBoletines.vmu_forma_pago))
             {
                 session.displayToMessageBox("No se pudo generar los TRÁMITES del Negocio");
                 session.rollbackTransaction();
@@ -477,6 +469,31 @@ FORM RBoletinesFRM
         }//ELSE
     }
 
+
+        /*AFTER FORM RETURN
+            {
+                if(retorno == 0)
+                {
+                    if(formasig == "A")
+                    {
+                        formasig = "C";
+                        session.queueCommand("PREVIOUS_FORM");
+                    }
+                    else
+                    {
+                        formasig = "A";
+                        session.queueCommand("CLEAR_TO_FIND");
+                    }
+                }
+                else
+                {
+                    retorno = 0;
+                }
+        
+            }*/
+        
+
+
     BOX cajagrandeRBoletines
     {
    
@@ -486,43 +503,104 @@ FORM RBoletinesFRM
         
         FIELD vma_ven_responsa
         {
-         /*   ON DATA ACCEPT
+            BEFORE FIELD
             {
-                EXEC SQL
-                SELECT vve_nombre
-                FROM   vve_vendedora
-                WHERE  vve_codigo = :vpp_vendedor
-                into   vve_nombre;
-                 if (session.status == StatusCode.SS_NOREC) 
-                    {
-                            session.displayToMessageBox("No existe el vendedor seleccionado en el maestro de vendedores");
-                           rejectOperation();
-                    }
-                EXEC SQL        
-                SELECT vvh_vendedora,vvh_fret_obra, vvh_fing_obra 
-                from    vvh_venobras
-                where  vvh_empresa   = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA
-                and    vvh_proyecto  = :vpp_proyecto
-                and    vvh_vendedora = :vpp_vendedor
-                order by vvh_fing_obra DESC
-                into    vendedora,    fret_obra , fing_obra;
-                if (session.status == StatusCode.SS_NOREC) {
-                    session.displayToMessageBox("El/La vendedor/a no pertenece al proyecto en cuestion.");
-                    rejectOperation();
-                    }         
+                /*HABILITAR ZOOM*/
             }
+            
+            ON DATA ACCEPT
+            {
+                if(vma_ven_responsa.undefined == true )
+                {
+                    session.displayToMessageBox("Digite el código de la vendedres responsable, por favor.");
+                    session.queueNextField(vma_ven_responsa);
+                }//if
+                
+                EXEC SQL
+                                SELECT vve_nombre 
+                                FROM vve_vendedora
+                                WHERE vve_codigo = :vma_ven_responsa
+                                INTO vve_nombre;
+                                
+                EXEC SQL
+                                SELECT vvh_vendedora, vvh_fret_obra, vvh_fing_obra
+                                FROM vvh_venobras
+                                WHERE vvh_empresa = :vmu_empresa
+                                AND vvh_proyecto = :xob_proyecto
+                                AND vvh_vendedora = :vma_ven_responsa
+                                ORDER BY vvh_fing_obra DESC
+                                INTO vendedora, fret_obra, x;
+                                
+                                if(session.status != StatusCode.SS_NORM)
+                                {
+                                    session.displayToMessageBox("La vendedora no pertenece al proyecto en cuestión.");
+                                    session.queueNextField(vma_ven_responsa);
+                                }//if
+                                
+                                if( fret_obra.undefined != true && ! fret_obra.isNull() && fret_obra != "01/01/2001")
+                                {
+                                    if(fret_obra < vmu_f_separacion)
+                                    {
+                                        session.displayToMessageBox("La/El vendedor/a ya fue retirada del proyecto");
+                                        session.queueNextField(vma_ven_responsa);
+                                    }//if
+                                }//if
+            }//on data accept
+            
             WHEN VALUE CHANGES
             {
                 EXEC SQL
-                SELECT vco_nombre
-                FROM   vco_corredores
-                WHERE  vco_codigo = :vpp_corredor
-                into   vco_nombre;            
-            }*/
-        }
+                SELECT vve_nombre FROM vve_vendedora
+                WHERE vve_codigo = :vma_ven_responsa
+                INTO vve_nombre;
+            }
+        }//vma_ven_responsa
         
         FIELD vmu_corporacion
         {
+        
+            BEFORE FIELD
+            {
+                /*enable zoom*/
+                x_corporacion = vmu_corporacion;
+            }
+            
+            ON DATA ACCEPT
+            {
+                if(vmu_forma_pago == "D" && vmu_corporacion == "01")
+                {
+                    session.displayToMessageBox("Debe registrar un código de Banco válido, verifique por favor.");
+                    vmu_corporacion = " ";
+                    vmu_corporacion.nextField = "vmu_corporacion";
+                }
+                
+                EXEC SQL 
+                                SELECT xcp_nombre
+                                FROM xcp_corporacion
+                                WHERE xcp_codigo = :vmu_corporacion
+                                INTO nombre_banco;
+                                
+                                if(session.status != StatusCode.SS_NORM)
+                                {
+                                    session.displayToMessageBox("Código de banco errado, verifique por favor.");
+                                    vmu_corporacion = x_corporacion;
+                                    vmu_corporacion.nextField = "vmu_corporacion";
+                                }
+            }
+            
+            WHEN VALUE CHANGES
+            {
+                  EXEC SQL
+                                SELECT xcp_nombre
+                                FROM xcp_corporacion
+                                WHERE xcp_codigo = :vmu_corporacion
+                                INTO nombre_banco;
+            }
+            
+            AFTER FIELD
+            {
+                /*Disabled zoom*/
+            }
         }
         
         FIELD vmu_correo
@@ -543,6 +621,79 @@ FORM RBoletinesFRM
         
         FIELD vau_apode_nit
         {
+        
+                /*EVENTOS QUE NO HE COPIADO: ON NEXT FORM, ON CHOOSE NEXT FORM, USER5*/
+    
+    
+   
+    	BEFORE FIELD
+    	{
+    		
+    	}
+
+    	ON DATA ACCEPT
+    	{
+    		EXEC SQL
+                                                                    SELECT vco_nombre
+                                                                    FROM vco_corredores
+                                                                    WHERE vco_codigo = :vau_apode_nit
+                                                                    INTO vau_apode_nom;
+
+                                                                    if(session.status != StatusCode.SS_NORM)
+                                                                    {
+                                                                            if(session.status == StatusCode.SS_NOREC)
+                                                                           {
+                                                                                session.displayToMessageBox("El corredor no está en la talba de corredores. Verique.");
+                                                                                vau_apoderado = "N";
+                                                                                vau_apode_nit = null;
+                                                                                vau_apode_nom = null;
+    			vau_apode_nit.nextField = "vau_apoderado";
+                                                                            }
+                                                                        else
+                                                                        {
+                                                                            session.displayToMessageBox("No se puede acceder a la tabla de corredores.");
+                                                                            vau_apoderado = "N";
+                                                                            vau_apode_nit = null;
+                                                                            vau_apode_nom = null;
+                                                                            vau_apode_nit.nextField = "vau_apoderado"; 
+                                                                        }
+                                                                    }
+    			
+    			EXEC SQL
+                                                                                                SELECT vpc_porcentaje
+                                                                                                FROM vpc_proycorre
+                                                                                                WHERE vpc_codigo = :vau_apode_nit
+                                                                                                AND vpc_finicio <= :vmu_f_separacion
+                                                                                                AND (vpc_ffinal >= :vmu_f_separacion
+                                                                                                OR   vpc_ffinal = null)
+                                                                                                INTO vpc_porcentaje;
+
+                                                                                                if(session.status != StatusCode.SS_NORM)
+                                                                                                {
+                                                                                                        if(session.status == StatusCode.SS_NOREC)
+                                                                                                        {
+                                                                                                            session.displayToMessageBox("El corredor no puede ser asignado. Ya expiró su convenio. Verifique.");
+                                                                                                            vau_apoderado = "N";
+                                                                                                            vau_apode_nit = null;
+                                                                                                            vau_apode_nom = null;
+                                                                                                            vau_apode_nit.nextField = "vau_apoderado";
+                                                                                                        }
+                                                                                                        else
+                                                                                                        {
+                                                                                                            session.displayToMessageBox("No se puede acceder a la tabla de corredores.");
+                                                                                                            vau_apoderado = "N";
+                                                                                                            vau_apode_nit = null;
+                                                                                                            vau_apode_nom = null;
+                                                                                                            vau_apode_nit.nextField = "vau_apoderado"; 
+                                                                                                        }
+                                                                                                }
+    	}
+
+    	AFTER FIELD
+    	{
+    		/*Deshabilita el zoom en vtzcorre*/
+    	}
+
         }
         
         FIELD vmu_vgarage
@@ -559,6 +710,21 @@ FORM RBoletinesFRM
         
         FIELD vmu_descuentos
         {
+            ON DATA ACCEPT 
+            {
+                if(vmu_descuentos > vmu_precio_uni)
+                {
+                    session.displayToMessageBox("El descuento no puede ser mayor al precio de la unidad");
+                    vmu_descuentos = 0.00;
+                    vmu_descuentos.nextField = "vmu_descuentos";
+                }
+                
+                if(vmu_descuentos.undefined == true)
+                {
+                    vmu_descuentos = 0.00;
+                }
+            }
+        
         }
         
         FIELD vmu_cli_telof
@@ -571,10 +737,35 @@ FORM RBoletinesFRM
         
         FIELD vmu_est_hipote
         {
+            
+            ON DATA ACCEPT
+            {
+                if(vmu_est_hipote == "S")
+                {
+                    vmu_est_hipote.nextField = "vmu_cli_registro";
+                }
+                else
+                {
+                    vmu_cli_registro = null;
+                    vmu_cli_ciunit = null;
+                    vmu_est_hipote.nextField = "vmu_cli_registro";
+                }
+            }
+
         }
         
         FIELD vmu_cli_clase
         {
+            ON DATA ACCEPT
+            {
+                if(gasto_escritura != "S" && vmu_cli_clase == "P")
+                {
+                    session.displayToMessageBox("Los gastos de PROMOCIÓN NO están autorizados para esta unidad. Verifique por favor.");
+                    vmu_cli_clase = "C";
+                    vmu_cli_clase.nextField = "vmu_cli_clase";
+                }
+            }
+            
         }
         
         FIELD vmu_cli_ciunit
@@ -672,6 +863,46 @@ FORM RBoletinesFRM
         
         FIELD vmu_cli_registro
         {
+            BEFORE FIELD
+            {
+                /* Enable Zoom*/
+            }
+            
+            ON DATA ACCEPT
+            {
+                EXEC SQL
+                                SELECT vve_nombre 
+                                FROM vve_vendedora
+                                WHERE vve_codigo = :vmu_cli_registro
+                                INTO vmu_cli_ciunit;
+                                
+                                if(session.status != StatusCode.SS_NORM)
+                                {
+                                    if(session.status == StatusCode.SS_NOREC)
+                                    {
+                                        session.displayToMessageBox("La tramitadora no estpa en la tabla base, verifique por favor.");
+                                        vmu_est_hipote = "N";
+                                        vmu_cli_registro = null;
+                                        vmu_cli_ciunit = null;
+                                        vmu_cli_registro.nextField = "vmu_est_hipote";                                        
+                                    }
+                                    else
+                                    {
+                                        session.displayToMessageBox("No se puede acceder a la tabla de tramitadoras.");
+                                        vmu_est_hipote = "N";
+                                        vmu_cli_registro = null;
+                                        vmu_cli_ciunit = null;
+                                        vmu_cli_registro.nextField = "vmu_est_hipote"; 
+                                    }
+                                }
+            }
+            
+            AFTER FIELD
+            {
+                /*Disable zoom*/
+            }
+            
+        
         }
         
         FIELD vmu_ngarage
@@ -684,6 +915,20 @@ FORM RBoletinesFRM
         
         FIELD vmu_f_ent_pacta
         {
+            ON DATA ACCEPT
+            {
+                    if(vmu_f_ent_pacta.undefined < vmu_f_escritura)
+                    {
+                        session.displayToMessageBox("La fecha de entrega debe ser mayor o igual a la de la escritura. Verifique por favor.");
+                         vmu_f_ent_pacta.nextField = "vmu_f_ent_pacta"; 
+                    }
+                    
+                 /*   if(f_permiso != "01/01/2001")
+                    {
+                        session.displayToMessageBox("OK");
+                    }*/
+            }
+        
         }
         
         FIELD vmu_precio_uni
@@ -704,6 +949,20 @@ FORM RBoletinesFRM
         
         FIELD vau_apoderado
         {
+            ON DATA ACCEPT
+            {
+                    if(vau_apoderado == "S")
+                    {
+                        vau_apoderado.nextField = "vau_apode_nit";
+                    }
+                    else
+                    {
+                        vau_apode_nit = null;
+                        vau_apode_nom = null;
+                        vau_apoderado.nextField = "vau_apode_nit";
+                    }
+            }
+
         }
         
         FIELD vmu_cli_ciudad
@@ -764,7 +1023,7 @@ FORM RBoletinesFRM
     }
 
 /************** FUNCIONES **************************/
-/*
+/**/
 public  boolean gra_tramis(NullableString obra, NullableString manzana, NullableString unidad, NullableDate fechasep, NullableString formapago) throws com.unify.nxj.mgr.dataConnection.NXJDataConnectionException
     {
             NullableDate vtu_f_teorica, vtu_f_real, x_campo;
@@ -1085,8 +1344,8 @@ public  boolean gra_tramis(NullableString obra, NullableString manzana, Nullable
                                 catch (SQLException sqlExcp) {
                                     session.displayToMessageBox("No existen productos...");
                                 }
-                            
-    }//FUNCION*/
+                   return false;         
+    }//FUNCION/**/
 
 }  
 /*----------------------------------------------------------------------*

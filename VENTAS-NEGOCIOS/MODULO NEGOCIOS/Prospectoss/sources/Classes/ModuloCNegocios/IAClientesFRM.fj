@@ -12,7 +12,7 @@ FORM IAClientesFRM
             }
             else
             {
-                session.displayToMessageBox("Antes debe ir a COMPROMISOS DEL NEGOCIO.");
+                session.displayToMessageBox("Antes debe acceder a COMPROMISOS DEL NEGOCIO.");
                 session.queueCommand("PREVIOUS_FORM");
             }
             

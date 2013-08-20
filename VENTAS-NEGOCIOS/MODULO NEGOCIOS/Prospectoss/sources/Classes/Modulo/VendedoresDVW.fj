@@ -14,7 +14,7 @@ DATA VIEW VendedoresDVW
         vvh_empresa.clearFindExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;
         vvh_proyecto.clearFindExp = Modulo.ProspectosFRM#view1.vpp_proyecto;
         vvh_roll.clearFindExp = "VT";
-        
+         
     
         EXEC SQL
         SELECT xem_nombre

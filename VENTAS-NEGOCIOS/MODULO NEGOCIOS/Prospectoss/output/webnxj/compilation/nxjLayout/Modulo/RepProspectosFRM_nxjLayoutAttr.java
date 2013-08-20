@@ -17,17 +17,17 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("localized","true");
 	widget.addAttribute("footer","none");
-	widget.addAttribute("title","ReportesProspectos");
+	widget.addAttribute("localized","true");
 	widget.addAttribute("displaywidth","1198");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("stylesheets","");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","413");
 	widget.addAttribute("fieldheight","413");
+	widget.addAttribute("title","ReportesProspectos");
 	widget.addAttribute("fieldwidth","1198");
-	widget.addStyle("background-color","#999999");
 	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -42,9 +42,9 @@ private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767438614-labeltitle","CodigoProyecto");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767439751-labeltitle","CodigoVendedor");
 	widget.addAttribute("displaytop","30");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","190");
 	widget.addStyle("overflow","hidden");
 }
@@ -55,9 +55,9 @@ private void setAttrFor_div_TodosLoProy__30(Widget widget)
 
 private void setAttrFor_TodosLoProy__40(Widget widget)
 {
-	widget.addAttribute("type","checkbox");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)TodosLoProy.");
 	widget.addAttribute("name","view1:TodosLoProy.");
+	widget.addAttribute("type","checkbox");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -67,9 +67,9 @@ private void setAttrFor_div_TodosLosVend__30(Widget widget)
 
 private void setAttrFor_TodosLosVend__40(Widget widget)
 {
-	widget.addAttribute("type","checkbox");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)TodosLosVend.");
 	widget.addAttribute("name","view1:TodosLosVend.");
+	widget.addAttribute("type","checkbox");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -112,9 +112,9 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)cajaarribaRProspectos:(Modulo.RepProspectosDVW)actualempresa.");
 	widget.addAttribute("name","view1:cajaarribaRProspectos:actualempresa.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -124,9 +124,9 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)cajaarribaRProspectos:(Modulo.RepProspectosDVW)actualusuario.");
 	widget.addAttribute("name","view1:cajaarribaRProspectos:actualusuario.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -147,9 +147,9 @@ private void setAttrFor_div_ejecutarbtn__30(Widget widget)
 
 private void setAttrFor_ejecutarbtn__40(Widget widget)
 {
-	widget.addAttribute("type","button");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)ejecutarbtn.");
 	widget.addAttribute("name","view1:ejecutarbtn.");
+	widget.addAttribute("type","button");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -293,9 +293,9 @@ private void setAttrFor_div_regresarbtn__30(Widget widget)
 
 private void setAttrFor_regresarbtn__40(Widget widget)
 {
-	widget.addAttribute("type","button");
 	widget.addAttribute("_name","view1:(Modulo.RepProspectosDVW)regresarbtn.");
 	widget.addAttribute("name","view1:regresarbtn.");
+	widget.addAttribute("type","button");
 	widget.addStyle("overflow","hidden");
 }
 
