@@ -1318,10 +1318,6 @@ public class ProspectosDVW
 		vpp_fecha_nacio.assign(us$registerPool.allocateRegister().load(getSession().getCurrentDate()).minusOp(us$registerPool.allocateRegister().load(mayoredad)));
 		rejectOperation();
 		}
-	    if (us$registerPool.allocateRegister().load(vpp_fecha_nacio).neqOp(us$registerPool.allocateRegister().load(getSession().getCurrentDate()).minusOp(8242)).getBooleanValueNullOk())
-		{
-		getSession().displayToMessageBox("GOOGLE EARTH");
-		}
 	} // onDataAccept
 
 	public void whenValueChanges()

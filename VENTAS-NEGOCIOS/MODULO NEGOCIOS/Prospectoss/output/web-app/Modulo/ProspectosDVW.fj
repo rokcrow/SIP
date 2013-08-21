@@ -447,10 +447,11 @@ DATA VIEW ProspectosDVW
 	    rejectOperation();
 	   }
            
-                            if (vpp_fecha_nacio != (session.currentDate - 8242))//4592))
+                            /**** PRUEBA 01/01/2001
+                            if (vpp_fecha_nacio != (session.currentDate - 4592))
 	 {
                                 session.displayToMessageBox("GOOGLE EARTH");
-                            }
+                            }*/
         }
         
         WHEN VALUE CHANGES

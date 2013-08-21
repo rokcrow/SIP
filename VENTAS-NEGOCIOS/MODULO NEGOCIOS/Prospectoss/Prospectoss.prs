@@ -679,22 +679,6 @@
     </file>
 
     <file
-         path="Classes/ModuloCNegocios/ICompradoresDVW.fx"
-          type="data_view"
-          state="4"
-          flags="0"
-          timestamp="1374005782699"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;DATA VIEW &lt;/b&gt;ICompradoresDVW&lt;/FONT&gt;&lt;/HTML&gt;"
-         >
-    </file>
-
-    <file
          path="Classes/ModuloCNegocios/ICompradoresFRM.fx"
           type="form"
           state="4"
@@ -1094,6 +1078,11 @@
           datasource=""
          >
     </connection>
+
+    <color
+         rgb="transparent"
+         >
+    </color>
 
     <color
          rgb="Black"

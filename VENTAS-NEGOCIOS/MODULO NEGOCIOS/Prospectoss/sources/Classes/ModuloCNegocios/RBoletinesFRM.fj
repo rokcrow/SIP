@@ -7,12 +7,16 @@ FORM RBoletinesFRM
     multi_valued NullableAmountVariable  vmu_precio_uni, vmu_vgarage, vmu_descuentos;
    
     NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev, vpc_porcentaje, x_precio_uni;
-    NullableString varIC, varIAC, varCN, formasig, xob_proyecto, etapa_activa, est, etapa_act;
-    NullableString  garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago; 
-    NullableString tipounidad, vut_etapa, vut_tramite, vve_nombre, vendedora, gasto_escritura, x_corporacion;
-    //NullableString nombre_banco;
-    NullableNumeric adicionando, adiciona;
-    NullableDate f_separacion, vut_f_real, fret_obra, x;
+    
+    NullableString varIC, varIAC, varCN, formasig, xob_proyecto, etapa_activa, est, etapa_act,
+                                garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago,
+                                tipounidad, vut_etapa, vut_tramite, vve_nombre, vendedora, gasto_escritura, x_corporacion,
+                                x_campo, x_manzana, x_obra, x_unidad, fechafalsa = "01/01/2001", estado, vmu_etapa_venta;
+                                
+    NullableNumeric adicionando, adiciona, prospecto_ant;
+    
+    NullableDate f_separacion, f_escritura,vut_f_real, fret_obra, x, scr_fecha, fecha_separa, f_ent_real, f_ent_pacta,
+                              f_entrega, vmu_ent_escritura, f_permiso; 
     
     
     BEFORE FORM
@@ -911,7 +915,7 @@ FORM RBoletinesFRM
                 prospecto_ant = vmu_ngarage;
                 /*enable zoom*/
             }
-            
+                   
             ON DATA ACCEPT
             {
                 if(vmu_ngarage != prospecto_ant)
@@ -920,13 +924,13 @@ FORM RBoletinesFRM
                     {
                         EXEC SQL
                                         UPDATE vpp_prospectos
-                                        SET vpp_estadopro = "B"
+                                        SET vpp_estadopro = 'B'
                                         WHERE vpp_proyecto = :xob_proyecto
                                         AND vpp_numero = :vmu_ngarage;
                                         
                         EXEC SQL
                                         UPDATE vpp_prospectos
-                                        SET vpp_estadopro = "A"
+                                        SET vpp_estadopro = 'A'
                                         WHERE vpp_proyecto = :xob_proyecto
                                         AND vpp_numero = :prospecto_ant;
                     }//if
@@ -934,7 +938,7 @@ FORM RBoletinesFRM
                     {
                         EXEC SQL
                                         UPDATE vpp_prospectos
-                                        SET vpp_estadopro = "B"
+                                        SET vpp_estadopro = 'B'
                                         WHERE vpp_proyecto = :xob_proyecto
                                         AND vpp_numero = :vmu_ngarage; 
                     }//else
@@ -1071,7 +1075,7 @@ FORM RBoletinesFRM
                                 }//if
                                 
                                 EXEC SQL
-                                                SELECT vuu_estado, vuu_tipoinmueble
+                                                SELECT vuu_estado, vuu_tipoinmueble,
                                                             vuu_etapa, vuu_plus2
                                                 FROM vuu_unidades
                                                 WHERE vuu_empresa = :vmu_empresa
@@ -1143,7 +1147,9 @@ FORM RBoletinesFRM
                                             vmu_f_ent_pacta = f_entrega;
                                             vmu_ent_escritura = f_escritura;
                                         }//if
-                                        
+                             
+                           
+                                                              
                             EXEC SQL
                                                         SELECT vut_f_real
                                                         FROM vut_tramites
@@ -1153,7 +1159,7 @@ FORM RBoletinesFRM
                                                         AND vut_unidad = :vmu_unidad
                                                         AND vut_etapa = 'EV'
                                                         AND vut_tramite = 'PO'
-                                                        AND vut_f_real != '01/01/2001'
+                                                        AND vut_f_real != :fechafalsa
                                                         AND vut_f_real is not NULL
                                                         INTO vut_f_real;
                                                         
@@ -1179,7 +1185,7 @@ FORM RBoletinesFRM
                                                         AND vut_unidad = :vmu_unidad
                                                         AND vut_etapa = 'EV'
                                                         AND vut_tramite = 'PO'
-                                                        AND vut_f_real != '01/01/2001'
+                                                        AND vut_f_real != :fechafalsa
                                                         AND vut_f_real is not NULL
                                                         INTO vut_f_real;
                                                         
@@ -1192,7 +1198,7 @@ FORM RBoletinesFRM
                                                             f_permiso = "01/01/2001";
                                                             
                     EXEC SQL
-                                        SELECT vuu_fterminacion, vuu_f_entregaprog
+                                        SELECT vuu_fterminacion, vuu_f_entregaprog,
                                                      vuu_area_lote, vuu_area_const, vuu_plus2
                                          FROM vuu_unidades
                                          WHERE vuu_empresa = :vmu_empresa
@@ -1325,7 +1331,7 @@ FORM RBoletinesFRM
                                 FROM vuu_unidades
                                 WHERE vuu_empresa = :vmu_empresa
                                 AND vuu_obra = :vmu_obra
-                                AND vuu_manzana = :vuu_manzana
+                                AND vuu_manzana = :vmu_manzana
                                 INTO x_campo;
                                 
                                 if(session.status != StatusCode.SS_NORM)

@@ -6,13 +6,17 @@ FORM RBoletinesFRM
     multi_valued NullableStringVariable vmu_empresa, vmu_est_hipote, vmu_obra, vmu_cli_clase;
     multi_valued NullableAmountVariable  vmu_precio_uni, vmu_vgarage, vmu_descuentos;
    
-    NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev, vpc_porcentaje;
-    NullableString varIC, varIAC, varCN, formasig, xob_proyecto, etapa_activa, est, etapa_act;
-    NullableString  garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago; 
-    NullableString tipounidad, vut_etapa, vut_tramite, vve_nombre, vendedora, gasto_escritura, x_corporacion;
-    //NullableString nombre_banco;
-    NullableNumeric adicionando, adiciona;
-    NullableDate f_separacion, vut_f_real, fret_obra, x;
+    NullableAmount cero, cien, preciotot, tasa, imporenta, zero, vlr_ev, vpc_porcentaje, x_precio_uni;
+    
+    NullableString varIC, varIAC, varCN, formasig, xob_proyecto, etapa_activa, est, etapa_act,
+                                garage1, garage2, garage3, deposito1, deposito2, corporacion, cli_clase, forma_pago,
+                                tipounidad, vut_etapa, vut_tramite, vve_nombre, vendedora, gasto_escritura, x_corporacion,
+                                x_campo, x_manzana, x_obra, x_unidad, fechafalsa = "01/01/2001", estado, vmu_etapa_venta;
+                                
+    NullableNumeric adicionando, adiciona, prospecto_ant;
+    
+    NullableDate f_separacion, f_escritura,vut_f_real, fret_obra, x, scr_fecha, fecha_separa, f_ent_real, f_ent_pacta,
+                              f_entrega, vmu_ent_escritura, f_permiso; 
     
     
     BEFORE FORM
@@ -786,10 +790,10 @@ FORM RBoletinesFRM
         
             BEFORE FIELD
             {
-                // x_obra = vmu_obra;
+                x_obra = vmu_obra;
             }
-          /*  
-            INIT FIELD
+          /**/  
+            ON DATA ACCEPT
             {
                     EXEC SQL
                                     SELECT xob_proyecto
@@ -801,8 +805,8 @@ FORM RBoletinesFRM
                     if (session.status != StatusCode.SS_NORM)
                      {
                                 session.displayToMessageBox("La obra no corresponde.");
-                                vmu_obra = " ";
-                                rejectOperation();
+                                vmu_obra = x_obra;
+                                vmu_obra.nextField = "vmu_obra";
                       }
                       
                       ii = 0;
@@ -821,7 +825,7 @@ FORM RBoletinesFRM
                                     
                         if(ii > 1)
                         {
-                            session.displayToMessageBox("Hay más de una etapa activa. Verifique.");
+                            session.displayToMessageBox("Hay más de una etapa activa. Verifique, por favor.");
                             session.queueCommand("PREVIOUS_FORM");
                         }
                         
@@ -837,10 +841,9 @@ FORM RBoletinesFRM
                         {
                                 session.displayToMessageBox("No hay etapa ACTIVA en ventas.");
                                 session.queueCommand("PREVIOUS_FORM");
-                                rejectOperation();
                         }
             }
-*/
+
         }
         
         BOX cajaarribaRBoletines
@@ -907,10 +910,81 @@ FORM RBoletinesFRM
         
         FIELD vmu_ngarage
         {
-        }
+            BEFORE FIELD
+            {
+                prospecto_ant = vmu_ngarage;
+                /*enable zoom*/
+            }
+                   
+            ON DATA ACCEPT
+            {
+                if(vmu_ngarage != prospecto_ant)
+                {
+                    if(prospecto_ant.undefined == false && ! prospecto_ant.isNull())
+                    {
+                        EXEC SQL
+                                        UPDATE vpp_prospectos
+                                        SET vpp_estadopro = 'B'
+                                        WHERE vpp_proyecto = :xob_proyecto
+                                        AND vpp_numero = :vmu_ngarage;
+                                        
+                        EXEC SQL
+                                        UPDATE vpp_prospectos
+                                        SET vpp_estadopro = 'A'
+                                        WHERE vpp_proyecto = :xob_proyecto
+                                        AND vpp_numero = :prospecto_ant;
+                    }//if
+                    else
+                    {
+                        EXEC SQL
+                                        UPDATE vpp_prospectos
+                                        SET vpp_estadopro = 'B'
+                                        WHERE vpp_proyecto = :xob_proyecto
+                                        AND vpp_numero = :vmu_ngarage; 
+                    }//else
+                }//if
+            }//on data accept
+            
+            AFTER FIELD
+            {
+                /*DISABLE ZOOM*/
+            }
+        
+        }//vmu_ngarage
         
         FIELD vmu_f_escritura
         {
+        
+            ON DATA ACCEPT
+            {
+                if(vmu_f_escritura < vmu_f_separacion)
+                {
+                    session.displayToMessageBox("La fecha de escritura es inferior a la fecha de separacion.");
+                    vmu_f_escritura.nextField = "vmu_f_escritura"; 
+                }
+                
+              /*  if(f_permiso != "01/01/2001")
+                {
+                    if(vmu_f_escritura > (vmu_f_separacion + 30))
+                    {
+                        session.displayToMessageBox("La escritura pactada no debe ser mayor a 30 días.");
+                        vmu_f_escritura = vmu_f_separacion + 30;
+                        vmu_f_escritura.nextField = "vmu_f_escritura"; 
+                    }
+                }*/
+                
+                if(vmu_f_escritura < f_escritura)
+                {
+                    session.displayToMessageBox("La fehca de escritura es inferior a la programada. Verifique por favor.");
+                    vmu_f_escritura.nextField = "vmu_f_escritura"; 
+                }
+                else
+                {
+                    vmu_f_ent_pacta = vmu_f_escritura + 30;
+                        if(adicionando == 1)
+                            vmu_f_entprog = vmu_f_escritura + 30;
+                }
+            }
         }
         
         FIELD vmu_f_ent_pacta
@@ -925,8 +999,13 @@ FORM RBoletinesFRM
                     
                  /*   if(f_permiso != "01/01/2001")
                     {
-                        session.displayToMessageBox("OK");
-                    }*/
+                        if(vmu_f_ent_pacta > (vmu_f_separacion + 60))
+                        {
+                            session.displayToMessageBox("La entrega pactada no debe ser mayor a 60 días ");
+                            vmu_f_ent_pacta = vmu_f_separacion + 60;
+                            vmu_f_ent_pacta.nextField = "vmu_f_ent_pacta";                      
+                        }
+                    }*///EN COMENTARIO MIENTRAS SE ENCUENTRA SOLUCIÓN A LA COMPARACIÓN CON LA FECHA.
             }
         
         }
@@ -971,11 +1050,260 @@ FORM RBoletinesFRM
         
         FIELD vmu_unidad
         {
+            BEFORE FIELD
+            {
+                x_unidad = vmu_unidad;
+            }
+            
+            ON DATA ACCEPT
+            {
+                EXEC SQL
+                                SELECT vlp_precio_uni
+                                FROM vlp_listapre
+                                WHERE vlp_empresa = :vmu_empresa
+                                AND vlp_obra = :vmu_obra
+                                AND vlp_manzana = :vmu_manzana
+                                AND vlp_unidad = :vmu_unidad
+                                AND vlp_f_inicial is NULL
+                                INTO vmu_precio_uni;
+                                
+                                if(session.status != StatusCode.SS_NORM)
+                                {
+                                    session.displayToMessageBox("La unidad no tiene precio de lista actual, verifique por favor. ");
+                                     vmu_unidad = x_unidad;
+                                     vmu_unidad.nextField = "vmu_unidad";   
+                                }//if
+                                
+                                EXEC SQL
+                                                SELECT vuu_estado, vuu_tipoinmueble,
+                                                            vuu_etapa, vuu_plus2
+                                                FROM vuu_unidades
+                                                WHERE vuu_empresa = :vmu_empresa
+                                                AND vuu_obra = :vmu_obra
+                                                AND vuu_manzana = :vmu_manzana
+                                                AND vuu_unidad = :vmu_unidad
+                                                INTO estado, vmu_tipoinmueb,
+                                                          vmu_etapa_venta, gasto_escritura;
+                                              
+                                                if(session.status != StatusCode.SS_NORM)
+                                                {
+                                                    session.displayToMessageBox("La unidad no corresponde. ");
+                                                    vmu_unidad = x_unidad;
+                                                    vmu_unidad.nextField = "vmu_unidad";   
+                                                }//if
+                                                
+                                                if(estado != "D")
+                                                {
+                                                    session.displayToMessageBox("La unidad no está disponible para la venta.");
+                                                    session.queueCommand("CLEAR_TO_ADD");
+                                                }//if
+                                                
+                            EXEC SQL
+                                             SELECT vev_etapactu
+                                              FROM vev_etapaven
+                                              WHERE vev_etapactu = :vmu_etapa_venta
+                                              AND vev_estado = 'A'
+                                              AND vev_empresa = :vmu_empresa
+                                              AND vev_obra = :vmu_obra
+                                              INTO etapa_activa;
+                                                                        
+                                            if(session.status != StatusCode.SS_NORM)
+                                            {
+                                                    session.displayToMessageBox("La unidad no se encuentra en Etapa de Ventas Activas. ");
+                                                    session.displayToMessageBox("La Etapa Activa actual es: " + etapa_act +". ");
+                                                    session.queueCommand("CLEAR_TO_ADD");
+                                            }//if
+                                            
+                        EXEC SQL
+                                        SELECT vuu_fterminacion, vuu_f_entregaprog
+                                         FROM vuu_unidades
+                                         WHERE vuu_empresa = :vmu_empresa
+                                          AND vuu_obra = :vmu_obra
+                                          AND vuu_manzana = :vmu_manzana
+                                          AND vuu_unidad = :vmu_unidad
+                                          INTO f_ent_real, f_ent_pacta;
+                                          
+                                        if(f_ent_pacta.isNull())
+                                        {
+                                            session.displayToMessageBox("La unidad no tiene fecha de entre definida, verifique por favor.");
+                                            session.queueCommand("CLEAR_TO_ADD");
+                                        }//if
+                                        else
+                                        {
+                                            if(f_ent_real.isNull())
+                                            {
+                                                f_entrega = f_ent_pacta;
+                                                f_escritura = f_ent_pacta - 30;
+                                            }//if
+                                            else
+                                            { 
+                                                 f_entrega = f_ent_real;
+                                                 f_escritura = f_ent_real - 30;
+                                            }//else
+                                        }//else
+                                        
+                                        if(adicionando == 1)
+                                        {
+                                            vmu_f_ent_pacta = f_entrega;
+                                            vmu_ent_escritura = f_escritura;
+                                        }//if
+                             
+                           
+                                                              
+                            EXEC SQL
+                                                        SELECT vut_f_real
+                                                        FROM vut_tramites
+                                                        WHERE vut_empresa = :vmu_empresa
+                                                        AND vut_obra = :vmu_obra
+                                                        AND vut_manzana = :vmu_manzana
+                                                        AND vut_unidad = :vmu_unidad
+                                                        AND vut_etapa = 'EV'
+                                                        AND vut_tramite = 'PO'
+                                                        AND vut_f_real != :fechafalsa
+                                                        AND vut_f_real is not NULL
+                                                        INTO vut_f_real;
+                                                        
+                                                        
+                                                        if(session.status == StatusCode.SS_NORM)
+                                                        {
+                                                            f_permiso = vut_f_real;
+                                                            session.displayToMessageBox("Casa terminada. Entrega rápida.");
+                                                            session.displayToMessageBox("Debe elaborar el contrato de Comrpa Venta cuanto antes.");
+                                                        }
+                                                        else
+                                                            f_permiso = "01/01/2001";
+            }//on data accept
+            
+            WHEN VALUE CHANGES
+            {
+                EXEC SQL
+                                                        SELECT vut_f_real
+                                                        FROM vut_tramites
+                                                        WHERE vut_empresa = :vmu_empresa
+                                                        AND vut_obra = :vmu_obra
+                                                        AND vut_manzana = :vmu_manzana
+                                                        AND vut_unidad = :vmu_unidad
+                                                        AND vut_etapa = 'EV'
+                                                        AND vut_tramite = 'PO'
+                                                        AND vut_f_real != :fechafalsa
+                                                        AND vut_f_real is not NULL
+                                                        INTO vut_f_real;
+                                                        
+                                                        
+                                                        if(session.status == StatusCode.SS_NORM)
+                                                        {
+                                                            f_permiso = vut_f_real;
+                                                        }
+                                                        else
+                                                            f_permiso = "01/01/2001";
+                                                            
+                    EXEC SQL
+                                        SELECT vuu_fterminacion, vuu_f_entregaprog,
+                                                     vuu_area_lote, vuu_area_const, vuu_plus2
+                                         FROM vuu_unidades
+                                         WHERE vuu_empresa = :vmu_empresa
+                                          AND vuu_obra = :vmu_obra
+                                          AND vuu_manzana = :vmu_manzana
+                                          AND vuu_unidad = :vmu_unidad
+                                          INTO f_ent_real, f_ent_pacta, 
+                                                    area_lote, area_const, gasto_escritura;
+                                                    
+                                                    
+                                        if(f_ent_pacta.isNull())
+                                        {
+                                            session.displayToMessageBox("La unidad no tiene fecha de entre definida, verifique por favor.");
+                                            
+                                        }//if
+                                        else
+                                        {
+                                            if(f_ent_real.isNull())
+                                            {
+                                                f_entrega = f_ent_pacta;
+                                                f_escritura = f_ent_pacta - 30;
+                                            }//if
+                                            else
+                                            { 
+                                                 f_entrega = f_ent_real;
+                                                 f_escritura = f_ent_real - 30;
+                                            }//else
+                                        }//else
+            }// when value changes
+        
         }
         
+        /*********** scr_fecha, fecha_separa *************/
         FIELD vmu_f_separacion
         {
-        }
+            BEFORE FIELD
+            {
+                if(vmu_f_separacion.isNull() || vmu_f_separacion.undefined == true)
+                {
+                    vmu_f_separacion = scr_fecha;
+                    fecha_separa = vmu_f_separacion;
+                }
+                else
+                    fecha_separa = vmu_f_separacion;
+            }
+            
+            ON DATA ACCEPT
+            {
+                if(vmu_f_separacion != fecha_separa)
+                {
+                    if(vmu_f_separacion < fecha_separa)
+                    {
+                        if(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo == "ADMVEN" || Modulo.LoginFRM#cajagrandeLogin.xpr_grupo  == "CUSEZAR")
+                        {
+                            EXEC SQL
+                                            SELECT vlp_precio_uni
+                                            FROM vlp_listapre
+                                            WHERE vlp_empresa = :vmu_empresa
+                                            AND vlp_obra = :vmu_obra
+                                            AND vlp_manzana = :vmu_manzana
+                                            AND vlp_unidad = :vmu_unidad
+                                            AND vlp_f_inicial <= :vmu_f_separacion
+                                            AND (vlp_f_final   >= :vmu_f_separacion OR vlp_f_final is NULL)
+                                            INTO x_precio_uni;
+                                            
+                                            if(session.status != StatusCode.SS_NORM)
+                                            {
+                                                if(session.status != StatusCode.SS_NOREC)
+                                                {
+                                                    session.displayToMessageBox("La unidad no puede acceder la lista para esta fecha, verifique por favor. ");
+                                                     vmu_f_separacion = fecha_separa;
+                                                     vmu_f_separacion.nextField = "vmu_f_separacion";   
+                                                }//if
+                                                else
+                                                {
+                                                    session.displayToMessageBox("No hay lista de precios para la unidad, se conserva el precio actual.");
+                                                }//else
+                                            }//if
+                                            else
+                                            {
+                                                vmu_precio_uni = x_precio_uni;
+                                            }//else
+                        }//if
+                        else
+                        {
+                            session.displayToMessageBox("No puede modificar la fecha de separación, requiere autorización.");
+                            vmu_f_separacion = fecha_separa;
+                            vmu_f_separacion.nextField = "vmu_f_separacion";
+                        }//else
+                    }//if
+                    else
+                    {
+                        session.displayToMessageBox("No puede crear la fecha de separación mayor a la fecha del día. Verifique por favor. ");
+                        vmu_f_separacion = fecha_separa;
+                        vmu_f_separacion.nextField = "vmu_f_separacion";
+                    }//else
+                }//if
+                
+                if(vmu_f_separacion > f_escritura && adicionando == 1)
+                {
+                    vmu_f_ent_pacta = vmu_f_separacion + 60;
+                    vmu_f_escritura = vmu_f_separacion + 30;
+                }//if
+            }//on data accept
+        }//vmu_f_separacion
         
         FIELD vmu_forma_pago
         {
@@ -991,6 +1319,29 @@ FORM RBoletinesFRM
         
         FIELD vmu_manzana
         {
+            BEFORE FIELD
+            {
+                x_manzana = vmu_manzana;
+            }
+            
+            ON DATA ACCEPT
+            {
+                EXEC SQL
+                                SELECT vuu_lote
+                                FROM vuu_unidades
+                                WHERE vuu_empresa = :vmu_empresa
+                                AND vuu_obra = :vmu_obra
+                                AND vuu_manzana = :vmu_manzana
+                                INTO x_campo;
+                                
+                                if(session.status != StatusCode.SS_NORM)
+                                {
+                                    session.displayToMessageBox("La manzana no corresponde.");
+                                    vmu_manzana = x_manzana;
+                                    vmu_manzana.nextField = "vmu_manzana";
+                                }
+            }
+        
         }
         
         TAB SET tabset1
