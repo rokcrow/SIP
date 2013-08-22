@@ -1169,6 +1169,31 @@ public class SeguimientoFRM
 		throws Exception
 	    {
 		getSession().commitTransaction();
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn11 = getConnection();
+		    java.sql.PreparedStatement us$stmt11 = null;
+		    ResultSet us$rs11 = null;
+		    try
+			{
+			}
+		    catch (SQLException us$ex11)
+			{
+			getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
+			throw us$ex11;
+			}
+		    catch (NXJDataConnectionException us$ex11)
+			{
+			getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
+			throw us$ex11;
+			}
+		    finally
+			{
+			if (us$stmt11 != null)
+			    us$conn11.us$closeStatement(us$stmt11);
+			}
+		    }
 	    } // afterAdd
 	    public NXJLabelControl label1 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label1", false);
 	    public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
@@ -1179,6 +1204,7 @@ public class SeguimientoFRM
 		public void onDataAccept()
 		    throws Exception
 		{
+		    com.unify.nxj.mgr.datatypes.Register us$R33;
 		    com.unify.nxj.mgr.datatypes.Register us$R32;
 		    com.unify.nxj.mgr.datatypes.Register us$R31;
 		    com.unify.nxj.mgr.datatypes.Register us$R30;
@@ -1199,65 +1225,64 @@ public class SeguimientoFRM
 		    com.unify.nxj.mgr.datatypes.Register us$R15;
 		    com.unify.nxj.mgr.datatypes.Register us$R14;
 		    com.unify.nxj.mgr.datatypes.Register us$R13;
-		    com.unify.nxj.mgr.datatypes.Register us$R12;
 		    final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
 
 			{
 			getSession().us$setStatus(StatusCode.SS_NORM);
-			NXJDataConnection us$conn11 = getConnection();
-			java.sql.PreparedStatement us$stmt11 = null;
-			ResultSet us$rs11 = null;
+			NXJDataConnection us$conn12 = getConnection();
+			java.sql.PreparedStatement us$stmt12 = null;
+			ResultSet us$rs12 = null;
 			try
 			    {
-			    us$stmt11 = us$conn11.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
-			    vps_califica.us$setSqlParameterValue(us$stmt11, 1);
-			    us$rs11 = us$stmt11.executeQuery();
-			    int us$rowsTouched11 = 0;
+			    us$stmt12 = us$conn12.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+			    vps_califica.us$setSqlParameterValue(us$stmt12, 1);
+			    us$rs12 = us$stmt12.executeQuery();
+			    int us$rowsTouched12 = 0;
 			    try
 				{
-				java.sql.ResultSetMetaData us$rsmd11 = us$rs11.getMetaData();
-				if (us$rsmd11.getColumnCount() != 4)
+				java.sql.ResultSetMetaData us$rsmd12 = us$rs12.getMetaData();
+				if (us$rsmd12.getColumnCount() != 4)
 				    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 					{
-					Integer.toString(us$rsmd11.getColumnCount()), "4"
+					Integer.toString(us$rsmd12.getColumnCount()), "4"
 					}));
-				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter11 = us$conn11.createDataIterator(us$rs11);
-				if (us$getter11.next())
+				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter12 = us$conn12.createDataIterator(us$rs12);
+				if (us$getter12.next())
 				    {
-				    ++us$rowsTouched11;
-				    us$getter11.assignValueToVariable(xpc_nombre, 1);
-				    us$getter11.assignValueToVariable(xpc_califica, 2);
-				    us$getter11.assignValueToVariable(xpc_dias_pac, 3);
-				    us$getter11.assignValueToVariable(xpc_dias_pvt, 4);
+				    ++us$rowsTouched12;
+				    us$getter12.assignValueToVariable(xpc_nombre, 1);
+				    us$getter12.assignValueToVariable(xpc_califica, 2);
+				    us$getter12.assignValueToVariable(xpc_dias_pac, 3);
+				    us$getter12.assignValueToVariable(xpc_dias_pvt, 4);
 				    }
 				}
 			    finally
 				{
-				if (us$rowsTouched11 == 0)
+				if (us$rowsTouched12 == 0)
 				    getSession().us$setStatus(StatusCode.SS_NOREC);
-				if (us$rs11 != null)
-				    us$rs11.close();
+				if (us$rs12 != null)
+				    us$rs12.close();
 				}
 			    }
-			catch (SQLException us$ex11)
+			catch (SQLException us$ex12)
 			    {
-			    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-			    throw us$ex11;
+			    getSession().us$setStatus(us$conn12.mapToStatusCode(us$ex12));
+			    throw us$ex12;
 			    }
-			catch (NXJDataConnectionException us$ex11)
+			catch (NXJDataConnectionException us$ex12)
 			    {
-			    getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-			    throw us$ex11;
+			    getSession().us$setStatus(us$conn12.mapToStatusCode(us$ex12));
+			    throw us$ex12;
 			    }
 			finally
 			    {
-			    if (us$stmt11 != null)
-				us$conn11.us$closeStatement(us$stmt11);
+			    if (us$stmt12 != null)
+				us$conn12.us$closeStatement(us$stmt12);
 			    }
 			}
 		    if (getSession().getStatus() == StatusCode.SS_NOREC)
 			{
-			getSession().displayToMessageBox("No existe la calificacion seleccionado en el maestro");
+			getSession().displayToMessageBox("No existe la calificaci\u00F3n seleccionado en el maestro");
 			rejectOperation();
 			}
 		    else
@@ -1271,7 +1296,7 @@ public class SeguimientoFRM
 				if (us$registerPool.allocateRegister().load(xpc_califica).eqOp("P").getBooleanValueNullOk())
 				    vps_estado.assign(us$registerPool.allocateRegister().load("N"));
 			}
-		    if (((us$R32 = (us$R31 = (us$R30 = (us$R29 = (us$R28 = (us$R27 = (us$R26 = (us$R25 = (us$R24 = (us$R23 = (us$R22 = (us$R21 = (us$R20 = (us$R19 = (us$R18 = (us$R17 = (us$R16 = (us$R15 = (us$R14 = (us$R13 = (us$R12 = us$registerPool.allocateRegister().load(vps_califica).eqOp("22")).isLogicalOrDecided() ? us$R12 : us$R12.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("21"))).isLogicalOrDecided() ? us$R13 : us$R13.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("20"))).isLogicalOrDecided() ? us$R14 : us$R14.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("19"))).isLogicalOrDecided() ? us$R15 : us$R15.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("18"))).isLogicalOrDecided() ? us$R16 : us$R16.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("17"))).isLogicalOrDecided() ? us$R17 : us$R17.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("16"))).isLogicalOrDecided() ? us$R18 : us$R18.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("15"))).isLogicalOrDecided() ? us$R19 : us$R19.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("14"))).isLogicalOrDecided() ? us$R20 : us$R20.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("13"))).isLogicalOrDecided() ? us$R21 : us$R21.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("12"))).isLogicalOrDecided() ? us$R22 : us$R22.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("11"))).isLogicalOrDecided() ? us$R23 : us$R23.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("10"))).isLogicalOrDecided() ? us$R24 : us$R24.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("09"))).isLogicalOrDecided() ? us$R25 : us$R25.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("08"))).isLogicalOrDecided() ? us$R26 : us$R26.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("07"))).isLogicalOrDecided() ? us$R27 : us$R27.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("06"))).isLogicalOrDecided() ? us$R28 : us$R28.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("05"))).isLogicalOrDecided() ? us$R29 : us$R29.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("04"))).isLogicalOrDecided() ? us$R30 : us$R30.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("03"))).isLogicalOrDecided() ? us$R31 : us$R31.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("02"))).isLogicalOrDecided() ? us$R32 : us$R32.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("01"))).getBooleanValueNullOk())
+		    if (((us$R33 = (us$R32 = (us$R31 = (us$R30 = (us$R29 = (us$R28 = (us$R27 = (us$R26 = (us$R25 = (us$R24 = (us$R23 = (us$R22 = (us$R21 = (us$R20 = (us$R19 = (us$R18 = (us$R17 = (us$R16 = (us$R15 = (us$R14 = (us$R13 = us$registerPool.allocateRegister().load(vps_califica).eqOp("22")).isLogicalOrDecided() ? us$R13 : us$R13.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("21"))).isLogicalOrDecided() ? us$R14 : us$R14.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("20"))).isLogicalOrDecided() ? us$R15 : us$R15.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("19"))).isLogicalOrDecided() ? us$R16 : us$R16.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("18"))).isLogicalOrDecided() ? us$R17 : us$R17.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("17"))).isLogicalOrDecided() ? us$R18 : us$R18.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("16"))).isLogicalOrDecided() ? us$R19 : us$R19.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("15"))).isLogicalOrDecided() ? us$R20 : us$R20.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("14"))).isLogicalOrDecided() ? us$R21 : us$R21.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("13"))).isLogicalOrDecided() ? us$R22 : us$R22.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("12"))).isLogicalOrDecided() ? us$R23 : us$R23.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("11"))).isLogicalOrDecided() ? us$R24 : us$R24.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("10"))).isLogicalOrDecided() ? us$R25 : us$R25.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("09"))).isLogicalOrDecided() ? us$R26 : us$R26.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("08"))).isLogicalOrDecided() ? us$R27 : us$R27.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("07"))).isLogicalOrDecided() ? us$R28 : us$R28.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("06"))).isLogicalOrDecided() ? us$R29 : us$R29.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("05"))).isLogicalOrDecided() ? us$R30 : us$R30.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("04"))).isLogicalOrDecided() ? us$R31 : us$R31.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("03"))).isLogicalOrDecided() ? us$R32 : us$R32.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("02"))).isLogicalOrDecided() ? us$R33 : us$R33.logicalOrOp(us$registerPool.allocateRegister().load(vps_califica).eqOp("01"))).getBooleanValueNullOk())
 			{
 			getSession().displayToMessageBox("No es una calificacion permitida.");
 			rejectOperation();
@@ -1284,55 +1309,55 @@ public class SeguimientoFRM
 
 			{
 			getSession().us$setStatus(StatusCode.SS_NORM);
-			NXJDataConnection us$conn33 = getConnection();
-			java.sql.PreparedStatement us$stmt33 = null;
-			ResultSet us$rs33 = null;
+			NXJDataConnection us$conn34 = getConnection();
+			java.sql.PreparedStatement us$stmt34 = null;
+			ResultSet us$rs34 = null;
 			try
 			    {
-			    us$stmt33 = us$conn33.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
-			    vps_califica.us$setSqlParameterValue(us$stmt33, 1);
-			    us$rs33 = us$stmt33.executeQuery();
-			    int us$rowsTouched33 = 0;
+			    us$stmt34 = us$conn34.prepareStatement("SELECT xpc_nombre, xpc_califica, xpc_dias_pac, xpc_dias_pvt FROM xpc_proscalif WHERE xpc_codigo =  ?");
+			    vps_califica.us$setSqlParameterValue(us$stmt34, 1);
+			    us$rs34 = us$stmt34.executeQuery();
+			    int us$rowsTouched34 = 0;
 			    try
 				{
-				java.sql.ResultSetMetaData us$rsmd33 = us$rs33.getMetaData();
-				if (us$rsmd33.getColumnCount() != 4)
+				java.sql.ResultSetMetaData us$rsmd34 = us$rs34.getMetaData();
+				if (us$rsmd34.getColumnCount() != 4)
 				    throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
 					{
-					Integer.toString(us$rsmd33.getColumnCount()), "4"
+					Integer.toString(us$rsmd34.getColumnCount()), "4"
 					}));
-				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter33 = us$conn33.createDataIterator(us$rs33);
-				if (us$getter33.next())
+				com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter34 = us$conn34.createDataIterator(us$rs34);
+				if (us$getter34.next())
 				    {
-				    ++us$rowsTouched33;
-				    us$getter33.assignValueToVariable(xpc_nombre, 1);
-				    us$getter33.assignValueToVariable(xpc_califica, 2);
-				    us$getter33.assignValueToVariable(xpc_dias_pac, 3);
-				    us$getter33.assignValueToVariable(xpc_dias_pvt, 4);
+				    ++us$rowsTouched34;
+				    us$getter34.assignValueToVariable(xpc_nombre, 1);
+				    us$getter34.assignValueToVariable(xpc_califica, 2);
+				    us$getter34.assignValueToVariable(xpc_dias_pac, 3);
+				    us$getter34.assignValueToVariable(xpc_dias_pvt, 4);
 				    }
 				}
 			    finally
 				{
-				if (us$rowsTouched33 == 0)
+				if (us$rowsTouched34 == 0)
 				    getSession().us$setStatus(StatusCode.SS_NOREC);
-				if (us$rs33 != null)
-				    us$rs33.close();
+				if (us$rs34 != null)
+				    us$rs34.close();
 				}
 			    }
-			catch (SQLException us$ex33)
+			catch (SQLException us$ex34)
 			    {
-			    getSession().us$setStatus(us$conn33.mapToStatusCode(us$ex33));
-			    throw us$ex33;
+			    getSession().us$setStatus(us$conn34.mapToStatusCode(us$ex34));
+			    throw us$ex34;
 			    }
-			catch (NXJDataConnectionException us$ex33)
+			catch (NXJDataConnectionException us$ex34)
 			    {
-			    getSession().us$setStatus(us$conn33.mapToStatusCode(us$ex33));
-			    throw us$ex33;
+			    getSession().us$setStatus(us$conn34.mapToStatusCode(us$ex34));
+			    throw us$ex34;
 			    }
 			finally
 			    {
-			    if (us$stmt33 != null)
-				us$conn33.us$closeStatement(us$stmt33);
+			    if (us$stmt34 != null)
+				us$conn34.us$closeStatement(us$stmt34);
 			    }
 			}
 		} // whenValueChanges

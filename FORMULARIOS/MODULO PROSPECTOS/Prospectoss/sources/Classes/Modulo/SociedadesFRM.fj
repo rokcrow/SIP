@@ -20,6 +20,9 @@ FORM SociedadesFRM
     AFTER ADD
     {
             session.commitTransaction();
+           
+             EXEC SQL
+                            UNLOCK xem_empresas;
     }
 
     BOX cajagrandeSociedades

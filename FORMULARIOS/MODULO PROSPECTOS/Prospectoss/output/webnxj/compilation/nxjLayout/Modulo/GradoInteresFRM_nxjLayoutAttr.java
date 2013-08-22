@@ -17,18 +17,18 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
 	widget.addAttribute("localized","true");
-	widget.setClass("form");
-	widget.addAttribute("name","NXJForm");
-	widget.addAttribute("displaywidth","1165");
+	widget.addAttribute("footer","none");
 	widget.addAttribute("title","GradoInteres");
+	widget.addAttribute("displaywidth","1165");
+	widget.setClass("form");
 	widget.addAttribute("stylesheets","");
+	widget.addAttribute("name","NXJForm");
+	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","611");
 	widget.addAttribute("fieldheight","611");
 	widget.addAttribute("fieldwidth","1165");
-	widget.addStyle("background-color","#999999");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -69,11 +69,11 @@ private void setAttrFor_div_xpc_codigo__50(Widget widget)
 
 private void setAttrFor_xpc_codigo__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("fieldwidth","55");
-	widget.addAttribute("headertitle","Codigo");
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_codigo.");
 	widget.addAttribute("name","view1:xpc_codigo.");
+	widget.addAttribute("headertitle","Codigo");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -84,9 +84,9 @@ private void setAttrFor_div_xpc_clase__50(Widget widget)
 private void setAttrFor_xpc_clase__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","129");
-	widget.addAttribute("headertitle","Clase");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_clase.");
 	widget.addAttribute("name","view1:xpc_clase.");
+	widget.addAttribute("headertitle","Clase");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -96,11 +96,11 @@ private void setAttrFor_div_xpc_nombre__50(Widget widget)
 
 private void setAttrFor_xpc_nombre__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("fieldwidth","620");
-	widget.addAttribute("headertitle","Nombre");
+	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)xpc_nombre.");
 	widget.addAttribute("name","view1:xpc_nombre.");
+	widget.addAttribute("headertitle","Nombre");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -143,9 +143,9 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)cajaarribaGInteres:(Modulo.GradoInteresDVW)actualempresa.");
 	widget.addAttribute("name","view1:cajaarribaGInteres:actualempresa.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -155,9 +155,9 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
-	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.GradoInteresDVW)cajaarribaGInteres:(Modulo.GradoInteresDVW)actualusuario.");
 	widget.addAttribute("name","view1:cajaarribaGInteres:actualusuario.");
+	widget.addAttribute("type","text");
 	widget.addStyle("overflow","hidden");
 }
 

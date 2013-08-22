@@ -5,7 +5,7 @@ import java.io.*;
 DATA VIEW ProspectosDVW
 {
     NullableDate    fecha_mini, fret_obra, fing_obra;
-    NullableNumeric xpc_dias_pac, xpc_dias_pvt;
+    NullableNumeric xpc_dias_pac, xpc_dias_pvt, solobusca = 0;
     NullableString  vpy_tipo, xpr_usuario, xpc_califica, estadopro_ant, vendedora,  empresanombre;
     NullableTime    hora;
  
@@ -46,7 +46,7 @@ DATA VIEW ProspectosDVW
     ON CLEAR TO FIND
     {
           
-        
+        solobusca = 1;
     
         vpp_numero.stopForInput 	= true;
         vpp_estadopro.stopForInput 	= true;
@@ -59,6 +59,8 @@ DATA VIEW ProspectosDVW
         vpp_numero.stopForInput 	= false;
         vpp_fecha.stopForInput 		= false;
         vpp_fechaestado.stopForInput 	= false;
+        
+        solobusca = 0;
     }
     
     BEFORE ADD
@@ -120,8 +122,8 @@ DATA VIEW ProspectosDVW
                                         EXEC SQL
                                         UPDATE xco_consecut
                                         SET    xco_ult_numero = xco_ult_numero + 1
-                                        WHERE  xco_empresa    = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA AND 
-                                                xco_documento  = 'PR';
+                                        WHERE  xco_empresa    = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA 
+                                        AND xco_documento  = 'PR';
                                         
                                      
                                              
@@ -171,6 +173,9 @@ DATA VIEW ProspectosDVW
                                             }                                        
 	    
 	    session.commitTransaction();
+                                
+                               EXEC SQL
+                                                UNLOCK xco_consecut, vps_prosigue;
                              
 	                                                  
 	   }
@@ -440,24 +445,31 @@ DATA VIEW ProspectosDVW
     
          ON DATA ACCEPT
         {
-	 if (vpp_fecha_nacio > (session.currentDate - mayoredad))
+
+                    if(solobusca == 0)
+                    {
+                            if (vpp_fecha_nacio > (session.currentDate - mayoredad))
 	   {
 	    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
 	    vpp_fecha_nacio = (session.currentDate - mayoredad);
 	    rejectOperation();
 	   }
-           
-                           
+                    } 
+          
         }
         
         WHEN VALUE CHANGES
         {
-                            if (vpp_fecha_nacio > (session.currentDate - mayoredad))
-	   {
-	    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
-	   vpp_fecha_nacio = (session.currentDate - mayoredad);
-	    rejectOperation();
-	   }
+                           
+                             if(solobusca == 0)
+                            {
+                                            if (vpp_fecha_nacio > (session.currentDate - mayoredad))
+                                            {
+                                                    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
+                                                    vpp_fecha_nacio = (session.currentDate - mayoredad);
+                                                    rejectOperation();
+                                            }
+                            }
         }
 
     }

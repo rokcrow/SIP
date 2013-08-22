@@ -45,6 +45,10 @@ FORM CClaveFRM
                                 
                                 
                                 session.commitTransaction();
+                                
+                                EXEC SQL
+                                                UNLOCK xus_usuarios;
+                                
                                 session.displayToMessageBox("Clave cambiada con éxito.");
                                 session.queueNextForm("Modulo.LoginFRM");
         }

@@ -268,6 +268,9 @@ FORM SeguimientoFRM
             AFTER ADD
             {
                 	    session.commitTransaction();
+                               EXEC SQL
+                                                UNLOCK vps_prosigue;
+                                                
             }
 
             FIELD textfield1
@@ -303,7 +306,7 @@ FORM SeguimientoFRM
                         into   xpc_nombre, xpc_califica,  xpc_dias_pac,  xpc_dias_pvt;
                       
                           if (session.status == StatusCode.SS_NOREC) {
-                                    session.displayToMessageBox("No existe la calificacion seleccionado en el maestro");
+                                    session.displayToMessageBox("No existe la calificación seleccionado en el maestro");
                                     rejectOperation();
                                     }
                         else

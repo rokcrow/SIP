@@ -34,7 +34,7 @@
         field_weight = "99"
         key = ".top:RepeatingArea1."
         kind = "repeating_area"
-        list_columns = ".top:xpc_codigo.0:55;.top:xpc_clase.55:129;.top:xpc_nombre.184:267"
+        list_columns = ".top:xpc_codigo.0:55;.top:xpc_clase.55:129;.top:xpc_nombre.184:620"
         occurrences = "12"
         row_class = "ROW"
         selected_row_class = "selected_row"

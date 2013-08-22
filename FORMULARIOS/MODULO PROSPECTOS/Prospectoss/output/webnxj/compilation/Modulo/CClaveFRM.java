@@ -436,6 +436,31 @@ public class CClaveFRM
 		    getSession().exitToURL("salida.html");
 		    }
 		getSession().commitTransaction();
+
+		    {
+		    getSession().us$setStatus(StatusCode.SS_NORM);
+		    NXJDataConnection us$conn3 = getConnection();
+		    java.sql.PreparedStatement us$stmt3 = null;
+		    ResultSet us$rs3 = null;
+		    try
+			{
+			}
+		    catch (SQLException us$ex3)
+			{
+			getSession().us$setStatus(us$conn3.mapToStatusCode(us$ex3));
+			throw us$ex3;
+			}
+		    catch (NXJDataConnectionException us$ex3)
+			{
+			getSession().us$setStatus(us$conn3.mapToStatusCode(us$ex3));
+			throw us$ex3;
+			}
+		    finally
+			{
+			if (us$stmt3 != null)
+			    us$conn3.us$closeStatement(us$stmt3);
+			}
+		    }
 		getSession().displayToMessageBox("Clave cambiada con \u00E9xito.");
 		getSession().queueNextForm("Modulo.LoginFRM");
 		}

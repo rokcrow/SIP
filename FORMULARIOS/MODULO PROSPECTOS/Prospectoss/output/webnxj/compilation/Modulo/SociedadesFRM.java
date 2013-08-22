@@ -171,6 +171,31 @@ public class SociedadesFRM
 	throws Exception
     {
 	getSession().commitTransaction();
+
+	    {
+	    getSession().us$setStatus(StatusCode.SS_NORM);
+	    NXJDataConnection us$conn2 = getConnection();
+	    java.sql.PreparedStatement us$stmt2 = null;
+	    ResultSet us$rs2 = null;
+	    try
+		{
+		}
+	    catch (SQLException us$ex2)
+		{
+		getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+		throw us$ex2;
+		}
+	    catch (NXJDataConnectionException us$ex2)
+		{
+		getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+		throw us$ex2;
+		}
+	    finally
+		{
+		if (us$stmt2 != null)
+		    us$conn2.us$closeStatement(us$stmt2);
+		}
+	    }
     } // afterAdd
 
     public com.unify.nxj.mgr.NXJMasterRelationshipExpression[] us$getPUBLIC_xel_emprelogo1_1_FindExpressions()
