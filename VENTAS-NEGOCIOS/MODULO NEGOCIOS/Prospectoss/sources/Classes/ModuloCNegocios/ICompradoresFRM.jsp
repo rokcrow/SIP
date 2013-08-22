@@ -26,10 +26,12 @@
         style="background-color: #999999">
 
         <div
+            binary_variables=""
             view="div"
             style="position: absolute; top: 40px; left: 69px; width:1004px; height:371px">
 
             <fieldset
+                binary_variables=""
                 border-width="1"
                 class="box"
                 commands=""
@@ -349,7 +351,7 @@
                                 displayheight="23"
                                 displayleft="241"
                                 displaytop="14"
-                                displaywidth="370"
+                                displaywidth="522"
                                 foundation_type="Classes/Foundation/Label"
                                 id="cajagrandeICompradores:box111:label1."
                                 instancewidth="522"
@@ -483,10 +485,12 @@
                 </div>
 
                 <div
+                    binary_variables=""
                     view="div"
                     style="position: absolute; top: 280px; left: 19px; width:30px; height:22px">
 
                     <input
+                        binary_variables=""
                         class="textfield"
                         displayheight="22"
                         displayleft="19"

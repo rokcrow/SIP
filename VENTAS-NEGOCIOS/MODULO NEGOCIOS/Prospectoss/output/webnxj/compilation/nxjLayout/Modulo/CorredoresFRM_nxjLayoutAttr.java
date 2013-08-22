@@ -17,17 +17,17 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
+	widget.addAttribute("footer","none");
+	widget.addAttribute("title","Corredores de Venta");
 	widget.addAttribute("displaywidth","1054");
-	widget.addAttribute("name","NXJForm");
+	widget.setClass("form");
 	widget.addAttribute("stylesheets","");
+	widget.addAttribute("name","NXJForm");
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","496");
 	widget.addAttribute("fieldheight","505");
-	widget.addAttribute("title","Corredores de Venta");
 	widget.addAttribute("fieldwidth","1060");
-	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -41,9 +41,9 @@ private void setAttrFor_div_view1__10(Widget widget)
 private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayheight","470");
 	widget.addAttribute("displaytop","30");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","50");
 	widget.addStyle("overflow","hidden");
 }
@@ -66,10 +66,10 @@ private void setAttrFor_div_vco_codigo__50(Widget widget)
 private void setAttrFor_vco_codigo__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","85");
-	widget.addAttribute("headertitle","Codigo");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.CorredoresDVW)vco_codigo.");
 	widget.addAttribute("name","view1:vco_codigo.");
+	widget.addAttribute("headertitle","Codigo");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -80,10 +80,10 @@ private void setAttrFor_div_vco_nombre__50(Widget widget)
 private void setAttrFor_vco_nombre__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","251");
-	widget.addAttribute("headertitle","Nombre");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.CorredoresDVW)vco_nombre.");
 	widget.addAttribute("name","view1:vco_nombre.");
+	widget.addAttribute("headertitle","Nombre");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -94,10 +94,10 @@ private void setAttrFor_div_vco_telefono1__50(Widget widget)
 private void setAttrFor_vco_telefono1__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","108");
-	widget.addAttribute("headertitle","Telefono 1");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.CorredoresDVW)vco_telefono1.");
 	widget.addAttribute("name","view1:vco_telefono1.");
+	widget.addAttribute("headertitle","Telefono 1");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -108,10 +108,10 @@ private void setAttrFor_div_vco_telefono2__50(Widget widget)
 private void setAttrFor_vco_telefono2__60(Widget widget)
 {
 	widget.addAttribute("fieldwidth","108");
-	widget.addAttribute("headertitle","Telefono 2");
 	widget.addAttribute("type","text");
 	widget.addAttribute("_name","view1:(Modulo.CorredoresDVW)vco_telefono2.");
 	widget.addAttribute("name","view1:vco_telefono2.");
+	widget.addAttribute("headertitle","Telefono 2");
 	widget.addStyle("overflow","hidden");
 }
 

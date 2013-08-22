@@ -17,13 +17,13 @@ dodiv_cajagrandeObrasFRM__10(div_cajagrandeObrasFRM__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
 	widget.addAttribute("resize_browser","true");
+	widget.addAttribute("footer","none");
 	widget.addAttribute("fieldheight","499");
 	widget.setClass("form");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displayheight","496");
 	widget.addAttribute("fieldwidth","1199");
-	widget.addAttribute("name","NXJForm");
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displaywidth","1193");
@@ -41,16 +41,16 @@ private void setAttrFor_cajagrandeObrasFRM__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","1004");
-	widget.addAttribute("id","cajagrandeObrasFRM.");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","190");
-	widget.addStyle("background-color","#cccccc");
+	widget.addAttribute("id","cajagrandeObrasFRM.");
 	widget.addAttribute("displaytop","30");
+	widget.addStyle("background-color","#cccccc");
 	widget.addAttribute("displayheight","464");
 	widget.addAttribute("fieldheight","464");
 	widget.addAttribute("fieldwidth","1004");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -66,15 +66,15 @@ private void setAttrFor_PUBLIC_xob_obras__40(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("displaywidth","425");
-	widget.addAttribute("id","cajagrandeObrasFRM:PUBLIC_xob_obras.");
+	widget.setClass("data_view");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","303");
 	widget.addStyle("border-style","None");
+	widget.addAttribute("id","cajagrandeObrasFRM:PUBLIC_xob_obras.");
 	widget.addAttribute("displaytop","159");
 	widget.addAttribute("displayheight","194");
 	widget.addAttribute("fieldheight","194");
 	widget.addAttribute("fieldwidth","425");
-	widget.setClass("data_view");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -88,23 +88,23 @@ private void setAttrFor_div_RepeatingArea1__50(Widget widget)
 
 private void setAttrFor_RepeatingArea1__60(Widget widget)
 {
-	widget.addAttribute("list_columns","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_proyecto.0:105;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_obra.105:72;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_nombre.177:191");
-	widget.addAttribute("occurrences","10");
-	widget.addAttribute("selected_row_class","selected_row");
-	widget.addAttribute("field_weight","99");
-	widget.addAttribute("row_class","ROW");
 	widget.addAttribute("repeat_style","Grid");
-	widget.addAttribute("columns_sortable","true");
+	widget.addAttribute("occurrences","10");
 	widget.addAttribute("altRowClass","alternate_row");
+	widget.addAttribute("list_columns","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_proyecto.0:105;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_obra.105:72;cajagrandeObrasFRM:PUBLIC_xob_obras:xob_nombre.177:191");
+	widget.addAttribute("columns_sortable","true");
+	widget.addAttribute("row_class","ROW");
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("selected_row_class","selected_row");
 	widget.addAttribute("displaywidth","387");
-	widget.addAttribute("id","cajagrandeObrasFRM:PUBLIC_xob_obras:RepeatingArea1.");
+	widget.setClass("repeating_area");
 	widget.addAttribute("displayleft","10");
 	widget.addAttribute("horizontal_scroll_width","400");
+	widget.addAttribute("id","cajagrandeObrasFRM:PUBLIC_xob_obras:RepeatingArea1.");
 	widget.addAttribute("displaytop","10");
 	widget.addAttribute("displayheight","168");
 	widget.addAttribute("fieldheight","168");
 	widget.addAttribute("fieldwidth","387");
-	widget.setClass("repeating_area");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -115,21 +115,21 @@ private void setAttrFor_div_xob_proyecto__70(Widget widget)
 
 private void setAttrFor_xob_proyecto__80(Widget widget)
 {
-	widget.addAttribute("field_weight","99");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("title","xob_proyecto");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","105");
-	widget.addAttribute("name","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_proyecto.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","0");
-	widget.addAttribute("size","17");
 	widget.addAttribute("headertitle","Proyecto");
+	widget.addAttribute("name","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_proyecto.");
 	widget.addAttribute("displaytop","0");
+	widget.addAttribute("size","17");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xob_proyecto");
 	widget.addAttribute("fieldwidth","105");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -140,21 +140,21 @@ private void setAttrFor_div_xob_obra__70(Widget widget)
 
 private void setAttrFor_xob_obra__80(Widget widget)
 {
-	widget.addAttribute("field_weight","199");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("title","xob_obra");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","72");
-	widget.addAttribute("name","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_obra.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","105");
-	widget.addAttribute("size","12");
 	widget.addAttribute("headertitle","Obra");
+	widget.addAttribute("name","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_obra.");
 	widget.addAttribute("displaytop","0");
+	widget.addAttribute("size","12");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xob_obra");
 	widget.addAttribute("fieldwidth","72");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -165,21 +165,21 @@ private void setAttrFor_div_xob_nombre__70(Widget widget)
 
 private void setAttrFor_xob_nombre__80(Widget widget)
 {
-	widget.addAttribute("field_weight","299");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","299");
+	widget.addAttribute("title","xob_nombre");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","191");
-	widget.addAttribute("name","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_nombre.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","177");
-	widget.addAttribute("size","31");
 	widget.addAttribute("headertitle","Nombre");
+	widget.addAttribute("name","cajagrandeObrasFRM:PUBLIC_xob_obras:xob_nombre.");
 	widget.addAttribute("displaytop","0");
+	widget.addAttribute("size","31");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xob_nombre");
 	widget.addAttribute("fieldwidth","191");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -195,17 +195,17 @@ private void setAttrFor_box11__40(Widget widget)
 {
 	widget.addAttribute("field_weight","299");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id","cajagrandeObrasFRM:box11.");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","3");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id","cajagrandeObrasFRM:box11.");
 	widget.addAttribute("displaytop","414");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -219,9 +219,9 @@ private void setAttrFor_div_image1__50(Widget widget)
 
 private void setAttrFor_image1__60(Widget widget)
 {
+	widget.addAttribute("id","cajagrandeObrasFRM:box11:image1.");
 	widget.addAttribute("displayheight","46");
 	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id","cajagrandeObrasFRM:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -239,17 +239,17 @@ private void setAttrFor_cajaarribaObrasFRM__40(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id","cajagrandeObrasFRM:cajaarribaObrasFRM.");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id","cajagrandeObrasFRM:cajaarribaObrasFRM.");
 	widget.addAttribute("displaytop","2");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -263,19 +263,19 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
-	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","99");
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("name","cajagrandeObrasFRM:cajaarribaObrasFRM:actualempresa.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","16");
-	widget.addAttribute("size","32");
+	widget.addAttribute("name","cajagrandeObrasFRM:cajaarribaObrasFRM:actualempresa.");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("size","32");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -289,19 +289,19 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
-	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","199");
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name","cajagrandeObrasFRM:cajaarribaObrasFRM:actualusuario.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","800");
-	widget.addAttribute("size","18");
+	widget.addAttribute("name","cajagrandeObrasFRM:cajaarribaObrasFRM:actualusuario.");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("size","18");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -317,8 +317,8 @@ private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","Consulta de Obras");
 	widget.addAttribute("displaywidth","194");
-	widget.addAttribute("id","cajagrandeObrasFRM:cajaarribaObrasFRM:label1.");
 	widget.addAttribute("displayleft","241");
+	widget.addAttribute("id","cajagrandeObrasFRM:cajaarribaObrasFRM:label1.");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","194");
@@ -339,14 +339,14 @@ private void setAttrFor_label211__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","top1024");
 	widget.addAttribute("displaywidth","46");
-	widget.addAttribute("id","cajagrandeObrasFRM:cajaarribaObrasFRM:label211.");
+	widget.setClass("label");
 	widget.addAttribute("displayleft","778");
+	widget.addAttribute("id","cajagrandeObrasFRM:cajaarribaObrasFRM:label211.");
 	widget.addAttribute("displaytop","65");
 	widget.addAttribute("displayheight","21");
 	widget.addAttribute("fieldheight","14");
 	widget.addAttribute("fieldwidth","46");
 	widget.addStyle("text-align","left");
-	widget.setClass("label");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -361,19 +361,19 @@ private void setAttrFor_div_label11__30(Widget widget)
 private void setAttrFor_label11__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","Consulta de Obras");
-	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaywidth","143");
-	widget.addAttribute("id","cajagrandeObrasFRM:label11.");
+	widget.setClass("label");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displayleft","19");
-	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("id","cajagrandeObrasFRM:label11.");
 	widget.addAttribute("displaytop","96");
+	widget.addStyle("color","Black");
+	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("fieldwidth","143");
-	widget.addStyle("font-size","14");
 	widget.addStyle("text-align","left");
-	widget.addStyle("color","Black");
-	widget.setClass("label");
+	widget.addStyle("font-size","14");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_cajagrandeObrasFRM__10(Widget div_cajagrandeObrasFRM__10)

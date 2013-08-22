@@ -442,7 +442,7 @@ DATA VIEW ProspectosDVW
         {
 	 if (vpp_fecha_nacio > (session.currentDate - mayoredad))
 	   {
-	    session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
+                                session.displayToMessageBox("El prospecto debe ser mayor de edad. Verifique por favor.");
 	    vpp_fecha_nacio = (session.currentDate - mayoredad);
 	    rejectOperation();
 	   }

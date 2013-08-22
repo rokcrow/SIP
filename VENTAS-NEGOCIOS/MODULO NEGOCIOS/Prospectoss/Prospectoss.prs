@@ -713,23 +713,6 @@
     </file>
 
     <file
-         path="Classes/ModuloCNegocios/CNegocioFRM.fx"
-          type="form"
-          state="4"
-          flags="0"
-          timestamp="1374153206457"
-          ctimestamp="0"
-          scversion=""
-          private="false"
-          binary="false"
-          checked-in-path=""
-          base-class=""
-          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;CNegocioFRM&lt;/FONT&gt;&lt;/HTML&gt;"
-          language="jbiz"
-         >
-    </file>
-
-    <file
          path="Static_Content/salida.html"
           type="html"
           state="4"
@@ -1064,6 +1047,23 @@
           checked-in-path=""
           base-class=""
           tooltip=""
+          language="jbiz"
+         >
+    </file>
+
+    <file
+         path="Classes/ModuloCNegocios/CNegocioFRM.fx"
+          type="form"
+          state="4"
+          flags="0"
+          timestamp="1377190351759"
+          ctimestamp="0"
+          scversion=""
+          private="false"
+          binary="false"
+          checked-in-path=""
+          base-class=""
+          tooltip="&lt;html&gt;&lt;FONT SIZE=2&gt;&lt;p&gt;&lt;b&gt;FORM &lt;/b&gt;CPagoFRM&lt;/FONT&gt;&lt;/HTML&gt;"
           language="jbiz"
          >
     </file>

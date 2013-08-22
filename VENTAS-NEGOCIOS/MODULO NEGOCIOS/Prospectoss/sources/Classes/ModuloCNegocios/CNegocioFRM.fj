@@ -2,31 +2,198 @@ package ModuloCNegocios;
 
 FORM CNegocioFRM
 {
-    BEFORE FORM
-    {
-       
-       
-       
-       
-            if( ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass1 == "1" && ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass2 == "2")
-            {
-                ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass3= "3";
-            }
-            else
-            {
-                session.displayToMessageBox("Debe acceder a los formularios en orden.");
-                session.queueCommand("PREVIOUS_FORM");
-            }
-    }
-
-    BOX box1
+    BOX cajagrandeCPago
     {
     
-        FIELD xxx
-        {	
+        BOX box111
+        {
+            FIELD textfield1
+            {
+            }
+            FIELD textfield11
+            {
+            }
         }
         
+        BOX box11
+        {
+        }
+        
+        FIELD vau_unidad
+        {
+        }
+        
+        FIELD vau_manzana
+        {
+        }
+        
+        FIELD vmu_f_separacion
+        {
+            BEFORE FIELD
+            {
+                if(vmu_f_separacion.isNull() || vmu_f_separacion.undefined == true)
+                {
+                    vmu_f_separacion = scr_fecha;
+                    fecha_separa = vmu_f_separacion;
+                }
+                else
+                    fecha_separa = vmu_f_separacion;
+            }
+            ON DATA ACCEPT
+            {
+                if(vmu_f_separacion != fecha_separa)
+                {
+                    if(vmu_f_separacion < fecha_separa)
+                    {
+                        if(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo == "ADMVEN" || Modulo.LoginFRM#cajagrandeLogin.xpr_grupo  == "CUSEZAR")
+                        {
+                            EXEC SQL
+                                            SELECT vlp_precio_uni
+                                            FROM vlp_listapre
+                                            WHERE vlp_empresa = :vmu_empresa
+                                            AND vlp_obra = :vmu_obra
+                                            AND vlp_manzana = :vmu_manzana
+                                            AND vlp_unidad = :vmu_unidad
+                                            AND vlp_f_inicial <= :vmu_f_separacion
+                                            AND (vlp_f_final   >= :vmu_f_separacion OR vlp_f_final is NULL)
+                                            INTO x_precio_uni;
+                                            if(session.status != StatusCode.SS_NORM)
+                                            {
+                                                if(session.status != StatusCode.SS_NOREC)
+                                                {
+                                                    session.displayToMessageBox("La unidad no puede acceder la lista para esta fecha, verifique por favor. ");
+                                                     vmu_f_separacion = fecha_separa;
+                                                     vmu_f_separacion.nextField = "vmu_f_separacion";   
+                                                }//if
+                                                else
+                                                {
+                                                    session.displayToMessageBox("No hay lista de precios para la unidad, se conserva el precio actual.");
+                                                }//else
+                                            }//if
+                                            else
+                                            {
+                                                vmu_precio_uni = x_precio_uni;
+                                            }//else
+                        }//if
+                        else
+                        {
+                            session.displayToMessageBox("No puede modificar la fecha de separación, requiere autorización.");
+                            vmu_f_separacion = fecha_separa;
+                            vmu_f_separacion.nextField = "vmu_f_separacion";
+                        }//else
+                    }//if
+                    else
+                    {
+                        session.displayToMessageBox("No puede crear la fecha de separación mayor a la fecha del día. Verifique por favor. ");
+                        vmu_f_separacion = fecha_separa;
+                        vmu_f_separacion.nextField = "vmu_f_separacion";
+                    }//else
+                }//if
+                if(vmu_f_separacion > f_escritura && adicionando == 1)
+                {
+                    vmu_f_ent_pacta = vmu_f_separacion + 60;
+                    vmu_f_escritura = vmu_f_separacion + 30;
+                }//if
+            }//on data accept
+        }
+        
+        FIELD vmu_f_separacion1
+        {
+            BEFORE FIELD
+            {
+                if(vmu_f_separacion1.isNull() || vmu_f_separacion1.undefined == true)
+                {
+                    vmu_f_separacion1 = scr_fecha;
+                    fecha_separa = vmu_f_separacion1;
+                }
+                else
+                    fecha_separa = vmu_f_separacion1;
+            }
+            ON DATA ACCEPT
+            {
+                if(vmu_f_separacion1 != fecha_separa)
+                {
+                    if(vmu_f_separacion1 < fecha_separa)
+                    {
+                        if(Modulo.LoginFRM#cajagrandeLogin.xpr_grupo == "ADMVEN" || Modulo.LoginFRM#cajagrandeLogin.xpr_grupo  == "CUSEZAR")
+                        {
+                            EXEC SQL
+                                            SELECT vlp_precio_uni
+                                            FROM vlp_listapre
+                                            WHERE vlp_empresa = :vmu_empresa
+                                            AND vlp_obra = :vmu_obra
+                                            AND vlp_manzana = :vmu_manzana
+                                            AND vlp_unidad = :vmu_unidad
+                                            AND vlp_f_inicial <= :vmu_f_separacion1
+                                            AND (vlp_f_final   >= :vmu_f_separacion1 OR vlp_f_final is NULL)
+                                            INTO x_precio_uni;
+                                            if(session.status != StatusCode.SS_NORM)
+                                            {
+                                                if(session.status != StatusCode.SS_NOREC)
+                                                {
+                                                    session.displayToMessageBox("La unidad no puede acceder la lista para esta fecha, verifique por favor. ");
+                                                     vmu_f_separacion1 = fecha_separa;
+                                                     vmu_f_separacion1.nextField = "vmu_f_separacion1";   
+                                                }//if
+                                                else
+                                                {
+                                                    session.displayToMessageBox("No hay lista de precios para la unidad, se conserva el precio actual.");
+                                                }//else
+                                            }//if
+                                            else
+                                            {
+                                                vmu_precio_uni = x_precio_uni;
+                                            }//else
+                        }//if
+                        else
+                        {
+                            session.displayToMessageBox("No puede modificar la fecha de separación, requiere autorización.");
+                            vmu_f_separacion1 = fecha_separa;
+                            vmu_f_separacion1.nextField = "vmu_f_separacion1";
+                        }//else
+                    }//if
+                    else
+                    {
+                        session.displayToMessageBox("No puede crear la fecha de separación mayor a la fecha del día. Verifique por favor. ");
+                        vmu_f_separacion1 = fecha_separa;
+                        vmu_f_separacion1.nextField = "vmu_f_separacion1";
+                    }//else
+                }//if
+                if(vmu_f_separacion1 > f_escritura && adicionando == 1)
+                {
+                    vmu_f_ent_pacta = vmu_f_separacion1 + 60;
+                    vmu_f_escritura = vmu_f_separacion1 + 30;
+                }//if
+            }//on data accept
+        }
+        
+        DATA VIEW PUBLIC_vcn_comproneg
+        {
+        
+            FIELD  vcn_cptopago
+            {
+
+            }
+
+            FIELD  vcn_nom_compr
+            {
+
+            }
+
+            FIELD  vcn_fec_comp
+            {
+
+            }
+
+            FIELD  vcn_vlr_compro
+            {
+
+            }
+
+        }
+
     }
+
 
 }
 /*----------------------------------------------------------------------*

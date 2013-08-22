@@ -17,17 +17,17 @@ dodiv_view1__10(div_view1__10);
 
 private void setAttrFor_this(Widget widget)
 {
-	widget.addAttribute("footer","none");
 	widget.addAttribute("localized","true");
+	widget.addAttribute("footer","none");
+	widget.addAttribute("title","ReportesProspectos");
 	widget.addAttribute("displaywidth","1198");
-	widget.addAttribute("name","NXJForm");
+	widget.setClass("form");
 	widget.addAttribute("stylesheets","");
+	widget.addAttribute("name","NXJForm");
 	widget.addStyle("background-color","#999999");
 	widget.addAttribute("displayheight","413");
 	widget.addAttribute("fieldheight","413");
-	widget.addAttribute("title","ReportesProspectos");
 	widget.addAttribute("fieldwidth","1198");
-	widget.setClass("form");
 }
 
 private void setAttrFor_div_view1__10(Widget widget)
@@ -42,9 +42,9 @@ private void setAttrFor_view1__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767438614-labeltitle","CodigoProyecto");
+	widget.addAttribute("id","view1.");
 	widget.addAttribute("parametros_form1_1369767389242_9aa357ed538e2cd1180f71a52d2b666790b6d2f4_1369767439751-labeltitle","CodigoVendedor");
 	widget.addAttribute("displaytop","30");
-	widget.addAttribute("id","view1.");
 	widget.addAttribute("displayleft","190");
 	widget.addStyle("overflow","hidden");
 }
@@ -199,9 +199,9 @@ private void setAttrFor_div_label1__30(Widget widget)
 
 private void setAttrFor_label1__40(Widget widget)
 {
+	widget.addAttribute("labeltitle","CodigoProyecto");
 	widget.addAttribute("_id","view1:(Modulo.RepProspectosDVW)label1.");
 	widget.addAttribute("id","view1:label1.");
-	widget.addAttribute("labeltitle","CodigoProyecto");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -226,9 +226,9 @@ private void setAttrFor_div_label111__30(Widget widget)
 
 private void setAttrFor_label111__40(Widget widget)
 {
+	widget.addAttribute("labeltitle","CodigoVendedor");
 	widget.addAttribute("_id","view1:(Modulo.RepProspectosDVW)label111.");
 	widget.addAttribute("id","view1:label111.");
-	widget.addAttribute("labeltitle","CodigoVendedor");
 	widget.addStyle("overflow","hidden");
 }
 

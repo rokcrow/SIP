@@ -106,6 +106,17 @@ import com.unify.pub.NameValuePair;
 public class IAClientesFRM
     extends com.unify.nxj.mgr.NXJForm
 {
+    /*multi_valued*/ NullableStringVariable vau_aux_clase = NullableFactory.createNullableStringVariable(this, "vau_aux_clase", true, false);
+    /*multi_valued*/ NullableStringVariable vau_apoderado = NullableFactory.createNullableStringVariable(this, "vau_apoderado", true, false);
+    /*multi_valued*/ NullableStringVariable vau_aux_ciuexp = NullableFactory.createNullableStringVariable(this, "vau_aux_ciuexp", true, false);
+    /*multi_valued*/ NullableStringVariable vau_aux_nombre = NullableFactory.createNullableStringVariable(this, "vau_aux_nombre", true, false);
+    /*multi_valued*/ NullableStringVariable vau_aux_codig = NullableFactory.createNullableStringVariable(this, "vau_aux_codig", true, false);
+    /*multi_valued*/ NullableStringVariable vau_unidad = NullableFactory.createNullableStringVariable(this, "vau_unidad", true, false);
+    /*multi_valued*/ NullableStringVariable vau_manzana = NullableFactory.createNullableStringVariable(this, "vau_manzana", true, false);
+    /*multi_valued*/ NullableStringVariable vau_obra = NullableFactory.createNullableStringVariable(this, "vau_obra", true, false);
+    /*multi_valued*/ NullableStringVariable vau_empresa = NullableFactory.createNullableStringVariable(this, "vau_empresa", true, false);
+    NullableString tipo_cliente = NullableFactory.createNullableString("tipo_cliente");
+    NullableString clase_cliente = NullableFactory.createNullableString("clase_cliente");
 
     public void beforeForm()
 	throws Exception
@@ -120,7 +131,247 @@ public class IAClientesFRM
 	    getSession().displayToMessageBox("Antes debe acceder a COMPROMISOS DEL NEGOCIO.");
 	    getSession().queueCommand("PREVIOUS_FORM");
 	    }
+	vau_empresa.setClearAddExp(new NXJClearToAddExpression()
+	{
+
+	    public Nullable evaluate()
+		throws Exception
+	    {
+		return ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA;
+	    } // evaluate
+	});
+	vau_empresa.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((Modulo.MenuFRM)us$findForm(Modulo.MenuFRM.class)).cajagrandeMenu.EMPRESA, null)
+		    };
+	    } // evaluate
+	});
+	vau_obra.setClearAddExp(new NXJClearToAddExpression()
+	{
+
+	    public Nullable evaluate()
+		throws Exception
+	    {
+		return ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vmu_obra;
+	    } // evaluate
+	});
+	vau_obra.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vmu_obra, null)
+		    };
+	    } // evaluate
+	});
+	vau_manzana.setClearAddExp(new NXJClearToAddExpression()
+	{
+
+	    public Nullable evaluate()
+		throws Exception
+	    {
+		return ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vmu_manzana;
+	    } // evaluate
+	});
+	vau_manzana.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vmu_manzana, null)
+		    };
+	    } // evaluate
+	});
+	vau_unidad.setClearAddExp(new NXJClearToAddExpression()
+	{
+
+	    public Nullable evaluate()
+		throws Exception
+	    {
+		return ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vmu_unidad;
+	    } // evaluate
+	});
+	vau_unidad.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vmu_unidad, null)
+		    };
+	    } // evaluate
+	});
+	vau_aux_codig.setClearAddExp(new NXJClearToAddExpression()
+	{
+
+	    public Nullable evaluate()
+		throws Exception
+	    {
+		return ((ModuloCNegocios.ICompradoresFRM)us$findForm(ModuloCNegocios.ICompradoresFRM.class)).cajagrandeICompradores.PUBLIC_tcl_tipclien.tcl_nit;
+	    } // evaluate
+	});
+	vau_aux_codig.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((ModuloCNegocios.ICompradoresFRM)us$findForm(ModuloCNegocios.ICompradoresFRM.class)).cajagrandeICompradores.PUBLIC_tcl_tipclien.tcl_nit, null)
+		    };
+	    } // evaluate
+	});
+	vau_aux_nombre.setClearAddExp(new NXJClearToAddExpression()
+	{
+
+	    public Nullable evaluate()
+		throws Exception
+	    {
+		return ((ModuloCNegocios.ICompradoresFRM)us$findForm(ModuloCNegocios.ICompradoresFRM.class)).cajagrandeICompradores.PUBLIC_tcl_tipclien.tcl_nombre;
+	    } // evaluate
+	});
+	vau_aux_nombre.setClearFindExp(new NXJClearToFindExpression()
+	{
+
+	    public com.unify.nxj.mgr.datatypes.NXJSearchRange[] evaluate()
+		throws Exception
+	    {
+		return new com.unify.nxj.mgr.datatypes.NXJSearchRange[]
+		    {
+		    new com.unify.nxj.mgr.datatypes.NXJSearchRange(com.unify.nxj.mgr.datatypes.NXJSearchRange.EqualOP, ((ModuloCNegocios.ICompradoresFRM)us$findForm(ModuloCNegocios.ICompradoresFRM.class)).cajagrandeICompradores.PUBLIC_tcl_tipclien.tcl_nombre, null)
+		    };
+	    } // evaluate
+	});
+	vau_aux_ciuexp.setClearAddExp(new NXJClearToAddExpression()
+	{
+
+	    public Nullable evaluate()
+		throws Exception
+	    {
+		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+		return us$registerPool.allocateRegister().load("PANAMENA");
+	    } // evaluate
+	});
+	clase_cliente.assign(us$registerPool.allocateRegister().load(((ModuloCNegocios.ICompradoresFRM)us$findForm(ModuloCNegocios.ICompradoresFRM.class)).cajagrandeICompradores.PUBLIC_tcl_tipclien.tcl_clase));
+	tipo_cliente.assign(us$registerPool.allocateRegister().load(((ModuloCNegocios.ICompradoresFRM)us$findForm(ModuloCNegocios.ICompradoresFRM.class)).cajagrandeICompradores.PUBLIC_tcl_tipclien.tcl_tipo));
+	if (us$registerPool.allocateRegister().load(clase_cliente).eqOp("A").getBooleanValueNullOk())
+	    {
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vau_apoderado.assign(us$registerPool.allocateRegister().load("N"));
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vau_apoderado.setStopForInput(false);
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vau_apode_nit.setStopForInput(false);
+	    }
+	if (us$registerPool.allocateRegister().load(tipo_cliente).eqOp("P").getBooleanValueNullOk())
+	    {
+	    vau_aux_clase.assign(us$registerPool.allocateRegister().load("C"));
+	    }
+	else
+	    {
+	    vau_aux_clase.assign(us$registerPool.allocateRegister().load("A"));
+	    }
     } // beforeForm
+
+    public void onClearToAdd()
+	throws Exception
+    {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	if (us$registerPool.allocateRegister().load(clase_cliente).eqOp("A").getBooleanValueNullOk())
+	    {
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vau_apoderado.assign(us$registerPool.allocateRegister().load("N"));
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vau_apoderado.setStopForInput(false);
+	    ((ModuloCNegocios.RBoletinesFRM)us$findForm(ModuloCNegocios.RBoletinesFRM.class)).cajagrandeRBoletines.vau_apode_nit.setStopForInput(false);
+	    }
+	if (us$registerPool.allocateRegister().load(tipo_cliente).eqOp("P").getBooleanValueNullOk())
+	    {
+	    vau_aux_clase.assign(us$registerPool.allocateRegister().load("C"));
+	    }
+	else
+	    {
+	    vau_aux_clase.assign(us$registerPool.allocateRegister().load("A"));
+	    }
+    } // onClearToAdd
+
+    public void afterAdd()
+	throws Exception
+    {
+	final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
+	if (us$registerPool.allocateRegister().load(clase_cliente).eqOp("T").getBooleanValueNullOk())
+	    {
+
+		{
+		getSession().us$setStatus(StatusCode.SS_NORM);
+		NXJDataConnection us$conn1 = getConnection();
+		java.sql.PreparedStatement us$stmt1 = null;
+		ResultSet us$rs1 = null;
+		try
+		    {
+		    us$stmt1 = us$conn1.prepareStatement("INSERT INTO xau_auxiliar (xau_clase, xau_codigo, xau_nombre) VALUES ( ? ,  ? ,  ? )");
+		    vau_aux_clase.us$setSqlParameterValue(us$stmt1, 1);
+		    vau_aux_codig.us$setSqlParameterValue(us$stmt1, 2);
+		    vau_aux_nombre.us$setSqlParameterValue(us$stmt1, 3);
+		    if (us$stmt1.executeUpdate() == 0)
+			getSession().us$setStatus(StatusCode.SS_NOREC);
+		    }
+		catch (SQLException us$ex1)
+		    {
+		    getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+		    throw us$ex1;
+		    }
+		catch (NXJDataConnectionException us$ex1)
+		    {
+		    getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
+		    throw us$ex1;
+		    }
+		finally
+		    {
+		    if (us$stmt1 != null)
+			us$conn1.us$closeStatement(us$stmt1);
+		    }
+		}
+	    getSession().commitTransaction();
+
+		{
+		getSession().us$setStatus(StatusCode.SS_NORM);
+		NXJDataConnection us$conn2 = getConnection();
+		java.sql.PreparedStatement us$stmt2 = null;
+		ResultSet us$rs2 = null;
+		try
+		    {
+		    vau_aux_clase.us$setSqlParameterValue(us$stmt2, 1);
+		    vau_aux_codig.us$setSqlParameterValue(us$stmt2, 2);
+		    }
+		catch (SQLException us$ex2)
+		    {
+		    getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+		    throw us$ex2;
+		    }
+		catch (NXJDataConnectionException us$ex2)
+		    {
+		    getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
+		    throw us$ex2;
+		    }
+		finally
+		    {
+		    if (us$stmt2 != null)
+			us$conn2.us$closeStatement(us$stmt2);
+		    }
+		}
+	    }
+    } // afterAdd
     private IAClientesFRM IAClientesFRM = this;
     public class cajagrandeIAClientes
 	extends com.unify.nxj.mgr.NXJBox
@@ -128,687 +379,22 @@ public class IAClientesFRM
 	public NXJLabelControl Label19 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label19", false);
 	public NXJLabelControl Label20 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label20", false);
 	public NXJLabelControl Label9 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "Label9", false);
+	public NXJLabelControl label11 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label11", false);
 	public NXJLabelControl label31 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label31", false);
 	public NXJLabelControl label311 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label311", false);
 	public NXJLabelControl label3111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3111", false);
 	public NXJLabelControl label312 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label312", false);
 	public NXJLabelControl label3121 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3121", false);
 	public NXJLabelControl label3131111111121111 = new com.unify.nxj.mgr.datatypes.NXJLabelImpl(this, "label3131111111121111", false);
-	public NullableStringField textfield1 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield1", false, true, 100);
-	public NullableStringField textfield11 = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "textfield11", false, true, 100);
-	public /*multi_valued*/ NullableStringField vmu_cli_ciudad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vmu_cli_ciudad", true, true, 30);
-	public class vmu_manzana
-	    extends com.unify.nxj.mgr.datatypes.NXJStringField
-	{
-
-	    public void beforeField()
-		throws Exception
-	    {
-		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-		x_manzana = us$registerPool.allocateRegister().load(vmu_manzana).getStringValue();
-	    } // beforeField
-
-	    public void onDataAccept()
-		throws Exception
-	    {
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn1 = getConnection();
-		    java.sql.PreparedStatement us$stmt1 = null;
-		    ResultSet us$rs1 = null;
-		    try
-			{
-			us$stmt1 = us$conn1.prepareStatement("SELECT vuu_lote FROM vuu_unidades WHERE vuu_empresa =  ?  AND vuu_obra =  ?  AND vuu_manzana =  ?");
-			us$stmt1.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt1, 2);
-			vmu_manzana.us$setSqlParameterValue(us$stmt1, 3);
-			us$rs1 = us$stmt1.executeQuery();
-			x_campo = new com.unify.nxj.mgr.dataConnection.jdbc.JdbcResultSetWrapper(us$conn1, us$stmt1, us$rs1);
-			us$stmt1 = null;
-			}
-		    catch (SQLException us$ex1)
-			{
-			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
-			throw us$ex1;
-			}
-		    catch (NXJDataConnectionException us$ex1)
-			{
-			getSession().us$setStatus(us$conn1.mapToStatusCode(us$ex1));
-			throw us$ex1;
-			}
-		    finally
-			{
-			if (us$stmt1 != null)
-			    us$conn1.us$closeStatement(us$stmt1);
-			}
-		    }
-		if (getSession().getStatus() != StatusCode.SS_NORM)
-		    {
-		    getSession().displayToMessageBox("La manzana no corresponde.");
-		    vmu_manzana.assign(x_manzana);
-		    vmu_manzana.setNextField("vmu_manzana");
-		    }
-	    } // onDataAccept
-
-	    public vmu_manzana()
-	    {
-		super(ModuloCNegocios.IAClientesFRM.cajagrandeIAClientes.this, "vmu_manzana", true, true, 3);
-		setStyleClass("textfield");
-		us$setMultiValued(true);
-		us$setView("text");
-		us$setFieldLength(3);
-		us$setCandidateTargetColumnName("vmu_manzana");
-		setValueRetrievedDuringFetch(true);
-		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-		setRequired(true);
-		setFindable(true);
-		setUpdateable(true);
-		setCaseConversion(NullableField.CaseConversion_UPPER);
-		us$executesCodeBeforeInput = true;
-		us$executesDataAcceptValueChanges = true;
-	    } // <init>
-	} // vmu_manzana
-
-	public /*multi_valued*/ vmu_manzana vmu_manzana = new vmu_manzana();
-	public class vmu_obra
-	    extends com.unify.nxj.mgr.datatypes.NXJStringField
-	{
-	    NullableNumeric ii = NullableFactory.createNullableNumeric("ii");
-
-	    public void beforeField()
-		throws Exception
-	    {
-		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-		x_obra = us$registerPool.allocateRegister().load(vmu_obra).getStringValue();
-	    } // beforeField
-
-	    public void onDataAccept()
-		throws Exception
-	    {
-		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn2 = getConnection();
-		    java.sql.PreparedStatement us$stmt2 = null;
-		    ResultSet us$rs2 = null;
-		    try
-			{
-			us$stmt2 = us$conn2.prepareStatement("SELECT xob_proyecto FROM xob_obras WHERE xob_empresa =  ?  AND xob_obra =  ?");
-			us$stmt2.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt2, 2);
-			us$rs2 = us$stmt2.executeQuery();
-			xob_proyecto = new com.unify.nxj.mgr.dataConnection.jdbc.JdbcResultSetWrapper(us$conn2, us$stmt2, us$rs2);
-			us$stmt2 = null;
-			}
-		    catch (SQLException us$ex2)
-			{
-			getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
-			throw us$ex2;
-			}
-		    catch (NXJDataConnectionException us$ex2)
-			{
-			getSession().us$setStatus(us$conn2.mapToStatusCode(us$ex2));
-			throw us$ex2;
-			}
-		    finally
-			{
-			if (us$stmt2 != null)
-			    us$conn2.us$closeStatement(us$stmt2);
-			}
-		    }
-		if (getSession().getStatus() != StatusCode.SS_NORM)
-		    {
-		    getSession().displayToMessageBox("La obra no corresponde.");
-		    vmu_obra.assign(x_obra);
-		    vmu_obra.setNextField("vmu_obra");
-		    }
-		ii.assign(us$registerPool.allocateRegister().load(0));
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn3 = getConnection();
-		    java.sql.PreparedStatement us$stmt3 = null;
-		    ResultSet us$rs3 = null;
-		    try
-			{
-			us$stmt3 = us$conn3.prepareStatement("SELECT vev_etapactu, vev_estado FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
-			us$stmt3.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt3, 2);
-			us$rs3 = us$stmt3.executeQuery();
-			int us$rowsTouched3 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd3 = us$rs3.getMetaData();
-			    if (us$rsmd3.getColumnCount() != 2)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd3.getColumnCount()), "2"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter3 = us$conn3.createDataIterator(us$rs3);
-			    while (us$getter3.next())
-				{
-				++us$rowsTouched3;
-				etapa_activa = us$getter3.getString(1);
-				est = us$getter3.getString(2);
-
-				    {
-				    ii.assign(us$registerPool.allocateRegister().load(ii).plusOp(1));
-				    }
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched3 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs3 != null)
-				us$rs3.close();
-			    }
-			}
-		    catch (SQLException us$ex3)
-			{
-			getSession().us$setStatus(us$conn3.mapToStatusCode(us$ex3));
-			throw us$ex3;
-			}
-		    catch (NXJDataConnectionException us$ex3)
-			{
-			getSession().us$setStatus(us$conn3.mapToStatusCode(us$ex3));
-			throw us$ex3;
-			}
-		    finally
-			{
-			if (us$stmt3 != null)
-			    us$conn3.us$closeStatement(us$stmt3);
-			}
-		    }
-		if (us$registerPool.allocateRegister().load(ii).gtOp(1).getBooleanValueNullOk())
-		    {
-		    getSession().displayToMessageBox("Hay m\u00E1s de una etapa activa. Verifique, por favor.");
-		    getSession().queueCommand("PREVIOUS_FORM");
-		    }
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn4 = getConnection();
-		    java.sql.PreparedStatement us$stmt4 = null;
-		    ResultSet us$rs4 = null;
-		    try
-			{
-			us$stmt4 = us$conn4.prepareStatement("SELECT vev_etapactu FROM vev_etapaven WHERE vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
-			us$stmt4.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt4, 2);
-			us$rs4 = us$stmt4.executeQuery();
-			etapa_act = new com.unify.nxj.mgr.dataConnection.jdbc.JdbcResultSetWrapper(us$conn4, us$stmt4, us$rs4);
-			us$stmt4 = null;
-			}
-		    catch (SQLException us$ex4)
-			{
-			getSession().us$setStatus(us$conn4.mapToStatusCode(us$ex4));
-			throw us$ex4;
-			}
-		    catch (NXJDataConnectionException us$ex4)
-			{
-			getSession().us$setStatus(us$conn4.mapToStatusCode(us$ex4));
-			throw us$ex4;
-			}
-		    finally
-			{
-			if (us$stmt4 != null)
-			    us$conn4.us$closeStatement(us$stmt4);
-			}
-		    }
-		if (getSession().getStatus() != StatusCode.SS_NORM)
-		    {
-		    getSession().displayToMessageBox("No hay etapa ACTIVA en ventas.");
-		    getSession().queueCommand("PREVIOUS_FORM");
-		    }
-	    } // onDataAccept
-
-	    public vmu_obra()
-	    {
-		super(ModuloCNegocios.IAClientesFRM.cajagrandeIAClientes.this, "vmu_obra", true, true, 2);
-		setStyleClass("textfield");
-		us$setMultiValued(true);
-		us$setView("text");
-		us$setFieldLength(2);
-		us$setCandidateTargetColumnName("vmu_obra");
-		setValueRetrievedDuringFetch(true);
-		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-		setRequired(true);
-		setFindable(true);
-		setUpdateable(true);
-		setCaseConversion(NullableField.CaseConversion_UPPER);
-		us$executesCodeBeforeInput = true;
-		us$executesDataAcceptValueChanges = true;
-	    } // <init>
-	} // vmu_obra
-
-	public /*multi_valued*/ vmu_obra vmu_obra = new vmu_obra();
-	public class vmu_unidad
-	    extends com.unify.nxj.mgr.datatypes.NXJStringField
-	{
-
-	    public void beforeField()
-		throws Exception
-	    {
-		final com.unify.nxj.mgr.datatypes.RegisterPool us$registerPool = getSession().us$getRegisterPool();
-		x_unidad = us$registerPool.allocateRegister().load(vmu_unidad).getStringValue();
-	    } // beforeField
-
-	    public void onDataAccept()
-		throws Exception
-	    {
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn5 = getConnection();
-		    java.sql.PreparedStatement us$stmt5 = null;
-		    ResultSet us$rs5 = null;
-		    try
-			{
-			us$stmt5 = us$conn5.prepareStatement("SELECT vlp_precio_uni FROM vlp_listapre WHERE vlp_empresa =  ?  AND vlp_obra =  ?  AND vlp_manzana =  ?  AND vlp_unidad =  ?  AND vlp_f_inicial is NULL");
-			us$stmt5.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt5, 2);
-			vmu_manzana.us$setSqlParameterValue(us$stmt5, 3);
-			vmu_unidad.us$setSqlParameterValue(us$stmt5, 4);
-			us$rs5 = us$stmt5.executeQuery();
-			vmu_precio_uni = new com.unify.nxj.mgr.dataConnection.jdbc.JdbcResultSetWrapper(us$conn5, us$stmt5, us$rs5);
-			us$stmt5 = null;
-			}
-		    catch (SQLException us$ex5)
-			{
-			getSession().us$setStatus(us$conn5.mapToStatusCode(us$ex5));
-			throw us$ex5;
-			}
-		    catch (NXJDataConnectionException us$ex5)
-			{
-			getSession().us$setStatus(us$conn5.mapToStatusCode(us$ex5));
-			throw us$ex5;
-			}
-		    finally
-			{
-			if (us$stmt5 != null)
-			    us$conn5.us$closeStatement(us$stmt5);
-			}
-		    }
-		if (getSession().getStatus() != StatusCode.SS_NORM)
-		    {
-		    getSession().displayToMessageBox("La unidad no tiene precio de lista actual, verifique por favor. ");
-		    vmu_unidad.assign(x_unidad);
-		    vmu_unidad.setNextField("vmu_unidad");
-		    }
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn6 = getConnection();
-		    java.sql.PreparedStatement us$stmt6 = null;
-		    ResultSet us$rs6 = null;
-		    try
-			{
-			us$stmt6 = us$conn6.prepareStatement("SELECT vuu_estado, vuu_tipoinmueble, vuu_etapa, vuu_plus2 FROM vuu_unidades WHERE vuu_empresa =  ?  AND vuu_obra =  ?  AND vuu_manzana =  ?  AND vuu_unidad =  ?");
-			us$stmt6.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt6, 2);
-			vmu_manzana.us$setSqlParameterValue(us$stmt6, 3);
-			vmu_unidad.us$setSqlParameterValue(us$stmt6, 4);
-			us$rs6 = us$stmt6.executeQuery();
-			int us$rowsTouched6 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd6 = us$rs6.getMetaData();
-			    if (us$rsmd6.getColumnCount() != 4)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd6.getColumnCount()), "4"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter6 = us$conn6.createDataIterator(us$rs6);
-			    if (us$getter6.next())
-				{
-				++us$rowsTouched6;
-				estado = us$getter6.getString(1);
-				vmu_tipoinmueb = us$getter6.getString(2);
-				vmu_etapa_venta = us$getter6.getString(3);
-				gasto_escritura = us$getter6.getString(4);
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched6 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs6 != null)
-				us$rs6.close();
-			    }
-			}
-		    catch (SQLException us$ex6)
-			{
-			getSession().us$setStatus(us$conn6.mapToStatusCode(us$ex6));
-			throw us$ex6;
-			}
-		    catch (NXJDataConnectionException us$ex6)
-			{
-			getSession().us$setStatus(us$conn6.mapToStatusCode(us$ex6));
-			throw us$ex6;
-			}
-		    finally
-			{
-			if (us$stmt6 != null)
-			    us$conn6.us$closeStatement(us$stmt6);
-			}
-		    }
-		if (getSession().getStatus() != StatusCode.SS_NORM)
-		    {
-		    getSession().displayToMessageBox("La unidad no corresponde. ");
-		    vmu_unidad.assign(x_unidad);
-		    vmu_unidad.setNextField("vmu_unidad");
-		    }
-		if (estado.neqOp("D").getBooleanValueNullOk())
-		    {
-		    getSession().displayToMessageBox("La unidad no est\u00E1 disponible para la venta.");
-		    getSession().queueCommand("CLEAR_TO_ADD");
-		    }
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn7 = getConnection();
-		    java.sql.PreparedStatement us$stmt7 = null;
-		    ResultSet us$rs7 = null;
-		    try
-			{
-			us$stmt7 = us$conn7.prepareStatement("SELECT vev_etapactu FROM vev_etapaven WHERE vev_etapactu =  ?  AND vev_estado = \'A\' AND vev_empresa =  ?  AND vev_obra =  ?");
-			us$stmt7.setString(1, vmu_etapa_venta.getStringValue());
-			us$stmt7.setString(2, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt7, 3);
-			us$rs7 = us$stmt7.executeQuery();
-			etapa_activa = new com.unify.nxj.mgr.dataConnection.jdbc.JdbcResultSetWrapper(us$conn7, us$stmt7, us$rs7);
-			us$stmt7 = null;
-			}
-		    catch (SQLException us$ex7)
-			{
-			getSession().us$setStatus(us$conn7.mapToStatusCode(us$ex7));
-			throw us$ex7;
-			}
-		    catch (NXJDataConnectionException us$ex7)
-			{
-			getSession().us$setStatus(us$conn7.mapToStatusCode(us$ex7));
-			throw us$ex7;
-			}
-		    finally
-			{
-			if (us$stmt7 != null)
-			    us$conn7.us$closeStatement(us$stmt7);
-			}
-		    }
-		if (getSession().getStatus() != StatusCode.SS_NORM)
-		    {
-		    getSession().displayToMessageBox("La unidad no se encuentra en Etapa de Ventas Activas. ");
-		    getSession().displayToMessageBox("La Etapa Activa actual es: " + etapa_act.toString() + ". ");
-		    getSession().queueCommand("CLEAR_TO_ADD");
-		    }
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn8 = getConnection();
-		    java.sql.PreparedStatement us$stmt8 = null;
-		    ResultSet us$rs8 = null;
-		    try
-			{
-			us$stmt8 = us$conn8.prepareStatement("SELECT vuu_fterminacion, vuu_f_entregaprog FROM vuu_unidades WHERE vuu_empresa =  ?  AND vuu_obra =  ?  AND vuu_manzana =  ?  AND vuu_unidad =  ?");
-			us$stmt8.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt8, 2);
-			vmu_manzana.us$setSqlParameterValue(us$stmt8, 3);
-			vmu_unidad.us$setSqlParameterValue(us$stmt8, 4);
-			us$rs8 = us$stmt8.executeQuery();
-			int us$rowsTouched8 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd8 = us$rs8.getMetaData();
-			    if (us$rsmd8.getColumnCount() != 2)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd8.getColumnCount()), "2"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter8 = us$conn8.createDataIterator(us$rs8);
-			    if (us$getter8.next())
-				{
-				++us$rowsTouched8;
-				f_ent_real = us$getter8.getString(1);
-				f_ent_pacta = us$getter8.getString(2);
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched8 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs8 != null)
-				us$rs8.close();
-			    }
-			}
-		    catch (SQLException us$ex8)
-			{
-			getSession().us$setStatus(us$conn8.mapToStatusCode(us$ex8));
-			throw us$ex8;
-			}
-		    catch (NXJDataConnectionException us$ex8)
-			{
-			getSession().us$setStatus(us$conn8.mapToStatusCode(us$ex8));
-			throw us$ex8;
-			}
-		    finally
-			{
-			if (us$stmt8 != null)
-			    us$conn8.us$closeStatement(us$stmt8);
-			}
-		    }
-		if (f_ent_pacta.isNull().getBooleanValueNullOk())
-		    {
-		    getSession().displayToMessageBox("La unidad no tiene fecha de entre definida, verifique por favor.");
-		    getSession().queueCommand("CLEAR_TO_ADD");
-		    }
-		else
-		    {
-		    if (f_ent_real.isNull().getBooleanValueNullOk())
-			{
-			f_entrega = f_ent_pacta.getStringValue();
-			f_escritura = f_ent_pacta.minusOp(30).getStringValue();
-			}
-		    else
-			{
-			f_entrega = f_ent_real.getStringValue();
-			f_escritura = f_ent_real.minusOp(30).getStringValue();
-			}
-		    }
-		if (adicionando.eqOp(1).getBooleanValueNullOk())
-		    {
-		    vmu_f_ent_pacta = f_entrega.getStringValue();
-		    vmu_ent_escritura = f_escritura.getStringValue();
-		    }
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn9 = getConnection();
-		    java.sql.PreparedStatement us$stmt9 = null;
-		    ResultSet us$rs9 = null;
-		    try
-			{
-			us$stmt9 = us$conn9.prepareStatement("SELECT vut_f_real FROM vut_tramites WHERE vut_empresa =  ?  AND vut_obra =  ?  AND vut_manzana =  ?  AND vut_unidad =  ?  AND vut_etapa = \'EV\' AND vut_tramite = \'PO\' AND vut_f_real !=  ?  AND vut_f_real is not NULL");
-			us$stmt9.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt9, 2);
-			vmu_manzana.us$setSqlParameterValue(us$stmt9, 3);
-			vmu_unidad.us$setSqlParameterValue(us$stmt9, 4);
-			us$stmt9.setString(5, fechafalsa.getStringValue());
-			us$rs9 = us$stmt9.executeQuery();
-			vut_f_real = new com.unify.nxj.mgr.dataConnection.jdbc.JdbcResultSetWrapper(us$conn9, us$stmt9, us$rs9);
-			us$stmt9 = null;
-			}
-		    catch (SQLException us$ex9)
-			{
-			getSession().us$setStatus(us$conn9.mapToStatusCode(us$ex9));
-			throw us$ex9;
-			}
-		    catch (NXJDataConnectionException us$ex9)
-			{
-			getSession().us$setStatus(us$conn9.mapToStatusCode(us$ex9));
-			throw us$ex9;
-			}
-		    finally
-			{
-			if (us$stmt9 != null)
-			    us$conn9.us$closeStatement(us$stmt9);
-			}
-		    }
-		if (getSession().getStatus() == StatusCode.SS_NORM)
-		    {
-		    f_permiso = vut_f_real.getStringValue();
-		    getSession().displayToMessageBox("Casa terminada. Entrega r\u00E1pida.");
-		    getSession().displayToMessageBox("Debe elaborar el contrato de Comrpa Venta cuanto antes.");
-		    }
-		else
-		    f_permiso = "01/01/2001";
-	    } // onDataAccept
-
-	    public void whenValueChanges()
-		throws Exception
-	    {
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn10 = getConnection();
-		    java.sql.PreparedStatement us$stmt10 = null;
-		    ResultSet us$rs10 = null;
-		    try
-			{
-			us$stmt10 = us$conn10.prepareStatement("SELECT vut_f_real FROM vut_tramites WHERE vut_empresa =  ?  AND vut_obra =  ?  AND vut_manzana =  ?  AND vut_unidad =  ?  AND vut_etapa = \'EV\' AND vut_tramite = \'PO\' AND vut_f_real !=  ?  AND vut_f_real is not NULL");
-			us$stmt10.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt10, 2);
-			vmu_manzana.us$setSqlParameterValue(us$stmt10, 3);
-			vmu_unidad.us$setSqlParameterValue(us$stmt10, 4);
-			us$stmt10.setString(5, fechafalsa.getStringValue());
-			us$rs10 = us$stmt10.executeQuery();
-			vut_f_real = new com.unify.nxj.mgr.dataConnection.jdbc.JdbcResultSetWrapper(us$conn10, us$stmt10, us$rs10);
-			us$stmt10 = null;
-			}
-		    catch (SQLException us$ex10)
-			{
-			getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
-			throw us$ex10;
-			}
-		    catch (NXJDataConnectionException us$ex10)
-			{
-			getSession().us$setStatus(us$conn10.mapToStatusCode(us$ex10));
-			throw us$ex10;
-			}
-		    finally
-			{
-			if (us$stmt10 != null)
-			    us$conn10.us$closeStatement(us$stmt10);
-			}
-		    }
-		if (getSession().getStatus() == StatusCode.SS_NORM)
-		    {
-		    f_permiso = vut_f_real.getStringValue();
-		    }
-		else
-		    f_permiso = "01/01/2001";
-
-		    {
-		    getSession().us$setStatus(StatusCode.SS_NORM);
-		    NXJDataConnection us$conn11 = getConnection();
-		    java.sql.PreparedStatement us$stmt11 = null;
-		    ResultSet us$rs11 = null;
-		    try
-			{
-			us$stmt11 = us$conn11.prepareStatement("SELECT vuu_fterminacion, vuu_f_entregaprog, vuu_area_lote, vuu_area_const, vuu_plus2 FROM vuu_unidades WHERE vuu_empresa =  ?  AND vuu_obra =  ?  AND vuu_manzana =  ?  AND vuu_unidad =  ?");
-			us$stmt11.setString(1, vmu_empresa.getStringValue());
-			vmu_obra.us$setSqlParameterValue(us$stmt11, 2);
-			vmu_manzana.us$setSqlParameterValue(us$stmt11, 3);
-			vmu_unidad.us$setSqlParameterValue(us$stmt11, 4);
-			us$rs11 = us$stmt11.executeQuery();
-			int us$rowsTouched11 = 0;
-			try
-			    {
-			    java.sql.ResultSetMetaData us$rsmd11 = us$rs11.getMetaData();
-			    if (us$rsmd11.getColumnCount() != 5)
-				throw new SQLException(getSession().us$getMessage("EXPECTED_VS_ACTUAL_COLUMN_COUNT", new Object[]
-				    {
-				    Integer.toString(us$rsmd11.getColumnCount()), "5"
-				    }));
-			    com.unify.nxj.mgr.dataConnection.NXJDataIterator us$getter11 = us$conn11.createDataIterator(us$rs11);
-			    if (us$getter11.next())
-				{
-				++us$rowsTouched11;
-				f_ent_real = us$getter11.getString(1);
-				f_ent_pacta = us$getter11.getString(2);
-				area_lote = us$getter11.getString(3);
-				area_const = us$getter11.getString(4);
-				gasto_escritura = us$getter11.getString(5);
-				}
-			    }
-			finally
-			    {
-			    if (us$rowsTouched11 == 0)
-				getSession().us$setStatus(StatusCode.SS_NOREC);
-			    if (us$rs11 != null)
-				us$rs11.close();
-			    }
-			}
-		    catch (SQLException us$ex11)
-			{
-			getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-			throw us$ex11;
-			}
-		    catch (NXJDataConnectionException us$ex11)
-			{
-			getSession().us$setStatus(us$conn11.mapToStatusCode(us$ex11));
-			throw us$ex11;
-			}
-		    finally
-			{
-			if (us$stmt11 != null)
-			    us$conn11.us$closeStatement(us$stmt11);
-			}
-		    }
-		if (f_ent_pacta.isNull().getBooleanValueNullOk())
-		    {
-		    getSession().displayToMessageBox("La unidad no tiene fecha de entre definida, verifique por favor.");
-		    }
-		else
-		    {
-		    if (f_ent_real.isNull().getBooleanValueNullOk())
-			{
-			f_entrega = f_ent_pacta.getStringValue();
-			f_escritura = f_ent_pacta.minusOp(30).getStringValue();
-			}
-		    else
-			{
-			f_entrega = f_ent_real.getStringValue();
-			f_escritura = f_ent_real.minusOp(30).getStringValue();
-			}
-		    }
-	    } // whenValueChanges
-
-	    public vmu_unidad()
-	    {
-		super(ModuloCNegocios.IAClientesFRM.cajagrandeIAClientes.this, "vmu_unidad", true, true, 4);
-		setStyleClass("textfield");
-		us$setMultiValued(true);
-		us$setView("text");
-		us$setFieldLength(4);
-		us$setCandidateTargetColumnName("vmu_unidad");
-		setValueRetrievedDuringFetch(true);
-		setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-		setRequired(true);
-		setFindable(true);
-		setUpdateable(true);
-		setCaseConversion(NullableField.CaseConversion_UPPER);
-		us$executesCodeBeforeInput = true;
-		us$executesDataAcceptValueChanges = true;
-	    } // <init>
-	} // vmu_unidad
-
-	public /*multi_valued*/ vmu_unidad vmu_unidad = new vmu_unidad();
-	public /*multi_valued*/ NullableStringField vpp_actividad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_actividad", true, true, 2);
-	public /*multi_valued*/ NullableStringField vpp_estado_civil = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_estado_civil", true, true, 2);
-	public /*multi_valued*/ NullableStringField vpp_genero = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vpp_genero", true, true, 2);
+	public /*multi_valued*/ NullableStringField vau_aux_ciuexp = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_aux_ciuexp", true, true, 30);
+	public /*multi_valued*/ NullableStringField vau_aux_clase = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_aux_clase", true, true, 2);
+	public /*multi_valued*/ NullableStringField vau_aux_codig = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_aux_codig", true, true, 18);
+	public /*multi_valued*/ NullableStringField vau_aux_esciv = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_aux_esciv", true, true, 2);
+	public /*multi_valued*/ NullableStringField vau_manzana = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_manzana", true, true, 3);
+	public /*multi_valued*/ NullableStringField vau_obra = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_obra", true, true, 2);
+	public /*multi_valued*/ NullableStringField vau_ocupacion = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_ocupacion", true, true, 30);
+	public /*multi_valued*/ NullableStringField vau_soc_conyu = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_soc_conyu", true, true, 2);
+	public /*multi_valued*/ NullableStringField vau_unidad = new com.unify.nxj.mgr.datatypes.NXJStringField(this, "vau_unidad", true, true, 4);
 	public class box11
 	    extends com.unify.nxj.mgr.NXJBox
 	{
@@ -891,6 +477,11 @@ public class IAClientesFRM
 	    Label9.setStyleClass("label");
 	    Label9.setForegroundColor("Black");
 	    Label9.setFontSize("12");
+	    label11.setStyleClass("label");
+	    label11.setForegroundColor("Black");
+	    label11.setFontFamily("Verdana");
+	    label11.setFontSize("14");
+	    label11.us$setFontWeight("bold");
 	    label31.setStyleClass("label");
 	    label31.setFontSize("12");
 	    label311.setStyleClass("label");
@@ -903,59 +494,109 @@ public class IAClientesFRM
 	    label3121.setFontSize("12");
 	    label3131111111121111.setStyleClass("label");
 	    label3131111111121111.setFontSize("12");
-	    textfield1.setStyleClass("textfield");
-	    textfield1.us$setView("text");
-	    textfield1.setFindable(false);
-	    textfield11.setStyleClass("textfield");
-	    textfield11.us$setView("select");
-	    textfield11.setFindable(false);
-	    vmu_cli_ciudad.setStyleClass("textfield");
-	    vmu_cli_ciudad.us$setMultiValued(true);
-	    vmu_cli_ciudad.us$setView("select");
-	    vmu_cli_ciudad.us$setFieldLength(30);
-	    vmu_cli_ciudad.us$setCandidateTargetColumnName("vmu_cli_ciudad");
-	    vmu_cli_ciudad.setValueRetrievedDuringFetch(true);
-	    vmu_cli_ciudad.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vmu_cli_ciudad.setRequired(true);
-	    vmu_cli_ciudad.setFindable(true);
-	    vmu_cli_ciudad.setUpdateable(true);
-	    vpp_actividad.setStyleClass("dropdown_list");
-	    vpp_actividad.us$setMultiValued(true);
-	    vpp_actividad.us$setView("select");
-	    vpp_actividad.us$setFieldLength(2);
-	    vpp_actividad.setAutoAccept(true);
-	    vpp_actividad.us$setCandidateTargetColumnName("vpp_actividad");
-	    vpp_actividad.setValueRetrievedDuringFetch(true);
-	    vpp_actividad.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vpp_actividad.setFindable(true);
-	    vpp_actividad.setUpdateable(true);
-	    vpp_actividad.us$setMultiValuedOptions(true);
-	    vpp_actividad.setForegroundColor("Black");
-	    vpp_actividad.setFontSize("12");
-	    vpp_estado_civil.setStyleClass("dropdown_list");
-	    vpp_estado_civil.us$setMultiValued(true);
-	    vpp_estado_civil.us$setView("select");
-	    vpp_estado_civil.us$setFieldLength(2);
-	    vpp_estado_civil.setAutoAccept(true);
-	    vpp_estado_civil.us$setCandidateTargetColumnName("vpp_estado_civil");
-	    vpp_estado_civil.setValueRetrievedDuringFetch(true);
-	    vpp_estado_civil.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vpp_estado_civil.setFindable(true);
-	    vpp_estado_civil.setUpdateable(true);
-	    vpp_estado_civil.setForegroundColor("Black");
-	    vpp_estado_civil.setFontSize("12");
-	    vpp_genero.setStyleClass("dropdown_list");
-	    vpp_genero.us$setMultiValued(true);
-	    vpp_genero.us$setView("select");
-	    vpp_genero.us$setFieldLength(2);
-	    vpp_genero.setAutoAccept(true);
-	    vpp_genero.us$setCandidateTargetColumnName("vpp_genero");
-	    vpp_genero.setValueRetrievedDuringFetch(true);
-	    vpp_genero.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
-	    vpp_genero.setFindable(true);
-	    vpp_genero.setUpdateable(true);
-	    vpp_genero.setForegroundColor("Black");
-	    vpp_genero.setFontSize("12");
+	    vau_aux_ciuexp.setStyleClass("textfield");
+	    vau_aux_ciuexp.us$setMultiValued(true);
+	    vau_aux_ciuexp.us$setView("select");
+	    vau_aux_ciuexp.us$setFieldLength(30);
+	    vau_aux_ciuexp.us$setCandidateTargetColumnName("vau_aux_ciuexp");
+	    vau_aux_ciuexp.setValueRetrievedDuringFetch(true);
+	    vau_aux_ciuexp.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_aux_ciuexp.setRequired(true);
+	    vau_aux_ciuexp.setFindable(true);
+	    vau_aux_ciuexp.setUpdateable(true);
+	    vau_aux_clase.setStyleClass("textfield");
+	    vau_aux_clase.us$setMultiValued(true);
+	    vau_aux_clase.us$setView("select");
+	    vau_aux_clase.us$setFieldLength(2);
+	    vau_aux_clase.setAutoAccept(true);
+	    vau_aux_clase.us$setCandidateTargetColumnName("vau_aux_clase");
+	    vau_aux_clase.setValueRetrievedDuringFetch(true);
+	    vau_aux_clase.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_aux_clase.setRequired(true);
+	    vau_aux_clase.setFindable(true);
+	    vau_aux_clase.setUpdateable(true);
+	    vau_aux_codig.setStyleClass("textfield");
+	    vau_aux_codig.us$setMultiValued(true);
+	    vau_aux_codig.us$setView("text");
+	    vau_aux_codig.us$setFieldLength(18);
+	    vau_aux_codig.us$setCandidateTargetColumnName("vau_aux_codig");
+	    vau_aux_codig.setValueRetrievedDuringFetch(true);
+	    vau_aux_codig.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_aux_codig.setRequired(true);
+	    vau_aux_codig.setFindable(true);
+	    vau_aux_codig.setUpdateable(true);
+	    vau_aux_esciv.setStyleClass("dropdown_list");
+	    vau_aux_esciv.us$setMultiValued(true);
+	    vau_aux_esciv.us$setView("select");
+	    vau_aux_esciv.us$setFieldLength(2);
+	    vau_aux_esciv.setAutoAccept(true);
+	    vau_aux_esciv.us$setCandidateTargetColumnName("vau_aux_esciv");
+	    vau_aux_esciv.setValueRetrievedDuringFetch(true);
+	    vau_aux_esciv.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_aux_esciv.setRequired(true);
+	    vau_aux_esciv.setFindable(true);
+	    vau_aux_esciv.setUpdateable(true);
+	    vau_aux_esciv.setForegroundColor("Black");
+	    vau_aux_esciv.setFontSize("12");
+	    vau_manzana.setStyleClass("textfield");
+	    vau_manzana.us$setMultiValued(true);
+	    vau_manzana.us$setView("text");
+	    vau_manzana.us$setFieldLength(3);
+	    vau_manzana.us$setCandidateTargetColumnName("vau_manzana");
+	    vau_manzana.setValueRetrievedDuringFetch(true);
+	    vau_manzana.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_manzana.setRequired(true);
+	    vau_manzana.setFindable(true);
+	    vau_manzana.setUpdateable(false);
+	    vau_manzana.setCaseConversion(NullableField.CaseConversion_UPPER);
+	    vau_obra.setStyleClass("textfield");
+	    vau_obra.us$setMultiValued(true);
+	    vau_obra.us$setView("text");
+	    vau_obra.us$setFieldLength(2);
+	    vau_obra.us$setCandidateTargetColumnName("vau_obra");
+	    vau_obra.setValueRetrievedDuringFetch(true);
+	    vau_obra.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_obra.setRequired(true);
+	    vau_obra.setFindable(true);
+	    vau_obra.setUpdateable(true);
+	    vau_obra.setCaseConversion(NullableField.CaseConversion_UPPER);
+	    vau_ocupacion.setStyleClass("dropdown_list");
+	    vau_ocupacion.us$setMultiValued(true);
+	    vau_ocupacion.us$setView("select");
+	    vau_ocupacion.us$setFieldLength(30);
+	    vau_ocupacion.setAutoAccept(false);
+	    vau_ocupacion.us$setCandidateTargetColumnName("vau_ocupacion");
+	    vau_ocupacion.setValueRetrievedDuringFetch(true);
+	    vau_ocupacion.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_ocupacion.setFindable(true);
+	    vau_ocupacion.setUpdateable(true);
+	    vau_ocupacion.us$setMultiValuedOptions(true);
+	    vau_ocupacion.setForegroundColor("Black");
+	    vau_ocupacion.setFontSize("12");
+	    vau_soc_conyu.setStyleClass("dropdown_list");
+	    vau_soc_conyu.us$setMultiValued(true);
+	    vau_soc_conyu.us$setView("select");
+	    vau_soc_conyu.us$setFieldLength(2);
+	    vau_soc_conyu.setAutoAccept(true);
+	    vau_soc_conyu.us$setCandidateTargetColumnName("vau_soc_conyu");
+	    vau_soc_conyu.setValueRetrievedDuringFetch(true);
+	    vau_soc_conyu.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_soc_conyu.setRequired(true);
+	    vau_soc_conyu.setFindable(true);
+	    vau_soc_conyu.setUpdateable(true);
+	    vau_soc_conyu.setForegroundColor("Black");
+	    vau_soc_conyu.setFontSize("12");
+	    vau_unidad.setStyleClass("textfield");
+	    vau_unidad.us$setMultiValued(true);
+	    vau_unidad.us$setView("text");
+	    vau_unidad.us$setFieldLength(4);
+	    vau_unidad.us$setCandidateTargetColumnName("vau_unidad");
+	    vau_unidad.setValueRetrievedDuringFetch(true);
+	    vau_unidad.setExplicitSearchMode(NullableVariable.ExplicitSearchMode_DEFAULT);
+	    vau_unidad.setRequired(true);
+	    vau_unidad.setFindable(true);
+	    vau_unidad.setUpdateable(true);
+	    vau_unidad.setCaseConversion(NullableField.CaseConversion_UPPER);
 	} // cajagrandeIAClientespropertySetter_0
     } // cajagrandeIAClientes
 
@@ -976,10 +617,45 @@ public class IAClientesFRM
     private void us$initializeFormSpecificProperties()
     {
 	us$setConnectionName("Connection1");
-	us$setTargetTableName("PUBLIC.vev_etapaven");
+	us$setTargetTableName("PUBLIC.vau_auxiliares");
+	setDeleteAllowed(false);
+	setAutoFind(true);
 	setStartInAddMode(false);
+	setFindCount(10);
 	us$setBackgroundColor("#999999");
+	us$addTargetMapping("vau_empresa", "vau_empresa");
+	us$addTargetMapping("vau_aux_nombre", "vau_aux_nombre");
+	us$addTargetMapping("vau_apoderado", "vau_apoderado");
+	us$addProxyObject(ModuloCNegocios.IAClientesFRM.class, "clase_cliente", false);
+	us$addProxyObject(ModuloCNegocios.IAClientesFRM.class, "tipo_cliente", false);
     } // us$initializeFormSpecificProperties
     public static final String menuLabel = "IAClientesFRM";
+
+    protected com.unify.nxj.mgr.NXJProxyNullable us$createProxyNullable(java.lang.reflect.Field targetField, boolean multiValued)
+    {
+	return new NXJProxyNullableImpl(targetField, multiValued);
+    } // us$createProxyNullable
+    protected final class NXJProxyNullableImpl
+	extends com.unify.nxj.mgr.NXJProxyNullable
+    {
+
+	public NXJProxyNullableImpl(java.lang.reflect.Field fld, boolean multiValued)
+	{
+	    super(ModuloCNegocios.IAClientesFRM.this, fld, multiValued);
+	} // <init>
+
+	protected Nullable getValue()
+	    throws IllegalAccessException
+	{
+	    return (Nullable)fld.get(ModuloCNegocios.IAClientesFRM.this);
+	} // getValue
+
+	protected void setValue(Nullable newValue)
+	    throws IllegalAccessException
+	{
+	    fld.set(ModuloCNegocios.IAClientesFRM.this, newValue);
+	} // setValue
+    } // NXJProxyNullableImpl
+
 } // IAClientesFRM
 

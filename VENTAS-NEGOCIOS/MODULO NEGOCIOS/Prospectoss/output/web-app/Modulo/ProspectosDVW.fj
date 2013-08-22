@@ -123,7 +123,7 @@ DATA VIEW ProspectosDVW
                                         WHERE  xco_empresa    = :Modulo.MenuFRM#cajagrandeMenu.EMPRESA AND 
                                                 xco_documento  = 'PR';
                                         
-                                     
+                                      
                                              
            if (session.status != StatusCode.SS_NORM)
             {

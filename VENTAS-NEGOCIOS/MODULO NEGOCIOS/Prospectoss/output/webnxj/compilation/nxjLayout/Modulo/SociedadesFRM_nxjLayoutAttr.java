@@ -20,11 +20,11 @@ private void setAttrFor_this(Widget widget)
 	widget.addAttribute("footer","none");
 	widget.addAttribute("fieldheight","753");
 	widget.setClass("form");
-	widget.addAttribute("title","Sociedades");
+	widget.addAttribute("name","NXJForm");
 	widget.addAttribute("displayheight","753");
 	widget.addAttribute("fieldwidth","1328");
-	widget.addAttribute("name","NXJForm");
 	widget.addStyle("background-color","#999999");
+	widget.addAttribute("title","Sociedades");
 	widget.addAttribute("stylesheets","");
 	widget.addAttribute("displaywidth","1328");
 }
@@ -41,16 +41,16 @@ private void setAttrFor_cajagrandeSociedades__20(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","1004");
-	widget.addAttribute("id","cajagrandeSociedades.");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","190");
-	widget.addStyle("background-color","#cccccc");
+	widget.addAttribute("id","cajagrandeSociedades.");
 	widget.addAttribute("displaytop","30");
+	widget.addStyle("background-color","#cccccc");
 	widget.addAttribute("displayheight","714");
 	widget.addAttribute("fieldheight","714");
 	widget.addAttribute("fieldwidth","1004");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -66,17 +66,17 @@ private void setAttrFor_PUBLIC_xel_emprelogo1__40(Widget widget)
 {
 	widget.addAttribute("field_weight","199");
 	widget.addAttribute("displaywidth","407");
-	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1.");
+	widget.setClass("data_view");
 	widget.addStyle("border-width","1");
 	widget.addAttribute("displayleft","302");
 	widget.addStyle("border-style","Solid");
-	widget.addStyle("background-color","#ccccff");
+	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1.");
 	widget.addAttribute("displaytop","441");
+	widget.addStyle("background-color","#ccccff");
 	widget.addAttribute("displayheight","154");
 	widget.addAttribute("fieldheight","154");
 	widget.addAttribute("fieldwidth","407");
 	widget.addStyle("border-color","Black");
-	widget.setClass("data_view");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -90,16 +90,16 @@ private void setAttrFor_div_Image1__50(Widget widget)
 
 private void setAttrFor_Image1__60(Widget widget)
 {
-	widget.addAttribute("displaywidth","255");
-	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1:Image1.");
-	widget.addAttribute("displayleft","123");
 	widget.addAttribute("src","=&xel_logo");
+	widget.addAttribute("displaywidth","255");
+	widget.setClass("image");
+	widget.addAttribute("displayleft","123");
+	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1:Image1.");
 	widget.addAttribute("displaytop","44");
+	widget.addAttribute("width","255");
 	widget.addAttribute("displayheight","33");
 	widget.addAttribute("fieldheight","33");
 	widget.addAttribute("fieldwidth","255");
-	widget.addAttribute("width","255");
-	widget.setClass("image");
 	widget.addAttribute("height","33");
 	widget.addStyle("overflow","hidden");
 }
@@ -118,13 +118,13 @@ private void setAttrFor_chooser1__60(Widget widget)
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("type","file");
 	widget.addAttribute("displaywidth","234");
-	widget.addAttribute("name","cajagrandeSociedades:PUBLIC_xel_emprelogo1:chooser1.");
+	widget.setClass("file");
 	widget.addAttribute("displayleft","66");
+	widget.addAttribute("name","cajagrandeSociedades:PUBLIC_xel_emprelogo1:chooser1.");
 	widget.addAttribute("displaytop","114");
 	widget.addAttribute("displayheight","27");
 	widget.addAttribute("fieldheight","24");
 	widget.addAttribute("fieldwidth","234");
-	widget.setClass("file");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -140,15 +140,15 @@ private void setAttrFor_label3__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","Empresa");
 	widget.addAttribute("displaywidth","55");
-	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1:label3.");
+	widget.setClass("label");
 	widget.addAttribute("displayleft","36");
+	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1:label3.");
 	widget.addAttribute("displaytop","20");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","55");
-	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
-	widget.setClass("label");
+	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -164,15 +164,15 @@ private void setAttrFor_label31__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","Logo");
 	widget.addAttribute("displaywidth","31");
-	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1:label31.");
+	widget.setClass("label");
 	widget.addAttribute("displayleft","139");
+	widget.addAttribute("id","cajagrandeSociedades:PUBLIC_xel_emprelogo1:label31.");
 	widget.addAttribute("displaytop","20");
 	widget.addAttribute("displayheight","16");
 	widget.addAttribute("fieldheight","16");
 	widget.addAttribute("fieldwidth","31");
-	widget.addStyle("font-size","12");
 	widget.addStyle("text-align","left");
-	widget.setClass("label");
+	widget.addStyle("font-size","12");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -186,18 +186,18 @@ private void setAttrFor_div_xel_codigo__50(Widget widget)
 
 private void setAttrFor_xel_codigo__60(Widget widget)
 {
-	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","99");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","45");
-	widget.addAttribute("name","cajagrandeSociedades:PUBLIC_xel_emprelogo1:xel_codigo.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","36");
-	widget.addAttribute("size","7");
+	widget.addAttribute("name","cajagrandeSociedades:PUBLIC_xel_emprelogo1:xel_codigo.");
 	widget.addAttribute("displaytop","44");
+	widget.addAttribute("size","7");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","45");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -211,21 +211,21 @@ private void setAttrFor_div_RepeatingArea1__30(Widget widget)
 
 private void setAttrFor_RepeatingArea1__40(Widget widget)
 {
-	widget.addAttribute("list_columns","cajagrandeSociedades:xem_codigo.0:57;cajagrandeSociedades:xem_nombre.57:226");
-	widget.addAttribute("occurrences","15");
-	widget.addAttribute("selected_row_class","selected_row");
-	widget.addAttribute("field_weight","299");
-	widget.addAttribute("row_class","ROW");
 	widget.addAttribute("repeat_style","Grid");
+	widget.addAttribute("occurrences","15");
 	widget.addAttribute("altRowClass","alternate_row");
+	widget.addAttribute("list_columns","cajagrandeSociedades:xem_codigo.0:57;cajagrandeSociedades:xem_nombre.57:226");
+	widget.addAttribute("row_class","ROW");
+	widget.addAttribute("field_weight","299");
+	widget.addAttribute("selected_row_class","selected_row");
 	widget.addAttribute("displaywidth","302");
-	widget.addAttribute("id","cajagrandeSociedades:RepeatingArea1.");
+	widget.setClass("repeating_area");
 	widget.addAttribute("displayleft","350");
+	widget.addAttribute("id","cajagrandeSociedades:RepeatingArea1.");
 	widget.addAttribute("displaytop","127");
 	widget.addAttribute("displayheight","245");
 	widget.addAttribute("fieldheight","245");
 	widget.addAttribute("fieldwidth","302");
-	widget.setClass("repeating_area");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -236,21 +236,21 @@ private void setAttrFor_div_xem_codigo__50(Widget widget)
 
 private void setAttrFor_xem_codigo__60(Widget widget)
 {
-	widget.addAttribute("field_weight","99");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","99");
+	widget.addAttribute("title","xem_codigo");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","57");
-	widget.addAttribute("name","cajagrandeSociedades:xem_codigo.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","0");
-	widget.addAttribute("size","9");
 	widget.addAttribute("headertitle","Codigo");
+	widget.addAttribute("name","cajagrandeSociedades:xem_codigo.");
 	widget.addAttribute("displaytop","0");
+	widget.addAttribute("size","9");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xem_codigo");
 	widget.addAttribute("fieldwidth","57");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -261,21 +261,21 @@ private void setAttrFor_div_xem_nombre__50(Widget widget)
 
 private void setAttrFor_xem_nombre__60(Widget widget)
 {
-	widget.addAttribute("field_weight","199");
 	widget.addAttribute("accell_type","String");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","199");
+	widget.addAttribute("title","xem_nombre");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","226");
-	widget.addAttribute("name","cajagrandeSociedades:xem_nombre.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","92");
-	widget.addAttribute("size","37");
 	widget.addAttribute("headertitle","Nombre");
+	widget.addAttribute("name","cajagrandeSociedades:xem_nombre.");
 	widget.addAttribute("displaytop","0");
+	widget.addAttribute("size","37");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
-	widget.addAttribute("title","xem_nombre");
 	widget.addAttribute("fieldwidth","226");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -291,17 +291,17 @@ private void setAttrFor_box11__40(Widget widget)
 {
 	widget.addAttribute("field_weight","399");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id","cajagrandeSociedades:box11.");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id","cajagrandeSociedades:box11.");
 	widget.addAttribute("displaytop","664");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -315,9 +315,9 @@ private void setAttrFor_div_image1__50(Widget widget)
 
 private void setAttrFor_image1__60(Widget widget)
 {
+	widget.addAttribute("id","cajagrandeSociedades:box11:image1.");
 	widget.addAttribute("displayheight","46");
 	widget.addAttribute("displaytop","2");
-	widget.addAttribute("id","cajagrandeSociedades:box11:image1.");
 	widget.addAttribute("displaywidth","164");
 	widget.addAttribute("displayleft","416");
 	widget.addStyle("overflow","hidden");
@@ -335,17 +335,17 @@ private void setAttrFor_cajaarribaSociedades__40(Widget widget)
 {
 	widget.addAttribute("field_weight","99");
 	widget.addAttribute("displaywidth","996");
-	widget.addAttribute("id","cajagrandeSociedades:cajaarribaSociedades.");
+	widget.setClass("box");
 	widget.addStyle("border-width","0");
 	widget.addAttribute("displayleft","4");
 	widget.addStyle("border-style","None");
-	widget.addStyle("background-color","#e30000");
+	widget.addAttribute("id","cajagrandeSociedades:cajaarribaSociedades.");
 	widget.addAttribute("displaytop","2");
+	widget.addStyle("background-color","#e30000");
 	widget.addAttribute("displayheight","50");
 	widget.addAttribute("fieldheight","50");
 	widget.addAttribute("fieldwidth","996");
 	widget.addStyle("border-color","transparent");
-	widget.setClass("box");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -359,19 +359,19 @@ private void setAttrFor_div_actualempresa__50(Widget widget)
 
 private void setAttrFor_actualempresa__60(Widget widget)
 {
-	widget.addAttribute("field_weight","99");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","99");
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","197");
-	widget.addAttribute("name","cajagrandeSociedades:cajaarribaSociedades:actualempresa.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","16");
-	widget.addAttribute("size","32");
+	widget.addAttribute("name","cajagrandeSociedades:cajaarribaSociedades:actualempresa.");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("size","32");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","197");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -385,19 +385,19 @@ private void setAttrFor_div_actualusuario__50(Widget widget)
 
 private void setAttrFor_actualusuario__60(Widget widget)
 {
-	widget.addAttribute("field_weight","199");
 	widget.addAttribute("field_type","text");
+	widget.addAttribute("field_weight","199");
 	widget.addAttribute("immediate","false");
 	widget.addAttribute("type","text");
 	widget.addAttribute("displaywidth","110");
-	widget.addAttribute("name","cajagrandeSociedades:cajaarribaSociedades:actualusuario.");
+	widget.setClass("textfield");
 	widget.addAttribute("displayleft","800");
-	widget.addAttribute("size","18");
+	widget.addAttribute("name","cajagrandeSociedades:cajaarribaSociedades:actualusuario.");
 	widget.addAttribute("displaytop","14");
+	widget.addAttribute("size","18");
 	widget.addAttribute("displayheight","22");
 	widget.addAttribute("fieldheight","22");
 	widget.addAttribute("fieldwidth","110");
-	widget.setClass("textfield");
 	widget.addStyle("overflow","hidden");
 }
 
@@ -413,8 +413,8 @@ private void setAttrFor_label1__60(Widget widget)
 {
 	widget.addAttribute("labeltitle","SOCIEDADES");
 	widget.addAttribute("displaywidth","522");
-	widget.addAttribute("id","cajagrandeSociedades:cajaarribaSociedades:label1.");
 	widget.addAttribute("displayleft","241");
+	widget.addAttribute("id","cajagrandeSociedades:cajaarribaSociedades:label1.");
 	widget.addAttribute("displaytop","14");
 	widget.addAttribute("displayheight","23");
 	widget.addAttribute("fieldwidth","522");
@@ -434,19 +434,19 @@ private void setAttrFor_div_label11__30(Widget widget)
 private void setAttrFor_label11__40(Widget widget)
 {
 	widget.addAttribute("labeltitle","Sociedades");
-	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displaywidth","87");
-	widget.addAttribute("id","cajagrandeSociedades:label11.");
+	widget.setClass("label");
+	widget.addStyle("font-weight","bold");
 	widget.addAttribute("displayleft","20");
-	widget.addStyle("font-family","Verdana");
+	widget.addAttribute("id","cajagrandeSociedades:label11.");
 	widget.addAttribute("displaytop","96");
+	widget.addStyle("color","Black");
+	widget.addStyle("font-family","Verdana");
 	widget.addAttribute("displayheight","18");
 	widget.addAttribute("fieldheight","18");
 	widget.addAttribute("fieldwidth","87");
-	widget.addStyle("font-size","14");
 	widget.addStyle("text-align","left");
-	widget.addStyle("color","Black");
-	widget.setClass("label");
+	widget.addStyle("font-size","14");
 	widget.addStyle("overflow","hidden");
 }
 private void dodiv_cajagrandeSociedades__10(Widget div_cajagrandeSociedades__10)

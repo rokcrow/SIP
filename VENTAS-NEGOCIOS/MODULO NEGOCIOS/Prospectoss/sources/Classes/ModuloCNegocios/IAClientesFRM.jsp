@@ -7,20 +7,23 @@
 
     <form
         aud_on_entry="false"
+        auto_find="true"
         binary_variables=""
         bloom_filter="00080000000000000800000000000000"
         class="form"
         commands=""
         connection="Connection1"
+        delete_allowed="false"
         displayheight="423"
         displaywidth="1348"
         field_order=""
+        find_count="10"
         form_height="423"
         form_width="1348"
         foundation_type="Classes/Foundation/Form"
         localized="true"
         name="NXJForm"
-        target_table="PUBLIC.vev_etapaven"
+        target_table="PUBLIC.vau_auxiliares"
         uid_prefix="modulocnegocios_form2_1374153203129"
         view="form"
         style="background-color: #999999">
@@ -215,7 +218,7 @@
                             binary_variables=""
                             view="div"
                             align="left" 
-                            style="position: absolute; top: 14px; left: 241px; width:410px; height:23px">
+                            style="position: absolute; top: 14px; left: 241px; width:522px; height:23px">
 
                             <div
                                 base_class="Classes/ItemsForm/TituloLBL.fx"
@@ -527,66 +530,13 @@
                 <div
                     binary_variables=""
                     view="div"
-                    style="position: absolute; top: 209px; left: 112px; width:84px; height:22px">
-
-                    <input
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="22"
-                        displayleft="112"
-                        displaytop="209"
-                        displaywidth="84"
-                        field_type="text"
-                        field_weight="799"
-                        findable="false"
-                        key="cajagrandeIAClientes:textfield1."
-                        name="cajagrandeIAClientes:textfield1."
-                        original_name="textfield1"
-                        size="14"
-                        target_field=""
-                        type="text"
-                        uid="modulocnegocios_form2_1374153203129_23397cc2878e5546fa07a5e2d5df77774e0ff1af_1377119780293"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 209px; left: 433px; width:104px; height:21px">
-
-                    <select
-                        binary_variables=""
-                        class="textfield"
-                        displayheight="21"
-                        displayleft="433"
-                        displaytop="209"
-                        displaywidth="104"
-                        field_type="SELECT"
-                        field_weight="899"
-                        findable="false"
-                        key="cajagrandeIAClientes:textfield11."
-                        name="cajagrandeIAClientes:textfield11."
-                        options="Asignado=A&#59;Cedula2=C"
-                        original_name="textfield11"
-                        size="1"
-                        target_field=""
-                        uid="modulocnegocios_form2_1374153203129_23397cc2878e5546fa07a5e2d5df77774e0ff1af_1377119887329"
-                        view="select"
-                        style="width:104px; height: 21px">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
                     style="position: absolute; top: 265px; left: 112px; width:240px; height:21px">
 
                     <select
                         accell_type="String"
                         binary_variables=""
                         class="textfield"
-                        db_length="30"
+                        db_length="20"
                         db_type="String"
                         displayheight="21"
                         displayleft="112"
@@ -597,18 +547,132 @@
                         field_type="SELECT"
                         field_weight="599"
                         findable="true"
-                        key="cajagrandeIAClientes:vmu_cli_ciudad."
+                        key="cajagrandeIAClientes:vau_aux_ciuexp."
                         multi_valued="true"
-                        name="cajagrandeIAClientes:vmu_cli_ciudad."
+                        name="cajagrandeIAClientes:vau_aux_ciuexp."
                         original_name="vmu_cli_ciudad"
+                        reqcmd="false"
                         required="true"
                         retrieve_value="true"
                         size="1"
-                        target_field="vmu_cli_ciudad"
+                        target_field="vau_aux_ciuexp"
                         uid="modulo_form1_1372953290702_819e3f00d03b348105d34088bce4b61d5970a86e_1375451806447"
                         updateable="true"
                         view="select"
                         style="width:240px; height: 21px">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 209px; left: 433px; width:104px; height:21px">
+
+                    <select
+                        accell_type="String"
+                        auto_accept="true"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="433"
+                        displaytop="209"
+                        displaywidth="104"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="899"
+                        findable="true"
+                        key="cajagrandeIAClientes:vau_aux_clase."
+                        multi_valued="true"
+                        name="cajagrandeIAClientes:vau_aux_clase."
+                        options="Asignado=A&#59;Cedula2=C"
+                        original_name="textfield11"
+                        required="true"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vau_aux_clase"
+                        uid="modulocnegocios_form2_1374153203129_23397cc2878e5546fa07a5e2d5df77774e0ff1af_1377119887329"
+                        updateable="true"
+                        view="select"
+                        style="width:104px; height: 21px">
+                    </select>
+
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 209px; left: 112px; width:84px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        class="textfield"
+                        db_length="18"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="112"
+                        displaytop="209"
+                        displaywidth="84"
+                        explicit_search_mode="default"
+                        field_length="18"
+                        field_type="text"
+                        field_weight="799"
+                        findable="true"
+                        key="cajagrandeIAClientes:vau_aux_codig."
+                        multi_valued="true"
+                        name="cajagrandeIAClientes:vau_aux_codig."
+                        original_name="textfield1"
+                        required="true"
+                        retrieve_value="true"
+                        size="14"
+                        target_field="vau_aux_codig"
+                        type="text"
+                        uid="modulocnegocios_form2_1374153203129_23397cc2878e5546fa07a5e2d5df77774e0ff1af_1377119780293"
+                        updateable="true"
+                        view="text">
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 265px; left: 704px; width:96px; height:21px">
+
+                    <select
+                        accell_type="String"
+                        auto_accept="true"
+                        auto_resize_width="false"
+                        binary_variables=""
+                        class="dropdown_list"
+                        db_length="1"
+                        db_type="String"
+                        displayheight="21"
+                        displayleft="704"
+                        displaytop="265"
+                        displaywidth="96"
+                        explicit_search_mode="default"
+                        field_length="2"
+                        field_type="SELECT"
+                        field_weight="999"
+                        findable="true"
+                        key="cajagrandeIAClientes:vau_aux_esciv."
+                        multi_valued="true"
+                        name="cajagrandeIAClientes:vau_aux_esciv."
+                        options="Casado=C&#59;Divorciado=D&#59;Soltero=S&#59;Viudo=V"
+                        original_name="select1"
+                        required="true"
+                        retrieve_value="true"
+                        size="1"
+                        target_field="vau_aux_esciv"
+                        uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368625147817"
+                        updateable="true"
+                        view="select"
+                        style="width:96px; height: 21px;
+                            font-size: 12px;
+                            color: Black">
                     </select>
 
                 </div>
@@ -634,17 +698,17 @@
                         field_type="text"
                         field_weight="399"
                         findable="true"
-                        key="cajagrandeIAClientes:vmu_manzana."
+                        key="cajagrandeIAClientes:vau_manzana."
                         multi_valued="true"
-                        name="cajagrandeIAClientes:vmu_manzana."
+                        name="cajagrandeIAClientes:vau_manzana."
                         original_name="textfield1"
                         required="true"
                         retrieve_value="true"
                         size="7"
-                        target_field="vmu_manzana"
+                        target_field="vau_manzana"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843766016"
-                        updateable="true"
+                        updateable="false"
                         view="text">
                 </div>
 
@@ -669,51 +733,16 @@
                         field_type="text"
                         field_weight="299"
                         findable="true"
-                        key="cajagrandeIAClientes:vmu_obra."
+                        key="cajagrandeIAClientes:vau_obra."
                         multi_valued="true"
-                        name="cajagrandeIAClientes:vmu_obra."
+                        name="cajagrandeIAClientes:vau_obra."
                         original_name="textfield1"
                         required="true"
                         retrieve_value="true"
                         size="7"
-                        target_field="vmu_obra"
+                        target_field="vau_obra"
                         type="text"
                         uid="itemsform_dataview1_1368038367945_6729c9e91460ea25dbf3cad34f5a7d0e5d37936e_1371740682449"
-                        updateable="true"
-                        view="text">
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 153px; left: 704px; width:45px; height:22px">
-
-                    <input
-                        accell_type="String"
-                        binary_variables=""
-                        case_conversion="Upper"
-                        class="textfield"
-                        db_length="4"
-                        db_type="String"
-                        displayheight="22"
-                        displayleft="704"
-                        displaytop="153"
-                        displaywidth="45"
-                        explicit_search_mode="default"
-                        field_length="4"
-                        field_type="text"
-                        field_weight="499"
-                        findable="true"
-                        key="cajagrandeIAClientes:vmu_unidad."
-                        multi_valued="true"
-                        name="cajagrandeIAClientes:vmu_unidad."
-                        original_name="textfield1"
-                        required="true"
-                        retrieve_value="true"
-                        size="7"
-                        target_field="vmu_unidad"
-                        type="text"
-                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843766351"
                         updateable="true"
                         view="text">
                 </div>
@@ -725,74 +754,34 @@
 
                     <select
                         accell_type="String"
-                        auto_accept="true"
+                        auto_accept="false"
                         auto_resize_width="false"
                         binary_variables=""
                         class="dropdown_list"
-                        db_length="1"
+                        db_length="30"
                         db_type="String"
                         displayheight="21"
                         displayleft="433"
                         displaytop="265"
                         displaywidth="165"
                         explicit_search_mode="default"
-                        field_length="2"
+                        field_length="30"
                         field_type="SELECT"
                         field_weight="1099"
                         findable="true"
-                        key="cajagrandeIAClientes:vpp_actividad."
+                        key="cajagrandeIAClientes:vau_ocupacion."
                         multi_valued="true"
                         multi_valued_options="true"
-                        name="cajagrandeIAClientes:vpp_actividad."
+                        name="cajagrandeIAClientes:vau_ocupacion."
                         options="Empleado=A&#59;Independiente=B&#59;Jubilado=C&#59;Persona Jurídica=D"
                         original_name="select1"
                         retrieve_value="true"
                         size="1"
-                        target_field="vpp_actividad"
+                        target_field="vau_ocupacion"
                         uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368625302120"
                         updateable="true"
                         view="select"
                         style="width:165px; height: 21px;
-                            font-size: 12px;
-                            color: Black">
-                    </select>
-
-                </div>
-
-                <div
-                    binary_variables=""
-                    view="div"
-                    style="position: absolute; top: 265px; left: 704px; width:96px; height:21px">
-
-                    <select
-                        accell_type="String"
-                        auto_accept="true"
-                        auto_resize_width="false"
-                        binary_variables=""
-                        class="dropdown_list"
-                        db_length="1"
-                        db_type="String"
-                        displayheight="21"
-                        displayleft="704"
-                        displaytop="265"
-                        displaywidth="96"
-                        explicit_search_mode="default"
-                        field_length="2"
-                        field_type="SELECT"
-                        field_weight="999"
-                        findable="true"
-                        key="cajagrandeIAClientes:vpp_estado_civil."
-                        multi_valued="true"
-                        name="cajagrandeIAClientes:vpp_estado_civil."
-                        options="Soltero=A&#59;Casado=B&#59;Union Libre=C&#59;Viudo=D&#59;Separado=E"
-                        original_name="select1"
-                        retrieve_value="true"
-                        size="1"
-                        target_field="vpp_estado_civil"
-                        uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368625147817"
-                        updateable="true"
-                        view="select"
-                        style="width:96px; height: 21px;
                             font-size: 12px;
                             color: Black">
                     </select>
@@ -821,14 +810,15 @@
                         field_type="SELECT"
                         field_weight="699"
                         findable="true"
-                        key="cajagrandeIAClientes:vpp_genero."
+                        key="cajagrandeIAClientes:vau_soc_conyu."
                         multi_valued="true"
-                        name="cajagrandeIAClientes:vpp_genero."
+                        name="cajagrandeIAClientes:vau_soc_conyu."
                         options="Femenino=F&#59;Masculino=M"
                         original_name="select1"
+                        required="true"
                         retrieve_value="true"
                         size="1"
-                        target_field="vpp_genero"
+                        target_field="vau_soc_conyu"
                         uid="form1_1368621090006_d074efb488624ce06e667059616d63cdb4d81951_1368623802811"
                         updateable="true"
                         view="select"
@@ -837,6 +827,41 @@
                             color: Black">
                     </select>
 
+                </div>
+
+                <div
+                    binary_variables=""
+                    view="div"
+                    style="position: absolute; top: 153px; left: 704px; width:45px; height:22px">
+
+                    <input
+                        accell_type="String"
+                        binary_variables=""
+                        case_conversion="Upper"
+                        class="textfield"
+                        db_length="4"
+                        db_type="String"
+                        displayheight="22"
+                        displayleft="704"
+                        displaytop="153"
+                        displaywidth="45"
+                        explicit_search_mode="default"
+                        field_length="4"
+                        field_type="text"
+                        field_weight="499"
+                        findable="true"
+                        key="cajagrandeIAClientes:vau_unidad."
+                        multi_valued="true"
+                        name="cajagrandeIAClientes:vau_unidad."
+                        original_name="textfield1"
+                        required="true"
+                        retrieve_value="true"
+                        size="7"
+                        target_field="vau_unidad"
+                        type="text"
+                        uid="itemsform_dataview1_1368038367945_c84c975a292178664c47efc72ac1037d0dc9e23a_1371843766351"
+                        updateable="true"
+                        view="text">
                 </div>
 
             </fieldset>

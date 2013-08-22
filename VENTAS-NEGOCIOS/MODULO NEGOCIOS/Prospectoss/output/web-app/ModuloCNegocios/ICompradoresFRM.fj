@@ -2,21 +2,144 @@ package ModuloCNegocios;
 
 FORM ICompradoresFRM
 { 
+    multi_valued NullableStringVariable tcl_empresa, tcl_obra, tcl_manzana, tcl_unidad;
+    
+    NullableString tcl_clase;
+
     
     
     BEFORE FORM
     {
-         ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass1 = "1";
+         //ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.varpass1 = "1";
+        
+        tcl_empresa.clearAddExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;    
+        tcl_empresa.clearFindExp = Modulo.MenuFRM#cajagrandeMenu.EMPRESA;    
+        tcl_obra.clearAddExp = ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.vmu_obra;
+        tcl_obra.clearFindExp = ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.vmu_obra;
+        tcl_manzana.clearAddExp = ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.vmu_manzana;
+        tcl_manzana.clearFindExp= ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.vmu_manzana;
+        tcl_unidad.clearAddExp = ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.vmu_unidad;
+        tcl_unidad.clearFindExp = ModuloCNegocios.RBoletinesFRM#cajagrandeRBoletines.vmu_unidad;
+        
+        
+        EXEC SQL
+                        SELECT tcl_clase
+                        FROM tcl_tipclien
+                        WHERE tcl_empresa = :tcl_empresa
+                        AND tcl_obra = :tcl_obra
+                        AND tcl_manzana = :tcl_manzana
+                        AND tcl_unidad = :tcl_unidad
+                        INTO tcl_clase;
+                        
+                        if(session.status == StatusCode.SS_NORM)
+                        {
+                            tcl_clase = "A";
+                        }
+                        else
+                        {
+                            tcl_clase = "T";
+                        }
     }
-
-    FIELD vmu_garage1
+    
+    ON CLEAR TO ADD
+    {
+        EXEC SQL
+                        SELECT tcl_clase
+                        FROM tcl_tipclien
+                        WHERE tcl_empresa = :tcl_empresa
+                        AND tcl_obra = :tcl_obra
+                        AND tcl_manzana = :tcl_manzana
+                        AND tcl_unidad = :tcl_unidad
+                        INTO tcl_clase;
+                        
+                        if(session.status == StatusCode.SS_NORM)
+                        {
+                            tcl_clase = "O";
+                        }
+                        else
+                        {
+                            tcl_clase = "T";
+                        }
+    }
+    
+    ON PREVIOUS FORM
+    {/*
+        xc = 0;
+        
+        if(isNotCurrentRecord())/*  ¿FUNCIONA? *****************
+        {
+            session.displayToMessageBox("Debe grabar por lo menos el cliente titular.");
+            xc = 0;
+        }
+        else
+        {  ¿ESTO CÓMO ES EN NXJ?***************
+            if( yesno("¿Desea grabar más clientes? <Sí/No>", -1))
+            {
+                xc = 0;
+            }
+            else
+            {
+                xc = 1;
+            }
+        }
+        
+        if(xc == 0)
+            rejectOperation();
+    //////////////////////////////////////////////////////////////*/
+    }
+    
+    AFTER ADD
+    {
+        if(isCurrentRecordStored() == false)
+        {
+            session.displayToMessageBox("No está toda la información requerida para grabar.");        
+        }
+        else
+            session.queueCommand("PREVIOUS_FORM");
+            
+            
+            cajagrandeICompradores.varadhiere = "1";
+            /*Esta variable se manda a RBoletinesFRM. Cuando se llega al ON PREVIOUS FORM, se pregunta ¿Cuál es el valor de varadhiere? Si es 1, agregó, si es 0, ejecuta GO TO FORM*/
+    }
+    
+    BOX cajagrandeICompradores
     {
     
-    }
+        BOX box11
+        {
+        }
+        
+        DATA VIEW PUBLIC_tcl_tipclien
+        {
+            FIELD  tcl_nit
+            {
+            }
+            FIELD  tcl_clase
+            {
+            }
+            FIELD  tcl_tipo
+            {
+            }
+            FIELD  tcl_nombre
+            {
+            }
+        }
+        
+        BOX box111
+        {
+            FIELD textfield1
+            {
+            }
+            FIELD textfield11
+            {
+            }
+        }
+        
+        FIELD varadhiere
+        {
+        
+        }
 
-    FIELD textfield1
-    {
-    
     }
 
 

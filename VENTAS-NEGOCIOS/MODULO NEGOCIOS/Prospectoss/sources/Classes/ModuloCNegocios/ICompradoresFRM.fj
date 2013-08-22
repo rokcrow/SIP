@@ -98,7 +98,7 @@ FORM ICompradoresFRM
             session.queueCommand("PREVIOUS_FORM");
             
             
-            varadhiere = "1";
+            cajagrandeICompradores.varadhiere = "1";
             /*Esta variable se manda a RBoletinesFRM. Cuando se llega al ON PREVIOUS FORM, se pregunta ¿Cuál es el valor de varadhiere? Si es 1, agregó, si es 0, ejecuta GO TO FORM*/
     }
     

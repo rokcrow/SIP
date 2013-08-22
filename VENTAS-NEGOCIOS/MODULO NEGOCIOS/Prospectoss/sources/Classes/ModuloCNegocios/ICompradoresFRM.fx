@@ -18,6 +18,7 @@
 
     <control 
         background_color = "#cccccc"
+        binary_variables = ""
         commands = ""
         display_name = "cajagrandeICompradores"
         field_weight = "99"
@@ -79,8 +80,6 @@
         options = "Otro=O;Titular=T"
         original_name = "tcl_clase"
         retrieve_value = "true"
-        script = "{
-}"
         style_class = "textfield"
         target_field = "tcl_clase"
         uid = "itemsform_dataview1_1368038367945_73db533e4ca4d6d97123a8e885f5051258f57032_1374007237849"
@@ -101,8 +100,6 @@
         multi_valued = "true"
         required = "true"
         retrieve_value = "true"
-        script = "{
-}"
         style_class = "textfield"
         target_field = "tcl_nit"
         uid = "itemsform_dataview1_1368038367945_73db533e4ca4d6d97123a8e885f5051258f57032_1374007201673"
@@ -123,8 +120,6 @@
         multi_valued = "true"
         required = "true"
         retrieve_value = "true"
-        script = "{
-}"
         style_class = "textfield"
         target_field = "tcl_nombre"
         uid = "itemsform_dataview1_1368038367945_73db533e4ca4d6d97123a8e885f5051258f57032_1374007201712"
@@ -146,8 +141,6 @@
         options = "Persona=P;Sociedad=S"
         original_name = "tcl_tipo"
         retrieve_value = "true"
-        script = "{
-}"
         style_class = "textfield"
         target_field = "tcl_tipo"
         uid = "itemsform_dataview1_1368038367945_73db533e4ca4d6d97123a8e885f5051258f57032_1374007221014"
@@ -212,8 +205,6 @@
         immediate = "true"
         key = "cajagrandeICompradores:box111:textfield1."
         original_name = "textfield1"
-        script = "{
-}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
@@ -229,8 +220,6 @@
         immediate = "true"
         key = "cajagrandeICompradores:box111:textfield11."
         original_name = "textfield1"
-        script = "{
-}"
         stop_for_input = "false"
         style_class = "textfield"
         target_field = ""
@@ -265,6 +254,7 @@
         view = "label">
     </control>
     <field 
+        binary_variables = ""
         display_name = "varadhiere"
         field_type = "text"
         field_weight = "299"
